@@ -14,6 +14,26 @@ This repo implements a simple recommendation engine for the Discite project.
 
 ### Architecture
 
+
+### Installation
+
+```bash
+pip install -r requirements.txt
+
+# or manually
+pip install "fastapi[all]"
+pip install pinecone-client
+```
+
+### Structure
+
+| File/Directory | Description |
+| -------------- | ----------- |
+| [demo.py](demo.py) | Demo routes that interact with Pinecone. |
+| [main.py](main.py) | Main API routes. |
+| [generation](generation) | Code relevant to candidate generation. |
+| [ranking](ranking) | Code relevant to candidate ranking. |
+
 &copy; 2023 [Discite][discite]
 
 [discite]: https://discite.tech
