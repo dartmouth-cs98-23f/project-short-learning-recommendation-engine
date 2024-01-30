@@ -28,7 +28,7 @@ pip install pinecone-client
 > The Pinecone API key is required to connect to the Pinecone service.
 >
 > Update `.env` with the API key.
-> See `.env.example` for an example.
+> See [`.env.example`](.env.example) for an example.
 
 ### Structure
 
