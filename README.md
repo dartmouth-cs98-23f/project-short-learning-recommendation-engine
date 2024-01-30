@@ -14,7 +14,6 @@ This repo implements a simple recommendation engine for the Discite project.
 
 ### Architecture
 
-
 ### Installation
 
 ```bash
@@ -24,6 +23,12 @@ pip install -r requirements.txt
 pip install "fastapi[all]"
 pip install pinecone-client
 ```
+
+> [!IMPORTANT]
+> The Pinecone API key is required to connect to the Pinecone service.
+>
+> Update `.env` with the API key.
+> See `.env.example` for an example.
 
 ### Structure
 
