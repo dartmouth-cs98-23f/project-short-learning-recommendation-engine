@@ -30,8 +30,15 @@ def add_video(video_id: str):
         Add a video to the Pinecone index.
     """
     
-    embedding = [1, 2, 3, 4, 5, 6, 7, 8]
-    db_client.add_video(video_id, embedding)
+    db_client.add_video(video_id)
     
     # return inserted video data
     return db_client.get_video(video_id)
+
+@app.get("/get-video/{video_id}")
+def get_video_recommendatiosn(video_id: str):
+    """
+        Get video recommendations.
+    """
+    
+    return db_client.get_recommendations(video_id, count=10)
