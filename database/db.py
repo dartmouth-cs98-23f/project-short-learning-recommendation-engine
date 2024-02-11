@@ -60,7 +60,7 @@ class DbClient:
         """
         index = self.get_index("recommendations")
         embeddings = self.get_embeddings(video_id)
-        index.upsert(
+        response = index.upsert(
             vectors = [{
                 "id": video_id,
                 "values": embeddings
@@ -69,7 +69,9 @@ class DbClient:
         )
         
         if self.debug:
-            print(f"INSERT: {video_id} - {embeddings}")
+            print(f"{response}: INSERT {video_id} - {embeddings}")
+            
+        return response.to_dict()
         
     def get_video(self, video_id: str):
         """
