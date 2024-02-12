@@ -32,8 +32,8 @@ def add_video(video_id: str):
     
     return db_client.add_video(video_id)
 
-@app.get("/get-video/{video_id}")
-def get_video_recommendations(video_id: str):
+@app.get("/get-recommendations/{video_id}")
+def get_recommendations(video_id: str):
     """
         Get video recommendations.
     """
