@@ -10,11 +10,7 @@ from pinecone import Pinecone, ServerlessSpec
 
 from database import DbClient
 
-from dotenv import load_dotenv
-import os
-
 app = FastAPI()
-
 db_client = DbClient()
 
 app.get("/")
