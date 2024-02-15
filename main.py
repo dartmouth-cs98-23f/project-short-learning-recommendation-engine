@@ -2,27 +2,16 @@
 # -*- coding: utf-8 -*-
 
 """
-    Mainentrypoint into our recommentation engine.
+    Main entrypoint into our recommentation engine.
 """
 
 from fastapi import FastAPI
 from pinecone import Pinecone, ServerlessSpec
 
-from dotenv import load_dotenv
-import os
+from database import DbClient
 
 app = FastAPI()
-
-# load .env file
-load_dotenv()
-
-print("PINECONE_API_KEY: ", os.getenv("PINECONE_API_KEY"))
-
-# get PINECONE_API_KEY from .env file
-PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-
-# Create a Pinecone client
-pc = Pinecone(api_key=PINECONE_API_KEY)
+db_client = DbClient()
 
 app.get("/")
 def read_root():
@@ -30,3 +19,19 @@ def read_root():
         Root endpoint.
     """
     return {"Hello": "World"}
+
+@app.get("/add-video/{video_id}")
+def add_video(video_id: str):
+    """
+        Add a video to the Pinecone index.
+    """
+    
+    return db_client.add_video(video_id)
+
+@app.get("/get-recommendations/{video_id}")
+def get_recommendations(video_id: str):
+    """
+        Get video recommendations.
+    """
+    
+    return db_client.get_recommendations(video_id, count=10)
