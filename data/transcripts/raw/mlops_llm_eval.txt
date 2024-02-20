@@ -1,0 +1,1283 @@
+second,duration,transcript
+0.12,4.96,hold up before we get into this next
+2.399,4.88,episode I want to tell you about our
+5.08,5.76,virtual conference that's coming up on
+7.279,6.721,February 15th and February 22nd we did
+10.84,5.92,it two Thursdays in a row this year
+14.0,5.199,because we wanted to make sure that the
+16.76,5.92,maximum amount of people could come for
+19.199,6.84,each day since the lineup is just
+22.68,6.28,looking absolutely incredible as you
+26.039,5.64,know we do let me name a few of the
+28.96,5.0,guests that we've got coming because it
+31.679,4.801,is worth talking about we've got Jason
+33.96,6.32,Louie we've got Shrea shanar we've got
+36.48,5.919,Dro who is product applied AI at Uber
+40.28,4.119,we've got Cameron wolf who's got an
+42.399,5.761,incredible podcast and he's director of
+44.399,7.401,AI at reeby engine we've got Lauren
+48.16,5.8,Lockridge who is working at Google also
+51.8,4.2,doing some product stuff oh why is there
+53.96,3.759,so many product people here funny you
+56.0,5.68,should ask that because we've got a
+57.719,6.881,whole AI product owner track along with
+61.68,5.64,an engineering track and then as we like
+64.6,4.519,to we've got some Hands-On workshops too
+67.32,4.4,let me just tell you some of these other
+69.119,5.04,names just for a moment you know because
+71.72,4.96,we've got them coming and it is really
+74.159,4.801,cool I haven't named any of the Keynotes
+76.68,4.28,yet either by the way go and check them
+78.96,5.08,out on your own if you want just go to
+80.96,5.24,home. ops. community and you'll see but
+84.04,4.64,we've got tunji who's the lead
+86.2,5.12,researcher on the Deep speed project at
+88.68,5.52,Microsoft we've got golden who is the
+91.32,7.64,open- source engineer at Netflix we've
+94.2,6.04,got Kai who's leading the AI platform at
+98.96,3.68,Uber you may have heard of it it's
+100.24,5.879,called Michelangelo oh my gosh we've got
+102.64,6.6,fison who's product manager at LinkedIn
+106.119,5.96,Jerry Louie who created good old llama
+109.24,5.919,index he's coming we've got Matt Sharp
+112.079,6.281,friend of the Pod Shreya Raj Paul the
+115.159,5.28,Creator and CEO of guard rails oh my
+118.36,8.24,gosh the list goes on There's 7
+120.439,8.841,plus people that will be with us at this
+126.6,5.52,conference so I hope to see you there
+129.28,5.72,and now let's get into this podcast hey
+132.12,7.88,everyone my name is apara um I'm one of
+135.0,7.12,the co-founders of arise AI um and I
+140.0,5.0,recently stopped drinking coffee so I
+142.12,4.92,take I I've started on machil lattes
+145.0,5.16,instead hello and welcome back to the
+147.04,5.32,mops Community podcast as always I am
+150.16,7.2,your host Dimitri o and we're coming at
+152.36,7.879,you with another Fire episode this one
+157.36,6.44,was with my good and old friend apara
+160.239,6.241,and she has been doing some really cool
+163.8,5.96,stuff in the evaluation space most
+166.48,9.0,specifically the llm evaluation space we
+169.76,9.759,talked all about how they are looking at
+175.48,5.72,evaluating the whole llm systems and of
+179.519,4.08,course course she comes from the
+181.2,4.64,observability space And for those that
+183.599,4.36,don't know she's co-founder of arise and
+185.84,3.72,arise is doing lots of great stuff in
+187.959,4.681,the observability space they've been
+189.56,6.08,doing it since the traditional mlops
+192.64,6.519,days and now they've got this open
+195.64,7.28,source Package Phoenix that is for the
+199.159,7.561,new llm days and you can just tell that
+202.92,7.039,she has been diving in head first she's
+206.72,4.879,Chief product officer and she has really
+209.959,3.881,been thinking deeply about how to create
+211.599,5.481,a product that will help people along
+213.84,5.679,their Journey when it comes to using
+217.08,6.359,llms and really making sure that your
+219.519,7.681,llm is useful and not outputting just
+223.439,8.481,absolute garbage so we talked at length
+227.2,6.72,about evaluating Rags not only the rag
+231.92,4.519,the part that is the output but also the
+233.92,5.8,retrieval piece she also mentioned and
+236.439,5.0,she was very bullish on something that a
+239.72,4.76,lot of you have probably heard about
+241.439,6.72,which is llms as a judge so I really
+244.48,6.039,appreciated her take on how you can use
+248.159,5.041,llms to evaluate your systems and
+250.519,5.881,evaluate the output but then at the very
+253.2,5.92,end we got into her hot takes and so
+256.4,5.2,definitely stick around for that because
+259.12,4.96,she thinks very much on the same lines
+261.6,4.92,as I do I don't want to give it away but
+264.08,4.24,she came up with some really good stuff
+266.52,5.0,when it comes to fine-tuning and
+268.32,6.0,traditional ML and how traditional ml
+271.52,5.0,Engineers might jump to F tuning but
+274.32,3.879,that is all no spoilers here we're going
+276.52,3.08,to get right into the conversation and
+278.199,4.56,I'll let you hear it straight from a
+279.6,6.4,PARTA before we do though huge shout out
+282.759,6.28,to the arise team for being a sponsor of
+286.0,5.639,the mlops community since 2020 they've
+289.039,4.641,been huge supporters and I've got to
+291.639,5.241,thank them for it aarta was one of the
+293.68,5.079,first people we had on a virtual Meetup
+296.88,6.039,back when everything was closed in the
+298.759,6.44,co era and she came into the community
+302.919,3.56,slack was super useful in those early
+305.199,3.681,days when we were all trying to figure
+306.479,7.761,out how to even think about
+308.88,8.12,observability when it relates to ml and
+314.24,4.88,so I've got to say huge thanks huge
+317.0,4.919,shout out to the arise team check out
+319.12,4.88,all the links below if you want to see
+321.919,4.601,any of the stuff that we talked about
+324.0,5.199,concerning all of the llm observability
+326.52,4.6,or just ml observability tools and
+329.199,4.201,before we get into the conversation
+331.12,4.919,would love it if you share this piece
+333.4,7.239,with just one person so that we can keep
+336.039,6.441,the good old mlops Vibes rolling all
+340.639,5.74,right let's get into
+342.48,3.899,[Music]
+346.639,5.481,it okay so you wanted the story about
+350.0,4.96,how I ended up in Germany here it is
+352.12,6.16,here's the tldr version I was living in
+354.96,4.72,Spain so I moved to Spain in 2010 and I
+358.28,4.4,moved there because I met a girl in
+359.68,4.84,India and she was in bilbow Spain doing
+362.68,3.6,her Masters she wasn't from she wasn't
+364.52,4.239,from India or Spain she was from
+366.28,5.12,Portugal but I was like oh I want to be
+368.759,4.44,closer to her and I also want to like
+371.4,3.72,live in Spain because I enjoyed it I had
+373.199,5.081,lived in Spain I spoke a little bit of
+375.12,6.0,Spanish poito and then I was like all
+378.28,4.039,right cool let's go over to Bill Bal uh
+381.12,3.72,I've heard good things about the city
+382.319,5.121,and the food and the people so I moved
+384.84,4.96,there as soon as I got there this girl
+387.44,3.4,was like I want nothing to do with you
+389.8,4.32,and
+390.84,7.32,so I was sitting there like heartbroken
+394.12,6.76,on the coastline of the bass country and
+398.16,4.68,it took me probably like a month to
+400.88,4.439,realize well there's there's much worse
+402.84,4.479,places I could be stuck and so I enjoyed
+405.319,6.681,it and I had the time in my life that
+407.319,6.561,year in Bilbo and then I met my wife at
+412.0,3.4,the end of that year at this big music
+413.88,4.08,festival
+415.4,4.079,and uh so we were living in Spain we
+417.96,3.6,ended up getting married like 5 years
+419.479,3.921,later had our first daughter like 8
+421.56,4.96,years later and then we were living
+423.4,5.199,there until 2020 when Co hit and when Co
+426.52,5.48,hit the lockdown was really hard and we
+428.599,5.641,were in this small apartment in bilb and
+432.0,4.12,we were like let's get out of here let's
+434.24,4.519,go to the countryside and we had been
+436.12,4.359,coming to the German Countryside because
+438.759,4.761,there's like this Meditation Retreat
+440.479,5.601,Center that we go to quite a bit and so
+443.52,4.48,we thought you know what let's go there
+446.08,5.239,let's see like if there's any places
+448.0,5.639,available and we can hang out on the
+451.319,4.401,countryside not see anybody the
+453.639,3.56,lockdowns weren't as strict I mean there
+455.72,2.68,were lockdowns and stuff but when you're
+457.199,4.961,on the countryside nobody's really
+458.4,6.519,enforcing it so we did that and we ended
+462.16,5.2,up in the middle of nowhere Germany with
+464.919,4.881,you know 100 cows and maybe like 50
+467.36,6.959,people in the village that we're in so
+469.8,6.32,that's the short story of it wow W well
+474.319,4.681,that's an interesting
+476.12,5.079,intro there you go I mean we were just
+479.0,3.96,talking and I will mention this to the
+481.199,5.0,listeners because we were talking about
+482.96,5.199,how you moved from California to New
+486.199,4.881,York and you are freezing right now
+488.159,6.641,because it is currently winter there and
+491.08,5.679,Germany isn't known for its incredible
+494.8,4.88,weather but it's definitely not like New
+496.759,6.041,York that is for sure yeah it's a East
+499.68,6.959,Coast winter out here so I wanted to
+502.8,6.16,jump in to the evaluation space because
+506.639,5.12,I know you've been KNE deep in that for
+508.96,6.04,like last year you've been working with
+511.759,5.601,all kinds of people and maybe you can
+515.0,4.12,just set the scene for us because you're
+517.36,3.479,currently for those who do not know you
+519.12,4.44,I probably said it in the intro already
+520.839,4.521,but I will say it again you're the head
+523.56,4.839,product or chief product officer I think
+525.36,5.44,is the official title at rise and you
+528.399,5.601,have been working in the observability
+530.8,6.039,space for ages before you started rise
+534.0,6.8,uh you were at Uber and working on good
+536.839,6.801,old Michelangelo with that crew that is
+540.8,7.08,uh got very famous from the paper and
+543.64,6.6,then you've been talking a ton to people
+547.88,5.959,about how they're doing observability in
+550.24,6.039,the quote unquote traditional ml space
+553.839,4.24,but then when llms came out you also
+556.279,3.521,started talking to people about okay
+558.079,4.921,well how do we do observability what's
+559.8,6.88,important with observability in the llm
+563.0,5.6,space and so I'd love to hear you set
+566.68,3.599,the scene for us what does it look like
+568.6,4.359,these days I know it's hard out there
+570.279,6.281,when it comes to evaluating llms give us
+572.959,7.801,the breakdown yeah no let let's jump in
+576.56,7.2,so I so first off we're seeing a ton of
+580.76,4.6,people trying to deploy llm applications
+583.76,6.12,like the last year Demetrius has just
+585.36,6.32,been it's been super exciting people are
+589.88,4.24,and I'm not just saying you know the the
+591.68,4.76,fast moving startups I'm saying there's
+594.12,3.56,like you know older companies companies
+596.44,3.519,that you're like wow they're deploying
+597.68,4.159,LMS that have like like a you know
+599.959,3.801,skunks work team who are out there
+601.839,4.761,trying to deploy these llm applications
+603.76,6.44,into production and um in the last year
+606.6,5.76,what I think we've seen is that the
+610.2,4.879,there's a big difference between a
+612.36,3.44,Twitter demo and a real llm application
+615.079,6.161,that's
+615.8,7.56,deployed um and yeah and the fact that
+621.24,4.32,what we're seeing is that you know
+623.36,3.64,unlike traditional ml where people have
+625.56,2.68,deployed these applications and there's
+627.0,3.079,a lot of people who have that kind of
+628.24,4.4,experience with llms it's still
+630.079,5.0,relatively a small group or few people
+632.64,5.8,who are who have deployed successfully
+635.079,6.361,these applications and well you know the
+638.44,5.399,hardest parts about this still ends up
+641.44,5.68,being evaluating the outcomes you know
+643.839,5.201,in the new era in traditional ml you had
+647.12,3.68,um you know one of the things that still
+649.04,4.12,matters is you want your application to
+650.8,3.839,do well in traditional ml you had these
+653.16,2.72,common metrics right you had
+654.639,2.64,classification metrics you had
+655.88,6.04,regression metrics you had your ranking
+657.279,7.68,metrics in the new llm era you can't
+661.92,4.8,just put you know these metrics you know
+664.959,3.081,you know what I'm saying is like we saw
+666.72,3.919,in the beginning some people were doing
+668.04,4.76,things like Rouge and blue score oh it's
+670.639,6.681,a translation task oh it's summarization
+672.8,7.0,task but there's a lot more that we
+677.32,4.639,could do to evaluate if it's working and
+679.8,3.839,the biggest one that we're seeing kind
+681.959,6.161,of take off is you've probably been
+683.639,5.841,hearing it is llm is a judge and so it's
+688.12,5.159,a little meta
+689.48,8.359,it's uh where you're asking an llm to
+693.279,6.881,evaluate the outcome of an llm and I
+697.839,4.081,mean we're finding that across
+700.16,3.119,deployments across what people are
+701.92,2.919,actually putting in production it's one
+703.279,3.401,of the team it's one of the things that
+704.839,4.961,teams actually really want to get
+706.68,4.399,working um and I don't know it's not
+709.8,2.96,that crazy as you start to think about
+711.079,3.76,it humans evaluate each other all the
+712.76,3.4,time we interview each other we grade
+714.839,4.841,each other see know teachers grade
+716.16,7.32,students papers and it's it's a very
+719.68,7.399,you know you know it's not that far of a
+723.48,5.68,jump to think AI evaluating AI um but
+727.079,6.721,that's that's kind of this
+729.16,6.239,novel um new thing in the llm space so
+733.8,4.24,you don't have to wait for the ground
+735.399,5.481,truth necessarily you can actually just
+738.04,6.76,generate an eval to figure out was this
+740.88,7.36,a good outcome or not and the thing that
+744.8,6.2,my mind immediately jumps to are all of
+748.24,5.399,these cases is where you have people
+751.0,6.0,that have deployed llms or chat bots on
+753.639,5.681,their website a little bit too soon and
+757.0,5.6,you see the horror stories because
+759.32,7.879,people go and they jailbreak it and it's
+762.6,7.679,like oh man that is not good what this
+767.199,6.76,chatbot is saying on your website all of
+770.279,5.12,a sudden I saw one screenshot where
+773.959,3.401,people were saying you know I can't
+775.399,3.56,remember what the website was but people
+777.36,3.52,were talking about how oh I don't even
+778.959,5.281,even need open AI I can just use the
+780.88,7.48,chatbot on this website it's obviously
+784.24,6.32,uh chat GPT you know or gp4 like you can
+788.36,5.2,ask it anything and it will give you any
+790.56,5.959,kind of response and you can play with
+793.56,9.92,it just like you would play with
+796.519,9.161,a open AI llm or a gbd4 like is this you
+803.48,4.08,know asking questions about the product
+805.68,4.719,and saying but the product isn't that
+807.56,5.0,good is it and then leading it into the
+810.399,3.961,chatbot then saying yes this product is
+812.56,3.2,actually horrible you shouldn't buy it
+814.36,3.479,and it's like you can't say that on your
+815.76,6.72,own website about your product this is
+817.839,7.321,really bad so does like do the llms as a
+822.48,5.52,judge stop that from happening I I think
+825.16,4.799,is the really interesting piece no I
+828.0,3.92,mean it's absolutely a component of it
+829.959,3.961,so you're absolutely right people don't
+831.92,3.44,want you know the common applications
+833.92,3.44,we're seeing right now is like I think
+835.36,3.96,you hit one of them which is like chat
+837.36,3.76,bot on your docks or chatbot bot on your
+839.32,4.519,product so give me some kind of like a
+841.12,5.719,replacement for um like the customer
+843.839,6.56,support Bots we had um and then there's
+846.839,5.401,kind of some more you know interesting
+850.399,5.88,ones which I've been calling like a chat
+852.24,6.56,to purchase type of application where um
+856.279,4.841,a lot of these companies that are doing
+858.8,4.76,um like used to do recommendation models
+861.12,5.279,or Etc or
+863.56,6.6,are uh you know maybe selling you trips
+866.399,5.68,or selling you um kind of products now
+870.16,4.359,have a chatbot where you can go in and
+872.079,5.56,actually explicitly ask hey I'm doing
+874.519,4.921,XYZ I'm looking for this and then it
+877.639,4.681,recommends a set of products and
+879.44,6.079,sometimes these applications use both ML
+882.32,6.12,and llms together in that chatbot like
+885.519,5.201,the llm is doing the chat component it's
+888.44,3.759,doing the structured extraction but then
+890.72,3.76,the actual recommendation it might call
+892.199,4.44,out to an internal recommendation model
+894.48,3.359,so it's not one or the other but
+896.639,3.44,sometimes you have both of them working
+897.839,3.761,together in a single app application and
+900.079,4.361,you're absolutely right they don't want
+901.6,6.56,stuff like it saying stuff it shouldn't
+904.44,5.12,say uh giving we had one interesting
+908.16,3.84,case where someone's like I don't want
+909.56,4.44,to say we support something in this
+912.0,5.839,policy because I'm reliable to it if
+914.0,6.279,someone asks a question um and so
+917.839,3.92,there's all sorts of especially if
+920.279,4.56,you're putting it external facing
+921.759,4.361,there's all sorts of more rigor that it
+924.839,4.761,goes through to make sure it's it's
+926.12,5.519,working and what llm as a judge can do
+929.6,4.32,is well we see people checking for is
+931.639,4.401,things like well did it hallucinate in
+933.92,4.039,the answer you know is it making up
+936.04,5.32,something like is it making up something
+937.959,5.56,that wasn't in the policy is it toxic in
+941.36,3.8,its response is it negative about you
+943.519,4.041,know like in the one where it's kind of
+945.16,6.479,talking its own product is it is it
+947.56,6.68,negative in in its own response is it um
+951.639,4.521,correctness factuality so all of these
+954.24,4.959,are things that you can actually
+956.16,4.84,generate a prompt to you know generating
+959.199,4.0,you know basically an eval template to
+961.0,4.079,go in and say well here's what the user
+963.199,4.0,asked here's what all the relevant
+965.079,4.0,information we pulled was and here's the
+967.199,4.361,final response that the LM came back
+969.079,4.88,with does the response actually answer
+971.56,6.0,the question that the user asked and two
+973.959,5.841,does it actually is that answer based on
+977.56,5.0,something factual aka the stuff that it
+979.8,5.92,was pulled on the retrieval component
+982.56,4.959,and you can go in and score that and you
+985.72,3.32,know what we end up seeing a lot is if
+987.519,3.361,the response
+989.04,4.2,isn't actually based on the retrieval
+990.88,3.519,then it's it's it's hallucinating and
+993.24,5.039,they actually don't want to show those
+994.399,5.88,types of responses back to the user um
+998.279,3.641,and so this is this is just a very
+1000.279,6.24,specific you know I'd say the
+1001.92,6.719,hallucination eval the correctness eval
+1006.519,5.041,summarization uh all of these are very
+1008.639,5.521,common kind of llm task evals that we're
+1011.56,5.24,seeing out in in kind of the wild right
+1014.16,5.76,now I should mention it's very very
+1016.8,5.44,different than what um the model evals
+1019.92,4.08,are which is a whole another yeah
+1022.24,3.92,category of evals you might be seeing
+1024.0,4.72,like if you go on like hugging face for
+1026.16,4.12,instance has a whole open source llm
+1028.72,4.64,leaderboard I'm sure you've all seen it
+1030.28,5.559,it's like changes every couple of hours
+1033.36,6.079,um and they have all these metrics right
+1035.839,7.2,like mlu and H swag which is all
+1039.439,7.161,different ways of measuring um how good
+1043.039,7.76,the llm is across a wide variety of
+1046.6,7.48,tasks but for the average kind of you
+1050.799,5.921,know AI engineer who's building an
+1054.08,6.719,application on top of an llm they kind
+1056.72,6.199,of pick their llm and then they're not
+1060.799,3.921,really looking at how well does the
+1062.919,6.281,model do across all sorts of
+1064.72,6.56,generalizable multimodal kind of tasks
+1069.2,6.2,they care about specifically I'm
+1071.28,6.36,evaluating how good is this llm and the
+1075.4,4.92,prompt template and the you know the
+1077.64,5.32,structure that I built build doing on
+1080.32,5.76,this one specific task that I'm asking
+1082.96,5.0,it to do and so it's a very does that
+1086.08,4.479,make sense like that delineation between
+1087.96,6.92,the the model evals versus the task
+1090.559,8.401,evals here yeah 100% and you did say
+1094.88,8.679,something else like how does I guess
+1098.96,6.68,what my mind goes to here is how you are
+1103.559,5.24,able to
+1105.64,5.6,restrict the output from getting to the
+1108.799,6.841,end user is it that if that llm as a
+1111.24,7.64,judge gives a certain confidence score
+1115.64,5.6,then anything lower than whatever a five
+1118.88,4.32,of confidence that this is the right
+1121.24,3.919,answer it doesn't go out to the end user
+1123.2,5.12,and it has to regenerate it or what does
+1125.159,5.321,that look like like that last mile piece
+1128.32,3.88,yeah I think it depends back on the
+1130.48,4.0,application owner so we there are some
+1132.2,5.08,people who will generate that eval and
+1134.48,5.72,then decide not to show that response
+1137.28,7.08,because the evalve will was um was
+1140.2,6.479,pretty poor um but there's some folks
+1144.36,5.08,where you know if it's a lower risk type
+1146.679,4.761,of application then they still show it
+1149.44,4.0,but then they can come back and you know
+1151.44,3.599,use the ones where it did poorly on to
+1153.44,6.76,come back and figure out how to improve
+1155.039,7.441,the application so I think there's a um
+1160.2,4.32,there's kind of like a you know a
+1162.48,5.319,trade-off that the application owner has
+1164.52,4.519,to make between do you want to block
+1167.799,3.041,kind of you know you got to wait for the
+1169.039,4.081,LM to evaluate it and then like you're
+1170.84,5.28,going to have for sure impact speed of
+1173.12,5.28,the application experience and so what
+1176.12,5.48,actually we see a lot of people doing is
+1178.4,4.96,these evals um you don't just have to do
+1181.6,4.16,them in production so similar to how you
+1183.36,5.52,know in the traditional ml World you'd
+1185.76,5.2,have a you know a performance like an
+1188.88,4.32,offline performance as you're building
+1190.96,5.079,the model and then you're kind of
+1193.2,5.2,monitoring an online performance well
+1196.039,5.52,here similarly as you're building in
+1198.4,7.68,eval you're kind of seeing folks kind of
+1201.559,7.12,evaluate the llm offline see how you
+1206.08,5.32,know build some confidence essentially
+1208.679,5.321,around um you know how how well is the
+1211.4,5.639,application doing before they actually
+1214.0,4.96,you go on to to pushing it out to online
+1217.039,3.52,monitoring so there's there's a lot of
+1218.96,5.079,these similar kind of paradigms that
+1220.559,4.921,that still apply in in this space yeah I
+1224.039,4.921,would imagine you try and do a little
+1225.48,6.48,red teaming you try and make it see how
+1228.96,5.48,much you can break it before you put it
+1231.96,4.8,out there and and set it live if you're
+1234.44,3.64,doing it the right way not just rushing
+1236.76,4.32,it out the door
+1238.08,4.64,ideally the other piece on this that I
+1241.08,3.28,think is is important is a little bit
+1242.72,4.92,more Upstream because you were talking
+1244.36,7.199,about how the llm as a judge it's
+1247.64,7.76,evaluating if the answer that the other
+1251.559,6.6,llm gave with respect to the context
+1255.4,6.24,that it was giving or that it was given
+1258.159,5.64,was actually the right answer or
+1261.64,6.919,evaluating that answer based on the
+1263.799,6.801,context but then one step above that is
+1268.559,5.681,actually getting the right context I
+1270.6,6.439,would imagine and so making sure that
+1274.24,5.48,are we getting the context that is
+1277.039,4.481,relevant to the question that was asked
+1279.72,3.839,and I know that's a whole another can of
+1281.52,5.32,worms and if you've been seeing a bunch
+1283.559,6.881,of that and maybe do you also use llm as
+1286.84,5.199,a judge there oh yeah um okay so this is
+1290.44,3.92,this is a great actually segue to talk
+1292.039,7.88,about some research we've been we've
+1294.36,7.36,been dropping lately um so yes llm as a
+1299.919,4.281,judge can totally be used to also
+1301.72,3.88,evaluate the performance of retrieval so
+1304.2,4.28,for folks who are who are listening to
+1305.6,4.16,this um what is you know what is
+1308.48,4.28,retrievable how do you measure the
+1309.76,5.2,performance of it well basically um you
+1312.76,4.2,know in retrieval you're retrieving some
+1314.96,3.56,sort of context so if someone asked a
+1316.96,3.92,question about some kind of let's say
+1318.52,4.24,product you're retrieving relevant
+1320.88,3.32,information about let's just say it chat
+1322.76,4.88,on your docs type of application it's
+1324.2,5.04,very common um someone's asking your you
+1327.64,3.72,know product support documentation or
+1329.24,4.36,your customer support documentation
+1331.36,6.439,questions and what happens is it
+1333.6,8.199,retrieves relevant information from your
+1337.799,6.601,you know document Corpus and then it
+1341.799,4.441,pulls you know just relevant chunks and
+1344.4,4.24,then uses those relevant chunks and the
+1346.24,4.799,context window to actually answer the
+1348.64,5.159,question the most important thing there
+1351.039,5.401,is that it's in this type of retrieval
+1353.799,5.641,by the way is super important because it
+1356.44,5.64,helps llms connect to private data
+1359.44,4.44,remember llms were not trained on every
+1362.08,3.599,single company's individual private
+1363.88,3.88,documents and so if you actually wanted
+1365.679,5.161,to answer questions on your own private
+1367.76,5.48,data then um using a retrieval is kind
+1370.84,5.68,of one of the best ways to do that yeah
+1373.24,5.559,um and so here what really ends up being
+1376.52,6.32,important is that did it retrieve the
+1378.799,7.48,right document to answer the question
+1382.84,5.079,and that ends up being a a whole you
+1386.279,3.64,know there's a whole set of metrics that
+1387.919,5.041,we can use to actually evaluate that
+1389.919,6.88,retrieval um and recently actually we've
+1392.96,6.839,been running a ton of tests measuring
+1396.799,6.641,different llm providers um so we
+1399.799,6.24,evaluated gp4 we did anthropic um we
+1403.44,6.28,checked some results on Gemini we did
+1406.039,5.52,mistol and we actually showed um you
+1409.72,4.04,know if you guys have been following
+1411.559,5.041,Greg cam actually dropped the first of
+1413.76,4.96,these like needle in a Hy stack type of
+1416.6,3.52,test you kind like that lost in the
+1418.72,4.04,middle
+1420.12,4.799,yeah and you know for those of you who
+1422.76,4.12,haven't seen it it's basically um an
+1424.919,5.161,awesome way to think about it which is
+1426.88,7.44,you know it essentially checks you know
+1430.08,7.8,on one axis you have how long is the
+1434.32,5.479,context so the context can be one k to
+1437.88,4.32,tokens all the way to you know for some
+1439.799,4.801,of the smaller models it's like 32k I
+1442.2,5.479,think for some of the bigger ones um we
+1444.6,6.199,tested uh pretty pretty significantly
+1447.679,6.0,let me rouble check exactly what 120k I
+1450.799,5.161,would imagine I think that it feels like
+1453.679,4.721,anthropics goes all the way up to that
+1455.96,4.48,or maybe it's even more these days like
+1458.4,5.639,240 they just said it we'll double
+1460.44,7.479,it yeah so some of them we checked yeah
+1464.039,6.721,like definitely close to yeah 120k and
+1467.919,4.441,but what we did was basically so that's
+1470.76,4.639,that's on one axis which is basically
+1472.36,5.559,just the context length and then on the
+1475.399,6.64,other AIS is basically where in the
+1477.919,5.48,context you put the information so you
+1482.039,3.0,know cuz some there there's all these
+1483.399,3.601,theories out there like if you put it
+1485.039,5.321,early on does it forget if you put it
+1487.0,5.84,later down does it not use it and so
+1490.36,6.76,kind of placement of the context within
+1492.84,5.68,that context window to see you know can
+1497.12,4.88,you actually
+1498.52,5.96,find the needle in the Hast stack and
+1502.0,4.399,the question we did for This was um so a
+1504.48,5.799,little context was the question we asked
+1506.399,7.52,llm was um what's the so we did kind of
+1510.279,5.64,like a key value pair the key was the
+1513.919,4.161,city and then the value is a number so
+1515.919,5.401,we said something like what's Rome's
+1518.08,5.24,special magic number and so uh and then
+1521.32,4.64,inside the context we put something like
+1523.32,6.32,Rome special magic number is uh like
+1525.96,6.16,some seven digigit number uh like yeah
+1529.64,4.399,like 1 2 3 4 5 6 s and so that was a
+1532.12,5.039,Rome special magic number and then later
+1534.039,5.801,we'd asked we put that somewhere so we
+1537.159,4.041,tested kind of all of the dimensions of
+1539.84,3.24,putting it at the very beginning of the
+1541.2,4.4,document for a very short context window
+1543.08,3.92,putting it at the very end for a very
+1545.6,4.439,long context window and all the
+1547.0,5.2,combinations in between and then we
+1550.039,4.041,asked it what was Rome's special magic
+1552.2,3.479,number and so it would have to go
+1554.08,4.199,through look at the entire context
+1555.679,4.521,window and then answer the question and
+1558.279,6.361,sometimes it couldn't find it and it
+1560.2,7.32,said you know unanswerable or um Etc and
+1564.64,5.519,sometimes it you know it answered the
+1567.52,5.32,question and what we did was we just
+1570.159,6.561,ranked a lot of these llm providers out
+1572.84,7.959,there on how good was it at retrieval
+1576.72,8.199,and um gbd4 was by and
+1580.799,6.24,large definitely the best out there um I
+1584.919,5.521,think of the small model providers we
+1587.039,6.721,were definitely impressed with mistol um
+1590.44,7.04,like the 32k cont it was it was pretty
+1593.76,5.159,impressive um but there were some were
+1597.48,4.76,you know I think we realized some of
+1598.919,5.841,them were very very
+1602.24,6.96,um if you changed the prompt a little
+1604.76,6.919,bit then the results totally varied so
+1609.2,4.4,you got totally different varied
+1611.679,4.761,responses based on just like adding a
+1613.6,4.679,sentence or adding two sentences and so
+1616.44,3.8,as a user you know as as we're coming
+1618.279,4.321,back and we're evaluating this you know
+1620.24,4.679,if you're using some of those llms where
+1622.6,5.88,you have to be really careful about how
+1624.919,6.201,you prompted um those prompt iterations
+1628.48,6.24,can have a big difference in the actual
+1631.12,4.76,outcome of of that retrieval so um you
+1634.72,2.72,know I'll share the links with the
+1635.88,4.48,metrios maybe you can link it with the
+1637.44,5.04,the podcast interview but um course
+1640.36,3.6,definitely I I think going back to your
+1642.48,3.799,original question of like can you
+1643.96,6.0,evaluate retrieval
+1646.279,5.681,absolutely um I think it's it's uh it's
+1649.96,3.959,really important to make sure that if
+1651.96,3.92,you wanted to answer well and not
+1653.919,3.721,hallucinate on your private data it's
+1655.88,4.24,got to do well at that retrieval
+1657.64,4.56,part yeah so it's almost like you're
+1660.12,3.919,evaluating in these two different
+1662.2,4.56,locations right you're evaluating the
+1664.039,4.561,retrieval when it comes out and if that
+1666.76,5.08,is relevant to the question and then
+1668.6,5.439,you're evaluating the output of the llm
+1671.84,4.88,yep once it's been given that context
+1674.039,4.201,and if that output is relevant to the
+1676.72,4.76,question also
+1678.24,6.36,y exactly exactly exactly and if that
+1681.48,6.96,output's based on the context that was
+1684.6,7.28,retrieved so first is that yeah so EXT
+1688.44,5.52,yeah totally so first is like is the
+1691.88,4.48,retrievable that was retrieved even
+1693.96,4.599,relevant to the question asked then was
+1696.36,4.24,the output based on the retriev text and
+1698.559,4.521,then yeah was the output itself
+1700.6,4.52,answering um you know correctness I
+1703.08,3.199,guess is is looking at is a correct
+1705.12,3.24,based on the information that was
+1706.279,6.561,retrieved so it's
+1708.36,9.28,um there's levels to this
+1712.84,7.679,so I'm a little bit like I just had a
+1717.64,6.12,stroke of inspiration right now and I'm
+1720.519,4.801,gonna let you have it because I love
+1723.76,5.88,talking with you and I love the way that
+1725.32,6.76,you create products but the next product
+1729.64,5.32,that you create in this space I think I
+1732.08,7.319,found the perfect name for it and what
+1734.96,4.439,is it Golden Retriever
+1740.84,5.24,you can do so many things with that and
+1743.279,5.721,it is so perfect it's golden of course
+1746.08,5.68,you know like it's the golden metrics
+1749.0,5.64,it's the golden retriever and so you've
+1751.76,4.84,got your if you're do if you create a
+1754.64,5.639,product around that I'll just uh you
+1756.6,6.679,know we'll talk later about the the way
+1760.279,5.561,that we can figure out this patent and
+1763.279,4.681,the golden retriever I love that but I
+1765.84,4.0,mean jokes aside I I know that you have
+1767.96,4.559,been creating products in this space I
+1769.84,5.88,saw Phoenix and I would love to know a
+1772.519,5.681,little bit more about Phoenix and also
+1775.72,6.76,as I mentioned before we hit record one
+1778.2,6.16,of my favorite things with all of the
+1782.48,3.679,products that you've been putting out
+1784.36,4.08,from the get-go I think when we talked
+1786.159,5.041,in like 2020 one of the first things
+1788.44,6.079,that I noticed with the arise product
+1791.2,7.8,was how well put together the UI and the
+1794.519,7.441,ux was for observing what was happening
+1799.0,5.0,under the hood and it feels like Phoenix
+1801.96,4.28,took that ethos and went a little bit
+1804.0,4.64,further you're being a product person
+1806.24,4.039,can you like break down how you think
+1808.64,4.2,about that and how you were able to get
+1810.279,4.4,inside of what metrics are useful and
+1812.84,5.16,how can we present the metrics that are
+1814.679,6.041,useful in a way that people can really
+1818.0,6.039,grab on to it yeah well first of all
+1820.72,5.6,thanks Nest that that's really kind um
+1824.039,4.12,yeah I I'm super excited about Phoenix I
+1826.32,3.52,think um
+1828.159,3.52,got to give a big shout out to to the
+1829.84,5.719,Phoenix team within within our eyes
+1831.679,5.081,actually um so Phoenix is actually um
+1835.559,6.401,for those of you who don't know it's our
+1836.76,7.639,OSS product um it's got a ton of support
+1841.96,4.599,for llm evaluations and llm
+1844.399,4.481,observability so if any of you guys are
+1846.559,4.321,looking to just try something not have
+1848.88,4.76,to send your data outside have it be
+1850.88,5.679,lightweight it's um you know it's open
+1853.64,5.159,source so do do do what you want W with
+1856.559,4.561,it um I think the intention behind
+1858.799,3.88,Phoenix really was so there's a couple
+1861.12,3.439,different components in Phoenix that I
+1862.679,3.921,think folks who are trying to get
+1864.559,4.84,observability on LMS
+1866.6,5.16,Alik this is Skyler I lead machine
+1869.399,4.4,learning at Health rhythms if you want
+1871.76,6.159,to stay on top of everything happening
+1873.799,7.48,in mlops subscribe to this podcast
+1877.919,6.521,now now
+1881.279,4.88,now now
+1884.44,3.239,now
+1886.159,5.601,now
+1887.679,6.24,now first is if you are one of the
+1891.76,4.0,things we just noticed very early on was
+1893.919,5.0,that these
+1895.76,5.56,applications many of them have not just
+1898.919,3.921,one call they're making there's many
+1901.32,5.239,calls under the hood like even in a
+1902.84,6.04,simple chatbot with retrieval there's
+1906.559,3.84,first the user's question then you have
+1908.88,3.24,the you generate an embedding then
+1910.399,4.081,there's the retriever then there's the
+1912.12,4.6,actual synthesis of the context and then
+1914.48,4.319,there's a response generation so there's
+1916.72,4.24,five or or six different steps that have
+1918.799,5.041,happened in something that feels like
+1920.96,6.12,one interaction between the product and
+1923.84,6.12,the user um and so the first thing was
+1927.08,5.24,well if you have all these substeps some
+1929.96,5.12,if something goes wrong something goes
+1932.32,4.52,wrong within those you know five or six
+1935.08,3.76,different steps that's happened then
+1936.84,3.4,being able to pinpoint exactly what are
+1938.84,3.52,the calls that are happening under the
+1940.24,4.96,hood and how do I get visibility is
+1942.36,5.319,important and so with Phoenix um one of
+1945.2,5.12,the most popular components of it is you
+1947.679,4.441,can see your full you know you can full
+1950.32,3.88,see the full traces and spans of your
+1952.12,3.559,application so kind kind of like the
+1954.2,4.64,full stack traces how you can think
+1955.679,5.401,about it so um you'll see the breakdown
+1958.84,5.04,of each calls and then which calls took
+1961.08,5.64,longer which calls used the most tokens
+1963.88,4.919,and then you can also evaluate at each
+1966.72,4.48,step in the calls so kind of like we
+1968.799,5.161,were just talking about where at the end
+1971.2,5.0,of the application at the very end um
+1973.96,4.599,when it generated response you can have
+1976.2,4.199,a score of of How well was the response
+1978.559,5.161,but then if the response let's say was
+1980.399,5.64,hallucinated or was incorrect then
+1983.72,5.199,there's a step above you can go in and
+1986.039,5.441,look at the individual span level evals
+1988.919,4.961,look at well how well did it retrieve
+1991.48,4.84,and then within the retriever you know
+1993.88,4.32,how let's evaluate each document that it
+1996.32,4.719,retrieved and see if it was relevant or
+1998.2,5.88,not so there's kind of a lot of thought
+2001.039,6.12,put into first how do I break down the
+2004.08,5.8,entire application stack and then see
+2007.159,5.24,you know evaluate and evaluate each step
+2009.88,4.44,of that outcome and then the other part
+2012.399,4.28,that's been I'd say really a lot of
+2014.32,7.839,thought in is Phoenix does come with an
+2016.679,8.88,evals Library um it's task evals first
+2022.159,5.921,or you know you knowm application evals
+2025.559,4.281,so it's it's definitely useful for folks
+2028.08,5.64,who are actually building the
+2029.84,6.24,application um and then we've just seen
+2033.72,4.16,a bunch of people kind of build these
+2036.08,4.24,evals in production so it comes with
+2037.88,5.799,kind of a lot of these best practices
+2040.32,5.359,baked in one of them that um actually
+2043.679,4.361,just just went viral on Twitter last
+2045.679,5.121,week we dropped a big research start on
+2048.04,6.92,this which is um should you use score
+2050.8,5.76,evals or classification EV vals um I
+2054.96,3.8,don't know if you caught caught that one
+2056.56,4.44,but um I saw your post blew up I
+2058.76,4.0,definitely did but I didn't I don't know
+2061.0,4.28,what the difference is between the two
+2062.76,5.399,which might make me look like no no no
+2065.28,5.04,no this this mean just space is changing
+2068.159,3.44,so fast or early like there's I think
+2070.32,4.96,we're all just trying to learn and soak
+2071.599,6.8,up as much as we can um but so score
+2075.28,5.799,evals versus um classification evals
+2078.399,5.641,score evals is basically you can think
+2081.079,4.721,about it as the outputs a numeric value
+2084.04,5.2,so let's just say we
+2085.8,6.879,were uh asking llm to evaluate how
+2089.24,5.8,frustrated is this response and you know
+2092.679,4.481,rank it between 1 to 10 one being
+2095.04,6.44,someone's really not frustrated 10 being
+2097.16,6.36,someone is super frustrated um well what
+2101.48,3.4,would you expect you would expect that
+2103.52,2.599,okay if it said one it's super
+2104.88,3.64,frustrated if it's 10 it's not
+2106.119,4.72,frustrated but then kind of somewhere if
+2108.52,3.92,it said something like a five it's kind
+2110.839,3.0,of like okay it's maybe it's passive
+2112.44,2.84,aggressive it's sounds super frustrating
+2113.839,4.28,but it's like you know like you you kind
+2115.28,8.52,of expect it to like kind of the numbers
+2118.119,10.48,in the middle to make sense um and what
+2123.8,8.039,we just realized is we did This research
+2128.599,8.081,was that the score value actually had no
+2131.839,7.961,Clear Connection to the actual you know
+2136.68,4.64,you know frustration that this person
+2139.8,4.72,like if it gave a number that basically
+2141.32,6.279,wasn't one or 10 then that score value
+2144.52,4.76,really had no no real connection like
+2147.599,4.641,another example which was actually the
+2149.28,6.92,one that we posted was we we gave it a
+2152.24,5.52,paragraph and we said um you know rank
+2156.2,3.8,how many spell spelling how many words
+2157.76,4.12,have a spelling error in this document
+2160.0,4.52,between 1 to 10 if every word had a
+2161.88,4.88,spelling error give it a 10 if no words
+2164.52,4.52,have a spelling error give it a zero and
+2166.76,4.04,then if it's kind of somewhere in the
+2169.04,3.2,middle like 20% of the words have a
+2170.8,4.799,spelling error you know give it a two if
+2172.24,6.48,it's 80% give it an eight you know um
+2175.599,5.041,and what we saw was that in many cases
+2178.72,5.32,it would give a spelling you know score
+2180.64,5.24,of like 10 but in some cases only 80%
+2184.04,4.36,you know only 11% of the words had a
+2185.88,4.64,spelling your like but it still said all
+2188.4,4.84,the words were off was like this might
+2190.52,4.72,as well be in Dutch yeah so like that
+2193.24,5.8,value that it came back with meant
+2195.24,5.56,nothing to it really um and so and and
+2199.04,3.2,the reason this is important is like
+2200.8,3.88,what we're seeing is like there's a lot
+2202.24,4.76,of these llm eval cookbooks that are out
+2204.68,5.28,there where people are recommending you
+2207.0,4.76,know basically set it up as a score and
+2209.96,4.159,what we've actually been seeing is don't
+2211.76,4.92,do that just do it as a class just do
+2214.119,5.081,binary stuff you know or or you can do
+2216.68,4.439,multic class you know but like tell it
+2219.2,5.159,explicitly like frustrated not
+2221.119,4.601,frustrated because if you try to a score
+2224.359,5.881,that score just
+2225.72,7.84,doesn't it doesn't actually um have any
+2230.24,5.56,meaning to to the corruption level so
+2233.56,4.92,basically it's saying hey it's it has to
+2235.8,6.4,be very clear it's frustrated not
+2238.48,6.76,frustrated or a little frustrated and
+2242.2,6.159,you have to make it it's not a sliding
+2245.24,6.04,scale there's no llms do not understand
+2248.359,5.96,spectrums it's like uh you know from all
+2251.28,5.24,the tests we've done it is is not going
+2254.319,4.561,to give you a meaningful value on a
+2256.52,4.28,spectrum and and then if you're Bas yeah
+2258.88,6.8,if you're basing stuff Downstream off of
+2260.8,6.68,that score you're screwed exactly and so
+2265.68,4.56,and this has been something that like
+2267.48,4.68,has been a lot of people I I think it's
+2270.24,3.52,kind of like as we've been putting it
+2272.16,3.919,out people have been like I've seen that
+2273.76,4.079,like I'm you know like I was using score
+2276.079,3.401,then I was like like these values meant
+2277.839,6.28,nothing to me so then I switched to
+2279.48,6.16,classification and so um there's a whole
+2284.119,5.921,set of research around this probably
+2285.64,7.679,still to be deep dived into here but um
+2290.04,4.88,yeah this is you know this is the kind
+2293.319,4.321,of stuff that's in the Phoenix evals
+2294.92,4.159,library is just best practices based off
+2297.64,4.199,of what we're seeing what we're putting
+2299.079,5.28,in production what we're helping folks
+2301.839,5.641,actually launch and so you get kind of
+2304.359,5.121,these best you know test in class I'd
+2307.48,3.0,say templates that are pre-tested around
+2309.48,3.48,things like how to test for
+2310.48,5.56,hallucination how to test for toxicity
+2312.96,4.84,how to test for correctness and then you
+2316.04,3.6,can kind of go and we have people who
+2317.8,4.44,then go off and make their own custom
+2319.64,6.0,eals but it's a great place to kind of
+2322.24,6.68,have a framework that runs both in a
+2325.64,6.08,notebook and also in a pipeline uh very
+2328.92,6.199,efficiently and is meant for for for
+2331.72,5.879,kind of um you know you can swap in and
+2335.119,5.2,out of offline and online very
+2337.599,5.081,easily yeah because the other piece that
+2340.319,7.081,I was thinking about all these these
+2342.68,7.76,evow that you give it then it feels
+2347.4,4.8,like you're not going to get very far if
+2350.44,4.919,you're not doing custom evals have you
+2352.2,5.84,seen that also totally I think there's a
+2355.359,4.161,lot of folks who are building you know
+2358.04,3.44,maybe they start with something but then
+2359.52,3.92,they end up kind of building their own
+2361.48,4.44,what makes sense for their application
+2363.44,4.04,adding on to it so I I definitely think
+2365.92,3.56,at the end of the day
+2367.48,4.359,the Nuance here is it's probably
+2369.48,4.839,different than the ml space is that that
+2371.839,5.28,customization of that eil ends up being
+2374.319,5.601,really important to measuring what's
+2377.119,3.881,what's important to your app um so I I
+2379.92,2.32,don't know that that's one of the things
+2381.0,3.48,I predict because we're going to see a
+2382.24,5.599,lot a lot more of
+2384.48,6.56,this and do you feel because one thing
+2387.839,6.681,that I've seen is like
+2391.04,6.12,how when you put out these different
+2394.52,4.599,evaluation test sets
+2397.16,5.52,the next model is just trained on top of
+2399.119,5.441,them and so then they're Obsolete and so
+2402.68,3.8,it's it's going to be this game of cat
+2404.56,4.279,and mouse in a way because the models
+2406.48,5.52,are going to be able to eat up the test
+2408.839,5.28,sets as soon as they get put out for
+2412.0,5.56,anyone to see or is it going to be all
+2414.119,6.281,right I've got my evaluation test set
+2417.56,4.64,and I just keep it inhouse I'm not going
+2420.4,3.52,to let anybody else see that so that I
+2422.2,4.52,don't paint the
+2423.92,6.679,model yeah I it's actually thing I
+2426.72,7.04,wonder about a lot too um is as these
+2430.599,4.841,new llms come out are they really blind
+2433.76,4.599,to the test sets that they're actually
+2435.44,5.24,then evaluating them on I think um like
+2438.359,4.72,the Gemini paper I thought did a really
+2440.68,5.0,good job of calling out they actually
+2443.079,6.0,built their own data set that was blind
+2445.68,5.32,and then tested on that data set and um
+2449.079,4.401,they called that out explicitly which I
+2451.0,4.599,thought was really important because you
+2453.48,4.599,know as as people are sharing the
+2455.599,5.041,results of like the next best Lum Etc
+2458.079,5.76,yeah I think we're all wondering like
+2460.64,4.64,did you just you know like you know did
+2463.839,4.841,did have access to that training data
+2465.28,5.96,set so I I wonder that all the time too
+2468.68,5.2,well it's pretty clear these days that
+2471.24,6.079,uh as I did not coin this term but I
+2473.88,6.84,like it and I will say it a lot
+2477.319,6.201,benchmarks are and so all these
+2480.72,5.04,benchmarks on hugging face or on Twitter
+2483.52,3.839,that you'll see like oh this is SOA this
+2485.76,4.359,just came out it blew everything else
+2487.359,6.161,out of the water by whatever 10 times or
+2490.119,5.881,you make up a number there I don't even
+2493.52,4.76,consider that to be valuable anymore
+2496.0,3.599,it's it's really like what you were
+2498.28,4.039,saying
+2499.599,5.801,where these things I know you actually
+2502.319,6.241,went and you did a rigorous study on it
+2505.4,5.32,but it's so funny because we are the
+2508.56,5.4,rest of us are just going off of Vibes
+2510.72,5.24,and we're seeing Oh yeah this is not
+2513.96,4.2,really working this is not doing what it
+2515.96,3.879,I thought it was going to do and so if I
+2518.16,3.36,use a different model does it and then
+2519.839,3.121,you try that and you go oh yeah okay
+2521.52,4.36,cool this is better this is easier to
+2522.96,5.639,prompt or this prompt is much easier to
+2525.88,4.479,control whatever it may be and so I
+2528.599,4.76,appreciate that you did a whole rigorous
+2530.359,6.601,study on it I also I'm conscientious of
+2533.359,5.841,time I want to make sure that I
+2536.96,4.56,highlight that you all are doing like
+2539.2,3.56,paper studies right and you're meeting
+2541.52,3.88,every once in a while I think that's
+2542.76,4.799,awesome I know that you've got a ton of
+2545.4,3.48,smart people around and so I I can
+2547.559,3.321,imagine you're getting all kinds of cool
+2548.88,3.6,ideas from Gathering and doing these
+2550.88,4.64,paper studies I would encourage others
+2552.48,5.44,to go and hang out and uh do those we'll
+2555.52,4.319,put a link to the next one in the show
+2557.92,4.72,notes so that in case anyone wants to
+2559.839,5.121,join you and be able to Ping ideas off
+2562.64,5.12,of you that's great I still would love
+2564.96,5.48,to hear how did you come up with the VIS
+2567.76,4.48,visualizations that's the coolest pieces
+2570.44,4.52,I think you didn't get into that part
+2572.24,6.4,and I want to get get to it before we go
+2574.96,6.92,a I mean I just got got to say the um
+2578.64,6.6,the the team team's amazing so the and I
+2581.88,6.52,think the you know trying to find a way
+2585.24,5.359,to Bubble Up you know at least in the
+2588.4,3.439,llm space one of the cool things you
+2590.599,3.24,know maybe you've seen some of the demos
+2591.839,4.441,of it but like especially with the
+2593.839,5.841,retrieval there's a lot in the edting
+2596.28,6.6,space that's you helpful to visualize so
+2599.68,5.8,how far away is the prompt that you have
+2602.88,5.52,from the context that was retrieved and
+2605.48,5.24,if you're missing any context and it's
+2608.4,4.8,super far away or it's you know it's
+2610.72,4.56,it's like reaching to find anything
+2613.2,4.159,that's relevant to you know those are
+2615.28,4.12,all really cool visualizations that you
+2617.359,3.921,could actually surface and kind kind of
+2619.4,4.08,help people see a little bit of okay
+2621.28,6.76,here's my data here's what it thinks
+2623.48,6.76,things are connected to um so yeah again
+2628.04,6.079,you know check out Phoenix love love all
+2630.24,6.72,the notes on on the UI yeah
+2634.119,5.161,actually it reminds me that I think one
+2636.96,4.96,of the first people I heard the word
+2639.28,4.6,embeddings from was you on like that
+2641.92,5.199,first Meetup that you came on back in
+2643.88,4.8,like June 2020 around then because you
+2647.119,3.561,were already thinking about them I think
+2648.68,5.639,you were thinking about them from
+2650.68,8.0,recommender systems and that angle and
+2654.319,7.881,then has it how has that changed
+2658.68,5.96,now no great great question um well I
+2662.2,5.8,think I think edings are just so
+2664.64,5.16,powerful and I'm I'm so glad that we're
+2668.0,3.48,you know we're all talking about them
+2669.8,4.36,and using them in observability because
+2671.48,5.16,there's it's it's super powerful even in
+2674.16,4.6,the llm space I think in the past
+2676.64,3.919,there's you know folks used them like
+2678.76,4.12,you mentioned recommendation systems
+2680.559,5.321,image models but the llm space I mean
+2682.88,6.08,the core basis of retrieval is based off
+2685.88,5.88,of those word em you know the the
+2688.96,4.76,embeddings um itself and doing that
+2691.76,6.2,Vector similarity search to fetch the
+2693.72,7.879,neous embeddings um so I think the the
+2697.96,9.72,use case is really really strong in in
+2701.599,9.321,rag um for llms the you know and and and
+2707.68,6.159,so because it's such a core component it
+2710.92,5.04,it's also something that is important to
+2713.839,4.321,now you know and just like when we're
+2715.96,3.52,going back if the retrieval is off then
+2718.16,3.32,the response is just not going to be
+2719.48,4.04,good and so you need a really good way
+2721.48,6.079,to verify that what was retrieved was
+2723.52,5.839,relevant and if there's any shift in
+2727.559,4.121,again going back to all of this is now
+2729.359,3.921,textual if the prompts are changing what
+2731.68,3.76,your users are asking are different or
+2733.28,3.64,the response of the LMS are different
+2735.44,3.48,these are all things that you can you
+2736.92,4.439,can actually measure using embeddings
+2738.92,5.88,and embedding drift and uh things like
+2741.359,5.841,that so um I I think there's just maybe
+2744.8,3.16,more use cases now than ever to to dig
+2747.2,3.0,into
+2747.96,4.92,edings yeah it has to be treated as a
+2750.2,5.24,first class citizen 100% these days
+2752.88,5.88,that's a really good point and I do I
+2755.44,6.84,saw a recent paper speaking of papers
+2758.76,7.48,from Shrea Shankar did you see that
+2762.28,6.24,Splat or SPL Spade I think is what it is
+2766.24,5.24,uh talking about the prompt deltas and
+2768.52,4.92,evaluating via the prompt Delta like you
+2771.48,5.639,have your prompt templates but then
+2773.44,6.399,you're evaluating The Prompt deltas and
+2777.119,6.44,it's like wow there's so much creativity
+2779.839,6.561,in this space and the ability to look at
+2783.559,4.76,how can we evaluate things
+2786.4,4.4,differently than we are right now and
+2788.319,5.321,see if we can get a better
+2790.8,7.88,outcome yeah I I I think I still need to
+2793.64,10.479,dig in to to Spade specifically but yeah
+2798.68,7.24,the um I mean I I think the the amount
+2804.119,3.041,that the space is moving is just so fast
+2805.92,4.72,right now it's so
+2807.16,5.64,exciting and um it is very the the one
+2810.64,3.6,thing maybe I'll just you know there's
+2812.8,4.84,maybe two things I just wanted to like
+2814.24,6.2,at least drop like my quick hot takes or
+2817.64,4.12,or notes on oh let's do it this is great
+2820.44,3.0,this is what we're GNA chop and put at
+2821.76,4.72,the beginning of the episode yeah
+2823.44,5.679,exactly right so I think there's you
+2826.48,5.76,know I always hear this from I don't
+2829.119,5.321,know I I just see it in the in in
+2832.24,6.76,discussions but I see a lot of people
+2834.44,7.04,talking about um fine tuning like really
+2839.0,3.68,early on like their application's not
+2841.48,2.639,even deployed and they're like oh well
+2842.68,3.6,our use Cas is eventually we're going to
+2844.119,6.48,go back and F tuned and
+2846.28,6.68,and um I you know I get asked from folks
+2850.599,4.921,like hey PARTA does that make sense as
+2852.96,5.32,like a step in troubleshooting an llm
+2855.52,5.72,application um and I think one of the
+2858.28,5.0,reasons I get that question a lot is if
+2861.24,5.119,you just think back to you know a lot of
+2863.28,5.12,the AI teams are now you they've worked
+2866.359,6.081,on traditional M they're shifting now to
+2868.4,6.159,llms but that's something we're all very
+2872.44,5.48,used to and very familiar with we're
+2874.559,5.481,used to training model models on data
+2877.92,4.76,and then deploying those models and fine
+2880.04,5.0,tuning is feels very familiar right you
+2882.68,4.24,grab data points that it doesn't work on
+2885.04,5.44,you fine-tune it and that's how you
+2886.92,5.36,improve the performance of your model um
+2890.48,3.359,but in this
+2892.28,4.039,space
+2893.839,5.801,fine-tuning feels like you're jumping to
+2896.319,5.721,like level 100 when sometimes a lot of
+2899.64,4.36,this could be you know like I was
+2902.04,4.4,telling you in the rag case change the
+2904.0,6.24,prompt a bit and you get vly different
+2906.44,5.56,responses and so it's like almost the
+2910.24,3.879,thing that we're like geared towards to
+2912.0,4.079,do which is like oh it makes sense we're
+2914.119,4.521,going to training is now fine tuning and
+2916.079,4.721,we're all used to that Paradigm but I I
+2918.64,4.4,think in this
+2920.8,5.4,space let's start with like the lowest
+2923.04,6.039,hanging fruit and see how that improves
+2926.2,6.0,um because I I I
+2929.079,5.081,think you know and and drudge carpy
+2932.2,4.879,actually Drew this like really awesome
+2934.16,4.84,image of like you know level of effort
+2937.079,5.52,versus the ROI you know kind of kind of
+2939.0,5.0,of that effort and prompt engineering
+2942.599,3.601,rack like there's so many things you
+2944.0,4.76,could do to improve the lm's performance
+2946.2,5.28,before you jump into fine-tuning or like
+2948.76,5.48,training your own llm so it's just I
+2951.48,3.68,think it's important to like start with
+2954.24,3.76,with something that could have the
+2955.16,6.08,highest Ry you are preaching to the
+2958.0,5.599,choir and I laugh because I was like
+2961.24,4.48,talking about how fine tuning to me
+2963.599,3.801,feels like when all else fails you'll
+2965.72,3.76,throw some fine tuning at it and it's
+2967.4,4.6,like yeah that's what you need to you
+2969.48,5.92,need to look at it as like the escape
+2972.0,6.319,hatch almost not as step two it should
+2975.4,7.399,be what you go to when you can't get
+2978.319,6.681,anything else to work and try rigorously
+2982.799,4.52,to get everything else to work because
+2985.0,6.48,it is exactly like you said it is so
+2987.319,7.52,much easier to just tweak The Prompt
+2991.48,6.76,then fine-tune it and and I didn't
+2994.839,4.881,connect the dot on how similar the two
+2998.24,4.2,are and like oh if we're coming from the
+2999.72,4.2,traditional ml space then it's easier to
+3002.44,3.119,jump there and be like oh well that's
+3003.92,4.159,just because we need to fine-tune it and
+3005.559,6.921,then it'll do what we want it to
+3008.079,6.28,do yeah totally um I I think there's
+3012.48,3.879,just something very natural feeling
+3014.359,4.96,about okay you know training is now fine
+3016.359,5.24,tuning but it's you know I think it's
+3019.319,4.361,one of those changes we all have to just
+3021.599,5.041,just adapt with with the the space
+3023.68,6.32,changing yeah a simulate yeah
+3026.64,6.36,100% excellent and then my my other hot
+3030.0,9.04,take I guess um I it's totally a hot
+3033.0,9.64,take but um I think sometimes I hear um
+3039.04,5.72,a lot of this you know I yeah maybe I
+3042.64,7.36,hear it less now than than I was in the
+3044.76,6.72,beginning um so I I hear a lot of like
+3050.0,2.72,well it's kind of continuation of the
+3051.48,3.0,fine tuning well if I pick an open
+3052.72,4.56,source model I can go in and fine-tune
+3054.48,3.879,it more and I can and you know or I can
+3057.28,5.319,then go
+3058.359,7.681,and you know modify it for my use case
+3062.599,7.561,because I I know I I have access to
+3066.04,7.0,model weights and and do that um I think
+3070.16,4.399,that I hear a lot of folks asking well
+3073.04,3.92,does choosing an open source model
+3074.559,4.161,versus a private model end up slowing
+3076.96,3.879,down product development or like what
+3078.72,5.599,what kind of what's kind of the pros and
+3080.839,6.041,the cons of One Versus the other um I
+3084.319,3.441,think I was hearing a lot more of like
+3086.88,4.08,you know
+3087.76,4.72,almost resistance for some of you know
+3090.96,5.04,just the private models of the beginning
+3092.48,7.2,and a lot more of the you know open
+3096.0,4.72,source I am so in this horce I got to
+3099.68,3.639,say
+3100.72,4.72,I'm you know all for the open source
+3103.319,5.0,Community like I think I'm I'm also all
+3105.44,5.04,for you know whatever llm just makes
+3108.319,7.121,your application the most successful it
+3110.48,7.079,can be um so pick pick the one that like
+3115.44,4.6,gets you the performance and the
+3117.559,5.681,outcomes that you need I don't think
+3120.04,4.48,that like um you know some people make a
+3123.24,3.24,bet on the open source because they're
+3124.52,5.92,like a later I can go back and find tun
+3126.48,5.8,or it's better and Etc but it's again
+3130.44,5.04,how many of those folks are really going
+3132.28,3.92,to actually F tune and for what I've
+3135.48,4.599,been
+3136.2,6.639,seeing out out in the wild starting with
+3140.079,5.881,the open AI or GPT 4 has just
+3142.839,4.401,been helping most people get to kind of
+3145.96,5.159,the outcome that they need their
+3147.24,6.64,application to get to um and so again I
+3151.119,4.321,think I just come back to like there's
+3153.88,4.239,you know all for the open source
+3155.44,3.919,Community all for our you know just
+3158.119,4.081,getting your application to actually
+3159.359,4.801,work as as good as it needs to to work
+3162.2,3.879,but start with start with like what do
+3164.16,4.439,you need for the application and last of
+3166.079,6.361,like I think the how's this going to
+3168.599,5.281,scale yeah like I conversation back in
+3172.44,3.119,the day where you're like oh we're going
+3173.88,4.36,to need to use kubernetes for this and
+3175.559,5.56,you're like wait a minute we have no
+3178.24,4.359,users are you sureet you're I know
+3181.119,4.281,you're planning for the future and this
+3182.599,4.081,is great for the tech debt but uh we
+3185.4,4.48,might want to just get some up on
+3186.68,6.08,streamlet before we do anything totally
+3189.88,4.679,totally totally and I think that that's
+3192.76,3.52,like what I keep coming back to is like
+3194.559,3.361,the more of these you know similar in
+3196.28,3.72,the ml space we want to get more of
+3197.92,5.48,these deployed actually in the real
+3200.0,6.2,world get the BR application to add
+3203.4,6.439,value to the organization show the ROI
+3206.2,5.639,and I think that um that's really
+3209.839,5.76,important to to the success of these
+3211.839,6.0,llms and companies actually and the
+3215.599,3.841,other piece to this that I find
+3217.839,4.72,fascinating was something
+3219.44,6.56,that llo said probably like two years
+3222.559,5.441,ago and llo is Infamous person in the
+3226.0,4.119,community for those who do not know in
+3228.0,5.16,the community slack and he was talking
+3230.119,5.561,about how you need to get something in
+3233.16,5.639,production as fast as possible because
+3235.68,5.36,then you'll find where all of the
+3238.799,5.441,bottlenecks are you'll find where
+3241.04,5.279,everything is messing up and unless you
+3244.24,4.72,get into production you don't
+3246.319,3.961,necessarily know that so each day or
+3248.96,3.28,each minute that you're not in
+3250.28,5.76,production you're not finding all of
+3252.24,6.44,these problems and if you can use a
+3256.04,5.079,model to make your life easier and get
+3258.68,4.32,you into production faster then you're
+3261.119,4.161,going to start seeing oh maybe it's the
+3263.0,4.44,prompts or oh maybe it's you know
+3265.28,4.64,whatever the case may be where you're
+3267.44,6.24,falling behind and you're making
+3269.92,8.12,mistakes or the system isn't designed
+3273.68,6.48,properly yeah absolutely so I think uh
+3278.04,4.279,maybe as we wrap up the podcast that
+3280.16,4.76,that's really is get stuff out as fast
+3282.319,4.961,as you can you know evaluate the
+3284.92,5.0,outcomes I think that's you know LM EV
+3287.28,4.76,vales is something that I think is
+3289.92,4.76,pretty pretty got a lot of momentum
+3292.04,5.16,around it in in the in folks who are
+3294.68,6.119,deploying and in the community so
+3297.2,5.639,evaluations is important and then um I
+3300.799,4.641,think knowing how to set up the right
+3302.839,3.48,evals knowing how to you know benchmark
+3305.44,5.04,your own
+3306.319,5.841,evals um customize it um what types of
+3310.48,3.56,eval score versus classification there's
+3312.16,4.08,just so much Nuance in that whole eval
+3314.04,3.48,space and so as we continue to drop more
+3316.24,2.96,research or share more stuff we're
+3317.52,4.68,learning um we we'll share with the
+3319.2,4.8,community excellent PARTA it's been
+3322.2,4.04,absolutely fascinating having you on as
+3324.0,4.68,always I really appreciate it and look
+3326.24,6.52,forward to having you back awesome
+3328.68,4.08,thanks to me CH thanks and thanks mops
+3334.359,4.521,Community hey everyone my name is apara
+3336.92,3.84,founder of arise and the best way to
+3338.88,4.84,stay up to dat with mlops is by
+3340.76,2.96,subscribing to this
+3346.319,3.0,podcast

@@ -1,0 +1,45 @@
+{
+    "highLevelSummary_video": "This video discusses Direct Preference Optimization (DPO) as a new approach to training language models. DPO is a type of reinforcement learning that effectively moves the probabilities of a language model towards good answers, allowing for better alignment with chat-like models in a more efficient manner than standard training. The video shows the process of using DPO to optimize a language model, and presents two DPO data sets for reference.",
+    "sections": [
+        {
+            "title": "Introduction to Standard Language Model Training",
+            "content": [
+                "Explanation of standard language model training through an example with the capital of Ireland as input and the word 'dublin' as the next token as the correct answer.",
+                "Explanation of how the frequency of words in the training data set affects the model's predictions.",
+                "Emphasis on the statistical nature of language models."
+            ]
+        },
+        {
+            "title": "Introducing Direct Preference Optimization (DPO)",
+            "content": [
+                "Explanation of how DPO works by adjusting the probability distribution of the model towards a chosen response instead of training based on the actual token prediction.",
+                "Description of how DPO differs from standard training.",
+                "Presentation of DPO as a complementary approach to standard training."
+            ]
+        },
+        {
+            "title": "Explanation of DPO Data Sets",
+            "content": [
+                "Overview of the required format for DPO data sets.",
+                "Presentation of example DPO data sets with chosen and rejected responses.",
+                "Description of how the chosen response is distinguished from the rejected response."
+            ]
+        },
+        {
+            "title": "Training Process for DPO",
+            "content": [
+                "Presentation of the training process for DPO and its differences from standard training.",
+                "Explanation of the use of a reference model for DPO training.",
+                "Step-by-step demonstration of the DPO training process."
+            ]
+        },
+        {
+            "title": "Conclusion",
+            "content": [
+                "Summary of the main ideas presented in the video.",
+                "Brief mention of the benefits of DPO versus standard training.",
+                "Call to action for viewers to explore DPO further."
+            ]
+        }
+    ]
+}

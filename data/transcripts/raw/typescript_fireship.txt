@@ -1,0 +1,123 @@
+second,duration,transcript
+0.0,4.5,it is September 7th 2023 and you are
+3.0,4.2,watching the code report it many years
+4.5,4.8,ago in 2017 legendary JavaScript user
+7.2,4.26,Kent C Dodds said I don't use typescript
+9.3,4.2,so I don't ever plan on supporting it in
+11.46,3.78,2019 he goes on to say you are
+13.5,3.9,impassioned love of typescript is sort
+15.24,4.619,of freaking me out and finally in 2023
+17.4,3.959,comes capitulation typescript is one and
+19.859,3.18,it's only a matter of time you're using
+21.359,3.361,it whether you like it or not but this
+23.039,3.48,is the sign of a good developer you have
+24.72,3.6,to be open-minded and willing to adapt
+26.519,3.121,to new tools and sometimes tools you
+28.32,3.299,don't even like but the big question
+29.64,4.02,here is did typescript really win
+31.619,3.841,because recently the turns have started
+33.66,3.18,to table a bunch of big open source
+35.46,3.18,projects have decided to ditch
+36.84,3.6,typescript in favor of vanilla
+38.64,3.419,JavaScript to understand the shocking
+40.44,3.6,turn of events we'll need to go back to
+42.059,3.541,the very beginning in 2012 when
+44.04,3.6,typescript was first released by
+45.6,3.72,Microsoft nobody really cared at first
+47.64,3.899,but then a few years later it was
+49.32,3.899,adopted by the angular 2 framework which
+51.539,3.061,everybody thought was crazy but here's
+53.219,3.48,the thing first they think you're crazy
+54.6,3.84,then they fight you then you change the
+56.699,3.84,world or you go to jail by the early
+58.44,3.599,2020s typescript was everywhere where at
+60.539,3.301,which point most of its haters had been
+62.039,3.001,converted into True Believers but now
+63.84,3.24,right as we're about to reach the
+65.04,4.2,Glorious climax of typescript saturation
+67.08,4.32,you've got big libraries like svelte
+69.24,3.96,drizzle and turbo deciding to ditch
+71.4,3.12,typescript from their code bases to be
+73.2,3.06,clear that just means that they're not
+74.52,3.779,going to use typescript When developing
+76.26,3.66,these libraries but as an end user in a
+78.299,3.121,framework like svelt for example you're
+79.92,3.3,still able to use typescript just like
+81.42,3.54,normal but how could anyone possibly go
+83.22,3.36,back to vanilla JS after using
+84.96,3.299,typescript did they not remember runtime
+86.58,3.359,errors like cannot read properties of
+88.259,3.481,undefined did they not remember how hard
+89.939,3.54,it is to refactor a code base where you
+91.74,3.18,have no idea what anything is well these
+93.479,2.82,people are a lot smarter than I am so
+94.92,3.72,let's first look at this article from
+96.299,3.841,dhh that creator of Ruby on Rails who's
+98.64,2.58,getting rid of typescript and turbo
+100.14,2.58,version 8. the main reason they're
+101.22,3.18,getting rid of it is not because of the
+102.72,3.48,compile step but rather because it
+104.4,3.78,pollutes the code with quote type
+106.2,3.599,gymnastics and there's a lot of Truth to
+108.18,3.299,that especially when developing a
+109.799,3.661,library I'm working on a library myself
+111.479,3.661,called svelt fire and as you can see in
+113.46,3.54,the code here I have to do my own type
+115.14,3.479,gymnastics with typescript just to get
+117.0,3.72,rid of some red squiggly lines in the
+118.619,4.081,IDE now I could simply place this type
+120.72,3.84,with any and not get any type inference
+122.7,3.599,but then my boss would yell at me he's a
+124.56,3.3,total who will abuse me emotionally and
+126.299,2.761,physically if I don't code up to his
+127.86,2.879,standards it's not easy being
+129.06,3.36,self-employed furthermore I have the
+130.739,3.421,compiler in strict mode which means I
+132.42,3.6,have to use any anytime I don't want to
+134.16,3.659,use an explicit type and that results in
+136.02,3.78,code that's anything but beautiful let's
+137.819,3.661,head over to turbo on GitHub and see how
+139.8,3.48,people are reacting to this change well
+141.48,3.42,it's an absolute dumpster fire and a lot
+143.28,3.36,of developers are upset that their ts
+144.9,3.419,contributions are now Dead on Arrival
+146.64,3.599,but another huge project moving away
+148.319,3.42,from typescript is spelled and the
+150.239,3.121,reasoning is a bit different it's purely
+151.739,3.661,practical and I recommend you read this
+153.36,3.84,post by Rich Harris spelled 5 which may
+155.4,3.54,come out later this year no longer uses
+157.2,3.84,typescript and spelled kit is already
+158.94,4.26,written in plain vanilla.js and the main
+161.04,3.839,benefit is no compile step which is a
+163.2,3.24,huge boost in productivity for a large
+164.879,3.481,framework like this that may sound like
+166.44,3.72,total chaos for a large complex project
+168.36,3.78,but they're actually still getting most
+170.16,4.079,of the benefits of typescript but doing
+172.14,3.9,so with JS talk which is a standard
+174.239,3.541,comment format where you declare types
+176.04,3.3,and documentation with regular
+177.78,4.14,JavaScript comments that can then be
+179.34,4.14,used to generate rate types like a d.ts
+181.92,3.12,file and most importantly provide
+183.48,3.06,intellisense in your editor so you know
+185.04,3.3,what the hell everything does and can
+186.54,3.419,catch bugs early just like you can with
+188.34,3.42,typescript that's the main reason I use
+189.959,3.301,typescript in the first place so is it
+191.76,2.699,time to just ditch it all together well
+193.26,3.18,when it comes to building actual
+194.459,3.721,applications with a tool like spell kit
+196.44,3.48,or next JS I don't see myself leaving
+198.18,3.6,typescript anytime soon those tools
+199.92,3.539,integrate TS seamlessly and trying to
+201.78,3.48,get the same results with JS doc would
+203.459,3.541,be a total nightmare but one day I hope
+205.26,3.78,we see the end of this holy war there's
+207.0,3.72,currently a stage 1 ecmascript proposal
+209.04,3.6,that would add optional type annotations
+210.72,3.78,to JavaScript natively thus making
+212.64,3.54,typescripts nearly obsolete this has
+214.5,5.06,been the code report thanks for watching
+216.18,3.38,and I will see you in the next one

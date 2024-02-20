@@ -1,0 +1,25 @@
+High level synopsis:
+
+"The video discusses the concept of consistent hashing in the context of distributed systems and its use in managing large databases. With hashes allowing for immediate storage access, the issue lies with the changes in the array size resulting in hash table size changes. In a distributed system, billions of rows in large databases cannot be managed in a single instance, leading to the need to distribute them across multiple servers. The problem lies in determining which server to connect to to retrieve a key. Distributed hashing helps to solve this problem by using the concept of hashing to determine the server associated with each key. The video also mentions that while consistent hashing has its advantages, it still faces various problems, such as redundancy and scalability issues."
+
+Now, let's break down the video into 5 sections each with 3 subsections:
+
+1. Introduction:
+* Brief overview of the previous episode discussing hash tables.
+* Explanation of consistent hashing and its benefits for managing large databases in distributed systems.
+1. Problems with hashing and resizing hash tables:
+* Brief explanation of the advantages of using hash tables for retrieving data quickly.
+* Discussion of the challenges faced when the size of the array changes, resulting in hash table size changes.
+* Explanation of the problem of finding the correct server to connect to when distributed systems are used.
+1. Importance of consistent hashing in distributed systems:
+* Explanation of consistent hashing and its role in determining the server associated with each key.
+* Discussion of how consistent hashing helps to solve the problem of not being able to determine the server to connect to in distributed systems.
+* Explanation of how consistent hashing contributes to the performance of a distributed system.
+1. Challenges and limitations of consistent hashing:
+* Explanation of the scalability issues faced with consistent hashing.
+* Discussion of the need for redundancy to ensure data consistency in distributed systems.
+* Explanation of the limitations of consistent hashing, such as the need for more than 360 servers.
+1. Conclusion and recommendations:
+* Recap of the advantages and limitations of consistent hashing in managing large databases in distributed systems.
+* Encouragement for engineers to be more performant when managing queries using hashing.
+* Final thoughts and suggestions for proper management of queries in distributed systems.

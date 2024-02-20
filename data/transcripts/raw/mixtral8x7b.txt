@@ -1,0 +1,2124 @@
+second,duration,transcript
+0.32,3.8,hello guys welcome back to my Channel
+2.04,3.88,today we are going to talk about Mistral
+4.12,4.28,so as you know Mistral is a new language
+5.92,4.799,model that came out a few months ago
+8.4,4.64,from mistal AI which is a one of the
+10.719,5.081,hottest startup right now in Europe for
+13.04,5.239,language models it also became a unicorn
+15.8,4.08,recently and we will exploring both the
+18.279,3.281,models they released one is the 7
+19.88,3.559,billion and one is the 8 by7 billion
+21.56,3.959,model so let's review the topics of
+23.439,3.561,today the first thing I will introduce
+25.519,3.68,you is the architectural differences
+27.0,4.56,between the vanilla Transformer and the
+29.199,4.161,architecture of mistal later we will see
+31.56,3.839,what is the sliding window attention and
+33.36,4.0,how it is related to the concept of
+35.399,4.801,receptive field a concept that usually
+37.36,4.719,we find in convolutional neural networks
+40.2,3.359,I will briefly review the KV cache
+42.079,3.96,because I want to introduce the concept
+43.559,4.561,of rolling buffer cache and also how it
+46.039,5.121,is done with prefilling and
+48.12,5.919,chunking uh we will see what is sparse
+51.16,5.919,mixture of experts model sharding with a
+54.039,6.441,little with a very brief introduction
+57.079,5.16,with the pipeline parallelism and
+60.48,4.16,last but not least we will also go
+62.239,4.081,through the code of mistal because there
+64.64,3.44,is a lot of Innovations in the code
+66.32,3.4,especially when they use the X forers
+68.08,3.76,Library with the block attention so I
+69.72,4.24,want to guide you into understanding the
+71.84,4.959,code because it can be really hard for
+73.96,5.04,beginners to understand and find thems
+76.799,3.721,around there are some topics that are
+79.0,3.32,related to mistal but will not be
+80.52,3.16,covered in this current video because I
+82.32,3.68,already covered them in my previous
+83.68,3.799,video about llama and in particular I
+86.0,2.96,will not be talking about the RMS
+87.479,3.121,normalization the rotary positional
+88.96,4.24,encoding and the group query attention
+90.6,4.28,because I already um teach them in depth
+93.2,3.52,in my previous video on llama so if you
+94.88,4.559,want to know about them please watch my
+96.72,5.359,previous video on llama another the only
+99.439,4.121,prerequisite that I hope you have before
+102.079,3.881,watching this video because the topics
+103.56,3.599,we are going to touch are quite Advanced
+105.96,3.0,is that you are familiar with the
+107.159,3.28,Transformer model so if you're not
+108.96,3.119,familiar with the Transformer model and
+110.439,3.161,the attention mechanism in particular
+112.079,3.64,and in particular the self attention
+113.6,4.159,mechanism please go watch my video on
+115.719,4.36,the transformer in which I teach all
+117.759,4.521,this concept very thoroughly very in
+120.079,3.761,detail these are really a prerequisite
+122.28,4.759,for watching this video because the top
+123.84,5.96,the topics here are quite Advanced okay
+127.039,4.0,let's proceed further so let's watch the
+129.8,2.799,differences between the vanilla
+131.039,4.601,Transformer and mistal at the
+132.599,6.081,architecture level as you can see from
+135.64,5.08,the um image here which I built by
+138.68,4.16,myself using the code because they
+140.72,5.239,didn't release any architecture picture
+142.84,5.399,in the paper U the architecture of
+145.959,5.161,mistal first of all let's talk about
+148.239,5.521,some terminology when you have a model
+151.12,4.36,like this made up of many encoder layers
+153.76,4.44,plus linear and the soft Max we are
+155.48,5.399,talking about a decoder only model
+158.2,4.84,because this part this model here looks
+160.879,5.041,like the decoder of the vanilla
+163.04,4.4,Transformer you can see here except for
+165.92,3.76,the cross attention because as you can
+167.44,4.4,see here there is no cross attention
+169.68,4.52,when we have a model without the linear
+171.84,4.8,and the softmax we call it an incoder
+174.2,5.319,only model for example bir is an encoder
+176.64,5.64,only model because Birth has some heads
+179.519,4.08,at at the end which is one or more
+182.28,3.08,linear layers depending on the
+183.599,3.601,application but it self birth doesn't
+185.36,4.08,need a head because it can be used for
+187.2,4.0,multiple Downstream tasks so it's called
+189.44,3.64,an encoder only model because it
+191.2,3.28,resembles the encoder side of the
+193.08,3.12,Transformer because as you can see in
+194.48,4.839,the encoder side there is no linear and
+196.2,6.28,soft Max so mistal is a decoder only
+199.319,6.28,model and it's very similar if not equal
+202.48,6.119,to llama the differences between llama
+205.599,5.041,and mistal are highlighted here in red
+208.599,6.081,the first difference between llama and
+210.64,7.159,mistal is that in the self attention we
+214.68,5.52,use the sliding window attention and we
+217.799,4.64,still use the group query attention but
+220.2,4.28,and also the KV cache for inferencing
+222.439,3.52,but this is a rolling buffer KV cache
+224.48,2.839,and it's actually related to the fact
+225.959,3.321,that we are using sliding window
+227.319,4.161,attention so later we will see all these
+229.28,4.56,Concepts and the another difference is
+231.48,4.679,that the feed forward layer here instead
+233.84,4.679,of using the reu function that we used
+236.159,4.601,in um in the vanilla Transformer or the
+238.519,6.401,zigo function that we Us in Lama here in
+240.76,7.08,mistal we use the ceu function um and
+244.92,5.48,the feed forward is one in case of
+247.84,5.599,mistal 7B so the first model they
+250.4,5.959,released and it's it can be eight feed
+253.439,4.8,forwards uh networks in parallel with
+256.359,5.4,each other which are the experts of this
+258.239,7.161,mixture of expert in the case of mral 8X
+261.759,5.601,7B um we will see later how it works so
+265.4,4.2,for now you just need to understand that
+267.36,3.96,mistal is made up of okay the input
+269.6,4.319,which are converted into embeddings then
+271.32,4.12,we have this block which is repeated n
+273.919,4.481,times and we will see that in the case
+275.44,6.56,of mistal is repeated 32 times one after
+278.4,6.56,another such that the output of each
+282.0,5.199,layer is fed to the next layer as input
+284.96,4.84,and the output of the last layer is then
+287.199,4.761,sent to this RMS Norm to the linear and
+289.8,5.56,to the softmax to produce the output of
+291.96,5.12,the model and um this is exactly the
+295.36,3.76,same as what we do with any other
+297.08,5.119,Transformer model usually we have many
+299.12,5.48,of this blocks here now in the code of
+302.199,5.44,mistal this part Here is known as
+304.6,6.24,Transformer block but it's also known as
+307.639,6.441,encoder block or decoder block depending
+310.84,5.6,on the in the contents of this um block
+314.08,4.119,here I will refer to it as an encoder
+316.44,3.92,block because if you look at it it looks
+318.199,4.361,like exactly as the block of the encoder
+320.36,4.839,side so it has a multi header tension OD
+322.56,3.759,and Norm a feed forward and other Norm
+325.199,3.84,the only difference is that the
+326.319,4.921,normalization here comes before the uh
+329.039,3.641,the the BL of the Feit forward and the
+331.24,4.92,self
+332.68,5.68,attention Okay let's move forward now
+336.16,6.24,let's compare the the two models so one
+338.36,6.64,is mistal 7B and one in mistal 8X 7B the
+342.4,4.919,parameter dim indicates the dimension of
+345.0,4.08,the this the dimensions of the embedding
+347.319,4.081,Vector so how big is the embedding
+349.08,5.6,Vector so each token is represented by
+351.4,6.68,an embedding Vector of size 496
+354.68,7.56,Dimensions we have 32 of the encoder
+358.08,7.28,layers so this block here is repeated 32
+362.24,4.92,times the head Dimension indicates as
+365.36,5.399,you remember in the multi-ad attention
+367.16,6.92,we have um each head is watching the
+370.759,5.401,entire sentence but only a part of the
+374.08,5.16,embedding of each token and this
+376.16,7.0,indicates how much how many dimensions
+379.24,6.48,each head will attend to in each um for
+383.16,4.28,in the multi-ad attention and the hidden
+385.72,3.8,Dimension here indicates the hidden
+387.44,3.64,dimension of the feed forward layer so
+389.52,3.399,if the in the case of the fit forward
+391.08,4.559,layer we have two linear layers one that
+392.919,4.881,converts the the dimension of the
+395.639,3.881,embedding Vector into the hidden size
+397.8,3.72,then another one that converts the
+399.52,4.56,hidden size back into the embedding
+401.52,5.799,Vector Dimensions so in the case of the
+404.08,6.44,mistal they are using as a hidden size
+407.319,6.16,14336 usually this is a multiple of the
+410.52,4.32,dimension and it looks like it's 3.5 the
+413.479,4.28,dimension
+414.84,5.32,here the number of heads of attention
+417.759,4.56,for the query is 32 two while the number
+420.16,4.64,of heads for the K and V so the key and
+422.319,4.0,values is eight and they are not equal
+424.8,3.119,because of the grouped query attention
+426.319,3.16,so if you remember from my previous
+427.919,4.0,video on Lama in which we talk about the
+429.479,4.881,group query attention um in the very
+431.919,4.0,simple case of the group query attention
+434.36,3.679,we have the multiquery attention which
+435.919,4.241,means that only the query have the
+438.039,4.44,multi-ad while the key and V don't have
+440.16,4.159,the multihead attention uh which means
+442.479,4.4,that you may have eight heads for the
+444.319,3.761,query and only one head for the K and V
+446.879,4.401,in the case of the grouped query
+448.08,6.36,attention means that each group of query
+451.28,6.16,will have one um attention head for the
+454.44,5.68,K andv so in this case every four query
+457.44,5.319,have one attention head for the keys and
+460.12,4.359,values if this concept is not clear I
+462.759,5.241,describe it very thoroughly in my
+464.479,6.0,previous video on Lama the window size
+468.0,5.0,is the size of the sliding window that
+470.479,4.521,we used in the um calculation of the
+473.0,5.319,attention and we will see later how it
+475.0,5.36,works the context length is uh what is
+478.319,4.761,the context size of upon which it the
+480.36,5.64,model was trained upon uh and it's much
+483.08,4.799,bigger for the 8X 7B the vocabulary size
+486.0,3.56,is the same for both and then the last
+487.879,4.32,two parameters you can see here are
+489.56,5.079,related to the sparse mixture of experts
+492.199,4.361,and we will see later uh how it works
+494.639,4.761,but we just remember that we have eight
+496.56,5.079,experts and for each token we use two
+499.4,5.239,experts but later I will clarify how it
+501.639,4.721,works let's proceed further so let's
+504.639,3.081,talk about the sliding window attention
+506.36,2.92,but before we talk about the sliding
+507.72,3.28,window attention I need to review a
+509.28,5.6,little bit of the self attention
+511.0,6.36,mechanism so what is self attention self
+514.88,4.719,attention is a mechanism that allows the
+517.36,4.119,model to relate tokens to each other so
+519.599,3.56,tokens that are in the same sentence are
+521.479,3.36,related with each other through the self
+523.159,3.841,attention mechanism this is why it's
+524.839,5.041,called self attention because each token
+527.0,6.519,is watching other tokens of the of the
+529.88,5.44,same sentence and when when and this is
+533.519,6.56,means basically that the query key and
+535.32,6.759,values are the same metrix um so imagine
+540.079,5.401,we have the following sentence the cat
+542.079,6.401,is on a chair we have our query which is
+545.48,6.12,a matrix made up of six tokens each
+548.48,5.2,"token represented by 4,096 Dimensions"
+551.6,4.32,which is the dim parameter that we saw
+553.68,6.399,before this is multiplied by the
+555.92,6.4,transpose of the keys which is 496 by 6
+560.079,3.76,but it's just the query Matrix transpose
+562.32,3.639,because the query key and values are the
+563.839,4.601,same Matrix in the case of self
+565.959,5.481,attention this will produce a matrix
+568.44,4.92,that is 6X 6 because the inner two
+571.44,4.04,Dimensions kind of cancel out and the
+573.36,5.44,outer Dimensions indicate the dimension
+575.48,5.2,of the output Matrix here now what is
+578.8,4.88,the values what are the values in this
+580.68,5.8,Matrix representing the first value here
+583.68,6.04,indicates the dot product of the first
+586.48,5.44,token with the first uh the first row of
+589.72,4.6,the query with the First Column of the
+591.92,5.8,keys so basically the dot product of the
+594.32,5.88,embedding of the first token with itself
+597.72,4.4,the second value here indicates the dot
+600.2,4.639,product of the first row of the query
+602.12,4.68,Matrix with the second column of the key
+604.839,4.161,Matrix here the transpose of the keys
+606.8,4.279,Matrix here which basically means that
+609.0,4.36,it's the dot product of the embedding of
+611.079,4.241,the first token so the with the
+613.36,5.44,embedding of the second token which is
+615.32,5.079,cat and etc etc for all the other values
+618.8,3.2,don't concentrate too much on the values
+620.399,3.68,because all the values I put here are
+622.0,3.72,random and also the fact that these
+624.079,3.32,numbers are less than one it's not
+625.72,3.84,necessary because the dot product can be
+627.399,4.12,bigger than one it's not a uh condition
+629.56,4.36,of the dot
+631.519,4.801,product usually in the formula we also
+633.92,6.159,normalize here we divide by the
+636.32,6.759,dimension of the DC DK basically is the
+640.079,5.2,um the size the part of the embedding to
+643.079,4.921,which this particular attention head
+645.279,6.881,will attend to but let's pretend that we
+648.0,6.16,only have one one ahead so DK is equal
+652.16,5.32,to D model so basically this head will
+654.16,6.08,watch the full embedding of each
+657.48,4.64,token okay you usually we train Auto
+660.24,3.44,regressive models so language model is
+662.12,3.959,an auto regressive model it means that
+663.68,4.68,the output depends on the
+666.079,4.681,previous the next token depends only on
+668.36,5.12,the previous tokens and this is why we
+670.76,3.879,apply a cal mask Cal mask means
+673.48,4.599,basically that in the attention
+674.639,5.681,mechanism we don't want to relate a word
+678.079,4.641,with future words so words that come
+680.32,4.88,after it but only with words that come
+682.72,5.0,before it so for example we don't want
+685.2,6.56,the word the to be related to the word
+687.72,6.48,cat because um the word Cat come after
+691.76,4.6,the word the but on the other hand we
+694.2,4.8,want the word cat to be related to the
+696.36,5.4,word the because it comes before it and
+699.0,5.399,for this reason we apply this Cal mask
+701.76,5.16,because the attention mechanism uses the
+704.399,5.801,soft Max function we can see here the
+706.92,5.56,soft Max function basically um will
+710.2,4.319,transform all this minus infinity into
+712.48,5.28,zero because the formula of the soft Max
+714.519,5.801,has at numerator an e to the power of X
+717.76,4.4,and when X goes to minus infinity e to
+720.32,4.319,the power of minus infinity will go to
+722.16,4.359,zero so this is why we apply a mask in
+724.639,3.481,which we put all the values that we
+726.519,3.361,don't want all the interactions that we
+728.12,4.719,don't want between tokens we just mask
+729.88,5.319,them out by replacing them with minus
+732.839,5.921,infinity so that when we apply the
+735.199,5.361,softmax the softmax will take care of um
+738.76,4.759,transforming them into
+740.56,4.839,zeros okay also the softmax will do
+743.519,4.481,another thing because it will not only
+745.399,4.921,convert this minus Infinities to zero
+748.0,4.519,but it will also modify the other value
+750.32,4.72,for each row such that they sum up to
+752.519,4.361,one so as you can see now these values
+755.04,4.76,here they don't sum up to one for each
+756.88,4.72,row right because this is 0.2 0.1 and 0.
+759.8,4.08,they don't sum up to one but the soft
+761.6,4.28,Marx will convert the minus Infinities
+763.88,4.759,into zero and the remaining values for
+765.88,4.639,each row such that they sum up to one
+768.639,4.481,now let's talk about sliding window
+770.519,5.721,attention so we applied the causal mask
+773.12,6.079,to hide the interactions between the
+776.24,4.839,words a word and all the future words
+779.199,5.08,but with sliding window attention we
+781.079,6.481,also don't want the word to watch other
+784.279,5.68,words that are outside its local context
+787.56,4.32,what do I mean by this in the previous
+789.959,3.88,case when we only applied the Cal mask
+791.88,3.84,the word chair for example was being
+793.839,4.161,related to all the previous tokens as
+795.72,4.52,you can see so the the token chair here
+798.0,6.24,is related to itself but also to the A
+800.24,6.32,on is cat V so it could watch basically
+804.24,4.64,all the sentence but in the case of
+806.56,4.8,sliding window attention we don't want
+808.88,6.16,the word chair to watch words that are
+811.36,6.159,further than the sliding window size
+815.04,5.12,from itself so uh the sliding window
+817.519,4.601,size in this case is three so tokens
+820.16,3.88,that are distance more than three from
+822.12,3.32,the word uh we are considering so the
+824.04,3.68,word the chair should not be related to
+825.44,4.56,the word is because the distance is four
+827.72,3.799,and the word a should not be related to
+830.0,4.04,the word cat because the distance is
+831.519,5.041,four and of course we still want the
+834.04,5.039,mask to be Cal because we don't want the
+836.56,4.48,model to uh each token to watch future
+839.079,3.961,words because we are training an auto
+841.04,5.359,regressive
+843.04,5.239,model so the sliding window attention
+846.399,4.12,basically reduces the number of dot
+848.279,4.0,products that we are performing and this
+850.519,3.361,will improve the performance during the
+852.279,3.201,training and the inference because as
+853.88,3.48,you can see when we only apply the Cal
+855.48,4.279,mask we are performing all these dot
+857.36,3.56,products you see here but with the
+859.759,3.121,sliding window attention we are
+860.92,4.0,performing less dot products because all
+862.88,5.0,the other will be masked
+864.92,4.88,out sliding window attention however may
+867.88,4.079,lead to degradation of the performance
+869.8,5.24,of the model because as you can see here
+871.959,5.161,the word chair and the word the are not
+875.04,4.919,related to each other anymore right so
+877.12,4.959,the information uh will not be conveyed
+879.959,4.361,from the word the and the word chair the
+882.079,4.32,word chair will only be related to other
+884.32,4.72,tokens that are belonging to the local
+886.399,5.44,context of this particular token so only
+889.04,6.32,the tokens that are in the same in
+891.839,5.12,inside this sliding window this may be
+895.36,3.56,if this window is too small it may
+896.959,3.68,reduce the performance of the model but
+898.92,3.68,it may also be beneficial because for
+900.639,4.521,example imagine you are reading a book
+902.6,4.599,you don't care about relating the word
+905.16,4.4,in chapter five with the words in
+907.199,4.401,chapter one because most of the books
+909.56,3.959,they they could be talking about totally
+911.6,4.52,different things and you don't even care
+913.519,5.12,about relating these two tokens but for
+916.12,4.48,sure you want to relate the tokens uh in
+918.639,3.401,the chapter five with other tokens in
+920.6,2.56,the chapter five because the local
+922.04,3.96,context
+923.16,4.72,matters but I want to introduce you the
+926.0,4.36,concept of receptive field because when
+927.88,5.639,we use sliding window attention even if
+930.36,6.479,the word chair and the are not related
+933.519,5.0,to each other actually because in mistal
+936.839,4.8,and in all Transformer models we use
+938.519,6.161,multiple layers of encoders we will see
+941.639,5.0,that the information so the the word the
+944.68,4.719,chair and the the will still be kind of
+946.639,3.56,related to to each other not directly
+949.399,2.961,but
+950.199,3.961,indirectly in a concept that is very
+952.36,4.279,similar to the receptive field of the
+954.16,5.119,convolutional neural networks so let's
+956.639,5.041,talk about the receptive field as you
+959.279,5.521,remember in convolutional Neal networks
+961.68,5.36,we have um a mask a Kel that we run
+964.8,5.2,through an image so imagine this is our
+967.04,6.0,original image uh this one here and we
+970.0,5.959,run a mask that is a kernel that is 3x3
+973.04,4.84,this one here when we run a kernel it
+975.959,3.8,will produce an output feature so for
+977.88,5.12,example this feature here this is the
+979.759,5.88,output produced by applying the caral to
+983.0,5.68,the first 3x3 grid
+985.639,6.241,here this value here the second value
+988.68,5.599,here in yellow it will be produced when
+991.88,5.56,we will move our kernel to the next
+994.279,7.201,group of 3x3 pixels so let me
+997.44,6.72,draw let's use the pen so this value
+1001.48,6.719,here will be produced when we will move
+1004.16,4.039,our kernel in this grid
+1008.959,9.281,here and uh this value here is also a an
+1014.72,4.559,output feature of a convolutional kernel
+1018.24,4.719,that is
+1019.279,6.04,3x3 applied to this layer two so this is
+1022.959,4.761,a 3X3 kernel that is applied to this
+1025.319,5.201,layer two so apparently there is no
+1027.72,7.359,connection between this one this pixel
+1030.52,7.0,here and this one but because this this
+1035.079,4.521,uh output feature depends on a kernel
+1037.52,4.64,applied in this grid and this grid
+1039.6,5.4,includes this feature here which depends
+1042.16,5.519,on this pixel here we can safely say
+1045.0,3.96,that this feature here depends
+1047.679,3.721,indirectly
+1048.96,4.56,also on this feature here even if they
+1051.4,3.92,are not directly related to each other
+1053.52,4.68,and this is the concept of the receptive
+1055.32,5.4,field so basically one feature of the
+1058.2,6.359,convolutional neural networks can watch
+1060.72,8.079,a much bigger receptive field uh down
+1064.559,7.641,upward in the layers because of this
+1068.799,4.841,um sequential application of Kels in the
+1072.2,4.2,convolutional
+1073.64,4.56,Kels let's see how this concept is
+1076.4,3.159,related to the sliding window attention
+1078.2,4.359,now
+1079.559,5.041,now after we apply the soft Max to the
+1082.559,4.441,mask that we have seen before as I told
+1084.6,4.6,you before all the minus infinities are
+1087.0,4.24,converted into zero and all the other
+1089.2,4.599,values are changed in such a way that
+1091.24,4.0,they sum up to one so let's go back as
+1093.799,3.841,you remember here we have the minus
+1095.24,5.6,Infinities here here here here here and
+1097.64,8.039,here so now we apply the soft Max and it
+1100.84,6.64,will become zeros zeros here also let me
+1105.679,3.161,okay all the zeros here all the zeros
+1107.48,2.92,here and all the other values are
+1108.84,3.319,changed in such a way that they sum up
+1110.4,4.04,to one what is the next operation that
+1112.159,4.281,we do in in self attention we then take
+1114.44,5.119,the output of the softmax and multiply
+1116.44,6.64,it by the V Matrix so let's do
+1119.559,5.721,it uh the V Matrix is basically the same
+1123.08,3.88,as the initial sequence because I told
+1125.28,4.96,you this is self attention so the query
+1126.96,5.959,key and values are the same Matrix so
+1130.24,5.48,this means let's analyze what happens by
+1132.919,5.441,hand when we do this multiplication so
+1135.72,5.92,let me change to the pen okay the V
+1138.36,5.84,Matrix here is um is a sequence of
+1141.64,6.8,tokens where each token is Vector
+1144.2,7.16,"represented by 4,096 Dimensions so we"
+1148.44,4.96,can say that it's the output of the self
+1151.36,4.08,attention if you watch the dimensions of
+1153.4,4.88,these two matrices so it's a 6X 6 and
+1155.44,5.599,the 6X 496 the output will be another
+1158.28,5.36,Matrix that is 6X 496 so it will have
+1161.039,4.921,the same Dimension as the V Matrix and
+1163.64,4.84,also as the qu and the query Matrix
+1165.96,5.48,because they have the same dimensions so
+1168.48,6.92,it will be six tokens as
+1171.44,6.0,output okay let's analyze what is the
+1175.4,4.68,first dimension of the output this one
+1177.44,4.92,here so this uh first value of the
+1180.08,4.76,output so the value on the row one
+1182.36,5.84,column one of the output Matrix will be
+1184.84,7.52,the dot product of the first row of this
+1188.2,4.16,Matrix here so this row
+1192.559,5.0,here with the First Column of this
+1195.28,3.48,Matrix so the First Column we can see
+1197.559,3.6,here
+1198.76,4.799,and as you can see most of the values
+1201.159,6.52,here are zero which means that all the
+1203.559,6.881,rows from the one to five sorry from two
+1207.679,4.641,to six will not be used but only the
+1210.44,3.96,first row here only the values of the
+1212.32,4.239,first row will be used because if you
+1214.4,4.279,remember the dot product is the First
+1216.559,5.721,Dimension with the first dimension of
+1218.679,4.961,this column and the second dimension of
+1222.28,3.56,this row with the second dimension of
+1223.64,3.64,this column the third dimension of this
+1225.84,2.839,row with the third dimension of this
+1227.28,4.519,column and then we sum up all these
+1228.679,6.761,values so this first value of the output
+1231.799,6.321,will only depend on the first token of
+1235.44,5.359,the V Matrix you can see here let's
+1238.12,5.439,check the second one the second
+1240.799,5.161,dimension of the the the first dimension
+1243.559,5.921,of the second row of the output Matrix
+1245.96,5.88,will be the dot product of the first row
+1249.48,5.64,of this Matrix
+1251.84,6.76,here with the First Column of the V
+1255.12,6.919,Matrix but most of the values are zero
+1258.6,5.559,which means that this uh Dimension here
+1262.039,4.88,and all the dimensions in this row will
+1264.159,5.76,depend only on the first two tokens of
+1266.919,5.081,the V Matrix and we can say the same for
+1269.919,5.201,the third let's analyze the sixth one
+1272.0,5.799,here so the first dimension of the sixth
+1275.12,7.4,to row of the output Matrix this value
+1277.799,4.721,here comes from the dot product of this
+1283.52,6.279,row and the First Column of the V Matrix
+1287.559,4.48,but most of the values at the beginning
+1289.799,5.76,are zero which means that it will only
+1292.039,7.201,depend on the uh four five and sixth
+1295.559,6.24,token of the V Matrix and so will be all
+1299.24,5.0,the dimensions here because in each
+1301.799,4.441,column uh whatever the column we use
+1304.24,5.08,from the V Matrix the first values will
+1306.24,5.28,always be multiplied by 0 0 0 so it will
+1309.32,6.28,only use the values in these three rows
+1311.52,7.48,here so we can safely say that the sixth
+1315.6,5.6,token of the output Matrix we of this
+1319.0,4.679,self attention mechanism will be a
+1321.2,5.359,vector that will only depend on the last
+1323.679,4.441,three tokens of the V Matrix and because
+1326.559,4.36,we are talking about self attention the
+1328.12,4.64,V Matrix is equal to query Matrix so we
+1330.919,4.521,can say that the output of the self
+1332.76,5.68,attention is a matrix that has the same
+1335.44,5.359,shape as the input sequence but where
+1338.44,4.96,each token now captures some more
+1340.799,5.0,information about other tokens which
+1343.4,5.399,tokens depending on the mask we have
+1345.799,5.641,applied so our mask says that the first
+1348.799,4.921,token can only watch itself so the first
+1351.44,5.04,output token will be an embedding that
+1353.72,5.4,will only depend on itself the second
+1356.48,6.0,token will only depend on the first two
+1359.12,6.24,tokens the third output token will only
+1362.48,5.16,depend on the first three tokens the
+1365.36,4.679,fourth will depend on the token number
+1367.64,3.8,two because the first token is not used
+1370.039,3.201,the token number two the token number
+1371.44,5.239,three and the token number four etc etc
+1373.24,5.919,until the last here the last token will
+1376.679,4.041,depend only on the last three tokens
+1379.159,4.161,because the first three tokens are
+1380.72,4.319,masked out and this is the importance of
+1383.32,4.04,the mask that we apply in the self
+1385.039,4.161,attention mechanism this concept that I
+1387.36,3.0,show you now is very important to
+1389.2,2.839,understand the rest of the video so
+1390.36,3.28,please if you didn't understand it you
+1392.039,3.721,can take a little pause you can try to
+1393.64,3.76,do it by your by yourself because it's
+1395.76,3.399,really important that you understand how
+1397.4,2.92,the self attention mechanism works with
+1399.159,3.52,the
+1400.32,4.359,mask okay now that we have seen this
+1402.679,4.681,concept I want to introduce you to the
+1404.679,4.401,next one so as we saw before the output
+1407.36,4.199,of the self attention mechanism is
+1409.08,5.4,another Matrix with the same shape as
+1411.559,6.24,the query Matrix in which each token is
+1414.48,5.52,represented by an embedding of size 496
+1417.799,4.561,but each embedding now captures
+1420.0,4.919,information also about other tokens
+1422.36,7.08,according to the mask and if we check
+1424.919,7.88,the um this mask here so the output
+1429.44,5.4,here we can safely say that the input of
+1432.799,5.081,our slide uh sliding window attention
+1434.84,5.959,was the initial uh sequence D cat is on
+1437.88,5.2,on a chair but after applying the self
+1440.799,5.12,attention the first token is now related
+1443.08,5.839,to itself the second token is related to
+1445.919,4.841,itself and the token before it the third
+1448.919,4.801,is related to the token before it and
+1450.76,5.24,the one also before it the last one only
+1453.72,4.72,depends on the previous two tokens Etc
+1456.0,4.6,according to the mask right now what
+1458.44,4.599,happens if we feed this one because as
+1460.6,4.6,you know in the Transformer word and
+1463.039,4.481,also in mistal and also in Lama we have
+1465.2,3.599,many layers of encoders one after
+1467.52,2.96,another which are also called
+1468.799,4.841,Transformer Block in the
+1470.48,5.52,code and the output of each layer is fed
+1473.64,4.639,to the next one so this is the first
+1476.0,4.12,layer of the uh Transformer so we take
+1478.279,3.961,the input sequence and we feed it to the
+1480.12,3.96,first layer which will produce a list of
+1482.24,4.08,tokens where each token now captures
+1484.08,4.76,information about other tokens but this
+1486.32,5.719,will become the input of the next layer
+1488.84,5.4,where we we it will produce an output
+1492.039,4.161,this output I will prove you that will
+1494.24,4.039,capture information about even more
+1496.2,4.4,tokens even if the SL in window
+1498.279,4.841,attention says that they should only be
+1500.6,4.319,able to watch the previous two tokens
+1503.12,5.4,because the sliding window size we chose
+1504.919,7.161,three as a sliding window size uh I want
+1508.52,6.24,to prove it so imagine this is the
+1512.08,5.04,output of the first layer so it's a a
+1514.76,4.56,list of tokens that capture information
+1517.12,3.76,about other tokens and it's the the the
+1519.32,4.079,metrix that we built in the previous
+1520.88,5.44,slide let's use it as an input for
+1523.399,4.801,another layer of of the encoder so we
+1526.32,3.8,multiply the query mul
+1528.2,3.839,um we multiply the query and the
+1530.12,3.799,transpost of the keys which will produce
+1532.039,4.0,a matrix like this one in which each
+1533.919,3.721,token is not only one token but it's
+1536.039,3.281,capturing already information about
+1537.64,4.919,multiple tokens right according to the
+1539.32,5.76,mask so I'm I'm taking this one and this
+1542.559,4.12,one will become query key and values so
+1545.08,4.12,if we multiply the query by the key it
+1546.679,4.24,will return a metrix like this so the
+1549.2,4.4,first token only depends on itself the
+1550.919,4.961,second one depends on himself and the
+1553.6,4.12,previous one so the embedding of this
+1555.88,3.679,token captures information about two to
+1557.72,3.88,tokens and the Ming of this token
+1559.559,4.761,capture information about three tokens
+1561.6,5.12,Etc let's try to do the multiplication
+1564.32,2.4,again
+1566.799,8.281,so we have that our V Matrix is again a
+1570.919,7.76,list of tokens and the
+1575.08,5.56,output will also be a list of tokens but
+1578.679,5.24,each one will capture information about
+1580.64,6.279,other tokens okay let's analyze the dot
+1583.919,5.48,product here so the first value of the
+1586.919,4.841,first row so the first dimension of the
+1589.399,5.041,first row of the output Matrix will be
+1591.76,5.96,the dot product of the first row of this
+1594.44,6.16,Matrix here so this row here with the
+1597.72,4.04,First Column of this Matrix here so this
+1600.6,4.439,column
+1601.76,4.96,here but because of this Cal mask with
+1605.039,4.441,sliding window attention mask that we
+1606.72,5.04,can see here it will the output will
+1609.48,5.16,only depend on the first row of the V
+1611.76,5.639,Matrix but because the V Matrix is a
+1614.64,5.32,matrix that is made of these tokens here
+1617.399,4.921,it it will only depend on the word the
+1619.96,5.16,so as we can see here the output of the
+1622.32,5.88,second layer only depends on the word
+1625.12,5.679,the and so will be this second one so
+1628.2,5.12,dick uh let's check the fourth token for
+1630.799,5.041,example here this
+1633.32,5.599,one let's check this fourth token here
+1635.84,6.839,so this value here will be the product
+1638.919,6.921,of the fourth row of this Matrix dot
+1642.679,6.0,product of this row with the First
+1645.84,5.28,Column of the V Matrix so this column
+1648.679,4.161,here but the first token will not be
+1651.12,3.84,used because it's we are multiplying it
+1652.84,4.319,with zero whatever value we have here we
+1654.96,4.959,will not be using it we are using the
+1657.159,6.481,second token the third token and the
+1659.919,7.401,fourth token and each token actually
+1663.64,6.639,they are aggregating this um this values
+1667.32,4.719,here this token here is already uh
+1670.279,4.64,aggregating the value of two tokens
+1672.039,6.081,which is D and cat so this embedding
+1674.919,6.76,here is already about talking about D
+1678.12,5.52,and Cat and this uh token here is
+1681.679,5.36,talking about is aggregating the
+1683.64,8.84,information about the cat and is
+1687.039,7.441,so the cat and is and the fourth token
+1692.48,4.0,is aggregating the information of the
+1694.48,6.439,cat is on so
+1696.48,7.199,cat is and on because as we saw before
+1700.919,4.161,the fourth token here cat is on which is
+1703.679,2.761,the result of the previous self
+1705.08,4.839,attention that we
+1706.44,6.64,done so this output value here will
+1709.919,5.401,depend on three tokens that already
+1713.08,5.439,include information about other tokens
+1715.32,5.44,so this value here will aggregate
+1718.519,4.081,information about the union of all these
+1720.76,4.279,tokens so it will for sure depend on the
+1722.6,5.079,word the because it's included in the
+1725.039,4.88,second token we are multiplying it with
+1727.679,4.36,it for sure it will include information
+1729.919,4.36,about the word cat because it's included
+1732.039,4.0,in this token as well for sure it will
+1734.279,3.601,include information about is because
+1736.039,3.841,it's included in the second value we are
+1737.88,4.36,multiplying it with and for sure it will
+1739.88,4.919,include about the token on because it's
+1742.24,4.84,present in the the fourth token of the V
+1744.799,5.12,Matrix for with which we are app
+1747.08,6.04,multiplying it because this value is not
+1749.919,6.201,zero so as you can see after applying
+1753.12,5.84,another layer of the encoder the fourth
+1756.12,5.48,token now includes another token in in
+1758.96,4.64,its information before it was only uh
+1761.6,3.84,including these three tokens but now it
+1763.6,5.16,also depends on a new token which is the
+1765.44,6.0,word v and we can prove the same for the
+1768.76,4.96,fifth token and the sixth token so at
+1771.44,4.76,every application of the encoder layer
+1773.72,5.92,one after another we keep increasing the
+1776.2,5.92,number of tokens that get uh accumulated
+1779.64,6.36,in these thought products and I made a
+1782.12,6.08,notebook in Pon to visualize this so if
+1786.0,5.44,you look at my GitHub
+1788.2,5.0,repository uh you will see this notebook
+1791.44,4.599,called the sliding window attention in
+1793.2,4.92,which I help you visualize this process
+1796.039,3.561,and I also share the code on on how I do
+1798.12,6.2,this self attention basically I
+1799.6,7.12,represent each token as a set so each
+1804.32,4.839,each token instead of being represented
+1806.72,5.88,as an amending as a set of all the words
+1809.159,5.201,upon which that token depends depends
+1812.6,3.76,then I apply the sliding window
+1814.36,4.48,attention which basically means that I
+1816.36,5.4,take the two tokens that the from the
+1818.84,5.719,sequence and I accumulate I make the
+1821.76,4.84,union of the two sets they contain
+1824.559,4.081,because I am multiplying two vectors
+1826.6,4.76,that already include information about
+1828.64,4.919,multiple tokens so what is the output is
+1831.36,4.4,the union of the two sets when I
+1833.559,4.561,multiply by V I do the same thing and I
+1835.76,4.08,can visualize it so after we apply the
+1838.12,3.64,first layer we will see that the input
+1839.84,3.92,of the first layer is just our normal
+1841.76,3.6,sequence so the cat is on a chair the
+1843.76,3.96,output of the first layer will be
+1845.36,3.88,another sequence that in which each
+1847.72,4.079,position includes information about
+1849.24,4.439,multiple tokens depending on the mask
+1851.799,4.441,that we have applied and I also show the
+1853.679,4.441,mask that we apply after we apply the
+1856.24,5.08,second layer we can see that the
+1858.12,4.84,information increases so this last token
+1861.32,4.319,now is not watching only the previous
+1862.96,5.12,three tokens but the previous four
+1865.639,4.201,tokens uh sorry not only the previous
+1868.08,4.559,two tokens but the previous four tokens
+1869.84,5.04,so every every uh step we do with the
+1872.639,6.801,sliding window size of three we include
+1874.88,6.639,two tokens at every layer and uh here I
+1879.44,4.04,show it for five layers but it's not
+1881.519,4.561,necessary because after a while the the
+1883.48,4.4,sequence will reach the maximum length
+1886.08,5.599,if you want you can increase the
+1887.88,7.36,sequence length here by including more
+1891.679,5.96,tokens so this is the concept of the um
+1895.24,4.12,the receptive field applied to the self
+1897.639,5.76,window attention so basically with the
+1899.36,5.919,sliding window attention we are not uh
+1903.399,4.201,directly connecting connecting two
+1905.279,5.24,tokens with each other but if we apply
+1907.6,5.319,multiple layers after one after another
+1910.519,5.12,this information will get will get
+1912.919,4.921,captured by the embedding in successive
+1915.639,4.04,applications of the layers such that the
+1917.84,4.839,last layer basically will be able to
+1919.679,5.921,watch all the sentence even if it's very
+1922.679,5.801,long and this is actually uh shown by
+1925.6,5.48,the um myal paper in this picture you
+1928.48,5.559,can see here so basically this is our
+1931.08,7.8,input sequence so let me
+1934.039,7.48,write so this is our input which is a
+1938.88,5.24,the original sentence so the cat is on a
+1941.519,4.681,chair the fourth token of the first
+1944.12,4.96,layer so this is the output of the first
+1946.2,2.88,layer so layer one
+1949.44,5.199,one uh we have see that the fourth token
+1952.679,5.321,here depend with a sliding window size
+1954.639,5.681,of four this will depend on the itself
+1958.0,5.08,on the previous token on the one before
+1960.32,5.719,and also this token here and it will
+1963.08,4.719,produce um this uh this embedding here
+1966.039,3.401,in the fourth position which includes
+1967.799,4.201,information about the previous token as
+1969.44,4.119,well but then this will become the input
+1972.0,3.799,of the next layer which is the layer
+1973.559,2.24,number
+1976.039,5.52,two and this will produce an embedding
+1979.279,4.0,at this position for example that will
+1981.559,3.441,depend for sure on the previous four
+1983.279,4.161,tokens because the sliding window size
+1985.0,4.639,is four but because for example this
+1987.44,4.199,token here is already the aggregation of
+1989.639,4.241,the previous four tokens it will
+1991.639,5.52,actually multiply the visibility of his
+1993.88,5.96,sliding window so this token here is not
+1997.159,6.041,related directly to the first one we can
+1999.84,6.36,see here but indirectly through the uh
+2003.2,5.92,this intermediate token we can see here
+2006.2,7.199,I hope this um I hope this concept is
+2009.12,6.679,clear if it's not clear I try I I I
+2013.399,4.921,recommend using my notebook so that you
+2015.799,4.36,can experiment by playing with multiple
+2018.32,5.76,sequences and you can see how the
+2020.159,6.64,information flow will go through all the
+2024.08,4.76,layers all right let's talk about our
+2026.799,3.801,next topic which is the K cach because I
+2028.84,3.36,want to introduce the KV cach which I
+2030.6,3.6,already explain in my previous video on
+2032.2,3.24,llama but I want to introduce it again
+2034.2,3.479,and review it because I want to
+2035.44,4.359,introduce later the rolling buffer cach
+2037.679,3.681,so let's start start by talking about
+2039.799,3.801,first of all how we train language
+2041.36,4.799,models because this is needed to
+2043.6,4.479,understand the K cach so uh the language
+2046.159,3.881,models are trained using what is known
+2048.079,3.721,as the next token prediction task so
+2050.04,3.599,given a prompt the goal of the language
+2051.8,4.0,model is to predict what is the next
+2053.639,4.2,token that makes sense with the prompts
+2055.8,3.92,that we have given and imagine we want
+2057.839,5.721,to train a language model on Dante
+2059.72,6.04,alig's poem uh Divine Comedy and in
+2063.56,6.16,particular we will training it on a line
+2065.76,5.8,that you can see here in um this one in
+2069.72,4.639,English so love that can quickly seize
+2071.56,5.119,the gentle heart how does it work we
+2074.359,4.48,prepare an input for our language model
+2076.679,5.041,which is the the line that we want to
+2078.839,5.0,teach it with a token prepended called
+2081.72,4.28,start of sentence and then we build the
+2083.839,4.721,target which is the same line but within
+2086.0,4.24,token at the end called end of sentence
+2088.56,3.68,we run the input through this
+2090.24,5.159,Transformer model it will produce an
+2092.24,5.2,output sequence so as we saw before the
+2095.399,4.801,in the output of the selfa ension is
+2097.44,5.56,another sequence with the same length as
+2100.2,4.96,the input sequence but the embedding is
+2103.0,5.079,modified in such a way that each token
+2105.16,5.28,capture information about other tokens
+2108.079,4.681,and this is what we use uh to actually
+2110.44,5.0,train a model so if we feed the model
+2112.76,5.76,with with nine tokens the model will
+2115.44,5.919,produce nine tokens as output and how
+2118.52,5.8,does it work basically the model will
+2121.359,5.881,learn a mapping between input and output
+2124.32,5.84,such that if we give to the model as
+2127.24,4.96,input the token start of sentence only
+2130.16,4.72,it will produce the first token as
+2132.2,4.72,output which is the word love if we give
+2134.88,4.64,to the model as input the first two
+2136.92,4.679,tokens so start of sentence love the
+2139.52,4.72,model will produce the two tokens as
+2141.599,5.121,output so love that it will feed the
+2144.24,4.52,model as input three tokens so start of
+2146.72,4.76,sentence love that the model will
+2148.76,4.4,produce love that can so when we train
+2151.48,3.4,the model we train it like this we
+2153.16,3.6,prepare the input like this the target
+2154.88,3.04,like this we calculate the output we
+2156.76,2.559,calculated the loss using the cross
+2157.92,3.8,entropy loss and then we run back
+2159.319,4.441,propagation and this is done in all one
+2161.72,3.96,step when we do the inference we do it
+2163.76,3.76,in multiple steps so when we do the
+2165.68,3.919,inference at time step one we feed the
+2167.52,3.64,model only the first token so the start
+2169.599,5.041,of sentence and the model will produce
+2171.16,5.28,the output love then we take the output
+2174.64,3.84,the last token of the output and we
+2176.44,4.56,prepend it to the input which becomes
+2178.48,4.8,the input As Time step two so it becomes
+2181.0,5.04,start of sentence love so the motel will
+2183.28,5.0,produce love that we take the last token
+2186.04,4.68,of the output and we prep append it to
+2188.28,3.96,the input for the temp step three and
+2190.72,4.04,this will become the new input which
+2192.24,5.44,will produce love that can then we take
+2194.76,4.839,the last token of the output and we
+2197.68,3.8,append it to the input for the time step
+2199.599,4.281,four so it will become the new output
+2201.48,4.24,will become love that can quickly then
+2203.88,3.8,we take this word quickly we append it
+2205.72,3.879,to the input for the next time step and
+2207.68,4.32,it will produce the next token as output
+2209.599,5.041,etc etc until the last token until we
+2212.0,4.88,see the end of sentence token as output
+2214.64,5.88,then we know that the model has stopped
+2216.88,5.04,uh um has stopped producing new tokens
+2220.52,3.92,and we can stop the
+2221.92,4.919,inference now at every step the
+2224.44,4.6,inference we are only interested in the
+2226.839,4.841,last token output by the model because
+2229.04,4.68,we already have the previous one but of
+2231.68,5.56,course we need to feed all the previous
+2233.72,5.119,tokens to uh to to the model which is
+2237.24,4.4,belonging to the prompt because the
+2238.839,4.681,model needs to access the prompt to
+2241.64,4.04,understand which token to produce next
+2243.52,5.319,so for example we cannot produce the
+2245.68,5.159,word gen only by giving the word the we
+2248.839,6.081,need to give all this sentence to
+2250.839,6.24,produce this output gentle here but at
+2254.92,4.96,the same time we are only interested in
+2257.079,5.28,the last word gentle and this is the
+2259.88,4.479,reason we introduce the K cach because
+2262.359,4.561,the K cach allow us to reduce the
+2264.359,5.24,computations that we are doing by only
+2266.92,5.8,producing one output at a time the one
+2269.599,4.681,that we need but um without doing all
+2272.72,3.599,the intermediate computations for all
+2274.28,3.64,the other tokens that we never use so
+2276.319,3.681,basically basically when we want the
+2277.92,4.12,word heart we don't want to produce the
+2280.0,3.88,output for the word love that can
+2282.04,3.72,quickly seize the gentle because we
+2283.88,3.439,already have them in the prompt we don't
+2285.76,3.559,need to produce all these tokens we just
+2287.319,3.361,want to produce the output for the token
+2289.319,3.361,heart so we want to reduce the
+2290.68,5.84,computation that we are doing let's see
+2292.68,5.6,how it works now in the self attention
+2296.52,3.68,mechanism you know that we multiply the
+2298.28,3.6,query which can be thought of as a list
+2300.2,3.76,of tokens where each token is an
+2301.88,4.92,embedding of size
+2303.96,5.159,"4,096 and the transposed of the query"
+2306.8,4.44,becomes the is Multiplied the transpose
+2309.119,4.441,of the keys are multiplied by the
+2311.24,4.56,queries to produce this Matrix here and
+2313.56,4.279,then we multiply by the V Matrix to
+2315.8,4.6,produce the output of the self attention
+2317.839,4.48,you can see here let's do this one token
+2320.4,3.76,at a time so when we inference a
+2322.319,4.241,language model we start with our first
+2324.16,4.64,token which is the start of sentence
+2326.56,5.48,this is one token represented by an
+2328.8,5.08,embeding of size 496 we multiply it by
+2332.04,4.48,the transpost of the keys which is again
+2333.88,4.84,one token it's because it's a self
+2336.52,4.0,attention so uh the query the key and
+2338.72,4.639,the value are the same Matrix so this is
+2340.52,5.92,just the transpose of the query
+2343.359,5.041,basically and so it's a column vector
+2346.44,3.639,and it will produce a 1 by one Matrix we
+2348.4,4.12,multiply by V and it will produce an
+2350.079,4.841,output token we take this output token
+2352.52,4.92,we send it to the linear layer and then
+2354.92,4.399,to the soft Marx to understand which
+2357.44,4.24,token this corresponds to in our
+2359.319,5.441,vocabulary we take this token from our
+2361.68,5.919,vocabulary and we append it to the query
+2364.76,5.68,for the next inference step to the keys
+2367.599,4.921,and the values and then we compute again
+2370.44,4.24,the product of the query multiplied by
+2372.52,4.2,the keys we multiply then the result by
+2374.68,3.8,V and it will produce an output made up
+2376.72,3.56,of two tokens because we have two tokens
+2378.48,4.08,as input it will produce two tokens as
+2380.28,4.039,output but we are all interested in the
+2382.56,3.88,last token so we take this output token
+2384.319,4.561,two we send it to the linear layer then
+2386.44,4.28,to the soft Max this will result in what
+2388.88,3.92,token is corresponding to in our
+2390.72,4.24,vocabulary we take this token from our
+2392.8,5.039,vocabulary we append it for the next
+2394.96,5.92,step to the query key and values we do
+2397.839,5.601,again this iterator this process and
+2400.88,4.28,then we take the last token as output
+2403.44,3.679,you can see here we send it to the
+2405.16,3.72,linear layer then the soft Marx we
+2407.119,4.881,understand which token it corresponds to
+2408.88,4.84,we append it to our query key and values
+2412.0,3.92,and then we compute again the self
+2413.72,6.0,attention but we already start to notice
+2415.92,6.48,something because first of all we in
+2419.72,4.52,this metrix here which is the result of
+2422.4,4.48,the query multiplied by the transpost of
+2424.24,4.76,the keys we have a lot of dot product at
+2426.88,4.76,each step that were already computed at
+2429.0,4.48,the previous step let me show you at the
+2431.64,3.52,time step four we are Computing all
+2433.48,4.119,these dot products as you can see at the
+2435.16,4.72,time step three we already computed this
+2437.599,4.76,uh this dot products and the time steps
+2439.88,4.4,four we are Computing them Computing
+2442.359,5.841,them again as you can see these dot
+2444.28,7.039,products here so and the second thing is
+2448.2,5.36,that usually when we uh we deal with the
+2451.319,4.52,language model we have a cal mask so we
+2453.56,4.48,do not even care about Computing the dot
+2455.839,4.441,products that we see here in the Dark
+2458.04,5.079,Violet because they will be anyway
+2460.28,4.799,masked out by the mask the by the Cal
+2463.119,4.0,mask that we apply because we don't want
+2465.079,3.481,the first token to watch the token
+2467.119,3.521,number two the token number three the
+2468.56,4.16,token number four we only want the token
+2470.64,3.479,number four to watch the previous one so
+2472.72,3.08,the token number four should be related
+2474.119,3.401,to itself the previous one the token
+2475.8,2.799,number two and the token number one but
+2477.52,3.52,not the
+2478.599,4.281,opposite and also we don't want to
+2481.04,3.76,produce all these output tokens because
+2482.88,3.56,we are all interested in the last one we
+2484.8,4.559,are all interested in knowing what is
+2486.44,4.76,the last uh token uh produced by the
+2489.359,3.881,attention so that we can send it to the
+2491.2,3.28,linear layer and then to the soft Max to
+2493.24,3.0,understand what is the word
+2494.48,3.879,corresponding in our vocabulary so that
+2496.24,4.72,we can use it for the prompt to
+2498.359,4.601,inference the next token again so now
+2500.96,5.04,let's introduce the kave cas and how the
+2502.96,5.32,K cach solve this problem what we do
+2506.0,4.68,with the k cache again we start from our
+2508.28,4.36,first step of the inference so we start
+2510.68,4.04,from our start of sentence token which
+2512.64,4.12,is Multiplied so the query is only the
+2514.72,3.44,start of sentence token we multiply by
+2516.76,3.76,the transpost of the keys this will
+2518.16,4.159,produce a 1 by one Matrix here then we
+2520.52,4.52,multiply by the V and it will produce
+2522.319,4.321,our uh first token as output we send it
+2525.04,2.92,to the linear layer then to the soft
+2526.64,4.04,Marx then we know which token it
+2527.96,5.52,corresponds to now in the k cache
+2530.68,4.76,instead of appending this new token that
+2533.48,4.4,we have produced as output to the query
+2535.44,5.52,key and value we only append it to the
+2537.88,6.08,key and the value and replace entirely
+2540.96,6.04,the previous query with this new token
+2543.96,5.159,so before without the cach we were
+2547.0,4.96,appending the every output token so the
+2549.119,5.521,last token of the output to the query
+2551.96,5.119,key and values but in with the K cach we
+2554.64,5.479,don't pend it to query key and value but
+2557.079,5.961,only to the key and values and we only
+2560.119,6.161,use the last output token as query for
+2563.04,5.2,the next step so if this is the first
+2566.28,4.039,the output of the first step so the
+2568.24,4.96,output corresponding to the Token start
+2570.319,6.0,of sentence we take it we use it as
+2573.2,5.2,query for the next step but we append it
+2576.319,5.04,to the key and values and this is why
+2578.4,5.56,it's called KV cache because at each
+2581.359,5.121,step we are keeping a cache of the
+2583.96,4.359,previous K and V but not for the query
+2586.48,3.879,because we are entirely replacing all
+2588.319,5.361,the queries with the last
+2590.359,5.281,token anyway this will produce a product
+2593.68,3.679,so this this Matrix multiplied by this
+2595.64,3.84,Matrix will produce a matrix that is 1
+2597.359,4.681,by two we multiply it by V and we will
+2599.48,5.0,see that this produces only one token as
+2602.04,3.72,output then this we take this token we
+2604.48,2.839,send it to the linear layer to the
+2605.76,4.64,software then we know which token it
+2607.319,5.401,corresponds to then we use it as query
+2610.4,5.439,for the next iteration but we append it
+2612.72,7.68,to the only the K and the V Matrix this
+2615.839,5.961,will produce a 1x3 matrix um which is
+2620.4,4.08,then multiplied by the V which will
+2621.8,4.96,produce the uh this output token this is
+2624.48,4.599,the one we are interested in basically
+2626.76,5.12,then we use it as query for the next
+2629.079,5.441,iteration but we append it to the K and
+2631.88,4.719,V etc etc so as you can see at the
+2634.52,4.36,fourth step of the inference
+2636.599,5.081,we are producing only the last row that
+2638.88,4.8,we were interested in when we didn't
+2641.68,5.72,have the kvk so let me show you this is
+2643.68,5.32,the fourth time step with the KV cach
+2647.4,3.48,let's look at the fourth time step
+2649.0,3.92,without the KV
+2650.88,4.64,cach as you can see we are only
+2652.92,5.08,producing this uh row here this is the
+2655.52,4.52,only one we are interested in to produce
+2658.0,3.359,this last token so with the K cash
+2660.04,3.4,basically we reduce the number of
+2661.359,3.96,computations that we are doing at every
+2663.44,3.32,step because the some of the dot
+2665.319,3.601,products we have already done in the
+2666.76,4.2,previous steps and we only produce one
+2668.92,5.76,token as output which is exactly the one
+2670.96,6.159,that we need for predicting the next
+2674.68,4.439,token okay now let's talk about the
+2677.119,4.2,rolling buffer cach so since we are
+2679.119,4.841,using the sliding window attention with
+2681.319,4.52,a size of w and in the examples I show
+2683.96,4.32,you before I was using a sliding window
+2685.839,5.201,size with a SI with a size of
+2688.28,5.76,three we don't need to keep all the
+2691.04,5.84,possible K and V in the cach but we can
+2694.04,5.279,limit the K and the V on only to W
+2696.88,5.8,tokens because anyway we will not be
+2699.319,5.481,Computing uh attention outside of this W
+2702.68,4.399,window so we do not need imagine our
+2704.8,4.759,window is 10 tokens we do not keep the
+2707.079,4.121,"previous 1,000 tokens because anyway our"
+2709.559,4.0,attention will only be calculated on the
+2711.2,3.879,previous 10 tokens so this is the idea
+2713.559,2.881,behind the rolling buffer cach let's see
+2715.079,4.24,how it
+2716.44,6.159,works imagine we arrive at the token
+2719.319,5.401,eight of inference using the KV cach if
+2722.599,5.48,we have a KV cach and we are using the
+2724.72,6.119,sliding window size of four for example
+2728.079,5.441,we will see that query as query we will
+2730.839,5.201,use the output of the previous step and
+2733.52,4.68,as key and values we will use the entire
+2736.04,5.76,cache which is made up of eight
+2738.2,4.8,tokens but with because of the uh mask
+2741.8,3.6,that we are using with the sliding
+2743.0,4.599,window attention we are not interested
+2745.4,3.919,in the computation of these dot products
+2747.599,3.72,because anyway they will be masked out
+2749.319,4.161,because the distance between this token
+2751.319,4.161,and this token is outside of the sliding
+2753.48,4.079,window attention so we are not
+2755.48,4.879,interested Ed in this calculating these
+2757.559,5.361,dot products because um we will not they
+2760.359,4.72,will be masked out and secondly we are
+2762.92,4.32,not interested in keeping this one
+2765.079,4.881,because anyway because this these values
+2767.24,4.96,will be masked by our mask for the
+2769.96,5.359,sliding window attention which basically
+2772.2,5.32,will result in zeros here uh we are we
+2775.319,5.081,do we do not care about producing these
+2777.52,4.36,first four rows in the value Matrix
+2780.4,3.679,because anyway they will be multiplied
+2781.88,4.439,by zeros so they will not contribute to
+2784.079,4.76,the output token so here you have to
+2786.319,5.121,imagine that let me
+2788.839,5.641,draw here you have to imagine that the
+2791.44,5.159,mask will take care of making this one
+2794.48,3.68,zero this one zero this one zero this
+2796.599,3.72,one zero and this one will be a DOT
+2798.16,3.679,product this one will be a DOT product
+2800.319,3.561,this one will be a DOT product this one
+2801.839,3.76,will be a DOT product so whatever value
+2803.88,4.56,there is here whatever value there is
+2805.599,5.081,here here or here will not contribute to
+2808.44,4.6,the output of this token because anyway
+2810.68,4.76,they will be multiplied by zeros here so
+2813.04,4.92,we do not need to keep this value also
+2815.44,3.8,in the V Matrix or in the K Matrix
+2817.96,3.32,because they anyway they will not be
+2819.24,4.4,used by the the the sliding window
+2821.28,6.44,attention so that's why we can limit the
+2823.64,5.959,size of our K and V uh cach only to W
+2827.72,4.16,tokens where W is the size of the
+2829.599,4.561,sliding window attention that we are
+2831.88,4.4,using now let's see how this rolling
+2834.16,5.12,buffer cach was implemented so basically
+2836.28,6.76,rolling buffer cach is a way of limiting
+2839.28,6.16,the size of of a cache to a limited size
+2843.04,3.2,in this case W so imagine our W is only
+2845.44,3.8,four
+2846.24,6.079,imagine we have a sentence the cat is on
+2849.24,5.359,a chair and we want to use it or for our
+2852.319,6.201,k cach at the first inference using the
+2854.599,6.681,KV cache we will add the first um the
+2858.52,4.64,first token to the KV cache then we will
+2861.28,4.36,add the second one the third one and the
+2863.16,4.56,fourth one but now the KV cach is full
+2865.64,4.8,how do we proceed further basically we
+2867.72,5.32,keep track of where we added the last
+2870.44,4.96,item using a pointer that we keep track
+2873.04,5.12,of and when we will arrive at the next
+2875.4,5.24,token which is the token a we basically
+2878.16,4.199,replace the oldest value here starting
+2880.64,4.479,from the beginning and we update the
+2882.359,5.641,value of the right pointer but now how
+2885.119,4.561,do we uh go back because now the order
+2888.0,3.52,of the tokens is not matching the
+2889.68,4.32,sentence because as you can see now the
+2891.52,4.16,the cash contains a cat is on but this
+2894.0,3.8,is not the order in the original
+2895.68,5.32,sentence in the original sentence the
+2897.8,6.48,order should be cat is on a so what we
+2901.0,6.04,do is we do the unrolling or un rotation
+2904.28,5.279,and how do do it basically because we
+2907.04,4.76,kept track of this right pointer we just
+2909.559,4.481,need to take all the values after the
+2911.8,5.24,right pointer and then we put the values
+2914.04,4.76,from zero to the right pointer itself so
+2917.04,3.319,all the values after the right pointer
+2918.8,3.96,and then all the values before the right
+2920.359,4.641,pointer and this is how we un rotate and
+2922.76,4.319,this operation is done in the code in a
+2925.0,5.48,function called un rotate you can see
+2927.079,5.441,here uh which basically will have this
+2930.48,4.28,condition so if the cach is not full we
+2932.52,4.76,can just ignore the unfilled item so if
+2934.76,4.559,the cache in is in this situation then
+2937.28,4.44,we take all the values from the zero up
+2939.319,4.881,to the right pointer if the cache is
+2941.72,3.639,full then we take the value from zero up
+2944.2,3.76,to
+2945.359,6.48,the uh the the value of the right
+2947.96,5.72,pointer and if the value of the right
+2951.839,3.681,pointer is already overwriting some
+2953.68,4.399,value then we need to AR rotate and this
+2955.52,4.52,is done in the uh third condition here
+2958.079,4.201,so we take all the values after the
+2960.04,4.559,pointer and then the value up to the
+2962.28,4.0,pointer and this is how we un rotate
+2964.599,4.24,this uh buffer
+2966.28,4.2,cash okay let's talk about another
+2968.839,4.081,concept that is very important which is
+2970.48,4.599,chunking and prefeeding basically when
+2972.92,4.0,we generate text using a language model
+2975.079,4.601,we use a prompt and then we use this
+2976.92,4.879,prompt to generate future tokens when
+2979.68,4.119,dealing with a Cy cach we need to build
+2981.799,4.32,up this KV cache so we need to add the
+2983.799,4.52,tokens of our prompt to the KV cache
+2986.119,5.44,that so that we can then exploit this KV
+2988.319,5.881,cache to build new tokens future
+2991.559,4.441,tokens now the prompt is known in
+2994.2,3.919,advance right because because it's the
+2996.0,4.52,input of our user it's what you ask to
+2998.119,4.0,CH GPD for example right tell me a poem
+3000.52,3.52,tell me write me a poem or tell me a
+3002.119,4.161,joke this is our prompt so it's known in
+3004.04,4.759,advance so we don't we don't need to
+3006.28,4.839,generate it okay so what we can do is we
+3008.799,4.76,can prefill the KV cache using the
+3011.119,4.801,tokens of the prompt but there are many
+3013.559,4.121,ways to do it like we were doing before
+3015.92,3.96,when I was teaching you about the K cach
+3017.68,4.919,we work with one token at a time so one
+3019.88,5.719,way to um to add the tokens to the K
+3022.599,5.121,cach is to add one token at at a time
+3025.599,3.561,but this can be very time consuming
+3027.72,3.359,because imagine you have a very large
+3029.16,3.52,prompt which happens with retrieval
+3031.079,4.04,augmented generation which we have very
+3032.68,5.32,"big prompts like 5,000 6,000 tokens or"
+3035.119,4.921,even bigger so this if we add one token
+3038.0,5.28,at a time it will mean that we have to
+3040.04,5.48,"take 5,000 or 6,000 forward steps in our"
+3043.28,4.36,Network which is can be very time
+3045.52,5.079,consuming and also doesn't exploit our
+3047.64,5.24,GPU very much the other way is to take
+3050.599,4.361,all these tokens and feed them all at
+3052.88,4.16,once to the model but that may be
+3054.96,4.48,limited by the size of our GPU because
+3057.04,4.759,"imagine we have 10,000 tokens as our"
+3059.44,4.28,prompt then maybe our GPU cannot even
+3061.799,4.841,"hold 10,000 tokens maybe it can only"
+3063.72,5.0,"hold 4,000 tokens or 2,000 tokens"
+3066.64,3.8,depending also on the W size of the
+3068.72,4.28,attention sliding window attention that
+3070.44,5.04,we have chosen the solution in this case
+3073.0,5.839,is to use chunking basically we divide
+3075.48,6.0,our prompt into chunks of a fixed size
+3078.839,5.96,and this size is equal to W which is the
+3081.48,5.44,sliding window attention size so imagine
+3084.799,4.04,we have a very big prompt and we choose
+3086.92,3.84,a sliding window size of four for the
+3088.839,4.121,calculation of the attention and imagine
+3090.76,5.4,that the prompt is this one so can you
+3092.96,5.639,tell me oops can you tell me who is the
+3096.16,5.88,richest man in history the way we work
+3098.599,5.96,is this basically we take our first
+3102.04,4.319,chunk of the prompt so because we chose
+3104.559,4.28,a sliding window size of four we also
+3106.359,5.44,will choose the chunk size to be four so
+3108.839,6.601,we take our first token of the prompt so
+3111.799,5.641,can you tell me and we compute the self
+3115.44,4.08,attention in the attention uh self
+3117.44,6.0,attention in the first layer of the
+3119.52,6.88,model how do we build the attention mask
+3123.44,6.24,basically as queries we take all the
+3126.4,5.36,incoming tokens in this chunk so as this
+3129.68,5.24,is you can think of this column as the
+3131.76,4.52,queries and this column as the keys and
+3134.92,3.36,this is the result of the query
+3136.28,3.079,multiplied by the transpose of the keys
+3138.28,3.92,plus the
+3139.359,5.401,mask so our query we take the first
+3142.2,5.159,incoming chunk and as keys I will show
+3144.76,5.48,you later we take the current content of
+3147.359,5.841,the K cash but initially it it is empty
+3150.24,6.76,plus the incoming tokens of the current
+3153.2,5.399,chunk and this is made it this is made
+3157.0,4.119,for a very specific reason that I will
+3158.599,5.881,show you in the next step so in the next
+3161.119,6.801,step basically we take the current chunk
+3164.48,6.48,which is the tokens who is the
+3167.92,5.52,richest and we aggregate it with the
+3170.96,4.639,content of the K cach using the tokens
+3173.44,4.96,of the previous chunk so let me go go
+3175.599,4.921,back at the first step of this
+3178.4,3.719,prefilling we take the first chunk of
+3180.52,3.64,the prompt so can you tell me we
+3182.119,5.161,calculate the attention mask using as
+3184.16,5.919,query the first four tokens and S Keys
+3187.28,5.0,as the con as keys and values the
+3190.079,4.321,content of the K cach which is empty
+3192.28,4.559,plus the tokens of the first chunk and
+3194.4,5.24,then we update the content of the k
+3196.839,4.52,cache using this uh the tokens of this
+3199.64,5.08,chunk after we have computed the
+3201.359,4.401,attention so at the next step the K cach
+3204.72,2.8,now contain
+3205.76,4.16,the previous the tokens of the previous
+3207.52,4.4,chunk so can you tell me but now the
+3209.92,5.679,current chunk has become who is the
+3211.92,6.48,richest so as query again we take the
+3215.599,6.161,tokens of the current chunk but as keys
+3218.4,5.88,and values we take the the content of
+3221.76,6.839,the KV cach plus the tokens of the
+3224.28,6.0,current chunk why because uh as you can
+3228.599,4.0,see when we were doing token generation
+3230.28,5.2,when I was teaching you the KV cache we
+3232.599,5.441,first add the last output token we add
+3235.48,4.68,it to append it to the K and the V and
+3238.04,4.4,we use it as the query for the next
+3240.16,4.919,iteration this is not what we do here
+3242.44,5.399,here we first calculated the attention
+3245.079,5.48,and then we update the k cache and when
+3247.839,4.52,we use the when we build the query the
+3250.559,4.28,query we use only the tokens of the
+3252.359,5.681,current chunk and as key and values we
+3254.839,6.24,take the content of the k cache so the
+3258.04,6.64,content of the previous chunk plus the
+3261.079,6.72,tokens of the current chunk why because
+3264.68,5.399,imagine if we didn't do we didn't use
+3267.799,5.401,the content of the previous chunk what
+3270.079,5.48,would happen is this we would have a
+3273.2,4.359,attention mask that is only comprised of
+3275.559,4.081,the tokens of the current chunk so it
+3277.559,8.961,would be only limited to this metrix
+3279.64,9.679,here let me draw it so only this Matrix
+3286.52,6.079,here but if we only use this Matrix here
+3289.319,6.48,the word who would not be able to to
+3292.599,5.921,would not be related to the word me tell
+3295.799,5.201,and you even if with the sliding window
+3298.52,5.079,size they should be able to watch each
+3301.0,4.92,other so because we want to relate the
+3303.599,5.561,current chunk to the previous Chunk we
+3305.92,6.199,basically take uh as a key and value the
+3309.16,5.0,content of the K Cas plus the tokens of
+3312.119,5.121,the current chunk so that we can build
+3314.16,5.76,this attention between chunks otherwise
+3317.24,5.04,this attention would not be built and as
+3319.92,5.119,query we always use the tokens of the
+3322.28,5.559,current chunk let's review how this me
+3325.039,6.8,mechanism is built in the
+3327.839,6.081,code so basically the prefilling is done
+3331.839,3.441,in by chunks there is the first chunk
+3333.92,2.919,and then there there are subsequent
+3335.28,4.12,chunks and finally there is token
+3336.839,5.24,generation after we have prefilled our K
+3339.4,4.88,cach with the prompt during the first
+3342.079,6.48,prefill which means that we are doing it
+3344.28,7.279,for the first chunk of our prompt as
+3348.559,5.48,attention mask we only consider the size
+3351.559,5.921,of the incoming tokens in the current
+3354.039,6.601,chunk but for any subsequent chunks so
+3357.48,6.44,after the first chunk as to build the
+3360.64,6.159,attention mask for the query we just use
+3363.92,5.52,the size of the incoming chunk but for
+3366.799,4.881,the K and V we use the size of the KV
+3369.44,4.639,cache which is this one so cashed s you
+3371.68,4.639,can see here plus the size of the
+3374.079,4.561,current chunk which is this s variable
+3376.319,4.681,you can see here and for token
+3378.64,4.28,generation we do the same system that we
+3381.0,4.44,did before when I was teaching with the
+3382.92,5.24,K cach so one token at a time
+3385.44,4.679,we take it we append it to the key we
+3388.16,4.12,append it to the value and we replace
+3390.119,5.041,the the query with the previous the the
+3392.28,4.839,output token from the previous step so
+3395.16,5.199,the last Chunk in our case will be the
+3397.119,5.72,tokens men in history and what we do is
+3400.359,4.601,basically we take the the the current
+3402.839,4.2,chunk so men in history which becomes
+3404.96,4.24,the query while the key becomes
+3407.039,4.681,basically the previous chunk plus the
+3409.2,5.08,tokens of the current chunk uh so the
+3411.72,4.599,who is the richest plus the tokens of
+3414.28,3.96,the current chunk so men in history and
+3416.319,3.52,the reason we do it because otherwise
+3418.24,3.72,the word in the current chunk would not
+3419.839,4.321,be able to be related to the word of the
+3421.96,5.52,previous chunk which is necessary okay
+3424.16,7.0,guys let's talk about sparse M mixture
+3427.48,5.28,of experts so mixture of experts is an
+3431.16,4.199,example technique in which we have
+3432.76,4.48,multiple expert model which each of
+3435.359,4.161,these model is trained on a subset of
+3437.24,5.2,the data such that each model will
+3439.52,4.88,specialize on a subset of this data and
+3442.44,4.76,then when we produce the output of this
+3444.4,5.52,mixture of experts we take the output
+3447.2,5.48,for for each of these experts we combine
+3449.92,6.08,it usually by using a weighted sum or by
+3452.68,5.32,everying to produce one single output in
+3456.0,3.92,the case of mistal we do not talk about
+3458.0,4.0,only mixture of ex but we talk about a
+3459.92,4.639,sparse mixture of experts because we
+3462.0,5.24,have many expert model but we only use
+3464.559,5.201,some of them let me show you in the case
+3467.24,4.559,of mistal we have eight experts which
+3469.76,3.72,are present as the feed forward the
+3471.799,3.56,layer so after we calculate the self
+3473.48,4.119,attention as you remember we have this
+3475.359,6.161,Feit forward Network in the case of
+3477.599,6.52,mistal 8X 7B we have eight Feit forward
+3481.52,5.76,layers we have to think of them in
+3484.119,5.44,parallel and the gate is a function that
+3487.28,4.96,basically will decide for each token
+3489.559,5.24,which expert so which feed forward
+3492.24,4.799,Network should be working with that
+3494.799,4.76,token and it will choose two feed
+3497.039,4.601,forward Network for each token it will
+3499.559,4.921,run the token through these feed forward
+3501.64,5.52,networks will take their output and will
+3504.48,6.16,wait it according to the Logics this
+3507.16,5.52,gate produces to produce a weighted sum
+3510.64,4.36,which will become the output of the self
+3512.68,5.399,attention for that particular
+3515.0,5.119,token let me show you with an example so
+3518.079,5.0,uh this is the architecture of mistal as
+3520.119,5.2,you can see we have the input of this um
+3523.079,3.801,encoder layer we first run the self
+3525.319,4.641,attention using the sliding window
+3526.88,5.479,attention and the KV cach etc etc then
+3529.96,4.399,we run the normalization and finally we
+3532.359,4.081,have this gate function here which is
+3534.359,6.881,basically just a linear layer that will
+3536.44,7.119,produce logits eight logits which will
+3541.24,5.4,be values let's say let's call them
+3543.559,6.201,score values for our expert the two best
+3546.64,5.36,performing experts so the two highest
+3549.76,4.839,score will indicate which expert that
+3552.0,5.4,token should work with then we run each
+3554.599,5.161,token in it in their own two best
+3557.4,4.28,performing experts then we take the
+3559.76,5.12,output of these two experts we combine
+3561.68,6.04,it with the weight what is the weight
+3564.88,5.56,basically the uh logits produced by the
+3567.72,4.68,gate are suppose eight values here yeah
+3570.44,3.72,I draw only four because I don't have
+3572.4,6.0,space but you imagine you have eight
+3574.16,6.24,values then we take the top two so 1.5
+3578.4,3.52,and 3.4 in this case these are the two
+3580.4,4.639,exper through which we will run the
+3581.92,5.48,token we take the soft Max of the two
+3585.039,4.201,best performing values this will be the
+3587.4,3.439,weight that we'll be using for the
+3589.24,7.64,weighted
+3590.839,9.72,sum and basically why do we do it so the
+3596.88,6.56,the why do we do it uh because uh by
+3600.559,5.841,using sparse M of experts we can have
+3603.44,6.04,many expert model but during inferencing
+3606.4,5.679,only two out of eight will be activated
+3609.48,6.0,so as you remember the feed forw network
+3612.079,5.201,is basically two linear layers so the
+3615.48,3.879,linear layer can be thought of as a
+3617.28,4.519,matrix multiplication of a weight Matrix
+3619.359,4.44,with the input so if we didn't use a
+3621.799,4.441,sparse mixture of experts we would run
+3623.799,3.921,the token through all the eight experts
+3626.24,3.28,which means that we need to compute
+3627.72,3.92,eight Matrix
+3629.52,3.96,multiplications but by using sparse
+3631.64,4.399,mixture of experts for each token we are
+3633.48,4.879,only doing two Matrix multiplications
+3636.039,4.201,which makes the inference faster but at
+3638.359,3.48,the same time allows us to increase the
+3640.24,4.04,power of the model and the parameter of
+3641.839,6.161,the model because we are only using some
+3644.28,5.4,parameters for um a subset of the tokens
+3648.0,3.28,so some tokens will use the expert
+3649.68,3.56,number one some tokens will be used the
+3651.28,4.24,token the expert number two and three
+3653.24,4.76,some to tokens will be using the expert
+3655.52,5.36,number eight and the three or some other
+3658.0,4.92,for example the six and the four etc etc
+3660.88,4.64,so we are not using all the expert for
+3662.92,5.6,each token but only two of them this
+3665.52,6.319,makes us this allow us to have each
+3668.52,5.319,expert um specialized on a subset of
+3671.839,3.681,tokens for example imagine the model has
+3673.839,4.441,been trained on multiple language what
+3675.52,4.72,could happen is that basically some ex
+3678.28,3.68,some experts so some feed forward
+3680.24,4.559,networks are specialized on Japanese
+3681.96,5.639,tokens some feed forward n are special
+3684.799,4.32,on English tokens or some it could also
+3687.599,4.44,happen that some are specialized in
+3689.119,6.081,verbs some are specialized in nouns some
+3692.039,5.681,are specialized in objectives etc
+3695.2,4.119,etc so this is why we use mixture of
+3697.72,4.56,expert because we want to increase the
+3699.319,5.28,size of the parameters of our model so
+3702.28,4.36,the mo model becomes more powerful at
+3704.599,4.44,capturing information but at the same
+3706.64,5.36,time we don't sacrifice on performance
+3709.039,6.201,because we only use a subset of the
+3712.0,5.64,experts for each token and this is the
+3715.24,5.16,implementation as done in the code so as
+3717.64,5.08,you can see in the case of mistal 7B we
+3720.4,5.439,have as feed forward just a feed forward
+3722.72,6.0,Neal Network which is two linear layers
+3725.839,4.76,um in the case of mral 8X 7B it's not
+3728.72,3.96,only one feed forward network but it's
+3730.599,5.041,eight fit forward Network so this as you
+3732.68,5.399,can see it's the uh it's an array of
+3735.64,4.679,eight fit forward networks with a gating
+3738.079,4.76,function which is just a linear layer
+3740.319,5.52,which converts from the embedding size
+3742.839,5.361,to eight which is the number of experts
+3745.839,4.681,so it produces for each embedding so for
+3748.2,6.76,each token it produces logits which
+3750.52,7.079,indicates for which um expert this uh
+3754.96,5.599,token should run through and it will run
+3757.599,6.96,through them to the top two experts so
+3760.559,7.04,the two two experts with the top logic
+3764.559,6.641,score okay why we apply the soft Max
+3767.599,7.2,after selecting the topk expert so as I
+3771.2,5.52,show you uh here we have the getting
+3774.799,5.32,function that produces some Logics we
+3776.72,5.96,select the top two logits to understand
+3780.119,5.801,which expert we should run through our
+3782.68,6.56,uh token and then we take the score of
+3785.92,6.24,the best two performing uh experts and
+3789.24,5.319,we take the soft Marx of them to to
+3792.16,4.679,create the weights that we will use to
+3794.559,4.601,create the weighted sum but why we take
+3796.839,4.081,the soft Marx of the two best performing
+3799.16,4.959,instead of taking the soft Marx of
+3800.92,5.679,everyone well the first problem is that
+3804.119,5.121,if we take the soft Max of all of the
+3806.599,6.801,logits then the two best performing may
+3809.24,5.839,not sum up to one which is um which is a
+3813.4,3.639,condition that we need in case we want
+3815.079,3.441,to train multiple models and compare
+3817.039,3.08,them because I'm pretty sure that the
+3818.52,3.64,guys at mistal did not only train one
+3820.119,4.24,model maybe they trained multiple models
+3822.16,5.0,with multiple hyper parameter maybe they
+3824.359,4.361,tried with four mixture of four experts
+3827.16,4.28,but also with three experts or two
+3828.72,4.68,experts then they choose the best one so
+3831.44,4.159,if you want to compare models you want
+3833.4,4.719,the weighted sum to always
+3835.599,4.76,perform the sum of the wids to be only
+3838.119,4.281,one otherwise the output range may
+3840.359,4.561,change from model to model and usually
+3842.4,4.6,it's not a good idea to have the range
+3844.92,4.52,of the output to change from one model
+3847.0,5.279,to the next so to keep the range of the
+3849.44,5.399,output stable they apply the soft Marx
+3852.279,4.121,after they have selected how many uh
+3854.839,3.44,experts they want to work with and
+3856.4,5.08,choosing the logits of the best two
+3858.279,3.201,performing uh
+3862.0,4.48,experts okay the next
+3864.799,3.361,thing we are talking going to talk about
+3866.48,3.839,is model sharding which is also
+3868.16,5.32,implemented in the code of the mistal
+3870.319,5.561,model so let's talk about it when we
+3873.48,5.079,have a model that is too big to fit in a
+3875.88,5.479,single GPU we can divide the model into
+3878.559,5.56,groups of layers and place each group of
+3881.359,5.361,layers in a single GPU for example in
+3884.119,4.68,the case of mistal we have 32 layers of
+3886.72,5.04,encoders you can see here one after
+3888.799,4.721,another I didn't do all 32 of them you
+3891.76,3.92,just think that this is layer from one
+3893.52,6.4,to eight this this is from 9 to 16 from
+3895.68,6.639,17 to 24 from 25 to 32 and we put each
+3899.92,3.399,group of layers in a different GPU so we
+3902.319,4.52,have four
+3903.319,6.04,gpus the the way we inference a model
+3906.839,4.641,like this is as follows so we have our
+3909.359,3.96,input we convert it into embeddings and
+3911.48,4.079,we run it through the first eight layers
+3913.319,4.121,in the first GPU the first GPU will
+3915.559,5.24,produce an output which will be the
+3917.44,5.879,output of the E layer we transfer this
+3920.799,5.161,output to the second GPU and we use it
+3923.319,4.441,as input for the ninth layer then we run
+3925.96,4.48,all the this input through all the
+3927.76,4.359,layers one after another until it it
+3930.44,3.24,arrives to the layer number 16 which
+3932.119,5.121,will produce an output we take this
+3933.68,5.0,output we move it to the next GPU so it
+3937.24,4.599,will become the input of the layer
+3938.68,5.439,number 17 and then we run iteratively to
+3941.839,3.841,all the layers until the layer number 24
+3944.119,3.321,which will produce an output we move it
+3945.68,4.399,to the next GPU we run it through
+3947.44,4.839,iteratively until the layer number 32
+3950.079,4.161,then we take the last linear layer and
+3952.279,5.601,then the soft Max to produce the output
+3954.24,5.64,put of the model however you can notice
+3957.88,4.64,that this method is not very efficient
+3959.88,5.199,because at any time only one GPU is
+3962.52,4.72,working a better approach which is not
+3965.079,4.121,implemented in the code of mistal but
+3967.24,4.44,they reference it in the paper so I will
+3969.2,5.919,talking about it is the pipeline
+3971.68,5.439,parallelism let's see how it works uh
+3975.119,4.68,this pipeline parallelism I will talking
+3977.119,4.561,about the algorithm that was introduced
+3979.799,4.641,in this paper so
+3981.68,4.599,gipe basically it works as follows first
+3984.44,3.8,let me introduce you the problem this
+3986.279,3.361,actually it's used usually when we are
+3988.24,3.28,training a model not when we are
+3989.64,4.04,inferencing but it can also be applied
+3991.52,5.319,to the inference imagine we want to
+3993.68,6.56,train a model on a sharded model so a
+3996.839,5.361,model that is split into multiple group
+4000.24,5.16,of layers each group of layer is present
+4002.2,5.48,on a different GPU imagine we have four
+4005.4,4.48,gpus each one with its own group of
+4007.68,4.879,layers imagine we want to train this
+4009.88,4.76,model so we run our input to the first
+4012.559,3.961,GPU so we run the forward step to the
+4014.64,4.639,first GPU we take this output and we
+4016.52,4.599,feed it to the next GPU so then we run
+4019.279,4.0,forward from there we take the output
+4021.119,3.841,and we run it through the next GPU GPU
+4023.279,3.961,number three we take the output we run
+4024.96,4.159,it to the next GPU the GPU number four
+4027.24,4.079,now we have the output of the model we
+4029.119,3.521,compute the loss and then we can run
+4031.319,3.081,back propagation the run back
+4032.64,3.8,propagation does basically just the
+4034.4,4.48,opposite we go from the last GPU to the
+4036.44,5.52,first GPU so we run back propagation on
+4038.88,5.439,the fourth GPU then we have calculated
+4041.96,3.8,the gradients at the fourth GPU and we
+4044.319,3.8,use them to calculate the previous
+4045.76,4.039,gradients at the third GPU and then we
+4048.119,3.401,take these gradients and we use them to
+4049.799,3.76,calculate the previous gradients and
+4051.52,4.559,then we use take these gradients and we
+4053.559,4.56,use to compute the previous gradients so
+4056.079,4.76,the forward step goes from the input to
+4058.119,5.601,the loss the backward step backward step
+4060.839,4.52,goes from the loss to the input and all
+4063.72,3.8,the parameters which are also known as
+4065.359,4.841,the leave nodes in the computational
+4067.52,6.0,graph however also as in this case you
+4070.2,6.68,can see that at each step we are only
+4073.52,6.759,util utilizing one single GPU and all
+4076.88,6.84,the other gpus are quite uh not working
+4080.279,6.641,they are idle a better way is to use
+4083.72,5.319,pipeline parallelism so imagine that the
+4086.92,4.08,previous step of training was done using
+4089.039,5.161,a very big botch suppose this batch is
+4091.0,5.08,made up of eight items what we do with
+4094.2,5.2,pipeline parallelism is we take this
+4096.08,5.8,batch and we split into micro batch so
+4099.4,5.399,instead of eight items we create micro
+4101.88,6.319,batch so four micro batch of two items
+4104.799,6.281,each what we do is we run the first
+4108.199,4.681,micro batch from the in the first GPU
+4111.08,3.88,this will produce the output for the
+4112.88,4.72,first micro batch and we can feed it to
+4114.96,4.6,the next GPU but now at the time step
+4117.6,4.44,one we realize that the GPU one now is
+4119.56,5.44,free so she can already start working on
+4122.04,5.0,the second micro batch meanwhile the
+4125.0,3.92,second GPU is working on the first micro
+4127.04,4.96,batch and when she will finish she can
+4128.92,5.12,send it to the next GPU and uh meanwhile
+4132.0,5.08,we realize that now the second GPU is
+4134.04,5.0,free so we can if the gpu1 has finished
+4137.08,4.96,we can take the output of the gpu1 and
+4139.04,5.52,transfer it to the gpu2 and the GPU one
+4142.04,5.199,will be free so it can work on the third
+4144.56,5.44,micr batch you can see here then after
+4147.239,4.761,the third GPU has finished it will take
+4150.0,4.279,the uh output of the third GPU we send
+4152.0,4.319,it to the fourth GPU but we realize that
+4154.279,3.601,the third GPU is now free so if the
+4156.319,3.241,previous GPU have finished we can
+4157.88,3.959,transfer the second micr batch to the
+4159.56,4.719,third GPU the third microbatch to the
+4161.839,4.721,second GPU and the first GPU which will
+4164.279,3.96,be free can start working on a new micro
+4166.56,4.84,batch which is the fourth micro batch
+4168.239,5.04,and basically we do this uh job of time
+4171.4,4.2,Shifting the micro
+4173.279,4.4,batches and this will result in a better
+4175.6,4.96,utilization of the gpus because now at
+4177.679,4.361,every time step we at this time step for
+4180.56,3.239,example all the four the gpus are
+4182.04,4.639,working and also at this time step here
+4183.799,5.96,at the backwards step and for each micr
+4186.679,5.241,batch we calculate the gradient but we
+4189.759,3.96,do not update the parameters we do what
+4191.92,3.12,is called gradient accumulation which
+4193.719,3.161,basically means that we calculate the
+4195.04,4.56,gradient for each microbatch and we keep
+4196.88,4.48,summing it to the existing gradients but
+4199.6,3.72,we do not update the parameters of the
+4201.36,3.72,model after all the micro batch have
+4203.32,3.72,finished processing the forward and the
+4205.08,4.2,backward we update the parameters of the
+4207.04,4.08,model uh the gradient accumulation is a
+4209.28,4.32,technique that I have introduced my my
+4211.12,4.079,previous video on distributed training
+4213.6,3.92,so if you want to understand how it
+4215.199,3.841,works I I refer you to my previous video
+4217.52,3.32,on distributor training in which I
+4219.04,4.639,explain also the math behind grit
+4220.84,4.0,accumulation and how it works but B
+4223.679,3.56,basically this is the solution with
+4224.84,4.92,pipeline parallelism so we can actually
+4227.239,4.201,divide our batch into micro batches and
+4229.76,4.04,this can also work with inferencing
+4231.44,5.12,because when we inference we just don't
+4233.8,4.879,have this backward step here right so we
+4236.56,4.56,just delete this second half of the
+4238.679,5.281,table but we can still take our big
+4241.12,5.68,batch at the beginning we split it into
+4243.96,5.56,micro batches and we time shift them uh
+4246.8,6.28,according to the availability of the
+4249.52,7.0,GPU and uh this um pipeline parallelism
+4253.08,5.52,basically introduces still some uh time
+4256.52,4.6,steps in which not all gpus are working
+4258.6,4.96,and these are called bubbles to avoid
+4261.12,5.68,bubbles these big bubbles here what we
+4263.56,7.24,can do is we can uh use a bigger initial
+4266.8,6.8,batch size so we have multiple micro
+4270.8,6.2,batches okay guys now let's go to the
+4273.6,5.84,last part of this video I know that the
+4277.0,4.44,myal code is much more complicated to
+4279.44,3.88,understand compared to the Lama code and
+4281.44,4.44,I will show you why but I will also help
+4283.32,4.879,you understand the most complex Topic in
+4285.88,5.04,the code which is the X forers Library
+4288.199,4.721,which is a trick they use to improve the
+4290.92,4.64,inference performance and it's actually
+4292.92,5.0,a very Advanced technique and I want to
+4295.56,5.56,give you a glimpse into how it
+4297.92,5.6,works so basically imagine you are
+4301.12,4.8,running an AI company and you are
+4303.52,4.92,providing llm inference service so you
+4305.92,4.56,have a customer that has you for example
+4308.44,4.719,provide an API and you have customer
+4310.48,4.6,that send their prompts to your API and
+4313.159,4.48,then one to run inference through your
+4315.08,4.44,large language modules each prompt of
+4317.639,4.801,course may have different length because
+4319.52,4.96,each customer may be using the the large
+4322.44,4.68,language model for different purposes
+4324.48,4.48,for suppose Simplicity suppose that each
+4327.12,4.039,word is a token so suppose you have
+4328.96,4.6,three customer the first customer says
+4331.159,4.48,write a poem the second customer says
+4333.56,4.4,write a historical novel and the Third
+4335.639,4.961,customer says tell me a funny
+4337.96,4.84,joke of course you could process all
+4340.6,4.84,these prompts one by one but that would
+4342.8,4.439,not be very efficient because uh the two
+4345.44,3.199,other two customer would be waiting for
+4347.239,3.281,the first customer to finish and when
+4348.639,4.0,you have a lot of customers that's not
+4350.52,4.76,good and secondly you may not be fully
+4352.639,4.6,utilizing the memory of your GPU so the
+4355.28,4.24,best thing that you can do is to do
+4357.239,5.241,batching you create all these prompts
+4359.52,4.719,you create one big batch but the problem
+4362.48,3.92,is that the prompt have different
+4364.239,4.241,lengths so the first prompt is made up
+4366.4,4.799,of three tokens the second prompt of
+4368.48,6.12,four tokens and the third prompt of five
+4371.199,6.241,tokens one solution is to to add padding
+4374.6,6.36,to these tokens so basically we create a
+4377.44,6.239,batch in which we append padding tokens
+4380.96,6.32,to the input sequence until they all
+4383.679,6.201,reach the same size then we can run this
+4387.28,4.56,sequences this batch to our a large
+4389.88,4.0,language model which could be for
+4391.84,5.56,example llama or
+4393.88,5.48,mistal as we saw before when we have a
+4397.4,3.88,input sequence of end tokens the
+4399.36,4.92,attention mechanism produces an output
+4401.28,5.72,sequence of end tokens and we usually
+4404.28,5.12,take the embedding of the last token
+4407.0,4.639,send it to the linear layer then the
+4409.4,5.4,soft Max to understand what is the next
+4411.639,5.401,token from our vocabulary but in the
+4414.8,4.6,first prompt we see that we have added
+4417.04,4.4,two padding tokens so we cannot use the
+4419.4,3.52,embedding corresponding to the last two
+4421.44,3.88,tokens because they correspond to the
+4422.92,4.239,padding token what we should do is we
+4425.32,4.76,should take the embedding corresponding
+4427.159,4.52,to the last non padding token to and
+4430.08,3.4,then send it to the linear layer and
+4431.679,3.881,then to the softmax to understand
+4433.48,3.719,understand what is the next token and in
+4435.56,4.0,the case of the second prompt we should
+4437.199,5.04,be using the fourth token not the last
+4439.56,4.44,one only in the last prompt we can use
+4442.239,4.521,the last token because it's the last
+4444.0,6.44,it's a non not padding
+4446.76,6.0,token now we have done this and how do
+4450.44,4.68,we actually create a attention mask to
+4452.76,5.24,to run it we basically just create an
+4455.12,5.68,attention mask that is Cal that will
+4458.0,4.76,make each token only uh visualize the
+4460.8,4.16,previous tokens so each token will be
+4462.76,3.56,able to relate to previous tokens but
+4464.96,4.719,not to Future
+4466.32,5.52,tokens and this mask here will work fine
+4469.679,4.321,for all the three scenarios you can see
+4471.84,5.12,here and I will show you later
+4474.0,5.44,how we cannot use a different mask for
+4476.96,4.52,each prompt because all the prompts are
+4479.44,5.199,of the same length so all the mask must
+4481.48,7.32,be 5x five because you cannot use a 3X3
+4484.639,6.281,mask for this prompt a 4x4 matx uh mask
+4488.8,4.16,for this prompt and the 5x5 for this
+4490.92,5.92,prompt because the input sequence is
+4492.96,6.6,five so we must use a 5x5 mask and we
+4496.84,6.56,have to use a 5x5 mask that is
+4499.56,5.44,Cal and also has the uh we can also mask
+4503.4,4.319,out for example imagine the sliding
+4505.0,4.48,window is size is four then we can mask
+4507.719,3.92,out this value here also because we
+4509.48,5.28,don't want the uh this token here to
+4511.639,6.361,watch tokens that are distance of more
+4514.76,4.84,than four for example so the problem
+4518.0,4.08,here is that we are calculating a lot of
+4519.6,4.559,dot products especially for the first
+4522.08,4.76,and the second produ
+4524.159,7.281,that will not be used let me show you
+4526.84,7.12,why when we apply this mask so the 5x5
+4531.44,4.44,mask you can see here to this input
+4533.96,3.48,sequence here which are I want to remind
+4535.88,4.04,you is a
+4537.44,5.719,batch it will produce the following
+4539.92,5.319,attention mask in which all these value
+4543.159,3.841,will be masked out because they are
+4545.239,4.881,minus infinity minus infinity and it's
+4547.0,6.36,because of the causality of the Mask uh
+4550.12,5.039,we cannot mask um this value here
+4553.36,4.08,because they are needed for the last
+4555.159,4.761,prompt for example and we also cannot
+4557.44,4.719,mask this value here which is needed for
+4559.92,3.799,the last prompt but for the first and
+4562.159,3.281,the second prompt we are doing a lot of
+4563.719,3.681,dot products for example these ones
+4565.44,4.52,between padding tokens and other tokens
+4567.4,4.16,that we will not be using because if I I
+4569.96,4.0,want to remind you that in the first
+4571.56,4.76,prompt at the output of the model so we
+4573.96,4.44,will be using the output at the third
+4576.32,4.24,token at the for the second prompt the
+4578.4,4.2,output at the fourth token and only in
+4580.56,3.28,the last token we will be checking the
+4582.6,3.4,last
+4583.84,3.72,output of the output of the self
+4586.0,3.12,attention but for the first two prompts
+4587.56,3.96,we will not be even checking the last
+4589.12,3.92,token output from the self attention
+4591.52,4.8,because they correspond to the padding
+4593.04,6.88,token so is there avoid a way to avoid
+4596.32,5.72,these padding tokens uh being introduced
+4599.92,3.96,in our calculation and calculating all
+4602.04,4.4,these dot products which will result in
+4603.88,4.68,output tokens that we will not even use
+4606.44,4.68,well there is a better solution and the
+4608.56,5.28,solution is this the solution is to
+4611.12,5.88,combine all the tokens of of all the
+4613.84,6.24,prompts into one big sequence
+4617.0,6.28,consecutively and we also keep track of
+4620.08,5.52,what is the actual size of each prompt
+4623.28,4.28,so we know that the prompt are coming
+4625.6,4.24,from our API because we are running an
+4627.56,4.44,AI company and we have this API so we
+4629.84,4.52,know that the first customer has a token
+4632.0,4.84,size prompt of size three tokens the
+4634.36,5.359,second one has four tokens and the third
+4636.84,5.72,one has five tokens so we can keep track
+4639.719,5.0,of these sizes in an array for example
+4642.56,4.24,and then we buil this sequence which is
+4644.719,5.081,a concatenation of all the prompts that
+4646.8,6.12,we receive we take this Mega sequence we
+4649.8,6.28,run it through our llm Ser llm model so
+4652.92,6.12,it could be mistal or it could be llama
+4656.08,5.159,this as I told you before uh and input
+4659.04,5.24,sequence in a Transformer will result in
+4661.239,6.601,N output tokens in the
+4664.28,8.04,output so we have uh here we have three
+4667.84,7.76,+ 4 so 7 7 + 5 12 tokens as input it
+4672.32,5.68,will produce 12 tokens as output to
+4675.6,5.8,understand what is the next token for
+4678.0,5.0,each prompt we need to check the the we
+4681.4,3.72,need to check the embedding
+4683.0,5.159,corresponding to the Token number three
+4685.12,5.72,for the first prompt to the Token number
+4688.159,5.08,seven for the second prompt and the last
+4690.84,4.399,token for the third prompt so we take
+4693.239,4.92,all these embeddings we run them through
+4695.239,5.0,the linear layer then we apply the soft
+4698.159,5.441,marks and then we understand what is the
+4700.239,5.681,next uh token from our vocabulary but
+4703.6,4.96,you may be wondering how do we even
+4705.92,4.88,produce an attention mask that can work
+4708.56,5.679,with multiple prompts that are combined
+4710.8,5.8,into one sequence such that the token of
+4714.239,4.521,one sequence should not of one prompt
+4716.6,4.52,should not be attended to the tokens of
+4718.76,5.56,the another prompt but only of the
+4721.12,6.24,tokens of the same prompt right well the
+4724.32,5.56,X forers Library allow us allow us to do
+4727.36,5.0,that using a method called block
+4729.88,4.6,diagonal Cal mask which is also used in
+4732.36,5.319,the source code code of mistal so I want
+4734.48,6.0,to show you how it works basically X
+4737.679,5.361,forers this method called block diagonal
+4740.48,6.4,causal mask will produce a mask like
+4743.04,7.24,this it will be um group basically all
+4746.88,6.64,the prompts into groups such that each
+4750.28,5.24,token only can attend to the tokens in
+4753.52,5.24,the same group here we have three
+4755.52,6.08,prompts so the token PO for example can
+4758.76,5.6,only attend the token of the same uh
+4761.6,5.039,prompt the token novel for example
+4764.36,5.4,cannot be related to the Token poem so
+4766.639,5.161,it will put minus infinity here but all
+4769.76,5.479,the token of the same prompt will be
+4771.8,6.64,able to be attended by the the token
+4775.239,5.92,novel while the token uh in the last
+4778.44,5.4,prompt will be only be able to attend
+4781.159,4.801,the other tokens in the same prompt and
+4783.84,3.72,this is a special mask built by using
+4785.96,4.32,the X forers
+4787.56,5.36,Library let me show you how it works in
+4790.28,6.12,the code okay I want to show you
+4792.92,6.84,actually how it works so in the mistal
+4796.4,7.56,source code they are using this um
+4799.76,6.2,Library called X forers X forers Library
+4803.96,4.199,allows us to compute very complex
+4805.96,5.32,attention mask and also to calculate the
+4808.159,4.56,attention in a very efficient way using
+4811.28,3.12,the memory efficient attention
+4812.719,3.161,calculation which I will not show in
+4814.4,4.239,this video maybe I will make a future
+4815.88,5.0,video about it but basically what they
+4818.639,3.881,do in the misal source code if you have
+4820.88,4.319,multiple prompts they will create one
+4822.52,5.96,big sequence and then keep track of the
+4825.199,6.081,number of tokens of each prompt and then
+4828.48,4.8,they use these Methods made available by
+4831.28,4.879,the X forers Library to build this
+4833.28,5.879,complex attention maps that keep track
+4836.159,5.321,of the different size of the KV cache
+4839.159,4.56,because each prompt may have a k cache
+4841.48,3.679,that is different from another prompt
+4843.719,3.601,because imagine you have a prompt with
+4845.159,5.121,"5,000 tokens and one prompt with only 10"
+4847.32,5.16,tokens of course you will have a k cach
+4850.28,5.2,"that is 5,000 tokens in one case and 10"
+4852.48,5.0,in in another case so the mask attention
+4855.48,5.32,mask that we build should take care of
+4857.48,5.199,this and the second thing is that each
+4860.8,4.64,group of tokens should only be able to
+4862.679,4.761,relate to the same to to the tokens of
+4865.44,5.44,the same group not to other groups so
+4867.44,6.64,not of of tokens from another prompt and
+4870.88,6.12,this is done with the um block diagonal
+4874.08,4.92,Cal mask so basically we tell him okay
+4877.0,3.8,the first prompt is made up of seven
+4879.0,3.92,tokens the second prompt is made up of
+4880.8,5.08,five tokens and the third prompt is made
+4882.92,4.759,up of six tokens and we are also using a
+4885.88,3.96,sliding window attention with a sliding
+4887.679,4.52,window size of three and basically this
+4889.84,5.08,will create the complex Marx that we can
+4892.199,5.601,see here this is the first group of
+4894.92,6.0,tokens from 0 to six is the first prompt
+4897.8,7.0,from 7 to 11 is the second prompt and
+4900.92,6.2,from 12 to uh let me check 17 is the
+4904.8,4.359,third prompt and as you can see it also
+4907.12,4.68,takes into consideration the sliding
+4909.159,5.721,window size so each token can only watch
+4911.8,5.52,at most two previous tokens so the
+4914.88,4.44,tokens in the in the contained in the
+4917.32,4.2,sliding window size of size
+4919.32,5.0,three the second one they use is the
+4921.52,6.159,block diagonal mask and okay this one is
+4924.32,5.64,used for the first chunk during the
+4927.679,5.441,prefilling this one is used for
+4929.96,4.88,subsequent chunks in the prefilling and
+4933.12,3.24,basically it also takes in because
+4934.84,3.24,during the first prefilling we don't
+4936.36,4.0,have the KV cache because it's initially
+4938.08,4.0,empty but during the subsequent steps
+4940.36,3.12,it's not empty anymore so we need to
+4942.08,4.48,take into consideration also the
+4943.48,4.84,different size of the k cache uh so for
+4946.56,4.079,example the first token may have a k
+4948.32,4.52,cache of size 10 because the prompt is
+4950.639,4.121,very short but the second prompt may be
+4952.84,5.48,"very big suppose 5,000 tokens so it may"
+4954.76,5.08,"have a k cach of size 5,000 so it it"
+4958.32,5.04,takes into consideration also the size
+4959.84,5.2,of the KV cache and it will produce a um
+4963.36,4.76,a mask that takes into consideration
+4965.04,4.679,also the size of the KV cach the last uh
+4968.12,3.92,method they use is this one block
+4969.719,3.52,diagonal Cal with offset padded Keys
+4972.04,3.8,mask
+4973.239,4.561,because each prompt may have a different
+4975.84,5.96,size for the k
+4977.8,6.0,cache uh but only some tokens in this K
+4981.8,5.52,so the K cach size is fixed it's a
+4983.8,6.359,tensor that is of fixed side W but only
+4987.32,5.16,some tokens may be actual being filled
+4990.159,4.881,in this K cach so only maybe the K cach
+4992.48,4.44,the size is let's say 10 but because the
+4995.04,4.92,first prompt is very short only three
+4996.92,6.96,tokens are actually part in are in the k
+4999.96,6.759,cach um but when we pass the K cach to
+5003.88,5.56,the calculation of the attention we pass
+5006.719,5.161,all the tensor which is all the 10 items
+5009.44,5.44,so we need a way to tell to the mask
+5011.88,5.12,that he should only use the first three
+5014.88,4.64,items from the KV cach and not all the
+5017.0,4.8,KV cach not all the tensor and this is
+5019.52,4.24,done with block diagonal with offset
+5021.8,3.6,pading Mas so this method here it's
+5023.76,4.52,very long name very complicated but this
+5025.4,4.4,is why they use it and it will produce a
+5028.28,3.959,mask like this so it takes into
+5029.8,3.24,consideration the actual size of the KV
+5032.239,3.041,C
+5033.04,4.28,even if the K all the KV cach have the
+5035.28,5.04,same size because it's a fixed size
+5037.32,7.48,tensor but it tells you how many items
+5040.32,4.48,there actually it should use from each
+5046.96,6.279,cache okay guys it has been a very
+5050.28,6.16,demanding video I have to say uh I had
+5053.239,5.881,to record it more than once I actually
+5056.44,5.48,had to cut some parts because I even I
+5059.12,5.72,got confused sometimes uh it's very
+5061.92,5.239,complicated topics it's a lot of things
+5064.84,4.0,that you have to grasp but I hope that
+5067.159,5.441,it will make your life easier when you
+5068.84,6.96,want to understand the mistal code I
+5072.6,4.68,actually am also putting online my notes
+5075.8,3.879,the one that you have seen so the two
+5077.28,4.52,notebooks that I have shown you plus
+5079.679,3.52,also the code annotated by me on the
+5081.8,4.0,mistal source
+5083.199,4.321,code now the mistal source code I
+5085.8,3.839,actually never run it so because my
+5087.52,5.159,computer is not very powerful so I never
+5089.639,5.48,run the actual model on my computer what
+5092.679,4.681,I did to study the model was to run some
+5095.119,4.881,random tensors through a model and I
+5097.36,5.4,created basically a model with randomly
+5100.0,4.56,initialized uh weights but with less
+5102.76,3.84,number of layers so it could fit in my
+5104.56,4.2,GPU and then I just run some random
+5106.6,5.119,tensors to study all the shapes of the
+5108.76,4.959,tensor and all the information passing
+5111.719,3.721,so I don't know if the code works but I
+5113.719,4.241,hope it will works I mean I didn't touch
+5115.44,4.679,the logic I just add some comments uh
+5117.96,5.759,anyway you can use the commented code by
+5120.119,5.641,me to as um as a learning tool to
+5123.719,4.4,complement with the official code of
+5125.76,4.32,mistal so that you can understand uh
+5128.119,4.04,more about the inner workings of this
+5130.08,4.599,grd model I actually really enjoyed
+5132.159,4.681,studying it I really enjoyed studying
+5134.679,4.841,the code and I learned a lot of stuff
+5136.84,4.319,you know um I think it's very very good
+5139.52,3.84,when you are doing something that is
+5141.159,3.721,very complicated because it teaches you
+5143.36,3.12,a lot because if something is simple
+5144.88,3.68,then you don't learn much by the end of
+5146.48,4.12,the day anyway guys thanks you for
+5148.56,3.8,watching my video I hope you also
+5150.6,4.0,enjoyed this journey with me even if it
+5152.36,4.64,was very complicated I hope that you
+5154.6,4.639,likeed this video and you will subscribe
+5157.0,4.08,to my channel if you didn't please do it
+5159.239,3.641,and the best way to support me guys is
+5161.08,3.92,to share this video with all the people
+5162.88,4.799,you know so share it on social media
+5165.0,5.0,share it on LinkedIn on Twitter Etc
+5167.679,5.841,because this is the best way to you can
+5170.0,4.92,help me is to grow my channel and um
+5173.52,2.96,please let me know if there is something
+5174.92,4.12,that you don't understand I am always
+5176.48,5.96,available to help and connect with me on
+5179.04,3.4,LinkedIn bye-bye

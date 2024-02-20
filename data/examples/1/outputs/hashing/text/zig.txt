@@ -1,0 +1,31 @@
+The video introduces Zig, a high performance system programming language created by Andrew Kelly in 2016 that aims to be a next-generation alternative to C. The language has evolved into one of the most desired new languages in the world, due to its minimalist design, speed, and low-level memory control.
+
+Zig has a circular memory management interface known as "allocators", which allows for efficient memory allocation and enables code to be easily swapped to target different architectures. Unlike rust and go, it doesn't have any hidden memory allocations, making the code more explicit and portable.
+
+Zig also features a unique "comp time" keyword, making it simple to run code at compile time instead of runtime, eliminating the need for preprocessor or macro support. Zig is highly cross platform and supports multiple build configurations, making it a versatile language for system programming.
+
+Summary of the video:
+
+* The Introduction to Zig programming language
+
+Key sections:
+
+1. Zig's Concept: An overview of a high performance system programming language.
+
+Sub-sections:
+* History and evolution of the language
+* Key features and goals
+1. Memory Management: An explanation of Zig's memory management system using allocators and deallocation.
+
+Sub-sections:
+* Introduction to allocators
+* Different allocator alternatives available in Zig
+* Memory control with deallocation using the "defer" keyword
+1. Explicit Error Handling: An introduction to Zig's error handling system with the "try" keyword.
+
+Sub-sections:
+* Explicit error handling with the "try" keyword
+* Error handling in general
+* Building executables in Zig with the "zig build" command
+
+The video concludes by stating how Zig can help developers achieve better code reliability through its built-in testing framework and how Zig has become highly desired due to these features.

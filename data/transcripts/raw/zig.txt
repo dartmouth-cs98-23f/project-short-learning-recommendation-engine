@@ -1,0 +1,88 @@
+second,duration,transcript
+0.19,2.03,[Music]
+0.299,4.081,Zig a high performance system
+2.22,4.32,programming language often labeled as a
+4.38,4.5,Next Generation alternative to C it was
+6.54,3.66,created by Andrew Kelly in 2016 and has
+8.88,3.12,quickly evolved into one of the most
+10.2,4.26,desired new languages in the world like
+12.0,4.56,C it's minimal extremely fast and allows
+14.46,3.659,for low-level memory control but instead
+16.56,3.36,of managing memory directly in the
+18.119,3.721,language with functions like Malik and
+19.92,3.779,free the zig standard Library ships
+21.84,3.96,allocators to provide a consistent
+23.699,4.08,interface for memory management Zig is
+25.8,3.96,not a memory safe language like rust or
+27.779,3.721,go but it doesn't have any hidden memory
+29.76,3.66,allocations making the code far more
+31.5,3.719,explicit and portable because allocators
+33.42,4.08,can be easily swapped out in the code to
+35.219,4.741,Target different architectures like x86
+37.5,4.44,arm webassembly and bare metal in
+39.96,3.599,addition Zig has no hidden control flow
+41.94,3.24,if it looks like a function and quacks
+43.559,3.481,like a function it's a function there's
+45.18,3.6,no operator overloading and it doesn't
+47.04,3.539,even have exceptions if a function can
+48.78,3.66,fail it needs to return an explicit
+50.579,3.541,error value the language also has a
+52.44,3.36,unique comp time keyword that makes it
+54.12,3.72,trivial to run Kodak compile time
+55.8,4.14,instead of runtime no preprocessor or
+57.84,3.96,macros are necessary and finally Zig can
+59.94,3.959,integrate well into a c or C plus plus
+61.8,4.08,code base and supports cross compilation
+63.899,3.841,out of the box with llvm although
+65.88,3.66,divorce paperwork has been filed to get
+67.74,4.26,started install Zig then create a new
+69.54,3.96,project with the zignet exe command in
+72.0,3.24,the main file first to import the
+73.5,3.6,standard library then Define a main
+75.24,3.78,function notice how the function returns
+77.1,3.839,a type of void with an exclamation point
+79.02,3.72,that exclamation point means that the
+80.939,3.36,function might return an error declare a
+82.74,3.6,mutable variable with the VAR keyword
+84.299,4.201,followed by a type like you wait to
+86.34,4.44,represent a single byte then assign and
+88.5,4.2,modify its value later or use cons to
+90.78,3.72,Define an immutable variable that cannot
+92.7,3.779,be changed we can also bundle multiple
+94.5,3.96,variables together into a struct then
+96.479,3.6,access them on that namespace with DOT
+98.46,3.479,notation now things start to get more
+100.079,3.72,interesting when memory management comes
+101.939,3.72,into play when initializing an array of
+103.799,3.481,integers we can allocate it to a slice
+105.659,3.241,of memory in the Heap using the built-in
+107.28,3.299,page allocator from the standard Library
+108.9,3.42,what's so cool about this is that we
+110.579,3.0,could swap it out with other allocators
+112.32,3.0,to use different memory management
+113.579,3.481,strategies now when we're done with this
+115.32,3.54,memory we need to set it free otherwise
+117.06,3.12,we could have a memory leak the defer
+118.86,3.299,keyword allows us to put that code right
+120.18,3.42,right next to the allocation itself and
+122.159,3.361,will automatically de-initialize the
+123.6,3.6,list when it goes out of scope now as we
+125.52,3.719,operate on the list the try keyword
+127.2,3.96,provides explicit error handling if this
+129.239,3.481,line fails it will automatically catch
+131.16,2.88,and return the error you can't just
+132.72,2.76,ignore it and that will make your code
+134.04,3.72,more reliable and speaking of
+135.48,3.96,reliability Zig has a built-in testing
+137.76,3.059,framework use the test keyword to
+139.44,3.6,evaluate code outside of the main
+140.819,4.081,program then use the zig test command to
+143.04,3.6,run it and finally build an executable
+144.9,4.26,with the zig build command and choose a
+146.64,4.38,build mode to optimize for Speed size or
+149.16,3.719,safety this has been the zig programming
+151.02,2.88,language in 100 seconds hit the like
+152.879,3.121,button if you want to see more short
+153.9,3.57,videos like this thanks for watching and
+156.0,4.02,I will see you in the next one
+157.47,2.55,[Music]

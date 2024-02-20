@@ -1,0 +1,75 @@
+second,duration,transcript
+0.24,3.84,rust a memory safe compiled programming
+2.639,3.521,language that delivers high-level
+4.08,3.759,simplicity with low-level performance
+6.16,3.76,it's a popular choice for building
+7.839,4.72,systems where performance is absolutely
+9.92,4.56,critical like game engines databases or
+12.559,3.681,operating systems and is an excellent
+14.48,3.84,choice when targeting webassembly it
+16.24,4.4,started as a side project of great on
+18.32,4.48,in 2007 who named it after the
+20.64,4.399,rust fungus it was sponsored by mozilla
+22.8,3.92,in 2009 and has been ranked the most
+25.039,4.24,loved programming language every year
+26.72,4.719,since 2016 with its fans being known as
+29.279,4.481,rust stations traditionally high level
+31.439,4.401,languages provide a garbage collector to
+33.76,3.84,nerf your control over memory management
+35.84,4.0,while lower level languages provide
+37.6,4.0,functions like free and allocate to
+39.84,3.44,shoot yourself in the foot rust takes a
+41.6,3.439,different approach it has no garbage
+43.28,4.08,collector but achieves memory safety
+45.039,4.641,with a concept known as ownership and
+47.36,4.4,borrowing by default every variable in
+49.68,3.76,rust is immutable this allows values to
+51.76,3.6,be used in the stack memory which has
+53.44,3.759,minimal performance overhead however
+55.36,4.24,mutable values or objects with an
+57.199,4.721,unknown size at compile time are stored
+59.6,4.639,in the heap memory every value in a rust
+61.92,4.16,program is assigned to a single variable
+64.239,3.681,known as its owner when that variable
+66.08,4.0,goes out of scope the memory allocated
+67.92,3.84,to it is dropped automatically in some
+70.08,3.039,cases though you may want to pass a
+71.76,4.08,reference to a different part of the
+73.119,4.401,program borrowing allows you to access a
+75.84,3.599,reference in memory without taking
+77.52,3.52,ownership of it there are a ton of rules
+79.439,3.521,to go along with this system that the
+81.04,3.92,rus borrow checker will validate at
+82.96,4.08,compile time these rules keep your code
+84.96,4.32,safe while providing absolute control
+87.04,3.84,over performance rust also has a package
+89.28,3.76,manager called cargo where each
+90.88,4.559,individual package is a crate to get
+93.04,4.64,started install rest then run cargo new
+95.439,4.32,from the command line in the main.rs
+97.68,3.36,file you'll find a main function which
+99.759,3.68,is where the program will start
+101.04,4.64,executing declare a variable with let
+103.439,3.761,followed by its name and type the value
+105.68,3.68,can't be changed or reassigned by
+107.2,4.16,default so add mutt to make it mutable
+109.36,3.84,the name of the variable is the owner a
+111.36,3.28,reference to its location in memory can
+113.2,3.36,be borrowed by other parts of the
+114.64,3.92,program by prefixing it with an
+116.56,4.0,ampersand then use a macro like print
+118.56,3.76,line to log the value to the standard
+120.56,4.08,output rest also comes with a standard
+122.32,5.04,library that contains modules to handle
+124.64,4.72,io the file system concurrency among
+127.36,4.08,many other things now compile your code
+129.36,4.16,to an executable with the rust compiler
+131.44,3.519,you just built a memory safe executable
+133.52,3.439,that can handle the most performance
+134.959,4.241,intensive system requirements this has
+136.959,3.761,been rust in 100 seconds hit the like
+139.2,3.2,button and subscribe if you want to see
+140.72,3.36,more short videos like this and leave a
+142.4,3.839,comment if you want to see a full rust
+144.08,6.04,tutorial thanks for watching and i will
+146.239,3.881,see you in the next one

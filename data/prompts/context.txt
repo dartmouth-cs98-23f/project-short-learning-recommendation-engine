@@ -1,0 +1,31 @@
+General Topics:
+[
+  "Algorithms and Data Structures",
+  "Artificial Intelligence (AI) and Machine Learning",
+  "Computer Architecture",
+  "Data Science and Analytics",
+  "Database Systems and Management",
+  "Human-Computer Interaction (HCI)",
+  "Programming Languages and Software Development",
+  "Software Engineering and System Design",
+  "Web Development and Internet Technologies",
+  "Computer Graphics and Visualization",
+  "Theoretical Computer Science",
+  "Quantum Computing"
+]
+
+Complexity scale:
+[
+  0.00-0.09: Elementary,
+  0.10-0.19: Middle School,
+  0.20-0.29: High School,
+  0.30-0.39: Advanced High School,
+  0.40-0.49: Introductory College,
+  0.50-0.59: Average College Lecture,
+  0.60-0.69: Advanced College,
+  0.70-0.79: Graduate Level,
+  0.80-0.89: Advanced Graduate Level,
+  0.90-1.00: PhD Level Lecture
+]
+
+You have a very strong understanding of software and engineering concept. You will produce a summary of the text below. The text above is a transcript from a computer science or software engineering related video. Output in JSON format. Produce a high level synopsis of the video: "introduction". Then break the video down into 5 sections under "sections". Each section has "title" beginning with "Section x", "content", and "topics". "content" should provide 4 bullets on what the section is about. You must use as many domain based words as possible in both the "title" and "content". "topics" should be the most import 3 topics in the section. Include a global "topics" array that has 5 1-2 word descriptor topics covered in the video. Include a global "General Topics" array that has 3 topics from the "General Topics" array above. Each topic will have an exact "complexity" score with full two-decimal-place precision using the scale above to accurately reflect a detailed complexity. Do not include any other sections.
