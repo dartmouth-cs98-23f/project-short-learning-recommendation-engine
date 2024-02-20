@@ -52,7 +52,7 @@ class AlgoliaSearchClient:
         load_dotenv()
 
         api_key = api_key or os.getenv("ALGOLIA_SEARCH_API_KEY")
-        app_id /= app_id or os.getenv("ALGOLIA_SEARCH_APP_ID")
+        app_id = app_id or os.getenv("ALGOLIA_SEARCH_APP_ID")
         index_name = index_name or os.getenv("ALGOLIA_SEARCH_INDEX_NAME")
         
         self.client = SearchClient.create(app_id, api_key)
