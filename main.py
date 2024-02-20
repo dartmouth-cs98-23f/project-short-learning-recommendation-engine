@@ -5,13 +5,17 @@
     Main entrypoint into our recommentation engine.
 """
 
+from typing import *
+
 from fastapi import FastAPI
 from pinecone import Pinecone, ServerlessSpec
 
 from database import DbClient
+from search import AlgoliaSearchClient
 
 app = FastAPI()
 db_client = DbClient()
+search_client = AlgoliaSearchClient(index_name="discite-search")
 
 app.get("/")
 def read_root():
@@ -35,3 +39,15 @@ def get_recommendations(video_id: str):
     """
     
     return db_client.get_recommendations(video_id, count=10)
+
+
+@app.get("/search")
+def search(query: str, user: Optional[str] = None):
+    """
+        Search for a query in the Algolia index.
+    """
+    
+    results = search_client.search(query)
+    
+    # if user provided, rerank based on user
+    return results
