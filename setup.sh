@@ -1,4 +1,5 @@
 pip install torch==2.2.0
 python3 -m pip install --upgrade pip
 sudo apt install libcairo2-dev pkg-config python3-dev
+y
 pip install -r requirements.txt
