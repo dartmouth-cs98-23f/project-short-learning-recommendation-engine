@@ -53,9 +53,18 @@
     }
   ],
   "topics": ["React", "Express Server", "Redis", "Filtering Algorithm", "Deployment"],
-  "General Topics": [
-    {"topic": "Web Development and Internet Technologies", "complexity": 0.42},
-    {"topic": "Software Engineering and System Design", "complexity": 0.68},
-    {"topic": "Data Science and Analytics", "complexity": 0.51}
+  "general topics": [
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.42
+    },
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": 0.68
+    },
+    {
+      "name": "Data Science and Analytics",
+      "complexity": 0.51
+    }
   ]
 }
