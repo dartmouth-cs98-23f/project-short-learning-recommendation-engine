@@ -1,0 +1,78 @@
+{
+  "introduction": "In this episode of the Back Engineering Show, we delve into the topic of threading and multithreading in backend applications, specifically within the context of networking and connection management. We explore the concept of CPU and I/O bound processes and the importance of understanding the nature of your backend. We also discuss the evolution of CPUs and how multiple cores and threads have improved performance in modern systems. Finally, we touch on the challenges and downsides of multithreading, including resource management and thread access issues.",
+  "sections": [
+    {
+      "title": "Section 1: CPU and I/O Bound Processes",
+      "content": [
+        "Explanation of CPU and I/O bound processes in backend applications.",
+        "Importance of understanding the nature of your backend.",
+        "Example of a CPU intensive app that requires localized processing.",
+        "Discussion of libraries used for serialization, deserialization, encryption, and decryption."
+      ],
+      "topics": ["CPU Bound Processes", "I/O Bound Processes", "Serialisation", "Deserialisation", "Encryption", "Decryption"]
+    },
+    {
+      "title": "Section 2: Multithreading and Multiprocessing",
+      "content": [
+        "Introduction to multithreading and multiprocessing.",
+        "Explanation of how multiple threads can utilize multiple cores.",
+        "Discussion of the benefits of multithreading, including improved performance and resource sharing.",
+        "Examples of modern systems that use multithreading and multiprocessing."
+      ],
+      "topics": ["Multithreading", "Multiprocessing", "Resource Sharing", "Improved Performance"]
+    },
+    {
+      "title": "Section 3: Challenges and Downsides of Multithreading",
+      "content": [
+        "Discussion of the management of threads and resource access issues.",
+        "Examples of problems that can arise from multithreading, such as deadlocks and race conditions.",
+        "Importance of proper thread synchronization and management.",
+        "Examples of solutions to manage threads and resource access, such as locks and semaphores."
+      ],
+      "topics": ["Thread Management", "Resource Access Issues", "Deadlocks", "Race Conditions", "Locks", "Semaphores"]
+    },
+    {
+      "title": "Section 4: Evolution of CPUs and Multithreading",
+      "content": [
+        "Explanation of the evolution of CPUs and how it has affected multithreading.",
+        "Discussion of the development of dual-core and multi-core processors.",
+        "Examples of modern systems that use multi-core processors and multithreading.",
+        "Explanation of how advances in CPU technology have improved performance and resource utilization."
+      ],
+      "topics": ["CPU Evolution", "Dual-Core Processors", "Multi-Core Processors", "Improved Performance", "Resource Utilization"]
+    },
+    {
+      "title": "Section 5: Conclusion",
+      "content": [
+        "Summary of the main points discussed in the episode.",
+        "Importance of understanding the challenges and benefits of multithreading in backend applications.",
+        "Call to action for developers to learn more about multithreading and its applications in backend development.",
+        "Final thoughts and sign-off."
+      ],
+      "topics": ["Summary", "Challenges and Benefits", "Call to Action", "Final Thoughts"]
+    }
+  ],
+  "topics": [
+    "CPU Bound Processes",
+    "I/O Bound Processes",
+    "Serialisation",
+    "Deserialisation",
+    "Encryption",
+    "Decryption",
+    "Multithreading",
+    "Multiprocessing",
+    "Resource Sharing",
+    "Improved Performance",
+    "Thread Management",
+    "Resource Access Issues",
+    "Deadlocks",
+    "Race Conditions",
+    "Locks",
+    "Semaphores",
+    "CPU Evolution",
+    "Dual-Core Processors",
+    "Multi-Core Processors",
+    "Improved Performance",
+    "Resource Utilization"
+  ],
+  "general

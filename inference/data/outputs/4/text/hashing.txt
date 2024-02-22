@@ -1,0 +1,40 @@
+"Introduction"
+[
+[Overview of hash tables and their power in retrieving values in constant time without scanning or searching.], ["Understanding arrays as a common data structure for hash tables and the use of hashing functions to solve the problem of memory indexing."], ["Explanation of how the size of the hash table changes when the size of the array changes, leading to resizing issues in distributed systems."], ["Discussion of the concept of sharding in distributed systems and how it solves the problem of determining the correct server to connect to in a distributed environment."], ["Introduction of distributed hashing as a concept to solve the intermediary problem arising in distributed systems."]
+]
+
+"Section 1: Hash Tables and Memory Indexing"
+[
+[Explanation of the power of using hash tables for retrieving values in constant time.], ["Discussion of the use of arrays as a common data structure for hash tables."], ["Explanation of the process of determining the index of a value in an array using a hashing function."], ["Explanation of how the CPU can fetch a value immediately from the Hash table after identifying its index.']]
+
+"Section 2: Hashing Function and Indexing"
+[
+[Explanation of the purpose of using a hashing function to solve the problem of memory indexing in hash tables.], ["Discussion of how calculating the index of a value using a hashing function and modulo function solves the problem of memory indexing."], ["Explanation of the issues arising when the size of the array changes, leading to resizing of the hash table size."], ["Discussion of how the use of a hashing function can make the system more performant when compared to manually optimizing a single instance."]
+]
+
+"Section 3: Distributed Systems and Hash Tables"
+[
+["Explanation of how distributed systems arise when the size of a database cannot fit in a single instance and needs to be sharded."], ["Discussion of the challenges of determining the correct server to connect to in a distributed environment."], ["Explanation of how consistent hashing is used to solve this problem."], ["Explanation of the limitations and complexity of the distributed hashing process."]
+]
+
+"Section 4: Sharding and Hashing"
+[
+["Explanation of sharding in distributed systems and how it solves the problem of determining the correct server to connect to in a distributed environment."], ["Explanation of the hash function used to determine the correct server to connect to based on the key or value."], ["Explanation of the process of distributing values across multiple servers based on a simple hashing function."], ["Discussion of the limitations of the distributed sharding process and how it affects performance."]
+]
+
+"Section 5: Distributed Hashing and Consistent Hashing"
+[
+["Explanation of the problem that arises when a key cannot be found in a distributed system's hash table."], ["Discussion of the concept of distributed hashing and how it solves this problem."], ["Explanation of consistent hashing as a new concept addressing the limitations of traditional hashing and sharding methods."], ["Discussion of the current problems existing in consistent hashing methods and their impact on performance."]
+]
+
+Topics: 
+1. Distributed Systems
+2. Hash Tables
+3. Memory Indexing
+4. Distributed Hashing
+5. Consistent Hashing
+
+General Topics:
+- Distributed Systems (2.00)
+- Hashing and Memory (3.00)
+- Distributed Hashing and Consistent Hashing (5.00)

@@ -1,0 +1,76 @@
+{
+  "introduction": "In this video, we will explore the architectural differences between the vanilla transformer and the architecture of mistral, a new language model from mistral ai. We will discuss the sliding window attention, the kv cache, the sparse mixture of experts model, sharding, and pipeline parallelism. Additionally, we will review the code of mistral and its innovations using the xforers library with block attention.",
+  "sections": [
+    {
+      "title": "Section 1: Architectural Differences",
+      "content": [
+        "Mistral is a decoder-only model similar to llama, but with sliding window attention and a rolling buffer kv cache.",
+        "The feed forward layer in mistral uses the ceu function instead of reu or zigo.",
+        "Mistral has 32 encoder layers, with each layer feeding its output to the next as input.",
+        "The output of the last layer is then sent to the rms norm, linear, and softmax to produce the final output."
+      ],
+      "topics": ["Mistral Architecture", "Sliding Window Attention", "KV Cache", "Feed Forward Layer"]
+    },
+    {
+      "title": "Section 2: Comparison of Models",
+      "content": [
+        "Mistral 7b and 8x7b are two models released by mistral ai.",
+        "The parameter dim indicates the dimension of the embedding vector, with 496 dimensions for each token in mistral.",
+        "Mistral uses 32 encoder layers, with 8 heads of attention for the query, 2 for the k, and 8 for the v.",
+        "The hidden dimension of the feed forward layer is 14336, usually a multiple of the dimension."
+      ],
+      "topics": ["Mistral 7b", "Mistral 8x7b", "Parameter Dimension", "Encoder Layers", "Heads of Attention", "Hidden Dimension"]
+    },
+    {
+      "title": "Section 3: Sliding Window Attention",
+      "content": [
+        "Sliding window attention is a technique used in mistral to process the input sequence.",
+        "Each token in the sequence is represented by an embedding vector of size 496 dimensions.",
+        "The attention mechanism is applied to a sliding window of the input sequence.",
+        "The output of the attention mechanism is then passed through a linear layer to produce the final output."
+      ],
+      "topics": ["Sliding Window Attention", "Embedding Vector", "Attention Mechanism", "Linear Layer"]
+    },
+    {
+      "title": "Section 4: KV Cache and Rolling Buffer",
+      "content": [
+        "The kv cache is a data structure used to store key-value pairs in memory.",
+        "In mistral, the kv cache is used as a rolling buffer for the attention mechanism.",
+        "The rolling buffer allows for efficient processing of large input sequences.",
+        "The kv cache is prefilled and chunked to further optimize performance."
+      ],
+      "topics": ["KV Cache", "Rolling Buffer", "Prefilling", "Chunking"]
+    },
+    {
+      "title": "Section 5: Sparse Mixture of Experts and Pipeline Parallelism",
+      "content": [
+        "The sparse mixture of experts model is used in mistral to improve the model's performance.",
+        "The model consists of multiple experts, each with its own set of parameters.",
+        "The experts are combined using a weighted sum to produce the final output.",
+        "Pipeline parallelism is used to further improve the model's performance by processing multiple inputs simultaneously."
+      ],
+      "topics": ["Sparse Mixture of Experts", "Experts", "Weighted Sum", "Pipeline Parallelism"]
+    }
+  ],
+  "topics": [
+    "Mistral Architecture",
+    "Sliding Window Attention",
+    "KV Cache",
+    "Sparse Mixture of Experts",
+    "Pipeline Parallelism"
+  ],
+  "general topics": [
+    {
+      "name": "Deep Learning",
+      "complexity": 0.80
+    },
+    {
+      "name": "Natural Language Processing (NLP)",
+      "complexity": 0.90
+    },
+    {
+      "name": "Transformer Models",
+      "complexity": 0.70
+    }
+  ]
+}

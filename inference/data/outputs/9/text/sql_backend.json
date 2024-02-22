@@ -1,0 +1,61 @@
+{
+  "introduction": "The video introduces the concept of slow performance when selecting all columns (SELECT \* ) in a relational database. The author explains that the reason behind this is that reading all columns requires a full table scan, which can be inefficient. They then delve into the details of how databases read data, including the concept of pages, rows, and columns.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Select \*",
+      "content": [
+        "Explanation of the concept of slow performance when selecting all columns.",
+        "Discussion on why selecting all columns can be inefficient.",
+        "Introduction to the concept of pages and rows in databases.",
+        "Overview of the impact of columns on performance."
+      ],
+      "topics": ["Select \*", "Slow performance", "Pages", "Rows"]
+    },
+    {
+      "title": "Section 2: Full Table Scan",
+      "content": [
+        "Explanation of the full table scan process.",
+        "Discussion on the efficiency of full table scans.",
+        "Explanation of how databases read data in pages.",
+        "Overview of the impact of full table scans on performance."
+      ],
+      "topics": ["Full table scan", "Efficiency", "Pages", "Reading data"]
+    },
+    {
+      "title": "Section 3: Reading Data in Pages",
+      "content": [
+        "Explanation of the process of reading data in pages.",
+        "Discussion on the impact of page size on performance.",
+        "Explanation of how databases map pages to the file system.",
+        "Overview of the impact of page size on performance."
+      ],
+      "topics": ["Reading data in pages", "Page size", "File system mapping", "Performance"]
+    },
+    {
+      "title": "Section 4: Shared Buffers",
+      "content": [
+        "Explanation of the concept of shared buffers.",
+        "Discussion on how shared buffers improve performance.",
+        "Explanation of the role of shared buffers in the database.",
+        "Overview of the impact of shared buffers on performance."
+      ],
+      "topics": ["Shared buffers", "Performance improvement", "Database role", "Impact on performance"]
+    },
+    {
+      "title": "Section 5: Conclusion",
+      "content": [
+        "Summary of the key points discussed in the video.",
+        "Discussion on the importance of understanding database performance.",
+        "Explanation of the role of the database in modern applications.",
+        "Overview of the impact of database performance on overall system performance."
+      ],
+      "topics": ["Key points", "Database performance", "Application performance", "Impact on overall system performance"]
+    }
+  ],
+  "topics": ["SELECT \*", "Full table scan", "Reading data in pages", "Shared buffers", "Database performance"],
+  "general topics": [
+    {"topic": "Database Systems and Management", "complexity": 0.70},
+    {"topic": "Programming Languages and Software Development", "complexity": 0.60},
+    {"topic": "Web Development and Internet Technologies", "complexity": 0.50}
+  ]
+}

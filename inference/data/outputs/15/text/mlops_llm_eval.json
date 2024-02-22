@@ -1,0 +1,70 @@
+{
+  "introduction": "In this episode of the MOPS Community podcast, Dimitri O talks with Apara Um, a cofounder of Arise AI and a pioneer in the evaluation space, specifically focusing on LLM systems. They discuss evaluating the output and retrieval piece of LLMs, as well as using LLMs as a judge. Apara shares her thoughts on finetuning and traditional ML, and the importance of considering the context of the problem when choosing evaluation methods.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Apara and Arise AI",
+      "content": [
+        "Apara is a cofounder of Arise AI, a company that focuses on the observability and evaluation of LLM systems.",
+        "Arise AI has been a sponsor of the MOPS Community since 2020 and has been instrumental in the community's growth and development.",
+        "Apara has been a guest on several virtual meetups and has been a valuable contributor to the community's discussions and knowledge sharing.",
+        "In this episode, Dimitri O interviews Apara to learn more about her work at Arise AI and her thoughts on the evaluation space."
+      ],
+      "topics": ["Arise AI", "LLM Systems", "Evaluation"]
+    },
+    {
+      "title": "Section 2: Evaluating LLM Systems",
+      "content": [
+        "Apara discusses the importance of evaluating LLM systems to ensure they are producing useful and accurate outputs.",
+        "She emphasizes the need to consider both the output and retrieval pieces of LLM systems when evaluating their performance.",
+        "Apara shares her insights on how to design effective evaluation metrics for LLM systems.",
+        "She highlights the challenges of evaluating LLM systems, such as the lack of ground truth data and the difficulty of measuring performance in real-world scenarios."
+      ],
+      "topics": ["LLM Systems", "Evaluation Metrics", "Real-World Scenarios"]
+    },
+    {
+      "title": "Section 3: Using LLMs as a Judge",
+      "content": [
+        "Apara discusses the idea of using LLMs as a judge to evaluate their performance.",
+        "She explains how LLMs can be trained to make judgments based on specific criteria, such as sentiment or relevance.",
+        "Apara shares examples of how LLMs have been used as judges in various applications, such as image captioning and text classification.",
+        "She discusses the potential benefits and limitations of using LLMs as judges, and how they can be integrated into existing evaluation frameworks."
+      ],
+      "topics": ["LLMs as Judges", "Sentiment Analysis", "Text Classification"]
+    },
+    {
+      "title": "Section 4: Finetuning and Traditional ML",
+      "content": [
+        "Apara discusses the relationship between LLMs and traditional ML, and how they can be used together to improve performance.",
+        "She explains the concept of finetuning, where a pre-trained LLM model is fine-tuned on a specific task to improve its performance.",
+        "Apara shares her thoughts on the advantages and disadvantages of using finetuning versus traditional ML for specific tasks.",
+        "She discusses the importance of considering the context of the problem when deciding which approach to use."
+      ],
+      "topics": ["LLMs and Traditional ML", "Finetuning", "Task-Specific Approaches"]
+    },
+    {
+      "title": "Section 5: Conclusion and Future Directions",
+      "content": [
+        "Apara and Dimitri O discuss the current state of the evaluation space for LLM systems and the challenges that lie ahead.",
+        "They explore potential future directions for research and development in this area, such as the development of more robust evaluation metrics and the integration of LLMs into real-world applications.",
+        "Apara shares her insights on the importance of collaboration between researchers, practitioners, and industry stakeholders to drive innovation in the evaluation space for LLM systems.",
+        "They conclude the episode by emphasizing the need for continued research and development to ensure that LLM systems are producing useful and accurate outputs."
+      ],
+      "topics": ["Evaluation Metrics", "Real-World Applications", "Collaboration"]
+    }
+  ],
+  "topics": ["LLM Systems", "Evaluation", "Traditional ML", "Finetuning", "Real-World Applications"],
+  "general topics": [
+    {
+      "name": "Evaluation of LLM Systems",
+      "complexity": 0.7
+    },
+    {
+      "name": "Traditional ML and LLMs",
+      "complexity": 0.6
+    },
+    {
+      "name": "Real-World Applications of LLMs",
+      "complexity": 0.5
+    }
+  ]
+}

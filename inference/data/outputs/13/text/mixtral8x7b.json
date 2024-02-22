@@ -1,0 +1,56 @@
+{
+  "introduction": "This video explores the architectural differences between the vanilla transformer and the new language model, Mistral, from Mistral AI. The video covers topics such as sliding window attention, kv cache, sparse mixture of experts model, sharding, and pipeline parallelism. It also delves into the code of Mistral and how it uses the Xformers library with block attention. The video assumes a basic understanding of the transformer model and attention mechanism, particularly self-attention.",
+  "sections": [
+    {
+      "title": "Section 1: Architectural Differences",
+      "content": [
+        "Mistral is a decoder-only model, similar to LLama.",
+        "The self-attention in Mistral uses sliding window attention and group query attention, with a rolling buffer kv cache.",
+        "The feedforward layer in Mistral uses the ceu function instead of reu or zigo.",
+        "Mistral has 32 encoder layers and uses a multi-head tension, norm, and feed forward."
+      ],
+      "topics": ["Mistral Architecture", "Self-Attention", "Feedforward Layer", "Encoded Layers"]
+    },
+    {
+      "title": "Section 2: Comparison of Models",
+      "content": [
+        "Mistral 7b and Mistral 8x7b are the two models discussed in the video.",
+        "Mistral 7b has a parameter dim of 496, while Mistral 8x7b has 32 encoder layers.",
+        "The hidden dimension of the feedforward layer in Mistral 8x7b is 14336.",
+        "Mistral 8x7b has 8 heads of attention for the query and 8 heads for k and v."
+      ],
+      "topics": ["Mistral 7b", "Mistral 8x7b", "Parameter Dimension", "Hidden Dimension", "Heads of Attention"]
+    },
+    {
+      "title": "Section 3: Xformers Library and Block Attention",
+      "content": [
+        "Mistral uses the Xformers library with block attention.",
+        "The block attention in Mistral is repeated 32 times, with each layer feeding the output to the next layer as input.",
+        "The output of the last layer is then sent to the rms norm, linear, and softmax to produce the output of the model.",
+        "The block attention in Mistral is similar to the encoder side of the transformer."
+      ],
+      "topics": ["Xformers Library", "Block Attention", "Encoded Layers", "Output Production"]
+    },
+    {
+      "title": "Section 4: Code Analysis",
+      "content": [
+        "The video provides an in-depth analysis of the code of Mistral.",
+        "The code of Mistral is organized into transformer blocks, encoder blocks, or decoder blocks depending on the content.",
+        "The code of Mistral uses the ceu function for the feedforward layer.",
+        "The video also explains how the Xformers library is used with block attention."
+      ],
+      "topics": ["Code Analysis", "Transformer Blocks", "Encoder Blocks", "Decoder Blocks", "Feedforward Layer", "Xformers Library", "Block Attention"]
+    },
+    {
+      "title": "Section 5: Conclusion",
+      "content": [
+        "The video provides an overview of the architectural differences between the vanilla transformer and Mistral.",
+        "The video also explores the concepts of sliding window attention, kv cache, sparse mixture of experts model, sharding, and pipeline parallelism.",
+        "The video delves into the code of Mistral and how it uses the Xformers library with block attention.",
+        "The video assumes a basic understanding of the transformer model and attention mechanism."
+      ],
+      "topics": ["Architectural Differences", "Concepts", "Code Analysis", "Assumptions"]
+    }
+  ],
+  "topics": ["Mistral Architecture", "Self-Attention", "Feedforward Layer", "Encoded Layers", "Parameter Dimension", "Hidden Dimension", "Heads of Attention", "Xformers Library", "Block Attention", "Transformer Blocks", "Encoder Blocks", "Decoder Blocks", "Feedforward Layer", "Xformers Library", "Block Attention", "Code Analysis", "Transformer Blocks", "Encoder Blocks", "Decoder Blocks", "Feedforward Layer", "Xformers Library", "Block Attention"],
+  "general

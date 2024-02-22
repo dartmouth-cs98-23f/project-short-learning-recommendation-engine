@@ -1,0 +1,69 @@
+{
+  "introduction": {
+    "title": "Overview of Rust",
+    "content": [
+      "Rust is a systems programming language known for its memory safety and high performance.",
+      "Developed as a side project by Mozilla in 2007, it has since become the most loved programming language every year.",
+      "Rust takes an ownership-based approach to memory management, minimizing performance overhead with immutable values on the stack and mutable values on the heap.",
+      "Rust also features the Rust borrow checker to validate code safety."
+    ],
+    "topics": ["Memory Management", "Performance", "Programming Language"]
+  }
+},
+{
+  "Section 1: Memory Management in Rust",
+  "content": [
+    "Immutable values are stored in stack memory, minimizing performance overhead.",
+    "Mutable values or objects with an unknown size are stored in heap memory.",
+    "Rust automatically drops memory allocated to variables when they go out of scope.",
+  ],
+  "topics": ["Garbage Collection", "Memory Allocation", " Ownership"]
+},
+{
+  "Section 2: Memory Safety in Rust",
+  "content": [
+    "Ownership and borrowing ensure absolute control over memory management.",
+    "Rust has strict rules to validate the system's safety at compile time.",
+    "The rust borrow checker is a tool that ensures code safety.",
+    "Rust's ownership concept allows you to manage memory more efficiently with minimal performance overhead."
+  ],
+  "topics": ["Ownership Concept", "Borrowing", "Memory Management"]
+},
+{
+  "Section 3: Installing and Building Rust",
+  "content": [
+    "Rust comes with a package manager called cargo.",
+    "Packages are called crates in Rust.",
+    "To start, install rust and then run cargo new.",
+    "Main function declared in the mainrs file serves as the entry point for the program."
+  ],
+  "topics": ["Packaging", "Crate System", "Main Function"]
+},
+{
+  "Section 4: Building a Rust Program",
+  "content": [
+    "Declare variables with the 'let' keyword.",
+    "Values cannot be changed or reassigned by default.",
+    "To make a variable mutable, use the 'mut' keyword.",
+    "Prefix an ampersand (') to borrow a variable by memory reference."
+  ],
+  "topics": ["Variable Declaration", "Memory Management", "Reference Borrowing"]
+},
+{
+  "Section 5: Final Remarks on Rust",
+  "content": [
+    "Rust produces a memory-safe executable suitable for high-performance systems.",
+    "Rust has been ranked the most loved programming language since 2016.",
+    "The Rust borrow checker and ownership system ensure code safety.",
+    "Rust is a great tool for building game engines, databases, operating systems, and webAssembly."
+  ],
+  "topics": ["System Requirements", "Coding Standards", "Application"]
+}
+},
+{
+    "global topics": [
+        {"topic": "Memory Management", "complexity": 0.9},
+        {"topic": "Programming Languages", "complexity": 0.95},
+        {"topic": "Memory Safety", "complexity": 0.9}
+    ]
+}

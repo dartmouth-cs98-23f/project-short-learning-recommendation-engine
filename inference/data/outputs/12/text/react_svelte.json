@@ -1,0 +1,53 @@
+Introduction:
+
+React and Svelte are two of the most popular JavaScript frameworks for building user interfaces. Both frameworks are designed to make it easier for developers to create reactive, responsive, and efficient user interfaces. In this video, we will compare React and Svelte side by side, looking at their common patterns, design choices, and differences.
+
+Section 1: Rendering
+
+* Both React and Svelte help developers build reactive UIs with JavaScript by organizing code into reusable components.
+* React uses a runtime called the virtual dom, which keeps track of data changes in the application and renders them in the actual DOM in the browser. This approach requires some initial JavaScript and has a larger baseline of around 70 kilobytes to render a simple "hello world" application.
+* Svelte takes an entirely different approach, using a compiler to eliminate the need for a runtime. It takes the Svelte code and converts it into vanilla JavaScript, resulting in a smaller "hello world" application.
+
+Section 2: Component State
+
+* React uses functions to create components and adds reactive state to them using the `useState` hook, which returns a reactive value and a setter function to update the state.
+* Svelte defines logic within the script tags to create reactive state, allowing developers to define a function on the click event that mutates the value directly. Svelte's code is more concise because it doesn't require imports or function calls to initialize the state.
+
+Section 3: Props and Children
+
+* React allows passing props as function arguments and using the `destructure` syntax to access them. It also has a built-in `props.children` value to render UI inside components.
+* Svelte uses a different system called slots, where the default slot is equivalent to `props.children`, and developers can create named slots to insert UI at specific points in the component's markup.
+
+Section 4: Side Effects and Computed State
+
+* React uses the `useEffect` hook to handle side effects and update the document title whenever a count changes.
+* Svelte uses reactive declarations that start with a dollar sign and a colon to rerun code whenever any dependent data changes. This approach is more concise and reliable than React.
+
+Section 5: Templating
+
+* React uses JSX, where developers put their HTML in their JavaScript, allowing for a more flexible and powerful templating system.
+* Svelte has its own templating approach, where developers bring JavaScript into their HTML. It offers a more straightforward and simple approach to templating.
+
+Topics:
+
+* React and Svelte
+* Rendering
+* Component State
+* Props and Children
+* Side Effects and Computed State
+* Templating
+
+General Topics:
+
+* React
+* Svelte
+* JavaScript Frameworks
+* Web Development
+* User Interface Development
+
+Complexity Score:
+
+* React: 0.75
+* Svelte: 0.80
+
+Note: The complexity score is based on the provided scale and reflects the detailed complexity level with full two-decimal-place precision.
