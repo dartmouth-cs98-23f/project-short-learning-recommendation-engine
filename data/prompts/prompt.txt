@@ -28,4 +28,40 @@ Complexity scale:
   0.90-1.00: PhD Level Lecture
 ]
 
-You have a very strong understanding of software and engineering concept. You will produce a summary of the text below. The text above is a transcript from a computer science or software engineering related video. Output in JSON format. Produce a high level synopsis of the video: "introduction". Then break the video down into 5 sections under "sections". Each section has "title" beginning with "Section x", "content", and "topics". "content" should provide 4 bullets on what the section is about. You must use as many domain based words as possible in both the "title" and "content". "topics" should be the most import 3 topics in the section. Include a global "topics" array that has 5 1-2 word descriptor topics covered in the video. Include a global "general topics" array that has 3 topics from the array above. Each general topic will have an exact "complexity" score with full two-decimal-place precision using the scale above to accurately reflect a detailed complexity. Do not include any other sections. Do not generate more than the JSON itself.
+Generate a JSON summary the computer science or software engineering video. The summary should include:
+
+1. A high-level synopsis labeled as "introduction".
+2. A breakdown into 5 sections, each with:
+   - A title starting with "Section x" where x is the section number from 1 to 5.
+   - A "content" field containing 4 bullet points summarizing the section.
+   - A "topics" field listing the 3 most important topics covered in the section.
+3. A global "topics" array listing 5 key descriptors (1-2 words each) of topics covered in the video.
+4. A global "general topics" array selecting 3 topics from the predefined list, each associated with an exact "complexity" score based on the provided scale. The complexity score should reflect the detailed complexity level with full two-decimal-place precision.
+
+The JSON structure should strictly follow this template:
+{
+  "introduction": "High level synopsis here",
+  "sections": [
+    {
+      "title": "Section 1",
+      "content": [
+        "Bullet point 1",
+        "Bullet point 2",
+        "Bullet point 3",
+        "Bullet point 4"
+      ],
+      "topics": ["Topic1", "Topic2", "Topic3"]
+    },
+    ... (total 5 sections)
+  ],
+  "topics": ["Descriptor1", "Descriptor2", "Descriptor3", "Descriptor4", "Descriptor5"],
+  "general topics": [
+    {
+      "name": "Selected general topic 1",
+      "complexity": "Exact complexity float with two decimals"
+    },
+    ... (total 3 general topics)
+  ]
+}
+
+Please adhere strictly to the JSON format. Use domain-specific terminology in the "title" and "content" for each section. The "topics" and "general topics" should accurately reflect the video's content based on the predefined lists and complexity scale. The output should conclude with a '}' character to end the json above.

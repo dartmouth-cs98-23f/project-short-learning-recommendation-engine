@@ -1,0 +1,70 @@
+{
+  "introduction": "This video provides an overview of the Zig programming language, a high-performance system programming language created by Andrew Kelly in 2016. It is designed to be minimal, extremely fast, and allow for low-level memory control while providing a consistent interface for memory management through allocators. Zig does not have any hidden memory allocations, making the code far more explicit and portable. It also has no hidden control flow, no operator overloading, and no exceptions. Zig has a unique comp time keyword that makes it trivial to run kodak compile time instead of runtime. It can integrate well into a C or C++ code base and supports cross compilation out of the box with LLVM. This video covers Zig's memory management, explicit error handling, built-in testing framework, and more.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Zig Programming Language",
+      "content": [
+        "Explanation of the Zig programming language and its creator, Andrew Kelly.",
+        "Overview of Zig's features and design principles.",
+        "Comparison with other programming languages like C and Rust.",
+        "Discussion on Zig's popularity and adoption in the industry."
+      ],
+      "topics": ["Zig Language", "Andrew Kelly", "C Programming Language", "Rust Programming Language"]
+    },
+    {
+      "title": "Section 2: Memory Management in Zig",
+      "content": [
+        "Explanation of Zig's memory management system, including allocators and deallocators.",
+        "Discussion on Zig's unique approach to memory management.",
+        "Comparison with other memory management systems like C and Rust.",
+        "Examples of memory management in Zig programs."
+      ],
+      "topics": ["Memory Management in Zig", "Allocators and Deallocators", "C Programming Language", "Rust Programming Language"]
+    },
+    {
+      "title": "Section 3: Error Handling in Zig",
+      "content": [
+        "Explanation of Zig's error handling system, including try-catch blocks and explicit error values.",
+        "Discussion on Zig's unique approach to error handling.",
+        "Comparison with other error handling systems like C and Rust.",
+        "Examples of error handling in Zig programs."
+      ],
+      "topics": ["Error Handling in Zig", "Try-Catch Blocks", "Explicit Error Values", "C Programming Language", "Rust Programming Language"]
+    },
+    {
+      "title": "Section 4: Zig's Built-in Testing Framework",
+      "content": [
+        "Explanation of Zig's built-in testing framework, including the test keyword and zig test command.",
+        "Discussion on Zig's unique approach to testing.",
+        "Comparison with other testing frameworks like C and Rust.",
+        "Examples of testing in Zig programs."
+      ],
+      "topics": ["Zig's Built-in Testing Framework", "test Keyword", "zig test Command", "C Programming Language", "Rust Programming Language"]
+    },
+    {
+      "title": "Section 5: Building Executables in Zig",
+      "content": [
+        "Explanation of Zig's build system, including the zig build command and build modes.",
+        "Discussion on Zig's unique approach to building executables.",
+        "Comparison with other build systems like C and Rust.",
+        "Examples of building executables in Zig programs."
+      ],
+      "topics": ["Building Executables in Zig", "zig build Command", "Build Modes", "C Programming Language", "Rust Programming Language"]
+    }
+  ],
+  "topics": ["Zig Language", "Memory Management in Zig", "Error Handling in Zig", "Zig's Built-in Testing Framework", "Building Executables in Zig"],
+  "general topics": [
+    {
+      "name": "Programming Languages and Software Development",
+      "complexity": 0.68
+    },
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": 0.51
+    },
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.42
+    }
+  ]
+}

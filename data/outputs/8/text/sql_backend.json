@@ -1,0 +1,97 @@
+{
+  "introduction": {
+    "content": [
+      "Explanation of the concept of selecting all columns (star) from a table in a relational database.",
+      "Discussion of the reasons why select star is slow despite being convenient.",
+      "Explanation of how the page concept works in a relational database.",
+      "Overview of the process of reading data from a page in a relational database.",
+      "Introduction to the shared memory concept in a relational database."
+    ],
+    "topics": [
+      "Relational Database Management Systems (RDBMS)",
+      "Data Retrieval and Querying",
+      "Page Concept in RDBMS",
+      "Reading Data from Pages in RDBMS",
+      "Shared Memory Concept in RDBMS"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Select Star",
+      "content": [
+        "Explanation of the concept of select star and its convenience.",
+        "Discussion of the reasons why select star is slow despite being convenient.",
+        "Overview of the page concept in a relational database."
+      ],
+      "topics": [
+        "Select Star Concept",
+        "Page Concept in RDBMS",
+        "Slow Performance of Select Star"
+      ]
+    },
+    {
+      "title": "Section 2: Process of Reading Data from Pages",
+      "content": [
+        "Explanation of how the page concept works in a relational database.",
+        "Overview of the process of reading data from a page in a relational database.",
+        "Introduction to the shared memory concept in a relational database."
+      ],
+      "topics": [
+        "Page Concept in RDBMS",
+        "Reading Data from Pages in RDBMS",
+        "Shared Memory Concept in RDBMS"
+      ]
+    },
+    {
+      "title": "Section 3: Detailed Explanation of Page Concept",
+      "content": [
+        "Explanation of the fixed size of database pages.",
+        "Discussion of how the page concept affects the performance of queries.",
+        "Overview of how the page concept works in a relational database."
+      ],
+      "topics": [
+        "Fixed Size of Database Pages",
+        "Performance of Queries with Page Concept",
+        "Page Concept in RDBMS"
+      ]
+    },
+    {
+      "title": "Section 4: Reading Data from Pages in Detail",
+      "content": [
+        "Explanation of how the database reads pages from disk.",
+        "Discussion of the file system and block mapping involved in reading pages.",
+        "Overview of the process of transferring raw bytes to shared memory."
+      ],
+      "topics": [
+        "Reading Pages from Disk",
+        "File System and Block Mapping in Reading Pages",
+        "Transferring Raw Bytes to Shared Memory"
+      ]
+    },
+    {
+      "title": "Section 5: Understanding Shared Memory",
+      "content": [
+        "Explanation of the shared memory concept in a relational database.",
+        "Discussion of how shared memory improves query performance.",
+        "Overview of how the database uses shared memory."
+      ],
+      "topics": [
+        "Shared Memory Concept in RDBMS",
+        "Improvement of Query Performance with Shared Memory",
+        "Usage of Shared Memory in RDBMS"
+      ]
+    }
+  ],
+  "topics": [
+    "Relational Database Management Systems (RDBMS)",
+    "Data Retrieval and Querying",
+    "Page Concept in RDBMS",
+    "Reading Data from Pages in RDBMS",
+    "Shared Memory Concept in RDBMS"
+  ],
+  "generalTopics": [
+    {"topic": "Algorithms and Data Structures", "complexity": 0.25},
+    {"topic": "Artificial Intelligence (AI) and Machine Learning", "complexity": 0.10},
+    {"topic": "Computer Architecture", "complexity": 0.05}
+  ]
+}

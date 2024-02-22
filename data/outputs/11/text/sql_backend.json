@@ -1,0 +1,48 @@
+"Introduction":
+"In this video, we will delve into the reasons behind the slow performance of the SELECT \* statement in a relational database. We will explore the underlying concepts of page storage, file systems, and operating systems, and discuss how they impact the performance of queries involving SELECT \*."
+
+"Section 1: Understanding Page Storage"
+
+* Definition of pages in a relational database
+* Explanation of fixed-size pages and variable-size pages
+* Discussion of index pages versus heap pages
+
+"Section 2: Reading Pages from Disk"
+
+* Explanation of how the file system reads data from disk
+* Discussion of file descriptors and starting positions
+* Explanation of how page sizes affect reading performance
+
+"Section 3: Converting Raw Bytes to File System Blocks"
+
+* Explanation of how the file system maps raw bytes to file system blocks
+* Discussion of the impact of block sizes on performance
+* Explanation of how the operating system handles block mapping
+
+"Section 4: Shared Memory and Database Caching"
+
+* Explanation of shared memory and its role in caching database data
+* Discussion of how shared memory improves query performance
+* Explanation of how the database uses shared memory for caching
+
+"Section 5: Conclusion and Future Topics"
+
+* Summary of the key takeaways from the video
+* Discussion of future topics for further exploration
+* Final thoughts and recommendations
+
+"Topics":
+
+1. Page storage in relational databases
+2. File systems and their impact on query performance
+3. Operating systems and their role in query performance
+4. Shared memory and its role in caching database data
+5. Converting raw bytes to file system blocks
+
+"General Topics":
+
+1. Database performance optimization
+2. SQL query optimization
+3. Data storage and management in relational databases
+
+The JSON structure should strictly follow the template provided.

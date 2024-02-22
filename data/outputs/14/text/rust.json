@@ -1,0 +1,61 @@
+{
+  "introduction": "This video provides an overview of Rust, a memory-safe compiled programming language designed for high-performance systems development. It covers Rust's unique approach to memory management, its package manager Cargo, and its standard library. The video also highlights Rust's popularity among developers and its use in various industries, including game engines, databases, and operating systems. It concludes with a demonstration of building a simple Rust program.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Rust",
+      "content": [
+        "Explanation of Rust's origins and history.",
+        "Overview of Rust's unique approach to memory management.",
+        "Discussion of Rust's popularity among developers.",
+        "Presentation of Rust's use cases and industries."
+      ],
+      "topics": ["Rust Origins", "Memory Management in Rust", "Rust Popularity", "Rust Use Cases"]
+    },
+    {
+      "title": "Section 2: Rust Package Manager Cargo",
+      "content": [
+        "Introduction to Cargo, Rust's package manager.",
+        "Explanation of how to install Rust and create a new project.",
+        "Discussion of Rust's standard library and its modules.",
+        "Presentation of Rust's package ecosystem."
+      ],
+      "topics": ["Cargo Introduction", "Installing Rust", "Rust Standard Library", "Rust Package Ecosystem"]
+    },
+    {
+      "title": "Section 3: Rust Syntax and Basics",
+      "content": [
+        "Overview of Rust's syntax and basic concepts.",
+        "Explanation of Rust's ownership and borrowing system.",
+        "Presentation of Rust's control structures (if/else, loops).",
+        "Discussion of Rust's functions and data structures."
+      ],
+      "topics": ["Rust Syntax", "Ownership and Borrowing System", "Control Structures", "Functions and Data Structures"]
+    },
+    {
+      "title": "Section 4: Rust Memory Management",
+      "content": [
+        "Explanation of Rust's memory management system.",
+        "Discussion of Rust's ownership and borrowing rules.",
+        "Presentation of Rust's garbage collection alternative.",
+        "Overview of Rust's memory safety guarantees."
+      ],
+      "topics": ["Rust Memory Management", "Ownership and Borrowing Rules", "Garbage Collection Alternative", "Memory Safety Guarantees"]
+    },
+    {
+      "title": "Section 5: Rust in Practice",
+      "content": [
+        "Presentation of a simple Rust program.",
+        "Discussion of Rust's performance and scalability.",
+        "Overview of Rust's real-world applications.",
+        "Conclusion and next steps for learning Rust."
+      ],
+      "topics": ["Simple Rust Program", "Rust Performance and Scalability", "Real-World Applications", "Learning Rust"]
+    }
+  ],
+  "topics": ["Rust Origins", "Cargo Introduction", "Rust Syntax", "Memory Management in Rust", "Rust in Practice"],
+  "general topics": [
+    {"name": "Programming Languages and Software Development", "complexity": 0.65},
+    {"name": "Web Development and Internet Technologies", "complexity": 0.73},
+    {"name": "Software Engineering and System Design", "complexity": 0.68}
+  ]
+}

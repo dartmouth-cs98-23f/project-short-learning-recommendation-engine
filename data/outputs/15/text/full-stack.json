@@ -1,0 +1,60 @@
+{
+  "introduction": "In this video, we will explore the process of building a job board app, starting with a minimum viable product (MVP) using a single data feed from a job board API. The frontend will be developed in React and Material UI, while the backend will use an Express server and Redis for data storage. The algorithm will filter job listings based on seniority, manager roles, and years of experience. The video covers topics related to web development, software engineering, and data science.",
+  "sections": [
+    {
+      "title": "Section 1: Setting up the project",
+      "content": [
+        "Initializing the project with Create React App",
+        "Installing Material UI",
+        "Creating components for jobs and a single job",
+        "Setting up typography and variant typography"
+      ],
+      "topics": ["React", "Material UI", "Typography"]
+    },
+    {
+      "title": "Section 2: Frontend development",
+      "content": [
+        "Designing the job list component",
+        "Styling the job list component with CSS",
+        "Adding pagination to the job list component",
+        "Implementing the job filtering algorithm"
+      ],
+      "topics": ["React", "CSS", "Job filtering algorithm"]
+    },
+    {
+      "title": "Section 3: Backend development",
+      "content": [
+        "Setting up the Express server",
+        "Configuring Redis for data storage",
+        "Implementing the job filtering algorithm on the backend",
+        "Creating a cron job to fetch and refresh job listings"
+      ],
+      "topics": ["Express", "Redis", "Job filtering algorithm", "Cron job"]
+    },
+    {
+      "title": "Section 4: Deployment",
+      "content": [
+        "Configuring Nginx for production",
+        "Implementing SSL certificates for security",
+        "Testing the deployed job board app",
+        "Finalizing the job board app for public use"
+      ],
+      "topics": ["Nginx", "SSL certificates", "Deployment testing", "Public use"]
+    },
+    {
+      "title": "Section 5: Conclusion",
+      "content": [
+        "Summary of the job board app development process",
+        "Discussion of future improvements and expansions",
+        "Final thoughts on the importance of job board apps for entry-level developers"
+      ],
+      "topics": ["Job board app development process", "Future improvements", "Importance of job board apps"]
+    }
+  ],
+  "topics": ["React", "Material UI", "Express", "Redis", "Job filtering algorithm", "Nginx", "SSL certificates", "Deployment", "Job board app development process", "Future improvements", "Importance of job board apps"],
+  "general topics": [
+    {"name": "Web Development", "complexity": 0.70},
+    {"name": "Software Engineering", "complexity": 0.80},
+    {"name": "Data Science", "complexity": 0.60}
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "introduction": "The video compares React and Svelte, two popular JavaScript frameworks for building reactive user interfaces. Both frameworks organize code into reusable components, but they differ in their developer experience, rendering approach, and design choices.",
+  "sections": [
+    {
+      "title": "Section 1: Rendering",
+      "content": [
+        "Both React and Svelte use a runtime to render components, but React uses a virtual DOM, while Svelte uses a compiler.",
+        "React's virtual DOM requires some initial JavaScript, while Svelte's compiler eliminates the need for a runtime.",
+        "Svelte's compiler can take non-JavaScript code to allow developers to do things more efficiently.",
+        "Some JavaScript fundamentalists might consider Svelte's black magic approach."
+      ],
+      "topics": ["Rendering Approach", "Virtual DOM", "Compiler", "Non-JavaScript Code"]
+    },
+    {
+      "title": "Section 2: Component State",
+      "content": [
+        "React uses functions to create components and add reactive state with the useState hook.",
+        "Svelte defines logic within script tags to create reactive state and allows direct mutation of values.",
+        "Svelte's syntactic sugar allows easy matching of variable names to props.",
+        "React can pass components as props and render them directly in the JSX."
+      ],
+      "topics": ["Component State", "useState Hook", "Script Tags", "Props"]
+    },
+    {
+      "title": "Section 3: Side Effects and Computed State",
+      "content": [
+        "React uses the useEffect hook to create side effects that update the document title whenever the count changes.",
+        "Svelte has an entirely different mechanism called reactive declarations that start with a dollar sign and a colon.",
+        "Svelte's reactive declarations automatically know to only run code when the count changes.",
+        "Svelte's reactive declarations tend to be more reliable than React."
+      ],
+      "topics": ["Side Effects", "useEffect Hook", "Reactive Declarations", "Reliability"]
+    },
+    {
+      "title": "Section 4: Templating",
+      "content": [
+        "React uses JSX where you put your HTML in your JavaScript, while Svelte has its own templating approach.",
+        "React can't directly use an if statement because a function component needs to return a JavaScript expression.",
+        "Svelte uses if statements directly in the HTML.",
+        "Svelte's templating system is kind of like React with a smelt-style compiler."
+      ],
+      "topics": ["Templating", "JSX", "if Statements", "Svelte-Style Compiler"]
+    },
+    {
+      "title": "Section 5: Conditional Logic",
+      "content": [
+        "Svelte uses if statements directly in the HTML.",
+        "Svelte's templating system is kind of like React with a smelt-style compiler.",
+        "React uses JSX where you put your HTML in your JavaScript.",
+        "React can't directly use an if statement because a function component needs to return a JavaScript expression."
+      ],
+      "topics": ["Conditional Logic", "HTML", "JavaScript", "Function Component"]
+    }
+  ],
+  "topics": ["Rendering Approach", "Component State", "Side Effects and Computed State", "Templating", "Conditional Logic"],
+  "general topics": [
+    {
+      "name": "JavaScript Frameworks",
+      "complexity": 0.68
+    },
+    {
+      "name": "Web Development",
+      "complexity": 0.70
+    },
+    {
+      "name": "React vs Svelte",
+      "complexity": 0.51
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+Model: mistralai/Mistral-7B-Instruct-v0.1
+Time: 1708622065.1665258
+Videos: [['https://www.youtube.com/watch?v=UiX8K-xBUpE', 'UiX8K-xBUpE', 'mixtral8x7b'], ['https://www.youtube.com/watch?v=Xdhe-meS30A', 'Xdhe-meS30A', 'catan'], ['https://www.youtube.com/watch?v=00AQjBDM46Q', '00AQjBDM46Q', 'mlops_llm_eval'], ['https://www.youtube.com/watch?v=5ChkQKUzDCs', '5ChkQKUzDCs', 'typescript_fireship'], ['https://www.youtube.com/watch?v=J0NuOlA2xDc', 'J0NuOlA2xDc', 'localized_deployment'], ['https://www.youtube.com/watch?v=E5kzAbD8D0w', 'E5kzAbD8D0w', 'dpo'], ['https://www.youtube.com/watch?v=wybjsKtA9hI', 'wybjsKtA9hI', 'sql_backend'], ['https://www.youtube.com/watch?v=CZw57SIwgiE', 'CZw57SIwgiE', 'threads_connections'], ['https://www.youtube.com/watch?v=p6wwj0ozifw', 'p6wwj0ozifw', 'hashing'], ['https://www.youtube.com/watch?v=kxT8-C1 vmd4', 'kxT8-C1vmd4', 'zig'], ['https://www.youtube.com/watch?v=5C_HPTJg5ek', '5C_HPTJg5ek', 'rust'], ['https://www.youtube.com/watch?v=HyWYpM_S-2c', 'HyWYpM_S-2c', 'react'], ['https://www.youtube.com/watch?v=MnpuK0MK4yo', 'MnpuK0MK4yo', 'react_svelte'], ['https://www.youtube.com/watch?v=lauywdXKEXI', 'lauywdXKEXI', 'full-stack']]
+Shots: ['mixtral8x7b', 'full-stack']
+Temperature: 0.5
+ Top_k: 35
+ Top_p: 0.95
+Processing: hashing
+    Tokens: 7634
+    Decoding took: 56.542 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: localized_deployment
+    Tokens: 6951
+    Decoding took: 54.366 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: dpo
+    Tokens: 7613
+    Decoding took: 56.895 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: mixtral8x7b
+    Tokens: 7664
+    Decoding took: 59.379 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: mlops_llm_eval
+    Tokens: 7784
+    Decoding took: 63.634 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: react_svelte
+    Tokens: 7587
+    Decoding took: 64.529 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: react
+    Tokens: 6836
+    Decoding took: 55.712 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: rust
+    Tokens: 6738
+    Decoding took: 60.449 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: sql_backend
+    Tokens: 7621
+    Decoding took: 67.104 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: threads_connections
+    Tokens: 7609
+    Decoding took: 61.854 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: typescript_fireship
+    Tokens: 7194
+    Decoding took: 61.178 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: zig
+    Tokens: 6839
+    Decoding took: 62.559 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: full-stack
+    Tokens: 7661
+    Decoding took: 57.047 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Global runtime: 782.164 seconds

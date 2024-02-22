@@ -1,0 +1,70 @@
+{
+  "introduction": "In this episode of the Vacancy Show, the concept of distributed systems is discussed, specifically focusing on the challenges faced when scaling databases. The show explores the use of hashing tables and distributed hashing to address these challenges and improve query performance. The episode also touches on the importance of understanding queries and optimizing a single instance before moving to a distributed system.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Distributed Systems",
+      "content": [
+        "Explanation of the importance of distributed systems in handling large datasets.",
+        "Discussion of the limitations of a single instance when query performance is a concern.",
+        "Introduction of the concept of distributed hashing.",
+        "Overview of the problems faced in distributed systems, such as determining the server to connect to for a specific key."
+      ],
+      "topics": ["Distributed Systems", "Query Performance", "Distributed Hashing", "Problems in Distributed Systems"]
+    },
+    {
+      "title": "Section 2: Hashing Tables and Distributed Hashing",
+      "content": [
+        "Explanation of how hashing tables work and their use in distributed systems.",
+        "Discussion of the challenges faced when scaling hashing tables, such as the need for resizing and the potential for collisions.",
+        "Introduction of consistent hashing as a solution to these challenges.",
+        "Explanation of how consistent hashing works and its advantages over other hashing methods."
+      ],
+      "topics": ["Hashing Tables", "Distributed Hashing", "Scaling Hashing Tables", "Consistent Hashing"]
+    },
+    {
+      "title": "Section 3: Problems with Consistent Hashing",
+      "content": [
+        "Discussion of the limitations of consistent hashing, such as the potential for hotspots and the need for load balancing.",
+        "Explanation of how to address these limitations through techniques such as sharding and rehashing.",
+        "Introduction of the concept of virtual rings and their use in distributed systems.",
+        "Explanation of how virtual rings work and their advantages over other methods."
+      ],
+      "topics": ["Consistent Hashing Limitations", "Load Balancing", "Sharding", "Rehashing", "Virtual Rings"]
+    },
+    {
+      "title": "Section 4: Implementing Distributed Systems",
+      "content": [
+        "Explanation of the components required for a distributed system, such as a key-value store and a distributed hash table.",
+        "Discussion of the challenges faced when implementing distributed systems, such as network latency and data consistency.",
+        "Introduction of techniques such as consensus algorithms and distributed transactions to address these challenges.",
+        "Explanation of how to implement these techniques in a distributed system."
+      ],
+      "topics": ["Distributed Systems Implementation", "Key-Value Store", "Distributed Hash Table", "Consensus Algorithms", "Distributed Transactions"]
+    },
+    {
+      "title": "Section 5: Conclusion and Future Work",
+      "content": [
+        "Summary of the main points discussed in the episode.",
+        "Discussion of future work in the field of distributed systems, such as improving query performance and addressing data consistency issues.",
+        "Explanation of the importance of understanding queries and optimizing a single instance before moving to a distributed system.",
+        "Conclusion and final thoughts on the importance of distributed systems in handling large datasets."
+      ],
+      "topics": ["Summary", "Future Work", "Query Optimization", "Conclusion"]
+    }
+  ],
+  "topics": ["Distributed Systems", "Hashing Tables", "Consistent Hashing", "Load Balancing", "Sharding", "Rehashing", "Virtual Rings", "Distributed Systems Implementation", "Consensus Algorithms", "Distributed Transactions"],
+  "general topics": [
+    {
+      "name": "Distributed Systems",
+      "complexity": 0.7
+    },
+    {
+      "name": "Hashing Tables",
+      "complexity": 0.6
+    },
+    {
+      "name": "Consistent Hashing",
+      "complexity": 0.8
+    }
+  ]
+}

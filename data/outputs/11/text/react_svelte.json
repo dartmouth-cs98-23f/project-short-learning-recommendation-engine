@@ -1,0 +1,15 @@
+React and Svelte are two popular JavaScript frameworks used for building web applications. They share several common patterns and design choices, but there are also significant differences in their approach.
+
+React uses a runtime called the virtual dom, which keeps track of data changes in the application in order to render them in the actual DOM in the browser. This approach requires some initial JavaScript and has a larger baseline size, typically around 70 kilobytes for a "hello world" application. React also has a massive ecosystem of dedicated libraries to help developers get things done.
+
+Svelte, on the other hand, takes an entirely different approach by using a compiler to eliminate the need for a runtime. It takes your Svelte code and converts it into vanilla JavaScript, resulting in a much smaller "hello world" application. Svelte code can be more concise because it doesn't require any imports or function calls to initialize the state. However, Svelte does not have as many dedicated libraries as React.
+
+In terms of component state, React uses functions to create components and then adds reactive state to them with the useState hook. Svelte, on the other hand, defines the logic within the script tags to create reactive state, and mutates the value directly. Svelte also has a different system for passing props, called slots, which allows developers to insert UI at specific points in the component's markup.
+
+When it comes to running code when a component is initialized, React uses the useEffect hook, which takes a callback function followed by an empty array to signify that it does not have any dependent data. Svelte has a similar pattern with the onMount function, which can handle an async function.
+
+Side effects and computed state are handled differently in React and Svelte. In React, side effects and computed state are managed using the useEffect hook, which updates the document title whenever the count changes. In Svelte, reactive declarations are used, which start with a dollar sign and a colon. These declarations are more concise and reliable than React because they allow developers to easily specify the dependencies and automatically update the value when the data changes.
+
+In terms of templating, React uses JSX, where HTML is placed within JavaScript code. Svelte has its own templating approach, where JavaScript is brought into HTML. Svelte also has a different approach to conditional logic, as it cannot directly use an if statement. Instead, it uses a compiler to handle the logic.
+
+In summary, both React and Svelte are powerful frameworks with their own unique strengths and weaknesses. The choice between them ultimately depends on the developer's preferences, the specific requirements of the project, and the desired outcome.

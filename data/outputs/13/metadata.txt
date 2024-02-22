@@ -1,0 +1,577 @@
+#####################
+###### METADATA ######
+#####################
+
+Model: mistralai/Mistral-7B-Instruct-v0.1
+Time: 1708627910.5159786
+Videos: [['https://www.youtube.com/watch?v=UiX8K-xBUpE', 'UiX8K-xBUpE', 'mixtral8x7b'], ['https://www.youtube.com/watch?v=Xdhe-meS30A', 'Xdhe-meS30A', 'catan'], ['https://www.youtube.com/watch?v=00AQjBDM46Q', '00AQjBDM46Q', 'mlops_llm_eval'], ['https://www.youtube.com/watch?v=5ChkQKUzDCs', '5ChkQKUzDCs', 'typescript_fireship'], ['https://www.youtube.com/watch?v=J0NuOlA2xDc', 'J0NuOlA2xDc', 'localized_deployment'], ['https://www.youtube.com/watch?v=E5kzAbD8D0w', 'E5kzAbD8D0w', 'dpo'], ['https://www.youtube.com/watch?v=wybjsKtA9hI', 'wybjsKtA9hI', 'sql_backend'], ['https://www.youtube.com/watch?v=CZw57SIwgiE', 'CZw57SIwgiE', 'threads_connections'], ['https://www.youtube.com/watch?v=p6wwj0ozifw', 'p6wwj0ozifw', 'hashing'], ['https://www.youtube.com/watch?v=kxT8-C1 vmd4', 'kxT8-C1vmd4', 'zig'], ['https://www.youtube.com/watch?v=5C_HPTJg5ek', '5C_HPTJg5ek', 'rust'], ['https://www.youtube.com/watch?v=HyWYpM_S-2c', 'HyWYpM_S-2c', 'react'], ['https://www.youtube.com/watch?v=MnpuK0MK4yo', 'MnpuK0MK4yo', 'react_svelte'], ['https://www.youtube.com/watch?v=lauywdXKEXI', 'lauywdXKEXI', 'full-stack']]
+Shots: ['mixtral8x7b', 'full-stack']
+Prompt: General Topics:
+[
+  "Algorithms and Data Structures",
+  "Artificial Intelligence (AI) and Machine Learning",
+  "Computer Architecture",
+  "Data Science and Analytics",
+  "Database Systems and Management",
+  "Human-Computer Interaction (HCI)",
+  "Programming Languages and Software Development",
+  "Software Engineering and System Design",
+  "Web Development and Internet Technologies",
+  "Computer Graphics and Visualization",
+  "Theoretical Computer Science",
+  "Quantum Computing"
+]
+
+Complexity scale:
+[
+  0.00-0.09: Elementary,
+  0.10-0.19: Middle School,
+  0.20-0.29: High School,
+  0.30-0.39: Advanced High School,
+  0.40-0.49: Introductory College,
+  0.50-0.59: Average College Lecture,
+  0.60-0.69: Advanced College,
+  0.70-0.79: Graduate Level,
+  0.80-0.89: Advanced Graduate Level,
+  0.90-1.00: PhD Level Lecture
+]
+
+Generate a JSON summary the computer science or software engineering video. The summary should include:
+
+1. A high-level synopsis labeled as "introduction".
+2. A breakdown into 5 sections, each with:
+   - A title starting with "Section x" where x is the section number from 1 to 5.
+   - A "content" field containing 4 bullet points summarizing the section.
+   - A "topics" field listing the 3 most important topics covered in the section.
+3. A global "topics" array listing 5 key descriptors (1-2 words each) of topics covered in the video.
+4. A global "general topics" array selecting 3 topics from the predefined list, each associated with an exact "complexity" score based on the provided scale. The complexity score should reflect the detailed complexity level with full two-decimal-place precision.
+
+The JSON structure should strictly follow this template:
+{
+  "introduction": "High level synopsis here",
+  "sections": [
+    {
+      "title": "Section 1",
+      "content": [
+        "Bullet point 1",
+        "Bullet point 2",
+        "Bullet point 3",
+        "Bullet point 4"
+      ],
+      "topics": ["Topic1", "Topic2", "Topic3"]
+    },
+    ... (total 5 sections)
+  ],
+  "topics": ["Descriptor1", "Descriptor2", "Descriptor3", "Descriptor4", "Descriptor5"],
+  "general topics": [
+    {
+      "name": "Selected general topic 1",
+      "complexity": "Exact complexity score"
+    },
+    ... (total 3 general topics)
+  ]
+}
+
+Please adhere strictly to the JSON format. Use domain-specific terminology in the "title" and "content" for each section. The "topics" and "general topics" should accurately reflect the video's content based on the predefined lists and complexity scale.
+
+
+
+###################
+###### INFERENCE ######
+###################
+Temperature: 0.5
+Top_k: 35
+Top_p: 0.96
+Processing: hashing
+    Tokens: 8305
+    Decoding took: 50.781 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: localized_deployment
+    Tokens: 7622
+    Decoding took: 51.878 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: dpo
+    Tokens: 8284
+    Decoding took: 56.352 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: mixtral8x7b
+    Tokens: 8335
+    Decoding took: 52.748 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: mlops_llm_eval
+    Tokens: 8455
+    Decoding took: 71.893 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: react_svelte
+    Tokens: 8258
+    Decoding took: 64.396 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: react
+    Tokens: 7507
+    Decoding took: 68.78 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: rust
+    Tokens: 7409
+    Decoding took: 59.493 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: sql_backend
+    Tokens: 8292
+    Decoding took: 55.714 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: threads_connections
+    Tokens: 8280
+    Decoding took: 68.658 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: typescript_fireship
+    Tokens: 7865
+    Decoding took: 51.823 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: zig
+    Tokens: 7510
+    Decoding took: 56.117 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: full-stack
+    Tokens: 8332
+    Decoding took: 57.037 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Global runtime: 766.561 seconds
+
+#####################
+##### Validating outputs ######
+#####################
+File hashing.json errors: 
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 2
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 2
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+File localized_deployment.json errors: 
+Incorrect number of final topics (5) found 9
+File dpo.json errors: 
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of final topics (5) found 3
+File mixtral8x7b.json errors: 
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+File mlops_llm_eval.json errors: 
+Incorrect number of topics (4) in section, found 3
+Incorrect number of final topics (5) found 4
+Error in file react_svelte.json: Unterminated string starting at: line 56 column 3 (char 3695)
+File react_svelte.json errors: 
+Incorrect number of topics (4) in section, found 3
+Incorrect number of final topics (5) found 4
+File react.json errors: 
+Incorrect number of final topics (5) found 4
+File rust.json errors: 
+Incorrect number of final topics (5) found 4
+Error in file sql_backend.json: Invalid \escape: line 2 column 90 (char 91)
+File sql_backend.json errors: 
+Incorrect number of final topics (5) found 4
+File threads_connections.json errors: 
+
+File typescript_fireship.json errors: 
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 5
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+File zig.json errors: 
+
+File full-stack.json errors: 
+
+
+
+#####################
+##### Validating outputs ######
+#####################
+File hashing.json errors: 
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 2
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 2
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+File localized_deployment.json errors: 
+Incorrect number of final topics (5) found 9
+File dpo.json errors: 
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of final topics (5) found 3
+File mixtral8x7b.json errors: 
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+File mlops_llm_eval.json errors: 
+Incorrect number of topics (4) in section, found 3
+Incorrect number of final topics (5) found 4
+Error in file react_svelte.json: Type: Unterminated string starting at: line 56 column 3 (char 3695) Error: Unterminated string starting at: line 56 column 3 (char 3695)
+File react_svelte.json errors: 
+Incorrect number of topics (4) in section, found 3
+Incorrect number of final topics (5) found 4
+File react.json errors: 
+Incorrect number of final topics (5) found 4
+File rust.json errors: 
+Incorrect number of final topics (5) found 4
+Error in file sql_backend.json: Type: Invalid \escape: line 2 column 90 (char 91) Error: Invalid \escape: line 2 column 90 (char 91)
+File sql_backend.json errors: 
+Incorrect number of final topics (5) found 4
+File threads_connections.json errors: 
+
+File typescript_fireship.json errors: 
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 5
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+File zig.json errors: 
+
+File full-stack.json errors: 
+
+
+
+#####################
+##### Validating outputs ######
+#####################
+File hashing.json errors: 
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 2
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 2
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+File localized_deployment.json errors: 
+Incorrect number of final topics (5) found 9
+File dpo.json errors: 
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of final topics (5) found 3
+File mixtral8x7b.json errors: 
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+File mlops_llm_eval.json errors: 
+Incorrect number of topics (4) in section, found 3
+Incorrect number of final topics (5) found 4
+Error in file react_svelte.json: Type: <class 'json.decoder.JSONDecodeError'> Error: Unterminated string starting at: line 56 column 3 (char 3695)
+File react_svelte.json errors: 
+Incorrect number of topics (4) in section, found 3
+Incorrect number of final topics (5) found 4
+File react.json errors: 
+Incorrect number of final topics (5) found 4
+File rust.json errors: 
+Incorrect number of final topics (5) found 4
+Error in file sql_backend.json: Type: <class 'json.decoder.JSONDecodeError'> Error: Invalid \escape: line 2 column 90 (char 91)
+File sql_backend.json errors: 
+Incorrect number of final topics (5) found 4
+File threads_connections.json errors: 
+
+File typescript_fireship.json errors: 
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 5
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+File zig.json errors: 
+
+File full-stack.json errors: 
+
+
+
+#####################
+##### Validating outputs ######
+#####################
+Error in file hashing.json: Type: <class 'TypeError'> Error: the JSON object must be str, bytes or bytearray, not dict
+File hashing.json errors: 
+
+Error in file localized_deployment.json: Type: <class 'TypeError'> Error: the JSON object must be str, bytes or bytearray, not dict
+File localized_deployment.json errors: 
+
+Error in file dpo.json: Type: <class 'TypeError'> Error: the JSON object must be str, bytes or bytearray, not dict
+File dpo.json errors: 
+
+Error in file mixtral8x7b.json: Type: <class 'TypeError'> Error: the JSON object must be str, bytes or bytearray, not dict
+File mixtral8x7b.json errors: 
+
+Error in file mlops_llm_eval.json: Type: <class 'TypeError'> Error: the JSON object must be str, bytes or bytearray, not dict
+File mlops_llm_eval.json errors: 
+
+Error in file react_svelte.json: Type: <class 'json.decoder.JSONDecodeError'> Error: Expecting property name enclosed in double quotes: line 56 column 3 (char 3695)
+File react_svelte.json errors: 
+
+Error in file react.json: Type: <class 'TypeError'> Error: the JSON object must be str, bytes or bytearray, not dict
+File react.json errors: 
+
+Error in file rust.json: Type: <class 'TypeError'> Error: the JSON object must be str, bytes or bytearray, not dict
+File rust.json errors: 
+
+Error in file sql_backend.json: Type: <class 'TypeError'> Error: the JSON object must be str, bytes or bytearray, not dict
+File sql_backend.json errors: 
+
+Error in file threads_connections.json: Type: <class 'TypeError'> Error: the JSON object must be str, bytes or bytearray, not dict
+File threads_connections.json errors: 
+
+Error in file typescript_fireship.json: Type: <class 'TypeError'> Error: the JSON object must be str, bytes or bytearray, not dict
+File typescript_fireship.json errors: 
+
+Error in file zig.json: Type: <class 'TypeError'> Error: the JSON object must be str, bytes or bytearray, not dict
+File zig.json errors: 
+
+Error in file full-stack.json: Type: <class 'TypeError'> Error: the JSON object must be str, bytes or bytearray, not dict
+File full-stack.json errors: 
+
+
+
+#####################
+##### Validating outputs ######
+#####################
+File hashing.json errors: 
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 2
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 2
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+File localized_deployment.json errors: 
+Incorrect number of final topics (5) found 9
+File dpo.json errors: 
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of final topics (5) found 3
+File mixtral8x7b.json errors: 
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+File mlops_llm_eval.json errors: 
+Incorrect number of topics (4) in section, found 3
+Incorrect number of final topics (5) found 4
+Error in file react_svelte.json: Type: <class 'json.decoder.JSONDecodeError'> Error: Expecting property name enclosed in double quotes: line 56 column 3 (char 3695)
+File react_svelte.json errors: 
+Incorrect number of topics (4) in section, found 3
+Incorrect number of final topics (5) found 4
+File react.json errors: 
+Incorrect number of final topics (5) found 4
+File rust.json errors: 
+Incorrect number of final topics (5) found 4
+File sql_backend.json errors: 
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+File threads_connections.json errors: 
+
+File typescript_fireship.json errors: 
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of topics (4) in section, found 5
+Incorrect number of bullet points (4) in section, found 3
+Incorrect number of bullet points (4) in section, found 3
+File zig.json errors: 
+
+File full-stack.json errors: 
+
+
+
+###################
+###### INFERENCE ######
+###################
+Temperature: 0.5
+Top_k: 35
+Top_p: 0.95
+Processing: hashing
+    Tokens: 8305
+    Decoding took: 56.201 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: localized_deployment
+    Tokens: 7622
+    Decoding took: 58.553 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: dpo
+    Tokens: 8284
+    Decoding took: 61.541 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: mixtral8x7b
+    Tokens: 8335
+    Decoding took: 74.769 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: mlops_llm_eval
+    Tokens: 8455
+    Decoding took: 74.112 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: react_svelte
+    Tokens: 8258
+    Decoding took: 38.927 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: react
+    Tokens: 7507
+    Decoding took: 65.571 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: rust
+    Tokens: 7409
+    Decoding took: 57.917 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: sql_backend
+    Tokens: 8292
+    Decoding took: 58.819 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: threads_connections
+    Tokens: 8280
+    Decoding took: 68.827 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: typescript_fireship
+    Tokens: 7865
+    Decoding took: 65.509 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: zig
+    Tokens: 7510
+    Decoding took: 69.662 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: full-stack
+    Tokens: 8332
+    Decoding took: 58.239 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Global runtime: 809.265 seconds
+
+#####################
+##### Validating outputs ######
+#####################
+File hashing.json errors: 
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of final topics (5) found 4
+File localized_deployment.json errors: 
+Incorrect number of final topics (5) found 20
+File dpo.json errors: 
+Incorrect number of final topics (5) found 4
+Error in file mixtral8x7b.json: Type: <class 'json.decoder.JSONDecodeError'> Error: Expecting property name enclosed in double quotes: line 56 column 3 (char 3988)
+File mixtral8x7b.json errors: 
+Incorrect number of final topics (5) found 4
+File mlops_llm_eval.json errors: 
+Incorrect number of topics (4) in section, found 5
+Incorrect number of final topics (5) found 13
+Error in file react_svelte.json: Type: <class 'json.decoder.JSONDecodeError'> Error: Expecting value: line 1 column 1 (char 0)
+File react_svelte.json errors: 
+Incorrect number of topics (4) in section, found 5
+Incorrect number of final topics (5) found 13
+Error in file react.json: Type: <class 'json.decoder.JSONDecodeError'> Error: Expecting value: line 54 column 12 (char 4140)
+File react.json errors: 
+Incorrect number of topics (4) in section, found 5
+Incorrect number of final topics (5) found 13
+File rust.json errors: 
+
+File sql_backend.json errors: 
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Error in file threads_connections.json: Type: <class 'json.decoder.JSONDecodeError'> Error: Expecting ',' delimiter: line 55 column 636 (char 4113)
+File threads_connections.json errors: 
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+File typescript_fireship.json errors: 
+Incorrect number of final topics (5) found 9
+File zig.json errors: 
+Incorrect number of topics (4) in section, found 5
+Incorrect number of topics (4) in section, found 5
+Incorrect number of topics (4) in section, found 5
+File full-stack.json errors: 
+Incorrect number of final topics (5) found 12
+Target: hashing, Hidden states took: 0.211 seconds
+    Target: hashing tensor finished. Wrote to file.
+Target: localized_deployment, Hidden states took: 0.231 seconds
+    Target: localized_deployment tensor finished. Wrote to file.
+Target: dpo, Hidden states took: 0.231 seconds
+    Target: dpo tensor finished. Wrote to file.
+Target: mixtral8x7b, Hidden states took: 0.254 seconds
+    Target: mixtral8x7b tensor finished. Wrote to file.
+Target: mlops_llm_eval, Hidden states took: 0.252 seconds
+    Target: mlops_llm_eval tensor finished. Wrote to file.
+Target: react_svelte, Hidden states took: 0.144 seconds
+    Target: react_svelte tensor finished. Wrote to file.
+Target: react, Hidden states took: 0.256 seconds
+    Target: react tensor finished. Wrote to file.
+Target: rust, Hidden states took: 0.231 seconds
+    Target: rust tensor finished. Wrote to file.
+Target: sql_backend, Hidden states took: 0.223 seconds
+    Target: sql_backend tensor finished. Wrote to file.
+Target: threads_connections, Hidden states took: 0.245 seconds
+    Target: threads_connections tensor finished. Wrote to file.
+Target: typescript_fireship, Hidden states took: 0.253 seconds
+    Target: typescript_fireship tensor finished. Wrote to file.
+Target: zig, Hidden states took: 0.246 seconds
+    Target: zig tensor finished. Wrote to file.
+Target: full-stack, Hidden states took: 0.214 seconds
+    Target: full-stack tensor finished. Wrote to file.

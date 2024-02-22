@@ -1,0 +1,22 @@
+Section 1: Architectural Differences Between Vanilla Transformer and Mistral
+
+* Introduction:
+	+ Brief overview of the vanilla transformer and Mistral models.
+	+ Explanation of the differences between the two models.
+* Content:
+	1. Differences in self-attention mechanisms:
+		- Vanilla transformer uses sliding window attention, while Mistral uses group query attention and kv cache.
+	2. Feed forward network:
+		- Vanilla transformer uses the ReLU function, while Mistral uses the CEU function.
+		- Mistral has multiple feed forward networks in parallel with each other, known as experts in the mixture of experts model.
+	3. Model structure:
+		- Vanilla transformer has an encoder and decoder structure, while Mistral is a decoder-only model.
+		- The input is converted into embeddings, then passed through a block of repeated layers, and the output is then sent to the RMS norm, linear, and softmax for production.
+* Topics:
+	1. Self-attention mechanisms in transformers.
+	2. Feed forward network architecture.
+	3. Model structure and differences between vanilla transformer and Mistral.
+* General Topics:
+	1. Complexity: 3 (Intermediate)
+	2. Difficulty: 4 (Advanced)
+	3. Relevance: 5 (High)
