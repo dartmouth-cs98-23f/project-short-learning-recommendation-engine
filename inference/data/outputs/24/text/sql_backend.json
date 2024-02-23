@@ -1,0 +1,70 @@
+{
+  "introduction": "This video discusses the reasons why using SELECT is slow in a database and provides a detailed analysis of the performance impact of various factors, such as table scans, index usage, deserialization cost, and network latency. The video also suggests strategies for optimizing queries and minimizing the number of columns returned.",
+  "sections": [
+    {
+      "title": "Section 1: Understanding Table Scans",
+      "content": [
+        "Explanation of how table scans work in a database.",
+        "Discussion of the impact of table scans on query performance.",
+        "Explanation of how to optimize table scans using indexes.",
+        "Example of a query that uses a table scan and its performance impact."
+      ],
+      "topics": ["Table Scans", "Index Optimization", "Query Performance"]
+    },
+    {
+      "title": "Section 2: Deserialization Cost and Network Latency",
+      "content": [
+        "Explanation of deserialization cost and its impact on query performance.",
+        "Discussion of network latency and its impact on query performance.",
+        "Explanation of how to minimize deserialization cost and network latency.",
+        "Example of a query that has high deserialization cost and network latency."
+      ],
+      "topics": ["Deserialization Cost", "Network Latency", "Query Optimization"]
+    },
+    {
+      "title": "Section 3: Lazy Deserialization and Data Usage",
+      "content": [
+        "Explanation of lazy deserialization and its impact on query performance.",
+        "Discussion of data usage and its impact on query performance.",
+        "Explanation of how to optimize data usage and minimize lazy deserialization.",
+        "Example of a query that has high lazy deserialization and data usage."
+      ],
+      "topics": ["Lazy Deserialization", "Data Usage", "Query Optimization"]
+    },
+    {
+      "title": "Section 4: Advanced Query Optimization Techniques",
+      "content": [
+        "Explanation of advanced query optimization techniques, such as query rewriting and query reordering.",
+        "Discussion of the impact of advanced query optimization techniques on query performance.",
+        "Explanation of how to implement advanced query optimization techniques.",
+        "Example of a query that uses advanced query optimization techniques."
+      ],
+      "topics": ["Query Rewriting", "Query Reordering", "Advanced Query Optimization"]
+    },
+    {
+      "title": "Section 5: Conclusion and Best Practices",
+      "content": [
+        "Summary of the key takeaways from the video.",
+        "Discussion of best practices for query optimization.",
+        "Explanation of how to monitor query performance and identify bottlenecks.",
+        "Example of a well-optimized query."
+      ],
+      "topics": ["Query Optimization Best Practices", "Query Performance Monitoring", "Well-Optimized Query Example"]
+    }
+  ],
+  "topics": ["Database Performance", "Query Optimization", "Network Optimization"],
+  "general topics": [
+    {
+      "name": "Database Performance",
+      "complexity": 0.7
+    },
+    {
+      "name": "Query Optimization",
+      "complexity": 0.6
+    },
+    {
+      "name": "Network Optimization",
+      "complexity": 0.5
+    }
+  ]
+}
