@@ -1,0 +1,66 @@
+{
+  "introduction": "Rust is a memory-safe compiled programming language that delivers high-level simplicity with low-level performance. It is popular for building systems where performance is critical, such as game engines, databases, or operating systems. Rust was started as a side project of Mozilla in 2007 and has been ranked the most loved programming language every year since 2016. Its fans are known as 'rust stations'. Rust takes a different approach to memory management by using ownership and borrowing concepts, which achieve memory safety without a garbage collector. This video provides an overview of Rust's features and how to get started with the language.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Rust",
+      "content": [
+        "Rust is a memory-safe compiled programming language.",
+        "It was started as a side project of Mozilla in 2007 and has been ranked the most loved programming language every year since 2016.",
+        "Rust's fans are known as 'rust stations'."
+      ],
+      "topics": ["Memory-safe compiled programming language", "Mozilla", "Rust stations"]
+    },
+    {
+      "title": "Section 2: Ownership and Borrowing",
+      "content": [
+        "Rust uses ownership and borrowing to achieve memory safety without a garbage collector.",
+        "Every variable in Rust is immutable, allowing values to be used in the stack memory with minimal performance overhead.",
+        "Mutable values or objects with an unknown size at compile time are stored in the heap memory."
+      ],
+      "topics": ["Ownership and borrowing", "Immutable variables", "Heap memory"]
+    },
+    {
+      "title": "Section 3: Rust Package Manager and Standard Library",
+      "content": [
+        "Rust has a package manager called cargo, where each individual package is a crate.",
+        "To get started, install rust, then run cargo new from the command line.",
+        "The mainrs file contains a main function where the program will start executing.",
+        "Rust comes with a standard library that contains modules to handle I/O, file system, concurrency, and many other things."
+      ],
+      "topics": ["Rust package manager", "Cargo", "Mainrs file", "Rust standard library"]
+    },
+    {
+      "title": "Section 4: Compiling Rust Code",
+      "content": [
+        "Rust code can be compiled to an executable with the rust compiler.",
+        "The resulting executable can handle the most performance-intensive system requirements.",
+        "The rust borrow checker validates rules at compile time, keeping your code safe while providing absolute control over performance."
+      ],
+      "topics": ["Rust compiler", "Executable", "Borrow checker"]
+    },
+    {
+      "title": "Section 5: Rust in Practice",
+      "content": [
+        "Rust is a versatile language that can be used for various applications, such as game engines, databases, or operating systems.",
+        "Rust's popularity in webAssembly makes it an excellent choice for building high-performance web applications.",
+        "Rust's focus on memory safety and performance makes it a suitable choice for systems programming."
+      ],
+      "topics": ["Rust applications", "WebAssembly", "Systems programming"]
+    }
+  ],
+  "topics": ["Memory-safe compiled programming language", "Ownership and borrowing", "Rust package manager", "Rust standard library", "Rust compiler", "WebAssembly", "Systems programming"],
+  "general topics": [
+    {
+      "name": "Programming Languages and Software Development",
+      "complexity": "0.70"
+    },
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": "0.65"
+    },
+    {
+      "name": "Computer Graphics and Visualization",
+      "complexity": "0.50"
+    }
+  ]
+}

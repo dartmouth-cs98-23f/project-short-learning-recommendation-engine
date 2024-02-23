@@ -1,0 +1,66 @@
+{
+"introduction": "The video discusses building a job board app using React, Express, Redis, and a Node.js cron job. The app will fetch jobs from a single job board API, filter them down through an algorithm, and store them in Redis. The front-end will display a list of jobs, and the back-end will handle the API and Redis connections.",
+"sections": [
+{
+"title": "Section 1: Setting up the project",
+"content": [
+"Creating a new React app",
+"Installing Material UI",
+"Setting up the Express server",
+"Installing Redis and the Node.js client library"
+],
+"topics": ["React", "Material UI", "Express", "Redis"]
+},
+{
+"title": "Section 2: Fetching jobs from the API",
+"content": [
+"Setting up the API endpoint",
+"Fetching jobs from the API",
+"Filtering jobs down through the algorithm"
+],
+"topics": ["API", "Algorithm", "Filtering"]
+},
+{
+"title": "Section 3: Storing jobs in Redis",
+"content": [
+"Connecting to Redis",
+"Storing jobs in Redis",
+"Retrieving jobs from Redis"
+],
+"topics": ["Redis", "Storage", "Retrieval"]
+},
+{
+"title": "Section 4: Building the front-end",
+"content": [
+"Creating a simple React component for displaying jobs",
+"Creating a component for filtering jobs"
+],
+"topics": ["React", "Front-end development"]
+},
+{
+"title": "Section 5: Deploying the app",
+"content": [
+"Setting up a domain and DNS",
+"Installing dependencies on the server",
+"Starting the React app and the Node.js cron job",
+"Deploying the app to the public internet"
+],
+"topics": ["Deployment", "Server setup", "Public internet"]
+}
+],
+"topics": ["API", "Algorithm", "Filtering", "Redis", "React", "Material UI", "Express", "Storage", "Retrieval", "Front-end development", "Deployment", "Server setup", "Public internet"],
+"general topics": [
+{
+"name": "Web Development and Internet Technologies",
+"complexity": 0.70
+},
+{
+"name": "Software Engineering and System Design",
+"complexity": 0.60
+},
+{
+"name": "Database Systems and Management",
+"complexity": 0.50
+}
+]
+}

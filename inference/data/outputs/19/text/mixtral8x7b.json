@@ -1,0 +1,65 @@
+{
+"introduction": "This video provides an in-depth exploration of the architecture of the Mistral language model, focusing on the sliding window attention mechanism, the k cach, prefilling, chunking, and model sharding. The video also covers the basics of the vanilla transformer and the differences between the two.",
+"sections": [
+{
+"title": "Section 1: Vanilla Transformer Architecture",
+"content": [
+"Explanation of the vanilla transformer architecture",
+"Description of the self attention mechanism",
+"Discussion of the concept of receptive field"
+],
+"topics": ["Vanilla Transformer", "Self Attention", "Receptive Field"]
+},
+{
+"title": "Section 2: Sliding Window Attention and Receptive Field",
+"content": [
+"Explanation of sliding window attention",
+"Relationship between sliding window attention and receptive field",
+"Example of sliding window attention in action"
+],
+"topics": ["Sliding Window Attention", "Receptive Field", "Example"]
+},
+{
+"title": "Section 3: K cach and Chunking",
+"content": [
+"Introduction to k cach and chunking",
+"Explanation of prefilling and chunking",
+"Example of prefilling and chunking in action"
+],
+"topics": ["k cach", "Chunking", "Prefilling", "Example"]
+},
+{
+"title": "Section 4: Model Sharding",
+"content": [
+"Explanation of model sharding",
+"Example of model sharding in action",
+"Discussion of block diagonal with offset padding mask"
+],
+"topics": ["Model Sharding", "Block Diagonal with Offset Padding Mask", "Example"]
+},
+{
+"title": "Section 5: Code Analysis and Innovations",
+"content": [
+"Overview of innovations in the Mistral code",
+"Explanation of the x forers library and block attention",
+"Example of code analysis and innovation in action"
+],
+"topics": ["Mistral Code Innovations", "x forers Library", "Block Attention", "Example"]
+}
+],
+"topics": ["Vanilla Transformer", "Sliding Window Attention", "k cach", "Chunking", "Model Sharding", "Mistral Code Innovations", "x forers Library", "Block Attention"],
+"general topics": [
+{
+"name": "Language Models",
+"complexity": "0.70"
+},
+{
+"name": "Transformer Architecture",
+"complexity": "0.60"
+},
+{
+"name": "Attention Mechanism",
+"complexity": "0.80"
+}
+]
+}

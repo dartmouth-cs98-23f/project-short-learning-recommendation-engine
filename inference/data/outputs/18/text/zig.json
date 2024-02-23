@@ -1,0 +1,70 @@
+{
+  "introduction": "This video provides a 100-second overview of the Zig programming language. It covers the language's features, including its minimal design, fast performance, and low-level memory control. Zig also has no hidden control flow, no operator overloading, and doesn't use exceptions. The language has a unique comp time keyword and can integrate well into a C or C++ codebase. It supports cross-compilation and has a built-in testing framework.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Zig",
+      "content": [
+        "Zig is a high-performance system programming language created by Andrew Kelly in 2016.",
+        "It was designed as a next-generation alternative to C.",
+        "Zig has evolved into one of the most desired new languages in the world.",
+        "It is minimal, fast, and allows for low-level memory control."
+      ],
+      "topics": ["Zig History", "Zig Design", "Zig Evolution", "Zig Features"]
+    },
+    {
+      "title": "Section 2: Memory Management in Zig",
+      "content": [
+        "Zig uses allocators to provide a consistent interface for memory management.",
+        "It has no hidden memory allocations, making the code more explicit and portable.",
+        "All allocators can be easily swapped out in the code to target different architectures.",
+        "Zig has no hidden control flow and no operator overloading."
+      ],
+      "topics": ["Zig Memory Management", "Zig Allocators", "Zig Portability", "Zig Control Flow"]
+    },
+    {
+      "title": "Section 3: Compile Time in Zig",
+      "content": [
+        "Zig has a unique comp time keyword that makes it trivial to run kodak compile time instead of runtime.",
+        "No preprocessor or macros are necessary.",
+        "This feature allows for better performance and more efficient code.",
+        "Zig's compile-time features can be used to improve code reliability."
+      ],
+      "topics": ["Zig Compile Time", "Zig Compile Time Keyword", "Zig Preprocessor", "Zig Macros"]
+    },
+    {
+      "title": "Section 4: Integration with C and C++",
+      "content": [
+        "Zig can integrate well into a C or C++ codebase.",
+        "It supports cross-compilation out of the box with LLVM.",
+        "Divorce paperwork has been filed to get started.",
+        "Zig's integration with C and C++ makes it a versatile language."
+      ],
+      "topics": ["Zig and C", "Zig and C++", "Zig and LLVM", "Zig Integration"]
+    },
+    {
+      "title": "Section 5: Zig's Built-in Testing Framework",
+      "content": [
+        "Zig has a built-in testing framework.",
+        "Use the test keyword to evaluate code outside of the main program.",
+        "The zig test command can be used to run the tests.",
+        "Zig's testing framework improves code reliability."
+      ],
+      "topics": ["Zig Testing Framework", "Zig Test Keyword", "Zig Test Command", "Zig Testing"]
+    }
+  ],
+  "topics": ["Zig History", "Zig Design", "Zig Evolution", "Zig Features", "Zig Memory Management", "Zig Allocators", "Zig Portability", "Zig Control Flow", "Zig Compile Time", "Zig Compile Time Keyword", "Zig Preprocessor", "Zig Macros", "Zig and C", "Zig and C++", "Zig and LLVM", "Zig Integration", "Zig Testing Framework", "Zig Test Keyword", "Zig Test Command", "Zig Testing"],
+  "general topics": [
+    {
+      "name": "Programming Languages and Software Development",
+      "complexity": 0.70
+    },
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.50
+    },
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.40
+    }
+  ]
+}

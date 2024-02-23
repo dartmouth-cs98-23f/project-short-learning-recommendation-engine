@@ -1,0 +1,65 @@
+{
+"introduction": "In this video, we will build a job board app as an MVP that pulls data from a single job board API, filters the jobs, and displays them on a React frontend. We will also set up a Node.js backend with Redis for data storage and a cron job to refresh the data at regular intervals.",
+"sections": [
+{
+"title": "Section 1: Setting up the project",
+"content": [
+"Create a new React app with Material UI",
+"Install necessary dependencies",
+"Set up Redis and Node.js",
+"Create a cron job to fetch jobs and refresh data"
+],
+"topics": ["React", "Material UI", "Node.js", "Redis", "Cron jobs"]
+},
+{
+"title": "Section 2: Fetching jobs from the API",
+"content": [
+"Create a function to fetch jobs from the API",
+"Implement error handling",
+"Filter jobs based on requirements"
+],
+"topics": ["API integration", "Error handling", "Job filtering"]
+},
+{
+"title": "Section 3: Displaying jobs on the frontend",
+"content": [
+"Create a component to display jobs",
+"Implement pagination and lazy loading",
+"Design a responsive layout"
+],
+"topics": ["React components", "Pagination", "Lazy loading", "Responsive design"]
+},
+{
+"title": "Section 4: Storing jobs in Redis",
+"content": [
+"Set up a Redis client in Node.js",
+"Store fetched jobs in Redis",
+"Implement a worker to fetch and store jobs at regular intervals"
+],
+"topics": ["Redis", "Node.js", "Worker processes", "Job scheduling"]
+},
+{
+"title": "Section 5: Deploying the app",
+"content": [
+"Set up a domain and configure DNS",
+"Install and configure PM2 for production",
+"Deploy the app to a server"
+],
+"topics": ["Domain configuration", "PM2", "Server deployment"]
+}
+],
+"topics": ["API integration", "Error handling", "Job filtering", "React components", "Pagination", "Lazy loading", "Responsive design", "Redis", "Node.js", "Worker processes", "Job scheduling", "Domain configuration", "PM2", "Server deployment"]
+},
+{
+"name": "Selected general topic 1",
+"complexity": "0.90"
+},
+{
+"name": "Selected general topic 2",
+"complexity": "0.80"
+},
+{
+"name": "Selected general topic 3",
+"complexity": "0.70"
+}
+}

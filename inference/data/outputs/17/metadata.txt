@@ -1,0 +1,208 @@
+#####################
+###### METADATA ######
+#####################
+
+Model: mistralai/Mistral-7B-Instruct-v0.1
+Time: 1708643723.2521884
+Videos: [['https://www.youtube.com/watch?v=UiX8K-xBUpE', 'UiX8K-xBUpE', 'mixtral8x7b'], ['https://www.youtube.com/watch?v=Xdhe-meS30A', 'Xdhe-meS30A', 'catan'], ['https://www.youtube.com/watch?v=00AQjBDM46Q', '00AQjBDM46Q', 'mlops_llm_eval'], ['https://www.youtube.com/watch?v=5ChkQKUzDCs', '5ChkQKUzDCs', 'typescript_fireship'], ['https://www.youtube.com/watch?v=J0NuOlA2xDc', 'J0NuOlA2xDc', 'localized_deployment'], ['https://www.youtube.com/watch?v=E5kzAbD8D0w', 'E5kzAbD8D0w', 'dpo'], ['https://www.youtube.com/watch?v=wybjsKtA9hI', 'wybjsKtA9hI', 'sql_backend'], ['https://www.youtube.com/watch?v=CZw57SIwgiE', 'CZw57SIwgiE', 'threads_connections'], ['https://www.youtube.com/watch?v=p6wwj0ozifw', 'p6wwj0ozifw', 'hashing'], ['https://www.youtube.com/watch?v=kxT8-C1 vmd4', 'kxT8-C1vmd4', 'zig'], ['https://www.youtube.com/watch?v=5C_HPTJg5ek', '5C_HPTJg5ek', 'rust'], ['https://www.youtube.com/watch?v=HyWYpM_S-2c', 'HyWYpM_S-2c', 'react'], ['https://www.youtube.com/watch?v=MnpuK0MK4yo', 'MnpuK0MK4yo', 'react_svelte'], ['https://www.youtube.com/watch?v=lauywdXKEXI', 'lauywdXKEXI', 'full-stack']]
+Shots: ['mixtral8x7b']
+Prompt: General Topics:
+[
+  "Algorithms and Data Structures",
+  "Artificial Intelligence (AI) and Machine Learning",
+  "Computer Architecture",
+  "Data Science and Analytics",
+  "Database Systems and Management",
+  "Human-Computer Interaction (HCI)",
+  "Programming Languages and Software Development",
+  "Software Engineering and System Design",
+  "Web Development and Internet Technologies",
+  "Computer Graphics and Visualization",
+  "Theoretical Computer Science",
+  "Quantum Computing"
+]
+
+Complexity scale:
+[
+  0.00-0.09: Elementary,
+  0.10-0.19: Middle School,
+  0.20-0.29: High School,
+  0.30-0.39: Advanced High School,
+  0.40-0.49: Introductory College,
+  0.50-0.59: Average College Lecture,
+  0.60-0.69: Advanced College,
+  0.70-0.79: Graduate Level,
+  0.80-0.89: Advanced Graduate Level,
+  0.90-1.00: PhD Level Lecture
+]
+
+Generate a JSON summary the computer science or software engineering video. The summary should include:
+
+1. A high-level synopsis labeled as "introduction".
+2. A breakdown into 5 sections, each with:
+   - A title starting with "Section x" where x is the section number from 1 to 5.
+   - A "content" field containing 4 bullet points summarizing the section.
+   - A "topics" field listing the 3 most important topics covered in the section.
+3. A global "topics" array listing 5 key descriptors (1-2 words each) of topics covered in the video.
+4. A global "general topics" array selecting 3 topics from the predefined list, each associated with an exact "complexity" score based on the provided scale. The complexity score should reflect the detailed complexity level with full two-decimal-place precision.
+
+The JSON structure should strictly follow this template:
+{
+  "introduction": "High level synopsis here",
+  "sections": [
+    {
+      "title": "Section 1: Name",
+      "content": [
+        "Bullet point 1",
+        "Bullet point 2",
+        "Bullet point 3",
+        "Bullet point 4"
+      ],
+      "topics": ["Topic1", "Topic2", "Topic3"]
+    },
+    ... (total 5 sections)
+  ],
+  "topics": ["Descriptor1", "Descriptor2", "Descriptor3", "Descriptor4", "Descriptor5"],
+  "general topics": [
+    {
+      "name": "Selected general topic 1",
+      "complexity": "Exact complexity float with two decimals"
+    },
+    ... (total 3 general topics)
+  ]
+}
+
+Please adhere strictly to the JSON format. Use domain-specific terminology in the "title" and "content" for each section. The "topics" and "general topics" should accurately reflect the video's content based on the predefined lists and complexity scale. The output should conclude with a '}' character to end the json above.
+
+
+
+###################
+###### INFERENCE ######
+###################
+Temperature: 0.5
+Top_k: 35
+Top_p: 0.95
+Processing: dpo
+    Tokens: 7723
+    Decoding took: 55.209 seconds
+    cuda memory allocated: 15.66 GB, cuda memory cached: 16.85 GB
+Processing: full-stack
+    Tokens: 7719
+
+
+###################
+###### INFERENCE ######
+###################
+Temperature: 0.5
+Top_k: 35
+Top_p: 0.95
+Processing: dpo
+    Tokens: 8155
+
+
+###################
+###### INFERENCE ######
+###################
+Temperature: 0.5
+Top_k: 35
+Top_p: 0.95
+
+
+###################
+###### INFERENCE ######
+###################
+Temperature: 0.5
+Top_k: 35
+Top_p: 0.95
+Processing: dpo
+    Tokens: 8385
+    Decoding took: 29.286 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: full-stack
+    Tokens: 8379
+
+
+###################
+###### INFERENCE ######
+###################
+Temperature: 0.5
+Top_k: 35
+Top_p: 0.95
+Processing: dpo
+    Tokens: 8394
+    Decoding took: 52.313 seconds
+    cuda memory allocated: 16.30 GB, cuda memory cached: 17.02 GB
+Processing: full-stack
+    Tokens: 8388
+    Decoding took: 45.312 seconds
+    cuda memory allocated: 16.30 GB, cuda memory cached: 17.02 GB
+Processing: hashing
+    Tokens: 8435
+    Decoding took: 70.905 seconds
+    cuda memory allocated: 16.30 GB, cuda memory cached: 17.02 GB
+Processing: localized_deployment
+    Tokens: 6024
+    Decoding took: 58.392 seconds
+    cuda memory allocated: 16.30 GB, cuda memory cached: 17.02 GB
+Processing: mixtral8x7b
+    Tokens: 8310
+    Decoding took: 59.759 seconds
+    cuda memory allocated: 16.30 GB, cuda memory cached: 17.02 GB
+Processing: mlops_llm_eval
+    Tokens: 8440
+    Decoding took: 45.491 seconds
+    cuda memory allocated: 16.30 GB, cuda memory cached: 17.02 GB
+Processing: react
+    Tokens: 5909
+    Decoding took: 76.849 seconds
+    cuda memory allocated: 16.30 GB, cuda memory cached: 17.02 GB
+Processing: rust
+    Tokens: 5811
+    Decoding took: 60.204 seconds
+    cuda memory allocated: 16.30 GB, cuda memory cached: 17.02 GB
+Processing: sql_backend
+    Tokens: 8315
+    Decoding took: 57.805 seconds
+    cuda memory allocated: 16.30 GB, cuda memory cached: 17.02 GB
+Processing: threads_connections
+    Tokens: 8286
+    Decoding took: 70.202 seconds
+    cuda memory allocated: 16.30 GB, cuda memory cached: 17.02 GB
+Processing: react_svelte
+    Tokens: 7472
+    Decoding took: 54.294 seconds
+    cuda memory allocated: 16.30 GB, cuda memory cached: 17.02 GB
+Processing: typescript_fireship
+    Tokens: 6267
+    Decoding took: 58.433 seconds
+    cuda memory allocated: 16.30 GB, cuda memory cached: 17.02 GB
+Processing: zig
+    Tokens: 5913
+    Decoding took: 65.88 seconds
+    cuda memory allocated: 16.30 GB, cuda memory cached: 17.02 GB
+Global runtime: 776.585 secondsTarget: dpo, Hidden states took: 0.53 seconds
+    Target: dpo tensor finished. Wrote to file.
+Target: full-stack, Hidden states took: 0.158 seconds
+    Target: full-stack tensor finished. Wrote to file.
+Target: hashing, Hidden states took: 0.246 seconds
+    Target: hashing tensor finished. Wrote to file.
+Target: localized_deployment, Hidden states took: 0.253 seconds
+    Target: localized_deployment tensor finished. Wrote to file.
+Target: mixtral8x7b, Hidden states took: 0.231 seconds
+    Target: mixtral8x7b tensor finished. Wrote to file.
+Target: mlops_llm_eval, Hidden states took: 0.158 seconds
+    Target: mlops_llm_eval tensor finished. Wrote to file.
+Target: react, Hidden states took: 0.302 seconds
+    Target: react tensor finished. Wrote to file.
+Target: rust, Hidden states took: 0.254 seconds
+    Target: rust tensor finished. Wrote to file.
+Target: sql_backend, Hidden states took: 0.212 seconds
+    Target: sql_backend tensor finished. Wrote to file.
+Target: threads_connections, Hidden states took: 0.244 seconds
+    Target: threads_connections tensor finished. Wrote to file.
+Target: react_svelte, Hidden states took: 0.213 seconds
+    Target: react_svelte tensor finished. Wrote to file.
+Target: typescript_fireship, Hidden states took: 0.226 seconds
+    Target: typescript_fireship tensor finished. Wrote to file.
+Target: zig, Hidden states took: 0.252 seconds
+    Target: zig tensor finished. Wrote to file.

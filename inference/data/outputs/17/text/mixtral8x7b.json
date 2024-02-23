@@ -1,0 +1,61 @@
+{
+"introduction": "In this video, we will explore the architecture and advanced attention mechanisms used in the Mistral language model. We will discuss the sliding window attention, receptive fields, kv cache, and sparse mixture of experts model sharding. We will also examine the code of the Mistral model and its innovations in the xformer library and block attention.",
+"sections": [
+{
+"title": "Section 1: Architecture",
+"content": [
+"The vanilla transformer and Mistral have different architectures. In the vanilla transformer, the output of self-attention is another matrix with the same shape as the query matrix, and each token is represented by an embedding of size 496. In Mistral, the output of self-attention is a list of tokens where each token captures information about other tokens according to the mask.",
+"The k-cache allows reducing computations by only producing one output at a time, reducing the computational cost of generating text.",
+"The prompt is known in advance, and we can prefill the k-cache using the tokens of the prompt to reduce the computational cost of generating text."
+],
+"topics": ["Architecture", "k-cache", "prompt"]
+}
+{
+"title": "Section 2: Sliding Window Attention",
+"content": [
+"Sliding window attention is related to the concept of receptive fields, which is usually found in convolutional neural networks. In the case of Mistral, the output of self-attention is a list of tokens where each token captures information about other tokens according to the mask.",
+"The sliding window attention allows the model to understand the context of the input sequence by considering the relationships between tokens."
+],
+"topics": ["sliding window attention", "receptive fields"]
+}
+{
+"title": "Section 3: K-Cache and Rolling Buffer Cache",
+"content": [
+"The k-cache allows reducing computations by only producing one output at a time, reducing the computational cost of generating text.",
+"The rolling buffer cache is an evolution of the k-cache that allows the model to store more information in memory, reducing the computational cost of generating text even further."
+],
+"topics": ["k-cache", "rolling buffer cache"]
+}
+{
+"title": "Section 4: Sparse Mixture of Experts",
+"content": [
+"The sparse mixture of experts is a technique used in Mistral to improve the model's performance. It involves selecting the logits of the best two performing experts and combining them to produce the final output.",
+"The sparse mixture of experts allows the model to leverage the strengths of multiple experts to produce better results."
+],
+"topics": ["sparse mixture of experts"]
+}
+{
+"title": "Section 5: Model Sharding",
+"content": [
+"Model sharding is a technique used in Mistral to distribute the model across multiple GPUs. This allows the model to process larger sequences of text more efficiently.",
+"The model sharding technique involves splitting the model into smaller parts and distributing them across multiple GPUs, allowing for parallel processing."
+],
+"topics": ["model sharding"]
+}
+],
+"topics": ["sliding window attention", "k-cache", "prompt", "receptive fields", "sparse mixture of experts", "model sharding"],
+"general topics": [
+{
+"name": "Algorithms and Data Structures",
+"complexity": "0.70"
+},
+{
+"name": "Artificial Intelligence (AI) and Machine Learning",
+"complexity": "0.80"
+},
+{
+"name": "Computer Architecture",
+"complexity": "0.50"
+}
+]
+}

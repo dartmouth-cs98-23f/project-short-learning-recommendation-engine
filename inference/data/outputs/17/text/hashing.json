@@ -1,0 +1,70 @@
+{
+"introduction": "In this computer science video, we discuss the concept of distributed hashing and how it solves the problem of sharding databases. We also explore consistent hashing, a technique used to distribute data across a cluster of servers in a more efficient manner.",
+"sections": [
+{
+"title": "Section 1: Distributed Hashing",
+"content": [
+"Distributed hashing uses a ring-based approach to map keys to servers, allowing for efficient data distribution and retrieval.",
+"The hashing function is used to map keys to server indices, which can be calculated using a modulo operation based on the number of servers in the cluster.",
+"The main challenge with distributed hashing is handling server failures and ensuring data consistency across the cluster.",
+"Consistent hashing is a technique that allows for more efficient data distribution and retrieval by using a ring-based approach and a modulo operation to map keys to server indices."
+],
+"topics": ["Distributed Hashing", "Consistent Hashing", "Server Failure Handling", "Data Consistency"]
+},
+{
+"title": "Section 2: Consistent Hashing",
+"content": [
+"Consistent hashing uses a ring-based approach to map keys to servers, allowing for efficient data distribution and retrieval.",
+"The hashing function is used to map keys to server indices, which can be calculated using a modulo operation based on the number of servers in the cluster.",
+"The main challenge with consistent hashing is handling server failures and ensuring data consistency across the cluster.",
+"Consistent hashing is a technique that allows for more efficient data distribution and retrieval by using a ring-based approach and a modulo operation to map keys to server indices."
+],
+"topics": ["Consistent Hashing", "Ring-Based Approach", "Modulo Operation", "Data Consistency"]
+},
+{
+"title": "Section 3: Server Failure Handling",
+"content": [
+"Server failures can cause data inconsistencies and affect the performance of the distributed system.",
+"To handle server failures, distributed systems can use techniques such as replication and backup.",
+"Replication involves maintaining multiple copies of the data on different servers, ensuring that data is available even if one server fails.",
+"Backup involves periodically copying the data to a backup server, allowing for quick recovery in case of a failure."
+],
+"topics": ["Server Failure Handling", "Replication", "Backup", "Data Consistency"]
+},
+{
+"title": "Section 4: Data Consistency",
+"content": [
+"Data consistency is a crucial aspect of distributed systems, ensuring that all servers have the same data at all times.",
+"Consistent hashing is a technique that allows for more efficient data distribution and retrieval by using a ring-based approach and a modulo operation to map keys to server indices.",
+"Replication and backup are techniques used to handle server failures and ensure data consistency across the cluster.",
+"Distributed systems can use techniques such as two-phase commit and consensus algorithms to maintain data consistency."
+],
+"topics": ["Data Consistency", "Consistent Hashing", "Replication", "Backup", "Two-Phase Commit", "Consensus Algorithms"]
+},
+{
+"title": "Section 5: Scalability",
+"content": [
+"Scalability is an important aspect of distributed systems, allowing them to handle increasing amounts of data and traffic.",
+"Consistent hashing is a technique that allows for more efficient data distribution and retrieval by using a ring-based approach and a modulo operation to map keys to server indices.",
+"Replication and backup are techniques used to handle server failures and ensure data consistency across the cluster.",
+"Distributed systems can use techniques such as sharding and partitioning to improve scalability."
+],
+"topics": ["Scalability", "Consistent Hashing", "Replication", "Backup", "Sharding", "Partitioning"]
+}
+],
+"topics": ["Distributed Hashing", "Consistent Hashing", "Server Failure Handling", "Data Consistency", "Scalability"],
+"general topics": [
+{
+"name": "Algorithms and Data Structures",
+"complexity": "0.70"
+},
+{
+"name": "Artificial Intelligence (AI) and Machine Learning",
+"complexity": "0.80"
+},
+{
+"name": "Computer Architecture",
+"complexity": "0.50"
+}
+]
+}
