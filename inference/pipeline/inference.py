@@ -1,14 +1,13 @@
-import torch
-import os
-import time
-import json
-import dotenv
+import torch, dotenv
+import os, time, json, string, re
 
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from pinecone import Pinecone
-
+from utils.transcript import download_transcript
+import nltk
+from nltk.corpus import stopwords
 
 shots_transcripts = "../data/transcripts/processed"
 transcripts_dir = "../data/transcripts/processed"
@@ -47,7 +46,7 @@ def abridge_transcript(transcript: str, chars: int) -> str:
     return output_transcript
 
 
-def build_message(shots: list, target, prompt, shots_char_limit: int, input_char_limit: int) -> list:
+def build_message(shots: list, transcript, prompt, shots_char_limit: int, input_char_limit: int) -> list:
     """ Build a message for the model to generate from.
     Args:
         shots (list): List of shots to include in the message
@@ -70,29 +69,31 @@ def build_message(shots: list, target, prompt, shots_char_limit: int, input_char
         f_oneshot_transcript.close()
 
     ## Append final message
-    messages.append({"role": "user", "content": f'Transcript:\n{abridge_transcript(target, input_char_limit)}\nInstruction:\n{prompt}'})
- 
+    messages.append({"role": "user", "content": f'Transcript:\n{abridge_transcript(transcript, input_char_limit)}\nInstruction:\n{prompt}'})
+
     return messages
 
 def vectorize_pipeline(doc):
     ## Setup Config
-    with open('config/videos.json') as config_file:
+    with open('../config/videos.json') as config_file:
         videos = json.load(config_file)
-    with open('config/name_to_url.json') as config_file:
+    with open('../config/name_to_url.json') as config_file:
         name_to_url = json.load(config_file)
     
     folder_no = doc["_id"]
     print(f"Folder Number: {folder_no}")
-    if os.path.exists(f'../data/outputs/{folder_no}'):
+    if os.path.exists(f'../data/technigala/{folder_no}'):
         print(f"Folder {folder_no} already exists. Skipping...")
         return
-    os.makedirs(f'../data/technigala/{folder_no}/text', exist_ok=True)
-    os.makedirs(f'../data/technigala/{folder_no}/embeddings', exist_ok=True)
-    os.makedirs(f'../data/technigala/{folder_no}/results', exist_ok=True)
+    os.makedirs(f'../data/technigala/{folder_no}', exist_ok=True)
     outputs_dir = f'../data/technigala/{folder_no}'
     prompt = open(prompt_path, "r").read()
     shots = ["mixtral8x7b", "full-stack"]
-    
+
+    youtube_id = doc["youtubeURL"].split('=')[-1]
+    download_transcript(youtube_id, f'{outputs_dir}/raw_transcript.txt')
+    process_transcript(outputs_dir)
+
     # Load models
     torch.cuda.empty_cache()
     device = "cuda:0" if torch.cuda.is_available() else "cpu"
@@ -111,7 +112,7 @@ def vectorize_pipeline(doc):
     
     target = doc["title"]
     # Run Inference
-    run_inference(model, outputs_dir, transcripts_dir, shots, tokenizer, device, prompt, target)
+    run_inference(model, outputs_dir, shots, tokenizer, device, prompt, target)
     create_embeddings(outputs_dir, tokenizer, model, device, target)
     upload_to_pinecone(outputs_dir, name_to_url, doc, target)
     
@@ -127,7 +128,6 @@ def run_inference(model, outputs_dir, shots, tokenizer, device, prompt, target):
 
     metadata = open(f'{outputs_dir}/metadata.txt', 'a')
     metadata.write(f"\n\n###################\n###### INFERENCE ######\n###################\n")
-    f_message = open(f'{outputs_dir}/messages.txt', 'w', encoding='utf-8')
     temperature = 0.5
     top_k = 35
     top_p = 0.96
@@ -140,9 +140,12 @@ def run_inference(model, outputs_dir, shots, tokenizer, device, prompt, target):
     global_start = time.time()
     metadata.write(f"Processing: {target}\n")
     with open(f'{outputs_dir}/transcript.txt', 'r', encoding='utf-8') as f_target_transcript:
-        messages = build_message(shots, target, prompt, 8000, 14500)
-        f_message.write(f'{target}: {messages}\n\n')
-    inputs = tokenizer.apply_chat_template(messages, return_tensors="pt").to(device)    
+        messages = build_message(shots, f_target_transcript.read(), prompt, 8000, 8000)
+    with open(f'{outputs_dir}/messages.txt', 'w', encoding='utf-8') as f_message:
+        for message in messages:
+            f_message.write(f"####################\n{message['role']}\n####################\n{message['content']}\n")
+    inputs = tokenizer.apply_chat_template(messages, return_tensors="pt").to(device)
+
     metadata.write(f"    Tokens: {len(inputs[0])}\n")
     print(f"    Tokens: {len(inputs[0])}")
     ## An idea for later, do not include the oneshot prompt if we are only directly using transcript embedding
@@ -155,7 +158,7 @@ def run_inference(model, outputs_dir, shots, tokenizer, device, prompt, target):
         print(f'Decoding finished: {target} in {round(time.time() - start_time, 3)} seconds')   
         metadata.write(f"    Decoding took: {round(time.time() - start_time, 3)} seconds\n")
     ## obtain all tokens after the second "[/INST]" and remove the </s> token. Write this as our output.
-    with open(f'{outputs_dir}/text/{target}.json', 'w', encoding='utf-8') as f:
+    with open(f'{outputs_dir}/{target}.json', 'w', encoding='utf-8') as f:
         f.write(decoded[0].split('[/INST]')[-1][1:-4])
 
     ## Free up memory
@@ -167,7 +170,6 @@ def run_inference(model, outputs_dir, shots, tokenizer, device, prompt, target):
 
     metadata.write(f'Global runtime: {round(time.time() - global_start, 3)} seconds')
     metadata.close()
-    f_message.close()
 
 def create_embeddings(outputs_dir, tokenizer, model, device, target):
     """ Create embeddings from the outputs of the model
@@ -180,7 +182,7 @@ def create_embeddings(outputs_dir, tokenizer, model, device, target):
     print(f'cuda memory allocated: {torch.cuda.memory_allocated()/1024**3:.2f} GB', f'cuda memory cached: {torch.cuda.memory_cached()/1024**3:.2f} GB')
 
     start_time = time.time()
-    with open(f'{outputs_dir}/text/{target}.json', 'r', encoding='utf-8') as f:
+    with open(f'{outputs_dir}/{target}.json', 'r', encoding='utf-8') as f:
         inputs = tokenizer(f.read(), return_tensors="pt").to(device)     
     with torch.no_grad():
         hidden = model(**inputs, output_hidden_states=True)
@@ -192,8 +194,8 @@ def create_embeddings(outputs_dir, tokenizer, model, device, target):
     max_pool = torch.nn.functional.max_pool1d(tensor_t, tensor_t.shape[2]).transpose(1, 2).squeeze()
     avg_pool = torch.nn.functional.avg_pool1d(tensor_t, tensor_t.shape[2]).transpose(1, 2).squeeze()
     print(max_pool.shape)
-    torch.save(max_pool, f'{outputs_dir}/embeddings/max_{target}.pt')
-    torch.save(avg_pool, f'{outputs_dir}/embeddings/avg_{target}.pt')
+    torch.save(max_pool, f'{outputs_dir}/max_{target}.pt')
+    torch.save(avg_pool, f'{outputs_dir}/avg_{target}.pt')
 
     print(f'Target: {target} finished. Wrote to file.')
     metadata.write(f'    Target: {target} tensor finished. Wrote to file.\n')
@@ -213,21 +215,43 @@ def upload_to_pinecone(outputs_dir, name_to_url, doc, target):
     index = pc.Index(os.environ["PINECONE_INDEX"])
     
     # Prepare embeddings for upload
-    path_to_embeddings = f'{outputs_dir}/embeddings'
     mode = "max"
-    embedding_file = f'{path_to_embeddings}/{mode}_{target}.pt'
+    embedding_file = f'{mode}_{target}.pt'
     vectors = []
-    if not embedding_file.endswith('.pt'):
-        return
-    if mode not in embedding_file:
-        return
 
     name = embedding_file[4:-3]
-    metadata = {"name": name, "url": doc["youtubeURL"], "title": doc["title"]}
-    tensor = torch.load(f'{path_to_embeddings}/{embedding_file}').to('cpu').numpy().tolist()
+    metadata = {"name": name, "url": doc["youtubeURL"], "title": doc["title"], "topics": doc["topicId"]}
+    tensor = torch.load(f'{outputs_dir}/{embedding_file}').to('cpu').numpy().tolist()
     vectors.append({"values": tensor, "id": name, "metadata": metadata})
     print(f'Loaded {name}, metadata: {metadata}')
     del tensor
     index.upsert(vectors=vectors)
 
     torch.cuda.empty_cache()
+
+def process_transcript(output_dir):
+    with open(f'{output_dir}/raw_transcript.txt', 'r') as file:
+        with open(f'{output_dir}/transcript.txt', 'w') as file_clean:
+            for i,line in enumerate(file):
+                if i == 0:
+                    continue
+                ## Remove Timestamp
+                pattern = r'\d+\.\d{2},\d+\.\d{2},'
+                line = re.sub(pattern, '', line)
+                line = line.replace("'", "")
+                line = line.replace('"', "")
+                line = line.replace('\n', ' ')
+                file_clean.write(line)
+        
+    ## Remove stopwords
+    nltk.download('stopwords')
+    with open(f'{output_dir}/transcript.txt', 'r') as file:
+        text = file.read()
+        text = text.lower()
+        text = text.translate(str.maketrans('', '', string.punctuation))
+        stop_words = set(stopwords.words('english'))
+        filtered_text = [word for word in text.split() if word not in stop_words]
+        filtered_text = ' '.join(filtered_text)
+
+    with open(f'{output_dir}/transcript.txt', 'w') as file_processed:
+        file_processed.write(text)
