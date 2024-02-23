@@ -1,0 +1,70 @@
+{
+  "introduction": "In this video, the speaker discusses building a job board application using React, Express, Redis, and a node cron job. The application pulls job data from a single API and displays it in a minimal front-end. The speaker covers the process of setting up the front-end, backend, and data storage, as well as the importance of using an algorithm to filter job data.",
+  "sections": [
+    {
+      "title": "Section 1: Setting up the Front-end",
+      "content": [
+        "React and Material UI are used for the front-end development.",
+        "The front-end is designed using a minimalist approach.",
+        "The front-end is hosted on a server using Express.",
+        "The front-end communicates with the backend using an API."
+      ],
+      "topics": ["React", "Material UI", "Express", "API"]
+    },
+    {
+      "title": "Section 2: Setting up the Backend",
+      "content": [
+        "Express is used for the backend development.",
+        "Redis is used for data storage.",
+        "A node cron job is used to fetch job data from the API at regular intervals.",
+        "The job data is filtered using an algorithm."
+      ],
+      "topics": ["Express", "Redis", "Node cron job", "Algorithm"]
+    },
+    {
+      "title": "Section 3: Setting up the Data Storage",
+      "content": [
+        "Redis is used for data storage.",
+        "The job data is stored in Redis as a JSON object.",
+        "The job data is fetched from Redis using the job ID.",
+        "The job data is parsed into a JavaScript object."
+      ],
+      "topics": ["Redis", "Job data", "Job ID", "Parsing"]
+    },
+    {
+      "title": "Section 4: Filtering the Job Data",
+      "content": [
+        "An algorithm is used to filter job data.",
+        "The algorithm filters job data based on experience level.",
+        "The algorithm returns a list of filtered job data.",
+        "The filtered job data is displayed in the front-end."
+      ],
+      "topics": ["Algorithm", "Experience level", "Filtered job data", "Display"]
+    },
+    {
+      "title": "Section 5: Deploying the Application",
+      "content": [
+        "The application is deployed to a server using DigitalOcean.",
+        "The API route is changed to use a custom name server.",
+        "The proxy config is added to allow the application to work on local development.",
+        "The application is deployed to the public internet at entrylevelsoftwarejobs.com."
+      ],
+      "topics": ["DigitalOcean", "Custom name server", "Proxy config", "Public deployment"]
+    }
+  ],
+  "topics": ["React", "Express", "Redis", "Node cron job", "Algorithm", "Experience level", "Filtered job data", "Display", "DigitalOcean", "Custom name server", "Proxy config", "Public deployment"],
+  "generalTopics": [
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.61
+    },
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": 0.61
+    },
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.53
+    }
+  ]
+}

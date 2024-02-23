@@ -1,0 +1,70 @@
+{
+  "introduction": "This video discusses the reasons why using SELECT \* in a SQL query can be slow and how it affects performance. The video covers the concept of full table scans, deserialization costs, and network latency. It also explains the importance of indexing and using index only scans to improve query performance.",
+  "sections": [
+    {
+      "title": "Section 1: Full Table Scans",
+      "content": [
+        "Explanation of how a full table scan works.",
+        "Discussion of the impact of full table scans on query performance.",
+        "Comparison of full table scans with index-based queries.",
+        "Explanation of how to avoid full table scans using indexing."
+      ],
+      "topics": ["Full Table Scans", "Query Performance", "Indexing", "Avoiding Full Table Scans"]
+    },
+    {
+      "title": "Section 2: Deserialization Costs",
+      "content": [
+        "Explanation of deserialization costs and their impact on query performance.",
+        "Discussion of the different deserialization methods used in SQL databases.",
+        "Explanation of how to optimize deserialization costs.",
+        "Comparison of different deserialization methods and their performance."
+      ],
+      "topics": ["Deserialization Costs", "Query Performance", "Deserialization Methods", "Optimizing Deserialization Costs"]
+    },
+    {
+      "title": "Section 3: Network Latency",
+      "content": [
+        "Explanation of network latency and its impact on query performance.",
+        "Discussion of the different network protocols used in SQL databases.",
+        "Explanation of how to optimize network latency.",
+        "Comparison of different network protocols and their performance."
+      ],
+      "topics": ["Network Latency", "Query Performance", "Network Protocols", "Optimizing Network Latency"]
+    },
+    {
+      "title": "Section 4: Indexing and Index Only Scans",
+      "content": [
+        "Explanation of indexing and its importance in SQL query performance.",
+        "Discussion of the different types of indexes used in SQL databases.",
+        "Explanation of how to use index only scans to improve query performance.",
+        "Comparison of index only scans with full table scans."
+      ],
+      "topics": ["Indexing", "Query Performance", "Index Types", "Index Only Scans"]
+    },
+    {
+      "title": "Section 5: Best Practices for Query Optimization",
+      "content": [
+        "Summary of the key takeaways from the video.",
+        "Explanation of the importance of query optimization in SQL databases.",
+        "Discussion of the best practices for query optimization.",
+        "Comparison of different query optimization techniques and their performance."
+      ],
+      "topics": ["Query Optimization", "SQL Databases", "Best Practices", "Query Optimization Techniques"]
+    }
+  ],
+  "topics": ["Full Table Scans", "Deserialization Costs", "Network Latency", "Indexing", "Query Optimization"],
+  "generalTopics": [
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.65
+    },
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": 0.70
+    },
+    {
+      "name": "Programming Languages and Software Development",
+      "complexity": 0.60
+    }
+  ]
+}
