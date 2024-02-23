@@ -131,8 +131,10 @@ def run_inference(model, outputs_dir, shots, tokenizer, device, prompt, target):
     temperature = 0.5
     top_k = 35
     top_p = 0.96
+    tokens_shot = 6500
+    tokens_target = 7500
 
-    metadata.write(f"Temperature: {temperature}\nTop_k: {top_k}\nTop_p: {top_p}\n")
+    metadata.write(f"Temperature: {temperature}\nTop_k: {top_k}\nTop_p: {top_p}\nTokens per shot: {tokens_shot}\nTokens per target: {tokens_target}\n")
     metadata.close()
     metadata = open(f'{outputs_dir}/metadata.txt', 'a')
 
@@ -140,7 +142,7 @@ def run_inference(model, outputs_dir, shots, tokenizer, device, prompt, target):
     global_start = time.time()
     metadata.write(f"Processing: {target}\n")
     with open(f'{outputs_dir}/transcript.txt', 'r', encoding='utf-8') as f_target_transcript:
-        messages = build_message(shots, f_target_transcript.read(), prompt, 8000, 8000)
+        messages = build_message(shots, f_target_transcript.read(), prompt, tokens_shot, tokens_target)
     with open(f'{outputs_dir}/messages.txt', 'w', encoding='utf-8') as f_message:
         for message in messages:
             f_message.write(f"####################\n{message['role']}\n####################\n{message['content']}\n")
