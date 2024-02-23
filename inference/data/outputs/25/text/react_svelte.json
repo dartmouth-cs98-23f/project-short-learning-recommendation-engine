@@ -1,0 +1,8 @@
+{
+  "introduction": "This video compares React and Svelte, two popular JavaScript frameworks used for building reactive user interfaces. Both frameworks have their unique features and developer experiences, but the choice between them ultimately depends on the individual's preferences and needs.",
+  "sections": [
+    {
+      "title": "Section 1: Rendering",
+      "content": [
+        "React uses a runtime called the virtual dom, which keeps track of data changes in the application to render them in the actual DOM in the browser. This approach requires some initial JavaScript and has a baseline of around 70 KB for rendering a 'hello world' app.",
+        "Svelte, on the other hand, takes an entirely different approach by using a compiler to eliminate the need for x

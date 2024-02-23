@@ -14,7 +14,7 @@ General Topics:
   "Quantum Computing"
 ]
 
-Complexity Scale:
+Complexity scale:
 [
   0.00-0.09: Elementary,
   0.10-0.19: Middle School,
@@ -64,4 +64,4 @@ The JSON structure should strictly follow this template:
   ]
 }
 
-The output must follow the specified JSON structure, focusing on domain-specific terminology in the "content" sections. Use the previous "Complexity Scale" list when generating "complexity". Use the previous "General Topics" list when generating the "general topics" field. If the video content does not directly match a topic from this list, select the closest related topic available. 
+Please adhere strictly to the JSON format. Use domain-specific terminology in the "title" and "content" for each section. The "topics" and "general topics" should accurately reflect the video's content based on the predefined lists and complexity scale. The output should conclude with a '}' character to end the json above.
