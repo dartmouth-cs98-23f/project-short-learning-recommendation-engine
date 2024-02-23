@@ -83,3 +83,118 @@ Top_k: 35
 Top_p: 0.96
 Tokens per shot: 6500
 Tokens per target: 7500
+Processing: dpo
+    Tokens: 8573
+    Decoding took: 75.324 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: full-stack
+    Tokens: 8574
+    Decoding took: 67.722 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: hashing
+    Tokens: 8635
+    Decoding took: 72.599 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: localized_deployment
+    Tokens: 7722
+    Decoding took: 65.62 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: mixtral8x7b
+    Tokens: 8560
+    Decoding took: 72.848 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: mlops_llm_eval
+    Tokens: 8636
+    Decoding took: 69.24 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: react
+    Tokens: 7607
+    Decoding took: 68.813 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: rust
+    Tokens: 7509
+    Decoding took: 68.001 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: sql_backend
+    Tokens: 8529
+    Decoding took: 62.843 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: threads_connections
+    Tokens: 8535
+    Decoding took: 62.076 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: react_svelte
+    Tokens: 8474
+    Decoding took: 66.084 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: typescript_fireship
+    Tokens: 7973
+    Decoding took: 72.48 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: zig
+    Tokens: 7619
+    Decoding took: 61.35 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Global runtime: 886.052 seconds
+
+#####################
+##### Validating outputs ######
+#####################
+File dpo.json errors: 
+
+File full-stack.json errors: 
+
+File hashing.json errors: 
+
+File localized_deployment.json errors: 
+
+File mixtral8x7b.json errors: 
+
+Error in file mlops_llm_eval.json: Type: <class 'json.decoder.JSONDecodeError'> Error: Expecting property name enclosed in double quotes: line 56 column 3 (char 3636)
+File mlops_llm_eval.json errors: 
+
+File react.json errors: 
+
+File rust.json errors: 
+
+Error in file sql_backend.json: Type: <class 'KeyError'> Error: 'general topics'
+File sql_backend.json errors: 
+No general topics field
+Error in file threads_connections.json: Type: <class 'KeyError'> Error: 'general topics'
+File threads_connections.json errors: 
+No general topics field
+Error in file react_svelte.json: Type: <class 'KeyError'> Error: 'general topics'
+File react_svelte.json errors: 
+No general topics field
+Error in file typescript_fireship.json: Type: <class 'KeyError'> Error: 'general topics'
+File typescript_fireship.json errors: 
+No general topics field
+Error in file zig.json: Type: <class 'KeyError'> Error: 'general topics'
+File zig.json errors: 
+No general topics field
+Target: dpo, Hidden states took: 0.289 seconds
+    Target: dpo tensor finished. Wrote to file.
+Target: full-stack, Hidden states took: 0.259 seconds
+    Target: full-stack tensor finished. Wrote to file.
+Target: hashing, Hidden states took: 0.288 seconds
+    Target: hashing tensor finished. Wrote to file.
+Target: localized_deployment, Hidden states took: 0.259 seconds
+    Target: localized_deployment tensor finished. Wrote to file.
+Target: mixtral8x7b, Hidden states took: 0.286 seconds
+    Target: mixtral8x7b tensor finished. Wrote to file.
+Target: mlops_llm_eval, Hidden states took: 0.26 seconds
+    Target: mlops_llm_eval tensor finished. Wrote to file.
+Target: react, Hidden states took: 0.288 seconds
+    Target: react tensor finished. Wrote to file.
+Target: rust, Hidden states took: 0.288 seconds
+    Target: rust tensor finished. Wrote to file.
+Target: sql_backend, Hidden states took: 0.252 seconds
+    Target: sql_backend tensor finished. Wrote to file.
+Target: threads_connections, Hidden states took: 0.251 seconds
+    Target: threads_connections tensor finished. Wrote to file.
+Target: react_svelte, Hidden states took: 0.259 seconds
+    Target: react_svelte tensor finished. Wrote to file.
+Target: typescript_fireship, Hidden states took: 0.288 seconds
+    Target: typescript_fireship tensor finished. Wrote to file.
+Target: zig, Hidden states took: 0.252 seconds
+    Target: zig tensor finished. Wrote to file.

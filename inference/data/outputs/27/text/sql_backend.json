@@ -1,0 +1,70 @@
+{
+  "introduction": "This video discusses the reasons why selecting all columns in a table, commonly referred to as 'select star', can be slow in a row store database engine. The video covers various aspects, including full table scans, deserialization cost, and network cost. It also highlights the importance of understanding the entire stack and backend engineering fundamentals, especially the network aspects, in order to optimize performance.",
+  "sections": [
+    {
+      "title": "Section 1: Understanding Full Table Scans",
+      "content": [
+        "Explanation of how a full table scan works in a row store database engine.",
+        "Discussion on the impact of indexing on performance.",
+        "Comparison between index-only scans and full table scans.",
+        "Examples of common scenarios where full table scans are necessary."
+      ],
+      "topics": ["Full Table Scans", "Indexing", "Index-Only Scans"]
+    },
+    {
+      "title": "Section 2: Deserialization Cost",
+      "content": [
+        "Explanation of deserialization cost in the context of 'select star'.",
+        "Discussion on the impact of deserialization on network performance.",
+        "Comparison between deserialization in different database systems.",
+        "Examples of common scenarios where deserialization is a bottleneck."
+      ],
+      "topics": ["Deserialization Cost", "Network Performance", "Database Systems"]
+    },
+    {
+      "title": "Section 3: Network Cost",
+      "content": [
+        "Explanation of network cost in the context of 'select star'.",
+        "Discussion on the impact of network latency on performance.",
+        "Comparison between network performance in different scenarios.",
+        "Examples of common scenarios where network cost is a bottleneck."
+      ],
+      "topics": ["Network Latency", "Network Performance", "Scenarios"]
+    },
+    {
+      "title": "Section 4: Optimizing Performance",
+      "content": [
+        "Discussion on how to optimize performance in 'select star' scenarios.",
+        "Explanation of techniques for lazy deserialization and client-side caching.",
+        "Comparison between different optimization strategies.",
+        "Examples of common scenarios where optimization is crucial."
+      ],
+      "topics": ["Performance Optimization", "Lazy Deserialization", "Client-Side Caching"]
+    },
+    {
+      "title": "Section 5: Best Practices for 'Select Star'",
+      "content": [
+        "Summary of key takeaways from the video.",
+        "Discussion on best practices for 'select star' scenarios.",
+        "Comparison between different best practices.",
+        "Examples of common scenarios where best practices are essential."
+      ],
+      "topics": ["Key Takeaways", "Best Practices", "Examples"]
+    }
+  ],
+  "topics": ["Full Table Scans", "Deserialization Cost", "Network Cost", "Performance Optimization", "Best Practices"],
+  "generalTopics": [
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.61
+    },
+    {
+      "name": "Programming Languages and Software Development",
+      "complexity": 0.59
+    },
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.59
+    }
+  ]
+}

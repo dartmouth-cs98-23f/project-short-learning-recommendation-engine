@@ -55,7 +55,7 @@ The JSON structure should strictly follow this template:
     ... (total 5 sections)
   ],
   "topics": ["Descriptor1", "Descriptor2", "Descriptor3", "Descriptor4", "Descriptor5"],
-  "general topics": [
+  "generalTopics": [
     {
       "name": "Selected general topic 1",
       "complexity": "Exact complexity float with two decimals"
@@ -64,4 +64,4 @@ The JSON structure should strictly follow this template:
   ]
 }
 
-The output must follow the specified JSON structure, focusing on domain-specific terminology in the "content" sections. Use the previous "Complexity Scale" list when generating "complexity". Use the previous "General Topics" list when generating the "general topics" field. If the video content does not directly match a topic from this list, select the closest related topic available. 
+The output must follow the specified JSON structure, focusing on domain-specific terminology in the "content" sections. Use the previous "Complexity Scale" list when generating "complexity". Use the previous "General Topics" list when generating the "generalTopics" field. If the video content does not directly match a topic from this list, select the closest related topic available. 
