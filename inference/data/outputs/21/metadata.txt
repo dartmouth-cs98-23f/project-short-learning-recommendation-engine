@@ -1,4 +1,12 @@
-General Topics:
+#####################
+###### METADATA ######
+#####################
+
+Model: mistralai/Mistral-7B-Instruct-v0.1
+Time: 1708713596.3312774
+Videos: [['https://www.youtube.com/watch?v=UiX8K-xBUpE', 'UiX8K-xBUpE', 'mixtral8x7b'], ['https://www.youtube.com/watch?v=Xdhe-meS30A', 'Xdhe-meS30A', 'catan'], ['https://www.youtube.com/watch?v=00AQjBDM46Q', '00AQjBDM46Q', 'mlops_llm_eval'], ['https://www.youtube.com/watch?v=5ChkQKUzDCs', '5ChkQKUzDCs', 'typescript_fireship'], ['https://www.youtube.com/watch?v=J0NuOlA2xDc', 'J0NuOlA2xDc', 'localized_deployment'], ['https://www.youtube.com/watch?v=E5kzAbD8D0w', 'E5kzAbD8D0w', 'dpo'], ['https://www.youtube.com/watch?v=wybjsKtA9hI', 'wybjsKtA9hI', 'sql_backend'], ['https://www.youtube.com/watch?v=CZw57SIwgiE', 'CZw57SIwgiE', 'threads_connections'], ['https://www.youtube.com/watch?v=p6wwj0ozifw', 'p6wwj0ozifw', 'hashing'], ['https://www.youtube.com/watch?v=kxT8-C1 vmd4', 'kxT8-C1vmd4', 'zig'], ['https://www.youtube.com/watch?v=5C_HPTJg5ek', '5C_HPTJg5ek', 'rust'], ['https://www.youtube.com/watch?v=HyWYpM_S-2c', 'HyWYpM_S-2c', 'react'], ['https://www.youtube.com/watch?v=MnpuK0MK4yo', 'MnpuK0MK4yo', 'react_svelte'], ['https://www.youtube.com/watch?v=lauywdXKEXI', 'lauywdXKEXI', 'full-stack']]
+Shots: ['mixtral8x7b', 'full-stack']
+Prompt: General Topics:
 [
   "Algorithms and Data Structures",
   "Artificial Intelligence (AI) and Machine Learning",
@@ -43,7 +51,7 @@ The JSON structure should strictly follow this template:
   "introduction": "High level synopsis here",
   "sections": [
     {
-      "title": "Section 1",
+      "title": "Section 1: ...",
       "content": [
         "Bullet point 1",
         "Bullet point 2",
@@ -58,10 +66,27 @@ The JSON structure should strictly follow this template:
   "general topics": [
     {
       "name": "Selected general topic 1",
-      "complexity": "Exact complexity float with two decimals"
+      "complexity": "Exact complexity float"
     },
     ... (total 3 general topics)
   ]
 }
 
 Please adhere strictly to the JSON format. Use domain-specific terminology in the "title" and "content" for each section. The "topics" and "general topics" should accurately reflect the video's content based on the predefined lists and complexity scale. The output should conclude with a '}' character to end the json above.
+
+
+
+###################
+###### INFERENCE ######
+###################
+Temperature: 0.5
+Top_k: 35
+Top_p: 0.96
+
+
+###################
+###### INFERENCE ######
+###################
+Temperature: 0.5
+Top_k: 35
+Top_p: 0.96

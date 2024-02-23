@@ -1,0 +1,70 @@
+{
+"introduction": "In this video, we will be discussing building a job board app that can be used as a real startup. We will start with an MVP that consists of a single data feed from a job board API. We will use React, Material UI, and Node.js with Redis for data storage. We will also use a cron job to fetch jobs and refresh them at a certain interval. The app will filter down jobs to get only junior software engineer positions.",
+"sections": [
+{
+"title": "Section 1: Setting up the project",
+"content": [
+"Install Node.js and npm",
+"Create a new directory for the project",
+"Initialize a new Node.js project",
+"Install necessary dependencies"
+],
+"topics": ["Node.js", "npm", "Dependency management"]
+},
+{
+"title": "Section 2: Building the frontend",
+"content": [
+"Create a new React app using create-react-app",
+"Install Material UI for styling",
+"Set up components for the job list and job details",
+"Implement pagination for large job lists"
+],
+"topics": ["React", "Material UI", "Component development", "Pagination"]
+},
+{
+"title": "Section 3: Implementing the backend",
+"content": [
+"Set up an Express server",
+"Connect to Redis for data storage",
+"Implement the cron job for fetching jobs",
+"Filter down jobs to get only junior software engineer positions"
+],
+"topics": ["Express", "Redis", "Cron jobs", "Job filtering"]
+},
+{
+"title": "Section 4: Deploying the app",
+"content": [
+"Set up a domain name and hosting",
+"Configure Nginx as a reverse proxy",
+"Install PM2 for process management",
+"Deploy the app to a server"
+],
+"topics": ["Domain name", "Hosting", "Nginx", "PM2"]
+},
+{
+"title": "Section 5: Improving the app",
+"content": [
+"Add more data feeds for job listings",
+"Implement a more advanced job filtering algorithm",
+"Add monitoring and logging for better performance",
+"Improve the UI/UX for a better user experience"
+],
+"topics": ["Data feed integration", "Job filtering algorithm", "Monitoring and logging", "UI/UX improvement"]
+}
+],
+"topics": ["Job board app", "MVP", "React", "Material UI", "Node.js", "Redis", "Cron jobs", "Domain name", "Hosting", "Nginx", "PM2"],
+"general topics": [
+{
+"name": "Web Development",
+"complexity": 0.69
+},
+{
+"name": "Database Systems",
+"complexity": 0.50
+},
+{
+"name": "Programming Languages",
+"complexity": 0.70
+}
+]
+}

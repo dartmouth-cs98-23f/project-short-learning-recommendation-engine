@@ -1,0 +1,94 @@
+{
+"introduction": "This video provides an introduction to Direct Preference Optimization (DPO), a type of reinforcement learning that moves the probabilities of a language model away from bad answers and towards good answers. DPO is more efficient than traditional techniques and is useful in aligning language models with commercial models. The video demonstrates DPO using the Tiny Lama 1 billion model and provides a step-by-step guide on how to train a model using the Hugging Face Trainer.",
+"sections": [
+{
+"title": "Section 1: Setting up the Environment",
+"content": [
+"Connecting with Hugging Face",
+"Logging in with weights and biases",
+"Installing necessary packages",
+"Loading the model"
+],
+"topics": [
+"Hugging Face",
+"weights and biases",
+"packages",
+"model loading"
+]
+},
+{
+"title": "Section 2: Preparing the Data Set",
+"content": [
+"Loading the data set",
+"Defining the prompt and rejected answer",
+"Selecting the data set for evaluation"
+],
+"topics": [
+"data set",
+"prompt",
+"rejected answer",
+"evaluation"
+]
+},
+{
+"title": "Section 3: Training the Model",
+"content": [
+"Initializing the trainer",
+"Training the model",
+"Evaluating the model"
+],
+"topics": [
+"trainer",
+"training",
+"evaluation"
+]
+},
+{
+"title": "Section 4: Fine-Tuning the Model",
+"content": [
+"Loading the tokenizer",
+"Loading the model to Hugging Face",
+"Pushing the tokenizer to Hugging Face"
+],
+"topics": [
+"tokenizer",
+"model to Hugging Face",
+"pushing to Hugging Face"
+]
+},
+{
+"title": "Section 5: Conclusion",
+"content": [
+"Summary of the training process",
+"Discussion of the results",
+"Future directions"
+],
+"topics": [
+"training process",
+"results",
+"future directions"
+]
+}
+],
+"topics": [
+"Direct Preference Optimization",
+"language models",
+"commercial models",
+"reinforcement learning",
+"Hugging Face"
+],
+"general topics": [
+{
+"name": "Language Models",
+"complexity": "0.50"
+},
+{
+"name": "Commercial Models",
+"complexity": "0.50"
+},
+{
+"name": "Reinforcement Learning",
+"complexity": "0.50"
+}
+]
+}

@@ -1,0 +1,91 @@
+{
+"introduction": "In this episode of the backend engineering show, the host discusses distributed hashing and its problems, as well as the concept of consistent hashing and its potential solutions. The episode covers the basics of hashing, the limitations of traditional hashing in a distributed system, and the benefits and drawbacks of consistent hashing. The host also touches on the importance of redundancy and replication in distributed systems.",
+"sections": [
+{
+"title": "Section 1: Introduction to Hashing",
+"content": [
+"Explanation of hashing and its use in data storage and retrieval",
+"Discussion of the array position-based hashing approach and its limitations",
+"Brief overview of consistent hashing"
+],
+"topics": [
+"Hashing basics",
+"Array position-based hashing",
+"Consistent hashing"
+]
+},
+{
+"title": "Section 2: Traditional Hashing in a Distributed System",
+"content": [
+"Explanation of the limitations of traditional hashing in a distributed system",
+"Discussion of the problems caused by resizing a hash table",
+"Example of a distributed system with four servers"
+],
+"topics": [
+"Traditional hashing in a distributed system",
+"Resizing a hash table",
+"Problems with distributed systems"
+]
+},
+{
+"title": "Section 3: Consistent Hashing",
+"content": [
+"Explanation of consistent hashing and its benefits",
+"Discussion of the ring-based approach to consistent hashing",
+"Example of a consistent hashing system with a ring"
+],
+"topics": [
+"Consistent hashing",
+"Ring-based approach",
+"Example of a consistent hashing system"
+]
+},
+{
+"title": "Section 4: Redundancy and Replication in Distributed Systems",
+"content": [
+"Explanation of the importance of redundancy and replication in distributed systems",
+"Discussion of the need for backup servers",
+"Example of a backup scenario in a distributed system"
+],
+"topics": [
+"Redundancy in distributed systems",
+"Replication in distributed systems",
+"Backup scenario"
+]
+},
+{
+"title": "Section 5: Conclusion",
+"content": [
+"Summary of the main points covered in the episode",
+"Discussion of the potential limitations of consistent hashing",
+"Final thoughts on the importance of consistent hashing"
+],
+"topics": [
+"Summary of the episode",
+"Limitations of consistent hashing",
+"Final thoughts"
+]
+}
+],
+"topics": [
+"Hashing",
+"Distributed systems",
+"Consistent hashing",
+"Redundancy",
+"Replication"
+],
+"general topics": [
+{
+"name": "Hashing",
+"complexity": "High School"
+},
+{
+"name": "Distributed systems",
+"complexity": "Advanced High School"
+},
+{
+"name": "Consistent hashing",
+"complexity": "Introductory College"
+}
+]
+}

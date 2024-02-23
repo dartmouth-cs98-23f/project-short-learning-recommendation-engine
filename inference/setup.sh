@@ -2,7 +2,6 @@ pip install torch==2.2.0
 python3 -m pip install --upgrade pip
 python -m pip install pika --upgrade
 sudo apt install libcairo2-dev pkg-config python3-dev
-y
 pip install -r requirements.txt
 sudo systemctl daemon-reload
 sudo systemctl restart docker

@@ -1,0 +1,77 @@
+{
+"introduction": "Building a job board app as a real startup",
+"sections": [
+{
+"title": "Section 1: Setting up the front end",
+"content": [
+"Creating a React app with Material UI",
+"Installing dependencies",
+"Designing the UI components"
+],
+"topics": ["React", "Material UI", "UI Design"]
+}
+,
+{
+"title": "Section 2: Setting up the backend",
+"content": [
+"Creating an Express server with Redis",
+"Implementing a Cron job",
+"Designing the API endpoints"
+],
+"topics": ["Express", "Redis", "API Design"]
+}
+,
+{
+"title": "Section 3: Filtering job listings",
+"content": [
+"Implementing an algorithm to filter jobs",
+"Testing the algorithm",
+"Optimizing the algorithm"
+],
+"topics": ["Algorithm", "Testing", "Optimization"]
+}
+,
+{
+"title": "Section 4: Deploying the app",
+"content": [
+"Setting up a production environment",
+"Deploying the app to a server",
+"Configuring the server and domain"
+],
+"topics": ["Production Environment", "Server Configuration", "Domain Configuration"]
+}
+,
+{
+"title": "Section 5: Monitoring and maintenance",
+"content": [
+"Setting up monitoring and logging",
+"Maintaining the app and updating dependencies",
+"Scaling the app for future growth"
+],
+"topics": ["Monitoring", "Logging", "App Maintenance", "Dependency Management", "Scaling"]
+}
+],
+"topics": ["Job Board", "Startup", "React", "Express", "Redis", "Algorithm", "Filtering", "Production Environment", "Monitoring", "Logging", "App Maintenance", "Dependency Management", "Scaling"],
+"general topics": [
+{
+"name": "React",
+"complexity": 0.59
+},
+{
+"name": "Express",
+"complexity": 0.59
+},
+{
+"name": "Redis",
+"complexity": 0.59
+},
+{
+"name": "Algorithm",
+"complexity": 0.59
+},
+{
+"name": "Filtering",
+"complexity": 0.59
+}
+]
+}

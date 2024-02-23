@@ -1,0 +1,65 @@
+{
+"introduction": "Mistral: An In-Depth Look at the Architecture, Sliding Window Attention, and Model Sharding",
+"sections": [
+{
+"title": "Section 1: Introduction to Mistral",
+"content": [
+"Mistral is a new language model from Mistal AI, a hot startup in Europe for AI and language models.",
+"The 7 billion and 8 billion models are architectural differences in terms of the number of parameters and computational complexity.",
+"The vanilla transformer is the basis for Mistral's architecture."
+],
+"topics": ["Mistral", "Vanilla Transformer", "Architecture"]
+},
+{
+"title": "Section 2: Sliding Window Attention",
+"content": [
+"Sliding window attention is a concept related to the receptive field in convolutional neural networks.",
+"In the context of Mistral, the output of the self-attention mechanism is a matrix with the same shape as the query matrix.",
+"Each token in the output matrix captures information about other tokens according to the mask."
+],
+"topics": ["Sliding Window Attention", "Receptive Field", "Mask"]
+},
+{
+"title": "Section 3: K-Cache and Chunking",
+"content": [
+"K-Cache is a technique used to reduce computations when generating text using a language model.",
+"Chunking is another technique used to divide the input sequence into smaller chunks for more efficient processing.",
+"Pre-filling and chunking are used together to improve the efficiency of the K-Cache."
+],
+"topics": ["K-Cache", "Chunking", "Pre-filling"]
+},
+{
+"title": "Section 4: Sparse Mixture of Experts Model Sharding",
+"content": [
+"Sparse Mixture of Experts is a technique used to improve the performance of language models by combining the predictions of multiple experts.",
+"Model sharding is a technique used to divide a large model into smaller, more manageable parts.",
+"Sparse Mixture of Experts and Model Sharding are combined in Mistral."
+],
+"topics": ["Sparse Mixture of Experts", "Model Sharding", "Combination"]
+},
+{
+"title": "Section 5: Pipeline Parallelism and Xformers",
+"content": [
+"Pipeline parallelism is a technique used to parallelize the processing of a model across multiple GPUs.",
+"Xformers is a variant of the transformer model that uses more efficient computations.",
+"Mistral uses both pipeline parallelism and Xformers for improved performance."
+],
+"topics": ["Pipeline Parallelism", "Xformers", "Improved Performance"]
+}
+],
+"topics": ["Architecture", "Sliding Window Attention", "K-Cache", "Sparse Mixture of Experts", "Model Sharding", "Pipeline Parallelism", "Xformers"],
+"general topics": [
+{
+"name": "Language Models",
+"complexity": 1.00
+},
+{
+"name": "Artificial Intelligence",
+"complexity": 1.00
+},
+{
+"name": "Deep Learning",
+"complexity": 1.00
+}
+]
+}

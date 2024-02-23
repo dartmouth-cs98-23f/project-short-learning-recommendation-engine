@@ -1,0 +1,65 @@
+{
+"introduction": "In this video, we explore the architecture of the Mistral language model and its key features such as sliding window attention, kv cache, chunking, and model sharding.",
+"sections": [
+{
+"title": "Section 1: Architecture of Mistral",
+"content": [
+"Mistral is a transformer-based language model with a sliding window attention mechanism.",
+"The output of the self attention mechanism is another matrix with the same shape as the query matrix, where each token captures information about other tokens according to the mask.",
+"The kv cache allows for reducing computations by only producing one output at a time."
+],
+"topics": ["Sliding window attention", "KV cache", "Transformer architecture"]
+},
+{
+"title": "Section 2: Sliding Window Attention",
+"content": [
+"Sliding window attention is a technique used to capture information about other tokens in the input sequence according to the mask.",
+"The output of the self attention mechanism is a matrix with the same shape as the query matrix, where each token captures information about other tokens.",
+"The kv cache is used to reduce computations by only producing one output at a time."
+],
+"topics": ["Sliding window attention", "KV cache", "Transformer architecture"]
+},
+{
+"title": "Section 3: Chunking and Prefilling",
+"content": [
+"Chunking is a technique used to divide the input sequence into smaller chunks for processing.",
+"Prefilling is a technique used to preprocess the input sequence by adding tokens to the kv cache before they are needed.",
+"The softmax is applied after selecting the logits of the best two performing experts to ensure the weighted sum of the outputs is always one."
+],
+"topics": ["Chunking", "Prefilling", "Softmax"]
+},
+{
+"title": "Section 4: Model Sharding",
+"content": [
+"Model sharding is a technique used to divide the language model into smaller parts for processing on multiple GPUs.",
+"The model is divided into groups of layers, and each group is processed on a separate GPU.",
+"The kv cache is used to combine all the tokens of the input sequence into one big sequence, and the actual size of each prompt is tracked for efficient processing."
+],
+"topics": ["Model sharding", "KV cache", "Transformer architecture"]
+},
+{
+"title": "Section 5: Innovations in Mistral",
+"content": [
+"Mistral uses the xFOR transformer architecture, which is an extension of the vanilla transformer.",
+"The model uses the xFOR architecture to improve performance and efficiency.",
+"The model also uses the xFOR architecture to enable parallel processing on multiple GPUs."
+],
+"topics": ["xFOR transformer architecture", "Parallel processing", "Innovations in Mistral"]
+}
+],
+"topics": ["Mistral architecture", "Transformer architecture", "Language modeling"],
+"general topics": [
+{
+"name": "Language modeling",
+"complexity": "4.90"
+},
+{
+"name": "Transformer architecture",
+"complexity": "4.90"
+},
+{
+"name": "Mistral architecture",
+"complexity": "5.00"
+}
+]
+}
