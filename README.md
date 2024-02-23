@@ -22,6 +22,7 @@ pip install -r requirements.txt
 # or manually
 pip install "fastapi[all]"
 pip install pinecone-client
+pip install algoliasearch
 ```
 
 > [!IMPORTANT]
