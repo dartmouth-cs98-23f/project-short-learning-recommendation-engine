@@ -36,7 +36,7 @@ Generate a JSON summary the computer science or software engineering video. The 
    - A "content" field containing 4 bullet points summarizing the section.
    - A "topics" field listing the 3 most important topics covered in the section.
 3. A global "topics" array listing 5 key descriptors (1-2 words each) of topics covered in the video.
-4. A global "general topics" array selecting 3 topics from the predefined list, each associated with an exact "complexity" score based on the provided scale. The complexity score should reflect the detailed complexity level with full two-decimal-place precision.
+4. A global "generalTopics" array selecting 3 topics from the "General Topics", each associated with an exact "complexity" score based on the "Complexity Scale". The complexity score should reflect the detailed complexity level with full two-decimal-place precision.
 
 The JSON structure should strictly follow this template:
 {

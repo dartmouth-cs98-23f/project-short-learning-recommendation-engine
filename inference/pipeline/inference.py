@@ -15,6 +15,44 @@ prompt_path = "../data/prompts/prompt.txt"
 oneshots_dir = "../data/oneshots"
 dotenv.load_dotenv(dotenv_path="../env")
 
+def vectorize_pipeline(doc, device, model, tokenizer):
+    ## Setup Config
+    with open('../config/videos.json') as config_file:
+        videos = json.load(config_file)
+    with open('../config/name_to_url.json') as config_file:
+        name_to_url = json.load(config_file)
+    
+    folder_no = doc["_id"]
+    print(f"Folder Number: {folder_no}")
+    if os.path.exists(f'../data/technigala/{folder_no}'):
+        print(f"Folder {folder_no} already exists. Skipping...")
+        return
+    os.makedirs(f'../data/technigala/{folder_no}', exist_ok=True)
+    outputs_dir = f'../data/technigala/{folder_no}'
+    prompt = open(prompt_path, "r").read()
+    shots = ["mixtral8x7b", "full-stack"]
+
+    youtube_id = doc["youtubeURL"].split('=')[-1]
+    download_transcript(youtube_id, f'{outputs_dir}/raw_transcript.txt')
+    process_transcript(outputs_dir)
+
+    # Load models
+    # Write some metadata
+    with open(f'{outputs_dir}/metadata.txt', 'a') as f:
+        if os.stat(f'{outputs_dir}/metadata.txt').st_size == 0:
+            f.write(f"#####################\n###### METADATA ######\n#####################\n\n")
+            f.write(f"Model: mistralai/Mistral-7B-Instruct-v0.1\n")
+            f.write(f"Time: {time.time()}\n")
+            f.write(f"Videos: {videos}\n")
+            f.write(f"Shots: {shots}\n")
+            f.write(f"Prompt: {prompt}\n")
+    
+    target = doc["title"]
+    # Run Inference
+    run_inference(model, outputs_dir, shots, tokenizer, device, prompt, target)
+    create_embeddings(outputs_dir, tokenizer, model, device, target)
+    upload_to_pinecone(outputs_dir, doc, target)
+
 def abridge_transcript(transcript: str, chars: int) -> str:
     """ Abridge a transcript to a certain number of characters
     Args:
@@ -45,7 +83,6 @@ def abridge_transcript(transcript: str, chars: int) -> str:
     output_transcript += transcript[-int(chars*0.2):]
     return output_transcript
 
-
 def build_message(shots: list, transcript, prompt, shots_char_limit: int, input_char_limit: int) -> list:
     """ Build a message for the model to generate from.
     Args:
@@ -73,50 +110,6 @@ def build_message(shots: list, transcript, prompt, shots_char_limit: int, input_
 
     return messages
 
-def vectorize_pipeline(doc):
-    ## Setup Config
-    with open('../config/videos.json') as config_file:
-        videos = json.load(config_file)
-    with open('../config/name_to_url.json') as config_file:
-        name_to_url = json.load(config_file)
-    
-    folder_no = doc["_id"]
-    print(f"Folder Number: {folder_no}")
-    if os.path.exists(f'../data/technigala/{folder_no}'):
-        print(f"Folder {folder_no} already exists. Skipping...")
-        return
-    os.makedirs(f'../data/technigala/{folder_no}', exist_ok=True)
-    outputs_dir = f'../data/technigala/{folder_no}'
-    prompt = open(prompt_path, "r").read()
-    shots = ["mixtral8x7b", "full-stack"]
-
-    youtube_id = doc["youtubeURL"].split('=')[-1]
-    download_transcript(youtube_id, f'{outputs_dir}/raw_transcript.txt')
-    process_transcript(outputs_dir)
-
-    # Load models
-    torch.cuda.empty_cache()
-    device = "cuda:0" if torch.cuda.is_available() else "cpu"
-    tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.1")
-    model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-Instruct-v0.1", torch_dtype=torch.float16, attn_implementation="flash_attention_2").to(device)
-
-    # Write some metadata
-    with open(f'{outputs_dir}/metadata.txt', 'a') as f:
-        if os.stat(f'{outputs_dir}/metadata.txt').st_size == 0:
-            f.write(f"#####################\n###### METADATA ######\n#####################\n\n")
-            f.write(f"Model: mistralai/Mistral-7B-Instruct-v0.1\n")
-            f.write(f"Time: {time.time()}\n")
-            f.write(f"Videos: {videos}\n")
-            f.write(f"Shots: {shots}\n")
-            f.write(f"Prompt: {prompt}\n")
-    
-    target = doc["title"]
-    # Run Inference
-    run_inference(model, outputs_dir, shots, tokenizer, device, prompt, target)
-    create_embeddings(outputs_dir, tokenizer, model, device, target)
-    upload_to_pinecone(outputs_dir, name_to_url, doc, target)
-    
-
 def run_inference(model, outputs_dir, shots, tokenizer, device, prompt, target):
     """ Run inference on the model
     Args:
@@ -127,14 +120,14 @@ def run_inference(model, outputs_dir, shots, tokenizer, device, prompt, target):
     """
 
     metadata = open(f'{outputs_dir}/metadata.txt', 'a')
-    metadata.write(f"\n\n###################\n###### INFERENCE ######\n###################\n")
     temperature = 0.5
     top_k = 35
     top_p = 0.96
-    tokens_shot = 6500
-    tokens_target = 7500
-
+    tokens_shot = 5000
+    tokens_target = 6500
+    metadata.write(f"\n\n###################\n###### INFERENCE ######\n###################\n")
     metadata.write(f"Temperature: {temperature}\nTop_k: {top_k}\nTop_p: {top_p}\nTokens per shot: {tokens_shot}\nTokens per target: {tokens_target}\n")
+
     metadata.close()
     metadata = open(f'{outputs_dir}/metadata.txt', 'a')
 
@@ -196,8 +189,8 @@ def create_embeddings(outputs_dir, tokenizer, model, device, target):
     max_pool = torch.nn.functional.max_pool1d(tensor_t, tensor_t.shape[2]).transpose(1, 2).squeeze()
     avg_pool = torch.nn.functional.avg_pool1d(tensor_t, tensor_t.shape[2]).transpose(1, 2).squeeze()
     print(max_pool.shape)
-    torch.save(max_pool, f'{outputs_dir}/max_{target}.pt')
-    torch.save(avg_pool, f'{outputs_dir}/avg_{target}.pt')
+    torch.save(max_pool, f'{outputs_dir}/max_vector.pt')
+    torch.save(avg_pool, f'{outputs_dir}/avg_vector.pt')
 
     print(f'Target: {target} finished. Wrote to file.')
     metadata.write(f'    Target: {target} tensor finished. Wrote to file.\n')
@@ -212,13 +205,13 @@ def create_embeddings(outputs_dir, tokenizer, model, device, target):
 
     metadata.close()
 
-def upload_to_pinecone(outputs_dir, name_to_url, doc, target):
+def upload_to_pinecone(outputs_dir, doc, target):
     pc = Pinecone(api_key=os.environ["PINECONE_KEY"])
     index = pc.Index(os.environ["PINECONE_INDEX"])
     
     # Prepare embeddings for upload
     mode = "max"
-    embedding_file = f'{mode}_{target}.pt'
+    embedding_file = f'{mode}_vector.pt'
     vectors = []
 
     name = embedding_file[4:-3]
@@ -228,6 +221,10 @@ def upload_to_pinecone(outputs_dir, name_to_url, doc, target):
     print(f'Loaded {name}, metadata: {metadata}')
     del tensor
     index.upsert(vectors=vectors)
+
+    metadata = open(f'{outputs_dir}/metadata.txt', 'a')
+    metadata.write(f'    Uploaded {name} to Pinecone\n')
+    metadata.close()
 
     torch.cuda.empty_cache()
 
@@ -242,6 +239,10 @@ def process_transcript(output_dir):
                 line = re.sub(pattern, '', line)
                 line = line.replace("'", "")
                 line = line.replace('"', "")
+                ## if last char is a space, remove
+                if line[-1] == " ":
+                    line = line[:-1]
+                line = line.replace("  ", " ")
                 line = line.replace('\n', ' ')
                 file_clean.write(line)
         
