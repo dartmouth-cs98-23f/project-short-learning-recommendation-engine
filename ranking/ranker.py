@@ -31,8 +31,15 @@ class VideoRanker:
         payload = { "user_id": user_id }
         res = requests.get(endpoint, json=payload)
         
+        res = res.json()
+        
         if self.debug:
-            print(f"GET USER AFFINITIES: {user_id} -> {res.json() = }")
+            print(f"GET USER AFFINITIES: {user_id} -> {res}")
+            
+        if res.get("error"):
+            print(f"ERROR: {res['error']}")
+            return {}
+            
         return res.json()
 
     
@@ -48,14 +55,14 @@ class VideoRanker:
             """
                 set new weight as distance (positive is better)
             """
-            video.weight = video.score + affinities.get(video.topic, 0)
+            video["weight"] = video.get("score", 0) + affinities.get(video["topic"], 0)
             
-        #? rearrange based on weights
-        videos.sort(key=lambda x: x.weight)
+        #? rearrange based on weights (higher is better)
+        videos.sort(key=lambda x: x.get("weight", 0), reverse=True)
         
         return videos
 
 if __name__ == "__main__":
-    ranker = VideoRanker()
+    ranker = VideoRanker(debug=True)
     print(ranker.get_user_affinities("user_1"))
-    print(ranker.rank_videos([{"topic": "Python", "score": 0.5}, {"topic": "Python", "score": 0.7}], "user_1"))
+    print(ranker.rank_videos([{"topic": "Python", "score": 0.5}, {"topic": "Java", "score": 0.7}], "user_1"))
