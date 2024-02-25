@@ -230,8 +230,8 @@ def upload_embeddings():
         max_pool = torch.load(f'{OUTPUT_DIR}/outputs/{current_doc["_id"]}/max_pool.pt').to('cpu').numpy().tolist()
         avg_pool = torch.load(f'{OUTPUT_DIR}/outputs/{current_doc["_id"]}/avg_pool.pt').to('cpu').numpy().tolist()
 
-        metadata_max = {"type": "max_pool", "title": current_doc["title"], "topics": current_doc["topics"]}
-        metadata_avg = {"type": "avg_pool", "title": current_doc["title"], "topics": current_doc["topics"]}
+        metadata_max = {"type": "max_pool", "title": current_doc["title"], "topics": current_doc["topics"], "videoID": current_doc["_id"]}
+        metadata_avg = {"type": "avg_pool", "title": current_doc["title"], "topics": current_doc["topics"], "videoID": current_doc["_id"]}
         vectors = [
             {"id": current_doc["_id"], "values": max_pool, "metadata": metadata_max},
             {"id": current_doc["_id"], "values": avg_pool, "metadata": metadata_avg}
