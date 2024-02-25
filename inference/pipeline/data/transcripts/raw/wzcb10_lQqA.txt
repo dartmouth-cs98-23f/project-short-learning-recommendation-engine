@@ -1,0 +1,78 @@
+second,duration,transcript
+0.0,4.02,if you're newer to nosql databases and
+2.52,4.7,want to learn more about what they are
+4.02,3.2,this video is for you
+7.859,4.141,welcome back to our Channel I'm Megan
+9.66,4.62,from mongodb's developer relations team
+12.0,4.74,here at mongodb we talk a lot about
+14.28,4.86,nosql databases because that's what we
+16.74,4.98,are but what does that even mean nosql
+19.14,4.979,is technically an umbrella term for any
+21.72,5.639,alternative system to traditional SQL
+24.119,4.861,databases nosql databases use a data
+27.359,3.42,model that has a different structure
+28.98,4.5,than the rows and columns table
+30.779,4.861,structure used with rdbms now within
+33.48,4.919,nosql databases there are actually four
+35.64,5.4,types document databases key value
+38.399,4.741,stores column oriented databases and
+41.04,3.839,graph databases let's talk about each of
+43.14,4.079,these in a little more detail first up
+44.879,5.281,we've got document databases a document
+47.219,6.241,database like mongodb for example stores
+50.16,5.579,data in a Json or bson format you can
+53.46,4.32,access store and retrieve documents from
+55.739,4.381,your database in a form that is much
+57.78,4.259,closer to the data objects used in
+60.12,4.079,applications this means that less
+62.039,4.62,translation is required to use and
+64.199,4.681,access data in an application document
+66.659,4.261,databases are popular with developers
+68.88,4.02,because they offer the flexibility to
+70.92,3.9,rework their document structures as
+72.9,5.46,needed to better suit their applications
+74.82,6.18,in SQL databases however intervention by
+78.36,4.38,database administrators may be required
+81.0,4.08,to change the structure of a database
+82.74,4.559,next we have key value stores and this
+85.08,4.5,is the simplest type of nosql database
+87.299,4.86,every element is stored as a key value
+89.58,5.28,pair consisting of an attribute name or
+92.159,5.401,the key and a value this database is
+94.86,4.86,like an rdbms with two columns the
+97.56,4.68,attribute name such as state and the
+99.72,5.579,value such as Alaska third we have
+102.24,5.58,column oriented databases while an rdbms
+105.299,4.801,stores data in rows and reads it row by
+107.82,4.619,row column oriented databases are
+110.1,4.14,organized as a set of columns when you
+112.439,3.96,want to run analytics on a small number
+114.24,4.14,of columns in a database you can read
+116.399,4.381,those columns directly without consuming
+118.38,4.68,memory with unwanted data finally we
+120.78,4.86,have graph databases a graph database
+123.06,4.62,focuses on the relationship between data
+125.64,4.44,elements each element is contained as an
+127.68,4.199,node the connections between elements in
+130.08,4.14,a database are called links or
+131.879,4.681,relationships connections are first
+134.22,4.98,class elements of the database stored
+136.56,4.2,directly these databases are diverse in
+139.2,4.02,their data formats and applications
+140.76,4.979,furthermore systems store data in
+143.22,4.32,different ways these differ from rdbms
+145.739,3.601,in that they can be schema agnostic
+147.54,4.02,which allows unstructured and
+149.34,4.2,semi-structured data in a network to be
+151.56,3.6,stored and processed this was just the
+153.54,3.36,tip of the iceberg and we've got a whole
+155.16,3.299,lot more where that came from in the
+156.9,3.479,description below we're leaving a few
+158.459,3.541,more links to other videos and articles
+160.379,3.121,that you might find helpful if you're
+162.0,3.54,still here it's because you found this
+163.5,4.019,video valuable and we'd be very grateful
+165.54,4.199,if you could give it a thumbs up if you
+167.519,3.72,haven't already be sure to subscribe to
+169.739,4.941,our channel so you never miss our
+171.239,3.441,content and we'll see you next time

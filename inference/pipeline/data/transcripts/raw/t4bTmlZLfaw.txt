@@ -1,0 +1,145 @@
+second,duration,transcript
+2.23,14.61,[Music]
+13.63,6.39,welcome to the lecture ten and the final
+16.84,5.849,lecture in the our module of the course
+20.02,4.62,data science for engineers in the
+22.689,4.051,previous lectures we have seen what are
+24.64,5.969,the basic data types that are supported
+26.74,6.12,by our how to write scripts how to write
+30.609,4.321,functions and how to do control
+32.86,5.46,structures how to do programming and so
+34.93,6.03,on in this lecture we are going to show
+38.32,4.8,you how to generate some basic graphic
+40.96,6.27,such as scatter plot line plot and bar
+43.12,7.23,plot using Earth and will also give a
+47.23,6.149,brief idea on why there is a need for
+50.35,5.22,more sophisticated graphics and how R
+53.379,6.151,does it first we will consider scatter
+55.57,6.809,plot scatter plot is one of the most
+59.53,4.89,widely used Lots where we have some
+62.379,4.471,independent variable and dependent
+64.42,6.03,variable when you want to see how a
+66.85,5.82,dependent variable is dependent on the
+70.45,5.52,independent variable you can use scatter
+72.67,6.96,plot generating the scatter plot in R is
+75.97,8.07,quite simple the first command here
+79.63,7.919,shows it is creating a vector which is
+84.04,7.369,having the elements from 1 to 10 and the
+87.549,7.5,next command here takes this X and
+91.409,8.231,calculates the element wise square of
+95.049,9.6,the X and then assign it to value y when
+99.64,8.759,you plot y it will generate this plot
+104.649,8.061,here since we haven't specified what is
+108.399,7.351,X which is independent variable R
+112.71,6.43,generates its own independent variable
+115.75,6.39,as the index since this vector contains
+119.14,4.589,10 elements it will create the index
+122.14,5.79,based on the number of elements in the
+123.729,7.501,vector and then the by values which are
+127.93,9.809,the squares of elements 1 to 10 that are
+131.23,8.76,1 4 9 and so on are shown in the y axis
+137.739,6.001,and 10 square is hundred
+139.99,6.93,final value here on the y axis as 100
+143.74,5.82,let us illustrate the scatterplot using
+146.92,6.99,some inbuilt data set that is available
+149.56,7.98,in I so we are talking about a data set
+153.91,6.36,by name empty cars so you can access
+157.54,5.7,this data set by just typing empty cars
+160.27,6.03,this data set is a data frame which
+163.24,7.32,contains 32 observations on 11 variables
+166.3,7.41,the variables are listed here such as
+170.56,8.4,number of cylinders which is represented
+173.71,9.15,by variable c YN + MPG what is the -
+178.96,8.61,that this cars gives that is miles per
+182.86,9.23,US gallon and weight WD which is weight
+187.57,7.88,of the car and so on now let us try to
+192.09,9.46,plot a scatter plot between weight and
+195.45,9.01,mpg of this data frame to do that what
+201.55,5.88,we need to use is plot command this is
+204.46,6.09,your independent variable car weight
+207.43,6.93,this is your dependent variable miles
+210.55,7.67,per gallon and this main helps in naming
+214.36,7.8,the title of the graph X lab to give a
+218.22,7.84,label for x-axis y lab is used to give a
+222.16,5.97,label for y axis and this PCH
+226.06,5.52,corresponds to different shapes for
+228.13,5.97,points and speciation is called 19
+231.58,4.86,corresponds to thee the shape that is
+234.1,4.56,shown in this screen you can use
+236.44,5.15,different PCH values to obtain different
+238.66,6.51,shapes for the points in a scatter plot
+241.59,5.31,next we move the line plot we can take
+245.17,4.58,same example what we have seen earlier
+246.9,6.19,if the same plot command can be used
+249.75,6.16,what you need to do to generate a line
+253.09,6.57,plot is to specify an extra argument
+255.91,7.08,type which is yelling so type is equal
+259.66,6.3,to L generates a line instead of the
+262.99,5.85,scatter plot next we move on to the bar
+265.96,6.479,plot the syntax to generate bar plot and
+268.84,7.229,R is as follows bar not
+272.439,6.99,of H these are the heights which can be
+276.069,5.4,a vector and Matt assists to keep it
+279.429,6.75,simple we'll deal with only letters and
+281.469,7.861,names that argument what this argument
+286.179,7.32,does is it will print the names under
+289.33,6.179,the each attribute in the H X lab and my
+293.499,3.84,lab and main has the same meanings as
+295.509,5.64,what we have seen for the scatterplot
+297.339,7.2,and color gives us an option to give
+301.149,5.76,color to the bar plot this is the R code
+304.539,6.03,that can be used to generate them but
+306.909,6.69,not I want to define H heights of the
+310.569,8.88,bar codes as a vector which is having
+313.599,7.68,the values 712 28 3 and 41 and I want to
+319.449,4.351,create another vector which is a
+321.279,6.21,character variable which is having the
+323.8,5.369,values March April May June and July and
+327.489,5.22,now I am trying to create a bath lot
+329.169,7.95,with HS heights and name start arguments
+332.709,6.66,SEM X lab as month while I best Avenue
+337.119,6.39,and the color of the bar notes I want is
+339.369,7.92,blue and the title is revenue chart and
+343.509,5.851,the border is red so when you execute
+347.289,4.321,these commands this is how the bar plot
+349.36,6.959,looks these are the heights of the bar
+351.61,6.719,charts this is the 3 ok and then in the
+356.319,5.43,names that are variable we have March
+358.329,7.26,April May June and July which is printed
+361.749,6.57,at the bottom of each height and the
+365.589,5.25,x-axis is month y-axis is revenue and
+368.319,4.14,the title is lemon nature now let us see
+370.839,3.9,why there is a need for sophisticated
+372.459,4.77,graphics let us say there is a need for
+374.739,5.19,you to show multiple plots in a single
+377.229,5.45,figure as shown below how do you do this
+379.929,6.0,what are the challenges that you face
+382.679,7.57,when you want to create figure that was
+385.929,7.23,shown in the earlier slide so the exact
+390.249,6.6,figure can be reproduced using this code
+393.159,5.97,which is shown here for this what you
+396.849,4.62,have to know is you have no way to
+399.129,5.12,introduce value which columns have data
+401.469,4.721,for them to be selected for plot E and
+404.249,4.161,you have to also pose
+406.19,5.19,she eats crap in the green etc even
+408.41,5.73,though you do all of this operations the
+411.38,5.78,visuals are less pleasing that is where
+414.14,6.99,we need more sophisticated graphics
+417.16,7.03,packages in our this is where the
+421.13,6.72,ggplot2 comes into picture the ggplot2
+424.19,5.85,provides a very beautiful package for
+427.85,6.18,generating graphics in higher in this
+430.04,7.38,course we haven't deal much with this
+434.03,5.96,applaud in summary we have seen how to
+437.42,6.84,generate scatter plots line plots and
+439.99,6.31,bar plots in the eye we have also seen
+444.26,4.65,the challenges and disadvantages of
+446.3,5.27,basic graphics and the need for using
+448.91,6.18,the advanced packages such as ggplot2
+451.57,6.97,for generating beautiful graphics in our
+455.09,6.09,with this we end the our module for this
+458.54,7.55,course wish you all the best for the
+461.18,4.91,next modules in this course thank you
+466.17,25.059,[Music]
+493.3,3.56,[Music]

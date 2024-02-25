@@ -1,0 +1,340 @@
+second,duration,transcript
+0.5,6.81,[Music]
+7.359,3.2,so when we think about a career
+8.88,2.56,progression in tech we tend to think
+10.559,4.721,about
+11.44,5.44,junior to senior to lead to architect to
+15.28,3.44,principal
+16.88,4.96,and i think that misses the point to
+18.72,5.28,some degree because there is an axis of
+21.84,4.72,technical proficiency that's missing
+24.0,4.56,from that and i think that's most easily
+26.56,4.16,described as going from a
+28.56,5.6,framework consumer
+30.72,6.48,to a framework creator so you start off
+34.16,5.12,using something like spring or react or
+37.2,3.84,view depending on the paradigm within
+39.28,2.88,which you're working
+41.04,2.08,and
+42.16,3.68,you are
+43.12,4.64,uh moving up that technology proficiency
+45.84,4.16,chain from where you're actually just
+47.76,4.72,consuming that framework to where you're
+50.0,3.76,ending up creating a framework that is
+52.48,2.96,used by
+53.76,3.84,tens hundreds thousands tens of
+55.44,3.759,thousands of other engineers and they
+57.6,3.279,become your
+59.199,4.481,consumers
+60.879,5.441,so to get there you're you have to build
+63.68,5.36,up your technology your skill set right
+66.32,4.96,and you start off with basic proficiency
+69.04,3.84,in your language of choice and be it you
+71.28,4.159,know learning about all the ways of
+72.88,4.0,doing conditionals and looping
+75.439,3.201,and
+76.88,3.52,creating functions and methods and
+78.64,4.479,classes and instantiating objects and
+80.4,5.6,all that then you work up to data
+83.119,4.081,structures and algorithms and finally
+86.0,3.119,into
+87.2,5.84,design patterns
+89.119,5.761,and design patterns are ways of
+93.04,3.28,expressing
+94.88,4.4,solid
+96.32,4.88,architectures that are reusable and
+99.28,4.799,extensible and
+101.2,5.279,that are industry standards
+104.079,4.881,so in this video we're going to look at
+106.479,5.041,five different design patterns from this
+108.96,4.08,the original og book the gang of four
+111.52,3.76,design patterns book
+113.04,4.24,it is in c plus but
+115.28,3.839,the concepts are
+117.28,4.4,usable and understandable in any
+119.119,4.241,language and also in any environment so
+121.68,4.64,on the browser
+123.36,5.36,in android or ios on the server wherever
+126.32,5.2,you're going to be design patterns are
+128.72,5.519,going to help you go from a framework
+131.52,4.24,consumer to a framework creator all
+134.239,3.36,right let's start off with our first one
+135.76,3.28,and let's see how fast you can identify
+137.599,3.36,it so
+139.04,4.32,you have a database driver that you're
+140.959,4.161,connecting to you want to get a list of
+143.36,3.92,all of your customers so you make that
+145.12,4.88,query and you get back a list of all the
+147.28,4.4,objects which are customer objects so in
+150.0,4.0,this case you've got the
+151.68,4.8,customer object or the customer class of
+154.0,4.72,which you can have many and then the
+156.48,4.88,database driver of which there can only
+158.72,4.48,be one and you might have guessed it
+161.36,3.36,that's the singleton pattern as
+163.2,3.6,specified in here
+164.72,4.0,and it means that for that given class
+166.8,4.719,there can only be one instance and
+168.72,4.4,that's really good for doing things like
+171.519,2.641,a database driver
+173.12,2.399,or
+174.16,2.96,the list of all the configuration
+175.519,3.601,settings for your application or if
+177.12,4.479,you're over on the client maybe the data
+179.12,4.399,store the current state of the app
+181.599,4.56,that's stored in a singleton
+183.519,4.64,the pro is that you can go and get to
+186.159,4.16,that data anytime that you want all you
+188.159,4.641,have to do is just you know get the
+190.319,5.761,singleton and away you go
+192.8,5.2,the con in your evolution to framework
+196.08,4.56,creator is you might jump on the
+198.0,4.64,singleton bandwagon too early
+200.64,3.679,and once you've gone there once you've
+202.64,4.0,said that there can be only one and
+204.319,3.28,you've added that constraint it's really
+206.64,3.04,hard
+207.599,3.761,to back that out it means instead of
+209.68,3.68,everybody being able to just go and
+211.36,4.0,access it directly now you've got to
+213.36,4.0,pipe down whatever the current well
+215.36,4.32,database driver in this case is an
+217.36,4.959,example you got to pipe that down to
+219.68,5.199,whomever the consumers are so
+222.319,4.0,as with all of these design patterns you
+224.879,3.601,got to make sure that you're using it
+226.319,4.48,the right way and at the right time
+228.48,3.759,otherwise you're going to get stung
+230.799,4.08,the second design pattern we're going to
+232.239,4.241,look at is the facade pattern and a lot
+234.879,4.481,of these design patterns are actually
+236.48,5.119,modeled on real world building style
+239.36,4.959,architecture and this is no different so
+241.599,5.041,a facade in the real world is the front
+244.319,4.321,of a building and it hides all of the
+246.64,4.08,mechanics of the building inside the
+248.64,4.64,insulation the rooms the plumbing the
+250.72,3.76,infra the electricity and the basement
+253.28,3.76,and all that stuff that you don't want
+254.48,4.4,to see is hidden behind this nice facade
+257.04,3.52,it's got a door and some windows and all
+258.88,2.639,that looks really pretty got great curb
+260.56,4.16,appeal
+261.519,5.041,and so as a framework creator
+264.72,4.0,this gives you the facade pattern gives
+266.56,4.48,you the ability to put a nice external
+268.72,5.039,veneer on your app now the example that
+271.04,4.4,they use in the book is a compiler so a
+273.759,3.281,compiler has got all kinds of cool stuff
+275.44,3.44,inside it's got a parser it's got a
+277.04,4.08,lexical analyzer it's got a tokenizer
+278.88,5.28,it's got all kinds of fun stuff in there
+281.12,4.72,but from a consumer standpoint when you
+284.16,4.8,as a framework creator are thinking
+285.84,4.96,about your customer and having empathy
+288.96,3.84,for what they want to do in their
+290.8,3.28,priorities you're saying to yourself oh
+292.8,2.88,and maybe i don't want to give them
+294.08,4.32,access to all the internals there maybe
+295.68,4.239,i just want to give them a nice compiler
+298.4,3.76,facade where they give me something i
+299.919,3.84,compile it and i return it and away you
+302.16,3.52,go and i hide
+303.759,4.481,all those internals
+305.68,5.76,so that's the big pro it gives you and
+308.24,5.2,your consumer a nice interface and if
+311.44,3.599,you allow them then if they want to they
+313.44,2.8,can go around that interface and go and
+315.039,4.401,get to
+316.24,5.76,the interior if if you so choose
+319.44,4.8,now the downside is you can have a leaky
+322.0,4.639,paradigm there you can have a leaky
+324.24,4.799,abstraction in other words that you've
+326.639,4.481,oversimplified that compiler interface
+329.039,4.241,is so simple that it's not really usable
+331.12,4.48,and not really valuable and that can be
+333.28,3.84,a problem another problem is over
+335.6,4.4,verticalization meaning that you've
+337.12,4.96,created a facade that's so specific to a
+340.0,3.36,single use case that it's no longer
+342.08,2.88,generalized enough to be generally
+343.36,4.88,useful so those are things to watch out
+344.96,4.4,for when you're using a facade pattern
+348.24,3.6,so the next design pattern we're going
+349.36,4.0,to look at is the bridge pattern i call
+351.84,2.72,it the adapter pattern but they've got a
+353.36,2.8,different definition in the book for the
+354.56,3.359,adapter pattern but
+356.16,2.64,let me use a visual example on this one
+357.919,2.801,so
+358.8,4.08,here is a sony mirrorless camera just
+360.72,4.24,like the one i'm shooting on right now
+362.88,3.92,and it actually is two pieces right so
+364.96,3.6,you've got the camera body and then
+366.8,4.48,you've got the interchangeable lens and
+368.56,5.12,that allows this camera body to be
+371.28,4.479,multi-purpose right in this case
+373.68,4.32,this is a wide-angle lens good for
+375.759,4.641,giving nice big contacts like this
+378.0,3.919,this is a 55 millimeter lens which is a
+380.4,3.519,lot better if we're doing kind of head
+381.919,4.081,shot some portraiture and i use that
+383.919,4.241,when i'm doing zoom calls
+386.0,4.4,so uh why that's important in this
+388.16,3.52,context is from the software perspective
+390.4,3.12,you're doing a similar sort of thing
+391.68,4.56,you're creating an api or in this case
+393.52,4.239,the api is this like connector here in
+396.24,4.239,software world
+397.759,4.72,that would be an interface right and so
+400.479,3.361,now on the server side you might have
+402.479,2.881,that database driver that we talked
+403.84,4.079,about before you'd have an abstract
+405.36,5.04,interface for your database driver and
+407.919,5.921,then you'd have concrete implementations
+410.4,5.04,for say or dynamodb or whatever
+413.84,3.6,else you're going to get into and that's
+415.44,4.159,a great thing about this pattern is it
+417.44,3.68,allows you to create a product that's
+419.599,3.201,usable by
+421.12,3.359,a wide variety of customers in a wide
+422.8,3.28,variety of situations
+424.479,4.0,similar sort of thing on the client side
+426.08,4.239,you could do an analytics abstract
+428.479,3.201,interface and then have concrete
+430.319,4.561,implementations to go to something like
+431.68,5.2,adobe's omniture or segment or your own
+434.88,3.28,in-house homebrew whatever you want and
+436.88,4.56,that can work both
+438.16,4.72,on the website or on mobile
+441.44,3.599,the problem is
+442.88,4.719,the big con on this one is when you use
+445.039,4.241,it too much right so in this case
+447.599,3.281,there's only one extension point to this
+449.28,2.72,camera and it's this interchangeable
+450.88,3.28,lens
+452.0,4.56,so when you didn't go and go and create
+454.16,5.2,modules for this little dial here or the
+456.56,4.56,eyepiece right they used that pattern
+459.36,3.04,judiciously so
+461.12,2.4,you should do the same when it comes to
+462.4,3.519,your software
+463.52,4.56,don't overuse this pattern and the great
+465.919,3.761,thing about it is you can also bring it
+468.08,3.119,in later and that's what you can do with
+469.68,3.199,a lot of these design patterns you don't
+471.199,3.68,have to start out of the box by creating
+472.879,4.481,the world's most modular system get
+474.879,4.641,something working and then when you see
+477.36,3.92,the points where you need modularity and
+479.52,3.04,this bridge pattern then go bring those
+481.28,2.639,in
+482.56,3.199,the fourth pattern we're going to look
+483.919,3.761,at is the strategy pattern and it's one
+485.759,3.84,of my personal favorites so let's take a
+487.68,4.56,scenario you've got this piece of
+489.599,4.801,furball code that's gonna go and find a
+492.24,4.56,bunch of customers filter through them
+494.4,4.0,and then send out email and text
+496.8,2.88,notifications to them and nobody likes
+498.4,2.88,working on this piece of code since it's
+499.68,3.12,doing multiple things and it's just a
+501.28,3.599,hairball
+502.8,4.32,you can use the strategy pattern to
+504.879,4.961,significantly clean this up and how you
+507.12,4.24,do that is you go and take the mechanics
+509.84,4.559,of getting access to the customer
+511.36,4.32,records sending out the text and emails
+514.399,3.281,and then creating that as an
+515.68,4.08,infrastructure layer and then factoring
+517.68,4.88,out the filtering of those customers
+519.76,4.32,into one strategy which is the strategy
+522.56,2.959,that helps you go find the target
+524.08,4.64,customers you want
+525.519,4.641,and then the notification strategy as a
+528.72,4.0,different strategy and that helps you
+530.16,4.56,decide when and where and how you want
+532.72,3.679,to contact those customers so that
+534.72,4.4,strategy pattern
+536.399,5.601,cleans up and makes it very easy to use
+539.12,5.279,and then you can actually use that
+542.0,3.92,library or that system in a whole bunch
+544.399,4.401,of different scenarios and it becomes
+545.92,4.96,much less of a hairball so one thing you
+548.8,3.599,got to look out for on this is always
+550.88,4.88,make sure that you have
+552.399,6.0,decent default strategies so in the case
+555.76,5.28,of our refactoring we go and take the
+558.399,5.041,existing logic around the customer
+561.04,4.64,filtering and the customer send outs and
+563.44,4.64,turn those into the default strategies
+565.68,4.48,and then later on people can extend them
+568.08,4.24,otherwise you get a system where by
+570.16,4.64,default you're asked to do a lot up
+572.32,4.24,front and no customer wants to do that i
+574.8,4.159,want to go and take your library off the
+576.56,4.24,shelf just use it right away and then if
+578.959,3.521,it doesn't match what i want to do
+580.8,3.92,looking to see what the extension points
+582.48,3.68,are that i can tap into to modify the
+584.72,3.119,behavior to where i want it and the
+586.16,3.2,strategy pattern makes a great way to do
+587.839,4.0,that the fifth pattern we're going to
+589.36,4.4,look at is my favorite of all of the
+591.839,4.161,patterns and it's the observer pattern
+593.76,5.199,or what we've come to know now as pub
+596.0,5.279,sub because it's everywhere it's on the
+598.959,4.481,server as message queues between
+601.279,5.041,applications it's on the client as
+603.44,3.92,eventing systems pub sub is everywhere
+606.32,2.959,and there's a good reason for that
+607.36,4.32,because it allows for
+609.279,3.841,loose coupling between the publisher
+611.68,4.159,that's creating events and the
+613.12,4.64,subscriber or subscribers that are
+615.839,3.601,listening for those events and you can
+617.76,4.72,use it anywhere
+619.44,4.399,now the con on this particular pattern
+622.48,3.44,is that
+623.839,4.24,you can go overboard with it if
+625.92,4.32,everything is communicating by events
+628.079,5.041,then you can get into nasty event loops
+630.24,4.88,and it gets very hard to debug
+633.12,3.92,one thing publishes an event it goes to
+635.12,4.0,another object which in turn publishes
+637.04,3.44,his own events and it ends up kind of
+639.12,3.6,coming back around the original event
+640.48,4.56,which ends up creating more events and
+642.72,4.48,on and on and on and then you know
+645.04,3.84,you've got a serious problem where
+647.2,3.44,you're ending up adding in booleans to
+648.88,4.24,check whether you're emitting events and
+650.64,5.04,it just gets hairy so there's a couple
+653.12,4.48,of solves for this one is don't use the
+655.68,4.64,same message bus for everything have a
+657.6,5.04,specific purpose for each message bus
+660.32,3.519,and then to you know keep these systems
+662.64,2.96,localized you know if you're on the
+663.839,3.601,client you've got a button and it's an
+665.6,3.6,emitting an event that's good that's all
+667.44,3.44,you need you don't need to go beyond
+669.2,4.0,that so again
+670.88,4.959,as with all of these patterns
+673.2,5.36,use them judiciously but use them
+675.839,5.281,because most people understand those
+678.56,4.56,systems when they see them
+681.12,4.399,well i hope you liked this quick tour of
+683.12,4.8,five types of design patterns
+685.519,3.601,there are i think almost wow 20 or so
+687.92,2.8,different design patterns in this book
+689.12,4.32,this is a fantastic book should be on
+690.72,4.0,every developer's bookshelf
+693.44,2.56,if you have any questions or comments be
+694.72,2.96,sure to put those in the comment section
+696.0,3.519,down below if you like the video hit
+697.68,3.76,that like button let everybody know if
+699.519,4.081,you really like the video give brad a
+701.44,5.12,subscribe or jump over to my channel and
+703.6,5.52,give me a subscribe i'd appreciate it
+706.56,5.719,have a great day be happy be healthy and
+709.12,3.159,be safe

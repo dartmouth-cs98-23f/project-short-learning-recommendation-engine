@@ -1,0 +1,104 @@
+second,duration,transcript
+0.0,4.5,let's talk about how to choose a
+2.1,4.38,database in a system design interview
+4.5,4.5,in these interviews you will often have
+6.48,5.039,to choose what database to use and these
+9.0,4.2,databases are split into SQL and nosql
+11.519,3.421,types and they each have their own
+13.2,3.419,strengths and weaknesses and should be
+14.94,3.919,chosen appropriately based on the use
+16.619,2.24,case
+20.34,5.699,first let's define both SQL and nosql
+23.22,6.059,databases SQL stands for structured
+26.039,6.661,query language SQL databases are table
+29.279,6.12,based while nosql are document key value
+32.7,4.74,graph or wide column stores SQL
+35.399,4.021,databases are vertically scalable while
+37.44,4.68,nosql databases are horizontally
+39.42,6.78,scalable let's start with the strengths
+42.12,6.24,of SQL databases first SQL databases are
+46.2,3.72,relational databases which means that
+48.36,3.719,they allow easy querying on
+49.92,4.979,relationships between data among
+52.079,4.32,multiple tables table relationships are
+54.899,3.541,really important for effectively
+56.399,4.621,organizing and structuring a lot of
+58.44,4.32,different data second the data is well
+61.02,3.9,structured and the room for potential
+62.76,4.2,error is therefore reduced this is
+64.92,3.9,because SQL schemas require the data
+66.96,4.86,model and format of the data to be known
+68.82,5.82,before storing anything third SQL
+71.82,5.58,databases are acid compliant this means
+74.64,5.1,that transactions are Atomic consistent
+77.4,4.38,isolated and durable
+79.74,4.019,SQL transactions are groups of
+81.78,4.019,statements that are executed atomically
+83.759,5.04,this means that they are either all
+85.799,5.281,executed or not executed at all if any
+88.799,5.041,statement in the group fails with all
+91.08,4.079,these strengths SQL sounds great so what
+93.84,3.9,are its weaknesses
+95.159,4.801,well first structured data might mean
+97.74,4.08,fewer errors but it also means that
+99.96,4.86,columns and tables have to be created
+101.82,4.86,ahead of time so SQL databases take more
+104.82,4.2,time to set up compared to nosql
+106.68,4.68,databases they're also not effective for
+109.02,4.139,storing and querying unstructured data
+111.36,4.98,where the format is unknown
+113.159,4.92,second SQL databases are difficult to
+116.34,4.38,scale horizontally because of their
+118.079,4.201,relational nature for read heavy systems
+120.72,3.84,it's straightforward to provision
+122.28,4.74,multiple read-only replicas but for
+124.56,4.199,write heavy systems usually the only
+127.02,4.079,option is to vertically scale the
+128.759,3.961,database up which is generally more
+131.099,4.081,expensive than provisioning additional
+132.72,6.3,servers now let's talk about the
+135.18,6.54,benefits of nosql databases first nosql
+139.02,4.38,databases are more flexible and simpler
+141.72,4.08,to set up because they do not support
+143.4,4.74,table relationships and data is usually
+145.8,4.38,stored in documents or as key value
+148.14,4.8,pairs they're a better choice for
+150.18,4.919,storing unstructured data second because
+152.94,4.26,they're better at handling unstructured
+155.099,3.961,data they can also Shard this data
+157.2,4.319,across different data stores allowing
+159.06,5.7,for distributed databases this makes
+161.519,4.8,horizontal scaling much easier and very
+164.76,3.36,large amounts of data can be stored
+166.319,5.041,without having to purchase a single
+168.12,6.72,expensive server but nosql databases
+171.36,5.22,also have their weaknesses first nosql
+174.84,4.56,databases are typically designed for
+176.58,4.5,distributed use cases and write heavy
+179.4,3.66,systems can be supported by having
+181.08,3.84,multiple right shards for the same data
+183.06,5.16,partition this is called peer-to-peer
+184.92,5.64,replication however the trade-off is a
+188.22,4.439,loss of strong consistency after a right
+190.56,4.259,to a shard in a distributed nosql
+192.659,3.901,cluster there's a small delay before
+194.819,4.5,that update can be propagated to other
+196.56,4.74,replicas during this time reading from a
+199.319,4.2,replica can result in accessing stale
+201.3,3.96,data this weakness of the data
+203.519,4.381,eventually being up to date is called
+205.26,4.979,eventual consistency eventual
+207.9,5.4,consistency isn't exactly a fault of
+210.239,5.401,just nosql databases but of distributed
+213.3,4.5,databases in general A Single Shard
+215.64,4.2,nosql database can be strongly
+217.8,4.68,consistent but to fully take advantage
+219.84,4.619,of the scalability benefits of nosql the
+222.48,3.72,database should really be set up as a
+224.459,3.84,distributed cluster and that's it for
+226.2,3.899,today's video on databases to learn more
+228.299,3.241,check out the exponent article Linked In
+230.099,3.541,the description below good luck with
+231.54,5.1,your interviews and thanks for watching
+233.64,3.0,foreign
+237.48,5.039,foreign foreign foreign

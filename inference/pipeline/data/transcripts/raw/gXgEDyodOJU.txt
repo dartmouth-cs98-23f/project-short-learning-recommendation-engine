@@ -1,0 +1,474 @@
+second,duration,transcript
+0.149,3.641,"Hello everyone. So far in the series on
+data structures,"
+3.79,4.04,"we have talked about some of the linear
+data structures like array,"
+7.83,5.939,"linked list, stack and queue. In all these
+structure, data is arranged in a linear or"
+13.769,3.631,"sequential manner, so we can call
+them linear data structures"
+17.4,4.84,"and we've also talked about tree which
+is a non-linear data structure."
+22.24,5.539,"Tree is a hierarchical structure. Now as
+we understand data structures are ways to"
+27.779,1.871,"store and organize data,"
+29.65,3.94,"and for different kinds of data we use
+different kinds of data structures."
+33.59,4.34,"In this lesson, we're going to introduce
+you to another non linear data"
+37.93,0.51,structure
+38.44,4.41,"that has got its application in a wide
+number of scenarios in computer science."
+42.85,3.93,"It is used to model and represent a
+variety of systems"
+46.78,3.04,and this data structure is graph.
+49.82,3.8,"When we study data structures, we often
+first study them as"
+53.62,3.45,"mathematical or logical models. Here
+also,"
+57.07,3.7,"we will first study graph as a
+mathematical or logical model"
+60.77,3.12,"and we will go into implementation
+details later."
+63.89,3.89,"Okay so let's get started. A graph just
+like a tree"
+67.78,3.199,"is a collection of objects or entities that
+we call"
+70.979,3.851,"nodes or vertices, connected to each
+other through"
+74.83,3.34,a set of edges. But in a tree
+78.17,4.769,"connections are bound to be in a certain
+way. In a tree that our rules"
+82.939,3.331,"dictating the connection among the nodes.
+In a tree with"
+86.27,3.059,"N Nodes, we must have exactly"
+89.329,3.551,N - 1 edges. One edge for
+92.88,3.47,"each parent child relationship. As
+we know an edge"
+96.35,4.479,"in a tree is for a parent child
+relationship and all nodes in a tree"
+100.829,4.801,"except the root node would have apparent
+would have exactly 1 parent"
+105.63,4.83,"and that's why if they are N nodes, it
+must be exactly N - 1 edges."
+110.46,3.439,"In a tree, all nodes must be reachable
+from the root"
+113.899,4.051,"and there must be exactly one possible
+path from root"
+117.95,3.4,"to a node. Now in a graph there are no
+rules"
+121.35,3.839,"dictating the connection among the nodes.
+A graph contains"
+125.189,3.111,a set of nodes and a set of edges
+128.3,3.57,"and edges can be connecting nodes in any
+possible way."
+131.87,3.869,"Tree is only a special kind of graph.
+Now graph"
+135.739,3.5,"as a concept has been studied
+extensively in mathematics."
+139.239,3.031,"If you have taken a course on discrete
+mathematics"
+142.27,4.99,"then you must be knowing about graphs
+already. In computer science, we basically"
+147.26,3.38,"study and implement the same concept
+of graph from mathematics."
+150.64,3.319,"The study of graph is often referred to
+as"
+153.959,3.301,graph theory. In pure mathematical terms
+157.26,3.08,we can define graph something like this.
+160.34,4.66,"A graph G is in order pair of a set
+V of vertices"
+165.0,5.31,"and a set E of edges. Now I'm using
+some mathematical jargon here."
+170.31,3.88,"An ordered pair is just a pair of
+mathematical objects"
+174.19,3.26,in which the order of objects in the pair
+177.45,3.6,"matters. This is how we write and
+represent an ordered"
+181.05,4.28,"pair, objects separated by comma put
+within parenthesis."
+185.33,4.14,"Now because the order here matters. We
+can say that V"
+189.47,3.79,"is the first object in the pair and E
+is the second object."
+193.26,4.14,"An ordered pair A, B is not equal to B, A"
+197.4,3.169,unless A and B are equal.
+200.569,3.871,"In our definition of graph here, first
+object in the pair"
+204.44,5.53,"must always be a set of vertices and
+the second object must be a set of edges"
+209.97,3.579,"that's why we are calling the pair 
+an ordered pair."
+213.549,4.491,"We also have concept of unordered pair.
+An unordered pair"
+218.04,3.979,"is simply a set of two elements. Order is
+not important here."
+222.019,3.541,"We write an unordered pair using curly
+brackets or braces."
+225.56,3.75,"Because the order is not important here,
+unordered pair"
+229.31,5.16,"A, B is equal to B, A. It doesn't matter
+which object is first and"
+234.47,3.57,"which object is second. Okay coming back,
+so"
+238.04,3.919,"a graph of is an ordered pair of a set of
+vertices and a set of"
+241.959,4.881,"edges and G = (V,E) is a formal
+mathematical notation"
+246.84,3.94,"that we use to define a graph. Now I
+have a graph drawn here"
+250.78,4.269,"in the right. This graph is 8 vertices
+and 10 edges."
+255.049,4.231,"What I want to do is I want give some
+names to these vertices"
+259.28,3.69,"because each node in a graph must
+have some identification."
+262.97,3.94,It can be a name or it can be an index.
+266.91,3.11,"I'm naming these vertices as V1, V2"
+270.02,5.91,"V3, V4, V5 and so on, and this
+naming is not indicative of any order."
+275.93,3.459,"There is no 1st, 2nd and 3rd Node here. I could
+give"
+279.389,4.181,"any name to any node. So my set of 
+vertices here"
+283.57,4.99,"is this. We have 8 elements in the
+set V1, V2, V3, V4,"
+288.56,6.3,"V5, V6, V7 and V8. So this is my set of
+vertices for this graph."
+294.86,3.67,"Now what's my set of edges. To answer
+this"
+298.53,3.88,"we first need to know how to represent
+an edge."
+302.41,3.379,"An edge is uniquely identified by it's
+2"
+305.789,5.181,"endpoints, so we can just write the names
+of the two endpoint"
+310.97,5.699,"of an edge as a pair and it can be
+a representation for the edge."
+316.669,3.291,"But edges can be of two types. We can
+have"
+319.96,4.019,"a directed edge in which connection is
+one-way"
+323.979,4.641,"or we can have an undirected edge in
+which connection is two way."
+328.62,4.23,"In this example graph that I'm showing
+here, edges are undirected"
+332.85,3.7,"but if you remember the tree that I had
+shown earlier"
+336.55,4.51,"then we had directed edges in that tree.
+With this directed edge that I'm showing"
+341.06,0.8,"you here,"
+341.86,3.39,we are saying that there is link or path
+345.25,5.199,"from vertex U to V but we cannot
+assume a path from V to U."
+350.449,3.19,"This connection is one way. For
+a directed edge,"
+353.639,5.051,"one of the endpoints would be the
+origin and other end point would be"
+358.69,3.09,the destination and we draw the edge with
+361.78,3.6,"an arrow head pointing towards the
+destination."
+365.38,4.879,"For our edge here, origin is U and
+destination is V."
+370.259,3.681,"A directed edge can be to represented as
+an ordered pair,"
+373.94,3.9,"first element in the pair can be the
+origin and second element can be the"
+377.84,1.77,destination.
+379.61,3.309,"So with this directed edge represented
+as ordered pair"
+382.919,3.981,"(U,V), we have a path from U to V."
+386.9,3.389,"If we want a path from V to U, when need
+to draw"
+390.289,3.321,"another directed edge here with V as 
+origin"
+393.61,4.709,"and U as destination and this edge can be
+the represented as ordered pair"
+398.319,4.741,"(V,U), the upper one here is (U,V) and the
+below one is"
+403.06,3.28,"(V,U) and they are not same."
+406.34,3.01,"Now if the edge is undirected, the
+connection"
+409.35,4.05,"is 2 way and undirected edge can be
+to represented as an"
+413.4,3.88,"unordered pair here because the edge is
+bi directional"
+417.28,4.479,"origin and destination are not fixed. We
+only need to know what two end points"
+421.759,2.25,have been connected by the edge.
+424.009,4.301,"So now that we know how to present edges,
+we can write the set of edges for this"
+428.31,1.75,example graph here.
+430.06,4.15,"We have an undirected edge between V1
+and V2"
+434.21,5.359,"then we have 1 between V1 and V3 and
+then be have V1 V4."
+439.569,3.301,"This is really simple and just go ahead
+and write all of them."
+442.87,3.75,"So this is my set of edges. Typically in
+a graph,"
+446.62,3.94,"all edges would either be directed or
+undirected."
+450.56,3.8,"It's possible for a graph to have both
+directed and undirected edges"
+454.36,4.459,"but we are not going to study such
+graphs, we are only going to study graphs"
+458.819,3.451,"in which all edges would either be
+directed or"
+462.27,3.19,"undirected. A graph with all directed
+edges"
+465.46,3.739,is called a directed graph or digraph
+469.199,5.22,"and a graph with all undirected ages is
+called an undirected graph."
+474.419,3.361,"There is no special name for an
+undirected graph."
+477.78,4.289,"Usually, if the graph directed, we
+explicitly say that it's"
+482.069,4.371,"directed graph or digraph. So these are
+two types of graphs."
+486.44,3.12,Directed graph or digraph in which edges
+489.56,3.259,are uni-directional or ordered pairs and
+492.819,3.621,"undirected graph in which edges are
+bi-directional"
+496.44,4.39,"or unordered pairs. Now many real-world
+systems and"
+500.83,4.61,"problems can be modeled using a graph.
+Graphs can be used to represent"
+505.44,3.05,"any collection of objects having some
+kind of"
+508.49,4.979,"pairwise relationship. Let's have a look
+at some of the interesting examples."
+513.469,3.901,"A social network like Facebook can be
+represented as an"
+517.37,4.06,"undirected graph. A user would be a node in
+the graph"
+521.43,4.58,"and if 2 user are friends, there
+would be an edge connecting them."
+526.01,4.0,"A real social network would have millions
+and billions of nodes."
+530.01,3.63,"I can show only few in my diagram here
+because I'm short of space."
+533.64,4.02,"Now social network is an undirected
+graphs because friendship"
+537.66,4.2,"is a mutual relationship. If I'm your
+friend, you are my friend too."
+541.86,3.87,"So connections have to be 2 way. Now once
+a system"
+545.73,4.32,"is modeled as a graph a lot of problems
+can easily be solved"
+550.05,3.71,"by applying standard algorithms
+in graph theory."
+553.76,3.759,"Like here in this social network, let's
+say we want to do something like"
+557.519,4.931,"suggest friends to a user. Let's say we
+want to suggest some connections to"
+562.45,1.28,Rama.
+563.73,4.25,"One possible approach to do so can be
+suggesting friends of friends"
+567.98,3.93,"who are not connected already. Rama has
+3 friends,"
+571.91,3.02,"Ella, Bob and Katie and friends of"
+574.93,3.07,"3 that are not connected to Rama
+already"
+578.0,3.839,"can be suggested. There is no friend of
+Ella which is not connected to Rama"
+581.839,1.021,already.
+582.86,3.61,"Bob however, has 3 friends Tom, Sam,"
+586.47,4.44,"and Lee that are not friends with Rama so
+they can be suggested"
+590.91,3.19,and katie has two friends Lee and Swati
+594.1,3.609,"that are not connected to Rama.We have
+counted Lee already,"
+597.709,4.721,"so in all we can suggest these for users
+to Rama."
+602.43,4.27,"Now even though we described this
+problem in context of a social network."
+606.7,3.68,"This is a standard graph problem. The
+problem here in"
+610.38,4.22,"pure graph terms is finding all nodes
+having lenght of"
+614.6,3.429,"shortest path from a given
+node equal to 2."
+618.029,3.541,"Standard algorithms can be applied to
+solve this problem."
+621.57,3.42,"We'll talk about concepts like path in
+a graph in some time."
+624.99,3.65,"For now just know that the problem that
+we just described in context of"
+628.64,3.59,"a social network is a standard graph
+problem."
+632.23,4.71,"Okay so a social network like Facebook
+is an undirected graph"
+636.94,3.22,"Now let's have a look at another example.
+Interlinked"
+640.16,3.52,"web pages on the internet or the World
+Wide Web"
+643.68,4.05,"can be represented as a directed graph.
+A web page"
+647.73,4.599,"that would have a unique address or URL
+would be a node in the graph"
+652.329,5.811,"and we can have a directed edge if a
+page contains link to another page."
+658.14,3.46,"Now once again, there are billions of pages
+on the web"
+661.6,4.83,"but I can show only few here. The edges
+in this graph are directed because"
+666.43,3.149,"that relationship is not mutual this
+time."
+669.579,5.021,"If page A has a link to page B then
+it's not necessary that page B will"
+674.6,1.45,also have a link to page A.
+676.05,3.74,"Let's say one of the pages on
+mycodeschool.com has"
+679.79,3.02,a tutorial on graph and on this page
+682.81,3.56,"I have put a link to Wikipedia article on
+graph."
+686.37,3.339,"Let's assume that in this example
+graph that I am showing you here."
+689.709,3.671,"Page P is my mycodeschool tutorial
+on graph"
+693.38,4.32,"with this address or URL 
+mycodeschool.com/videos/graph"
+697.7,4.84,"and lets say, page Q is the
+Wikipedia article on graph"
+702.54,3.789,with this URL Wikipedia/org/wiki/graph.
+706.329,3.07,Now on my page that is page
+709.399,3.62,"P, I have put a link to the Wikipedia page on
+graph."
+713.019,5.471,"If you are on page P, you can click on
+this link and go to page Q"
+718.49,3.589,"but Wikipedia has not reciprocated
+to my favor by putting"
+722.079,3.931,"a link back to my page. So if you are on
+page Q"
+726.01,3.67,"you cannot click on the link can
+come to page P. Connection here"
+729.68,4.19,"is one way and that's why we have
+drawn a directed egde here."
+733.87,3.6,"Okay now once again if we are able to
+present"
+737.47,4.919,"web as a directed graph, we can apply
+standard graph theory algorithms to"
+742.389,3.091,solve problems and to perform tasks.
+745.48,4.74,"One of the tasks that search engines
+like Google perform very regularly"
+750.22,5.239,"is web crawling. Search engines use a
+program called web crawler"
+755.459,3.411,"that systematically browsers the 
+World Wide Web"
+758.87,4.48,"to collect and store data about web
+pages. Search engines can then use this"
+763.35,0.549,data
+763.899,4.421,"to provide quick and accurate results
+against search queries."
+768.32,4.23,"Now even though in this context, we are
+using a nice and heavy term like web"
+772.55,0.65,crawling.
+773.2,3.22,"Web crawling is basically graph
+traversal"
+776.42,4.64,"or in simpler words, act of visiting all
+nodes in a graph"
+781.06,4.04,"and no prizes for guessing that there
+are standard algorithms for graph"
+785.1,1.2,traversal.
+786.3,3.65,"We will be studying graph traversal
+algorithms in a later lessons."
+789.95,3.79,"Okay now the next thing that I want to
+talk about is concept of a"
+793.74,5.539,"weighted graph. Sometimes in a graph, all
+connections cannot be treated as equal."
+799.279,3.101,"Some connections can be preferable to
+others"
+802.38,3.17,like for example we can represent
+805.55,3.67,"intercity road network that is the
+network of highways and"
+809.22,4.239,"free ways between cities as an
+undirected graph."
+813.459,3.461,"I'm assuming that all highways would be
+bi-directional."
+816.92,4.14,"Intra-city road network that is road
+network within a city"
+821.06,3.35,would definitely have one-way roads and so
+824.41,4.01,"Intra-city network must be
+represented as a directed graph"
+828.42,3.659,"but intercity road network in my opinion
+can be represented as an"
+832.079,4.921,"undirected graph. Now clearly we cannot
+treat all connections as equal here."
+837.0,3.93,"Roads would be of different lengths and
+to perform a lot of tasks"
+840.93,4.43,"to solve a lot of problems, we need to
+take length of roads into account."
+845.36,3.289,"In such cases, we associate some weight or"
+848.649,4.12,"cost with every edge. We label the edges with
+their weights."
+852.769,4.991,"In this case weight can be lenght of the roads,
+so what to do here is I'll just"
+857.76,4.319,"label this edges with some values for
+the lenghts."
+862.079,3.37,Let's say these values are in kilometers
+865.449,5.121,"and now edges in this graph are weighted and
+this graph can be called weighted"
+870.57,0.629,graph.
+871.199,4.01,"Let's say in this graph, we want to
+pick the best route"
+875.209,3.281,from city A to city D.
+878.49,3.49,"Have a look at these four possible
+routes, I am showing them in different"
+881.98,1.219,colors.
+883.199,3.151,Now if I would treat all edges as equal
+886.35,3.979,"then I would say that the green route
+through B and C"
+890.329,4.171,"and a red route through E and F are equally
+good."
+894.5,4.17,"Both these paths have to three edges and
+this yellow route through E"
+898.67,4.419,"is the best because we have only two
+edges in this path."
+903.089,4.321,"But with different weights assigned to
+the connections, I need to add up"
+907.41,3.64,"weights of edges in a path to calculate
+total cost."
+911.05,3.149,"When I'm taking weight into account shortest
+route"
+914.199,4.091,"is through B and C. Connections have
+different weights and"
+918.29,3.81,"this is really important here in this
+graph. Actually, we can look at all the"
+922.1,2.38,graphs as weighted graphs
+924.48,3.12,"An unweighted graph can basically be seen
+as"
+927.6,3.22,"a weighted graph in which weight of all
+the edges"
+930.82,4.889,"is same and typically we assume to weight
+as one."
+935.709,4.0,"Okay so we have represented inter-city cities
+road network as"
+939.709,6.201,"weighted undirected graph. Social network
+was an unweighted undirected graph"
+945.91,4.03,"and World Wide Web was an unweighted
+directed graph"
+949.94,3.92,and this one is a weighted undirected graph.
+953.86,4.33,"Now this was inter-city road network. I
+think intra-city road network that is"
+958.19,3.74,"road network within a city can be
+modeled as"
+961.93,4.99,"a weighted directed graph because in a
+city that would be some one ways."
+966.92,3.33,"Intersections in interest city's road
+network would be Nodes"
+970.25,4.38,"and road segments would be our edges,"
+974.63,4.69,"and by the way we can also draw an
+undirected graph as directed."
+979.32,4.769,"It's just that for each undirected edge
+we will have 2 directed edges."
+984.089,3.761,"We may not be able to redraw a directed
+graph has undirected"
+987.85,4.2,"but we can always redraw an undirected
+graph as directed."
+992.05,4.779,"Okay I'll stop here now. This much is
+good for an introductory lesson."
+996.829,3.211,"In next lesson, we will talk about some more
+properties of graph."
+1000.04,2.299,"This is it for this lesson. Thanks for
+watching !"

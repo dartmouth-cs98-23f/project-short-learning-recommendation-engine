@@ -1,0 +1,204 @@
+second,duration,transcript
+0.03,4.26,without data structures you can't solve
+2.159,4.561,algorithms and without algorithms you
+4.29,3.779,can't pass a programming interview now
+6.72,3.089,the problem is if you open a data
+8.069,4.231,structures and algorithms text book
+9.809,3.721,it is really mathy and if you're like me
+12.3,4.02,and you got a C in eighth grade math
+13.53,4.589,it's gonna scare you a lot the good news
+16.32,4.32,is once you understand data structures
+18.119,4.951,they're not actually that complicated so
+20.64,4.44,I wanted to explain the five most
+23.07,4.35,important data structures in this video
+25.08,4.949,in the way I understand them which means
+27.42,5.159,as little technical jargon as possible
+30.029,6.021,and just try to simplify it for you guys
+32.579,3.471,just starting out let's go
+38.949,4.71,first off let's talk about what a data
+41.5,5.609,structure is consider having a single
+43.659,4.981,data item like the price of a stock now
+47.109,3.961,that price on its own is not going to
+48.64,4.649,mean much but if we put it together with
+51.07,4.649,a bunch of stock prices let's say the
+53.289,4.351,price is over an entire day well then it
+55.719,3.51,becomes more meaningful we call date
+57.64,4.169,items that we grouped together like this
+59.229,4.47,compound data we have to store this data
+61.809,3.39,in some kind of a data structure and
+63.699,3.78,choosing the right one is really
+65.199,3.901,important no data structure is perfect
+67.479,3.541,all them are good and bad at different
+69.1,4.29,things the way we measure how good a
+71.02,4.739,data structure is doing a specific thing
+73.39,4.92,like adding a new item retrieving an
+75.759,5.071,item sorting or searching is called the
+78.31,4.559,Big O notation this is pretty much a
+80.83,4.709,measure of how well in operation scales
+82.869,5.521,so if you have ten items and then you
+85.539,5.19,add a million more how much longer will
+88.39,4.409,each operation take okay let's talk
+90.729,4.53,about the first data structure which is
+92.799,4.02,the linked list the atomic unit of the
+95.259,5.551,linked list is something called a node
+96.819,5.881,which contains a value and a pointer the
+100.81,4.589,value is something as simple as a number
+102.7,4.589,like 12 and that pointer will simply
+105.399,2.521,connect you to the next node in the
+107.289,2.731,chain
+107.92,4.14,hence the linked part of linked lists
+110.02,4.409,the first node in the list is known as
+112.06,4.47,the head while the last one that doesn't
+114.429,4.561,have a next pointer is known as the tail
+116.53,4.549,pros and cons of the linked list it's
+118.99,4.08,really good at adding new nodes and
+121.079,3.82,deleting nodes because we can just
+123.07,2.369,change where the next pointer is
+124.899,3.33,pointing
+125.439,5.191,however it's not too good at retrieving
+128.229,4.98,notes even when we know that index or
+130.63,4.74,searching because each node is only
+133.209,3.571,aware of the node next to it data
+135.37,3.63,structure number two is going to be the
+136.78,4.049,array you might already be familiar with
+139.0,4.35,arrays because they're super common in
+140.829,4.591,all programming languages the array is
+143.35,5.04,quite literally a continuous block of
+145.42,4.71,cells in the computer memory by keeping
+148.39,4.7,track of its memory location let's say
+150.13,5.639,the location is 1000 it can instantly
+153.09,4.51,compute the location of any item inside
+155.769,4.411,of it for example let's say we want to
+157.6,3.21,get index number 5 we just add 5 to a
+160.18,2.58,thousand
+160.81,4.23,get a thousand and 5 then we can pull
+162.76,4.229,that value directly out as a result of
+165.04,4.919,this you can probably imagine arrays are
+166.989,5.191,really good at retrieving items however
+169.959,2.881,consider this your array keeps growing
+172.18,1.889,in size
+172.84,3.93,and you start running into other things
+174.069,4.411,in memory for this reason adding isn't
+176.77,3.84,always too efficient because we might
+178.48,4.589,have to move our array to a new place so
+180.61,4.23,it fits luckily this happens under the
+183.069,4.231,hood in high-level languages like
+184.84,4.44,JavaScript and Python but in lower-level
+187.3,4.59,languages you have to declare the size
+189.28,4.02,of your array in advance okay the third
+191.89,4.02,data structure and this one is super
+193.3,4.08,important is known as the hash table you
+195.91,3.359,might be familiar with it because it's
+197.38,3.6,an object in JavaScript or a dict
+199.269,3.151,or dictionary in Python I think
+200.98,3.9,dictionary is a great word because you
+202.42,4.5,basically give the hash table word or a
+204.88,4.439,key and it will retrieve the definition
+206.92,4.2,or the value for you under the hood it
+209.319,3.301,actually works a lot like an array the
+211.12,3.27,key actually gets run through a function
+212.62,4.14,called the hashing function and that
+214.39,4.14,will spit out a memory location for you
+216.76,3.12,the way it's different is these memory
+218.53,3.06,locations don't have to be next to each
+219.88,2.75,other they can be anywhere so you don't
+221.59,3.63,have the same problem with the
+222.63,4.15,increasing size however there is a
+225.22,4.23,different problem depending on the
+226.78,5.64,hashing algorithm you use two keys could
+229.45,5.069,hash to the same memory location this is
+232.42,3.69,what's known as the collision and there
+234.519,3.601,are different ways to resolve this but
+236.11,4.17,again it's all happening under the hood
+238.12,4.05,needless to say the hash tables really
+240.28,4.59,good at both retrieving and adding but
+242.17,4.95,the collisions can be a problem okay
+244.87,5.19,fourth data structure this is a double
+247.12,4.14,is the stack and the queue I'm grouping
+250.06,2.79,them together because they're pretty
+251.26,3.99,similar and they're both kind of built
+252.85,5.25,on top of arrays with a few additional
+255.25,4.919,features the stack is a blast in first
+258.1,4.289,out data structure think of a stack of
+260.169,3.601,cafeteria trays the last one you put on
+262.389,3.271,the top is the first one you have to
+263.77,3.899,take off when we add an item to the top
+265.66,4.379,it's called pushing and then we pop off
+267.669,3.87,the top every language keeps track of
+270.039,4.44,the functions that have been called with
+271.539,4.831,something called the call stack stacks
+274.479,3.601,are also super important for an
+276.37,4.47,algorithm called depth-first search
+278.08,4.29,which you're gonna run into a lot the
+280.84,4.17,queue on the other hand is first in
+282.37,4.65,first add just like any hue or line
+285.01,4.379,let's say a line to board a plane at the
+287.02,4.2,airport adding an item to the end is
+289.389,4.321,called in queueing and removing it from
+291.22,3.99,the front is D queuing queues are used
+293.71,3.75,for a really important algorithm called
+295.21,3.45,breadth-first search over all stacks and
+297.46,3.449,queues are really efficient but have
+298.66,4.53,limited use cases compared to other data
+300.909,4.291,structures finally we're gonna talk
+303.19,2.949,about graphs and trees this one is so
+305.2,2.17,big if
+306.139,3.631,an entire field of computer science
+307.37,4.259,called graph theory what a graph is is
+309.77,3.449,basically kind of similar to a linked
+311.629,3.57,list where you have nodes that are
+313.219,3.961,pointing to other nodes except in this
+315.199,3.601,case the pointers are called edges they
+317.18,3.78,just could also have weights or numbers
+318.8,4.769,assigned to them imagine two cities New
+320.96,4.949,York and Boston the road between them is
+323.569,4.291,the edge and the length of the road can
+325.909,4.021,be the weight of that edge complicated
+327.86,4.47,relationships like social media networks
+329.93,4.079,are also stored as graphs there's a
+332.33,3.959,special kind of a hierarchical graph
+334.009,4.38,called a tree in which the data expands
+336.289,3.451,out in one direction we can use these to
+338.389,3.96,represent a lot of things - like a
+339.74,4.709,family tree or even an HTML tree with
+342.349,3.78,nested elements there's an even more
+344.449,3.99,specific tree called a binary search
+346.129,4.201,tree this tree has really specific rules
+348.439,4.051,but these rules allow us to do things
+350.33,4.53,like searching really really efficiently
+352.49,4.859,the rules are as follows each node can
+354.86,5.1,only have maximum two children left and
+357.349,4.861,right the left has to be less than the
+359.96,3.69,node and the right has to be more with
+362.21,3.929,these rules in place we can traverse
+363.65,4.859,through our tree and always kind of know
+366.139,4.171,where an element is so if I had a five
+368.509,3.301,at the top and I was looking for seven I
+370.31,2.789,would know it's either to the right or
+371.81,3.599,not in my tree at all
+373.099,3.93,unfortunately BST is not the perfect
+375.409,3.66,data structure either if you add
+377.029,4.741,elements in a weird order it can get
+379.069,4.35,very unbalanced or one-sided and you
+381.77,4.47,lose a lot of the advantages you get
+383.419,4.62,with your search optimization there are
+386.24,3.84,self balancing trees but that's getting
+388.039,3.511,into more advanced data structures so
+390.08,3.0,we'll leave those out of here all right
+391.55,3.45,guys these five data structures will
+393.08,3.54,give you a really great foundation to
+395.0,3.719,start solving algorithms this video is
+396.62,4.409,not sponsored but I would recommend
+398.719,3.63,checking out code Wars first followed by
+401.029,3.151,leet code when you get a little bit
+402.349,3.421,better Lee code has programming
+404.18,3.719,interview questions from actual tech
+405.77,4.259,companies so it's really good to
+407.899,4.11,eventually get there anyway guys I hope
+410.029,4.051,you liked this video and if you could
+412.009,4.051,leave it a like it's free for you so
+414.08,4.799,that would really help me out and if you
+416.06,4.889,want to see more short no BS tutorials
+418.879,4.551,then please subscribe alright I will
+420.949,2.481,catch you guys soon
+428.53,5.55,[Music]

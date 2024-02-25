@@ -1,0 +1,330 @@
+second,duration,transcript
+0.669,4.901,"We’re going to go through the 7 most important
+data structures today and explain them as"
+5.57,2.05,simply as possible.
+7.62,3.86,"These are extremely important to learn whether
+its for coding interviews, computer science"
+11.48,1.84,"class, or building projects."
+13.32,4.37,"We’ll be going through the list from easiest
+to hardest, so beginners have a better idea"
+17.69,1.39,of where to begin.
+19.08,4.39,"We’ll go over a simplified explanation for
+what each data structure is and talk about"
+23.47,2.19,common uses for that data structure.
+25.66,4.59,"I’ll also be putting the time complexity
+for common operations on screen, but if you"
+30.25,3.449,"don’t know what that is, don’t worry;
+I’m just including it on the screen for"
+33.699,1.471,people who want to see.
+35.17,5.599,"Let’s not waste any time and get right into
+it."
+40.769,5.28,"Arrays
+Arrays are ordered collections of data."
+46.049,5.27,"Typically the data is all of a similar type,
+like integers or strings, but some languages"
+51.319,2.11,also allow for differing data types.
+53.429,4.22,"An example of a real-life use for an array
+would be if you had temperatures for the next"
+57.649,4.631,"5 days, and wanted to store them so your program
+could access them."
+62.28,3.6,"Arrays are used all the time and for pretty
+much everything, so they’re definitely the"
+65.88,2.79,most important data structure to learn first.
+68.67,4.84,"One of the amazing benefits of using an array
+is that it’s very easy to find any element,"
+73.51,4.56,"as each element in an array is assigned a
+number called an index that you can use to"
+78.07,1.67,find it.
+79.74,5.689,"This form of numbering is often called “zero-based
+indexing”, which just means the first element"
+85.429,3.43,in the array is at an index of 0.
+88.859,4.08,"This can often confuse new programmers, because
+if you want to retrieve the second element,"
+92.939,4.651,"you have to use its index, which is 1, not
+2."
+97.59,4.37,"While the advantage of arrays is that it makes
+it easy to read elements (O(1)), the disadvantage"
+101.96,3.909,"is that they have a slightly harder time inserting
+or deleting elements (O(n))."
+105.869,2.081,"Now, just a quick note."
+107.95,4.089,"We won’t talk about memory much in this
+video, but for the first two data structures"
+112.039,4.341,"in this video, the memory component is very
+simple, and important so you can tell the"
+116.38,1.489,difference between them.
+117.869,4.401,"We’ll use our temperature array from earlier
+as an example."
+122.27,4.099,"Arrays are stored in contiguous memory, which
+means each of the elements in the array are"
+126.369,2.61,next to one another in memory.
+128.979,5.691,"If a new element is added in the middle of
+the array, the entire array must shift down."
+134.67,4.34,"But what would’ve happened if there was
+already something in the next memory address?"
+139.01,4.96,"To fit this new element in now, the array’s
+memory will have to be reallocated to an entirely"
+143.97,3.45,new space where all of the elements fit.
+147.42,5.12,"While computers are incredibly quick, this
+is not very efficient."
+152.54,4.64,"Arrays are very good for reading elements,
+but can a bit less efficient when it comes"
+157.18,1.889,to insertion or deletion.
+159.069,4.87,"Now we’ll take a look at a data structure
+that’s the opposite."
+163.939,5.971,"Linked Lists
+While arrays were fast at reading elements,"
+169.91,5.579,"and a bit slower at inserting or deleting,
+linked lists are a bit slower at reading elements,"
+175.489,3.58,but fast at inserting or deleting.
+179.069,5.611,"Linked lists are similar to arrays, in that
+they also store ordered lists of data elements."
+184.68,5.0,"However, a huge difference is in the way they
+are stored in memory."
+189.68,4.669,"Each element of a linked list has what we
+call a pointer, which is basically the address"
+194.349,3.201,of the next element of the list.
+197.55,5.36,"As a result, elements in a linked list do
+not have to be stored beside each other."
+202.91,4.53,"You can store the next element in any location,
+and the previous element will point to it"
+207.44,2.82,if you want to find it.
+210.26,5.47,"The advantage of this is that it solves our
+problem with array insertions and deletions."
+215.73,4.37,"To add a new element, you find a free spot
+in memory for it, and have the previous element"
+220.1,2.56,point to it.
+222.66,4.34,"To remove an element, you just delete the
+element and have the previous point to the"
+227.0,3.72,one ahead of the deleted element.
+230.72,5.62,"The disadvantage of this is that linked lists
+do not have indexes, as the elements are not"
+236.34,2.59,stored right beside each other.
+238.93,5.149,"This means that to find an element, we have
+to go through the list starting from the beginning."
+244.079,5.02,"If we want the third element, we have to first
+look at the first element, see where it points,"
+249.099,4.991,"go to the second, see where it points, and
+then we find the third."
+254.09,4.49,"If you think of a huge linked list, you can
+start to understand why it’s not the fastest"
+258.58,1.04,at reading.
+259.62,2.21,"So, to recap."
+261.83,4.8,"Arrays are faster when it comes to reading,
+linked lists are faster when it comes to inserting"
+266.63,2.9,and deleting.
+269.53,4.601,"HashMap
+Remember how arrays had values stored, and"
+274.131,2.979,"for each value, there was an index that numbered
+them?"
+277.11,4.86,"Well, hash maps are essentially the same thing,
+except that you can choose what the “index”"
+281.97,3.66,"is, which hash maps call a key."
+285.63,4.53,"The key and it’s value are commonly known
+as key-value pairs."
+290.16,6.12,"The other major difference between arrays
+and hash maps is that hash maps are unordered."
+296.28,3.73,"Hash maps are fast (O(1)) for both inserting
+and removing elements."
+300.01,4.07,"But the real benefit to using hash maps is
+their ability to search quickly (O(1))."
+304.08,4.02,"Let’s say you wanted to store a list of
+capital cities."
+308.1,4.08,"If we stored these in an array, we would have
+to know the index for each one to read it."
+312.18,5.73,"But for a hash map, if we make the keys countries,
+we can just look up the country to find the"
+317.91,2.53,capital city.
+320.44,2.12,Hash maps go by a few different names.
+322.56,5.57,"They are sometimes called hash tables, or,
+if you know Python, they’re called dictionaries."
+328.13,3.75,"For the purposes of this video, you can assume
+they’re all the same thing."
+331.88,3.78,"So, if you know how to use dictionaries in
+Python, congratulations!"
+335.66,1.89,You’ve actually been using hash maps.
+337.55,6.35,"The way hash maps work underneath the hood
+is really interesting, but a bit out of the"
+343.9,1.47,scope of this video.
+345.37,5.01,"I’ll be making specific videos for all of
+the data structures, so we’ll cover hash"
+350.38,2.33,maps more in-depth there.
+352.71,5.22,"For now, just understand that they’re unordered,
+and their custom keys allow for very quick"
+357.93,1.57,searching.
+359.5,5.41,"Stacks & Queues
+The most simple way to describe stacks is"
+364.91,3.15,to think of a stack of plates or pancakes.
+368.06,5.82,"The first plate goes on the bottom, the last
+plate goes the top."
+373.88,6.65,"Stacks are LIFO structures, which stands for
+last in, first out, because the last element"
+380.53,3.83,"in is like the last plate that goes on top
+the stack."
+384.36,6.75,"When you go to grab a plate, this last plate
+on top will be the first you take off."
+391.11,5.34,"Stacks have three common operations, which
+are push, pop, and peek."
+396.45,3.79,"Pushing is when you add a new element to the
+top of the stack."
+400.24,3.35,"Popping is when you remove the top-most element
+from the stack."
+403.59,3.37,"And peeking is when you’re just taking a
+look at what the element at the top of the"
+406.96,1.4,stack is.
+408.36,4.86,"All of these are very fast, which is why stacks
+are optimal for certain problems."
+413.22,4.27,"If you’re wondering when stacks might be
+used, think of the pancake and plate examples."
+417.49,5.06,"For any scenario that has a similar structure
+where the last element in is the first element"
+422.55,5.01,"out, stacks are likely a good data structure
+to use."
+427.56,2.44,Queues are the opposites of stacks.
+430.0,4.36,"The simplest way to think of a queue is like
+a lineup at a grocery store."
+434.36,4.54,"The first person in the line will get serviced
+first, and every additional person who joins"
+438.9,2.64,the line goes at the end.
+441.54,5.38,"Queues are FIFO structures, which stands for
+first in, first out, because the first element"
+446.92,3.6,in is the first element to come out.
+450.52,6.29,"Queues have very similar operations to stacks,
+which are enqueue, dequeue, and front."
+456.81,4.501,"Enqueue is like push for a stack, and is when
+a new element is added to the back of the"
+461.311,1.059,queue.
+462.37,6.89,"Dequeue is like pop for a stack, and is when
+the element on the front of the queue is removed."
+469.26,3.95,"Front is like peek for a stack, and is when
+you take a look at the front-most element"
+473.21,1.24,in the queue.
+474.45,4.85,"Queues are more frequently used than stacks,
+especially in real-world programming."
+479.3,2.56,Think of YouTube playlists.
+481.86,3.99,"When you start watching a playlist, you’ll
+start with the video that was added first,"
+485.85,7.8,"and the last video you watch will be the final
+one that was added."
+493.65,2.52,"Trees
+Trees are a category of data structure that,"
+496.17,3.47,"as you might have guessed by the name, resemble
+trees."
+499.64,4.35,"Trees have nodes, which are connected to each
+other by edges."
+503.99,3.76,"The first node in a tree is called the root
+node."
+507.75,5.4,"Nodes have a parent-child direction, where
+one is a parent node that leads to another"
+513.15,2.48,"node, which is a child node."
+515.63,6.509,"Sometimes, the parent nodes are sometimes
+just called nodes, and the child nodes are"
+522.139,1.27,called leaves.
+523.409,3.97,"There are tons of tree-based data structures,
+but in this video, we’ll be talking about"
+527.379,4.21,"binary trees, and in particular, binary search
+trees."
+531.589,4.821,"A binary tree is a tree where each parent
+node has up to two children nodes."
+536.41,6.5,"A binary search tree is a type of binary tree,
+where all left children nodes are less than"
+542.91,5.34,"the parent node, and all right children nodes
+are greater than the parent node."
+548.25,4.31,"These binary search trees make it very easy
+to search through large amounts of ordered"
+552.56,1.24,values.
+553.8,4.15,"The classic example is to think of a number
+guessing game, where one person thinks of"
+557.95,5.199,"a number between 1 and 100, and the other
+person has to guess."
+563.149,4.24,"With each guess, they get told whether the
+correct number is higher or lower than their"
+567.389,1.291,guess.
+568.68,3.33,"The strategy is to always guess the middle
+number, because then you’re eliminating"
+572.01,3.1,the most amount possible each time.
+575.11,2.07,This is what a binary search tree does.
+577.18,5.389,"We can eliminate a parent node and everything
+below it or above it, and continue that process"
+582.569,2.081,until we get to our correct number.
+584.65,2.28,This is not only useful for this game though.
+586.93,5.149,"A more practical example is to think of a
+digital dictionary."
+592.079,2.86,"Dictionaries have over 100,000 words."
+594.939,4.621,"If you give a computer a word, and want it
+to give you the definition, it would be incredibly"
+599.56,3.769,"slow for it to start at the beginning and
+look through each word until it finds the"
+603.329,1.711,correct one (O(n)).
+605.04,4.56,"Instead, because the dictionary is sorted
+alphabetically, the computer is able to go"
+609.6,4.679,"right to the word in the middle of the dictionary,
+and check if the target word comes before"
+614.279,1.641,or after.
+615.92,3.37,"It continues sorting like this until it reaches
+the word (O(logn))."
+619.29,4.58,"There are tons of other tree-structures like
+heaps and tries, but we’ll leave those for"
+623.87,4.409,another video.
+628.279,6.521,"Graphs
+Lastly we have graphs."
+634.8,3.849,Graphs are basically models for a set of connections.
+638.649,3.771,"Like trees, graphs are made up of nodes and
+edges."
+642.42,6.69,"In fact, trees, and even linked lists to an
+extent, are technically types of graphs."
+649.11,3.63,But graphs can get a lot more complicated.
+652.74,4.77,"In a graph, there are less restrictions than
+with trees."
+657.51,3.22,Nodes can be connected to any amount of neighbours.
+660.73,5.56,"Graphs can be directed, where nodes point
+to other nodes, but they can also be undirected."
+666.29,4.149,"Some graphs have cycles, where two nodes both
+point to each other."
+670.439,5.421,"The edges between nodes can also be weighted,
+where the path has a value associated with"
+675.86,1.05,it.
+676.91,4.55,"As you can see, graphs are very complicated,
+which is why many people consider them to"
+681.46,2.17,be one of the hardest data structures to learn.
+683.63,5.829,"I’m going to make an entirely separate video
+dedicated to graphs, so we’ll tackle the"
+689.459,2.541,complexities in a little bit.
+692.0,4.699,"For now, let’s see an example where graphs
+are useful data structures."
+696.699,4.64,"Imagine you’re running errands, and you
+have five different stores to visit."
+701.339,6.54,"We can represent this as a graph, where each
+store is a node, and each edge has a distance."
+707.879,3.871,"Using this data structure, we can develop
+an algorithm that allows us to calculate what"
+711.75,3.6,"the shortest route between all five places
+is."
+715.35,3.279,"For a real-life example, think of Uber."
+718.629,5.051,"Every Uber driver and user could be seen as
+nodes, and the application is constantly trying"
+723.68,5.959,"to optimize so that the waiting time for each
+rider is as short as possible."
+729.639,4.18,"There are endless applications for graphs,
+which is why they’re such an important data"
+733.819,1.0,structure to understand.
+734.819,1.0,Conclusion & Thank You!
+735.819,1.76,Thanks so much for watching!
+737.579,4.56,"If you enjoyed this content on data structures
+and want to see more data structure videos,"
+742.139,1.88,"comment down below and leave a like on the
+video."
+744.019,4.251,"I want to take a quick moment and express
+my gratitude to everyone for being so incredibly"
+748.27,3.92,"supportive so far, and to celebrate hitting
+1,000 subscribers."
+752.19,4.639,"I started this channel just over a month ago,
+and I’ve been super fortunate to have found"
+756.829,5.041,"1,000 amazing people who have been willing
+to take a chance on my small YouTube channel."
+761.87,5.19,"I never thought I’d be able to hit 100 subscribers
+in this time, let alone 1,000, so I’m just"
+767.06,3.63,so thankful that all of you have been so supportive.
+770.69,4.259,"I promise I’ll do my absolute best to continue
+increasing the quality and quantity of content"
+774.949,2.08,as much as I can.
+777.029,2.3,"Thank you, and 10,000, here we come."

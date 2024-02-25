@@ -1,0 +1,229 @@
+second,duration,transcript
+0.0,4.799,I heard you liked factories so I made
+2.46,5.04,you a factory inside a factory which
+4.799,4.861,inherits from an abstract Factory so it
+7.5,5.4,can create new factories but enough
+9.66,5.46,about programming in Java
+12.9,4.5,in this video we will learn about eight
+15.12,5.7,design patterns every developer should
+17.4,5.459,know in 1994 the gang of four released
+20.82,4.799,the holy book design patterns
+22.859,4.801,introducing 23 object-oriented design
+25.619,5.16,patterns falling into one of three
+27.66,5.76,buckets creational patterns structural
+30.779,4.8,patterns and behavioral patterns while
+33.42,4.319,some argue that it stated the fact that
+35.579,4.261,a 30 year old book is still being
+37.739,4.561,discussed definitely means something
+39.84,4.68,especially in a world where JavaScript
+42.3,4.32,Frameworks are going out of style faster
+44.52,4.26,than you can say JavaScript was a
+46.62,4.259,mistake anyways let's start with our
+48.78,4.86,first creational pattern the factory
+50.879,3.721,imagine that you want a burger but you
+53.64,3.12,don't want to have to worry about
+54.6,4.439,getting all the ingredients and putting
+56.76,4.5,them together so instead you just order
+59.039,4.621,a burger well we can do the same thing
+61.26,4.92,with code if it takes a list of
+63.66,4.62,ingredients to create a burger we can
+66.18,4.86,instead use a factory which will
+68.28,5.46,instantiate the burger for us and return
+71.04,4.98,it to us whether it's a cheeseburger a
+73.74,4.62,deluxe cheeseburger or even a vegan
+76.02,4.86,burger all we have to do is tell the
+78.36,4.799,factory what kind of burger we want just
+80.88,4.02,like you would do at a restaurant but be
+83.159,4.741,careful because this way you'll never
+84.9,5.96,know what's inside the Special Sauce we
+87.9,2.96,added a secret ingredient
+93.72,4.5,now alternatively if you want a little
+95.88,4.62,more control over how the sausage is
+98.22,4.8,made you can go with the builder pattern
+100.5,4.799,the idea is that if we want to make a
+103.02,4.8,burger we don't immediately have to pass
+105.299,5.161,in all the parameters we can use a
+107.82,4.799,burger Builder instead we'll have an
+110.46,4.56,individual method for adding each
+112.619,5.101,ingredient whether it's a bun Patty or
+115.02,5.279,cheese each one will return a reference
+117.72,4.8,to the Builder and finally we'll have a
+120.299,5.1,build method which will return the final
+122.52,5.7,product then we can instantiate a burger
+125.399,4.86,Builder add the Buns that we want the
+128.22,4.379,Patty that we want and the cheese that
+130.259,4.98,we want and we can chain these methods
+132.599,5.161,because remember each one will return a
+135.239,4.86,reference to the Builder finally we can
+137.76,4.8,build it and we have the exact burger
+140.099,5.101,that we want I've used this pattern a
+142.56,4.98,lot at Google with protocol buffers next
+145.2,4.679,we have the Singleton pattern and I'm
+147.54,4.559,not talking about my dating life a
+149.879,4.681,Singleton is just a class that can only
+152.099,5.461,have a single instance of it that's
+154.56,5.399,instantiated it has many use cases for
+157.56,4.74,example maintaining a single copy of our
+159.959,5.161,application stay we would start by
+162.3,5.159,having a static instance variable let's
+165.12,5.16,say in our app we want to know if a user
+167.459,5.401,is logged in or not but we won't use the
+170.28,4.92,Constructor to actually instantiate the
+172.86,5.159,application State we'll use a static
+175.2,4.8,method called get app stay which will
+178.019,3.901,first check if there's already an
+180.0,4.98,existing instance of our application
+181.92,4.8,stay if not we'll instantiate one if
+184.98,4.08,there already is though we'll just
+186.72,5.22,return the existing instance we'll never
+189.06,5.16,create more than one so now if we get
+191.94,4.56,our app State for the first time the
+194.22,4.68,logged in value will initially be false
+196.5,4.26,but if we get the app State again this
+198.9,4.619,will actually still be the first
+200.76,5.339,instance so if we modify the first
+203.519,4.741,instance and then print the logged in
+206.099,4.86,value for both of them they will both
+208.26,4.979,now be true this pattern can be useful
+210.959,5.101,so that multiple components in your app
+213.239,5.101,will have a a shared source of truth but
+216.06,4.8,how can all the components listen for
+218.34,4.38,updates in real time well that's where
+220.86,4.56,the Observer comes in our first
+222.72,5.159,behavioral pattern I prefer to call it
+225.42,5.22,the pub sub pattern it's widely used
+227.879,5.461,Beyond just object-oriented programming
+230.64,5.7,including in distributed systems let's
+233.34,5.819,take YouTube for example every time I
+236.34,5.34,upload a video all of my subscribers get
+239.159,5.281,a notification including you because
+241.68,6.3,you're subscribed right but in this case
+244.44,6.18,the YouTube channel is the subject AKA
+247.98,4.92,publisher which will be the source of
+250.62,4.88,events such as a new video being
+252.9,6.059,uploaded we might want multiple
+255.5,5.979,observers AKA subscribers to all be
+258.959,4.921,notified when these events happen in
+261.479,4.44,real time one way to implement this
+263.88,4.92,pattern is to have a YouTube channel
+265.919,5.461,class which maintains a list of its
+268.8,4.92,subscribers when a new user subscribes
+271.38,5.52,we add them to the list of subscribers
+273.72,5.46,when an event occurs we go through that
+276.9,4.98,list of subscribers and send the event
+279.18,4.98,data to each of them with a notification
+281.88,4.2,but we also have to define the
+284.16,4.38,subscriber interface which you can do
+286.08,4.5,with an abstract class or an interface
+288.54,4.02,different subscribers might implement
+290.58,4.26,this interface differently but for a
+292.56,4.079,YouTube user let's say that we just want
+294.84,4.32,to print the notification that was
+296.639,5.581,received so then we can create a YouTube
+299.16,6.06,channel add a few subscribers and we
+302.22,4.68,only have to call notify once and all of
+305.22,4.199,the subscribers will receive the
+306.9,4.44,notification this is also extensible
+309.419,4.681,enough that a subscriber could be
+311.34,5.4,subscribed to multiple channels an
+314.1,5.34,iterator is a pretty simple pattern that
+316.74,5.22,defines how the values in an object can
+319.44,4.86,be iterated through in Python just
+321.96,5.579,defining an array and then iterating
+324.3,6.179,through it with the in keyword uses the
+327.539,5.401,built-in list iterator this way we don't
+330.479,5.101,even have to index the array now for
+332.94,5.22,more complex objects like binary search
+335.58,5.04,trees or linked lists we can Define our
+338.16,4.979,own we can take a list node which just
+340.62,4.68,has a value and a next pointer and then
+343.139,4.381,a linked list which has a head pointer
+345.3,4.619,and a current pointer we can first
+347.52,4.56,Define the iterator with the inner
+349.919,4.321,function which will just set the current
+352.08,4.619,pointer to the head and then return a
+354.24,4.62,reference to the linked list to get the
+356.699,4.801,next value in the sequence we defined
+358.86,5.52,the next function if our current pointer
+361.5,5.039,is non-null we can get the value and
+364.38,4.2,then return it and also shift the
+366.539,4.5,current pointer but if we reach the end
+368.58,4.74,of the linked list we can send a signal
+371.039,4.44,that we're going to stop iterating to
+373.32,4.2,test it out we can just initialize the
+375.479,4.261,linked list and iterate through it with
+377.52,4.38,the in keyword this is a much more
+379.74,4.92,simple interface than having to actually
+381.9,5.16,update pointers ourselves now if you
+384.66,5.34,want to modify or extend the behavior of
+387.06,5.28,a class without directly changing it you
+390.0,4.86,can go with the strategy pattern for
+392.34,4.859,example we can filter an array by
+394.86,5.1,removing positive values or we could
+397.199,5.461,filter it by removing all odd values
+399.96,5.1,these are two strategies but maybe in
+402.66,4.92,the future we want to add more and we
+405.06,5.759,want to follow the open closed principle
+407.58,5.64,well we can define a filter strategy
+410.819,5.1,create an implementation which will
+413.22,5.22,remove all negative values and an
+415.919,6.0,implementation which will remove all odd
+418.44,7.08,values and then at run time we can pass
+421.919,6.301,this strategy into our values object and
+425.52,5.34,to test it out all we have to do is pass
+428.22,5.4,in the strategy into our filter method
+430.86,5.16,and we'll get our desired result this
+433.62,5.94,way we can add additional strategies
+436.02,6.78,without modifying our values class next
+439.56,5.88,we have the adapter our first structural
+442.8,5.519,pattern it's analogous to the real world
+445.44,6.539,where we have a screw that's too small
+448.319,6.0,to fit into a hole so instead we use an
+451.979,4.381,adapter which makes this screw
+454.319,4.201,compatible with the hole
+456.36,5.459,or maybe an example that you're more
+458.52,6.959,familiar with we have a USB cable and a
+461.819,6.0,USB port we can plug in the USB cable
+465.479,6.0,which will directly fit into the port
+467.819,7.261,but instead if we have a micro USB cable
+471.479,7.44,it's not compatible so instead we need a
+475.08,7.739,micro to USB adapter which extends from
+478.919,7.261,the USB clasp but is composed of a micro
+482.819,6.541,USB cable which will be plugged into the
+486.18,5.579,adapter we can override the plug USB
+489.36,4.86,method from our parent class if needed
+491.759,5.401,but it's not in this case and then we
+494.22,5.52,can plug our micro USB cable into the
+497.16,5.58,adapter and then plug it into the port
+499.74,6.54,and it works just like a regular USB
+502.74,6.239,cable and our last pattern is the facade
+506.28,5.28,according to the dictionary a facade is
+508.979,5.701,an outward appearance that is maintained
+511.56,5.52,to conceal a Less Pleasant or credible
+514.68,5.219,reality in the program programming world
+517.08,5.1,the outward appearance is the class or
+519.899,4.44,interface we interact with as
+522.18,5.46,programmers and the Less Pleasant
+524.339,6.241,reality is hopefully the complexity that
+527.64,5.34,is hidden from us so a facade is simply
+530.58,5.34,a rapper class that can be used to
+532.98,4.859,abstract lower level details that we
+535.92,4.32,don't want to have to worry about I'm
+537.839,5.041,surprised it even qualifies as a design
+540.24,6.18,pattern but some common examples might
+542.88,7.32,include HTTP clients that abstract away
+546.42,7.26,low-level Network details or even arrays
+550.2,6.96,yes a dynamic array like vectors in C
+553.68,6.36,plus plus or arraylists in Java are
+557.16,5.82,constantly being resized under the hood
+560.04,5.28,thankfully as programmers we rarely have
+562.98,4.56,to think about memory allocation though
+565.32,4.8,if you're interested to learn more check
+567.54,5.22,out my newly released object-oriented
+570.12,4.86,design interview course we tackle some
+572.76,4.56,popular interview questions I've
+574.98,5.4,included video less since written
+577.32,5.04,articles and code for four languages and
+580.38,4.38,I'll be sure to add additional lessons
+582.36,6.26,in the future thanks for watching and
+584.76,3.86,make sure to subscribe please

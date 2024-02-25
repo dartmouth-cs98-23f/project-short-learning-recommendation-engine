@@ -1,0 +1,1539 @@
+second,duration,transcript
+0.43,4.17,each year microsoft research helps
+2.98,3.24,hundreds of influential speakers from
+4.6,3.48,around the world including leading
+6.22,3.84,scientists renowned experts in
+8.08,3.9,technology book authors and leading
+10.06,4.88,academics and makes videos of these
+11.98,2.96,lectures freely available
+22.05,8.41,um this is kind of a strange talk for me
+27.25,4.35,to give two years ago I've done a lot of
+30.46,3.39,things that Microsoft had been here a
+31.6,5.19,long time and two years ago I got asked
+33.85,4.68,to join the quantum computing effort and
+36.79,4.38,I thought that in itself was kind of
+38.53,3.959,strange because I'm not a researcher I'm
+41.17,4.41,not a physicist I'm not a mathematician
+42.489,5.191,I ship products you know I built a lot
+45.58,4.92,of stuff and I write code I'm an
+47.68,4.559,architect and wasn't quite sure what I
+50.5,4.65,would do so I started looking around and
+52.239,4.231,the first thing I look for tools I build
+55.15,3.119,tools I try to make people more
+56.47,4.439,productive and I started looking around
+58.269,5.881,this whole field at what tools were
+60.909,4.5,available and the answer was none there
+64.15,2.67,was basically nothing out there
+65.409,3.811,everybody would write what they needed
+66.82,5.97,for their thesis get it done ship it and
+69.22,6.0,throw it away so I started building a
+72.79,4.41,platform and then I went around talking
+75.22,3.509,to all the top names in the field what
+77.2,3.9,would they do with a quantum computer if
+78.729,4.741,they actually had one and it gave him
+81.1,4.38,some sizes gave him some reason ille
+83.47,4.53,technology and they all had things they
+85.48,4.05,would do some pretty surprising but none
+88.0,3.54,of them had an idea of how they would do
+89.53,3.69,it so they knew they had problems to
+91.54,4.8,solve but no one really had ways of
+93.22,6.42,doing it so this talk is about trying to
+96.34,6.36,fill some of that void it's a tool that
+99.64,5.1,we've built that is evolving that we've
+102.7,4.56,done some things further than anyone
+104.74,4.35,else has ever done in the field I've
+107.26,3.36,thrown back some slides that I've been
+109.09,3.81,haven't used for the rest of this trip
+110.62,4.53,because there's the first computer
+112.9,3.509,science based group I've talked to
+115.15,3.03,they've all been mathematicians and
+116.409,3.181,experimental physicists and theoretical
+118.18,3.66,physicists and I get to put some comp
+119.59,4.35,side back in so hopefully some of those
+121.84,7.679,slides will be interesting to the
+123.94,7.17,audience but liquid is designed so that
+129.519,5.761,we can create a simulation environment
+131.11,6.15,um to make it easy to really complicated
+135.28,6.35,quantum circuits and you'll see how
+137.26,6.47,complicated in a little bit efficiency
+141.63,4.02,a real problem if I could do quantum
+143.73,5.25,simulation easily I would need a quantum
+145.65,4.8,computer so how big can you go what can
+148.98,2.94,you do on conventional hardware and how
+150.45,2.97,efficient can you be and actually those
+151.92,5.25,are the slides I threw back in to give
+153.42,5.31,an idea of how hard that is circuits
+157.17,4.41,have to retarget about for many purposes
+158.73,4.23,um what I did is started in the middle
+161.58,3.18,pretty much how you would for
+162.96,4.29,conventional computer science I started
+164.76,5.46,with an abstract idea of what a quantum
+167.25,6.71,computer is logic gates that level and
+170.22,6.39,then work my way up into circuits into
+173.96,4.24,if you will assembly code equivalence
+176.61,3.09,going up and find that we hit a language
+178.2,3.6,at the top that you can actually express
+179.7,4.59,in and compile down into that abstract
+181.8,4.08,model we did that first now we're going
+184.29,5.1,the other way from the abstract model
+185.88,5.82,down into target hardware so noise what
+189.39,4.17,things fall apart communications
+191.7,3.45,limitations only certain things can talk
+193.56,3.45,to certain things how do you compile
+195.15,3.84,down into that how do you optimize for
+197.01,5.21,actual experiments you're going to do in
+198.99,6.42,the lab and machines are going to build
+202.22,5.86,it turns out there's different ways you
+205.41,4.74,can attack this because again you can't
+208.08,4.44,do it all on conventional machine you
+210.15,5.1,can pick specific things you're good at
+212.52,6.36,you can be good at noise you can be good
+215.25,4.74,at physical modeling you can be good at
+218.88,2.79,circuit modeling so we've built
+219.99,3.3,different simulators that all plug into
+221.67,3.21,the same environment so you can write it
+223.29,3.66,once and then run two different
+224.88,5.04,simulations and trade things off and
+226.95,4.92,then flexibility I'm an architect I like
+229.92,3.87,platforms so how do you make it so you
+231.87,3.96,can plug in your own modules change the
+233.79,3.87,definitions extend this over time I
+235.83,4.379,don't like things that are right and get
+237.66,5.48,thrown away six months later so let's
+240.209,10.771,talk about the platform itself yes
+243.14,11.71,simulating go away how far away is the
+250.98,5.129,real computer the one time where's about
+254.85,3.72,we're going to talk a little bit about
+256.109,4.231,one we can buy today okay so we're not
+258.57,3.84,that far away in terms of what people
+260.34,4.23,will tell you is a quantum computer and
+262.41,5.27,the question is it is a paper that just
+264.57,5.37,came out that we just did but
+267.68,4.84,realistically to a real universal
+269.94,5.1,quantum computer minimum 10 probably
+272.52,3.0,closer to 20 years that's about the time
+275.04,2.15,frame
+275.52,4.519,talking about now pieces already exist
+277.19,5.68,experiments exist demonstrations exist
+280.039,4.241,but the real thing that lets say i put
+282.87,3.509,up in the cloud you're going to connect
+284.28,4.8,with azure and use it as a service and
+286.379,6.151,run you know big simulations on 10 years
+289.08,5.28,minimum the yuhl/goel here is the by the
+292.53,3.419,time of their lives we want to be ready
+294.36,3.63,to program well plus I need to program
+295.949,3.84,it so I'd use this as the front end to
+297.99,3.75,program it that's why there's the back
+299.789,3.361,end right so by time you get used to
+301.74,4.5,running the simulation you could also
+303.15,5.16,instead target the real machine so we're
+306.24,3.6,gonna start with the language I spoke to
+308.31,3.81,don last night he said you've got to
+309.84,3.87,push f sharp gotta push after Don always
+312.12,5.76,says I've got to push so I've got my F
+313.71,5.639,sharp mug here I'm one of the few people
+317.88,3.529,he has to tell that to I've been using
+319.349,5.1,since before it was version one
+321.409,5.5,everything I've written in the last many
+324.449,4.111,years has been in f-sharp and I'm a
+326.909,4.32,functional programmer from way way back
+328.56,4.74,so preaching to the choir here but I'll
+331.229,4.051,show you why it's good why it works well
+333.3,4.829,this is also why its language embedded
+335.28,5.31,quantum operations think link this is a
+338.129,3.811,monad that's been implemented inside of
+340.59,4.079,the language and we've extended the
+341.94,5.699,language in some nice ways but again
+344.669,4.711,it's a dotnet language so you can come
+347.639,3.241,it well it for F sharp can come from
+349.38,2.879,scripting level in fact you don't have
+350.88,3.36,to compile anything the whole thing
+352.259,4.141,would be run from scripts which means we
+354.24,4.44,can put this service you can just submit
+356.4,3.69,the script you can come from C sharp or
+358.68,3.359,any other language that can link with
+360.09,4.319,the library so the whole thing is
+362.039,4.891,contained in a library you can get to it
+364.409,4.171,from any language you like it's just for
+366.93,4.82,me the most natural and basically
+368.58,6.179,designed for F sharp as the top level
+371.75,5.77,everything compiles into gates when you
+374.759,5.25,see gates think function so everything
+377.52,3.929,has a definition a logical gate is just
+380.009,3.75,you know a function that implements an
+381.449,4.71,and or an oar or specific quantum gates
+383.759,4.321,that we're going to talk about once this
+386.159,3.69,all gets compiled it's gets sent to
+388.08,4.47,simulators we have three simulators
+389.849,4.741,currently the first is a universal
+392.55,4.53,simulator this will do anything any
+394.59,5.579,quantum computer we might build will do
+397.08,6.269,but it comes at a price you can only do
+400.169,7.071,on a typical 32 gigabyte laptop about
+403.349,6.031,thirty cubits it's 2 to the 30th just
+407.24,4.54,complex numbers to store
+409.38,4.44,and then you have to operate on that so
+411.78,4.8,you do the math you actually do pretty
+413.82,5.13,well fitting into 32 gigabytes you want
+416.58,5.18,another cubit double the memory you know
+418.95,4.74,the cubit double the memory so i have a
+421.76,4.57,simulation running right now this we're
+423.69,4.23,going for 16 days that's running in a 96
+426.33,4.05,gigabyte machine and that's nowhere near
+427.92,5.01,big enough we actually have a bunch of
+430.38,4.85,machines ordered that are a terabyte to
+432.93,4.5,do a lot of the problems we want to do
+435.23,4.09,but there's another way to go don't make
+437.43,4.29,it universal get rid of a lot of the
+439.32,6.27,gates that make it that complex to
+441.72,5.49,simulate and there's a version of us of
+445.59,3.66,the simulator uses only Clifford group
+447.21,4.77,operations don't have to worry what that
+449.25,4.8,is but they're called stabilizers the
+451.98,5.55,interesting part is every quantum error
+454.05,5.88,correction code only uses stabilizers so
+457.53,4.92,you can do research into very
+459.93,4.59,sophisticated quantum error correction
+462.45,4.23,we'll talk about that a little later but
+464.52,5.01,I can do tens of thousands of qubits as
+466.68,3.96,soon as I don't make it Universal so
+469.53,2.76,this is where you can trade off the
+470.64,3.45,number of qubits versus the operations
+472.29,3.87,you're allowed and then there's a
+474.09,5.13,Hamiltonian simulator this lets you do
+476.16,4.53,actual physics and it turns out a lot of
+479.22,4.08,the types of machines we're talking
+480.69,4.35,about depend very much on the actual
+483.3,3.84,physics you can't just abstract it away
+485.04,3.51,and are times you don't want to there
+487.14,3.12,are things problems you'd like to set up
+488.55,3.93,especially in machine learning that
+490.26,4.65,require the actual hamiltonians again
+492.48,4.8,this is universal again takes about
+494.91,4.77,thirty cubits in 32 gigabytes but it's
+497.28,4.32,slow so now you've traded off from the
+499.68,4.17,universal to make it more physically
+501.6,4.23,accurate now you have to run much slower
+503.85,4.59,because you have to fix up all the
+505.83,4.2,problems of basically doing a
+508.44,8.13,differential equation that you're
+510.03,8.34,solving along the way it buys you
+516.57,3.09,physical modeling so for instance I can
+518.37,3.33,actually do time derivatives I can
+519.66,3.569,actually watch the times I actually say
+521.7,3.9,spin glass problems we can do some of
+523.229,4.741,these where I actually have to be
+525.6,3.48,flipping key i'm doing a kneeling and to
+527.97,2.97,do a kneeling up the drill to drop a
+529.08,4.08,temperature and to drop the temperature
+530.94,5.13,i have to actually do not each gate but
+533.16,4.77,between each the the interactions
+536.07,4.269,between all the gates over time as we go
+537.93,5.98,from gate to gate
+540.339,6.331,most physical simulation of the machine
+543.91,4.109,yes but that doesn't change the appt
+546.67,3.63,with each other well no it's not too I
+548.019,3.961,the way no no if I'm doing annealing
+550.3,2.969,right when you do a kneeling do similar
+551.98,4.079,to kneeling on a regular classical
+553.269,4.26,machine you have to break it up to do
+556.059,3.27,time simulation right you're actually
+557.529,3.18,going that's what the Hamiltonian will
+559.329,3.81,do as opposed to saying if I just went
+560.709,3.93,from here at a to be I lose all the
+563.139,8.07,dynamics in between I won't get the
+564.639,8.971,right answer right is doing the voltage
+571.209,4.92,is actually different problem in coding
+573.61,3.87,completely right and so we actually have
+576.129,3.721,different ways of looking the problem
+577.48,4.079,and liquid will let you write it once
+579.85,5.179,and then send it to different ones and
+581.559,8.88,see how they operate and how they work
+585.029,6.641,yep whatever you'd like to define if you
+590.439,3.421,know the physics you're doing a Trotter
+591.67,4.05,ization and you get to pick the Trotter
+593.86,4.32,number so if you want a thousand twenty
+595.72,5.13,four steps between each and you want to
+598.18,4.5,do the problem is I don't want to go too
+600.85,4.469,far down this track but and we can do it
+602.68,4.68,offline but the problem is the terms
+605.319,3.81,that are in this equation aren't
+607.36,3.959,commutative and you don't know what
+609.129,3.481,order you actually have to have to
+611.319,3.21,compute them in because they really want
+612.61,4.409,to all be done in parallel so you have
+614.529,4.53,to do is do five enough time steps to
+617.019,3.48,get rid of the come utility the anti-com
+619.059,3.57,you tivity problems and that's the
+620.499,3.51,Trotter ization so by picking a finer
+622.629,3.781,and finer cauterization get a more
+624.009,3.93,accurate answer but each one is x is
+626.41,3.06,twice as slow every time you had a
+627.939,3.15,charter number it's twice as slow so
+629.47,3.719,everything in this game is exponential
+631.089,3.3,and you have to trade off very carefully
+633.189,5.13,because things can take literally
+634.389,5.82,forever run time so have 31 times
+638.319,6.091,currently the client runtime this will
+640.209,6.511,run on your laptop your desktop you just
+644.41,6.179,bring it up put it in the script or
+646.72,7.529,write the code it works service it's a
+650.589,5.49,virus on purpose you sit there here in
+654.249,4.53,the lab and you say I have accounts on
+656.079,4.831,all those machines on my land it'll self
+658.779,3.841,install itself across all of them it'll
+660.91,3.179,become a windows service they'll all
+662.62,3.719,look up and talk to each other now you
+664.089,3.87,can run ensemble simulations across all
+666.339,3.0,the machines in the lab and they have
+667.959,4.771,them take themselves down and D install
+669.339,4.771,nobody knows you were there there's
+672.73,3.0,nothing to tune other than
+674.11,3.21,xml file that says here are the machines
+675.73,3.45,i have accounts on and here's where to
+677.32,4.259,run the executable from everything else
+679.18,4.68,is automatic and since we can do that we
+681.579,4.291,can go to the cloud you have a cluster
+683.86,4.32,you want to run an azure you hear you
+685.87,4.08,submit a script it goes off pence ends
+688.18,3.779,the script across to I don't know five
+689.95,4.319,thousand machines does your ensemble
+691.959,4.591,brings it back I'm using the word
+694.269,4.981,ensemble because you don't ever break up
+696.55,3.96,a computation across machines you'll see
+699.25,2.79,why in a few minutes it's just too
+700.51,3.389,inefficient there's no way you can
+702.04,3.81,afford it but most of these are
+703.899,3.721,statistical computations so you want to
+705.85,3.179,run thousands of them anyway so you
+707.62,3.089,might as well put one per machine and
+709.029,4.62,then use all the threads available on
+710.709,5.25,those machines but nice thing about F
+713.649,4.471,sharp its introspective we have
+715.959,3.601,reflection so we go download through all
+718.12,4.05,these functions instead of running them
+719.56,5.13,we have them describe themselves back we
+722.17,3.78,build the AST we read the AST and we
+724.69,3.72,actually create a data structure which
+725.95,4.86,is now the circuit that r is represented
+728.41,3.81,by all those functions once you have a
+730.81,4.89,data structure we can do anything we
+732.22,5.01,want to it we can optimize it and then
+735.7,3.84,send it back down through the simulators
+737.23,5.0,again we can do quantum error correction
+739.54,5.58,we can apply just like you would do in
+742.23,4.96,the classical case replace each one of
+745.12,4.23,these gates with a error corrected
+747.19,4.32,version that runs on multiple bits or in
+749.35,4.32,this case qubits at the same time does
+751.51,4.47,voting does correction fixes things up
+753.67,7.38,based on error models we could do some
+755.98,7.2,examples soul of a cat I of this most
+761.05,3.99,your computations are rotations there
+763.18,3.36,are things you want to move and the
+765.04,3.9,problem is physical Hardware can only
+766.54,5.19,let you usually move in certain discrete
+768.94,4.35,rotations this lets you build equivalent
+771.73,4.049,circuits that gets you to any exact
+773.29,4.83,rotation you want by doing these course
+775.779,5.401,ones along the way and so this will say
+778.12,5.49,I need a 10 to the minus sixth accuracy
+781.18,3.96,angle and this will put the thousand
+783.61,2.849,gates together necessary and replace
+785.14,3.12,that one angle with the gates you
+786.459,3.75,actually have on the physical machine so
+788.26,3.569,this is going down now from the abstract
+790.209,5.581,level saying here the gates I actually
+791.829,6.391,have replaced them all as needed noise
+795.79,6.239,noise is a big problem we'll talk about
+798.22,5.81,that in a little bit but if you look at
+802.029,3.381,something quantum it falls apart
+804.03,3.06,looking at it doesn't mean you looking
+805.41,4.53,at it it means the environment
+807.09,5.88,interacting with it things d co here no
+809.94,5.67,matter what you do and so you have to be
+812.97,3.75,able to handle that noise is the quantum
+815.61,3.06,error correction but you also have to be
+816.72,3.3,able to model it the simulation won't do
+818.67,3.99,you much good unless you know what's
+820.02,5.58,happening so there are different types
+822.66,4.71,of noise bit flips phase flips just
+825.6,4.29,bleeding of energy off to the
+827.37,4.53,environment as things slowly d cojiro
+829.89,3.57,over time all of that's modeled in the
+831.9,2.94,system and you can apply that to all of
+833.46,7.26,your circuits will show you what that
+834.84,7.2,looks like oh yeah oh I'm going to be
+840.72,4.11,doing details I need this is just to
+842.04,4.53,show the architecture okay let's get
+844.83,3.99,there okay so I'm going to just quickly
+846.57,3.6,finish this export just let you take
+848.82,3.87,these data circuits and send them to
+850.17,4.44,backends we have two types classical we
+852.69,3.24,have people of giant super computers and
+854.61,2.55,want to be able to run this so we give
+855.93,3.81,them in a form they can do linear
+857.16,4.02,algebra and say go run and then quantum
+859.74,3.06,as I mentioned you have a lab experiment
+861.18,3.42,you actually want to output to control
+862.8,3.51,that lab experiment and finally
+864.6,3.83,rendering everybody hates drawing all
+866.31,4.41,these circuits for technical journals
+868.43,3.94,this draws them for you and you'll see
+870.72,3.48,examples okay let's actually get into
+872.37,3.69,things I'm going to skip the bit of F
+874.2,4.14,sharp syntax I'm going to shoot su most
+876.06,5.91,people in the room have an idea but you
+878.34,7.26,know / ends our association arrays lists
+881.97,5.13,how you call things you can pipe what no
+885.6,3.63,looks like and then we've added some
+887.1,3.69,operators so we've overloaded all the
+889.23,3.39,usual math operators do complex
+890.79,3.99,arithmetic nothing you wouldn't expect
+892.62,4.5,we have chronic or products we have
+894.78,6.36,vector matrix multiplies all these are
+897.12,6.39,full precision complex operators there
+901.14,4.74,are convenience operators that let you
+903.51,3.93,for instance map one gate to a bunch of
+905.88,2.91,qubits they do this gate on all these
+907.44,4.47,qubits just things that make your life
+908.79,4.98,easier um there's just some nice things
+911.91,3.84,that say no matter what I have it's a
+913.77,3.96,bag of stuff look in there four cubits
+915.75,5.07,turn it into a legalistic cubits to use
+917.73,4.65,so again convenience functions when I
+920.82,4.17,talk gates this is what I'm talking
+922.38,4.08,about so these are our bottom level
+924.99,7.05,logical operations that we've been
+926.46,6.96,talking so an X which is a flip in one
+932.04,3.48,dimension so we're in three dimensions
+933.42,4.46,here we can flip an X flip and why flip
+935.52,4.91,and z so he's just saying flip this
+937.88,4.5,state it's a vector in on a sphere and
+940.43,6.02,we're flipping wherever it's pointing in
+942.38,4.07,the X direction the Y direction of the Z
+947.47,6.34,it is well it's a unit it's yes it's a
+951.23,5.16,it's it's always unit and so it's only a
+953.81,4.41,2 angles basically right where it sits
+956.39,4.68,and so there's two complex numbers and
+958.22,5.43,what the arch your pointing at is the
+961.07,4.86,North Pole is 0 the South Pole is one
+963.65,4.44,that's the basis here and you're just
+965.93,4.29,giving the magnitude in each direction
+968.09,3.87,in between those two complex which gives
+970.22,4.53,you the phase as well and that's how
+971.96,6.09,everything in the entire system looks is
+974.75,5.64,this collection of complex numbers that
+978.05,4.98,describe a state with all the qubits are
+980.39,4.56,pointing in the 01 sphere in effect it's
+983.03,2.94,actually gets more complicated as soon
+984.95,3.0,as you have two of them you can't
+985.97,6.24,actually visualize it but one that works
+987.95,7.38,um but the matrix is what you have to do
+992.21,4.89,that's what you multiply your your two
+995.33,4.2,complex numbers by and if it's a one
+997.1,4.41,cubit gate to get the output of applying
+999.53,3.39,that gate so one of them flips it in one
+1001.51,4.41,direction one room flips it along the
+1002.92,4.95,imaginary axis one flips it along the in
+1005.92,5.1,the other case the z axis the Z is the
+1007.87,6.41,North Pole and South Pole so zero is
+1011.02,7.95,this way and one is that way um
+1014.28,6.22,everything including Z down z str4 our
+1018.97,4.23,examples of rotations that are going
+1020.5,4.439,half an angle further each time so Z
+1023.2,5.46,we're flipping the whole way as for
+1024.939,5.13,moving half t one quarter one-eighth and
+1028.66,3.0,you can do as many as you want but just
+1030.069,2.941,showing that's what the rotations
+1031.66,3.6,they're just the bottom corner going
+1033.01,5.49,higher and higher or smaller and smaller
+1035.26,4.98,in terms of the value identity why do
+1038.5,4.17,you need identity you multiply you get
+1040.24,4.5,the same thing out for noise things that
+1042.67,3.57,just sit there go bad over time so you
+1044.74,4.65,want to be able to insert identities and
+1046.24,4.86,watch them going bad hadamard is what
+1049.39,3.48,gives you super position if I put in
+1051.1,4.41,somebody who is pointing at the North
+1052.87,4.38,Pole his value is zero and I run them
+1055.51,3.36,through a hadamard I get somebody who's
+1057.25,4.08,half pointing at zero half pointing at
+1058.87,4.05,one he's in superposition so the
+1061.33,3.93,difference here is think of as a
+1062.92,3.78,probabilistic bit you can have it
+1065.26,3.78,anywhere between zero and one with a
+1066.7,4.41,probability the reason it's more than
+1069.04,2.76,just that it also has a phase so you can
+1071.11,2.28,point to anywhere
+1071.8,8.34,the sphere we're straight-up would be
+1073.39,12.06,zero straight down would be one they are
+1080.14,7.05,yes okay and in effect they're actually
+1085.45,3.51,in all that it's when you read when you
+1087.19,3.21,try to look at it you get a probability
+1088.96,3.09,of seeing the zero or seeing the one
+1090.4,3.72,they become probability when you look at
+1092.05,4.89,them they're actually wave functions if
+1094.12,4.26,you want to be exact the equivalent of
+1096.94,2.88,in-class compute you have an and gate
+1098.38,3.48,and build everything out of NAND gates
+1099.82,3.9,here you have a see not so controlled
+1101.86,3.54,not if the top is a zero the bottom goes
+1103.72,3.48,through unchanged at the top is a one
+1105.4,5.13,the bottom gets flipped that's the
+1107.2,4.86,controlled not but remember it's some
+1110.53,3.63,probability in some directions it's a
+1112.06,3.57,combination of 0 1 and that passes
+1114.16,4.62,through and get a combination of the
+1115.63,5.46,controlled not out the other end swap
+1118.78,4.56,flips the values measure is how you get
+1121.09,3.93,actual conventional data out you put a
+1123.34,3.18,qubit in you measure it and with those
+1125.02,4.08,probabilities you're either going to
+1126.52,4.14,only get a 0 or a 1 out you get a bit
+1129.1,4.5,and that's how you collapse everything
+1130.66,4.59,down to a bit you can of course use a
+1133.6,3.0,bit to say whether or not to do a gate
+1135.25,3.99,so what you'll see when you see the
+1136.6,4.41,double bar that means it's a bit so
+1139.24,4.2,there's a bit on top of that X that says
+1141.01,5.61,if it's a 1 do the X if it's a zero
+1143.44,5.37,don't do the X and then finally I want
+1146.62,5.73,to create a qubit i put in a binary
+1148.81,5.52,value in this case 0 and I get a qubit
+1152.35,3.57,back out the other end so these this is
+1154.33,3.0,pretty much with the zoo at the bottom
+1155.92,3.21,looks like you just want to give a feel
+1157.33,5.49,for what you're going to see on other
+1159.13,5.46,diagrams all of these are unitary
+1162.82,3.99,operators except for the last three
+1164.59,4.2,unitary means when I pass them through
+1166.81,3.39,in one direction I can play them back in
+1168.79,4.53,the other direction and I get the same
+1170.2,5.61,thing I started with so every quantum
+1173.32,5.25,circuit you see outside of when we
+1175.81,3.93,measure is playable all the way from the
+1178.57,2.85,beginning to the end and from the end
+1179.74,4.5,all the way back to the beginning always
+1181.42,4.92,and there are a number of things that
+1184.24,4.94,does for you in natural physical side
+1186.34,5.34,there's no heat dissipation it actually
+1189.18,4.39,takes no energy to do this you're
+1191.68,3.6,running super conductive and everything
+1193.57,4.47,stays in a superposition but what it
+1195.28,4.44,also means if I had an and gate can't
+1198.04,3.03,actually do an and gate because you lose
+1199.72,3.72,information when you go through the end
+1201.07,3.75,so you have to do two wires one is
+1203.44,2.07,actually the end and the others the
+1204.82,2.64,information
+1205.51,3.99,it back if you go the other way and
+1207.46,3.45,that's why all of these look like this
+1209.5,4.86,with the matrices because you can run
+1210.91,4.98,them in either direction okay hello
+1214.36,3.39,world is what we would do for the
+1215.89,4.47,canonical example for conventional let's
+1217.75,6.3,do the canonical hello world for quantum
+1220.36,5.7,which is called teleport Alice and
+1224.05,3.51,tangles two qubits so we have two qubits
+1226.06,3.66,on the Left starting in zero we're going
+1227.56,4.43,to superimpose the one qubit so he's
+1229.72,4.95,between zero and one the controlled not
+1231.99,5.73,entangles them together so this is
+1234.67,6.33,called an epr gate or an epr circuit
+1237.72,6.07,Einstein Podolsky Rosen I always get it
+1241.0,4.59,wrong but all it means we have two
+1243.79,3.72,qubits that are maximally entangled at
+1245.59,4.05,this point they completely share mutual
+1247.51,3.99,information we somebody wants all flat
+1249.64,5.49,explain all the math and how it all goes
+1251.5,4.74,together but Bob is going to take one of
+1255.13,4.91,the cuba's to the other side of the
+1256.24,6.51,universe ok Bob walks away with this guy
+1260.04,5.59,alice is given a qubit with a message on
+1262.75,4.88,it it's somewhere on that that sphere we
+1265.63,4.29,talked about a vector pointing somewhere
+1267.63,5.95,she entangles it with the qubit she
+1269.92,5.16,still has and then she's going to
+1273.58,3.47,measure both qubits know what I should
+1275.08,4.59,mention is as soon as she entangled it
+1277.05,5.29,Bob's qubit changed no matter where he
+1279.67,5.22,is in the universe and he actually has
+1282.34,5.28,the answer but it turns out he can't see
+1284.89,4.32,it the answer is encoded in a way
+1287.62,3.57,there's no way so we didn't it looks
+1289.21,3.48,like we broke relativity that we can go
+1291.19,2.52,faster than the speed of light and take
+1292.69,2.61,this thing from one end of the universe
+1293.71,3.89,and send it to the other but the
+1295.3,4.98,information hasn't been transferred yet
+1297.6,4.66,the state of the qubit changed but you
+1300.28,4.5,can't do anything with it until she
+1302.26,6.12,actually reads out the state of her two
+1304.78,4.98,qubits trance them but transmits them by
+1308.38,2.79,a classical channel which means now
+1309.76,2.85,she's got to send these two bits across
+1311.17,7.26,the universe we're back to the speed of
+1312.61,7.92,light and then Bob can use it to decode
+1318.43,4.32,the qubit those two bits are enough to
+1320.53,4.29,get back an infinitely accurate
+1322.75,3.36,representation of what was put in so he
+1324.82,2.64,was able to transfer a lot of
+1326.11,4.89,information but he still needed those
+1327.46,5.25,two bits to get it back out don't worry
+1331.0,3.24,about what it all means what I'm trying
+1332.71,4.26,to show is the way these circuits work
+1334.24,4.44,they look like a staff of music each one
+1336.97,3.66,is a qubit you
+1338.68,4.41,gates on or between them along the way
+1340.63,4.02,and everything moves left to right this
+1343.09,3.78,is how you draw a circus this is how the
+1344.65,3.87,gates look in them and this is believe
+1346.87,5.16,it or not about the simplest example you
+1348.52,5.85,can do our Bob recovers the sent message
+1352.03,4.71,and everybody's happy let's actually
+1354.37,4.02,look at the f-sharp code okay again I'm
+1356.74,3.27,not going to detail this isn't a course
+1358.39,2.97,on quantum computing I'm trying just
+1360.01,3.12,give a feel for what this looks like
+1361.36,3.48,when you play with it I should also
+1363.13,3.03,mention I didn't draw this circuit when
+1364.84,3.15,you write the code the circuit comes out
+1366.16,6.69,automatically so everything gets
+1367.99,7.26,rendered for you as you go so that epr
+1372.85,4.32,circuit is just an f-sharp function it
+1375.25,3.81,takes a list of qubits for it's a
+1377.17,3.3,hadamard on the first element in the
+1379.06,3.06,list and a controlled not on the first
+1380.47,3.54,two elements of the list so you can hand
+1382.12,3.69,in variable lists and all the gates
+1384.01,5.16,operate on however many qubits they need
+1385.81,4.92,from the top of the list the actual the
+1389.17,3.06,rest of the algorithm teleports a
+1390.73,4.59,function I'm going to name the first
+1392.23,6.24,three cubits in the list I'm do an epr
+1395.32,5.49,function on q1 and q2 see not the first
+1398.47,4.41,two and how to marred measure it by a
+1400.81,4.68,control it measure it binary control it
+1402.88,4.62,and there's the circuit so it's not a
+1405.49,3.54,lot of code you can very quickly build
+1407.5,4.05,these up and of course each one of these
+1409.03,4.32,you build is a gate or is a function and
+1411.55,4.56,so you can build them all the way up as
+1413.35,4.14,deep as you like there's also some soo
+1416.11,3.48,degay pseudo gate so I can put little
+1417.49,4.26,labels like the source and the zero and
+1419.59,4.62,the destination on there I can do some
+1421.75,5.28,simple optimization fold says move
+1424.21,4.89,everybody to the left that doesn't hit
+1427.03,4.38,someone else this is things you could do
+1429.1,3.87,in parallel in a machine and now
+1431.41,3.42,everything lines up nicely looks
+1432.97,3.99,prettier if you're doing a journal
+1434.83,4.74,article instead of saying giving me SVG
+1436.96,5.01,code in HTML you can say now give me
+1439.57,4.77,latex source and so this is Q circuit
+1441.97,4.29,output inlay tech so every paper we've
+1444.34,5.54,been publishing it just auto generated
+1446.26,7.98,by the simulator all the circuits we do
+1449.88,5.89,now this is this the slides I threw back
+1454.24,3.27,in for this audience just to show you
+1455.77,6.09,what it takes to do this on the computer
+1457.51,6.66,science side so we have these gates the
+1461.86,4.62,gate is a unitary operator that's 2 to
+1464.17,4.98,the N by 2 to the N and so if you have n
+1466.48,5.39,qubits that's 2 to the 30th by 2 to the
+1469.15,4.82,30th it's big the state vector
+1471.87,4.89,keeping track of all of these qubits is
+1473.97,4.62,also 2 to the 30th in size you multiply
+1476.76,3.48,each of these gates by that so if you do
+1478.59,3.719,this it's extremely inefficient takes
+1480.24,3.99,ridiculous amounts of memory it's not
+1482.309,3.451,pretty you run out of simulation address
+1484.23,5.76,quickly you run out of memory quickly
+1485.76,8.549,everything just goes bad the state
+1489.99,5.7,itself only gets that big when qubits
+1494.309,3.241,are entangled like we showed in the
+1495.69,3.36,teleport example so if things are in
+1497.55,2.79,registers they're separate from each
+1499.05,2.67,other you really don't need that big a
+1500.34,3.24,vector you'll have to keep the things
+1501.72,3.9,that are entangled together other things
+1503.58,3.99,that are separated or very small when
+1505.62,4.98,you start out with 30 cubits it only
+1507.57,5.03,takes 30 memory elements the entangle
+1510.6,4.59,two of them those two just became for
+1512.6,6.52,entangle that with another two that
+1515.19,5.34,becomes 16 and so that if you keep track
+1519.12,4.05,of the entanglement you can be very
+1520.53,4.32,efficient about the size but you can't
+1523.17,3.0,compress it further it's dense at that
+1524.85,4.47,point there's nothing else you can do
+1526.17,11.1,with it the operator is really sparse
+1529.32,15.48,may just have these yep probabilistic
+1537.27,9.24,way and when we're doing inference and
+1544.8,4.74,machine learning context in very large
+1546.51,5.4,state spaces somehow we always never try
+1549.54,6.96,and actually represent every possible
+1551.91,6.24,state exactly and I guess it's certainly
+1556.5,4.17,if there are known in dependencies
+1558.15,6.36,between the levels of qubits and we
+1560.67,6.15,factor that's a way of reducing and the
+1564.51,4.56,state start easy but then nice people
+1566.82,4.65,often use approximations that can be
+1569.07,5.43,extremely accurate can't do it here and
+1571.47,4.92,the problem is it's not probabilistic
+1574.5,4.74,it's fully deterministic until you
+1576.39,6.03,measure it and those effects can be
+1579.24,4.89,extremely fine grained you don't know to
+1582.42,3.36,the end what you can approximate there
+1584.13,3.69,is nothing you can approximate is where
+1585.78,3.96,you fall apart here let me I did large
+1587.82,4.23,scale you know machine learning for
+1589.74,3.75,years and that was great now I can take
+1592.05,4.379,massive problems and you know the size
+1593.49,4.62,of the web right and bring them down and
+1596.429,3.331,here you don't have the luxury you
+1598.11,3.569,actually have to keep every you know
+1599.76,4.26,full precision complex number all the
+1601.679,4.041,way to the end and then you can actually
+1604.02,4.19,measure it out probably in throat
+1605.72,4.59,away but you don't know until the end
+1608.21,3.6,because you're actually keeping all the
+1610.31,4.35,fine grain interactions you don't know
+1611.81,5.01,which ones are important and so it's
+1614.66,3.3,frustrating as hell but if you really
+1616.82,2.79,want to similarly what goes on in the
+1617.96,4.77,machine you can't throw it away that's
+1619.61,7.11,sort of the bottom line we can talk
+1622.73,5.91,about it if you like okay yeah so the
+1626.72,6.15,prop you have a really sparse operator
+1628.64,6.39,but again it's its massive and it's hard
+1632.87,3.87,to keep track of and remember even if
+1635.03,3.36,I've got a little gate I have to expand
+1636.74,5.16,it out to the size of the state vector
+1638.39,6.69,to multiply the two so I have even for
+1641.9,5.58,little gates I have the same problem so
+1645.08,4.14,when act to the standard talk this is
+1647.48,3.36,just F sharp code so we put it in a
+1649.22,3.42,classical rapper you call the function
+1650.84,4.98,just like any other phone classical
+1652.64,5.55,function in here every top initial one
+1655.82,5.19,is a random state vector we started with
+1658.19,5.58,Simon's question there's your magnitudes
+1661.01,4.5,on the complex number on zero the
+1663.77,4.38,complex number on one saying where that
+1665.51,4.53,vector is in the sphere we go through we
+1668.15,4.41,read out the bits that says whether do
+1670.04,3.99,the X or the Z flip and lo and behold we
+1672.56,3.09,get the same vectors back out you know
+1674.03,3.9,hello world works this is the equivalent
+1675.65,3.96,of you run it through comes out you get
+1677.93,3.86,in hello world everything worked your
+1679.61,5.76,simulator actually does something useful
+1681.79,6.01,this can also be run as a script so
+1685.37,5.25,you've got multiple options you can just
+1687.8,6.42,run FSI directly on the script and say
+1690.62,6.12,do it you can do a use which lets you
+1694.22,4.41,stay in the simulator after it runs you
+1696.74,4.05,can look at the states and the values
+1698.63,3.78,and all of that you can have liquid run
+1700.79,3.72,it for you which will take the script
+1702.41,4.29,compile it into a dll and then reload
+1704.51,4.29,the dll back in of course now you have a
+1706.7,4.08,dll s you can also run the dll directly
+1708.8,4.2,it's got lots of options from a script
+1710.78,4.8,level if you don't want to actually get
+1713.0,3.99,into visual studio environment i said i
+1715.58,3.48,wanted to make this fully extensible
+1716.99,4.83,here's the actual controlled not gate
+1719.06,3.99,this is all the code for it everything
+1721.82,3.81,that's in here can be rewritten by the
+1723.05,5.91,user can be extended they replaced and
+1725.63,5.16,so you have a name for it some help you
+1728.96,3.27,have a sparse matrix definition that
+1730.79,3.18,says here are those elements of the
+1732.23,5.04,matrix I showed you on the earlier slide
+1733.97,5.64,and drawing is the latex commands for Q
+1737.27,4.409,circuit parameterised so you can say
+1739.61,4.59,put this on this cubic but this here
+1741.679,4.38,here's how I want to drawn and that's it
+1744.2,7.08,so that's all you need to do to do a
+1746.059,6.99,gate I also said you could take those
+1751.28,3.39,same functions and turn them to circuits
+1753.049,3.331,this is how you do it into a data
+1754.67,4.139,structure a circuit compile of the
+1756.38,4.26,teleport function give it some cubits if
+1758.809,5.131,I say dump the data structure back out
+1760.64,4.86,you get back out a definition of all the
+1763.94,4.109,different gates that were in teleport
+1765.5,3.929,what matrices what wires there on and
+1768.049,3.061,then from this you can go to anything
+1769.429,5.341,you like and go a supercomputer you can
+1771.11,5.069,go to actual control of a system you
+1774.77,3.45,just want to show you how compact this
+1776.179,3.961,can be this is an entanglement test that
+1778.22,3.66,says superimpose one cubit and then
+1780.14,3.6,entangle it with everybody and then
+1781.88,3.78,measure them all well since everybody's
+1783.74,3.21,fully untangled if I look at one of them
+1785.66,5.07,they're all going to collapse to the
+1786.95,4.88,same thing so if you look we get with
+1790.73,3.27,about fifty percent probability
+1791.83,3.61,sometimes we'll get zeros sometimes we
+1794.0,3.03,get ones no matter which one you looked
+1795.44,4.979,at first all the others collapse to the
+1797.03,5.01,same thing to generate that circuit we
+1800.419,4.64,created a function that just said
+1802.04,5.85,Hadamard the first qubit remember him
+1805.059,4.661,mapped to the tale a scene up between
+1807.89,4.35,him and everyone else and then map a
+1809.72,4.77,measurement across all the qubits so you
+1812.24,6.45,get very complex very quickly with very
+1814.49,5.49,small amount of code parallel version
+1818.69,3.15,this is a little more complicated
+1819.98,3.66,version that I said fold it and now
+1821.84,3.6,everybody moves in time the 48th time
+1823.64,3.93,steps really only takes ten time steps
+1825.44,4.41,to execute so you do analyses of
+1827.57,4.109,sequential versus parallel times on a
+1829.85,4.35,target computer and see what it would
+1831.679,4.861,look like this is the actual F sharp
+1834.2,4.59,code not going to go into it in waiting
+1836.54,3.69,is interested I can I can explain the
+1838.79,3.509,lines but that's how we generated the
+1840.23,4.53,previous circuit and this is it running
+1842.299,4.141,so this is 20 entangled qubits takes
+1844.76,3.87,about two seconds that's in the brackets
+1846.44,4.35,each time we get all zeros and all ones
+1848.63,4.74,as we'd expect this is running on my
+1850.79,6.12,cluster so anywhere from 80 to 100
+1853.37,5.429,percent utilization that took a thousand
+1856.91,3.3,runs of 22 entangle qubits in three and
+1858.799,3.801,a half minutes so now we're starting to
+1860.21,7.26,get into some more interesting scaling
+1862.6,6.22,it yeah yeah this is all Universal only
+1867.47,4.709,talking Universal at this point so this
+1868.82,4.14,you can do anything in this one um well
+1872.179,1.98,let's do some
+1872.96,3.48,thing that everyone knows Shor's
+1874.159,4.201,algorithm let's factor okay that's it
+1876.44,3.45,soon as you say quantum everybody says
+1878.36,4.83,oh we're going to break our essay and
+1879.89,6.0,not so much but this is a simple circuit
+1883.19,4.44,I should say the biggest number you see
+1885.89,5.73,in any of the published papers factoring
+1887.63,7.32,is the number 15 okay four bits four
+1891.62,6.419,cubits in this case as a 4-bit number
+1894.95,6.3,takes eight nine ten eleven cubits to do
+1898.039,4.321,the circuits actually 8200 gates one of
+1901.25,2.64,the nice things about the circuit
+1902.36,3.51,renderers you can say give me different
+1903.89,4.649,levels like this is a more abstract
+1905.87,4.86,level i have mutt modular multipliers
+1908.539,3.75,here as units I could say go inside of
+1910.73,5.13,those show me the circuits go inside of
+1912.289,5.25,those and go at any level you like but
+1915.86,3.12,like I said four bits ad tourniquet
+1917.539,3.811,that's about what everyone's done we've
+1918.98,4.559,done 13 bits which was the number 8189
+1921.35,3.75,it's about half a million gates and the
+1923.539,3.901,one running at home I think I mentioned
+1925.1,4.65,at the beginning we'll go for 28 days
+1927.44,7.29,and he's doing for a 14 bit number at
+1929.75,6.6,the moment just to show you what the
+1934.73,4.38,circuits look like this is the modular
+1936.35,4.41,adder you have sharp code I won't do it
+1939.11,3.9,in detail but there's a controlled
+1940.76,4.44,controlled Adgate so here's the problem
+1943.01,3.389,you want to add two numbers together and
+1945.2,4.41,you want to keep them from overflowing
+1946.399,5.971,it's a modular adder simple except the
+1949.61,4.26,entire circuit has to be reversible as I
+1952.37,4.32,said earlier everything has to be kept
+1953.87,4.47,unitary so here we do the controlled
+1956.69,4.44,control dad and we're actually doing
+1958.34,4.62,this in Fourier space so now that we've
+1961.13,4.11,done the ad we have to bring it back out
+1962.96,6.3,we do an inverse excuse me this is the
+1965.24,5.7,yeah this is the inverse of the no it's
+1969.26,3.36,not the QFT this is an ad oh I'm sorry
+1970.94,3.78,we're going to subtract off the number
+1972.62,3.99,that we're modding to see if we over
+1974.72,4.77,float or not so we subtract the number
+1976.61,5.25,off now we take it out of Fourier space
+1979.49,4.74,we do an inverse QFT quantum Fourier
+1981.86,4.74,transform and we remember the top bit if
+1984.23,3.929,the top bit overflowed we know we have
+1986.6,4.23,to go back the other way otherwise we
+1988.159,5.101,don't so we remember the bit in an Ansel
+1990.83,4.8,ax or the qubit in this case now we put
+1993.26,3.899,it back in the QFT now we really do the
+1995.63,4.56,ad based on whether we would have
+1997.159,5.461,overflowed if we had done the ad so this
+2000.19,3.75,did the modular ad and now the whole
+2002.62,3.45,rest of the circuit we're going to an
+2003.94,2.67,inverse add inverse QFT we're going to
+2006.07,2.04,clear
+2006.61,4.26,top cubit we have to leave everything
+2008.11,5.43,back the way we found it so he's got to
+2010.87,5.7,go back to being a zero now we QFT now
+2013.54,4.29,we add again and now we're done and you
+2016.57,2.64,can run this circuit forward and
+2017.83,2.58,backward and everything is left in the
+2019.21,3.45,right state and everything works
+2020.41,3.84,correctly but this is why it's not as
+2022.66,3.09,trivial as just say take your classical
+2024.25,3.66,algorithm and drop it into a quantum
+2025.75,3.809,algorithm either we are working on that
+2027.91,2.94,also someone else has a simulator
+2029.559,2.701,they've written where you take a
+2030.85,3.48,classical algorithms say make this
+2032.26,4.62,reversible then take that reversible
+2034.33,4.2,algorithm make it quantum so we're going
+2036.88,2.94,to be adding that that's higher level
+2038.53,4.38,things we're adding to the simulator
+2039.82,6.54,over time okay so what do we get when we
+2042.91,5.31,do this here's an example of factoring
+2046.36,3.42,all sorts of numbers times they took
+2048.22,5.28,probably much easier to look on a graph
+2049.78,5.7,the blue diamonds are the first version
+2053.5,6.6,of the simulator we wrote second version
+2055.48,7.29,is the red and the orange is as of two
+2060.1,5.85,weeks ago so we went from three years to
+2062.77,4.649,four months 24 days to do that 13 bit
+2065.95,3.449,number and as I said the one that's
+2067.419,3.51,factoring at home the red line would be
+2069.399,4.441,a month it looks like this will be about
+2070.929,5.101,28 days to factor for the last one and
+2073.84,4.26,that's not anybody cares that's you know
+2076.03,4.92,my dog can talk not how well my dog can
+2078.1,4.829,talk but again most everything published
+2080.95,4.35,to this date has been way down all the
+2082.929,4.561,way at the lowest on the left is the
+2085.3,3.3,biggest anyone's done before this so
+2087.49,3.0,this just gives you an idea the
+2088.6,7.799,complexity of the full Universal
+2090.49,8.04,simulator what you're able to do the
+2096.399,3.481,promise of factoring big numbers my
+2098.53,3.81,using gotomeeting we could do it way
+2099.88,5.19,faster than we could an orderly computer
+2102.34,4.35,mm-hmm however I was here factoring a
+2105.07,3.539,yahoo could be done really fast so
+2106.69,6.99,there's a really very normal slow down
+2108.609,6.031,factor for so between so the promises
+2113.68,3.78,the corner beauty is going to be
+2114.64,4.05,fantastically much faster yes here it's
+2117.46,2.88,kind of like taking months to do
+2118.69,3.12,something oh no no but this is do this
+2120.34,3.3,is doing a simulation of a simulation of
+2121.81,3.98,a simulation so the real quantum
+2123.64,4.5,computer will do this blindingly fast
+2125.79,3.61,okay I'm doing all half a million gates
+2128.14,3.36,and having do them on a classical
+2129.4,3.719,machine to simulate them if I actually
+2131.5,3.0,was doing this I can do this on a
+2133.119,3.331,quantum computer that's actually not the
+2134.5,3.3,prime very fact I can break our essay on
+2136.45,3.659,a chronic Peter the problem is the
+2137.8,4.559,number of qubits it takes
+2140.109,4.2,number of gates it takes to fix up all
+2142.359,6.63,the noise along the way to get there and
+2144.309,6.27,on and on us when you actually yeah and
+2148.989,2.82,so for some and i'm going to show you
+2150.579,3.901,places where it's not where we actually
+2151.809,5.401,do get an exponential win but factoring
+2154.48,4.529,works but the actual technology you need
+2157.21,3.629,to build the machine is a good 20-30
+2159.009,3.36,years away before you could really build
+2160.839,3.091,the machine to break our essay and by
+2162.369,3.091,then RSA is bigger or whatever you're
+2163.93,3.99,going to use for cryptography there is
+2165.46,4.47,also quantum cryptography by the way you
+2167.92,3.359,can really nicely entangle those qubits
+2169.93,3.809,like we just showed you with Bob and
+2171.279,5.79,Alice and if anyone eavesdrops on it you
+2173.739,5.04,destroy it so anybody trying to look at
+2177.069,3.121,the channel will destroy the channel so
+2178.779,3.09,you can't get the information without
+2180.19,3.329,somebody knowing and then they can't get
+2181.869,3.781,the key because the key was moved
+2183.519,5.611,quantumly and on and as a whole quantum
+2185.65,6.06,key cryptography area to UM so let's
+2189.13,4.139,talk about noise a little bit I'm not
+2191.71,3.029,going to go again into detail it's one
+2193.269,3.33,get of a field there's an abstract class
+2194.739,3.901,you derive from and say I have a quantum
+2196.599,3.601,error correction code I want to try this
+2198.64,4.56,happens to be what's called a steam 7
+2200.2,5.19,code and this guy generates a circuit
+2203.2,4.349,that says given one logical qubit
+2205.39,4.409,replace it with 7 physical qubits and
+2207.549,5.46,this encodes the seven into that code
+2209.799,5.131,space so I now have a nice encoded value
+2213.009,4.56,that I can check for errors as we
+2214.93,4.95,compute this is the guy that actually
+2217.569,4.53,does the checking so the bottom seven is
+2219.88,4.08,the encoding of the logical qubit the
+2222.099,3.75,top six are the ones who read everything
+2223.96,4.379,on the qubit measure it out and then
+2225.849,4.92,decide to apply x and z flips depending
+2228.339,4.891,on what went wrong and so this will
+2230.769,4.32,actually fix all one qubit errors will
+2233.23,4.079,detect all 2 cubed error sounds just
+2235.089,4.92,like you do normal coding classically
+2237.309,4.8,but this keeps everything quantum this
+2240.009,4.74,lets you actually apply this throughout
+2242.109,4.71,the system and this is what our friend
+2244.749,5.0,teleport looks like once you run it
+2246.819,5.04,through this quantum error correction
+2249.749,5.11,application it goes through and rewrites
+2251.859,4.74,the circuit with and of those syndromes
+2254.859,4.26,and then every place you had an ex gate
+2256.599,3.99,you now have seven of them or the C
+2259.119,3.331,knots or any of those other gates you
+2260.589,3.42,saw you now have seven copies that
+2262.45,4.919,happen at once and then you check if we
+2264.009,5.07,got what you expected so yes your number
+2267.369,4.65,of gates blow up very quickly and the
+2269.079,4.691,number of qubits blow up very quickly we
+2272.019,3.401,also finished a brand new noise
+2273.77,5.19,model that's much more physically
+2275.42,5.28,accurate what's nice as you can say
+2278.96,4.56,specific gates have different noise
+2280.7,5.46,models you can say how many qubits are
+2283.52,4.92,going to operate on how long in physical
+2286.16,4.65,time the gate takes to work a see not a
+2288.44,5.43,to cuba cape may take a lot longer than
+2290.81,6.66,you know in 20 to 50 nano second stead
+2293.87,6.0,of 10 nanoseconds for an X gate and then
+2297.47,3.99,you provide a noise model for what you
+2299.87,3.57,want to use so now for different types
+2301.46,3.93,of qubits different types gates even in
+2303.44,4.17,the same system they may be hybrid you
+2305.39,4.23,can apply your own noise models the
+2307.61,3.48,system gives you back events this noise
+2309.62,3.72,event happened at this time on this
+2311.09,5.01,qubit on this gate and this is what it
+2313.34,4.92,did also your error correction circuitry
+2316.1,4.59,is also going to be noisy and that's a
+2318.26,4.26,problem it turns out if your gates
+2320.69,3.0,aren't good enough about the threshold
+2322.52,3.51,the error correction makes it worse
+2323.69,4.05,because you've added more gates and the
+2326.03,4.32,gates are noisy and everything gets
+2327.74,4.59,worse so you actually wind up coming up
+2330.35,3.75,with a threshold value of at what point
+2332.33,3.39,to your physical gates have to be how
+2334.1,4.17,good are you qubits before you can even
+2335.72,4.83,fix them and so there's a whole
+2338.27,3.69,interesting area Christus evora who
+2340.55,3.87,heads the research group that's her
+2341.96,4.59,expertise that's her main area is noise
+2344.42,5.01,modeling and correction but the one
+2346.55,5.67,that's new that again nobody has is we
+2349.43,4.83,actually do non unitary noise we do
+2352.22,4.2,what's called amplitude damping so if
+2354.26,4.44,you read in the papers you know IBM now
+2356.42,4.86,has a qubit that lasts one or two
+2358.7,7.8,milliseconds sometimes you hear t1 there
+2361.28,7.29,t1 time for decoherence that's this you
+2366.5,4.65,can we can now model actual decoherence
+2368.57,3.84,of the individual qubits as you're going
+2371.15,3.06,you can actually put different
+2372.41,3.3,probabilities on different qubits so you
+2374.21,4.11,have semiconductor cubed you have
+2375.71,4.71,quantum dots various other technologies
+2378.32,4.44,you can put different decoherence in so
+2380.42,4.2,here's a simple circuit again I've got a
+2382.76,4.2,how to Marge some super putting a
+2384.62,3.51,superposition two cubits and I'm see
+2386.96,2.94,nodding together and then a bunch of
+2388.13,3.9,idols infinite number of idols what
+2389.9,3.99,happens well here's what the damping
+2392.03,3.57,probability what happens we start out
+2393.89,3.66,with twenty five percent probability for
+2395.6,4.17,each of the four possible states because
+2397.55,5.13,you could read out the other at 0 0 0 1
+2399.77,4.77,1 0 1 1 when I measure it but you'll
+2402.68,4.409,notice everything with a 1 and it starts
+2404.54,4.499,falling off and the zeros start climbing
+2407.089,4.861,and then we get this non unitary event
+2409.039,5.73,the thing just d cohered and so two of
+2411.95,4.859,them drop the 0 2 of them popped up a
+2414.769,5.371,little basically the first qubit went to
+2416.809,6.78,0 so the 10 and the 11 state disappeared
+2420.14,5.219,and now you can see the 10 keeps keeps
+2423.589,3.78,bleeding way to the environment is the
+2425.359,4.17,00 keeps going up until he d coheres now
+2427.369,5.341,everybody is 00 you've lost your qubits
+2429.529,4.351,they're gone so this first time that i
+2432.71,3.119,know of anyone's actually built a
+2433.88,3.3,simulator that will actually let you do
+2435.829,4.2,the physical modeling of what's
+2437.18,5.639,happening with the qubits and for sanity
+2440.029,5.121,check we took our friend teleport added
+2442.819,5.91,quantum error correction on top of it
+2445.15,6.159,the steam 7 code put in some
+2448.729,5.04,probabilities that were published by
+2451.309,4.95,others for actual physical qubits and we
+2453.769,5.641,going to fall off at about 3 minus 3
+2456.259,4.651,where the whole thing can't keep up the
+2459.41,3.209,code can't keep up and there's this
+2460.91,3.959,threshold and it turns out that's
+2462.619,3.841,exactly what steam predicted the
+2464.869,3.45,threshold would be right in that area
+2466.46,3.42,for when you have physical qubits and
+2468.319,3.871,they look like this this is about where
+2469.88,6.209,everything would stop working so about 3
+2472.19,7.079,D minus 3 has to be your your t one time
+2476.089,4.41,for your qubits if you want to be able
+2479.269,2.82,to correct them if you can't keep them
+2480.499,3.59,at least in this millisecond range
+2482.089,10.92,you're not going to be able to fix them
+2484.089,11.861,um yeah kind of honorees of how these
+2493.009,5.49,you busy ever again I mean let me let me
+2495.95,5.879,let me give you hope the reason
+2498.499,5.37,Microsoft is in this at all is we have
+2501.829,3.66,an area we're working in and our focuses
+2503.869,4.261,is called topological quantum computing
+2505.489,4.05,and I can talk to people separately
+2508.13,3.3,about it I wasn't going to do it in this
+2509.539,4.351,talk about Meyer Ana's and these
+2511.43,4.079,quasiparticles we're using but it turns
+2513.89,3.179,out instead of having say a single
+2515.509,4.141,electron that you're flipping the state
+2517.069,4.44,on you actually have a particle that two
+2519.65,5.79,of them make up the electron or the
+2521.509,7.411,Fermi on actually and they're really one
+2525.44,5.25,item but they're separated in space so
+2528.92,2.879,these decoherence of X effects if they
+2530.69,2.76,hit one of them they don't hurt the
+2531.799,4.17,other one you have to hit both at the
+2533.45,4.289,same time extremely unlikely the times
+2535.969,4.29,for these look like they could be in the
+2537.739,3.041,years you don't have the equivalent of
+2540.259,2.981,computer
+2540.78,4.95,memory where these qubits can last
+2543.24,4.89,virtually forever it also means your
+2545.73,4.83,error correction now became easy because
+2548.13,4.23,they don't go away you can you actually
+2550.56,3.87,the gates are done by braiding them
+2552.36,3.33,around each other so as long as you
+2554.43,3.27,braid them and you don't get them near
+2555.69,4.68,each other you can actually do all of
+2557.7,4.5,these gates and you have fully fault
+2560.37,3.12,tolerant computing now there's lots of
+2562.2,3.84,caveats I'm gonna leave all of that out
+2563.49,4.59,for now but the point is this is why
+2566.04,4.94,Microsoft is so interested we have the
+2568.08,5.13,only fields medalist working in industry
+2570.98,5.11,Michael Friedman who's down in Santa
+2573.21,4.26,Barbara and it's station Q and this is
+2576.09,4.73,what we focus that whole effort around
+2577.47,5.22,is these topological qubits now in
+2580.82,3.46,semiconductor cubicin like you up into
+2582.69,4.14,the milliseconds range no reason it
+2584.28,4.41,can't go higher and that's enough you
+2586.83,4.8,know as soon as we get into the tens of
+2588.69,4.59,milliseconds and a little beyond we can
+2591.63,4.86,correct them we can keep them alive
+2593.28,4.47,forever so we're on that the verge even
+2596.49,5.13,for the more traditional or conventional
+2597.75,5.94,qubits so it looks pretty good oh it's
+2601.62,5.76,all done superconducting let these are
+2603.69,6.09,20 millikelvin most of this is run at I
+2607.38,3.81,can talk about fridges too i got lots of
+2609.78,3.27,pictures on my phone that people want to
+2611.19,3.81,see i've been i've been going to all of
+2613.05,4.23,our labs and europe is why I'm here and
+2615.0,4.02,so we've got some very cool experiments
+2617.28,3.09,going on I'm just going to mention the
+2619.02,3.21,stabilizers these the ones we can do
+2620.37,3.3,tens of thousands of qubits you can take
+2622.23,3.42,your normal circuit you compile it into
+2623.67,3.69,stabilizers this is teleport again
+2625.65,6.48,running and stabilizers I'm not going to
+2627.36,6.0,do any detail here but for people who do
+2632.13,3.72,this work you can also get statistics
+2633.36,4.89,out of where you are in the stabilizers
+2635.85,4.08,and what the space looks like but all of
+2638.25,3.72,those error Corrections we were looking
+2639.93,3.9,at only we're flipping X and Z and turns
+2641.97,3.51,out stabilizers know how to do X and Z
+2643.83,5.22,and so you can do all your error
+2645.48,7.23,correction let me do a machine learning
+2649.05,5.49,ok page rank we're going to start with a
+2652.71,3.87,standard stochastic probability matrix
+2654.54,3.9,the G matrix or Google matrix if you
+2656.58,4.5,like but we're going to turn it into a
+2658.44,4.47,Hamiltonian I think the identity minus G
+2661.08,3.57,adjoint it and identity minus cheat
+2662.91,4.08,turns out that gives you a Hamiltonian
+2664.65,4.86,that represents those stochastic
+2666.99,3.9,probabilities converted to a unitary
+2669.51,3.51,this is gets back to our Hamiltonian
+2670.89,4.19,simulator we were talking about so now
+2673.02,3.99,remember the unitary czar
+2675.08,3.67,and we have all their from a starting
+2677.01,3.0,state of static probabilities you know
+2678.75,4.14,the one over n you would use for
+2680.01,5.22,pagerank type thing and then we do an
+2682.89,3.9,adiabatic evolution I won't describe the
+2685.23,3.12,term unless somebody wants at the moment
+2686.79,4.29,but there's a way to do these
+2688.35,5.37,hamiltonians and guarantee you can get
+2691.08,5.25,to the lowest energy state we accumulate
+2693.72,4.5,the average probabilities so here I do a
+2696.33,3.63,synthetic web graph using recursive
+2698.22,5.1,matrix generation so it's a nice power
+2699.96,5.19,law graph 256 pages by the way takes
+2703.32,4.26,eight cubits so I can do two billion
+2705.15,4.08,pages and 32 cubits and shows you very
+2707.58,4.71,quickly we can do big problems on tiny
+2709.23,4.83,machines in here you can see regular
+2712.29,4.68,page rank and quantum pagerank we get
+2714.06,5.49,the same answer this is good I can do
+2716.97,5.55,extremely dense encoding and I can pull
+2719.55,4.8,pagerank off ah there's a bunch of
+2722.52,3.57,caveats you'd never do this in real life
+2724.35,3.36,and I can tell you all of them but let's
+2726.09,4.02,just say it takes you exponentially long
+2727.71,5.46,to actually get this answer out it's
+2730.11,4.95,there it works but you wouldn't do it
+2733.17,3.33,this way and the problem I have with a
+2735.06,4.11,lot of the papers out there everyone
+2736.5,4.5,leaves the real costs out and so what
+2739.17,4.05,we've been doing a lot is i won't i'll
+2741.0,4.23,use the word here debunking a lot of
+2743.22,4.5,thee this is exponentially faster no it
+2745.23,4.74,isn't you know this is quadratically
+2747.72,4.47,faster well only if you ask the question
+2749.97,5.52,once and only want one bit of accuracy
+2752.19,4.14,out you know that type of thing but
+2755.49,2.82,don't worry I'm going to end on a
+2756.33,4.47,positive note you know it's not all bad
+2758.31,5.07,news this is talking about the
+2760.8,5.04,Hamiltonian simulator now one of the
+2763.38,3.99,most popular or useful techniques is
+2765.84,4.11,called spin glass so what you've got
+2767.37,4.32,think of Boltzmann machines think think
+2769.95,3.42,of just standard simulated annealing I
+2771.69,2.73,have something that can flip up or flip
+2773.37,2.76,down I'm going to hook them together
+2774.42,3.48,with strengths positive and negative and
+2776.13,3.03,I say go and everything flips around and
+2777.9,4.67,I'd lower the temperature until
+2779.16,6.9,everything stabilizes out okay standard
+2782.57,5.92,technique the way we label it here or do
+2786.06,5.31,we do it here the first term in the
+2788.49,4.47,x-direction basically is think of it as
+2791.37,3.6,your temperature if I have that really
+2792.96,3.3,strong I turning off all the other links
+2794.97,3.3,or I'm overriding by saying push
+2796.26,4.02,everybody in one direction I'm going to
+2798.27,3.51,make everybody go in the X direction I'm
+2800.28,5.13,going to lower the X direction and
+2801.78,5.49,increase the H eyes are saying I'm going
+2805.41,3.09,to clamp somebody up or down so this
+2807.27,2.79,would be like the inputs to your prob
+2808.5,5.34,right you'd say these are my input ones
+2810.06,5.1,that are a 1 0 1 1 0 and then the ji j's
+2813.84,4.59,are connecting them with everybody else
+2815.16,5.1,you let this thing cool down and all the
+2818.43,3.27,others flip to an interesting state and
+2820.26,3.48,some of them you defined as your outputs
+2821.7,3.72,and this is normal simulated annealing
+2823.74,4.08,miss known as a spin glass problem
+2825.42,4.56,there's a company in Canada called
+2827.82,3.24,d-wave who ships a quantum computer back
+2829.98,2.37,to the question of when we're going to
+2831.06,3.84,see quantum computers at least that's
+2832.35,3.78,what they say and we can reproduce on
+2834.9,3.18,the simulator everything they've
+2836.13,4.86,published in nature and science and all
+2838.08,5.73,the rest give an example using
+2840.99,5.04,ferromagnetic chains we turn this into a
+2843.81,5.34,circuit so what you're seeing is the
+2846.03,4.68,first column or all the X's then I'm
+2849.15,2.94,clamping the left and the right because
+2850.71,3.57,the ferromagnetic chain and say they're
+2852.09,3.42,up there down there opposite and then
+2854.28,3.3,I'm going to link them together those
+2855.51,3.81,are the ji J's and finally at the end
+2857.58,3.36,I've got the ex's again because we're
+2859.32,3.0,doing a higher order approximation back
+2860.94,3.66,to the other question on Trotter ization
+2862.32,3.75,you can ask for higher order Trotter is
+2864.6,4.08,a shins as you break the differential
+2866.07,4.56,equation apart be more efficient and we
+2868.68,3.84,get all the answers that everybody's
+2870.63,3.48,published and we can do noise modeling
+2872.52,3.3,and tangle Matt entropy all sorts of
+2874.11,3.96,other things on here you're interested
+2875.82,4.77,this is going into nature it's being out
+2878.07,4.05,for review right now but they let us put
+2880.59,3.06,this up there's been so much buzz they
+2882.12,3.87,let us put it up on the archive and
+2883.65,4.86,there's a link there if anybody wants to
+2885.99,7.16,read it there's a big big paper on this
+2888.51,6.96,and all the details traveling salesman
+2893.15,3.73,here's an example of a Hamiltonian for
+2895.47,3.36,traveling salesman what you're doing is
+2896.88,4.14,encoding the edges so you're going to
+2898.83,7.11,say I want to drop down edges between
+2901.02,7.8,cities oh they are I know we've reached
+2905.94,4.17,eleven o'clock so it's okay okay I'm
+2908.82,4.79,getting to the end here and anyone who
+2910.11,5.52,wants to leak out feel free it's okay i
+2913.61,3.64,just want to mention the same problem
+2915.63,3.21,with doing this classically is we've
+2917.25,2.82,just naively put in traveling sales when
+2918.84,3.54,you start getting problems where you get
+2920.07,3.21,disconnected roots instead of the full
+2922.38,3.84,because there is no higher order
+2923.28,5.25,constraints we can do eight cities
+2926.22,3.18,twenty eight cubits other people publish
+2928.53,3.03,papers saying oh a higher order
+2929.4,3.87,constraint lets me do more like a four
+2931.56,4.92,body instead of a two bodies simulation
+2933.27,5.16,yeah I get a doubling in the speed this
+2936.48,3.78,solves at butts four times the amount of
+2938.43,4.52,work and that's the part that gets left
+2940.26,2.69,out of the papers
+2943.73,9.22,and egopay poems in terms of what no no
+2950.82,4.22,no no no no never said that all I'm
+2952.95,4.95,trying to do is reduce the prefactor
+2955.04,7.09,okay I never made a claim that you know
+2957.9,7.8,P equals NP or b QP is P or any of that
+2962.13,4.92,no no no okay I'll finish fast
+2965.7,2.7,unfortunate this is probably the best
+2967.05,3.81,part of it but we'll just leave it I
+2968.4,3.99,took too much time on the other there's
+2970.86,2.88,another Hamiltonian model second
+2972.39,5.79,quantization this lets you do molecular
+2973.74,7.68,chemistry um this is H to two hydrogen's
+2978.18,5.43,together this is simulating it the blue
+2981.42,3.63,is our simulator compared to publish
+2983.61,3.27,results we actually get more more
+2985.05,3.93,accurate results we're actually telling
+2986.88,4.77,you naturally where the two nuclei will
+2988.98,4.41,come together to balance out the energy
+2991.65,3.78,you can run the whole thing from script
+2993.39,4.53,mode you can run this on a cluster this
+2995.43,3.93,is all of water being simulated so this
+2997.92,3.51,actually is doing bond lengths and
+2999.36,3.78,angles to show you what a water molecule
+3001.43,3.24,this is we're back to what Fineman said
+3003.14,5.31,you'd use a quantum computer for is
+3004.67,4.98,simulating quantum physics again we get
+3008.45,3.24,different numbers and the traditional
+3009.65,3.69,approaches but you solve it exactly what
+3011.69,4.32,we get is exactly the right answer to
+3013.34,4.14,the precision we asked for the problem
+3016.01,3.27,here this takes thirty four thousand
+3017.48,4.02,gates then you got to run a two to the
+3019.28,3.72,14th times get 14 bits back to see then
+3021.5,3.15,another two to the 10th time to get rid
+3023.0,3.27,of the cognitive ed problems and then
+3024.65,3.99,about 50 samples per point to make sure
+3026.27,4.41,you got the ground state and 546 points
+3028.64,5.16,for the plot this is 10 to the 16th gate
+3030.68,4.71,ops we can cheat and so we do with the
+3033.8,3.57,quantum chemist oh I'm not going to go
+3035.39,4.17,into this now everyone interested this
+3037.37,3.9,is a linear algebra you can do to get
+3039.56,5.43,your two to the 15th by 2 to the 15th
+3041.27,5.61,matrix down to 441 by 441 oh and by and
+3044.99,4.23,once you've done that your exponential
+3046.88,3.81,powers of two just become matrix
+3049.22,3.9,multiplies times themselves and that's
+3050.69,4.05,how I solve this actually okay I can't
+3053.12,4.47,actually run the gates for the length of
+3054.74,5.22,time it would take these are all the raw
+3057.59,4.26,numbers for if you now add oh I don't
+3059.96,3.45,have all the rotations oh I have errors
+3061.85,3.87,all high oh this gets very big and in
+3063.41,4.56,fact there's an IRP challenge using a
+3065.72,4.62,molecule called ferredoxin which takes
+3067.97,4.44,about 10 to the 23rd gate operations
+3070.34,3.779,that's a century and a half at current
+3072.41,5.399,technology speeds back to when will we
+3074.119,6.69,have this however we've come up with a
+3077.809,4.56,new technique that will let you take the
+3080.809,2.79,scaling down from n to the fourth where
+3082.369,3.42,n is the number of orbitals of the
+3083.599,4.531,molecule down to n squared with no
+3085.789,3.631,reduction in error and in fact if you're
+3088.13,3.389,interested this isn't out yet but
+3089.42,3.929,there's a paper coming that if you
+3091.519,3.901,notice at the bottom there's a 5.8
+3093.349,4.041,billion gate operations needed for
+3095.42,4.619,ferredoxin we've got it down to
+3097.39,4.149,thirty-seven thousand which took your
+3100.039,3.78,century and a half down to a week and a
+3101.539,4.351,half now it's reasonable and that's with
+3103.819,4.651,today's cubed technology in terms of
+3105.89,5.729,speeds so we've now reached a point
+3108.47,6.0,where we can do it you build a machine
+3111.619,5.071,that can do this you can do much further
+3114.47,4.049,than chemists can do today they can get
+3116.69,4.589,to maybe a hundred orbitals if they're
+3118.519,7.07,lucky we can get the hundreds above that
+3121.279,6.54,and solve very complex molecular
+3125.589,3.791,problems I'm going to give you one more
+3127.819,3.78,example that I'm also working on right
+3129.38,4.139,now with Matthias you can also do
+3131.599,4.02,simpler Hamiltonians you effective
+3133.519,3.81,models and when you do that this is
+3135.619,3.99,called the Hubbard model this scales
+3137.329,4.23,linearly with the size of the problem so
+3139.609,3.66,I can actually simulate entire sheets of
+3141.559,3.24,superconductors and design
+3143.269,4.861,high-temperature superconductors this
+3144.799,5.07,way so in fact on the right is from a
+3148.13,4.01,paper he previously published on the
+3149.869,4.531,left is liquid simulation of the
+3152.14,3.699,material these r coupe rates which are
+3154.4,2.58,high-temperature superconductors and by
+3155.839,3.361,the way the numbers aren't the same
+3156.98,3.539,because again we went built it did the
+3159.2,4.889,simulation and found their numbers were
+3160.519,5.79,wrong so in lots of cases here when you
+3164.089,4.26,actually implement it give you one
+3166.309,3.571,example Shor's algorithm when we
+3168.349,3.121,implemented it we found the paper was
+3169.88,3.989,completely wrong they left a gate out
+3171.47,3.99,that all you get is random answers you
+3173.869,3.301,will actually get the real solution and
+3175.46,5.22,no one ever knew it because no one ever
+3177.17,5.04,simulated it and there's lots of
+3180.68,2.909,documentation i can give anyone who
+3182.21,2.97,wants this paper we're actually going to
+3183.589,3.301,put it up externally which is just an
+3185.18,3.899,overview of what this talk talks about
+3186.89,4.949,it's also an 80-page user's manual
+3189.079,5.311,there's msdn documentation and that's
+3191.839,4.47,probably enough for today so i'm here
+3194.39,4.619,for two days anybody wants to talk my
+3196.309,5.0,schedule right now is wide open and I'm
+3199.009,2.3,at your disposal
+3205.75,5.92,questions sure in the remark and you
+3210.5,5.61,were saying you need to keep track of
+3211.67,7.59,the whole space them either no Theory
+3216.11,5.49,around you know getting inside from what
+3219.26,5.55,you're going to query in the end and get
+3221.6,4.26,some variation of bounds profitez your
+3224.81,4.08,entangled as soon as you have
+3225.86,4.41,entanglement you can't even look at the
+3228.89,2.25,state I'm one of the things we didn't
+3230.27,3.3,talk about in here at all these
+3231.14,4.41,debugging how do you figure out where
+3233.57,3.36,you are in all of this even before you
+3235.55,5.4,can do it variation else I even have to
+3236.93,5.31,understand the system and I can't and I
+3240.95,2.67,have there a bunch of techniques we've
+3242.24,3.45,started putting quantum debuggers
+3243.62,3.57,together but you can't like single step
+3245.69,3.09,and ask what are the values of the
+3247.19,3.96,variables because it's distributed
+3248.78,4.38,across two to the 30th elements what do
+3251.15,3.6,you do well it turns out there are ways
+3253.16,2.7,you can make believe you measured we can
+3254.75,4.29,do things you're not allowed to do
+3255.86,5.67,quantumly but that's a whole separate we
+3259.04,4.17,can talk about but it's really it's it's
+3261.53,3.9,terrible you can't buy that you also
+3263.21,4.74,can't clone these are linear types if
+3265.43,4.44,you prefer once you've read it you can't
+3267.95,4.83,read it again and it's gone from where
+3269.87,5.73,you read it so you can't copy anything
+3272.78,5.16,you can't look at it without destroying
+3275.6,3.87,it on and on and on and on now again
+3277.94,3.84,we're simulating which means we can
+3279.47,3.78,cheat so things we can do you copied all
+3281.78,2.97,the state vector and do stuff to it
+3283.25,5.76,that's illegal and then keep the rest of
+3284.75,5.64,it going okay but even so the analysis
+3289.01,2.67,is such that I said if they weren't
+3290.39,2.4,entangled I could bring this thing down
+3291.68,4.23,I don't know when things aren't
+3292.79,5.31,entangled you have to tell me as a user
+3295.91,3.93,I've just separated these the circuit
+3298.1,4.11,did the right thing there now
+3299.84,4.59,disentangled but you can say check that
+3302.21,4.35,I'm right which is extremely expensive
+3304.43,3.3,and it goes through and figures it out
+3306.56,2.67,and lets you know if it is then it
+3307.73,3.39,really disentangled otherwise it says
+3309.23,2.94,you have a circuit bug that type of
+3311.12,3.9,thing so we do have all of that
+3312.17,4.92,implemented but automatically in any
+3315.02,6.0,efficiency being able to do that is
+3317.09,7.69,virtually impossible frustrating it's
+3321.02,6.5,fun but it's frustrating yeah
+3324.78,4.06,for the results age talked about at the
+3327.52,4.86,end of your talk on molecular
+3328.84,6.18,simulations how much of that is done
+3332.38,4.95,using your current simulation and how
+3335.02,3.63,much of it is waiting for actual quantum
+3337.33,3.75,computer all events with the current
+3338.65,5.07,simulator all of it now should let me
+3341.08,5.79,caveat everything through water water
+3343.72,5.61,h2o I can fit in under thirty cubits the
+3346.87,3.54,others I can compile the circuits and
+3349.33,2.37,get all that all the numbers in those
+3350.41,4.71,tables are from the simulator but I
+3351.7,4.35,can't run them right but we verified the
+3355.12,2.76,techniques we're doing this
+3356.05,4.14,multiresolution Trotter ization that we
+3357.88,5.79,can actually throw away ninety-eight
+3360.19,5.12,percent of the matrix this is again do
+3363.67,4.26,it's basically doing a multiresolution
+3365.31,3.97,decimation of the matrix so we
+3367.93,2.64,precondition the matrix to figure out
+3369.28,4.23,what doesn't matter and throw them away
+3370.57,4.65,below the accuracy you care about and by
+3373.51,3.21,doing that these are a lot of its
+3375.22,3.03,standard linear algebra techniques or
+3376.72,5.25,HPC techniques that have never been
+3378.25,5.31,applied in this field so but in answer
+3381.97,4.11,to your question all everything you saw
+3383.56,4.29,up there of h 2 h 2 o those have all
+3386.08,3.39,been fully simulated and actually water
+3387.85,5.15,only takes about a minute for me to do
+3389.47,6.42,once i've done all of those classical
+3393.0,4.48,tricks on a quantum computer it would
+3395.89,7.38,take longer actually because that's do
+3397.48,13.16,all the games give the transition from
+3403.27,10.35,the gaze to the amazonian a gate is a
+3410.64,9.58,summary of a time step of a hamiltonian
+3413.62,8.43,so e to the i HT is the unitary so over
+3420.22,3.96,a period of time when you run those
+3422.05,4.62,gates they go to a steady-state so the X
+3424.18,6.18,the Y the Z that the Hadamard see not i
+3426.67,6.03,will steady-state solutions to apply in
+3430.36,3.9,the hamiltonian that so the Hamiltonian
+3432.7,3.42,is the transition to get from one to the
+3434.26,3.81,other normally that's fine if i'm doing
+3436.12,3.69,digital operations then i'm fine i'm
+3438.07,3.54,saying i want to flip this bit well i
+3439.81,3.87,have to move it after actually moved the
+3441.61,4.32,qubit and flip it and that's the
+3443.68,5.28,hamiltonian doing that the unitary is
+3445.93,4.14,the effect of that as as simon was
+3448.96,2.46,saying that you know the whole point is
+3450.07,3.24,why can't I just do that well the
+3451.42,3.54,problem is if I'm doing spin glasses and
+3453.31,3.12,things they're all flipping and while
+3454.96,3.3,they're partially moving they're talking
+3456.43,2.07,to each other and so now I actually have
+3458.26,2.09,to go
+3458.5,4.47,down into the Hamiltonian actually do
+3460.35,4.51,traveling salesman or or whatever the
+3462.97,3.75,machine learning type problem and
+3464.86,5.91,mapping on to it PageRank is like that
+3466.72,6.45,for example you are solving trig
+3470.77,4.22,equation yeah the Hamiltonian does is
+3473.17,9.47,full Schrodinger wave equation basically
+3474.99,7.65,yeah April like I said I'm available

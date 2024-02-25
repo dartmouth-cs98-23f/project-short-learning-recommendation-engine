@@ -1,0 +1,141 @@
+second,duration,transcript
+6.871,3.167,"In many ways, 
+our memories make us who we are,"
+10.038,2.0,"helping us remember our past,"
+12.038,1.958,"learn and retain skills,"
+13.996,2.292,and plan for the future.
+16.288,3.625,"And for the computers that often act
+as extensions of ourselves,"
+19.913,2.208,"memory plays much the same role,"
+22.121,1.583,"whether it's a two-hour movie,"
+23.704,1.584,"a two-word text file,"
+25.288,2.541,"or the instructions for opening either,"
+27.829,5.542,"everything in a computer's memory
+takes the form of basic units called bits,"
+33.371,2.458,or binary digits.
+35.829,2.542,Each of these is stored in a memory cell
+38.371,3.791,"that can switch between two states
+for two possible values,"
+42.162,1.875,0 and 1.
+44.037,3.125,"Files and programs consist of millions
+of these bits,"
+47.162,3.25,"all processed in 
+the central processing unit,"
+50.412,1.334,"or CPU,"
+51.746,2.333,that acts as the computer's brain.
+54.079,4.583,"And as the number of bits needing
+to be processed grows exponentially,"
+58.662,2.875,"computer designers face 
+a constant struggle"
+61.537,3.751,"between size, cost, and speed."
+65.288,4.833,"Like us, computers have short-term memory
+for immediate tasks,"
+70.121,3.292,"and long-term memory 
+for more permanent storage."
+73.413,1.875,"When you run a program,"
+75.288,3.666,"your operating system allocates area
+within the short-term memory"
+78.954,1.875,for performing those instructions.
+80.829,3.542,"For example, when you press a key
+in a word processor,"
+84.371,5.167,"the CPU will access one of these locations
+to retrieve bits of data."
+89.538,4.333,"It could also modify them,
+or create new ones."
+93.871,4.375,"The time this takes is known 
+as the memory's latency."
+98.246,5.542,"And because program instructions must be
+processed quickly and continuously,"
+103.788,4.791,"all locations within the short-term memory
+can be accessed in any order,"
+108.579,3.125,hence the name random access memory.
+111.704,4.209,"The most common type of RAM 
+is dynamic RAM, or DRAM."
+115.913,5.083,"There, each memory cell consists
+of a tiny transistor and a capacitor"
+120.996,2.0,"that store electrical charges,"
+122.996,4.542,"a 0 when there's no charge,
+or a 1 when charged."
+127.538,1.625,Such memory is called dynamic
+129.163,4.208,"because it only holds charges briefly
+before they leak away,"
+133.371,3.375,"requiring periodic recharging
+to retain data."
+136.746,3.25,"But even its low latency 
+of 100 nanoseconds"
+139.996,2.667,"is too long for modern CPUs,"
+142.663,3.916,"so there's also a small, 
+high-speed internal memory cache"
+146.579,1.917,made from static RAM.
+148.496,3.208,"That's usually made up 
+of six interlocked transistors"
+151.704,1.917,which don't need refreshing.
+153.621,3.167,"SRAM is the fastest memory 
+in a computer system,"
+156.788,1.875,"but also the most expensive,"
+158.663,3.75,"and takes up three times 
+more space than DRAM."
+162.413,4.166,"But RAM and cache can only hold data
+as long as they're powered."
+166.579,3.042,"For data to remain
+once the device is turned off,"
+169.621,3.375,"it must be transferred 
+into a long-term storage device,"
+172.996,2.292,which comes in three major types.
+175.288,2.458,"In magnetic storage, 
+which is the cheapest,"
+177.746,5.792,"data is stored as a magnetic pattern on
+a spinning disc coated with magnetic film."
+183.538,3.666,"But because the disc must rotate 
+to where the data is located"
+187.204,1.417,"in order to be read,"
+188.621,5.875,"the latency for such drives is 100,000 
+times slower than that of DRAM."
+194.496,4.125,"On the other hand, optical-based storage
+like DVD and Blu-ray"
+198.621,2.0,"also uses spinning discs,"
+200.621,2.208,but with a reflective coating.
+202.829,5.209,"Bits are encoded as light and dark spots
+using a dye that can be read by a laser."
+208.038,3.125,"While optical storage media are cheap
+and removable,"
+211.163,3.708,"they have even slower latencies 
+than magnetic storage"
+214.871,2.375,and lower capacity as well.
+217.246,5.625,"Finally, the newest and fastest types of
+long-term storage are solid-state drives,"
+222.871,1.167,like flash sticks.
+224.038,1.916,"These have no moving parts,"
+225.954,2.667,instead using floating gate transistors
+228.621,4.5,"that store bits by trapping 
+or removing electrical charges"
+233.121,3.333,"within their specially designed 
+internal structures."
+236.454,3.292,"So how reliable 
+are these billions of bits?"
+239.746,3.708,"We tend to think of computer memory
+as stable and permanent,"
+243.454,2.917,but it actually degrades fairly quickly.
+246.371,2.625,"The heat generated from a device
+and its environment"
+248.996,2.75,"will eventually demagnetize hard drives,"
+251.746,2.25,"degrade the dye in optical media,"
+253.996,3.125,"and cause charge leakage 
+in floating gates."
+257.121,2.958,"Solid-state drives 
+also have an additional weakness."
+260.079,4.0,"Repeatedly writing to floating gate 
+transistors corrodes them,"
+264.079,2.625,eventually rendering them useless.
+266.704,2.5,With data on most current storage media
+269.204,2.75,"having less than 
+a ten-year life expectancy,"
+271.954,4.375,"scientists are working to exploit
+the physical properties of materials"
+276.329,2.334,down to the quantum level
+278.663,2.333,"in the hopes of making 
+memory devices faster,"
+280.996,1.083,"smaller,"
+282.079,1.542,and more durable.
+283.621,5.417,"For now, immortality remains out of reach,
+for humans and computers alike."

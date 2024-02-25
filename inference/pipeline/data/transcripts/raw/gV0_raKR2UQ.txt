@@ -1,0 +1,317 @@
+second,duration,transcript
+0.16,3.37,"Hi, I’m Jabril and welcome back to
+CrashCourse AI."
+3.53,5.37,"Algorithms are just math and code, but algorithms
+are created by people and use our data, so"
+8.901,5.658,"biases that exist in the real world are mimicked
+or even exaggerated by AI systems."
+14.56,2.42,This idea is called algorithmic bias.
+16.98,2.78,Bias isn’t inherently a terrible thing.
+19.769,3.571,"Our brains try to take shortcuts by finding
+patterns in data."
+23.34,4.9,"So if you’ve only seen small, tiny dogs,
+you might see a Great Dane and be like “Whoa"
+28.24,1.79,that dog is unnatural”
+30.03,3.81,"This doesn’t become a problem unless we
+don’t acknowledge exceptions to patterns"
+33.84,3.78,"or unless we start treating certain groups
+of people unfairly."
+37.62,5.06,"As a society, we have laws to prevent discrimination
+based on certain “protected classes” (like"
+42.68,3.399,"gender, race, or age) for things like employment
+or housing."
+46.079,5.721,"So it’s important to be aware of the difference
+between bias, which we all have, and discrimination,"
+51.8,1.0,which we can prevent.
+52.8,4.68,"And knowing about algorithmic bias can help
+us steer clear of a future where AI are used"
+57.48,1.92,"in harmful, discriminatory ways."
+59.4,8.64,INTRO
+68.04,4.14,"There are at least 5 types of algorithmic
+bias we should pay attention to."
+72.19,3.47,"First, training data can reflect hidden biases
+in society."
+75.66,4.09,"For example, if an AI was trained on recent
+news articles or books, the word “nurse”"
+79.75,3.82,"is more likely to refer to a “woman,”
+while the word “programmer” is more likely"
+83.57,1.69,to refer to a “man.”
+85.26,4.64,"And you can see this happening with a Google
+image search: “nurse” shows mostly women,"
+89.9,2.15,"while “programmer” mostly shows mostly
+men."
+92.05,4.41,"We can see how hidden biases in the data gets
+embedded in search engine AI."
+96.46,4.48,"Of course, we know there are male nurses and
+female programmers and non-binary people doing"
+100.94,1.12,both of these jobs!
+102.06,5.17,"For example, an image search for “programmer
+1960” shows a LOT more women."
+107.23,5.29,"But AI algorithms aren’t very good at recognizing
+cultural biases that might change over time,"
+112.52,3.21,"and they could even be spreading hidden biases
+to more human brains."
+115.73,3.4,"t’s also tempting to think that if we just
+don’t collect or use training data that"
+119.13,5.15,"categorizes protected classes like race or
+gender, then our algorithms can’t possibly"
+124.28,0.52,discriminate.
+124.8,4.72,"But, protected classes may emerge as correlated
+features, which are features that aren’t"
+129.52,4.84,"explicitly in data but may be unintentionally
+correlated to a specific prediction."
+134.36,4.58,"For example, because many places in the US
+are still extremely segregated, zip code can"
+138.94,1.92,be strongly correlated to race.
+140.86,3.32,"A record of purchases can be strongly correlated
+to gender."
+144.18,5.04,"And a controversial 2017 paper showed that
+sexual orientation is strongly correlated"
+149.22,3.03,"with characteristics of a social media profile
+photo."
+152.25,4.64,"Second, the training data may not have enough
+examples of each class, which can affect the"
+156.89,1.61,accuracy of predictions.
+158.5,5.05,"For example, many facial recognition AI algorithms
+are trained on data that includes way more"
+163.55,3.07,"examples of white peoples’ faces than other
+races."
+166.62,4.281,"One story that made the news a few years ago
+is a passport photo checker with an AI system"
+170.901,3.209,to warn if the person in the photo had blinked.
+174.11,4.13,"But the system had a lot of trouble with photos
+of people of Asian descent."
+178.24,4.35,"Being asked to take a photo again and again
+would be really frustrating if you’re just"
+182.59,3.32,"trying to renew your passport, which is already
+sort of a pain!"
+185.91,5.23,"Or, let’s say, you got a cool gig programming
+a drone for IBM… but it has trouble recognizing"
+191.14,4.55,"your face because your skin’s too dark…
+for example."
+195.69,3.75,"Third, it’s hard to quantify certain features
+in training data."
+199.44,2.72,"There are lots of things that are tough to
+describe with numbers."
+202.16,3.43,"Like can you really rate a sibling relationship
+with a number?"
+205.59,1.09,It’s complicated!
+206.68,4.92,"You love them, but you hate how messy they
+are, but you like cooking together, but you"
+211.6,1.6,hate how your parents compare you...
+213.2,1.92,It’s so hard to quantify all that!
+215.12,5.4,"In many cases, we try to build AI to evaluate
+complicated qualities of data, but sometimes"
+220.52,2.549,we have to settle for easily measurable shortcuts.
+223.069,5.121,"One recent example is trying to use AI to
+grade writing on standardized tests like SATs"
+228.19,3.33,"and GREs with the goal to save human graders
+time."
+231.52,4.78,"Good writing involves complex elements like
+clarity, structure, and creativity, but most"
+236.3,1.86,of these qualities are hard to measure.
+238.16,5.53,"So, instead, these AI focused on easier-to-measure
+elements like sentence length, vocabulary,"
+243.69,4.44,"and grammar, which don’t fully represent
+good writing… and made these AIs easier"
+248.13,1.0,to fool.
+249.13,4.38,"Some students from MIT built a natural language
+program to create essays that made NO sense,"
+253.51,3.11,but were rated highly by these grading algorithms.
+256.62,4.23,"These AIs could also potentially be fooled
+by memorizing portions of “template” essays"
+260.85,4.83,"to influence the score, rather than actually
+writing a response to the prompt, all because"
+265.68,2.57,"of the training data that was used for these
+scoring AI."
+268.25,3.88,"Fourth, the algorithm could influence the
+data that it gets, creating a positive feedback"
+272.13,1.0,loop.
+273.13,4.33,"A positive feedback loop basically means “amplifying
+what happened in the past”… whether or"
+277.46,2.07,not this amplification is good.
+279.53,4.851,"An example is PredPol’s drug crime prediction
+algorithm, which has been in use since 2012"
+284.381,3.469,in many large cities including LA and Chicago.
+287.85,4.421,"PredPol was trained on data that was heavily
+biased by past housing segregation and past"
+292.271,1.699,cases of police bias.
+293.97,3.85,"So, it would more frequently send police to
+certain neighborhoods where a lot of racial"
+297.82,1.56,minority folks lived.
+299.38,4.37,"Arrests in those neighborhoods increased,
+that arrest data was fed back into the algorithm,"
+303.75,3.61,"and the AI would predict more future drug
+arrests in those neighborhoods and send the"
+307.36,1.52,police there again.
+308.88,3.39,"Even though there might be crime in neighborhoods
+where police weren’t being sent by this"
+312.27,5.07,"AI, because there weren't any arrests in those
+neighborhoods, data about them wasn’t fed"
+317.34,1.47,back into the algorithm.
+318.81,4.79,"While algorithms like PredPol are still in
+use, to try and manage these feedback effects,"
+323.6,3.89,"there is currently more effort to monitor
+and adjust how they process data."
+327.49,4.34,"So basically, this would be like a new principal
+who was hired to improve the average grades"
+331.83,4.91,"of a school, but he doesn’t really care
+about the students who already have good grades."
+336.74,4.3,"He creates a watchlist of students who have
+really bad grades and checks up on them every"
+341.04,3.58,"week, and he ignores the students who keep
+up with good grades."
+344.62,5.74,"If any of the students on his watchlist don’t
+do their homework that week, they get punished."
+350.36,3.839,"But all of the students NOT on his watchlist
+can slack on their homework, and get away"
+354.199,3.391,with it based on “what happened in the past.”
+357.59,4.0,"This is essentially what’s happening with
+PredPol, and you can be the judge if you believe"
+361.59,1.359,it’s fair or not.
+362.949,4.0,"Finally, a group of people may mess with training
+data on purpose."
+366.949,4.72,"For example, in 2014, Microsoft released a
+chatbot named Xiaoice in China."
+371.669,2.881,"People could chat with Xiaoice so it would
+learn how to speak naturally on a variety"
+374.55,2.56,of topics from these conversations.
+377.11,4.44,"It worked great, and Xiaoice had over 40 million
+conversations with no incidents."
+381.55,5.19,"In 2016, Microsoft tried the same thing in
+the U.S. by releasing the Twitterbot Tay."
+386.74,4.459,"Tay trained on direct conversation threads
+on Twitter, and by playing games with users"
+391.199,2.25,"where they could get it to repeat what they
+were saying."
+393.449,4.821,"In 12 hours after its release, after a “coordinated
+attack by a subset of people” who biased"
+398.27,4.97,"its data set, Tay started posting violent,
+sexist, anti-semitic, and racist Tweets."
+403.24,4.179,"This kind of manipulation is usually framed
+as “joking” or “trolling,” but the"
+407.419,4.31,"fact that AI can be manipulated means we should
+take algorithmic predictions with a grain"
+411.729,1.0,of salt.
+412.729,2.97,"This is why I don’t leave John-Green-Bot
+alone online…"
+415.699,4.901,"The common theme of algorithmic bias is that
+AI systems are trying to make good predictions,"
+420.6,1.83,but they make mistakes.
+422.43,4.79,"Some of these mistakes may be harmless or
+mildly inconvenient, but others may have significant"
+427.22,1.0,consequences.
+428.22,3.26,"To understand the key limitations of AI in
+our current society, let’s go to the Thought"
+431.48,1.74,Bubble.
+433.22,3.74,"Let’s say there’s an AI system called
+HireMe! that gives hiring recommendations"
+436.96,1.19,to companies.
+438.15,4.87,"HireMe is being used by Robots Weekly, a magazine
+where John-Green-bot applied for an editorial"
+443.02,1.0,job.
+444.02,4.07,"Just by chance, the last two people named
+“John” got fired from Robots Weekly and"
+448.09,3.31,"another three “Johns” didn’t make it
+through the hiring process."
+451.4,5.13,"So, when John-Green-Bot applies for the job,
+HireMe! predicts that he’s only 24% likely"
+456.53,2.949,to be employed by the company in 3 years.
+459.479,4.69,"Seeing this prediction, the hiring manager
+at Robots Weekly rejects John-Green-bot, and"
+464.169,1.831,this data gets added to the HireMe!
+466.0,1.039,AI system.
+467.039,3.601,"John-Green-Bot is just another “John”
+that got rejected, even though he may have"
+470.64,1.94,been the perfect robot for the job!
+472.58,3.5,"Now, future “Johns” have an even lower
+chance to be hired."
+476.08,5.059,"It’s a positive feedback loop, with some
+pretty negative consequences for John-Green-Bot."
+481.139,5.281,"Of course, being named “John” isn’t
+a protected class, but this could apply to"
+486.42,1.41,other groups of people.
+487.83,2.16,"Plus, even though algorithms like HireMe!"
+489.99,4.79,"Are great at establishing a link between two
+kinds of data, they can’t always clarify"
+494.78,1.68,why they’re making predictions.
+496.46,4.48,"For example, HireMe! may find that higher
+age is associated with lower knowledge of"
+500.94,4.3,"digital technologies, so the AI suggests hiring
+younger applicants."
+505.24,4.56,"Not only is this illegally discriminating
+against the protected class of “age,”"
+509.8,2.88,but the implied link also might not be true.
+512.68,5.589,"John-Green-bot may be almost 40, but he runs
+a robot blog and is active in online communities"
+518.269,1.45,like Nerdfighteria!
+519.719,5.131,"So it’s up to humans interacting with AI
+systems like HireMe! to pay attention to recommendations"
+524.85,4.0,"and make sure they’re fair, or adjust the
+algorithms if not."
+528.85,1.69,"Thanks, Thought Bubble!"
+530.54,5.12,"Monitoring AI for bias and discrimination
+sounds like a huge responsibility, so how"
+535.66,1.0,can we do it?
+536.66,3.75,"The first step is just understanding that
+algorithms will be biased."
+540.41,4.719,"It’s important to be critical about AI recommendations,
+instead of just accepting that “the computer"
+545.129,1.0,said so.”
+546.129,4.871,"This is why transparency in algorithms is
+so important, which is the ability to examine"
+551.0,4.2,"inputs and outputs to understand why an algorithm
+is giving certain recommendations."
+555.209,3.81,"But that's easier said than done
+when it comes to certain algorithms, like"
+559.02,0.999,deep learning methods.
+560.02,3.2,Hidden layers can be tricky to interpret.
+563.22,5.059,"Second, if we want to have less biased algorithms,
+we may need more training data on protected"
+568.279,2.37,"classes like race, gender, or age."
+570.649,4.141,"Looking at an algorithm’s recommendations
+for protected classes may be a good way to"
+574.79,1.849,check it for discrimination.
+576.639,2.401,"This is kind of a double-edged sword, though."
+579.04,3.95,"People who are part of protected classes may
+(understandably) be worried about handing"
+582.99,2.0,over personal information.
+584.99,5.05,"It may feel like a violation of privacy, or
+they might worry that algorithms will be misused"
+590.04,2.349,to target rather than protect them.
+592.389,4.25,"Even if you aren’t actively working on AI
+systems, knowing about these algorithms and"
+596.639,4.411,"staying informed about artificial intelligence
+are really important as we shape the future"
+601.05,1.209,of this field.
+602.259,4.68,"Anyone, including you, can advocate for more
+careful, critical interpretation of algorithmic"
+606.939,2.52,outputs to help protect human rights.
+609.459,4.151,"Some people are even advocating that algorithms
+should be clinically tested and scrutinized"
+613.61,2.029,in the same way that medicines are.
+615.639,4.401,"According to these opinions, we should know
+if there are “side effects” before integrating"
+620.04,1.62,AI in our daily lives.
+621.66,2.51,There’s nothing like that in the works yet.
+624.17,4.819,"But it took over 2400 years for the Hippocratic
+Oath to transform into current medical ethics"
+628.989,1.181,guidelines.
+630.17,4.229,"So it may take some time for us to come up
+with the right set of practices."
+634.399,4.461,"Next time, we have a lab and I’ll demonstrate
+how there are biases in even simple things"
+638.86,2.22,like trying to adopt a cat or a dog.
+641.08,1.62,I’ll see ya then.
+642.7,5.16,"Speaking of understanding how bias and misinformation spread, you should check out this video on Deep Fakes"
+647.86,5.94,I did with Above the Noise -- another PBSDS channel that gets into the research behind controversial issues.
+653.8,3.88,Head over to the video in the description to find out how detect deep fakes.
+657.68,1.96,Tell them Jabril sent you!
+659.64,3.5,"Crash Course AI is 
+produced in association with PBS Digital Studios!"
+663.149,3.42,"If you want to help keep all Crash Course
+free for everybody, forever, you can join"
+666.569,2.26,our community on Patreon.
+668.829,3.091,"And if you want to learn more about prejudice
+and discrimination in humans, you can check"
+671.92,2.8,out this episode of Crash Course Sociology.

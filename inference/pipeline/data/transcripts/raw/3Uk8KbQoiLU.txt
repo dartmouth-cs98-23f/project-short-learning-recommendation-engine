@@ -1,0 +1,603 @@
+second,duration,transcript
+0.0,3.0,foreign
+3.15,3.79,[Music]
+11.76,5.279,tography broadly is the practice and
+14.88,3.6,study of techniques for secure
+17.039,3.981,communication
+18.48,6.0,in the presence of adversarial Behavior
+21.02,5.08,so you know do you have information do
+24.48,3.9,you want to keep it a secret
+26.1,6.919,how do you keep it a secret
+28.38,4.639,um is you know is kind of the pipeline
+35.1,6.0,the way we know something is secure if I
+37.92,5.459,wanted to you know prove it to you if I
+41.1,4.08,wanted you to like not just take my word
+43.379,3.36,for it that if I tell you something is
+45.18,4.5,secure
+46.739,5.701,um you'll have to do two things first we
+49.68,4.44,have to Define an adversary
+52.44,3.299,um or in combination with an adversary
+54.12,5.16,we have to Define what's called a
+55.739,6.62,security model so this is a set of
+59.28,5.839,basically just mathematical operations
+62.359,5.321,and these mathematical operations
+65.119,5.201,rigorously Define everything that the
+67.68,4.02,adversary is allowed to do so maybe
+70.32,3.42,they're allowed to look at messages
+71.7,5.34,before I encrypt them maybe they're
+73.74,5.16,allowed to to look at you know some
+77.04,4.68,encrypted messages and then they're
+78.9,4.74,allowed to see uh the decrypted version
+81.72,3.899,and there's all sorts of different
+83.64,4.2,behaviors and scenarios that you can
+85.619,4.86,Define with math in order to model
+87.84,5.459,different types of adversaries that
+90.479,5.46,would model different scenarios where
+93.299,4.081,you'd want to protect information and so
+95.939,4.741,once you've made all of these
+97.38,6.059,mathematical definitions you construct a
+100.68,4.14,communication protocol so this is a
+103.439,4.801,mathematic this is a series of
+104.82,5.1,mathematical operations that model uh
+108.24,3.68,multiple people talking to each other
+109.92,4.8,sending messages
+111.92,5.08,which consists of just bits back and
+114.72,4.98,forth between each other and once you've
+117.0,6.18,defined that protocol you mathematically
+119.7,5.699,prove that the adversary cannot break
+123.18,6.359,your protocols so you prove that they
+125.399,7.2,can't learn information basically and so
+129.539,5.221,the techniques to do this can be can go
+132.599,5.041,from very simple to just proving it's
+134.76,4.28,hard to to figure out like the factors
+137.64,4.38,of a number
+139.04,5.02,to extremely complicated problems that
+142.02,4.799,like you know people would study you
+144.06,4.319,know for like their PHD topics
+146.819,3.42,um or something so I'm not going to
+148.379,4.021,really go into any specific construction
+150.239,5.041,but I do just want you guys to
+152.4,5.339,understand the process of we
+155.28,5.819,mathematically construct
+157.739,5.58,um an adversary that tries to break our
+161.099,4.741,to that tries to break our code
+163.319,5.28,and then we prove that they can't break
+165.84,4.32,it and so just to give
+168.599,4.381,um an example
+170.16,5.939,um this is a high level view of what's
+172.98,4.86,called into end encryption which is how
+176.099,4.381,you would communicate some with someone
+177.84,4.979,securely over over a chat application
+180.48,4.92,like WhatsApp or signal or Facebook
+182.819,5.221,Messenger so every time you use WhatsApp
+185.4,5.88,or Facebook messenger and you talk to
+188.04,5.419,someone this process is occurring with
+191.28,5.039,these mathematical key exchanges
+193.459,4.721,encrypting messages sending encrypted
+196.319,3.42,messages decrypting them with certain
+198.18,2.12,Keys
+199.739,2.881,um
+200.3,4.24,and we start with like a high level
+202.62,3.899,description of this process and then we
+204.54,5.779,work our way down getting more and more
+206.519,3.8,specific with um with the math
+211.019,5.341,you know I just said you know we have to
+213.18,5.4,prove uh that our you know our adversary
+216.36,4.5,which I've called a here so we have to
+218.58,3.42,prove that adversary a can't break our
+220.86,4.019,scheme
+222.0,4.5,and the way that we do these uh these
+224.879,4.021,mathematical proofs because I'm not
+226.5,3.86,going to really give you an example
+228.9,3.72,um
+230.36,5.14,just because I don't want to like throw
+232.62,6.42,you know math at you is that
+235.5,7.44,you use a you use the adversary we made
+239.04,7.199,this mathematical set of operations that
+242.94,5.579,we consider to be like enemy Behavior
+246.239,3.661,and you use it to solve a problem you
+248.519,4.5,know is hard
+249.9,5.399,so you have an adversary you have a
+253.019,5.881,problem that you know for a fact is hard
+255.299,6.961,or maybe even impossible and you prove
+258.9,5.64,that if the adversary exists and can do
+262.26,3.12,damage to your like if it can break your
+264.54,3.96,code
+265.38,5.759,you prove that you've actually solved
+268.5,5.4,the problem you knew that was hard and
+271.139,4.861,so this is a contradiction we are saying
+273.9,4.38,that you know I have this problem I know
+276.0,4.38,is impossible and I have a solution to
+278.28,4.38,the problem that doesn't make any sense
+280.38,5.16,so that means that like the abilities
+282.66,5.4,that I said that this adversary had
+285.54,5.219,um in order to like solve in order to
+288.06,4.8,break our encryption to break our code
+290.759,3.801,um it can't exist
+292.86,4.5,um
+294.56,4.9,and so one another way of phrasing this
+297.36,4.44,is that we assume that whatever
+299.46,4.799,communication protocol or encryption
+301.8,4.02,scheme we were making is weak against
+304.259,4.321,the adversary
+305.82,5.76,and then assuming that weakness we are
+308.58,6.54,able to build a solution to a hard
+311.58,6.36,problem B and kind of the simplest hard
+315.12,4.2,problem that um I'll give you guys as an
+317.94,2.9,example
+319.32,4.08,um is
+320.84,5.44,determining the factors of number of
+323.4,4.5,really really big numbers
+326.28,4.139,um so if I give you a really really big
+327.9,5.4,number and I ask you to pull out a
+330.419,5.761,specific like prime factor
+333.3,5.52,um so a number that divides that number
+336.18,5.519,um this is a this is a problem that is
+338.82,5.879,um in in theory hard to solve
+341.699,5.28,um at least on a normal computer and by
+344.699,4.081,hard here I just mean it takes a long
+346.979,3.601,time so
+348.78,3.18,um unless you have a very special type
+350.58,3.78,of encryption called information
+351.96,5.519,theoretic encryption
+354.36,5.339,um you can eventually break any code or
+357.479,4.981,any encryption scheme however if it
+359.699,4.861,takes a really long time uh no one is
+362.46,4.56,going to break it so it's you know it's
+364.56,4.5,safe enough for human for like humans
+367.02,4.5,for human use
+369.06,6.3,um and how long it might take to break
+371.52,6.0,it uh might you know allow you to use
+375.36,4.44,different encryption schemes that are
+377.52,6.119,maybe faster or slower for different
+379.8,6.899,purposes so so you know encrypting your
+383.639,6.241,bank account transactions for example is
+386.699,5.461,probably more important than like your
+389.88,3.84,Snapchats with like your friend or maybe
+392.16,3.0,I don't know what you send to maybe
+393.72,3.599,you're sending your bank transactions on
+395.16,3.599,Snapchat but you know maybe don't do
+397.319,4.021,that
+398.759,5.101,um but
+401.34,5.699,if you know we basically want like we
+403.86,5.58,want harder and harder problems uh to
+407.039,3.78,solve like and protect more and more
+409.44,3.72,secure information
+410.819,5.94,and I know this might seem a little
+413.16,5.34,abstract to you guys so just um to think
+416.759,3.0,about it in terms of the Python code
+418.5,2.699,that we've been working with the past
+419.759,3.541,two weeks
+421.199,4.861,um one way to think about this is that
+423.3,5.1,we use the adversary a like a python
+426.06,5.46,function so we have a python function
+428.4,5.519,that is our adversary and if I give that
+431.52,4.26,adversary some data it will spit back
+433.919,3.241,the answer to a really really hard
+435.78,3.9,problem
+437.16,5.28,um a problem that I know is too hard for
+439.68,5.1,it to actually solve so I know that this
+442.44,5.28,that this you know this function uh
+444.78,5.34,doesn't actually exist it's not real
+447.72,5.16,um and if I know it's not real then I
+450.12,5.76,know my system is safe
+452.88,4.5,and just to like reiterate this idea of
+455.88,2.46,contradiction
+457.38,3.12,um you know here's a little Phoenix
+458.34,3.96,right you know
+460.5,4.199,if we have a clear contradiction between
+462.3,4.739,the existence of an adversary and the
+464.699,5.461,heart and the hardness of a problem one
+467.039,5.641,of them has to be wrong and if we
+470.16,4.8,already have a proof for the problem uh
+472.68,4.079,that's supposed to be hard I know it's I
+474.96,4.82,know it's the adversary and I know that
+476.759,3.021,my system is safe
+481.44,5.699,how does that intersect with machine
+483.12,6.06,learning so there's two forms that I
+487.139,4.261,think are good to consider
+489.18,3.9,um one is more theoretical and one is
+491.4,3.72,more practical
+493.08,4.14,so first
+495.12,4.799,um our cert we can think about doing
+497.22,6.36,cryptography with machine learning and
+499.919,5.941,so what I mean by this is you know can I
+503.58,5.459,use a machine learning problem in a
+505.86,4.44,crypto in a cryptography scheme so if I
+509.039,3.661,have a really really hard machine
+510.3,4.32,learning problem maybe I can use that
+512.7,4.079,problem to hide information because the
+514.62,4.44,problem's just too hard to solve and so
+516.779,4.2,that's a more theoretical problem where
+519.06,3.479,we're like building you know encryption
+520.979,4.261,schemes
+522.539,4.621,um on the other hand more practically
+525.24,3.96,um machine your machine Learning System
+527.16,4.799,that you might build for you know any
+529.2,5.579,reason is using data sets right you're
+531.959,4.621,you're usually collecting data in like a
+534.779,4.74,supervised problem or an unsupervised
+536.58,4.56,problem and that data might need to be
+539.519,3.481,secured it might be really sensitive
+541.14,4.379,like maybe you're trying to do like
+543.0,5.04,cancer diagnoses well if you want to do
+545.519,5.101,real cancer diagnoses you have to have
+548.04,4.5,databases from hospitals so hospitals
+550.62,3.36,have to actually give you like patient
+552.54,3.299,data
+553.98,4.74,um and you have to keep that data secure
+555.839,4.381,you have to make sure no one leaks it
+558.72,4.08,um otherwise you know you're violating
+560.22,4.86,basically the Hippocratic Oath that you
+562.8,4.26,know all that like this hospital is is
+565.08,3.24,legally obligated and you know morally
+567.06,3.48,obligated
+568.32,4.86,um to keep safe
+570.54,4.5,and so we have this theoretical View and
+573.18,5.58,this more practical View
+575.04,6.419,and so you know if you won again doing
+578.76,4.5,cryptography with machine learning if
+581.459,4.981,some problems are not easily learnable
+583.26,6.66,they're really good for cryptography
+586.44,5.88,and on the other hand if um you know
+589.92,5.099,maybe the security of a cryptography
+592.32,4.74,scheme is not exactly clear so maybe
+595.019,4.32,there's a problem that I think is hard
+597.06,4.1,and that I'm using for a cryptography
+599.339,4.5,scheme but I don't really know it's hard
+601.16,4.179,well the thing that really decides how
+603.839,4.081,hard it is is whether you can learn
+605.339,5.281,anything about it so if I have a problem
+607.92,4.74,I'm not quite sure is hard I could try
+610.62,5.04,doing machine learning
+612.66,6.06,on the on the scheme on the problem and
+615.66,5.1,if it finds anything then I know that
+618.72,4.02,this problem I was considering was hard
+620.76,4.079,is actually
+622.74,4.26,um there's some issues with it
+624.839,3.421,um so you know I can use cryptography I
+627.0,3.66,can use machine learning to try and
+628.26,5.1,build a cryptographic scheme or I can
+630.66,6.38,use it to try and break one
+633.36,6.36,um now uh using it to build uh crypto
+637.04,4.06,cryptographic schemes is very well
+639.72,3.6,understood
+641.1,3.78,um one way to think about it is that if
+643.32,2.519,you have a learning problem if you have
+644.88,2.88,something you want to do machine
+645.839,4.94,learning with that is inherently
+647.76,6.36,unpredictable then it's inherently
+650.779,5.321,unlearnable and so you know if you can
+654.12,4.08,construct this learning problem that you
+656.1,4.679,can't solve then it's good to use for
+658.2,5.879,cryptography and
+660.779,6.841,um some examples of this might be like
+664.079,7.2,learning a like a perfectly like random
+667.62,5.82,uh function so if I like am just sending
+671.279,4.861,numbers to random numbers there's no
+673.44,5.22,pattern in that I can't like I can't
+676.14,5.28,learn anything so I could use that to
+678.66,5.4,make certain cryptographic schemes
+681.42,4.44,um on the other hand I am not really
+684.06,4.32,even though people regularly publish
+685.86,5.76,research on this I'm not confident that
+688.38,5.16,throwing machine learning at um at like
+691.62,4.2,cryptography schemes you're not sure is
+693.54,5.4,are secure is necessarily that useful to
+695.82,5.759,do it kind of breaks you know the
+698.94,4.68,mathematical rigorousness or the math
+701.579,4.561,medical rigor that I was saying we need
+703.62,4.74,earlier because if I throw a neural
+706.14,3.6,network at a machine at a or at a
+708.36,3.18,cryptography problem and see if the
+709.74,3.9,neural network can just like figure it
+711.54,4.32,out so the neural networks like acting
+713.64,4.439,as the adversary kind of
+715.86,4.02,um I don't know really how that network
+718.079,4.5,works so I don't really have a
+719.88,3.959,mathematical proof in the sense of a
+722.579,3.241,proof that I can like read and
+723.839,4.381,understand for like why my scheme was
+725.82,3.6,broken the network just kind of figured
+728.22,4.2,it out
+729.42,5.82,um but people do you know do try and do
+732.42,4.979,this and in practice on real schemes
+735.24,5.279,that are like running on systems this
+737.399,5.401,can also help you find actually bugs so
+740.519,3.781,if you have a bug in your scheme
+742.8,3.36,um you know machine learning might be
+744.3,5.12,able to pick up some statistical pattern
+746.16,3.26,you wouldn't see by hand
+751.079,5.221,and just to give you know a concrete
+753.36,5.88,example of why this like matters
+756.3,5.94,um here's um here's a kind of a visual
+759.24,5.339,of the um Advanced encryption standard
+762.24,5.339,which like you don't need to know how it
+764.579,5.281,works I just want you to think that um
+767.579,4.621,that it's basically like a really really
+769.86,4.26,good and complicated Cipher for
+772.2,4.92,substituting letters with other letters
+774.12,5.159,it's like you know the Enigma machine
+777.12,5.159,this is like the mathematically secure
+779.279,4.8,digma machine this one actually works
+782.279,3.661,um and so
+784.079,5.161,AES
+785.94,5.82,um is what is called a block Cipher and
+789.24,3.599,block ciphers although we have very good
+791.76,3.9,reason
+792.839,4.5,um to believe are like very secure and
+795.66,3.299,even secure against like quantum
+797.339,4.44,computers
+798.959,5.641,um we don't actually have proof uh we
+801.779,5.941,don't really have explicit proofs for
+804.6,4.62,why these ciphers um are so secure we
+807.72,4.14,think that it's because they model
+809.22,6.059,random like basically just a totally
+811.86,6.419,random function well but there is not a
+815.279,4.641,proof for this and so you might think
+818.279,4.201,you know
+819.92,5.74,maybe if there is something like
+822.48,5.82,statistically significant in like across
+825.66,5.28,AES or maybe a specific implementation
+828.3,3.979,of AES that maybe has a bug in it so it
+830.94,3.66,doesn't work the way it's supposed to
+832.279,4.3,you could throw some like machine
+834.6,3.66,learning at it and see if it picks up
+836.579,3.361,any patterns
+838.26,4.019,um and if it does pick up any patterns
+839.94,4.86,it can help you like bug fix if it's an
+842.279,5.401,implementation or it could show that
+844.8,6.36,there's some underlying problem in AES
+847.68,4.74,that we don't know about and this you
+851.16,3.419,know if someone actually found this with
+852.42,5.28,AES it would be like Earth shattering
+854.579,6.0,because you use AES hundreds of times a
+857.7,5.04,day you're using AES right now this
+860.579,3.721,video this video feed that you're
+862.74,4.2,looking at
+864.3,5.339,um I think is encrypted with AES I don't
+866.94,4.62,know if Zoom has fully uh Zoom was in
+869.639,3.241,the process of encrypting video feeds I
+871.56,2.219,don't know if they've finished so I
+872.88,3.3,don't know if it's actually running
+873.779,4.981,right now but like any time you use an
+876.18,5.279,encrypted video chat or if you ever go
+878.76,5.06,to like the http PS version of a site
+881.459,4.74,where the S stands for secure
+883.82,3.94,all of that is being done with this
+886.199,3.781,encryption standard
+887.76,3.54,um so it would be it would be like quite
+889.98,2.94,shocking
+891.3,4.26,um if it if it ever ended up like being
+892.92,6.8,broken or very reassuring if we actually
+895.56,4.16,got you know a proof out of it
+901.139,5.76,on the other hand we can also think
+903.959,5.701,about uh instead of using ml to like
+906.899,5.341,either attack or build cryptography we
+909.66,6.78,can think about also how cryptography
+912.24,6.719,can help us do ml uh better so machine
+916.44,4.56,learning often uses sensitive data as I
+918.959,4.081,said like maybe Hospital data and you
+921.0,3.8,got to protect it and if anyone is
+923.04,4.56,interested in this topic more generally
+924.8,6.46,the keywords you want to search for is
+927.6,6.06,privacy preserving machine learning
+931.26,4.379,and so you know why do we even need to
+933.66,3.539,think about this
+935.639,2.161,um you know
+937.199,1.921,um
+937.8,4.62,so like why do we even need to think
+939.12,5.64,about this well if you have
+942.42,4.979,um say like Census Data
+944.76,5.519,um you and you want to like do some
+947.399,4.44,machine learning on the Census Data
+950.279,2.821,um you don't want to lose any of the
+951.839,3.481,senses you don't want to like
+953.1,4.679,accidentally leak information about like
+955.32,5.16,a real person's census right like a
+957.779,4.74,census record in the U.S census has tons
+960.48,3.479,of personal information about you right
+962.519,4.201,it has your name it has your social
+963.959,5.281,security number it has like
+966.72,3.96,um your family that lives with you
+969.24,4.44,um it has tons and tons of information
+970.68,4.38,in it and you don't want any any of that
+973.68,5.58,to leak and I have just this little
+975.06,5.82,picture of um of a census record and so
+979.26,4.8,you know
+980.88,4.98,the easiest thing we could maybe do is
+984.06,3.66,basically jiggle so I just have this
+985.86,3.3,picture of jello here
+987.72,3.359,um because I don't really have a good
+989.16,4.5,visual representation of what we're of
+991.079,3.901,what this is doing besides like thinking
+993.66,3.179,of like you know
+994.98,5.159,making the data like wiggle a little bit
+996.839,5.701,but you know you can think about it uh
+1000.139,4.741,about this as like if I changed every
+1002.54,4.919,single piece of data just a little bit
+1004.88,5.16,so like I changed everyone's names just
+1007.459,4.32,a little bit I changed everyone's like
+1010.04,4.32,um addresses a little bit I changed
+1011.779,5.641,everyone's like I changed all the data
+1014.36,6.0,just a little bit and on the individual
+1017.42,5.82,level I can't I can't easily leak
+1020.36,5.16,anyone's uh I I can't leak anyone's
+1023.24,4.62,information anymore necessarily so like
+1025.52,4.919,if you looked at one row in the database
+1027.86,4.62,that like this maybe this is training
+1030.439,4.801,data was stored in
+1032.48,5.339,um I can't I can't identify who that
+1035.24,5.339,belonged to eventually because I I
+1037.819,5.581,basically randomized the data a little
+1040.579,5.701,bit and I say a little bit because if
+1043.4,5.039,you're very careful you can make it to
+1046.28,6.0,where the machine learning you would do
+1048.439,6.24,on the original data still works on this
+1052.28,4.5,like jiggled data so even though all the
+1054.679,5.101,data has been changed just a little bit
+1056.78,5.58,you can still compute or you can still
+1059.78,6.06,do machine learning and learn useful
+1062.36,5.52,things about the entire data set and
+1065.84,4.4,those those things you might learn about
+1067.88,6.78,the entire data set and the aggregate
+1070.24,6.4,will be still very accurate to how they
+1074.66,4.32,would have been if I hadn't like jiggled
+1076.64,4.32,any of the data so this is called
+1078.98,4.26,differential privacy and it's like a
+1080.96,5.579,huge research topic it is actually being
+1083.24,4.92,used in the U.S census now so like you
+1086.539,4.081,can find there were Congressional
+1088.16,4.74,hearings about exactly what mathematical
+1090.62,4.32,parameters and how to pick them and you
+1092.9,3.84,know guys from the Census Bureau and
+1094.94,3.479,we're having to like explain to Senators
+1096.74,3.84,why it mattered
+1098.419,5.521,um which there were some pretty funny
+1100.58,6.18,interactions there but you know this is
+1103.94,5.34,something simple you can do and I say
+1106.76,5.4,simple in reality I just mean not
+1109.28,6.3,cryptographic it's not cryptography but
+1112.16,6.32,it's um but it's not it's not not enough
+1115.58,6.599,so even though we can do this
+1118.48,6.34,this differential privacy and like
+1122.179,4.261,compute some things with a data set it
+1124.82,3.9,doesn't actually solve a lot of like
+1126.44,6.42,hard problems
+1128.72,6.9,um that we might care about so you know
+1132.86,4.439,when I do you know when I like jiggle
+1135.62,4.679,all the data a little bit I add noise
+1137.299,5.341,and I get this new secure data set
+1140.299,5.221,um this data set is now locked I can't
+1142.64,3.96,like I can't change any of the data I
+1145.52,3.48,can't figure out if there were
+1146.6,3.84,duplicates I can't clean it so like a
+1149.0,3.12,big part of machine learning is like
+1150.44,3.599,making sure your data is in a
+1152.12,4.5,presentable fashion for like doing the
+1154.039,4.801,machine learning once you've done this
+1156.62,5.28,you cannot go back and clean it the
+1158.84,4.68,whole data is has been randomized to a
+1161.9,3.24,point that like you can't identify
+1163.52,4.08,anything
+1165.14,4.44,um properly so like if I delete you know
+1167.6,4.439,if I delete a row of a spreadsheet after
+1169.58,4.44,I've like you know randomized it I have
+1172.039,4.02,no idea if what I deleted was a
+1174.02,3.98,duplicate or not I don't know like who
+1176.059,5.161,it belonged to and I'm not supposed to
+1178.0,6.52,but you know you could imagine scenarios
+1181.22,6.18,where you would want to like do this
+1184.52,6.06,um like cleaning process so there's two
+1187.4,5.22,things we can do and I know I am running
+1190.58,3.599,close um close on time so I'm going to
+1192.62,4.5,wrap it up soon
+1194.179,5.941,um but you know we have what's called
+1197.12,4.799,secure multi-party computation and not
+1200.12,5.46,going to explain how that works but the
+1201.919,5.76,idea is that you can take something you
+1205.58,4.32,can take two things
+1207.679,5.101,um you know you can take some data you
+1209.9,5.639,can compute something about it
+1212.78,5.519,um that is like supposed to be that is
+1215.539,6.861,supposed to be private and you will get
+1218.299,7.201,an answer back but you did not have to
+1222.4,5.26,make the entire data set like you didn't
+1225.5,4.74,have to jiggle all the data this time so
+1227.66,5.28,like say we have like this scientist uh
+1230.24,4.14,Ria I think I got this um picture from a
+1232.94,2.76,National Institute of Standards and
+1234.38,3.659,Technology
+1235.7,4.38,um article and say like Ria here wants
+1238.039,4.201,to compute something about you know
+1240.08,4.74,these two different hospital databases
+1242.24,5.1,uh but you know she doesn't want to like
+1244.82,4.44,destroy the data so she can like modify
+1247.34,3.719,it if she needs to you can put
+1249.26,4.86,multi-party computation in the middle
+1251.059,6.12,and you are allowed to do that
+1254.12,6.12,um another thing you might want to do is
+1257.179,6.0,you could like compute uh uh do some
+1260.24,5.7,data does some data have duplicates so
+1263.179,4.38,is some data like replicated in two
+1265.94,2.82,different like training sets that are
+1267.559,3.24,maybe really sensitive and you don't
+1268.76,3.48,want to leak anything about them and you
+1270.799,3.421,can do that with a cryptographic
+1272.24,4.26,technique called private intersection or
+1274.22,4.8,private set intersection this was used
+1276.5,4.62,by Apple and their csam system actually
+1279.02,3.72,which they almost put on your phones but
+1281.12,3.54,there were some issues with it and a lot
+1282.74,4.26,of backlash and they canceled the
+1284.66,4.019,project at the last minute but that's
+1287.0,4.799,just an example of like you know it
+1288.679,5.401,being present and you know in real life
+1291.799,3.721,and the system it was being used for was
+1294.08,3.719,a machine Learning System so it's like
+1295.52,5.34,extra extra relevant
+1297.799,5.281,um and then lastly I will say you know
+1300.86,3.9,um even these are like you know
+1303.08,4.74,relatively simple things we want to do
+1304.76,4.98,like Sub sub like out like database
+1307.82,3.78,entries check for duplicates and stuff
+1309.74,4.86,you could imagine you want to do
+1311.6,5.76,something more complicated and for that
+1314.6,4.199,we have this very very powerful thing uh
+1317.36,3.36,called fully homomorphic encryption
+1318.799,3.961,which was discovered
+1320.72,4.56,um formally by this guy named Craig
+1322.76,4.5,Gentry about 11 years ago
+1325.28,3.6,um he's an inspiration to me because he
+1327.26,3.539,did not he was a lawyer and then was
+1328.88,5.34,like I want to do math so then he got a
+1330.799,5.461,PhD in uh in computer science sat in a
+1334.22,2.88,room for like six years and figured this
+1336.26,3.18,out
+1337.1,4.86,um at the age of like 43
+1339.44,4.02,um so he's a cool dude uh it's never too
+1341.96,2.82,late to like figure out something you
+1343.46,3.3,want to do
+1344.78,4.98,um and so fully homomorphic encryption
+1346.76,5.58,is like you know it's the king in some
+1349.76,5.46,sense of cryptography it lets us just
+1352.34,5.1,give it lets us encrypt data give it to
+1355.22,4.74,someone else and they can do arbitrary
+1357.44,4.619,computation they could do arbitrary say
+1359.96,3.9,machine learning on the encrypted data
+1362.059,3.721,and they can give us the results back
+1363.86,5.28,and they have no idea what the results
+1365.78,5.22,are but we do we can decrypt it and so
+1369.14,3.72,this is super cool
+1371.0,3.6,um the only thing I want you to
+1372.86,4.08,understand in terms of how it works is
+1374.6,4.199,you can think of it as taking like one
+1376.94,5.16,addition or multiplication for numbers
+1378.799,5.461,that you knew about and transforming it
+1382.1,4.559,into like hundreds of multiplications or
+1384.26,4.919,hundreds of additions that basically
+1386.659,5.461,hide what the original numbers were it's
+1389.179,5.221,like super super simple overview of how
+1392.12,4.559,it works and for how we could use that
+1394.4,3.899,in machine learning it's basically you
+1396.679,4.74,know throwing the kitchen sink at the
+1398.299,5.221,problem so like say I want to like you
+1401.419,5.401,know do some machine learning on really
+1403.52,5.7,sensitive data I could just encrypt it I
+1406.82,4.08,could then do the machine learning and
+1409.22,4.14,you know the people doing the machine
+1410.9,5.22,learning or like the model itself has no
+1413.36,4.98,idea what the real data was and but the
+1416.12,3.299,machine learning will work basically so
+1418.34,3.42,even though they don't know what it is
+1419.419,4.861,it will work and give useful answers and
+1421.76,4.86,only you who has the you know who has
+1424.28,4.32,the keys to decrypt everything will get
+1426.62,4.08,useful stuff back
+1428.6,4.8,um and so I think I'm going to end it
+1430.7,5.339,there there's many more like you know
+1433.4,3.96,uses of cryptography and ml that I'm
+1436.039,2.941,sure hasn't even been thought of it's
+1437.36,3.059,there's constant Publications but I'm
+1438.98,4.52,going to stop there because I think I'm
+1440.419,3.081,I'm running on time

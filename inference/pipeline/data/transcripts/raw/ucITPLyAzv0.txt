@@ -1,0 +1,1093 @@
+second,duration,transcript
+0.24,4.92,so the environment that you see you know
+2.7,5.159,is a work from notebook so in this
+5.16,4.92,notebook you can type text you can have
+7.859,3.78,like you know your coding move from
+10.08,3.36,language you can have you know
+11.639,3.96,visualization literally we can have
+13.44,5.46,everything so it's an integrated
+15.599,4.621,environment uh so first thing is that
+18.9,3.18,like you know as you may know like you
+20.22,4.979,know well for Mathematica it has more
+22.08,5.279,than you know 6 000 building you know uh
+25.199,4.261,functionalities each of those
+27.359,4.861,functionalities there are for a specific
+29.46,4.98,core area I don't know calculus you know
+32.22,4.44,algebra like you know machine learning
+34.44,4.38,and then like you know very recently
+36.66,3.719,since last year like you know we have
+38.82,5.399,been working on like you know developing
+40.379,6.541,a collection of functions for doing any
+44.219,4.441,sort of quantum computation in a finer
+46.92,3.78,dimensional space
+48.66,3.719,so one more time like you know it's any
+50.7,4.379,Quantum computation in the final
+52.379,4.801,dimensional you know Hillary space and
+55.079,4.861,what we call it is basically is a
+57.18,4.019,packlet so packlet is basically like you
+59.94,3.24,know a collection of functionalities
+61.199,3.481,that are you know interconnected and
+63.18,3.36,after installing the packlet you can
+64.68,3.24,have access to all of those functions so
+66.54,3.119,first is the block you know you just
+67.92,5.04,need to evaluate like you know this code
+69.659,6.0,to get what we call as well from Quantum
+72.96,4.86,framework and as of now like you know
+75.659,5.341,these are the list of
+77.82,5.76,functionalities that we have supporting
+81.0,4.259,any Quantum computation the beauty of
+83.58,3.66,like you know having packlet is that
+85.259,3.661,like you know they're very similar to
+87.24,3.48,any other function that you have
+88.92,4.559,involved for Mathematica like you know
+90.72,5.039,you see here like you know if you click
+93.479,4.441,you know on that you would see like you
+95.759,3.961,know the documentation page so each of
+97.92,4.379,you know these functionalities they have
+99.72,4.259,their own documentation page and like
+102.299,3.601,any other documentation like you know
+103.979,3.901,the format is the same like you know
+105.9,3.42,basic examples it's called properties
+107.88,4.86,and like you know you can find you know
+109.32,6.18,other you know for example I don't know
+112.74,5.159,this is the list of you know functions
+115.5,5.399,that we have you see like you know basis
+117.899,5.641,objects you know uh manipulation of that
+120.899,4.68,entanglement circuit so that that that's
+123.54,3.66,the collection that we have so like you
+125.579,3.6,know after installing the packlet like
+127.2,4.56,you know it's like you have those you
+129.179,4.681,know 20 something like you know Quantum
+131.76,3.3,functionalities with the corresponding
+133.86,3.0,documentation
+135.06,4.2,um we did our best to have a
+136.86,4.26,documentation with no issue but they
+139.26,3.3,might be you know some some minor issues
+141.12,4.38,like you know if you spotted anything
+142.56,3.6,please let us know and we would correct
+145.5,2.879,that
+146.16,4.14,uh it's like you know the main purpose
+148.379,4.141,of this session is having an
+150.3,3.6,introduction to to Quantum Computing
+152.52,3.96,using our framework so I'm going to
+153.9,5.22,start with something very basic at the
+156.48,5.339,very fundamental level the way that we
+159.12,4.64,deal with many of any Quantum
+161.819,4.981,computation is like this
+163.76,4.42,within some process whatever that
+166.8,2.82,process like you know we are going to
+168.18,3.54,discuss about that very soon but you
+169.62,4.38,know within a process what we do is you
+171.72,3.72,know at the very end we prepare a
+174.0,3.66,Quantum estate
+175.44,5.76,and that Quantum estate is installed
+177.66,5.52,like you know in uh one or many uh
+181.2,6.24,physical systems
+183.18,6.839,uh in quantum theory the simplest
+187.44,4.56,system that we have is a system of you
+190.019,3.36,know Dimension two basically that's a
+192.0,4.2,system that like you know in the
+193.379,5.28,simplest case you can describe it by a
+196.2,4.259,vector of two with two amplitudes and
+198.659,3.36,those amplitudes they can get like you
+200.459,3.721,know complex numbers they can be pure
+202.019,3.421,they can be complex but what you see
+204.18,2.82,here like you know let's say that you
+205.44,2.82,know something happened and at the end
+207.0,5.4,like you know you prepare like you know
+208.26,5.94,this Quantum mistake okay uh Quantum
+212.4,3.419,estate like after evaluating that like
+214.2,4.44,you know Quantum is stating a framework
+215.819,4.741,like you know it's an object and this is
+218.64,4.319,basically the like you know the summary
+220.56,3.84,box you know for that object don't be
+222.959,3.661,scared of you know the summary box like
+224.4,4.74,you know if you want like you know you
+226.62,5.399,can look at the traditional form on Mac
+229.14,4.2,the short key is command shift T so you
+232.019,3.78,know that's basically the broadcast
+233.34,5.28,notation the traditional form
+235.799,5.281,okay so I'm using like you know uh the
+238.62,4.5,the short key or you can simply like you
+241.08,3.84,know uh wrap it around you know
+243.12,3.6,traditional form and you can see it like
+244.92,4.739,that short key was literally like an
+246.72,4.379,applying this function on that stick the
+249.659,2.761,beauty of like you know this object is
+251.099,3.06,that you know they contain lots of
+252.42,4.02,interesting information that it can help
+254.159,3.841,you to get like you know uh to have an
+256.44,3.84,idea like you know what you're doing but
+258.0,4.38,you know what is the picture uh What is
+260.28,5.52,this state it's a pure State format and
+262.38,5.4,trophies you know uh zero it's one
+265.8,4.56,physical system the number of Q This
+267.78,4.8,Dimension etc etc but anyhow like you
+270.36,4.92,know let's focus on the on the big
+272.58,5.22,picture so uh
+275.28,4.44,a physical process happen like you know
+277.8,3.959,we prepare a Quantum State and then the
+279.72,4.02,next step that we do is we do
+281.759,3.841,measurement remember like you know in
+283.74,3.6,quantum theory measurement is very
+285.6,3.42,different from any other transformation
+287.34,3.96,so like you know whatever transformation
+289.02,5.64,whatever process that is happening on
+291.3,6.54,Quantum system measurement is different
+294.66,5.039,so what I'm doing here and think about
+297.84,3.66,it like you know very similar to like
+299.699,4.44,other functionalities that we have in
+301.5,5.88,both of Mathematica a function
+304.139,6.721,it acts on another function and then and
+307.38,6.72,the results is an outcome so here like
+310.86,5.76,you know our Quantum measurement acts on
+314.1,4.56,basically this is the input for this
+316.62,4.019,function I'm saying that we're going to
+318.66,4.319,measure it in you know computational
+320.639,3.84,basis or some details like you know for
+322.979,4.081,example if you do not know like you know
+324.479,4.141,how to do that like just just look at
+327.06,3.18,the documentation so this is the
+328.62,3.48,documentation and like you know it
+330.24,3.42,contains all the information that you
+332.1,3.659,need regarding that function but anyhow
+333.66,3.66,let's again let you know let me just
+335.759,3.66,briefly review and then I'm going to go
+337.32,4.02,into the detail so
+339.419,3.961,a state is prepared and then at the end
+341.34,5.1,you do a measurement
+343.38,4.56,uh in our framework because like you
+346.44,3.3,know we have all other functionalities
+347.94,2.819,involved for mathematical you can
+349.74,2.76,calculate the corresponding
+350.759,3.481,probabilities remember quantum theory
+352.5,4.02,the best description at the end is
+354.24,3.899,giving you which what probability you
+356.52,3.42,can get the corresponding outcome and
+358.139,4.321,this is what we get out of log you know
+359.94,4.259,this spatial state
+362.46,4.38,okay so like you know that's basically
+364.199,4.981,the bar chart of like you know uh that
+366.84,3.84,measurement that's not what is happening
+369.18,3.54,in practice
+370.68,5.06,because these probabilities like you
+372.72,3.02,know well for Mathematica
+375.78,4.32,it calculates them exactly meaning
+378.3,3.48,because you know we have you know
+380.1,3.599,statistic probability functionality
+381.78,4.5,these are the exact numbers
+383.699,4.5,in reality like you know in experiment
+386.28,4.38,just let me show you like you know a
+388.199,5.041,special case that I have simulated an
+390.66,4.92,experiment you have to basically repeat
+393.24,4.92,the ex the measurement and you would get
+395.58,3.959,a collection of results okay so in this
+398.16,2.94,very special case you know what I'm
+399.539,3.301,doing here I'm simulating you know the
+401.1,3.78,measurement results and I'm saying that
+402.84,3.96,you know do it you know too many times
+404.88,3.96,okay and this is basically you know what
+406.8,3.899,I'm getting here and then like you know
+408.84,3.84,out of that you can you know calculate
+410.699,4.56,the corresponding frequencies so what
+412.68,4.32,I'm doing here is I'm just let me just
+415.259,4.081,show you this text of the cell right now
+417.0,3.96,okay count them the result is an
+419.34,4.199,association it says like you know for
+420.96,4.5,one you know you got 18 results for zero
+423.539,3.961,you got two results and then the next
+425.46,4.26,step I'm just telling you know normalize
+427.5,4.08,that based on like you know let me just
+429.72,3.0,use you know this syntax which means
+431.58,3.0,like you know check this you know
+432.72,3.96,outcome here I'm just saying I'm going
+434.58,3.42,to normalize by total you know because I
+436.68,3.419,want to get you know the probabilities
+438.0,4.68,it's just like you know how to get the
+440.099,5.16,probabilities this is basically you know
+442.68,4.62,the frequency that we get this is this
+445.259,3.481,is what happens in experiment of course
+447.3,3.66,like you know in reality there are noise
+448.74,3.48,and many other complexities but anyhow
+450.96,3.42,like you know that's what you would get
+452.22,4.02,and you can look you know compare them
+454.38,4.439,together you know easily but
+456.24,4.62,uh the the orange one is like you know
+458.819,5.401,the exact like you know that's exact
+460.86,7.26,calculation and the blue one is what you
+464.22,5.58,get out of the experiment uh
+468.12,3.419,please note that like you know because
+469.8,3.54,again you know in Wolfram language we
+471.539,3.241,can have you know symbolic calculation
+473.34,4.68,and again you know all of those
+474.78,5.639,statistics and uh uh probability
+478.02,4.44,functionalities the results that we
+480.419,3.421,calculate I know like you know I refer
+482.46,2.88,to them as a sort of log you know
+483.84,3.24,simulation but they are exact as well
+485.34,5.28,again on purpose I put it like you know
+487.08,5.399,as exact and uh this is a very unique
+490.62,3.299,feature about our framework but you know
+492.479,3.241,if you want to reproduce like another
+493.919,3.9,measurement results in other you know
+495.72,3.72,Quantum Frameworks the best they would
+497.819,4.32,do is they run it you know a couple of
+499.44,4.259,times I don't know 1024 times and they
+502.139,3.481,just tell you like you know what counts
+503.699,4.62,for each measurement
+505.62,5.699,uh this is the core idea of like you
+508.319,6.361,know any Quantum computing
+511.319,6.001,that that's it okay like you know it's
+514.68,5.219,prepare a very particular State and do a
+517.32,4.62,measurement and for the measurements you
+519.899,4.681,know at the experimental level we get
+521.94,5.04,like you know a collection of results
+524.58,4.02,and then based on that you know we want
+526.98,3.78,to do a very particular you know
+528.6,3.72,computation
+530.76,4.079,that that's it
+532.32,4.62,uh the biggest headache is usually like
+534.839,4.44,you know how to prepare a very
+536.94,3.839,particular state that is suitable for a
+539.279,4.381,very particular goal for a very
+540.779,6.421,particular like you know uh objective
+543.66,5.34,that we have and how to prepare that
+547.2,4.38,okay so that's the whole idea of like
+549.0,5.76,you know developing a Quantum algorithm
+551.58,5.759,for a very particular purpose okay but
+554.76,4.32,let me just comment a little bit more
+557.339,3.421,about like you know Quantum measurement
+559.08,4.14,because you know remember that you know
+560.76,6.18,in quantum theory you can do Quantum
+563.22,5.76,measurement in many possible ways for
+566.94,4.32,example the previous example that I
+568.98,4.38,showed you was let's say like you know
+571.26,3.54,pretending that this is a simulation of
+573.36,3.78,an actual like you know Quantum
+574.8,5.159,Processing Unit it was in computational
+577.14,5.28,basis zero and one you can change that
+579.959,3.961,basis you can do it for example in poly
+582.42,3.66,X and you would get you know the
+583.92,4.8,corresponding probabilities so these are
+586.08,5.04,the results in poly X and this is the
+588.72,5.22,result like you know in uh
+591.12,4.86,uh for like you know computational basis
+593.94,4.62,so that for that measurement you have
+595.98,4.68,lots of freedom okay so that's a big
+598.56,3.839,picture a Quantum estate you do a
+600.66,3.0,measurement and for a measurement like
+602.399,3.181,you know the best is like you know you
+603.66,4.679,can calculate some you know frequencies
+605.58,4.5,and then you have to ask okay what what
+608.339,4.321,I can learn out of those frequencies
+610.08,3.9,okay what kind of you know operation uh
+612.66,5.54,I can do with that
+613.98,8.22,uh so first what what Quantum estate
+618.2,5.38,given like you know any initial State
+622.2,3.6,like you know let's say that you know
+623.58,4.14,you you prepare your system in a
+625.8,4.56,particular State and then you want to
+627.72,4.5,transform that state in quantum theory
+630.36,4.68,this transformation can be done in many
+632.22,5.64,different ways okay for example like you
+635.04,4.739,know one possible way is doing it in a
+637.86,4.02,unitary way this is what we usually have
+639.779,3.961,as Quantum operator and quantum theory
+641.88,3.899,so what I'm doing here I'm just saying
+643.74,4.38,that you know okay prepare a very
+645.779,4.861,particular State and then apply like you
+648.12,4.32,know poly X poly X you know in two
+650.64,3.3,Dimension is you know it's still you
+652.44,4.44,know literally the same like you know
+653.94,4.5,not uh operator and of course I'm sure
+656.88,3.36,you guys know that like you know you go
+658.44,4.26,from zero to one
+660.24,4.8,so this is the transformation like you
+662.7,4.079,know I'm showing you the the simplest
+665.04,4.799,case but like you know then the next
+666.779,4.081,step for any Quantum algorithm is what
+669.839,2.641,is the collection of you know
+670.86,4.44,transformation for a very particular
+672.48,5.28,objective what what we can do like you
+675.3,4.32,know uh how we can compose a very
+677.76,4.38,particular you know transformation
+679.62,5.04,so let me focus on like you know the
+682.14,5.16,idea of like you know uh transformation
+684.66,6.179,like you know how I can change this
+687.3,5.52,state uh just like you know a common
+690.839,3.361,terminology that we have in quantum
+692.82,3.18,theory because again like you know the
+694.2,5.639,most popular you know Quantum systems or
+696.0,6.3,Quantum system in two Dimension but you
+699.839,4.261,know a spin half system uh for example
+702.3,3.3,let me show you like you know a case
+704.1,4.2,that I'm preparing like you know a
+705.6,5.4,random pure State and I'm just looking
+708.3,6.42,at the amplitudes okay so this is
+711.0,6.12,literally like you know uh uh for this
+714.72,3.96,basis you know this is the amplitude and
+717.12,3.12,that's the other one this is basically
+718.68,4.08,the same like for example in our
+720.24,5.279,framework the
+722.76,4.319,another term that we have for that is a
+725.519,3.181,state Vector but you see like you know
+727.079,4.141,behind the scene you know for us as
+728.7,4.259,state Vector is a sports array and if
+731.22,3.179,you want to see like another actual form
+732.959,4.681,just like you know look at the normal
+734.399,4.44,okay so that that's what you get uh of
+737.64,3.24,course you know when you're you know
+738.839,4.021,looking at this state you know Vector
+740.88,4.5,remember like you know the order like
+742.86,5.539,you know this amplitude corresponds to
+745.38,5.639,what you know uh element of your basis
+748.399,4.0,either you know if you don't know that
+751.019,3.121,for example look at the amplitude
+752.399,3.541,because you know it shows you like you
+754.14,3.78,know the keys here are basically like
+755.94,3.899,you know the element of the quantum
+757.92,3.599,basis that you're using but anyhow like
+759.839,3.721,you know so for the simplest Quantum
+761.519,5.82,system you know we can describe it by a
+763.56,6.18,vector a vector of two elements that can
+767.339,5.041,be like you know complex another way of
+769.74,4.38,you know representing that is by a
+772.38,4.139,vector in three dimension and this is
+774.12,5.82,what we usually call as a block vector
+776.519,5.041,uh each of these objects each of these
+779.94,4.019,objects that we have in our framework
+781.56,4.62,they have a long list of properties that
+783.959,4.801,you can find you know in our
+786.18,5.339,documentation page like you know oops I
+788.76,4.44,went to the documentation for
+791.519,3.661,let me just show you the documentation
+793.2,4.259,page here and if you click on the
+795.18,4.98,details like you know there is an
+797.459,4.741,explanation here like for example here
+800.16,4.799,in a block spherical coordinate you know
+802.2,4.5,coordinates of computed block Cartesian
+804.959,4.801,like you know so it gives you the
+806.7,4.8,Cartesian coordinates so this is
+809.76,3.36,basically Cartesian coordinate and this
+811.5,4.74,is you know the spherical coordinate of
+813.12,4.56,you know R Theta and Phi uh this is
+816.24,3.839,basically the three-dimensional you know
+817.68,6.3,visualization so you have a sphere and
+820.079,6.681,like you know this Vector represents the
+823.98,5.46,same state as what we have here
+826.76,3.879,this representation is very popular like
+829.44,3.78,you know those of you if you want to
+830.639,4.621,work like you know in in this field you
+833.22,4.739,need to know more about like you know uh
+835.26,5.22,blocker sphere because uh this is one of
+837.959,4.201,those knowledge like many times many
+840.48,3.24,want to describe anything we refer to
+842.16,4.919,the you know block vector and what
+843.72,6.059,happens to that okay
+847.079,4.681,let us focus on a very simple case okay
+849.779,3.36,so what I'm doing here is that plugin
+851.76,4.62,I'm preparing like you know important
+853.139,4.981,state in a zero State I guess you
+856.38,3.3,already noticed like you know I haven't
+858.12,2.94,mentioned that but look at here like you
+859.68,4.32,know the quantum estate is taking a
+861.06,5.279,string as an input so this is exactly
+864.0,4.079,the same as
+866.339,4.021,doing it
+868.079,4.081,as a vector when the first element is
+870.36,4.32,one
+872.16,3.9,so in the second element is Z1 so this
+874.68,4.08,is by definition that's how we Define
+876.06,4.44,log you know zero State and as you
+878.76,3.18,notice like you know all other
+880.5,3.06,functionalities that you have in in
+881.94,3.42,Wolfram language like you know you can
+883.56,3.66,apply it on the on the top of you know
+885.36,4.14,Quantum objects but anyhow let us
+887.22,3.9,continue like you know with our story so
+889.5,3.42,what I'm doing here I'm just doing you
+891.12,4.38,know a simple transformation I'm saying
+892.92,4.919,that like you know this function
+895.5,5.699,which is a rotation with a given you
+897.839,5.041,know a vector is acting on that initial
+901.199,3.901,State and that initial state is
+902.88,5.759,basically or zero State and then I'm
+905.1,4.979,looking at the Block plot of that state
+908.639,4.021,we can just you know wrap it by
+910.079,4.44,manipulator and you see here like you
+912.66,4.979,know it is clear like you know it's the
+914.519,5.581,rotation around the y-axis that that we
+917.639,5.181,have here by corresponding you know
+920.1,2.72,angle Theta
+922.98,3.719,okay so it's just a simple
+925.5,4.139,transformation
+926.699,4.861,now let me make a composition of like
+929.639,3.921,you know these operations in two steps
+931.56,5.82,I'm gonna say like you know first step
+933.56,5.32,I'm gonna apply rotation and you see
+937.38,3.899,here like you know the notation that I'm
+938.88,4.62,using here is a functional notation here
+941.279,3.661,I'm just using the prefix notation okay
+943.5,3.0,it's just like you know different
+944.94,3.6,syntaxes that we have involved form
+946.5,3.42,language but anyhow what I'm doing here
+948.54,3.419,I'm just saying that you know first
+949.92,3.719,applied rotation around y by the
+951.959,4.141,corresponding angle Theta on this
+953.639,4.621,initial State and on the result apply
+956.1,3.9,rotation around C
+958.26,3.24,and as you can see like you know for
+960.0,4.139,example you know this is the rotation at
+961.5,3.899,all y-axis and now a rotation around you
+964.139,4.341,know z-axis
+965.399,5.221,we can go from a final state
+968.48,4.12,different we can go from an initial
+970.62,4.38,state to a final state
+972.6,4.62,so the idea of like you know a
+975.0,4.079,composition like you know this is what
+977.22,5.76,we usually call as a composition like
+979.079,6.901,you know two transformation apply on a
+982.98,5.159,particular State this is basically the
+985.98,3.419,very fundamental idea of like you know a
+988.139,3.361,circuit
+989.399,4.74,so whenever we talk about the circuit a
+991.5,5.6,circuit is literally like you know a
+994.139,5.64,collection of like you know uh different
+997.1,5.32,operations and those operations like you
+999.779,4.92,know I'm on purpose I'm saying operation
+1002.42,4.62,in the most generic term because they
+1004.699,4.32,can be even non-unitary non-trace
+1007.04,4.14,preserved they can be anything it can be
+1009.019,4.081,a noise it can be you know stochastic it
+1011.18,3.36,can be a Quantum Channel it can be
+1013.1,3.539,literally anything but here you know I'm
+1014.54,4.979,just considering the the a very simple
+1016.639,5.94,case like exactly the previous situation
+1019.519,5.761,that first rotation around y then
+1022.579,7.561,rotation around the C now this is
+1025.28,7.919,basically in language of uh circuits
+1030.14,4.86,uh the the most common thing about the
+1033.199,3.48,quantum circuit is you know the
+1035.0,4.14,corresponding visualization which is
+1036.679,4.681,what you see here each vertical wire
+1039.14,4.799,each horizontal wire it represents the
+1041.36,4.319,quantum State and each of these boxes is
+1043.939,4.081,basically your transformation and here
+1045.679,5.281,we should read from left to right okay
+1048.02,6.12,so it means this guy here you know
+1050.96,5.4,rotation around why it acts first and
+1054.14,4.38,after that Z
+1056.36,3.9,so remember like you know I'm writing it
+1058.52,3.72,here like you know left to right and
+1060.26,3.48,that that's the very first operation
+1062.24,4.08,that is happening
+1063.74,4.08,uh there are some like you know the way
+1066.32,4.739,that you can
+1067.82,5.099,build your circuit I'm gonna show you
+1071.059,3.901,you know some complicated examples but
+1072.919,4.461,anyhow like you know either you can
+1074.96,5.459,literally the way that I'm doing it here
+1077.38,4.72,include your objects but you see here
+1080.419,3.301,like you know somebody would say ah look
+1082.1,3.42,you know this is redundant I'm just
+1083.72,3.9,repeating you know Quantum operator can
+1085.52,4.26,I get rid of that oh yeah of course you
+1087.62,4.74,know you can do that you know we also
+1089.78,4.259,support like you know those uh shorthand
+1092.36,3.9,notations so basically literally like
+1094.039,3.961,you know whenever you have Quantum
+1096.26,2.76,operator wrapped around that you know
+1098.0,3.84,you can just
+1099.02,5.46,remove that and that that maybe helps
+1101.84,4.32,with writing the code or reading that so
+1104.48,4.02,it's like you know basically rotation
+1106.16,4.139,around y by corresponding you know angle
+1108.5,3.419,rotation around Z by the corresponding
+1110.299,3.181,and your line you can easily again like
+1111.919,3.0,you know
+1113.48,5.04,check that you know they are the same
+1114.919,5.161,these two are the same thing uh one very
+1118.52,3.42,important feature of like in a Wolfram
+1120.08,3.78,language is that you can do symbolic
+1121.94,3.84,computation as you can see here you know
+1123.86,4.74,this circuit is a symbolic circuit I'm
+1125.78,5.34,not assigning any value to parameter you
+1128.6,4.92,know Theta and Phi okay there are
+1131.12,5.4,literally like like a symbol and you can
+1133.52,6.18,what you can do is you can say okay uh
+1136.52,4.44,this circuit now I want it to act on an
+1139.7,3.0,initial estate
+1140.96,3.3,so the way that you can do it is just
+1142.7,3.479,like you know active like you know that
+1144.26,4.14,second I call it you know Crump and you
+1146.179,4.981,know it can act on any Quantum mistake
+1148.4,4.76,whatever is that Quantum State okay for
+1151.16,4.68,example this this is a state
+1153.16,5.2,representing in a one qubit so it can go
+1155.84,4.62,even with the random queue or like you
+1158.36,7.559,know whatever state you like
+1160.46,7.74,many times we prepare all of our Q bits
+1165.919,5.221,in the ground state meaning all of them
+1168.2,5.339,are in the zero State because that's the
+1171.14,4.32,most common way of like you know dealing
+1173.539,5.461,with you know Quantum systems in Quantum
+1175.46,5.839,Computing one shorthand notation is just
+1179.0,4.62,don't give any input
+1181.299,4.361,whenever you are not giving any input
+1183.62,4.26,behind the scene what we do is we are
+1185.66,4.68,going to set whatever Quantum system
+1187.88,5.1,that you have all of them at the ground
+1190.34,4.56,state zero okay so like you know
+1192.98,4.439,basically this operation that you see
+1194.9,4.38,here Quantum state zero and then like
+1197.419,3.901,you know this circuit acting on that is
+1199.28,3.96,the same as this operation but
+1201.32,3.42,anyhowload you know this is a
+1203.24,3.66,transformation like you know a
+1204.74,3.72,transformation of the state and then you
+1206.9,3.18,can look at like you know the amplitude
+1208.46,3.78,and these all the amplitudes that that
+1210.08,3.839,we got as you can see here these
+1212.24,3.059,amplitudes are still you know in the
+1213.919,4.441,symbolic form
+1215.299,4.861,okay this is one important thing that
+1218.36,5.22,you remember about you know both of
+1220.16,6.36,language uh it has a very you know
+1223.58,4.74,strong feature maybe the characteristic
+1226.52,3.84,trait of like in a Wolfram language is
+1228.32,6.54,that you can do symbolic calculation
+1230.36,6.179,okay now so let's let's jump like let me
+1234.86,3.72,give you more information about like you
+1236.539,4.081,know okay this composition of operation
+1238.58,4.339,which is basically the wrapper around
+1240.62,5.16,them is our Quantum circuit operator
+1242.919,5.14,you can do whatever you want let's try
+1245.78,4.139,to read it like so here I'm just saying
+1248.059,5.101,that you know poly X
+1249.919,5.341,poly Y and then rotation around X by the
+1253.16,4.5,angular Theta this is basically the
+1255.26,4.38,collection of like you know Gates that
+1257.66,3.18,we have like you know like that's how we
+1259.64,3.12,would call them you know in Quantum
+1260.84,4.94,Computing and all of them are acting on
+1262.76,5.64,the same wire on the same Quantum system
+1265.78,5.38,uh very interesting feature that we have
+1268.4,4.98,in our framework is called order so you
+1271.16,4.92,can say you can specify a various
+1273.38,4.919,specific order you can say look uh I
+1276.08,4.74,want you know this rotation to act on
+1278.299,4.62,the second quantum system
+1280.82,4.02,okay so that's how you would do it you
+1282.919,3.481,would just you know uh specify a rule
+1284.84,3.839,and this one would say okay this
+1286.4,3.659,rotation goes to the second system and
+1288.679,2.641,if you look at like you know again like
+1290.059,3.24,you know what I'm doing here I'm just
+1291.32,4.92,using the shortcut for traditional form
+1293.299,5.641,but you know on Mac is command shift t
+1296.24,5.939,and as you can see here like you know so
+1298.94,4.8,X is on the first after that y on the
+1302.179,4.441,first qubit and then look you know you
+1303.74,6.179,have rotation on the second one remember
+1306.62,5.039,like you know unless these commute like
+1309.919,3.361,you know the order that you are writing
+1311.659,3.301,them like you know it's very important
+1313.28,2.82,so that's the rule of thumb like you
+1314.96,2.88,know those of you who are new to this
+1316.1,3.3,field remember like you know the order
+1317.84,3.839,that you're writing all those operations
+1319.4,4.139,are very important
+1321.679,3.301,or another example like you know look at
+1323.539,3.721,you know this example what I'm doing
+1324.98,4.62,here I'm just saying that you know okay
+1327.26,5.58,you know this time like you know I would
+1329.6,5.04,like you know uh Hollywood to act on the
+1332.84,3.959,third qubit so this time you're gonna
+1334.64,4.62,have you know three wires for the first
+1336.799,4.74,one we have like you know poly X second
+1339.26,4.08,one rotation around X and the last one
+1341.539,3.781,is what
+1343.34,5.699,so that's how like you know we can you
+1345.32,5.76,know uh build you know a composition of
+1349.039,5.221,different you know Gates different you
+1351.08,5.88,know transformation for uh our Quantum
+1354.26,4.32,systems of course the examples that I
+1356.96,3.66,have shown you so far like you know all
+1358.58,4.32,these examples as you as you see like
+1360.62,4.86,you know each of these Transformations
+1362.9,4.44,they are acting on a single qubit you
+1365.48,3.179,can have you know more complicated cases
+1367.34,3.959,like you know for example like you know
+1368.659,6.0,this is a fancy control gate which is
+1371.299,5.821,acting simultaneously on four quantum
+1374.659,4.861,systems at the same time basically you
+1377.12,4.679,cannot decompose it into a you know a
+1379.52,4.92,Chronicle product of like you know four
+1381.799,4.681,different operations okay it's acting on
+1384.44,4.859,that whole you know space at the same
+1386.48,4.98,time okay so your Gates your
+1389.299,4.801,transformation they can act on a single
+1391.46,4.68,they can act on many of them two or more
+1394.1,4.26,at the same time and again like you know
+1396.14,3.96,look what I'm doing here I'm just going
+1398.36,4.74,with the control and then I'm saying
+1400.1,5.1,that you know the operation is X this is
+1403.1,3.78,control one so I'm just saying that like
+1405.2,3.08,you know number one and number two if
+1406.88,4.14,they are one
+1408.28,5.62,acted and then this is basically control
+1411.02,4.56,zero so like you know these are like you
+1413.9,5.1,know the uh
+1415.58,5.52,uh Arguments for our control gate and
+1419.0,3.72,again like you know if you don't know
+1421.1,3.36,how to use like you know these
+1422.72,4.8,functionalities just just look at our
+1424.46,5.04,documentation uh it has many examples
+1427.52,3.659,and each of these named you know
+1429.5,3.96,operations like you know they are
+1431.179,3.781,explained here in detail
+1433.46,3.18,whenever you are looking into the
+1434.96,4.32,documentation especially for circuit
+1436.64,4.5,operator please remember that many of
+1439.28,3.96,the things that you see here there are
+1441.14,3.24,actually Quantum operators so if you go
+1443.24,2.88,here
+1444.38,3.659,let me show it one more time and under
+1446.12,4.98,the details you didn't see any
+1448.039,6.481,description of the control operation it
+1451.1,7.02,means it is under the documentation for
+1454.52,6.48,uh Quantum operator or something just go
+1458.12,4.86,it's a long documentation so if we click
+1461.0,4.86,on Quantum operator
+1462.98,4.98,and here like you know you would see it
+1465.86,3.9,like you know all these you know all of
+1467.96,4.14,them are collection of you know control
+1469.76,4.44,Gates that we have here so we can find
+1472.1,4.38,like you know the detail here
+1474.2,3.12,okay so that's that's the one that I was
+1476.48,2.88,using
+1477.32,3.96,and each of log you know these
+1479.36,3.72,operations they have a full name or they
+1481.28,3.96,have a short name like you know you can
+1483.08,3.54,use either one
+1485.24,4.02,uh
+1486.62,4.919,now let me just give you like a very
+1489.26,6.6,specific example regarding like you know
+1491.539,6.541,what we usually call as a a Quantum
+1495.86,3.12,algorithm for a very particular you know
+1498.08,2.94,go
+1498.98,3.78,I use you know a textbook example which
+1501.02,6.06,is you know Grover Quantum search
+1502.76,5.64,algorithm okay so the idea is like this
+1507.08,3.0,let's say that like now we have this
+1508.4,4.62,Boolean function which is a simple look
+1510.08,5.579,you know the the like you know and and
+1513.02,4.08,then not on the second one using like
+1515.659,3.481,you know the other building
+1517.1,3.84,functionalities in more for Mathematica
+1519.14,3.36,you can easily find like you know what
+1520.94,3.3,are the solutions of this Boolean
+1522.5,4.559,function is it trivial case it is clear
+1524.24,4.26,living room if q1 is true Q2 is false
+1527.059,3.421,like you know you will get like you know
+1528.5,5.52,that that's a solution you will get a
+1530.48,5.84,true value for f okay now let's let's
+1534.02,4.68,what is the a
+1536.32,6.219,Quantum process
+1538.7,7.44,for finding you know this solution
+1542.539,5.88,okay so that Quantum process is going to
+1546.14,4.5,be like this you would start by
+1548.419,4.081,preparing your physical states in the
+1550.64,4.56,ground state you would apply some
+1552.5,4.559,Transformations and then you would do a
+1555.2,4.68,measurement
+1557.059,4.86,remember all of those Transformations at
+1559.88,4.2,the end of the day they prepare a very
+1561.919,4.681,particular Quantum state
+1564.08,5.4,so any Quantum algorithm is like
+1566.6,4.319,a very specific Quantum estate followed
+1569.48,2.76,by the measurement remember like you
+1570.919,3.541,know measurement that's the only way
+1572.24,4.319,that we can extract information out of
+1574.46,4.8,log in our Quantum system
+1576.559,4.081,uh for this very particular case well
+1579.26,2.76,you know I guess you already noticed
+1580.64,4.32,when I was showing you the documentation
+1582.02,7.44,for Quantum circuit operator we have a
+1584.96,6.959,long list of you know uh name operators
+1589.46,4.74,name circuits
+1591.919,5.461,so these are like you know very common
+1594.2,5.94,circuits that that we have for a very
+1597.38,4.679,particular like you know algorithm and
+1600.14,3.96,uh
+1602.059,3.6,let me focus on again as I told you like
+1604.1,5.579,that's a textbook example Global
+1605.659,5.821,Research algorithm uh log uh maybe it's
+1609.679,3.6,early if I just show it to you that like
+1611.48,4.439,you know we have all the completions so
+1613.279,4.441,when you just type it like you know it
+1615.919,3.961,shows you you know completely stuff like
+1617.72,4.8,you know name operators that name
+1619.88,5.34,circuits that we have I don't like
+1622.52,4.56,let's just look at the magic wand for
+1625.22,4.319,preparing like you know Bella State and
+1627.08,3.66,that that that's what we have here by
+1629.539,2.64,they were like you know all these
+1630.74,2.64,features like you know this gray box
+1632.179,3.421,like you know that particular
+1633.38,4.38,composition that you may not like it to
+1635.6,4.62,see it on the top block you know all of
+1637.76,6.48,them look you know you can easily uh
+1640.22,6.36,customize them using uh our uh label
+1644.24,5.28,functionalities and
+1646.58,4.26,just find it for second diagram it's
+1649.52,3.48,here you see like you know what I did
+1650.84,3.719,was you know just I just search through
+1653.0,4.26,the documentation and that's the diagram
+1654.559,4.921,for you know Quantum framework and these
+1657.26,5.58,are all the details all the options that
+1659.48,5.04,we have for uh circuit visualization I
+1662.84,3.3,know like you know many of our users are
+1664.52,5.279,using you know Wolfram language for
+1666.14,6.539,visualizations so like you know we have
+1669.799,4.561,lots of options you can do a lot but but
+1672.679,5.581,anyhow let's let's
+1674.36,5.64,let's move on so the input the argument
+1678.26,3.0,here is basically that Boolean function
+1680.0,3.179,I'm just saying you know look you know
+1681.26,4.26,I'm looking for Grover uh search
+1683.179,3.901,algorithm uh this is the Boolean
+1685.52,3.3,function and this is a circuit diagram
+1687.08,3.66,that we have
+1688.82,3.599,the first you know step like you know
+1690.74,3.0,the one log analysis inside the gray
+1692.419,6.601,boxer you know for Grover search
+1693.74,5.28,algorithm which is usually called uh uh
+1702.159,5.201,diffusion step for a second I I forgot
+1705.32,4.8,about the terminology and the second
+1707.36,5.16,piece that you see here is amplification
+1710.12,5.46,so what's what's happening here like you
+1712.52,5.039,know is uh practice each of them let's
+1715.58,5.16,say that you know you are
+1717.559,8.22,interested in uh
+1720.74,7.939,just looking at the grover diffusion and
+1725.779,2.9,uh
+1736.159,2.541,oh
+1738.74,6.36,yes so I'm you know this will be
+1741.98,5.699,functional very soon let me just make it
+1745.1,4.8,another note of that
+1747.679,4.38,I'll fix it very soon
+1749.9,8.34,but anyhow you know each of these pieces
+1752.059,6.181,let me also check if we have uh
+1762.86,3.0,oh
+1768.7,5.8,see is it the same case for phase
+1771.98,5.299,diffusion
+1774.5,2.779,oh
+1782.38,7.36,okay I have broken that so I'll I'll fix
+1786.86,4.5,it in a sec uh each of these pieces
+1789.74,3.539,basically login and can extract it you
+1791.36,4.5,see like you know the name operates was
+1793.279,4.38,never there but let's continue so what's
+1795.86,5.64,happening here is that you know during
+1797.659,5.64,the first step the the gray box we are
+1801.5,4.38,saving the information about the
+1803.299,6.12,solution in an ancillary qubit and then
+1805.88,7.019,in the second step we amplify the
+1809.419,6.181,basically the amplitude of that uh that
+1812.899,6.721,very particular uh solution
+1815.6,6.6,okay uh the global search algorithm well
+1819.62,4.5,you know remember login it has two uh
+1822.2,5.459,features this is the one which is based
+1824.12,6.6,on you know uh Boolean Oracle uh there
+1827.659,4.581,is another one which is basically Grover
+1830.72,5.22,uh
+1832.24,6.0,let me show it separately
+1835.94,2.3,foreign
+1840.159,4.301,qubit okay so there are whenever we you
+1843.14,3.0,know when you are looking into the
+1844.46,3.12,literature there are two Global search
+1846.14,4.2,algorithms one of them is the angular
+1847.58,4.56,qubit with the other one without that in
+1850.34,3.66,one case we are saving the solution in
+1852.14,3.72,unsolute qubit in the other case we are
+1854.0,3.899,saving the solution in the overall
+1855.86,4.799,amplitude logging obviously we are
+1857.899,5.88,adding a negative uh phase in front of
+1860.659,4.38,like you know our our superposition uh
+1863.779,2.581,make sure like you know you understand
+1865.039,3.181,the difference between the two but
+1866.36,4.319,anyhow let me just focus on you know
+1868.22,4.319,what's What's Happening Here so first
+1870.679,3.661,you know I need to prepare my Quantum
+1872.539,3.601,estate so and this is you know basically
+1874.34,4.439,this step for preparation
+1876.14,4.98,so what I'm doing here I'll make sure
+1878.779,5.941,that like you know the answer qubit is
+1881.12,5.58,prepared in state one that's what like
+1884.72,4.319,you know I added and not set here and
+1886.7,5.219,then like you know I had hadamard you
+1889.039,4.561,know on all of them uh to have a sort of
+1891.919,3.301,like you know you know uniform
+1893.6,3.78,superposition and again you know let's
+1895.22,3.54,read like you know the code here and
+1897.38,4.26,this is again you know one of the other
+1898.76,4.919,things that uh By Design you know we
+1901.64,4.8,spend so much resources making sure that
+1903.679,5.281,you know the code is also readable not
+1906.44,4.979,applied on the third one and then we
+1908.96,6.599,have hadamard a collection of other mod
+1911.419,6.721,on three qubits uh there is like instead
+1915.559,4.62,of like you know this design you can go
+1918.14,3.659,like somebody would say like look you
+1920.179,3.841,know I want to do it like this I want to
+1921.799,5.901,say like you know how the amount it's
+1924.02,3.68,acting on uh
+1928.82,4.32,and one and two and three so that's
+1931.34,5.219,that's the same thing
+1933.14,6.06,okay uh
+1936.559,4.98,again like you know this uh particular
+1939.2,4.56,design like you know it's
+1941.539,3.24,maybe easier than this one but anyhow
+1943.76,4.139,like you know
+1944.779,4.681,you can use you know either one uh the
+1947.899,3.66,second one like you know it's good
+1949.46,5.219,because sometimes you may want to act I
+1951.559,6.061,don't know how the mod only on some
+1954.679,5.281,specific you know qubits without and
+1957.62,3.9,skipping some of them okay so that's all
+1959.96,3.42,like you know giving it as an order
+1961.52,4.019,maybe it's better than just giving it
+1963.38,4.799,you know in this form but anyhow like
+1965.539,4.921,you know that's our preparation and now
+1968.179,6.0,look look what I'm doing here so here is
+1970.46,6.12,basically like you know I'm I'm making a
+1974.179,4.74,composition of some circuits remember
+1976.58,4.44,this is one circuit this is another
+1978.919,3.541,second and look how it is done I'm
+1981.02,2.879,saying that like you know the notation
+1982.46,2.819,that we have here is just for the right
+1983.899,3.301,composition I'm just saying I don't know
+1985.279,4.981,okay start with like you know the
+1987.2,6.0,circuit that I call prepare and then
+1990.26,4.98,Grover and then measure cubic number one
+1993.2,3.54,and qubit number two
+1995.24,4.64,and this is a circuit that I have
+1996.74,3.14,constructed out of that
+2004.659,4.26,so get along you know remember like you
+2006.399,3.721,know that this is another way of like
+2008.919,3.48,you know thinking about like the
+2010.12,4.5,composition it's literally like you know
+2012.399,4.02,whatever operation you have as far as
+2014.62,4.2,like you know it isn't an operation
+2016.419,4.321,remember operation means transforming
+2018.82,3.599,the quantum estate you can have you know
+2020.74,4.26,their Quant you can have their like you
+2022.419,4.14,know the composition the first one is a
+2025.0,3.179,Quantum circuit this is a Quantum
+2026.559,3.181,circuit this is a general measurement
+2028.179,3.061,operator but you can you know compose
+2029.74,4.2,them together
+2031.24,4.14,okay so this is our circuit and now I'm
+2033.94,5.16,saying that you know okay this circuit
+2035.38,5.519,is acting on you know uh a ground state
+2039.1,2.579,of cubic number one through qubit number
+2040.899,3.66,three
+2041.679,4.38,you can save explicitly like as you can
+2044.559,3.54,say that you know we have three Estates
+2046.059,3.961,all of them are preparing Quantum state
+2048.099,4.74,zero that's one way of like you know
+2050.02,4.859,doing that or again like you know as far
+2052.839,3.901,as you you are dealing with the register
+2054.879,4.98,State this is sometimes what we call as
+2056.74,5.34,a register statement by the way
+2059.859,4.02,this is another way of you know doing
+2062.08,5.519,exactly the same so you can say go with
+2063.879,7.621,the register state of three qubits
+2067.599,5.941,okay so this is the same as what we have
+2071.5,4.08,here the same as what we have here many
+2073.54,3.839,times like you know if you see me or you
+2075.58,4.2,know other people that go from do coding
+2077.379,3.78,you know in our framework you go we go
+2079.78,3.48,with the short-term representation look
+2081.159,3.421,anyhow do whatever way that you're more
+2083.26,2.94,comfortable with
+2084.58,4.74,and because we had like you know the
+2086.2,4.62,measurements okay so the result you know
+2089.32,3.72,is an object which is quantum
+2090.82,3.779,measurement
+2093.04,4.26,okay because again like you know we had
+2094.599,4.861,you know measurement operator here
+2097.3,4.62,you see here like you know that the the
+2099.46,4.62,double you know horizontal line on the
+2101.92,3.6,top that's basically a classical Warrior
+2104.08,2.46,you know that that's the wire that
+2105.52,3.18,you're saving you know classical
+2106.54,4.319,information and by the way you know one
+2108.7,4.379,more time all the labelings that you see
+2110.859,4.441,here the label on the left the label on
+2113.079,4.081,the right whatever you are like showing
+2115.3,3.539,like you know the classical Warrior or
+2117.16,3.72,not showing a classical Warrior you can
+2118.839,3.78,customize them whatever you want you can
+2120.88,3.54,eliminate it you can change the color
+2122.619,3.24,you can make it brighter you can make it
+2124.42,3.36,darker like you know you can you can do
+2125.859,3.661,whatever you want but again let's see
+2127.78,3.72,look you know I did you know all this
+2129.52,5.64,operation and I did like my measurement
+2131.5,5.94,now now the question is okay so what
+2135.16,5.22,now let's let's look at the you know
+2137.44,5.52,probability you know distribution so
+2140.38,4.38,what I'm saying here is you know just
+2142.96,3.18,return the probability plot of the
+2144.76,4.68,results and remember because we were
+2146.14,5.34,measuring two qubits HQ by two possible
+2149.44,4.38,you know outcomes so the potential
+2151.48,4.32,outcomes are four of course like you
+2153.82,3.9,know I'm kind of cheating I'm using a
+2155.8,3.539,simple example that you know that shows
+2157.72,3.84,you directly the result even go over
+2159.339,4.381,yourself algorithmic is usually more
+2161.56,3.84,complicated than that but anyhow look at
+2163.72,3.899,the outcome with the largest probability
+2165.4,4.32,here is a very special case you know I
+2167.619,6.541,mean productive one you'll get the case
+2169.72,7.08,that q1 is in one Q two is in zero
+2174.16,3.6,now let me remind you what was the
+2176.8,4.08,solution
+2177.76,5.099,the solution was the first one true the
+2180.88,4.68,second one false
+2182.859,5.72,one and zero and that's exactly the
+2185.56,3.019,solution that we obtain
+2190.839,6.721,okay so that's basically like you know a
+2194.46,7.0,very simple you know Quantum algorithm
+2197.56,5.76,for various specific you know
+2201.46,3.44,objective and of course like you know
+2203.32,4.86,there is a
+2204.9,5.56,Hot Topic for any Quantum algorithm is
+2208.18,3.62,like you know how much it is you know
+2210.46,4.56,better than you know classical
+2211.8,4.72,counterparts okay so that that's a
+2215.02,3.48,completely different topic like you know
+2216.52,4.079,to be honest with you you know I'm not
+2218.5,3.78,an expert on that but like you know I
+2220.599,4.141,understand it but
+2222.28,5.1,uh I would leave it to special like you
+2224.74,4.619,know mathematician or you know uh
+2227.38,3.12,computer scientists with Quantum
+2229.359,2.881,expertise like you know they can
+2230.5,4.32,elaborate more on that there are lots of
+2232.24,4.8,you know uh textbook on that
+2234.82,4.08,uh let me just mention one other thing
+2237.04,4.68,like you know you notice you know the
+2238.9,5.28,way that I created My overall circuit
+2241.72,5.82,was using this fancy notation and right
+2244.18,4.74,composition etc etc okay so you may have
+2247.54,3.539,a different mindset you may have you
+2248.92,5.1,know look what I'm doing here at the end
+2251.079,5.161,of the day it is also like you know a
+2254.02,3.839,composition of bunch of circuits and the
+2256.24,3.66,circuit number one is prepare the second
+2257.859,3.801,number two is over and then I do
+2259.9,5.52,measurements so
+2261.66,6.76,why not giving them as a list inside the
+2265.42,4.86,circuit operator yes that's you can do
+2268.42,2.82,that you know and you would get this
+2270.28,3.24,result
+2271.24,3.78,the only difference is like you know in
+2273.52,3.48,terms of you know visualization because
+2275.02,4.5,like you know now you're feeding each
+2277.0,5.7,one of them as a circuit we just wrap it
+2279.52,5.04,around like you know that gray box and
+2282.7,3.659,the label on the top like you know it's
+2284.56,3.539,basically the composition of like you
+2286.359,3.181,know whatever you do but again like you
+2288.099,3.24,know if you don't want to see these
+2289.54,4.44,boxes or if you don't want to see those
+2291.339,5.161,labels you can easily eliminate them
+2293.98,4.8,okay like you can customize all of them
+2296.5,4.82,and of course like you know this you
+2298.78,2.54,know the result
+2303.22,3.68,is going to be exactly the same as a
+2304.96,4.139,previous one right so
+2306.9,5.5,there are different only in terms of
+2309.099,6.861,like you know uh visualization
+2312.4,7.439,uh that was basically a very you know
+2315.96,6.7,simple introduction to you know Quantum
+2319.839,4.441,computation using our framework so the
+2322.66,3.12,way that I want you guys to like you
+2324.28,4.02,know those of you who are new to this
+2325.78,5.64,field is just think about like you know
+2328.3,5.52,a targeted state
+2331.42,4.679,and then a very particular way of you
+2333.82,4.2,know preparing that state keep that in
+2336.099,4.5,mind at the very end you are always
+2338.02,6.12,dealing with the measurement results
+2340.599,5.461,okay so it's a probabilistic like you
+2344.14,4.26,know reasoning if if you want to think
+2346.06,3.32,about it but that's how that's how we do
+2348.4,4.56,it
+2349.38,6.16,in quantum theory and by the way this is
+2352.96,3.96,not the only Paradigm to do Quantum
+2355.54,4.26,Computing the product that I'm
+2356.92,6.179,explaining here is what we usually call
+2359.8,5.039,as a gate based Paradigm and majority of
+2363.099,3.841,like you know Quantum Processing Unit
+2364.839,3.721,the actual Quantum hardness out there
+2366.94,4.139,there now they are claiming that like
+2368.56,6.059,you know if we can trust another quantum
+2371.079,6.121,but anyhow uh it's a gate base
+2374.619,3.841,uh there are some companies that are
+2377.2,3.18,offering like you know a different
+2378.46,5.04,approach like for example like you know
+2380.38,5.64,like you know the d-wave you know for
+2383.5,5.64,them is not a gate base like you know
+2386.02,5.16,approach to do Quantum Computing uh in
+2389.14,4.14,those cases like you know for a very
+2391.18,4.679,particular objective you know you with
+2393.28,4.44,design like you know hamiltonian and
+2395.859,3.601,then like you know that hamiltonian that
+2397.72,4.139,very particular hamiltonian would do the
+2399.46,4.619,job for you so it's a very completely
+2401.859,4.26,different approach compared to like you
+2404.079,3.681,know what what we have here
+2406.119,3.841,uh in terms of like you know
+2407.76,5.26,experimental which one is better which
+2409.96,4.44,one is like you know I I don't know that
+2413.02,3.9,that's a question for the
+2414.4,4.92,experimentalism and we should wait and
+2416.92,5.419,see like you know the
+2419.32,5.22,monitor the progress in in experimental
+2422.339,4.181,advancement of like you know Quantum
+2424.54,6.26,processing units
+2426.52,4.28,so that was basically like you know
+2431.02,7.339,what I had
+2433.0,5.359,prepared for today so if
+2438.52,5.22,uh
+2440.44,4.919,there is anything that has not been uh
+2443.74,3.96,one more time remember like you know you
+2445.359,4.321,just need to install the packlet
+2447.7,3.899,after like you know installing the
+2449.68,3.54,packet if you do not you know quit your
+2451.599,3.661,kernel like you know the functions will
+2453.22,4.2,be there but if you quit your kernel
+2455.26,4.74,like you know yeah you have to basically
+2457.42,6.14,uh install the packet every time that
+2460.0,3.56,you're creating your own character
+2465.4,3.66,and of course everything behind the
+2467.26,4.28,scene is done but yeah it's classical
+2469.06,6.5,like you know we are doing a Quantum
+2471.54,4.02,algorithm on a classical machine
+2476.38,4.44,okay it's you can by the way like you
+2479.44,4.08,know we have we have it in your
+2480.82,4.98,documentation if you are interested you
+2483.52,4.62,can send your queries from a world from
+2485.8,5.039,notebook you can get send your queries
+2488.14,5.219,to a Quantum Processing Unit uh you can
+2490.839,4.26,use like you know either IBM you know uh
+2493.359,4.74,Quantum processing units you can use
+2495.099,5.821,anything that is available on AWS and
+2498.099,4.441,like you know uh just wait like you know
+2500.92,3.0,get your result and then like you know
+2502.54,3.68,do whatever processing you want to do
+2503.92,2.3,with that

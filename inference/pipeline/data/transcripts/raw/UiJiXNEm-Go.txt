@@ -1,0 +1,349 @@
+second,duration,transcript
+2.95,3.02,"In this day and age, we
+have a lot of secrets."
+5.97,2.73,"And we're constantly having to
+give them away to the internet."
+8.7,2.55,"Like, Amazon has my
+credit card number."
+11.25,2.0,I typed it in voluntarily.
+13.25,2.46,"So I could order a BSG
+pendant and some ferrofluid."
+15.71,3.04,"But I don't even know where
+my information is kept."
+18.75,2.38,"How can I trust that
+Amazon doesn't accidentally"
+21.13,0.88,give it away?
+22.01,2.86,"This challenge of secret
+keeping is an important problem"
+24.87,1.61,for companies and governments.
+26.48,2.74,"That's why encryption, or
+translating information"
+29.22,3.06,"into a code only the
+right people can read, is"
+32.28,3.58,"so important-- so important that
+it was put on the United States"
+35.86,3.19,"Munitions List, along with
+flamethrowers and bombs,"
+39.05,2.77,"as a weapon regulated
+for national security."
+41.82,2.124,"That was until a student
+took the United States"
+43.944,1.416,"government to court
+and encryption"
+45.36,1.59,was ruled free speech.
+46.95,3.22,"Now most of the focus is
+on improving encryption,"
+50.17,2.3,"because as computers
+get smarter and faster,"
+52.47,3.13,"these codes become
+easier to unscramble."
+55.6,2.33,"That's why we need to turn
+to cutting-edge physics"
+57.93,1.76,to improve encryption.
+59.69,1.12,But let's find out how.
+60.81,2.71,"This episode of ""Physics Girl""
+is supported by Squarespace."
+63.52,1.95,"Share your passion
+with the world."
+65.47,3.28,"Before I go physics on you,
+let's talk about codes."
+68.75,1.68,"A super simple type
+of code but one"
+70.43,3.26,"that was used by the Spartan
+army and probably Scooby-Doo"
+73.69,2.2,"is simple substitution,
+where you just"
+75.89,1.63,"swap out each letter
+in the alphabet"
+77.52,1.54,"for a different letter, like so."
+79.06,2.36,"For example,
+DIANNAROCKS would become"
+81.42,3.19,"EJBOOBSPDLT. This code
+is easy to generate"
+84.61,1.81,and almost as easy to crack.
+86.42,1.717,"You could even use
+extra information,"
+88.137,1.583,"like guessing that
+the six-letter word"
+89.72,2.13,"with the double O's
+was my name, helping"
+91.85,1.4,you to crack the code faster.
+93.25,3.6,"So cryptographers turned to
+math to develop harder codes."
+96.85,2.12,"They thought a good code
+should be easy to create"
+98.97,2.53,"but difficult to
+decode, like a mess."
+101.5,1.89,"In math terms, they
+sought processes"
+103.39,2.18,"called one-way functions--
+easy to compute"
+105.57,4.43,"one way but hard in reverse,
+like multiplying prime numbers."
+110.0,2.91,"If I told you to
+multiply 79 by 73,"
+112.91,3.72,"a few punches on your
+calculator would give you 5767."
+116.63,2.425,"But if I told you
+to factor 5767,"
+119.055,1.5,"well, you'd have
+to start by saying,"
+120.555,2.205,"does that I divide
+by 2 and then 3"
+122.76,2.41,"and then 5 up through
+the prime numbers"
+125.17,2.7,"until you finally
+found 79 times 73."
+127.87,1.44,"That would take
+some key punching."
+129.31,1.85,"The largest prime
+number known today"
+131.16,5.32,"is 2 to the 74,207,281
+minus 1, a number"
+136.48,2.3,"that I couldn't even write
+on the screen if I wanted,"
+138.78,3.6,"because that's more digits
+than pixels in my HD video."
+142.38,2.85,"Now, imagine multiplying that
+by the second largest known"
+145.23,2.34,"prime number and giving
+that to your little cousin"
+147.57,1.78,to factor on a rainy day.
+149.35,1.11,That's just cruel.
+150.46,1.88,But it's great for encryption.
+152.34,2.06,"Imagine I want to send
+the message DIANNA"
+154.4,2.49,"ROCKS to another
+secret agent, Sophia."
+156.89,1.58,I'm going to use this math.
+158.47,2.95,"First, I substitute the
+letters in my message for bits,"
+161.42,2.11,"like we did in our
+easy Scooby-Doo code."
+163.53,3.23,"If we were using binary, DIANNA
+ROCKS would look like this."
+166.76,4.37,"But we'll just use 1, 2, 3,
+4, 4, 3, 5, 6, 7, 8, 9, 10."
+171.13,2.35,"The 5 is for the space,
+and the conversion key"
+173.48,2.73,"from numbers back to
+letters is publicly known."
+176.21,1.17,No surprises yet.
+177.38,3.42,"But then, I multiply each of the
+numbers by two prime numbers--"
+180.8,4.65,"say, 11 and 13-- for a total
+multiplication factor of 143."
+185.45,4.39,"DIANNA ROCKS becomes 143,
+286, 429, and so forth."
+189.84,2.52,"I've told Sofia ahead
+of time that the key is"
+192.36,3.13,"to divide by 143 and she
+can decode the message."
+195.49,2.75,"Now, say someone intercepts
+the encrypted message."
+198.24,1.71,"They have to figure
+out what to divide by"
+199.95,1.75,to decode the message.
+201.7,2.24,"This example wouldn't
+be so difficult."
+203.94,1.7,"But what if we used
+prime numbers that"
+205.64,1.76,are thousands of digits long?
+207.4,1.84,"An eavesdropper might
+be crunching numbers"
+209.24,1.97,for longer than they are alive.
+211.21,3.58,"This is the idea behind using
+prime numbers for encryption,"
+214.79,2.98,"though real-life techniques
+like the RSA algorithm"
+217.77,1.41,are a bit more complicated.
+219.18,2.11,"Now, the limitation
+with using prime numbers"
+221.29,2.62,"is that we keep building
+smarter and faster computers"
+223.91,2.21,"that factor out
+ever more quickly."
+226.12,2.7,"Experts warn that with new
+technologies like quantum"
+228.82,3.65,"computing, codes that currently
+take hundreds of years to crack"
+232.47,1.87,could be solved within minutes.
+234.34,2.41,"And this is where
+the physics comes in."
+236.75,2.8,"Enter quantum
+cryptography, a technology"
+239.55,2.05,"that hides
+information in photons"
+241.6,1.83,or the particles of light.
+243.43,1.21,Here's how it works.
+244.64,3.08,"Say you want to enlighten--
+heh, heh-- a chosen stranger"
+247.72,2.25,"on our mantra, or this."
+249.97,3.69,"Instead of deciding upfront
+what the secret multiplication"
+253.66,3.369,"factor or key is, you
+use quantum mechanics"
+257.029,3.331,"to make one randomly and
+send it to your recipients."
+260.36,2.52,"Here's how the
+random key is made."
+262.88,2.72,"Alice, the message
+sender, sends photons"
+265.6,3.52,"that are polarized or vibrating
+in four different directions--"
+269.12,3.21,"horizontal, vertical,
+diagonal, left, or right."
+272.33,2.59,"Bob, the recipient,
+measures which direction"
+274.92,0.87,they're polarized.
+275.79,3.53,"Note by using two differently
+polarized detectors"
+279.32,3.36,"for each photon one at a
+time back and forth guessing"
+282.68,3.42,"which detector to use randomly,
+the detectors translate"
+286.1,1.42,the photons into bits.
+287.52,1.54,"Like, a horizontal
+measurement could"
+289.06,3.64,"register as a 1 and a vertical
+as a 0 on this detector."
+292.7,2.89,"And eventually, Bob will
+get the multiplication key"
+295.59,1.65,from this set of bits.
+297.24,2.86,"So now, Bob has a
+measurement of 1, 0, 0, 1,"
+300.1,2.36,"et cetera, for each
+photon, keeping in mind"
+302.46,3.46,"that he measured them on two
+different detectors randomly."
+305.92,1.63,Now he compares with Alice.
+307.55,3.71,"And for each photon, he'll tell
+her which detector he used."
+311.26,2.87,"And she'll tell him,
+wrong, right, wrong, right,"
+314.13,3.75,"based on which filter she
+used to send the photons."
+317.88,3.64,"Because, see, Alice sent either
+vertical horizontal photons"
+321.52,1.72,or diagonal photons.
+323.24,2.22,"And if Bob uses a
+diagonal detector"
+325.46,1.93,"on a horizontal or
+vertical photon,"
+327.39,1.92,"according to quantum
+mechanics, he"
+329.31,2.02,"will have a 50%
+chance of measuring"
+331.33,2.2,a 0 and 50% chance of a 1.
+333.53,4.326,"That's why Bob's detectors
+need to match Alice's filters."
+337.856,1.624,"After they go through
+this public check"
+339.48,2.0,"of the order the
+detectors were used,"
+341.48,3.61,"they throw out each result from
+when Bob guessed incorrectly."
+345.09,2.42,"And now they have a sequence
+of identically polarized"
+347.51,1.67,and measured photons.
+349.18,1.82,That sequence is the key.
+351.0,2.75,"Alice can now send the
+actual encrypted message"
+353.75,2.76,"through a traditional channel
+and use the quantum key"
+356.51,1.01,to decrypt it.
+357.52,1.86,"And mathematicians
+have proven that if you"
+359.38,2.5,"make a truly random
+numerical key,"
+361.88,2.96,"you can theoretically make a
+code called a one-time pad that"
+364.84,1.49,is unbreakable.
+366.33,3.73,"So why can the order of
+polarized detectors used by Bob"
+370.06,1.32,be public?
+371.38,1.59,"Well, it's not
+the ones and zeros"
+372.97,2.01,"that he obtains that
+are being shared."
+374.98,2.16,"It's just the
+order of detectors."
+377.14,2.55,"You would still need to
+send the polarized photons"
+379.69,1.98,"in through those detectors
+in the correct order"
+381.67,1.32,to figure out the key.
+382.99,2.85,"But those photons were
+polarized randomly,"
+385.84,1.87,"so the eavesdropper
+is outta luck."
+387.71,3.31,"And things on this scale--
+1,000th of the width of a human"
+391.02,3.72,"hair-- get weird, as they say,
+because of quantum mechanics."
+394.74,1.9,"If an eavesdropper
+hacks into the system"
+396.64,1.99,"and tries to copy some
+of the photons using"
+398.63,3.23,"the wrong order of detectors,
+they'll change the key."
+401.86,1.93,"Bob and Alice will
+know, because they"
+403.79,3.14,"can check for errors in a
+subset of the bits in the key,"
+406.93,1.53,and they can try again.
+408.46,1.78,"Of course, getting
+quantum cryptography"
+410.24,2.72,"to work in the real
+world is not so easy."
+412.96,3.09,"Small disturbances can
+change photon polarization."
+416.05,2.08,"And when creating photons,
+if you get them off"
+418.13,2.9,"by even just a degree,
+those errors will add up."
+421.03,2.35,"Physicists have only been
+able to send quantum keys"
+423.38,1.76,over 200 kilometers.
+425.14,2.2,"You can even sabotage
+quantum detectors"
+427.34,2.12,"by shining a bright
+light on them."
+429.46,2.68,"And even if quantum encryption
+does become commercially"
+432.14,2.78,"viable, much of the
+internet's infrastructure"
+434.92,1.4,would have to be rebuilt.
+436.32,3.36,"But still, think of how powerful
+this technology would be."
+439.68,2.68,"An eavesdropper has to measure
+in order to get the key."
+442.36,2.037,"But when measured,
+the key changes."
+444.397,2.083,"You can know if you've
+been hacked even before you"
+446.48,3.4,"send the message because of this
+fundamental aspect of nature."
+449.88,2.68,"The universe is based
+on probabilities."
+452.56,1.97,"Quantum cryptography
+hides information"
+454.53,2.93,"not by besting a computer
+but by stowing it"
+457.46,3.13,"within the unknowability
+of nature itself."
+460.59,1.99,Thank you so much for watching.
+462.58,2.52,"Physics Girl"" is
+supported by Squarespace."
+465.1,1.77,"If you have an idea
+or project you're"
+466.87,2.68,"itching to show the world--
+you should-- Squarespace"
+469.55,2.52,"provides tools that help
+people showcase their passions"
+472.07,3.37,"with a customizable landing
+page, website, or online store."
+475.44,3.08,"They also offer domains,
+hosting, and customer support."
+478.52,2.733,"Start your trial at
+squarespace.com/physicsgirl."

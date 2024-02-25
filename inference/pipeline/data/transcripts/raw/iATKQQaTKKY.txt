@@ -1,0 +1,913 @@
+second,duration,transcript
+2.419,9.571,let's welcome to lecture 16 confidential
+6.42,7.11,games there yay
+11.99,3.399,computationally game theory is what
+13.53,3.509,we're doing today the news of the day is
+15.389,3.841,actually a little bit old dated but
+17.039,4.111,still relevant checkers
+19.23,3.539,this incredibly wonderfully large
+21.15,3.42,powerful game that I've played as a kid
+22.769,4.891,many who play checkers as a kid gives
+24.57,4.26,about solved solve do you like what does
+27.66,2.789,that mean I will tell you in this
+28.83,3.479,section what solve means what it means
+30.449,5.461,for Jonathan Schafer and University of
+32.309,4.921,Alberta is that he proved he weakly
+35.91,3.809,solved checkers
+37.23,4.009,which means he proved if two perfect
+39.719,3.781,opponents are playing to God who
+41.239,4.84,floating in the in the heavens and
+43.5,3.84,they're playing checkers it's only one
+46.079,3.151,God okay well I'll do I'm gonna talk
+47.34,3.449,outs whatever so if they're to duplicate
+49.23,5.399,himself and now that God prisons up and
+50.789,7.171,now there always be a draw meaning that
+54.629,5.641,these both omniscient entities who knew
+57.96,4.2,the entire game tree no one would be
+60.27,3.179,able to cause the other one to lose it
+62.16,3.42,would buddy draw every single time
+63.449,4.831,that's really cool and they proved it
+65.58,4.59,they don't necessarily have a path for
+68.28,3.33,every possible game that's the
+70.17,3.15,difference from what I do and we'll talk
+71.61,3.24,about that later bets he weakly solved
+73.32,3.03,it which means he proved it but didn't
+74.85,3.269,necessarily have the answer for every
+76.35,3.15,game I have the answer for every game
+78.119,3.241,and we'll show you some demos that do
+79.5,3.75,that so today we're talking about
+81.36,3.509,computational game theory and this is
+83.25,3.6,what the lecture topic is little history
+84.869,3.54,definitions so we're on the same page
+86.85,4.74,and then I'll show you some demos
+88.409,6.721,viewing system that I've built ok so a
+91.59,5.76,high up sky level view ten-mile up view
+95.13,3.87,of computer sciences there are these sub
+97.35,4.32,pieces of computer science and you saw
+99.0,4.439,human-computer interaction and next
+101.67,3.659,Monday you're gonna hear a lecture from
+103.439,3.54,one of our outstanding young graduate
+105.329,2.881,student instructors who's going to talk
+106.979,2.491,to you about the whole field of
+108.21,3.18,artificial intelligence one of the
+109.47,4.079,coolest fields of coming up Siri you
+111.39,3.6,talk to your phone that's AI and there's
+113.549,3.511,a thousand other things that are AI that
+114.99,3.419,generally self-driving cars that say are
+117.06,2.94,some of the coolest applications that
+118.409,2.971,are happening today our AI and she's
+120.0,3.899,gonna try to summarize the entire field
+121.38,5.55,a very big task but she's up to it so
+123.899,4.741,there's all these fields of of computer
+126.93,3.51,science and AI is one of them and
+128.64,3.45,computational game theory falls under
+130.44,3.12,the umbrella of artificial intelligence
+132.09,2.88,so similar to
+133.56,4.38,what you saw it we go to see in a week
+134.97,5.879,from now so you actually it's great
+137.94,5.9,the Bjorn talked about the Mechanical
+140.849,6.171,Turk and so this is the original
+143.84,5.35,Mechanical Turk so this was a a
+147.02,5.469,mechanical device in which there was a
+149.19,5.25,master level player who hid and when the
+152.489,3.811,like the magician who said nobody in
+154.44,3.15,here nobody in here he would like move
+156.3,3.33,and so it looked like it was an empty
+157.59,3.24,box when they showed the players and it
+159.63,3.78,turns out there's a person under there
+160.83,5.489,who had a magnet to see what the board
+163.41,5.57,is above and had a little arm an
+166.319,5.67,armature that could control the arm
+168.98,4.27,17:70 people they still pooping outdoors
+171.989,5.101,and they're getting a chess-playing
+173.25,5.79,robot like what are you kidding me like
+177.09,4.2,how many there's like centuries in the
+179.04,3.809,future right it's like a time machine in
+181.29,5.79,today's day uh how does that come here
+182.849,6.36,so it played a strong game of chess can
+187.08,5.519,you believe it this mechanical this
+189.209,4.831,mechanical robot toured Europe and blew
+192.599,3.39,people away that this thing could play
+194.04,4.949,like how did were they inventing
+195.989,5.101,nowadays right and turns out that they
+198.989,3.84,challenged Napoleon now Napoleon
+201.09,3.69,somebody I would guess if he got
+202.829,3.841,challenged and got embarrassed he might
+204.78,3.959,not take too kindly to being embarrassed
+206.67,4.02,so I'm pretty impressed they challenged
+208.739,3.211,a Polina and beat Napoleon but they
+210.69,4.41,played Benjamin Franklin two people
+211.95,4.95,defeated all of them unfortunately so
+215.1,3.66,the idea of this Mechanical Turk is and
+216.9,3.69,this is why this name continues today is
+218.76,3.449,it looks like it's a machine doing it
+220.59,3.69,but it's really humans and that's how
+222.209,4.051,they have the Amazon Mechanical Turk
+224.28,2.97,idea where you can as a human do jobs it
+226.26,2.58,looks like the machines doing it like
+227.25,4.29,transcribing a lecture you know the
+228.84,3.899,words of audio file but in fact the
+231.54,2.4,people are doing it the work that's
+232.739,2.34,where this came from see the purpose
+233.94,2.699,person's doing their work looks like the
+235.079,3.151,machine got that idea
+236.639,3.18,unfortunately it burned in a fire but
+238.23,2.7,they recover the chess board because the
+239.819,2.82,chess board had been stored separately
+240.93,3.059,so they saved that but it's kind of cool
+242.639,3.481,it's kind of a shame that they lost the
+243.989,4.111,original thing we're going the history
+246.12,5.28,of game theory this is Claude Shannon
+248.1,6.539,one of the founders of signal processing
+251.4,5.01,founders of information theory a famous
+254.639,3.72,person remember the name I often in my
+256.41,3.479,exams I often ask you who was Claude
+258.359,3.18,Shannon so make a little circle for
+259.889,3.061,yourself to remember who Claude Shannon
+261.539,3.991,was he's an important person in our
+262.95,4.56,field the double eat there are many
+265.53,3.6,fields in the EE side the electric
+267.51,4.2,inside of our department in which Claude
+269.13,4.74,Shannon is the old the father of that
+271.71,4.8,entire field right it's pretty powerful
+273.87,6.54,guy so impressive guy he wrote a paper
+276.51,7.85,in 1950 that was the seminal work for
+280.41,7.38,all computing AI chess-playing programs
+284.36,5.2,can can get go back to their origins of
+287.79,4.44,that work so he set the foundation of
+289.56,5.1,what you what you had to do to create a
+292.23,4.71,chess-playing program and all of the
+294.66,4.65,current AI programs that play chess well
+296.94,4.23,go back to his early work in this
+299.31,2.85,incredible guy in fact he has something
+301.17,2.82,called a Shannon number which is the
+302.16,3.12,number of chess positions and that's a
+303.99,2.48,really huge number so that's kind of
+305.28,3.42,cool and mathematicians and theoretical
+306.47,4.6,and try to get that to be a more refined
+308.7,4.83,number and that's a cool thing let me
+311.07,5.04,give you a cool historical sense this is
+313.53,6.15,like who remembers when this happened
+316.11,5.61,here's the thing Wow like three this is
+319.68,4.43,such a big deal for the for the field of
+321.72,6.72,AI let me just set the context up till
+324.11,7.0,1997 chess-playing programs had never
+328.44,4.56,beaten a human Grandmaster in a six-game
+331.11,3.96,match they had beaten them in a one-off
+333.0,3.72,little you know let's do a thing for
+335.07,3.36,charity and then oh the computer wins
+336.72,3.12,big deal but the computer here but the
+338.43,3.0,humans that always said you challenged
+339.84,4.26,us to a six-game match and there's no
+341.43,5.88,way a program which doesn't have the
+344.1,5.55,insight that we do will ever win because
+347.31,3.9,humans have intuition where they can
+349.65,3.45,limit their search space that ignore
+351.21,3.39,massive parts of the board because they
+353.1,2.67,know you know if there's a queen and the
+354.6,2.91,king and another queen over here in the
+355.77,2.97,corner that's where the action is so
+357.51,2.76,that's where the next moves will in
+358.74,3.27,their mind will go to 20 moves deep
+360.27,3.99,incredible 20 moves deep in their head
+362.01,3.99,they can see where the computers don't
+364.26,2.61,know that and the early computers didn't
+366.0,2.34,know that so they're searching
+366.87,2.91,everything they're going oh what if I
+368.34,3.54,hit the Queen against the wall bonk bonk
+369.78,3.48,bonk is that a good thing and then I
+371.88,2.28,don't know that you don't hit the Queen
+373.26,5.28,against the wall that's silly
+374.16,5.88,so okay 1996 so here's the here's the
+378.54,3.78,history NSYNC it's a really amazing
+380.04,3.6,thing and by there's a video for this I
+382.32,3.27,encourage you all to find this video
+383.64,4.05,it's on the YouTube there it says deep
+385.59,3.9,blue beats garry kasparov 1997 but I'm
+387.69,3.21,going to summarize it because I think I
+389.49,5.25,do better job today okay so here's the
+390.9,5.88,idea in 96 the first game is a six-game
+394.74,3.75,match and with every time you win you
+396.78,4.14,get a point if you tie it's half and
+398.49,5.34,half okay so it's at a total of
+400.92,4.8,a purse purse purse first person to
+403.83,2.37,after six games has the most points wins
+405.72,4.08,okay
+406.2,4.95,so the first game that deep blue wins is
+409.8,4.89,a classic in 96
+411.15,5.25,okay so 96 days IBM thinks well we think
+414.69,4.05,we have with all the parallel processing
+416.4,4.8,they've built a custom machine custom
+418.74,4.68,architecture custom hardware to play
+421.2,4.38,chess and do nothing but play chess and
+423.42,4.53,it was called deep blue and they
+425.58,4.32,challenged Garry Kasparov then the best
+427.95,5.61,pretty clearly known as the best player
+429.9,6.09,in the world to play chess so deep blue
+433.56,4.29,plays this incredible game Game one and
+435.99,3.81,wins it's like it still talked about wow
+437.85,4.11,that game the deep blue versus Kasparov
+439.8,3.72,incredible game like the insight that
+441.96,3.06,deep blue saw this really there wasn't
+443.52,3.18,much insight and there was a little bit
+445.02,3.51,of I'll explain how it works
+446.7,3.99,there's an opening book at this some
+448.53,3.51,grandmasters head gave given to it but
+450.69,2.64,most of its searched most was just
+452.04,2.16,brute-force search of different
+453.33,4.02,positions in chess
+454.2,6.39,okay deep blue loses game three and
+457.35,3.72,draws to to lose the six-game match four
+460.59,2.25,to two
+461.07,3.42,so what that means is they were right
+462.84,3.15,humans were right that you're never
+464.49,3.06,gonna beat a human in a six-game match
+465.99,6.36,but it came close four to two is really
+467.55,8.37,close so ACM who is the kind of umbrella
+472.35,5.43,organization for computing and IBM say
+475.92,4.71,how about hey Garry Kasparov how about a
+477.78,5.58,rematch next year and Kasparov says you
+480.63,4.83,know certainly in a grandiose way let's
+483.36,3.18,do it slaps the handshake BAM I'll see
+485.46,4.44,you at the same time next year
+486.54,5.49,IBM goes to work and goes crazy and what
+489.9,4.22,they do is they study every single one
+492.03,4.23,of Kasparov games he ever played
+494.12,3.58,Kasparov normally was gonna play faced
+496.26,2.55,an opponent will study all the other
+497.7,3.03,person other opponents games I've ever
+498.81,3.3,played but guess what deep blue had
+500.73,2.94,never played games it only played those
+502.11,3.42,six games so Casper I've had nothing to
+503.67,5.04,work from of the style he was going to
+505.53,5.31,encounter so they work and they add even
+508.71,5.3,more grandmasters adding all of their
+510.84,5.82,brilliance to the mix so now it's 1997
+514.01,4.66,again humans had never been beaten it
+516.66,3.63,was like the last you know computers are
+518.67,4.86,fastest and how many better than us at
+520.29,5.79,how many things calculation search tax
+523.53,5.07,query all the things but it hadn't like
+526.08,5.43,it's kind of like the shores are coming
+528.6,4.98,up and we put a big big fortress and
+531.51,2.819,sandbags as you can't touch chess
+533.58,3.21,there's
+534.329,4.44,the human about chess you can't touch it
+536.79,5.399,well they shouldn't have done that
+538.769,5.16,because in 97 IBM comes back with deeper
+542.189,3.3,blue not deep blue deeper like we're
+543.929,4.01,gonna search even deeper into the tree
+545.489,4.71,so deeper blue very clever name
+547.939,6.19,Kasparov wins Game one and here's the
+550.199,5.94,key game - he was winning and he could
+554.129,3.75,have won but he thinks they did
+556.139,3.54,something wrong so he resigns it but in
+557.879,3.15,fact the analysis of it was that it
+559.679,3.15,should have been a tie or at least he
+561.029,3.66,should have won it so he should have I
+562.829,3.66,think he should have been a tie okay not
+564.689,3.14,a win should've been a tie but he lost
+566.489,3.6,so now
+567.829,4.841,Kasparov wins one loses one now they're
+570.089,6.75,tied one-one right the tied one-one
+572.67,7.139,now they draw the next three games three
+576.839,4.74,four five so now it's all tied going
+579.809,3.861,into Game six who knows baseball
+581.579,5.281,metaphors it's like you know tie game
+583.67,4.899,bottom of the ninth bases loaded full
+586.86,4.5,count you know the whole drama right
+588.569,6.33,it's on one game all of humanity rests
+591.36,5.009,on one game do you understand how this
+594.899,3.66,is how this the pressure and like the
+596.369,3.981,fame and it was on ESPN it was a big
+598.559,5.791,deal
+600.35,5.469,Kasparov the pressure got to him I think
+604.35,5.789,he's the greatest player in the history
+605.819,6.12,that I know of move seven normally the
+610.139,4.17,game is to us how to move fifteen twenty
+611.939,3.93,thirty right move seven which is still
+614.309,2.49,in your opening book still the set of
+615.869,3.39,moves that you normally have
+616.799,4.46,pre-recorded in your head but IBM came
+619.259,5.67,out with a little twist and Kasparov
+621.259,6.76,messes up and move seven and by by a
+624.929,5.1,couple moves later he knows it's over so
+628.019,4.47,he loses in nineteen moves which is like
+630.029,4.56,a blowout and what was it as he lost he
+632.489,4.02,lost in the biggest way you could
+634.589,5.48,possibly lose to a computer like like
+636.509,6.42,that like Skynet had come online and now
+640.069,4.781,the computers had taken one more step
+642.929,3.84,toward taking away our humanity and they
+644.85,4.26,made a whole big drama of this how the
+646.769,4.35,how now chess which used to be a the
+649.11,4.259,bastion of only humans the computers
+651.119,3.39,owned that - what else don't they own
+653.369,2.52,right you'll get the feeling that what
+654.509,1.711,else don't computers own right a little
+655.889,2.85,bit
+656.22,5.25,it was the bit it was a defining moment
+658.739,4.32,in AI history when they beat Kasparov in
+661.47,3.179,that six-game match is an incredible
+663.059,3.21,drama behind that and they've never
+664.649,3.12,looked back they've gotten only stronger
+666.269,2.76,and stronger stronger compute
+667.769,4.35,hardware's faster and faster and faster
+669.029,5.49,so now on my laptop I have software
+672.119,4.62,that's as good as deeper blue was back
+674.519,3.36,then custom machine I'm not just my
+676.739,2.491,laptop anybody's laptop like the
+677.879,2.82,computer hardware is fast enough now
+679.23,3.57,that you can have that you're just
+680.699,3.721,normal system that you play at home is
+682.8,3.149,as good as this thing that beat Kasparov
+684.42,3.449,it's incredible what they've done ok
+685.949,3.961,it's about how much you we've advanced
+687.869,4.08,in our hardware since 97 and it's also
+689.91,2.399,incredible that it's no longer even a
+691.949,2.04,question
+692.309,3.661,you can't be human you paint you can't
+693.989,4.56,be computers anymore we're sorry okay
+695.97,4.26,they just don't lose you cannot a human
+698.549,2.97,cannot beat them that's the feeling or
+700.23,4.709,can they
+701.519,6.901,game theory is three different pieces on
+704.939,5.88,this campus if you say hey you game
+708.42,5.459,theory you're probably going to be in
+710.819,5.07,the right column economic game theory an
+713.879,3.15,economic game theory is the Department
+715.889,4.11,of Economics has people who have won
+717.029,5.011,Nobel prizes in game theory so that's
+719.999,4.171,usually what they mean that means like
+722.04,3.599,an auction or a prisoner's dilemma if
+724.17,3.149,you've heard of that basically
+725.639,4.55,simultaneous moves the goal is
+727.319,5.041,maximizing profit very economic right
+730.189,4.781,combinatorial game theory is a small
+732.36,4.139,subset of computational game theory
+734.97,3.719,which is board games like the kind you
+736.499,4.38,played it at home okay board games -
+738.689,3.63,player board games with no chance that's
+740.879,4.17,basically what we're thinking about here
+742.319,4.8,there's a small subset that are really
+745.049,3.96,cool and really powerful in which you
+747.119,3.63,win by getting the last move and that's
+749.009,3.27,a really special thing and that's it so
+750.749,3.81,there's a small little subset of that
+752.279,3.631,but for the most part most of the board
+754.559,2.911,games you solve we have to solve with
+755.91,4.049,computer horsepower which is why we call
+757.47,4.02,it computational game theory or solving
+759.959,3.781,board games with computer horsepower
+761.49,4.589,which is what I do that's the center guy
+763.74,4.349,okay so what board games do you mean
+766.079,3.48,well board games that have complete
+768.089,3.3,information that is both players have
+769.559,3.87,all the information needs to have for
+771.389,4.05,that game and there's no chance so
+773.429,3.57,there's no dice and no cards any game
+775.439,2.82,you have a dice and cards sorry it's out
+776.999,3.241,can't come into them can't can't can't
+778.259,6.211,play but everything else is in there
+780.24,8.67,so go chess checkers not backgammon
+784.47,6.959,because that's dice tic-tac-toe
+788.91,6.45,I'm hundred others five in a row connect
+791.429,5.731,four fellow reverse I Chinese checkers
+795.36,3.12,Chinese chess all those things are games
+797.16,3.81,that you'd have to use computer
+798.48,3.16,horsepower to solve okay and the game
+800.97,1.78,can it anyway
+801.64,3.48,doesn't have to end with getting a last
+802.75,3.51,move as convert or game theory is this
+805.12,2.16,is the only math you have to have that's
+806.26,1.8,the only part that's a little hard for
+807.28,2.73,this the rest was just kind of
+808.06,4.65,expositional and tell you how this stuff
+810.01,5.21,works so for every position in the game
+812.71,4.83,that is every snapshot of the board
+815.22,3.88,including whose turn it is on the board
+817.54,2.79,so I'll give you a photograph that says
+819.1,2.82,here's what the board looks like and
+820.33,3.78,here's whose turn it is it's white to
+821.92,4.62,play or it's red to play or it's blue to
+824.11,5.16,play there's one of four categories of
+826.54,4.47,positions it's really simple from the
+829.27,2.88,person whose turn it is from the point
+831.01,2.67,of view of the person's turn is remember
+832.15,3.96,the bottom of the board it says wipe to
+833.68,7.05,play so that means for the white player
+836.11,6.33,it is either winning which means there
+840.73,3.09,exists to move you're assuming always
+842.44,4.23,alternating play in this kind of simple
+843.82,5.49,game there exists to move a winning move
+846.67,4.77,the winning by the way is green there
+849.31,4.59,exists a winning move which yields a
+851.44,3.9,losing child for you okay this is
+853.9,2.76,recursively defined by the way you know
+855.34,3.51,you guys know recursion so you can
+856.66,5.07,understand this a losing move is one in
+858.85,4.56,which all the moves are losing therefore
+861.73,2.94,all the moves that you do yield a
+863.41,2.49,winning for the other person so there's
+864.67,2.55,nothing you can do you're kind of in a
+865.9,4.53,corner nothing you can have no way out
+867.22,5.52,at I move is one in which there does not
+870.43,4.62,exist a winning green guy but there does
+872.74,3.96,exist a tie and ties better than losing
+875.05,2.97,so you'll take the time move rather than
+876.7,3.45,take the losing move so you ignore these
+878.02,3.33,bad losing moves on the left of the tie
+880.15,2.85,and take the time ooh because that's the
+881.35,2.85,best thing you can do and the draw is
+883.0,2.58,one in which the game can go on forever
+884.2,3.57,like two kings just move it around
+885.58,5.34,forever and neither of them can force a
+887.77,5.16,move a win or you force the opponent to
+890.92,4.17,lose for that okay we care about
+892.93,3.96,remoteness also which is how long until
+895.09,3.66,the game is over like maton three they
+896.89,5.25,would say remoteness is three okay so
+898.75,4.98,that's something so I lead a research
+902.14,3.93,group and I'm really proud that we've
+903.73,4.86,had tons of students who have contribute
+906.07,4.53,to this codebase and we now have 70
+908.59,5.46,games and puzzles in our system and we
+910.6,5.55,strongly solve our art we strongly solve
+914.05,3.72,our games and strongly solve means we
+916.15,3.45,salt we know the value and we're all
+917.77,5.55,done we know the win lose tired draw
+919.6,5.7,value for every single position ever in
+923.32,4.35,that game it's not just in that
+925.3,5.58,particular path but it's for any game
+927.67,5.28,ever I know the answer unlike sweetly
+930.88,3.84,solving where they've proved it but they
+932.95,2.37,don't actually know for every position I
+934.72,1.11,know
+935.32,1.95,for
+935.83,3.96,position that's a big distinction you
+937.27,4.2,should make okay so let's go see what do
+939.79,5.82,you mean by strongly solved an so let's
+941.47,7.92,go see a video so the movie wargames the
+945.61,7.35,whopper computer runs amok and starts to
+949.39,5.4,try to decode the encrypted key to the
+952.96,3.57,missile launch codes if it gets all ten
+954.79,5.25,digits it launches the missile and they
+956.53,4.98,decide to teach the computer go back to
+960.04,3.84,view they decide to teach the computer
+961.51,5.01,if I can have the computer play
+963.88,4.32,tic-tac-toe and learn that tic-tac-toe
+966.52,4.37,it doesn't matter how you start you
+968.2,5.49,can't win maybe it will extrapolate that
+970.89,5.11,thermal global nuclear nuclear war is
+973.69,3.99,like that it's a tie game you can't win
+976.0,2.64,it all does matter who goes first okay
+977.68,2.94,doesn't matter when it's first strike or
+978.64,3.12,second strike you're gonna lose war same
+980.62,4.53,as you would never be able to win
+981.76,5.69,tic-tac-toe okay it hasn't learned is
+985.15,6.23,there I'm going to make it play itself
+987.45,3.93,yes number of players zero
+1013.649,3.0,damnit
+1027.04,7.83,eight assistant
+1061.86,5.91,kindly called sack get me in launch
+1063.9,7.1,status report late today
+1067.77,3.23,give me the president yes sir
+1102.13,3.85,make that ground faster all landlines
+1104.87,1.92,out of the mountain they're dead I'm
+1105.98,3.86,trying to break through all the
+1106.79,3.05,satellites okay
+1133.7,3.0,learning
+1177.47,7.809,and so I leave that in there and pause
+1179.999,7.471,that because what is he saying to play
+1185.279,7.681,what is that what do you conclude now
+1187.47,9.329,about chess either too big to solve
+1192.96,6.299,which is the right answer or he might be
+1196.799,6.151,implicitly saying that chess is not a
+1199.259,4.62,tie game and if he's really smart if the
+1202.95,2.339,computer is very smart
+1203.879,3.0,it has solved it and it's going first
+1205.289,2.88,which means it's giving itself the
+1206.879,3.811,advantage and it's gonna win the game
+1208.169,3.781,always so it depends whether you read
+1210.69,3.329,into this through the script whether
+1211.95,3.839,it's not-it's implying that it solved it
+1214.019,2.85,or implying that it's hasn't solved it
+1215.789,2.88,it's still fun to do because it's too
+1216.869,5.91,big to solve it is to be to solve by the
+1218.669,5.58,way so how does weakly solving a game
+1222.779,3.96,different from strongly solving a game
+1224.249,5.01,in the weekly version here's how it
+1226.739,4.471,works the game space is too massive
+1229.259,4.05,the reason Jonathan Schafer didn't
+1231.21,3.539,strongly solve checkers not because I'm
+1233.309,3.12,smarter than him but he didn't do it is
+1234.749,4.5,because checkers is too big
+1236.429,4.83,checkers is way too big too strongly
+1239.249,5.191,solve to get to all the dots in there
+1241.259,4.89,imagine is a big vessel and up and down
+1244.44,3.39,and the y-axis is the number of pieces
+1246.149,4.171,on the board you start 24 pieces on the
+1247.83,5.579,board and you end with 0 or 1 but one
+1250.32,6.539,actually in that one case and so what it
+1253.409,5.73,does is it the way he and everybody else
+1256.859,4.2,who does weak solving they do a
+1259.139,3.9,bottom-up search you start with all the
+1261.059,2.37,possible positions for one piece on the
+1263.039,1.98,board
+1263.429,2.761,we need like you just made a move and
+1265.019,2.91,then you back up and say what if it's
+1266.19,3.689,one at one versus one and what if it's
+1267.929,3.99,two verses one and two versus two and
+1269.879,3.601,you keep backing your way up okay so
+1271.919,3.33,you're kind of filling the vessel
+1273.48,3.929,completely you go through every possible
+1275.249,4.65,combination of having those pieces
+1277.409,5.85,so you're strongly solving the bottom of
+1279.899,4.41,the search space the end games okay they
+1283.259,2.971,do this in chess by the way they
+1284.309,4.2,strongly solve the end games and you can
+1286.23,5.46,now download a chess endgame database
+1288.509,5.64,which has all the possible perfect play
+1291.69,4.049,for now six pieces and fewer and I think
+1294.149,3.931,even they have a seven piece endgame
+1295.739,4.591,database available and then what he does
+1298.08,4.02,is start from the top and kind of have a
+1300.33,2.909,search thing which says well what if you
+1302.1,2.519,did this so my I do this and then what
+1303.239,3.601,if you do this I do this until you get
+1304.619,3.511,down to the endgame and you say okay I
+1306.84,2.37,know the answer is there I don't think
+1308.13,3.33,searching below that so you basically
+1309.21,4.44,saving time by doing that so you have
+1311.46,4.2,these workers in parallel trying all
+1313.65,5.61,these combinations in order to try to
+1315.66,5.19,prove that the game is a tie or a win or
+1319.26,3.39,lose and they were successfully able to
+1320.85,3.96,do that with checkers so they didn't
+1322.65,3.57,visit a whole vast number of positions
+1324.81,3.06,in their search space which is really
+1326.22,3.54,cool and they will look do that in such
+1327.87,3.03,an elegant way to kind of sample the
+1329.76,2.64,search space in the appropriate way to
+1330.9,4.83,prove that it's a drop
+1332.4,5.25,ok so let's actually do that right now
+1335.73,3.45,for a game and this is always where the
+1337.65,3.21,people who are really paid in to get
+1339.18,2.97,this ok focus for a second this is a
+1340.86,4.68,game I'm going to teaching you right now
+1342.15,5.76,ready go the goal is to player game the
+1345.54,3.27,sum the shared some starts at 0 this is
+1347.91,3.21,a 0
+1348.81,4.83,ducks are on the table and on your turn
+1351.12,5.52,you can add one or you can add two ducks
+1353.64,5.28,to the table the person at the end of
+1356.64,4.35,their turn who after making their move
+1358.92,5.37,looks at the table and there's perfect
+1360.99,5.76,ten ducks in a row that person wins so
+1364.29,4.44,the person that makes the total ten wins
+1366.75,4.62,and all you can do is add one or two to
+1368.73,5.13,the current running total ok so that's
+1371.37,6.57,an example so anna starts with 0 says
+1373.86,6.54,i'll add 2 to make it two ducks ok Bob
+1377.94,4.44,says I'll add one to make it three ducks
+1380.4,5.19,and it says oh I'll add two to make it
+1382.38,4.83,five bob says two to make it seven so
+1385.59,3.33,you say this is how much I'm adding to
+1387.21,3.27,make it the sum and that's the photo if
+1388.92,3.9,seven ducks in a row after Bob's move
+1390.48,4.47,and it says oh I'm gonna win one to make
+1392.82,4.68,it eight and back was ah two to make it
+1394.95,6.33,10 and Bob wins cuz Bob made it 10 does
+1397.5,7.2,that make sense okay so I want you to
+1401.28,6.6,tell me is that is one the game was
+1404.7,4.59,called by the one to ten because you can
+1407.88,6.69,say one or two and the goal is to ten
+1409.29,7.2,okay so is one to ten a first player win
+1414.57,4.8,in which if you go first you can always
+1416.49,4.2,win our first player lose in which if
+1419.37,4.08,you played against a perfect player
+1420.69,6.39,you'd always lose going first or is it a
+1423.45,9.42,tie or is it a draw so yeah sure right
+1427.08,8.62,what's your name says I said you win if
+1432.87,5.56,you go first is it Daniel do you think
+1435.7,4.59,ah lose go first now it isn't
+1438.43,3.45,necessarily what you did but you're kind
+1440.29,3.3,of stepping back to see like what would
+1441.88,4.29,the perfect person do what would a
+1443.59,10.5,perfect player do okay so who wants to
+1446.17,10.31,argue whoo yes right in the back well
+1454.09,2.39,that's interesting
+1457.59,4.15,what's your name
+1459.07,8.91,tad well done how did how did you come
+1461.74,8.25,up with that it's true if you hit seven
+1467.98,4.2,no matter what you do you can always
+1469.99,7.8,guarantee when I say you hit it means
+1472.18,6.9,you give the other person seven right
+1477.79,3.78,right you know what I say you take seven
+1479.08,4.71,it means that I make a move to get to
+1481.57,3.63,seven but then it's their turn with
+1483.79,2.76,seven in front of them that's what I
+1485.2,2.94,mean so it's if you're looking at the
+1486.55,3.21,board it's your turn in at seven then
+1488.14,4.62,that means seven is bad I'm hearing
+1489.76,4.83,right so seven is bad because you don't
+1492.76,3.3,want to have seven to start from because
+1494.59,3.33,if I have seven whatever I do if I say
+1496.06,3.33,one you say two to make it ten if I said
+1497.92,6.03,to do you say want to make it ten so
+1499.39,5.25,seven is bad why seven bad because 10 is
+1503.95,3.33,bad
+1504.64,5.04,what's 10 if it's my turn in its tendon
+1507.28,4.95,I win or lose I lost because the other
+1509.68,4.02,person got to 10 the action is getting
+1512.23,3.15,to 10 is the winning thing so if I'm
+1513.7,4.08,sitting to 10 I got a big goose egg here
+1515.38,6.45,so 10 is a losing position
+1517.78,6.15,why is 7 also losing because it's the
+1521.83,4.62,one it's you can always guarantee to get
+1523.93,4.38,from 7 to 10 if you have 7 I can give
+1526.45,3.24,you if I if I give you 7 I can arrow to
+1528.31,2.46,give you guarantee to give you 10 and
+1529.69,3.66,what's that
+1530.77,3.93,there's 3 apart and you back up that
+1533.35,3.81,means that 4 is losing
+1534.7,3.84,therefore 1 is losing exactly right well
+1537.16,4.29,done tad all right
+1538.54,6.18,is that cool so it is the case that one
+1541.45,9.8,is losing therefore 0 which is the game
+1544.72,9.78,is winning and what's the winning move
+1551.25,5.5,one go first and say one now your
+1554.5,4.11,opponent has the losing goose egg of one
+1556.75,4.14,and they're also going to have the four
+1558.61,3.75,they're also gonna have this 7 then also
+1560.89,3.59,you have the 10 which means you've got
+1562.36,5.76,to 10 and you won isn't that cool
+1564.48,4.78,good stuff right so you guys strongly
+1568.12,7.14,solved
+1569.26,7.44,one to ten isn't that cool so now you
+1575.26,2.87,can all first on a you could always beat
+1576.7,3.57,your friends that's kind of cool right
+1578.13,5.44,hey let's play one to ten let me go
+1580.27,5.07,first one right and you all what's the
+1583.57,3.66,perfect strategy by the way can you
+1585.34,4.08,summarize this strategy into a couple of
+1587.23,3.78,words need to make a big table of if you
+1589.42,3.12,have this and I do an instant if you
+1591.01,5.34,have this I did it I mean is it the
+1592.54,4.83,table based solution or what you might
+1596.35,6.44,have like a way to kind of summarize
+1597.37,5.42,that somehow how do you get yeah go back
+1604.89,5.83,you make that's exemption aim Evan
+1608.58,3.34,everyone exactly right you make the
+1610.72,3.81,total between you and your opponent
+1611.92,5.34,three which is to say you say the
+1614.53,5.46,opposite of them you say one I say - you
+1617.26,6.03,say - I say one that's three always so
+1619.99,5.61,in one sentence go first say one and
+1623.29,4.53,then say opposite you will always win
+1625.6,4.41,that game isn't that cool
+1627.82,4.02,so you strongly solved it and that's the
+1630.01,3.12,solution and that solution was really
+1631.84,2.19,beautiful because you could summarize it
+1633.13,4.86,in one sentence
+1634.03,4.92,how about chess chess maybe a win but
+1637.99,3.06,you certainly are gonna be able to sell
+1638.95,4.44,statisti to summarize a solution in one
+1641.05,4.94,sentence right maybe add tie who knows
+1643.39,5.18,maybe a draw so here's a game
+1645.99,5.71,tic-tac-toe
+1648.57,6.22,who's played tic-tac-toe before okay
+1651.7,8.25,who's played misere tic-tac-toe before
+1654.79,7.65,in which is their french word in game 3
+1659.95,5.31,parlance what it means is whatever was
+1662.44,5.82,the win or lose is the opposite now so
+1665.26,6.5,if three in a row were a win which it is
+1668.26,7.74,for tic-tac-toe three in a row is now
+1671.76,7.33,I'll lose so three row is now bad three
+1676.0,4.71,turnout is now poison you know what
+1679.09,3.39,three in a row all the strategies you
+1680.71,3.69,grew up practicing you got to like
+1682.48,3.39,forget them because you want to not do
+1684.4,4.32,that you will not want to get three in a
+1685.87,6.12,row right so Wow what is three in a row
+1688.72,7.37,now what is sorry what is Miz there
+1691.99,4.1,tic-tac-toe win lose or tie
+1698.1,5.31,who knows I don't know normal taquito is
+1700.53,10.67,that normal tic-tac-toe is a time so
+1703.41,10.92,what is misère turns out it's also a tie
+1711.2,4.09,but how do you maintain that tie there's
+1714.33,2.67,a matter where you go at the beginning
+1715.29,2.64,by the way the game of tic-tac-toe is so
+1717.0,2.49,cool because it doesn't actually matter
+1717.93,3.0,where you go at the beginning you can
+1719.49,2.49,keep that tie going any one of the
+1720.93,5.58,squares kind of cool
+1721.98,7.08,okay how about misère tic-tac-toe well
+1726.51,5.1,let's think you never want to go where
+1729.06,4.02,what Square has the most things through
+1731.61,4.41,it two three in a row that you want to
+1733.08,4.5,avoid the middle right so you never go
+1736.02,3.33,the middle so it's got to be one of the
+1737.58,3.06,edges of the corner well how about the
+1739.35,4.35,quarter how many three two rows on this
+1740.64,3.9,is the corner three right this way this
+1743.7,3.69,way and this way
+1744.54,5.46,how about the edge though just two right
+1747.39,4.32,so the edges are the better thing to go
+1750.0,3.27,through so having the edges and then
+1751.71,3.12,maybe if you forced into the corner
+1753.27,4.08,let's try it shall we
+1754.83,4.65,cyber system here we go let's play
+1757.35,4.17,together this is my system that has
+1759.48,3.66,strongly solved it and we're gonna see
+1761.52,2.25,if we can win come on class you guys
+1763.14,3.33,give me a thing
+1763.77,3.87,sugar corner or edge edge let's count
+1766.47,2.64,them one two nine one two three four
+1767.64,2.07,five six seven eight nine ready top room
+1769.11,3.39,okay
+1769.71,3.78,edge okay so I'm doing so well I'm
+1772.5,2.94,pretty good okay
+1773.49,3.87,I'm gonna stay with the edge let's stay
+1775.44,3.78,at the edge right okay like this one
+1777.36,4.08,right it's pretty good yeah okay yeah
+1779.22,3.51,all right how about the other end she's
+1781.44,2.82,giving the edges to me I love it that's
+1782.73,3.57,what I want to go anyway I'm so happy
+1784.26,4.23,I'm like rock I'm giving a little shimmy
+1786.3,5.52,a little shimmy nananana name I'm doing
+1788.49,4.77,my tic-tac show shimmy and then oh okay
+1791.82,3.69,well let's see I don't wanna go to the
+1793.26,6.06,middle okay and I don't want to block
+1795.51,5.46,him so I'll go over here cuz that's
+1799.32,2.73,obviously I'll leave this chance for him
+1800.97,3.36,to get this is the only way for him to
+1802.05,4.08,win for him to lose was the poison there
+1804.33,4.42,so I'll go over here and totally rock it
+1806.13,5.83,ready there and then
+1808.75,4.65,and maybe that was a good place
+1811.96,2.49,maybe I well maybe I'll have to go here
+1813.4,2.639,cuz I can't go in the middle I'll try
+1814.45,6.06,over here I'll go here that'll be there
+1816.039,7.89,and then and you start to ask yourself
+1820.51,6.029,where did I mess up if only so that said
+1823.929,4.98,together class if only we had a system
+1826.539,4.921,and or only we had a system that would
+1828.909,6.181,be able to tell me perfectly what to do
+1831.46,6.78,here well how about value
+1835.09,5.459,there's my little stop light and you see
+1838.24,4.53,that every that move is bad right that's
+1840.549,3.691,a losing move let's undo to find our
+1842.77,4.019,green mover I want to find our winning
+1844.24,8.1,move so let's undo this where's my green
+1846.789,7.081,and yeah okay let's undo again there's
+1852.34,6.569,got to be a green back there right and
+1853.87,6.75,then let's undo it come on one of those
+1858.909,3.981,gotta be perfect let's undo again and
+1860.62,2.27,yeah
+1864.12,4.36,whoa this is what you call by the way
+1866.89,4.23,this is the beginning of the first time
+1868.48,4.679,you've seen a research result you
+1871.12,5.64,predict a hypothesis that going the
+1873.159,5.791,middle is bad you then solve it and your
+1876.76,3.87,computer tells you what the surprising
+1878.95,2.849,result just like the V that generates is
+1880.63,4.169,really cool fractal thing that you were
+1881.799,4.921,surprised I was surprised almost the
+1884.799,3.271,point of calling home when I found this
+1886.72,3.75,result I thought this is the coolest
+1888.07,3.75,result I've ever seen in which my Hall
+1890.47,3.87,intuition was totally broken
+1891.82,4.44,in which the old one square I thought
+1894.34,4.38,was the worst place ends up being the
+1896.26,4.59,only place that you can keep your tie
+1898.72,2.99,and let's see if we can figure out how
+1900.85,4.559,to do it ready
+1901.71,7.03,let's click there and notice there's
+1905.409,4.89,only one place to keep my tie the chance
+1908.74,4.919,that I choose that it's very low right
+1910.299,8.281,it's one in seven there's only one place
+1913.659,7.531,to move to keep my tie there's only one
+1918.58,6.99,place to move to keep my tie and it's
+1921.19,6.239,always where exactly the opposite of
+1925.57,3.81,where the opponent went why is that
+1927.429,3.541,because there's two cases of three in a
+1929.38,3.24,row there's a three in a row through the
+1930.97,4.17,middle and through your oh not through
+1932.62,4.11,the middle right agree well they'll
+1935.14,4.919,never be a three road through the middle
+1936.73,5.79,because if I do that strategy of me in
+1940.059,4.201,the middle my opponent and
+1942.52,3.93,me that every path of the middle would
+1944.26,3.78,be like opponent me me and they'll ever
+1946.45,2.16,be me the middle three in a row okay you
+1948.04,3.39,agree with that
+1948.61,6.06,opponent me me and they'll never be won
+1951.43,5.82,on the edge why cuz I'm always the
+1954.67,3.87,opposite of my opponent so for me to get
+1957.25,3.87,three in a row on the edge would have
+1958.54,4.08,met my opponent just got three in row
+1961.12,4.95,before me on the edge because I was
+1962.62,5.91,copying them in a little mirrored way so
+1966.07,4.59,I'll never lose by doing that and that's
+1968.53,4.41,the only way to do it isn't that
+1970.66,5.22,fascinating and wonderful there's like
+1972.94,5.49,beauty is beauty in that search tree in
+1975.88,4.77,that tree there's beauty which is that
+1978.43,4.41,kind of always the opposite is the only
+1980.65,4.29,way to keep that balance of a tie it's
+1982.84,6.03,really very cool that's awesome I love
+1984.94,5.55,that okay so so you say well that's cool
+1988.87,3.21,damn but how do I what's this silly
+1990.49,4.53,color thing in my hand you're gonna say
+1992.08,4.59,well and those are you online make sure
+1995.02,6.33,to download the PDF of this thing okay
+1996.67,8.85,so on the outer rim is the value of the
+2001.35,6.69,game itself which is a tie and then I
+2005.52,3.75,show you the value of the move to that
+2008.04,2.7,position remember the picture of Tic
+2009.27,3.36,Tacs how I showed you with the yellow in
+2010.74,5.19,the middle and red around that I have
+2012.63,6.87,nine boxes here the nine big boxes on
+2015.93,6.36,bezier tic-tac-toe show you the basic
+2019.5,5.19,first move and then you say what if you
+2022.29,4.83,were what if my opponent were to go in
+2024.69,3.96,the top right let's just think that if
+2027.12,3.51,my opponent goes in the top right my
+2028.65,4.05,opponent's making a losing move by the
+2030.63,4.08,definition going back to like slide four
+2032.7,4.14,of game theory if my opponent makes a
+2034.71,4.2,losing move I have a winning position I
+2036.84,3.45,should be able to win and winning
+2038.91,2.94,position and what is is one in which
+2040.29,4.35,there exist so when he moved actually
+2041.85,5.22,win what is that when he move I don't
+2044.64,6.0,know let's zoom in on that box and see
+2047.07,5.79,where the green is so that zoomed in
+2050.64,3.509,picture is what would have happened what
+2052.86,2.67,I would have seen in my screen if my
+2054.149,3.331,opponent had moved in the top right I
+2055.53,4.98,would have seen those eight boxes why
+2057.48,4.8,are there eight because I can't go on
+2060.51,3.69,top of my opponent's piece there's only
+2062.28,3.6,eight free spots that's why there are
+2064.2,4.05,eight squares there and you'll see from
+2065.88,4.11,that picture that the only way to win if
+2068.25,3.36,my opponent goes in the top right is to
+2069.99,4.05,go in on the edges all foragers are
+2071.61,4.41,equally valid for a win isn't that cool
+2074.04,4.05,so that is the secret
+2076.02,3.69,you now have the tic-tac-toe and
+2078.09,4.23,brassiere ticked I tell answer key in
+2079.71,4.89,your hands which means you can make the
+2082.32,3.57,first couple of moves perfectly and it's
+2084.6,3.21,up to you to kind of finish the game off
+2085.89,3.0,but it'll East gets you down the right
+2087.81,3.3,path isn't that great
+2088.89,3.42,it might give to you guys so you follow
+2091.11,3.21,it up and there's a cool picture and
+2092.31,3.57,it's a recursive beautiful fractal
+2094.32,4.74,picture and it's beautiful
+2095.88,5.01,so to revisit I have a game theory group
+2099.06,3.39,it's called games crafters and I
+2100.89,3.93,encourage any of you who think this is
+2102.45,5.88,cool stuff to come join me I have
+2104.82,6.81,projects of all kinds that can even be
+2108.33,5.01,relevant and fun and engaging for a cs10
+2111.63,3.33,graduate so if you like this stuff come
+2113.34,3.51,on talk to me next semester and let's
+2114.96,5.22,populate games crafters with more stuff
+2116.85,7.11,our group has solved Kinect for like
+2120.18,5.04,what my group has solved kind of it's
+2123.96,1.77,been done before but never been done and
+2125.22,3.12,put online
+2125.73,3.84,you now have can go to a website the
+2128.34,3.45,website that's on the top of this slide
+2129.57,7.53,and you go to that site with your
+2131.79,9.57,smartphone and you will never again lose
+2137.1,7.98,and connect for did he say never again
+2141.36,6.45,yes never again if you go first and
+2145.08,6.36,follow my advice of my program never
+2147.81,7.02,again lose and connect for in conclusion
+2151.44,4.92,game theory the borscht the game trees
+2154.83,3.87,are exponential them the word
+2156.36,6.15,exponential means it grows faster than
+2158.7,6.24,linear cubic and quadratic however so is
+2162.51,4.65,computer processing power increasing
+2164.94,3.93,with parallelism and all that so what
+2167.16,4.05,that means is every couple of years we
+2168.87,5.4,gain another move that we can look into
+2171.21,5.76,the game tree okay will never that said
+2174.27,6.9,will never solve some games like go is a
+2176.97,8.31,go search base is 3 to the 361 how many
+2181.17,7.86,is that that many positions let's just
+2185.28,6.48,keep looking that many positions folks
+2189.03,4.17,never in anyone's lifetime in the
+2191.76,3.81,history of the universe will you solve
+2193.2,4.53,all the positions of go that said you
+2195.57,3.54,might have a nice smart AI that will
+2197.73,4.65,play it pretty well but you'll never
+2199.11,4.38,strongly solve go ok so weak solving
+2202.38,3.0,means you prove it
+2203.49,4.85,strong solving is what I do which is you
+2205.38,2.96,go everything ok

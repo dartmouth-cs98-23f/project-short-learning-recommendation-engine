@@ -1,0 +1,82 @@
+second,duration,transcript
+0.32,5.28,structured query language sql or sql for
+3.439,4.081,short is the gold standard language for
+5.6,3.68,communicating with relational database
+7.52,3.76,management systems you've likely heard
+9.28,4.96,of databases like mysql
+11.28,4.88,postgres microsoft sql server and oracle
+14.24,3.119,all of which are based on sql with their
+16.16,2.879,own little variations
+17.359,4.241,it was initially developed in the early
+19.039,5.761,70s to mutate and retrieve data from
+21.6,5.36,ibm's system r database by 1986
+24.8,4.08,it was standardized into the syntax that
+26.96,4.159,remains extremely popular in technical
+28.88,4.24,applications today a relational database
+31.119,3.841,organizes data into tables
+33.12,3.84,kind of like an excel spreadsheet where
+34.96,2.48,columns contain attributes or types of
+36.96,2.48,data
+37.44,4.16,while each row represents an individual
+39.44,2.56,record or data point with its own unique
+41.6,2.72,id
+42.0,4.239,known as a primary key we can establish
+44.32,4.079,relationships between data points
+46.239,3.921,by taking the unique id from one row and
+48.399,2.561,storing it on a different row in a
+50.16,2.96,different table
+50.96,4.239,in a special column known as a foreign
+53.12,4.079,key in the teams table the team id
+55.199,3.601,is the primary key but in the players
+57.199,3.52,table it's the foreign key
+58.8,4.16,and what that data structure tells us is
+60.719,4.72,that a player belongs to one team
+62.96,3.199,while a team can have many players what
+65.439,2.801,we've done here
+66.159,4.401,is structured our data in its smallest
+68.24,3.28,normal form to eliminate duplication and
+70.56,4.0,redundancy
+71.52,3.599,now the role of sql is not only to read
+74.56,3.199,create
+75.119,3.601,update and delete data but also to join
+77.759,2.561,data together
+78.72,3.039,based on the relationships embedded
+80.32,3.92,within it the syntax
+81.759,3.521,is comprised of several key parts if we
+84.24,3.199,zoom all the way out
+85.28,3.12,we have a statement or a piece of code
+87.439,2.961,that does something
+88.4,3.92,like reads or writes to the database
+90.4,3.52,within a statement we have a variety of
+92.32,2.32,keywords that can manipulate the
+93.92,2.96,database
+94.64,3.519,select can be used to make a query for
+96.88,4.16,the columns that you want
+98.159,3.681,from a table the column and table names
+101.04,2.88,are known as
+101.84,3.599,identifiers but we may not want every
+103.92,3.36,row in the table so we filter the
+105.439,3.36,results with the where keyword to only
+107.28,2.159,include records that meet a certain
+108.799,2.32,condition
+109.439,3.281,it's like looping over every row in the
+111.119,3.441,table and only returning rows in the
+112.72,2.399,query where the predicate evaluates to
+114.56,2.559,true
+115.119,3.6,then we might use the join keyword to
+117.119,2.241,connect data from an entirely different
+118.719,2.4,table
+119.36,3.68,by matching the primary key on this
+121.119,2.481,table to the foreign key on another
+123.04,2.399,table
+123.6,3.36,what we've created is a collection of
+125.439,3.841,clauses that make up
+126.96,3.84,a full sql statement we can now go and
+129.28,3.12,execute this code on the hundreds of
+130.8,3.6,different databases that support
+132.4,3.6,sql this has been structured query
+134.4,3.28,language in 100 seconds
+136.0,3.04,like and subscribe if you want to see a
+137.68,3.199,full sql tutorial
+139.04,4.8,thanks for watching and i will see you
+140.879,2.961,in the next one

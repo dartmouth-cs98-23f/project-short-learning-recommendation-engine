@@ -1,0 +1,349 @@
+second,duration,transcript
+0.0,1.198,Hello Friends!
+1.398,0.941,Welcome to Gate Smashers
+2.539,2.703,So the topic is Transactions
+5.442,1.15,Transaction is actually what
+6.792,1.431,It is a set of operations
+8.423,1.477,Used to perform
+10.1,1.947,A logical unit of work
+12.247,2.701,This is a definition of Transaction
+15.148,2.36,But as we listen transaction word
+17.708,2.204,What is the first thing that comes into our mind?
+20.112,0.617,Transaction
+20.929,1.641,Give and take money
+22.77,2.203,Means we are transferring money from here and there
+25.173,1.307,We are withdrawing
+26.68,1.042,Debit or credit
+27.922,0.5,Yes
+28.607,2.826,That is the basic meaning of transaction
+31.633,2.031,But it is not the only meaning of transaction
+33.864,1.181,Any transaction
+35.245,2.127,We are changing anything in database
+37.572,2.189,We are reading database
+39.961,2.103,That is also a part of transaction
+42.264,2.575,But the main motive of what is transaction
+45.039,0.922,Yes
+46.161,0.907,It is monetary transaction
+47.268,4.51,Means we want to transfer money from one account to another account
+51.978,2.197,Or I want to withdraw money
+54.375,1.826,Or I want to credit the amount
+56.401,1.808,That is the basic meaning of transaction
+58.409,3.055,But whenever we perform any transaction
+61.664,2.025,Why do we perform transaction
+63.889,2.014,Basically what we have to do
+66.103,1.257,We have to get some work done
+67.56,1.363,That only I have written over here
+69.123,1.234,It is set of operation
+70.557,1.973,Used to perform
+72.73,1.586,A logical unit of work
+74.516,1.683,"Work means, task"
+76.399,1.424,We have to perform task
+78.023,2.413,We will do a simple example of transaction
+80.636,2.125,Which almost all of you have faced
+82.961,2.422,That is a transaction from a ATM
+85.583,2.826,When we withdraw money from ATM
+88.609,1.558,It is a transaction
+90.367,1.608,What is written at last?
+92.175,2.036,Your transaction is completed successfully
+94.411,2.6,"Means, what we have done"
+97.211,6.356,"Whenever we withdraw money from ATM, we have to perform set of operations"
+103.767,1.497,And what is my task?
+105.464,0.929,What is my work?
+106.593,3.206,Over there what is my work? what is my task?
+109.999,0.92,Withdraw
+111.119,2.296,Withdraw money
+113.615,1.652,This is my task
+115.467,3.105,"But, to perform this task"
+118.772,2.7,I will have to perform some set of operations
+121.672,1.6,What are that set of operations?
+123.472,2.349,First of all I inserted the card
+126.021,1.933,So I inserted the card
+128.154,1.212,Then what is happening at backend?
+129.566,0.951,The information
+130.717,1.629,That is being read
+132.546,2.985,My details corresponding to my card
+135.731,1.451,That machine is reading
+137.382,2.495,So that from my account
+140.077,1.852,It can fetch the information
+142.129,1.517,That how much balance is there in the account
+143.846,1.423,Is this person authentic?
+145.469,0.5,Or not
+146.154,1.891,So after that what do we write
+148.245,1.179,I choose a language
+149.624,1.779,After choosing the language
+151.603,1.878,We generally select the account
+153.681,2.148,That from saving account or current account or what
+156.029,1.36,Generally saving account
+157.589,3.655,After saving account next it comes that how much money you want to withdraw
+161.444,1.662,That money I entered
+163.306,0.835,After that
+164.341,1.111,It asks me pin
+165.652,1.884,So I entered 4 digit pin
+167.736,1.975,And then wait for the money
+169.911,0.997,After that money
+171.108,1.22,Comes from the machine
+172.528,2.576,And your transaction is completed
+175.304,3.204,And you will get message on your registered mobile number
+178.708,2.656,So these 7-8 operations that we have performed
+181.564,3.135,What is this 7-8 operations collection called?
+184.899,1.065,Transaction
+186.164,3.797,But it is not necessary that whatever you are doing from ATM is only transaction
+190.161,0.941,Even if online
+191.302,4.515,If you are transferring money online from one account to another
+196.017,1.508,That is also a type of transaction
+197.725,1.727,For that also there are some set of operations
+199.652,1.167,What? first of all
+201.019,1.039,Authentication
+202.258,1.118,You on the browser
+203.576,0.783,You filled SBI online
+204.559,1.941,You filled username and password
+206.7,1.541,What is the first operation?
+208.441,2.612,"You have to authenticate, that you are valid or not"
+211.253,3.013,So as it will come to know that username and password is matched
+214.466,1.489,So server said that yes
+216.155,1.207,Now you can do the transaction
+217.562,1.746,Then you selected the beneficiary
+219.508,3.644,Then after that if beneficiary is already added
+223.352,1.981,Then it is good otherwise you will add
+225.533,4.0,And after that you will fill the amount to be transferred
+229.733,0.561,After that
+230.494,1.111,OTP will come
+231.805,1.583,And  you will fill transaction password
+233.588,1.398,And your money
+235.186,3.462,Transaction will be successfully completed
+238.848,2.08,So what is the actually meaning of transaction?
+241.128,3.507,When we are performing set of operations
+244.835,1.464,And what will happen with that?
+246.499,3.289,"Work, some work will be done"
+249.988,1.759,So if we talk about database
+251.947,1.245,In database we generally
+253.392,1.251,What are we telling transaction?
+254.843,2.351,That we are generally
+257.394,1.614,How are we defining transaction
+259.208,3.118,Transaction generally represent a change in database
+262.526,2.87,To make some change in database
+265.596,0.882,What do we perform
+266.678,0.966,Transaction
+267.844,2.949,And all the banking systems are there
+270.993,3.116,If we are taking monterrey examples
+274.309,1.479,Then what these banks have done
+275.988,0.794,They have made database
+276.982,3.738,They have a database of all the account holders
+280.92,3.483,"Where our information, detail, how much money is there"
+284.603,1.699,"Whole amount, everything is there"
+286.502,1.8,Whenever we will do transaction
+288.502,1.495,What will happen at first
+290.197,2.318,That information will be fetched from there
+292.715,3.067,And then we will perform some change in that
+295.982,1.49,So in transaction
+297.672,2.081,If we talk about operations
+299.953,1.912,Which are the operations
+302.065,1.773,So in database the transaction that is there
+304.038,1.676,In that there are 2 operations
+305.914,2.388,Read and write
+310.311,2.954,These are 2 operations
+313.465,1.29,The major operations
+314.955,1.258,Which comes in the
+316.413,0.922,Transaction
+317.535,1.397,Read and Write
+319.132,0.837,Read means
+320.169,2.478,We have to read database
+322.847,1.078,Where is the data?
+324.125,1.967,Where is data and table?
+326.292,0.851,In hard disk
+327.343,0.823,In servers
+328.366,2.524,At backend the servers that we have
+333.451,1.556,If I talk about database server
+337.54,0.905,Then in database server
+338.645,2.478,All the data where is it kept in backend?
+341.323,1.526,On drives
+343.049,2.029,On hard drives
+345.278,2.44,So user is requesting
+347.918,1.236,From different places
+349.354,1.921,User is requesting
+351.475,0.887,To server
+352.562,1.555,That I want to read the data
+354.317,1.427,Over here there is all the data kept
+355.944,3.18,All the account holders data is over here
+359.324,1.452,So as user
+360.976,2.733,Uses an API an application
+363.909,1.419,Will access server
+365.528,1.109,It will request server
+366.837,2.712,That  I want to perform particular transaction
+369.749,1.806,Let's say I want to transfer
+371.755,1.959,I want to transfer amount
+373.914,4.22,If I want to transfer amount from account A to account B
+378.334,1.308,Then first of all
+379.842,2.524,I should know the information of account A
+382.566,2.18,That much money are there in account A
+384.946,2.265,Who is actually owner of account A
+387.411,2.958,So for that first of all we send request to server
+390.569,2.065,That is when we fill our username password
+392.834,2.636,That is a kind of request to server
+395.67,2.141,When username password is authenticated
+398.011,2.673,An interface will be open in front of me
+400.884,2.418,"What we do in that interface, we transfer"
+403.502,1.207,As we transferred
+404.909,2.47,Our information is read
+407.579,0.901,What is read?
+408.68,3.7,We are reading the information from database
+412.58,1.551,"Only, read"
+414.331,3.817,"Access, which we call as we are accessing database"
+420.687,1.583,When we will access database
+422.47,3.26,After that only we can perform some write
+425.93,1.163,What is the meaning of write
+427.293,1.034,Change
+430.73,1.53,What is the meaning of write? change
+432.46,1.226,What is the meaning of read
+433.886,1.251,Just accessing the data
+435.337,0.774,We just have to see the data
+436.311,3.87,But the meaning of write is to make some change in the data
+440.381,3.426,So if we write a normal transaction in database
+444.007,1.924,How we will write the transaction
+446.131,2.135,What is the way of writing that
+448.466,1.907,First of all
+450.573,0.72,Read
+451.493,4.692,We are transferring database from account A to account B
+456.385,1.507,So first of all
+458.092,0.995,We will perform read
+459.287,0.549,Of A
+460.036,1.588,What is A? account
+461.824,2.256,So we read account A
+464.28,1.506,From where this read will happen?
+465.986,0.931,From hard disk
+467.117,1.845,The hard disk that is there on the backend
+469.162,2.591,From there the data is read first of all
+471.953,1.977,And after reading where will the data come?
+474.13,1.418,In faster memory
+475.748,1.128,Let's say it will come into the RAM
+477.076,1.824,As the data came into the RAM
+479.1,2.023,What data came let's say in A
+481.323,1.623,There are 1000 rupees
+483.146,1.17,And in B
+484.516,1.979,There are 2000 rupees
+486.695,1.79,So as we have done read of A
+488.685,2.354,So what value came in A? 1000
+491.239,2.639,Now operation
+494.078,1.12,What operation is to be performed?
+495.398,3.46,Let's say from A I want to transfer 500/- in B
+499.058,2.842,So I am performing an arithmetic operation over here
+502.1,4.951,A =A-500 simple
+507.251,4.105,Means From A account deduct 500/-
+511.556,1.962,This is Arithmetic operation
+513.718,2.072,But when this operation will be performed
+515.99,1.238,Where is this operation being performed?
+517.428,1.033,In RAM
+518.661,2.322,So we also have to change that value
+521.183,2.014,So to change that
+523.397,1.42,We have to write
+525.017,3.264,Means we have changed the value in RAM
+528.481,0.983,We did write of A
+529.664,1.707,What is the value A over here?
+531.571,1.686,500
+533.457,3.465,Because we have deducted 500 from 1000
+537.122,1.996,So now what is the value of A 500
+539.318,2.587,But remember not in the database
+542.105,2.159,Still we have not done anything in the database
+544.464,1.231,Still in database there is the same value
+545.895,1.827,Where is this work going on?
+547.922,0.5,In RAM
+548.568,2.54,We did read of A and  got the value 1000
+551.308,2.29,A=A-500
+553.798,1.304,It is an ALU arithmetic operation
+555.302,2.203,"We performed, we did write of A"
+557.705,1.414,Write of A means
+559.319,2.574,Now that value has changed to 500
+562.093,1.771,Value of A has changed to 500
+564.064,0.838,But where?
+565.102,1.215,Still in RAM only
+566.517,3.255,Now we will read the value of B
+573.017,1.355,We read the value of B account
+574.572,1.495,So from where this value will be read?
+576.267,0.909,From database
+577.376,1.936,"From backend, from database we read the value"
+579.512,0.5,What did it came?
+580.046,1.379,2000
+581.625,2.074,Now what we have to perform in this 2000?
+583.899,3.745,"Plus, B=B+500"
+587.844,2.508,What is the meaning of B=B+500?
+590.552,1.755,That what is the value of B
+592.507,1.818,2000 that had came
+594.525,1.119,2500
+595.844,4.515,But to do that I will have to write of B is to be done
+600.559,1.403,As we did write of B
+602.162,0.786,What happened over here?
+603.148,1.887,As we did write of B
+605.235,2.718,Value of B is updated to 500
+608.153,1.981,"But, still remember"
+610.334,1.124,It had not happened in database
+611.658,2.178,This work is just going on in RAM
+614.036,2.986,Because where does CPU always perform?
+617.222,1.055,In RAM
+618.477,3.589,We discuss this thing very carefully in Operating System also
+622.266,1.835,That when a program
+624.301,1.638,Is in a Hard disk
+626.139,2.095,Whenever we want to execute that program
+628.434,3.104,When we want to execute the instructions written in that program
+631.738,2.875,Then first bring that program in RAM
+634.813,1.004,Or bring it into cache
+636.017,0.865,In cache memory
+637.082,1.213,When it will come in cache
+638.495,1.718,Program is converted into process
+640.413,2.23,Now CPU will work on it
+642.843,2.921,CPU never directly works on hard disk
+645.964,1.763,Due to speed factor
+647.927,1.558,Because CPU works very fast
+649.685,1.581,And hard disk very slow
+651.466,2.404,So in between we have put RAM memory
+654.07,1.838,Which is compatible in speed
+656.108,1.974,So over here in RAM what work is going on
+658.282,1.647,First value of A is read
+660.129,1.381,"Changed it, then read the value of B"
+661.71,1.095,And changed it
+663.005,2.254,Now what is the value of A 500
+665.459,1.278,What is the value of B
+666.937,1.329,2500
+668.466,2.489,Over here 2500
+671.155,2.108,Because write of B means
+673.463,1.09,B=B+500
+674.753,1.288,What is the value of B? 2000
+676.241,3.796,So 2000+500=2500
+680.237,2.243,And at last what we are using
+682.68,0.956,Commit
+685.444,1.074,This is the 3rd operation
+686.718,1.438,Other than read and write
+688.356,1.415,We use a operation
+689.971,1.344,Commit
+691.515,1.025,What is the meaning of commit
+692.74,1.201,Whatever changes
+694.141,3.932,Whatever changes we have performed on RAM
+698.273,1.748,All that changes
+700.221,1.497,Save permanently
+701.918,1.168,In hard disk
+703.286,3.104,Now what will be the value in hard disk
+706.59,1.255,500 of A
+708.045,2.944,And 2500 of B
+711.189,3.213,So this is what? a way of writing a transaction
+714.602,2.508,Whatever transactions we will write in database
+717.31,2.91,In that we are performing major 2 operations only
+720.42,0.937,One is read
+721.557,0.798,One is write
+722.555,2.546,But other than read and write also there are other operations like commit
+725.301,1.203,Rollback is there
+726.704,1.911,When they will come we will see them also slowly
+728.815,2.766,But you should know this 2 operations
+731.781,1.235,What does read and write do
+733.216,2.265,Read means just to access database
+735.681,1.59,To fetch the database
+737.471,2.473,And write means to change something in it
+740.144,1.177,Any change
+741.521,2.612,We want to perform arithmetic change in it
+744.333,0.906,So this is how
+745.439,2.225,We define a transaction
+747.864,2.492,And after that in transaction
+750.556,2.249,There are many transaction state
+753.005,1.69,Which are the states of transactions
+754.895,0.544,Properties are there
+755.639,1.911,Which we will discuss one by one
+757.75,2.346,This is all about the basic of transaction
+760.296,0.5,Thank you

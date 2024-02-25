@@ -1,0 +1,509 @@
+second,duration,transcript
+0.0,4.64,for most people studying data structures
+2.0,5.04,and algorithms is not the most exciting
+4.64,4.72,part of programming and trust me this is
+7.04,4.08,exactly the feeling that i used to have
+9.36,3.279,when i first started learning about data
+11.12,3.2,structures and algorithms to me they
+12.639,3.361,just seemed so boring and i just
+14.32,3.76,couldn't quite understand why they are
+16.0,4.08,even important and this seemed like
+18.08,3.84,something that i just sort of have to
+20.08,3.52,learn to get my foot through the door
+21.92,3.599,and after that i can just forget about
+23.6,4.96,them and focus on what i'm actually
+25.519,4.881,excited about like coding tinderbots
+28.56,3.2,but now that i've actually properly
+30.4,2.8,learned about these topics and taking
+31.76,3.28,the time to actually understand not only
+33.2,4.32,what they are but why they are important
+35.04,4.64,i've actually completely changed my mind
+37.52,4.08,i think data reaction algorithms is one
+39.68,3.92,of the most beautiful parts of
+41.6,4.639,programming and computer science and in
+43.6,5.279,this video i want to give you a glimpse
+46.239,5.601,of this beauty by giving you literally
+48.879,4.881,the dumbest most simple explanation of
+51.84,3.76,what data structures are to give you
+53.76,4.24,sort of an intuitive understanding that
+55.6,4.799,you can then take into your actual study
+58.0,4.239,of each particular data structure so you
+60.399,4.001,can have this sort of framework in your
+62.239,4.24,mind going into it and hopefully
+64.4,4.96,hopefully you may even start to
+66.479,5.201,appreciate the beauty that implementing
+69.36,4.48,data structures can actually have and
+71.68,3.759,believe me i remember exactly what it
+73.84,3.279,was like to not understand anything
+75.439,3.601,about data structures this video is
+77.119,3.441,completely language agnostic so
+79.04,3.119,whichever programming language you've
+80.56,4.0,learned in the past you can watch this
+82.159,4.721,video and then at the end as always i
+84.56,5.12,will give you the exact resources that i
+86.88,4.879,use in a step-by-step way to go from
+89.68,4.72,this conceptual high-level understanding
+91.759,4.32,into mastering all of these topics i'm
+94.4,3.759,really passionate about this reaction
+96.079,3.841,algorithms so if you enjoyed this video
+98.159,4.081,there will be a very similar video
+99.92,4.239,coming on algorithms as well so if you
+102.24,3.519,do enjoy this video leave a like down
+104.159,3.6,below because how many people like this
+105.759,5.601,video will then sort of tell me whether
+107.759,5.521,i should make it or not okay so what are
+111.36,5.84,data structures at an extremely high
+113.28,6.72,level all a data structure is is a way
+117.2,4.72,of organizing data so whenever you're
+120.0,3.92,writing a program the purpose why
+121.92,4.799,computers exist in the first place is
+123.92,6.0,that we have some data which can be like
+126.719,6.24,numbers or maybe it's a string and then
+129.92,6.24,we have something that we want to do
+132.959,4.961,with that data to produce some useful
+136.16,4.56,result it turns out that it really
+137.92,4.48,matters how we actually organize data in
+140.72,4.32,a computer's memory and i know that
+142.4,4.64,right now now this makes any sense and
+145.04,4.72,that is why i have organized a couple of
+147.04,5.44,very specific examples which will allow
+149.76,4.88,you to actually understand it again in
+152.48,4.88,the dumbest way possible in a way that
+154.64,4.8,even a literal dumbass like me could
+157.36,3.68,understand how this work but first let's
+159.44,4.079,just briefly talk about
+161.04,4.4,why this idea of organizing data is
+163.519,3.921,actually so important to the point where
+165.44,4.159,if you want to get a job studying data
+167.44,3.76,structures and algorithms is literally
+169.599,2.801,the most important thing that you need
+171.2,2.88,to know if you're good at data
+172.4,4.479,structures and algorithms you will be
+174.08,5.76,good at writing programs in a logical
+176.879,4.801,way in a way that makes sense in a way
+179.84,3.52,that is efficient and what companies
+181.68,3.44,want to see is that you have that
+183.36,4.64,fundamental knowledge and those
+185.12,5.839,principles that you can apply in their
+188.0,5.12,production code to make the gold really
+190.959,4.401,good and therefore that you as the
+193.12,3.92,programmer are worth the money that the
+195.36,4.159,company is spending on you so data
+197.04,4.0,structure is a way of organizing data in
+199.519,3.281,the computer's memory the way the
+201.04,3.919,computer's memory works in again a
+202.8,4.079,really dumb sort of simplified way you
+204.959,3.92,have these memory blocks which are
+206.879,4.241,called like memory registers all these
+208.879,4.161,registers hold some kind of value maybe
+211.12,3.28,this is a two this is a five this is a
+213.04,3.36,seven and whenever you're writing a
+214.4,3.839,program you're probably not just doing
+216.4,4.0,something with one piece of data like
+218.239,4.161,these two here often you'll have
+220.4,3.919,something like a collection of data
+222.4,3.52,that's sort of related to each other in
+224.319,3.121,some way maybe it's a list of numbers
+225.92,2.959,like a list of transactions that you
+227.44,3.519,want to add together or something like
+228.879,5.041,that so it makes sense to actually
+230.959,5.121,organize this data close to each other
+233.92,4.319,in the computer's memory so that it's
+236.08,3.92,easy for you to access all these
+238.239,4.08,different pieces of data rather than
+240.0,4.799,having to define separate variables like
+242.319,5.361,a equals two or b equals five you can
+244.799,4.72,just define one variable one data
+247.68,3.119,structure called a list and this is the
+249.519,3.041,first data structure that we learned the
+250.799,4.08,most basic one and then you put all of
+252.56,3.679,these numbers into this one variable so
+254.879,3.121,then in the future if you want to access
+256.239,4.24,the middle element of this list you can
+258.0,4.639,just go list one from the computer's
+260.479,4.481,perspective when all of these variables
+262.639,3.921,are stored close together to each other
+264.96,3.6,accessing them together and maybe
+266.56,3.44,looping over them or something is a lot
+268.56,4.0,easier this is sort of the computer
+270.0,4.0,equivalent of let's say like when i'm
+272.56,3.6,making these youtube videos right
+274.0,4.08,there's multiple pieces of gear that i
+276.16,3.68,always sort of need and so whenever i
+278.08,4.08,want to start filming a video it makes
+279.84,4.16,sense if i've sort of placed all my
+282.16,3.52,camera gear in the same part of the room
+284.0,3.6,so all i have to do is go to that part
+285.68,4.079,of the room grab the gear and start
+287.6,3.76,filming and storing values in something
+289.759,3.921,like a list is just a computer
+291.36,4.48,equivalent of this same principle let's
+293.68,3.92,talk about a limitation that a very
+295.84,4.4,simple data structure like a list could
+297.6,4.24,have the way lists or arrays are usually
+300.24,3.679,defined in a programming language is
+301.84,4.16,there a certain amount of memory in this
+303.919,4.72,case we've just allocated three
+306.0,4.479,registers of memory to our list here but
+308.639,3.681,what happens if we now want to add a
+310.479,3.601,fourth element to the list well you
+312.32,4.159,might say that well that's easy we just
+314.08,4.399,sort of added here but what if this
+316.479,4.321,register in the memory was already taken
+318.479,5.361,up by a different piece of data maybe we
+320.8,4.959,already had a string like hello in here
+323.84,4.639,now we put the eight on top of it so
+325.759,4.081,this hello gets replaced and maybe we
+328.479,2.72,had a different part of the programmer
+329.84,3.12,we'll be using that piece of string and
+331.199,3.28,now instead of hello it's certainly an
+332.96,4.079,eight and just everything crashes right
+334.479,4.641,so the way lists are usually actually
+337.039,3.841,defined under the hood in the language
+339.12,4.32,is that if you add an element to a list
+340.88,5.599,it will actually take this list and move
+343.44,5.039,it to a completely different part of the
+346.479,3.361,memory and then allocate more memory to
+348.479,2.72,it even if you don't understand anything
+349.84,2.72,about low level programming you might
+351.199,3.28,see that this is sort of very
+352.56,4.079,inefficient if you know that you'll be
+354.479,3.921,constantly adding data to a list every
+356.639,3.68,time moving into a different location in
+358.4,4.239,the memory can become very slow so that
+360.319,4.32,is why you can see that actually if we
+362.639,3.761,know that the thing we want to do with
+364.639,4.0,our data is to
+366.4,3.68,keep adding stuff to it and we know that
+368.639,3.68,in the future we'll be adding a lot of
+370.08,4.32,stuff to it it actually doesn't make
+372.319,4.16,sense to use a list and there might be a
+374.4,4.0,better way to organize that data again
+376.479,3.28,for this purpose that we have here and
+378.4,3.68,in particular for something like this we
+379.759,4.401,might use something called a linked list
+382.08,4.32,and what a linked list is instead of
+384.16,3.68,storing your items just sequentially
+386.4,3.519,after each other in the memory what
+387.84,4.24,we're doing is we're defining this node
+389.919,4.4,structure so we just have two
+392.08,4.48,places in memory where the first one is
+394.319,5.681,a piece of data like r2 here and the
+396.56,5.44,next one is a pointer to a different
+400.0,3.68,node somewhere else in the memory it
+402.0,4.319,doesn't matter where it is essentially
+403.68,5.2,this second item of this node will be
+406.319,4.481,pointing to the next element which will
+408.88,3.599,again just be a node and the way this
+410.8,3.679,actually works is that these memory
+412.479,4.241,registers are numbered in the computer's
+414.479,3.84,memory let's say this is a number five
+416.72,4.0,is number six and then somewhere
+418.319,5.041,randomly in the memory we have a memory
+420.72,4.479,register i don't know like 102 and here
+423.36,5.04,as the second element of this first node
+425.199,5.041,we just have the memory address where we
+428.4,3.359,know that the second element will be and
+430.24,4.799,again for the next one we would have
+431.759,5.601,maybe a pointer to register 463
+435.039,4.0,and this one will then know that okay
+437.36,4.2,the next element of our link deletion
+439.039,5.201,will be in memory location
+441.56,4.68,463 and again using our camera example
+444.24,3.84,here let's say i'm using all my camera
+446.24,3.359,gear in this part of the room here but
+448.08,4.08,now there's no space anymore what i
+449.599,4.561,could do is include like a post-it note
+452.16,4.479,in that area to see that okay the next
+454.16,3.84,batch of my gear is going to be in this
+456.639,2.641,area of my room maybe there's a note
+458.0,3.28,there that says i don't know under the
+459.28,4.16,bed or something so that i know where to
+461.28,3.68,go to find the next part of the gears
+463.44,4.319,and this way you can essentially just
+464.96,5.679,keep increasing this chain of values or
+467.759,4.88,chain of camera gear almost indefinitely
+470.639,4.481,as long as you actually have a space in
+472.639,4.4,your memory or space in your room all
+475.12,4.4,you have to do is just know where the
+477.039,4.321,very last element of the list is and
+479.52,3.76,then users have to find an empty
+481.36,3.279,location anywhere in your memory and
+483.28,3.68,then add
+484.639,4.4,another node into your linked list and
+486.96,3.84,so you can see how we already with this
+489.039,3.361,very simple requirements we already sort
+490.8,3.6,of have a need for a slightly more
+492.4,3.44,complex data structure and from the
+494.4,2.88,programmer's perspective when you want
+495.84,3.28,to add something to the list you just
+497.28,3.44,call the linked list sort of a method
+499.12,3.28,that's defined inside of the data
+500.72,3.12,structure to append an element in the
+502.4,2.639,list and under the hood all of this
+503.84,3.039,stuff is happening all this sort of
+505.039,3.6,drama is happening but the programming
+506.879,3.681,doesn't even need to know anything about
+508.639,4.001,it but crucially if the designer of this
+510.56,4.399,program hadn't designed this in the
+512.64,4.56,correct way it could be causing problems
+514.959,4.801,like this and causing the whole hardware
+517.2,4.079,to essentially crash or explode or
+519.76,3.199,whatever horrible things would happen
+521.279,4.0,but again obviously even the linked list
+522.959,3.841,also has downsides let's say what's
+525.279,3.281,really important in the specific
+526.8,3.92,application we're developing is for
+528.56,3.6,example accessing elements in the middle
+530.72,3.52,of the list like accessing this one
+532.16,4.239,right here now this specific operation
+534.24,4.08,is actually a lot easier to do in an
+536.399,4.0,array or a list like data structure we
+538.32,3.68,just call list one like this here
+540.399,4.161,whereas with a link to this we just sort
+542.0,4.0,of have to loop over the list until we
+544.56,3.12,arrive at the item that we're looking
+546.0,3.04,for which is a lot more expensive so as
+547.68,2.96,you can see again which data structure
+549.04,3.2,we're using always depends on the
+550.64,3.759,specific thing we're trying to do and
+552.24,4.719,sort of the specific things that you can
+554.399,4.88,see the user of that program needing to
+556.959,3.761,do a lot of the time and the way all of
+559.279,2.961,this like the linked list would be
+560.72,3.679,implemented in an actual programming
+562.24,3.599,language or python is that you would do
+564.399,3.44,something like create a class called
+565.839,4.801,linked list then you would create method
+567.839,4.801,inside that do all of this magic and
+570.64,4.24,then there will be a client where all
+572.64,4.4,they would have to do is call this
+574.88,4.32,append method and it would simply just
+577.04,4.0,do all of this magic behind the scenes
+579.2,3.04,and that is really the beauty of data
+581.04,3.12,structures and i know that all the
+582.24,4.0,details of this might be a bit fuzzy for
+584.16,3.6,you again the point of this video is not
+586.24,3.92,so that you can understand all these
+587.76,4.96,details it's just to give you an idea of
+590.16,4.88,why different data structures even exist
+592.72,4.239,if my sort of weird way of explaining
+595.04,3.52,data structures is making sense to you
+596.959,3.361,at all i would appreciate it if you
+598.56,3.68,could tap the like button down below in
+600.32,4.4,the description so let's now move on to
+602.24,4.56,a couple of slightly more complex
+604.72,3.679,examples to really drill this in and to
+606.8,3.76,make sure that you really understand
+608.399,4.241,what's going on here but first a word
+610.56,3.519,from our sponsor if you have a business
+612.64,3.52,or you're working on a project that
+614.079,3.76,requires e-signature you want to make
+616.16,4.4,sure that your documents are signed
+617.839,4.24,securely fast and in a legally binding
+620.56,3.92,way so if that's you
+622.079,4.32,you need to listen the sign now api is a
+624.48,4.72,powerful e-signature tool that allows
+626.399,5.361,you to embed e-signature on your website
+629.2,4.48,it's free to test fast to deploy and
+631.76,4.0,will allow you to not worry about
+633.68,4.8,document approval cycles and instead
+635.76,4.8,focus your time on growing your business
+638.48,4.32,developers particularly love site now's
+640.56,4.399,easy to use and detailed documentation
+642.8,4.08,with clear coding examples as well as
+644.959,4.0,great video tutorials on how to get
+646.88,4.8,started which makes implementing the api
+648.959,4.641,extremely easy in any programming
+651.68,4.08,language the synonym api is available
+653.6,4.479,through straightforward sdks and allows
+655.76,4.0,you to complete entire document approval
+658.079,3.681,cycles from uploading documents to
+659.76,3.84,tracking signature progress and not only
+661.76,3.639,that design now api make sure that your
+663.6,3.6,apps keep running with
+665.399,3.56,99.99
+667.2,3.92,uptime and in accordance with all the
+668.959,3.681,required compliance and security
+671.12,3.92,requirements so if that is something
+672.64,4.0,that sounds useful for your app you are
+675.04,3.359,in luck because they currently have a
+676.64,5.28,unique offer on the market which gives
+678.399,4.961,you 250 legally binding e-signatures for
+681.92,2.96,free so if you don't want to miss out on
+683.36,3.76,that click the link down below in the
+684.88,4.48,description to create your free sandbox
+687.12,4.48,account and start building dynamic
+689.36,4.08,e-signature workflows today thank you
+691.6,3.76,for sign now for sponsoring this video
+693.44,3.519,and now back to the tutorial so in
+695.36,3.44,practice we obviously have a lot more
+696.959,3.841,even more complicated requirements for
+698.8,3.52,things we want to do with data let's say
+700.8,3.68,you are an airline and you want to sort
+702.32,4.079,of structure the data about all the
+704.48,3.28,people who have bought tickets to some
+706.399,2.961,flights what makes sense for you is
+707.76,3.28,probably not just to group stuff
+709.36,3.279,together randomly in the computer's
+711.04,2.88,memory like for example in the order
+712.639,3.44,that they bought the tickets because
+713.92,4.24,what you probably really want to do is
+716.079,3.601,order them in some sort of priority
+718.16,3.119,where the people who have bought first
+719.68,3.36,class tickets are first but then when
+721.279,3.601,they want to do something with it they
+723.04,3.76,can see the first class passengers first
+724.88,4.24,and then the business class passengers
+726.8,4.24,and then the peasant economy passengers
+729.12,4.399,like me so it would be very useful for
+731.04,5.12,these airline operators to have a data
+733.519,4.481,structure that would allow them to group
+736.16,3.6,data in a way like this and it turns out
+738.0,3.839,this is a very common requirement in
+739.76,3.759,many different computer programs that is
+741.839,3.44,why a very common data structure that is
+743.519,3.44,used is something called a priority
+745.279,3.521,queue for this you would define
+746.959,3.361,essentially a linked list just like this
+748.8,3.36,but essentially every time when you're
+750.32,4.0,adding something to the list but the add
+752.16,4.08,method wouldn't just be doing this it
+754.32,3.44,wouldn't just be adding it to the end of
+756.24,3.44,the list but rather every time we're
+757.76,4.4,adding a person it would do some sort of
+759.68,4.88,operations which automatically sort of
+762.16,4.4,orders the list in the way that the
+764.56,3.68,airline wants so it orders it in a
+766.56,3.44,priority order so here what we would
+768.24,3.44,probably have is instead of just a piece
+770.0,5.04,of data and the link to the next node in
+771.68,6.719,the list we would have also a field for
+775.04,4.799,the priority class of the passenger so
+778.399,2.88,we would have a node that looks
+779.839,3.041,something like this where there's three
+781.279,3.521,values there's the actual person
+782.88,4.0,probably this would already be something
+784.8,4.24,like a dictionary with like their name
+786.88,4.079,and their birthday the price they paid
+789.04,3.44,or whatever we would just have a value
+790.959,3.601,that indicates that this is a business
+792.48,4.56,class passenger and here again we would
+794.56,5.2,have the pointers or the memory address
+797.04,4.4,of the next person on the list and then
+799.76,3.68,every time we're adding a person we
+801.44,3.6,would have defined inside the data
+803.44,3.519,structures of app operations that
+805.04,4.4,automatically perhaps it calls a
+806.959,4.161,different function to reorder all the
+809.44,3.68,passengers in such a way that this
+811.12,3.92,passenger will entity do the correct
+813.12,3.2,location of the list so as you can see a
+815.04,2.799,lot of the time even though you might
+816.32,4.079,think about data structures it's just
+817.839,4.641,about the structure so where we put the
+820.399,3.841,data a lot of the time especially these
+822.48,4.32,more complex data structures are a lot
+824.24,4.32,more about the operations that we want
+826.8,3.76,to do with that data and that is really
+828.56,3.279,the other thing that you should keep in
+830.56,2.959,mind that when you're defining data
+831.839,3.36,structures is really not just the
+833.519,4.161,organization of the data but also the
+835.199,4.32,operations that we define on that data
+837.68,3.599,and again the point here is that the
+839.519,3.521,airline operators or the person who's
+841.279,3.92,like going through the ticket doesn't
+843.04,4.159,need to know anything about any of this
+845.199,3.841,drama that's happening down there in the
+847.199,3.521,computer memory because the programmer
+849.04,4.08,the programmer who understands data
+850.72,4.72,structures has been able to program it
+853.12,4.32,is in an intelligent way from the
+855.44,4.079,airline operator's perspective all this
+857.44,4.56,is just happening like magic when they
+859.519,4.241,add a new ticket into the pool of ticket
+862.0,3.68,holders the list is automatically
+863.76,4.48,organized in the exact priority that
+865.68,4.959,they want and that is again the magic of
+868.24,4.56,data structures and this whole principle
+870.639,4.32,is also something that we often refer to
+872.8,4.159,as abstraction the most beautiful thing
+874.959,3.68,about computers and computer science is
+876.959,4.0,that there's like a million different
+878.639,4.081,levels of abstraction where at the very
+880.959,3.44,low level you just have zeros and ones
+882.72,3.76,inside the computers or even lower these
+884.399,3.761,teran sisters where electricity is going
+886.48,3.359,through these logic gates but you don't
+888.16,3.679,need to know about any of these because
+889.839,3.68,there are low level programmers who have
+891.839,3.921,designed these higher level programming
+893.519,3.601,languages that allow us to do stuff with
+895.76,3.04,the low level computer without
+897.12,3.04,understanding all the drama that's
+898.8,3.52,happening down below and the same thing
+900.16,3.6,here when as a programmer as a
+902.32,3.199,high-level program and your most
+903.76,4.079,important task is to understand the
+905.519,4.241,language and to understand programming
+907.839,4.0,concepts like data structures in such a
+909.76,3.84,way that you can design programs so that
+911.839,3.201,the people who use these programs don't
+913.6,3.2,need to know anything about how they
+915.04,4.239,work thinking just use them you just
+916.8,4.399,tell them click this button or run this
+919.279,3.521,function and it will do exactly what
+921.199,3.361,they want and in reality the
+922.8,3.36,relationships with pieces of data and
+924.56,3.6,the things we want to do are even more
+926.16,3.84,complicated than this where for example
+928.16,3.919,if you're organizing web page like the
+930.0,3.68,way google actually organizes their web
+932.079,3.841,page they have these like very deep
+933.68,4.32,complicated relationships with like all
+935.92,5.2,the different web pages so they need
+938.0,5.92,structures to deal with it again for the
+941.12,4.399,purposes that they need the data for so
+943.92,3.039,at the end of the day the reason why
+945.519,3.041,companies care about all of this the
+946.959,3.521,reason why you need to know all of this
+948.56,4.24,as a programmer it's like the equivalent
+950.48,4.159,of someone who organizes their room like
+952.8,3.76,a complete mess no one wants to hire
+954.639,4.64,someone who doesn't know how to organize
+956.56,4.719,their work effectively and to do stuff
+959.279,4.401,in an efficient way and so this is the
+961.279,5.201,analogy of the programmer who just does
+963.68,5.04,stuff in a way that maybe works but it's
+966.48,3.76,not the most efficient way to do it and
+968.72,2.96,for companies especially these large
+970.24,2.719,enterprises where all these details
+971.68,3.12,really matter because they're dealing
+972.959,3.44,with like billions of pieces of data
+974.8,3.599,they want to hire programmers who can
+976.399,4.321,organize their code effectively and that
+978.399,4.641,is really what data structures are all
+980.72,4.0,about if you want to actually now learn
+983.04,2.88,these details obviously this video is
+984.72,2.479,not enough first of all i would
+985.92,3.2,recommend subscribing to this channel
+987.199,4.0,because again if enough of you like this
+989.12,4.079,video i want to make a similar video
+991.199,3.601,about the other side of these virtual
+993.199,4.32,algorithms which is algorithms but
+994.8,4.479,really to learn all of this is not easy
+997.519,4.24,and to learn it effectively you need a
+999.279,3.601,good step-by-step plan and a path to
+1001.759,2.721,make sure that you're learning
+1002.88,3.36,everything that you need to know in the
+1004.48,3.599,most efficient way if possible and for
+1006.24,3.36,that i can be for you i mean this video
+1008.079,3.921,where i talk about exactly that i
+1009.6,4.4,describe exactly an exact step-by-step
+1012.0,4.0,plan that you can take from a high level
+1014.0,3.519,overview into all the theoretical
+1016.0,3.759,details if you want to master all these
+1017.519,4.081,topics and learn to pass coding
+1019.759,5.961,interviews you should absolutely watch
+1021.6,4.12,this video right here

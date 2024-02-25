@@ -1,0 +1,248 @@
+second,duration,transcript
+0.0,6.0,imagine we have a function f that takes
+3.24,5.46,in a bit either 0 or 1 and returns a bit
+6.0,4.8,it is given to us as a sort of Black Box
+8.7,3.66,we cannot look inside this function to
+10.8,4.919,see what it does or try to understand
+12.36,6.48,how it works the only thing we can do is
+15.719,5.581,send in a bit and read the output bit
+18.84,5.4,our task is to find out if this function
+21.3,5.28,f is constant or balanced
+24.24,4.08,if a function is constant then the
+26.58,2.699,output is always the same no matter the
+28.32,3.0,input
+29.279,4.201,here's a truth table for the constant
+31.32,4.8,function constant zero which always
+33.48,4.5,returns zero there is also constant one
+36.12,3.72,which acts in the same way always
+37.98,3.54,returning one
+39.84,3.899,balanced functions on the other hand
+41.52,4.44,return zero half the time and one half
+43.739,4.5,the time if we look at the not gate
+45.96,4.619,truth table it is balanced since it
+48.239,4.621,returns zero for one input and one for
+50.579,4.741,another input the number of inputs
+52.86,5.039,resulting in zero is equal to the number
+55.32,4.559,of inputs resulting in one
+57.899,4.441,if we want to find out if a function is
+59.879,4.801,constant or balanced we can reframe this
+62.34,4.98,problem into figuring out if F of 0
+64.68,4.619,equals F of one since if the function is
+67.32,4.56,constant this will hold true
+69.299,5.101,whereas if the function is balanced F of
+71.88,4.98,0 will not equal F of one
+74.4,4.38,for a classical computer the number of
+76.86,4.92,calls needed to the function to solve
+78.78,5.1,the problem is two F of 0 and F of 1
+81.78,4.8,both need to be calculated to find out
+83.88,5.279,if F of 0 does or does not equal F of
+86.58,4.8,one so both zero and one need to be
+89.159,4.341,input taking two calls over the function
+91.38,4.68,with quantum computers however
+93.5,4.54,deutsche's algorithm needs only one call
+96.06,4.14,of the function to find out if it's
+98.04,4.439,constant or balanced before we can
+100.2,4.26,understand how this is done however we
+102.479,4.561,must first discuss how we run functions
+104.46,4.979,on quantum computers we normally think
+107.04,5.039,of functions like this where we input X
+109.439,4.981,and get some output f of x
+112.079,5.22,this works fine for classical computers
+114.42,4.979,but in Quantum computation all Gates and
+117.299,4.441,operations must be reversible
+119.399,3.54,to understand how we can make functions
+121.74,3.54,reversible
+122.939,4.381,we will look at how a classical gate can
+125.28,3.78,be made reversible and then use the same
+127.32,4.559,techniques to create our Quantum
+129.06,5.34,function or Oracle if a function is
+131.879,5.58,reversible then given the output we can
+134.4,4.979,determine the input for example if we
+137.459,4.5,have an operation that negates the first
+139.379,4.44,bit we know what the input was as each
+141.959,5.761,row of the outputs in the truth table
+143.819,6.121,can uniquely identify the input
+147.72,4.739,if we look at the and gate truth table
+149.94,4.74,however we can't tell what the input was
+152.459,4.14,if it outputs a zero it could have been
+154.68,5.22,any one of these three different inputs
+156.599,4.92,thus the gate is not reversible
+159.9,4.14,but we can use some pretty awesome
+161.519,5.461,techniques and make any get we want
+164.04,5.1,reversible one way is by returning the
+166.98,5.16,inputs as well as inputting another bit
+169.14,6.12,let's call it C and exclusive oriented
+172.14,5.459,with the output f x if we now look at
+175.26,5.28,the truth table each output for each
+177.599,6.061,input is unique this technique allows us
+180.54,5.04,to make any operation reversible we use
+183.66,4.74,the same technique when making Quantum
+185.58,6.12,oracles a standard Quantum Oracle looks
+188.4,5.22,like this where we input X and Y X being
+191.7,4.02,the input to the function and Y being
+193.62,5.64,the target qubit to write the answer to
+195.72,6.06,we then output X as well as y exclusive
+199.26,4.979,order with f of x this ensures the
+201.78,4.92,Oracle is reversible if we look at it in
+204.239,6.0,terms of Transformations the Oracle acts
+206.7,6.3,on the state x y and turns it into X Y X
+210.239,4.5,or f of x now you might be looking at
+213.0,4.2,this and thinking that this is a very
+214.739,5.22,obscure way of crewing a function
+217.2,4.98,but if we input Y is zero then the
+219.959,4.5,rightmost cube it becomes f of x
+222.18,5.94,since zero exclusive ORD with a bit
+224.459,6.301,value of x always returns X so in the
+228.12,6.66,case where Y is equal to zero the Oracle
+230.76,7.199,transforms the state x 0 into x f of x
+234.78,4.86,now to get the function output all we
+237.959,4.86,need to do is measure the rightmost
+239.64,4.98,qubit giving us f of x
+242.819,4.381,one last thing we need to understand
+244.62,4.74,before tackling deutsche's algorithm is
+247.2,4.56,a special case of quantum oracles called
+249.36,5.28,the phase Oracle if we set the target
+251.76,5.34,qubit to the minus State we get a thing
+254.64,4.26,called phase kickback where instead of
+257.1,4.44,the function output being applied to the
+258.9,5.04,Target qubit a phase is applied to the
+261.54,4.56,input qubit let's quickly prove this
+263.94,4.74,result as it is used in many Quantum
+266.1,5.22,algorithms we start with the input as an
+268.68,5.18,arbitrary bit X and the Target in the
+271.32,2.54,minor state
+276.12,4.68,when we query the Oracle since the
+278.22,4.919,target is in a superposition the unitary
+280.8,4.38,Matrix U of f acting as the function
+283.139,4.5,gets distributed into the superposition
+285.18,5.28,and acts on each of the superposition
+287.639,5.881,States individually
+290.46,7.92,solving the exclusive ores we get 1 over
+293.52,7.92,root 2 x f of x minus X not f of x
+298.38,5.64,now we get two cases if f of x equals
+301.44,6.36,zero then the state becomes one over
+304.02,6.42,root two x zero minus X1 which if we
+307.8,6.6,factor out the X the state becomes x
+310.44,6.6,minus if however f of x equals one then
+314.4,5.519,the state becomes one over root two x
+317.04,5.159,one minus X zero we can take out
+319.919,5.701,effective negative one making the state
+322.199,4.461,negative one over root two x zero minus
+325.62,4.32,X1
+326.66,4.66,simplifying the state becomes negative x
+329.94,3.599,minus
+331.32,4.8,we can generalize these findings through
+333.539,5.281,the equation negative one to the power
+336.12,5.22,of f of x x minus
+338.82,5.219,as you can see the target qubit was left
+341.34,5.04,unchanged and a phase of negative one to
+344.039,4.021,the power of f of x was applied to the
+346.38,3.9,input qubit
+348.06,4.859,querying a Quantum Oracle in this way
+350.28,5.04,with the Target qubit in the minor State
+352.919,4.921,it's called a phase Oracle and it's an
+355.32,4.86,integral part of many Quantum algorithms
+357.84,4.02,now we get to the fun part we can
+360.18,4.44,finally understand how deutsche's
+361.86,4.8,algorithm works this is a circuit for
+364.62,4.44,the algorithm let's label different
+366.66,3.9,parts of the circuit with PSI so we can
+369.06,4.02,keep track of where we are in the
+370.56,6.3,circuit initially the qubits are in the
+373.08,6.78,state zero zero at PSI sub 1 the qubits
+376.86,6.179,are in the state 0 1. then at PSI sub 2
+379.86,4.74,the state is plus minus after a hadimod
+383.039,4.861,gate is applied to each of the two
+384.6,5.58,qubits for clarity we will rewrite the
+387.9,4.5,plus State as one over root two zero
+390.18,4.44,plus one and distribute the minor State
+392.4,5.22,into the plus state
+394.62,4.919,we now query the Oracle since the input
+397.62,4.139,state is in a superposition we
+399.539,4.44,distribute the unitary Matrix acting as
+401.759,4.681,the Oracle function into each of the
+403.979,4.801,superposition States
+406.44,4.68,now if we look at the form of each of
+408.78,5.1,the superposition States they're in the
+411.12,5.16,phase Oracle form so applying U of f to
+413.88,4.98,the first state with X equaling to zero
+416.28,4.74,in our general phase Oracle equation it
+418.86,5.459,becomes negative 1 to the power of f of
+421.02,5.82,0 0 minus and the other state with the
+424.319,5.641,input being 1 becomes negative 1 to the
+426.84,5.4,power of f of 1 1 minus
+429.96,5.28,to clean up the equation we'll quickly
+432.24,4.92,just factor out the minus key a bit
+435.24,3.78,and we'll also emit it from the rest of
+437.16,4.379,the computation since it is not needed
+439.02,3.239,anymore now our computation is in this
+441.539,2.641,state
+442.259,5.041,let's consider two different scenarios
+444.18,5.579,the outputs F of 0 and F of 1 could be
+447.3,3.6,equal to each other or not equal to each
+449.759,3.421,other
+450.9,5.28,in the case where they are equal the
+453.18,6.419,equation becomes 1 over root two zero
+456.18,6.9,plus one if F of zero and F of 1 equals
+459.599,6.361,zero and 1 over root 2 negative zero
+463.08,4.86,minus one if they are equal to one
+465.96,4.139,but in this case we can factor out a
+467.94,4.74,global phase of negative one so the
+470.099,5.281,equation becomes negative one over root
+472.68,4.62,two zero plus one with that we can
+475.38,4.86,combine these two equations for both
+477.3,6.0,cases and so that when F of zero equals
+480.24,6.179,F of one the state becomes plus or minus
+483.3,6.0,one over root two zero plus one
+486.419,5.161,on the other hand if F of zero does not
+489.3,6.0,equal F of one then the state becomes
+491.58,6.119,one over root two zero minus one if F of
+495.3,5.7,zero equals zero and F of one equals one
+497.699,6.0,or one over root two negative zero plus
+501.0,5.4,one if it's the other way around
+503.699,4.921,in the second case we can factor out a
+506.4,4.019,negative one as a global phase leaving a
+508.62,3.06,relative phase of negative one in the
+510.419,4.74,state
+511.68,5.82,once again generalizing when F of 0 does
+515.159,5.401,not equal F of one the state becomes
+517.5,4.62,plus or minus one over root two zero
+520.56,4.08,minus one
+522.12,4.98,putting these side by side you can start
+524.64,4.92,to see the differences in the states
+527.1,5.4,we can rewrite the state where F of zero
+529.56,5.04,equals F of one as the plus day
+532.5,5.82,and the case where F of zero does not
+534.6,5.58,equal F of one in the minor state
+538.32,4.079,now we do the final part of the
+540.18,4.8,algorithm applying a hard mud gate to
+542.399,5.281,the first qubit this in the case where F
+544.98,5.039,of 0 equals F of 1 brings the qubit to
+547.68,4.5,zero and in the case where F of zero
+550.019,3.901,does not equal F of one brings the qubit
+552.18,3.659,to one
+553.92,4.08,now we can measure the first queue bit
+555.839,4.081,and we are done with the algorithm if we
+558.0,5.16,measure a zero then the function is
+559.92,5.16,constant as F of zero equals F of one
+563.16,4.5,on the other hand if we measure a one
+565.08,5.58,then the function is balanced as F of
+567.66,4.799,zero does not equal F of one and just
+570.66,3.66,like that we have determined if the
+572.459,3.0,function was constant or balanced in a
+574.32,2.82,single query
+575.459,3.781,even though this may not seem very
+577.14,4.02,useful as finding out if a function is
+579.24,3.36,constant or balanced doesn't have many
+581.16,3.42,applications
+582.6,4.2,this algorithm does showcase Quantum
+584.58,3.96,Supremacy and a lot of the techniques
+586.8,3.599,used in this algorithm are used heavily
+588.54,3.78,in other algorithms from here I'd
+590.399,4.141,recommend learning the Deutsche Dozer
+592.32,4.139,algorithm as is an algorithm that deals
+594.54,3.96,with the same problem of finding if a
+596.459,4.141,function is constant or balanced but
+598.5,4.08,instead of one bit as an input it is a
+600.6,5.419,general case that accepts any number of
+602.58,3.439,bits as an input to the function

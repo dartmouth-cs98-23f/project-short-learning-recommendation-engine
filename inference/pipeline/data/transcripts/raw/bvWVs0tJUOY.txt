@@ -1,0 +1,427 @@
+second,duration,transcript
+8.08,4.479,hey everyone welcome to simply learn's
+10.08,4.479,youtube channel in this session we will
+12.559,4.881,be learning about graphs in data
+14.559,4.48,structures but before we begin make sure
+17.44,3.2,that you have subscribed to our youtube
+19.039,3.921,channel and don't forget to hit that
+20.64,4.719,bell icon to never miss an update from
+22.96,4.159,simply learn now without further ado
+25.359,5.08,let's get started with the agenda for
+27.119,3.32,today's discussion
+31.119,4.321,so we will be discussing a brief
+32.88,4.24,introduction to graphs first
+35.44,3.439,followed by that we will understand the
+37.12,4.24,graph terminologies
+38.879,4.641,up next we will see the types of graphs
+41.36,4.24,available in data structures after that
+43.52,4.559,we will understand the representation of
+45.6,5.2,graphs then we will look into the graph
+48.079,5.361,traversal and finally we will understand
+50.8,5.04,the application of graphs i hope i made
+53.44,4.16,myself clear with the agenda now let's
+55.84,5.28,begin with the first topic that is a
+57.6,3.52,brief introduction to graphs
+62.48,5.12,so what exactly is a graph so a graph is
+65.76,5.359,a data structure like any other data
+67.6,5.36,structure example linked list arrays etc
+71.119,3.521,so graph is a little different from the
+72.96,3.04,other types of data structures such as
+74.64,4.159,linked lists and
+76.0,5.119,arrays they are linear data structures
+78.799,4.241,whereas graph is a non-linear data
+81.119,4.32,structure that consists of finite sets
+83.04,4.56,of vertices and a bunch of edges
+85.439,5.841,connecting with them
+87.6,5.6,so what are these vertices and edges so
+91.28,3.839,let us understand that a graph is
+93.2,6.08,usually represented by
+95.119,6.96,a set of vertices and edges so a vertice
+99.28,5.6,is the node present in a graph imagine
+102.079,4.961,that you are a group of five friends so
+104.88,5.04,each one of you is considered as a
+107.04,6.16,vertex and the network connecting you
+109.92,6.159,guys is known as an edge
+113.2,5.68,so the overall graph of your people can
+116.079,6.481,be considered as g and it is represented
+118.88,6.08,by vertices and edges set where vertices
+122.56,6.399,is you and the network connecting you
+124.96,6.56,guys is called as an edge
+128.959,4.64,so here you can see it clearly each one
+131.52,4.0,of the friend is called as a vertex and
+133.599,4.321,the network connecting them is called as
+135.52,5.68,an edge and the entire graph is
+137.92,5.52,represented using a set of vertices and
+141.2,6.32,edges now moving ahead we will
+143.44,4.08,understand the graph terminologies
+150.0,5.2,now at first we have the adjacency
+152.16,4.96,vertices and adjacency edges so what are
+155.2,4.24,adjacent vertices
+157.12,5.44,if there is an edge between two vertices
+159.44,5.28,that is one vertex or one node is
+162.56,5.039,connected to another node directly using
+164.72,5.68,just one single edge then those vertices
+167.599,5.441,are called as adjacent vertices
+170.4,4.72,now what are adjacent edges
+173.04,4.16,if there is one common vertex between
+175.12,4.8,two edges then those two edges are
+177.2,4.8,called as adjacent edges let's imagine
+179.92,5.12,this way let us imagine that we have
+182.0,5.92,three vertexes and these three vertexes
+185.04,5.199,are connected using two edges so here we
+187.92,4.399,have one vertex which is common between
+190.239,4.961,these two edges so such type of edges
+192.319,5.521,are called as adjacent edges
+195.2,5.679,next we have the degree in an undirected
+197.84,6.96,graph number of vertices adjacent to the
+200.879,5.681,vertex is called as a degree
+204.8,4.0,next is the path
+206.56,4.48,the path is considered as a sequence of
+208.8,4.48,distinct vertices such that two
+211.04,3.759,consecutive vertices are adjacent to
+213.28,3.84,each other
+214.799,4.961,up next we have the cycle
+217.12,4.88,a path that has only one repeated
+219.76,4.8,vertices are called as first and last
+222.0,2.56,vertices
+225.36,4.48,followed by that we have the work
+227.76,3.839,the term block is self-explanatory a
+229.84,4.0,work is the sequence of vertices and
+231.599,4.881,edges in the graph which is used to
+233.84,5.119,traverse through one vertex to another
+236.48,4.319,vertex
+238.959,3.521,now we have entered the next segment of
+240.799,3.281,this particular tutorial where we will
+242.48,4.479,be discussing the different types of
+244.08,2.879,graphs available
+247.439,5.36,so at first we have the finite graph
+250.48,4.399,so what exactly is a finite graph a
+252.799,4.16,graph is said to be finite when the
+254.879,4.64,number of vertices and the number of
+256.959,4.881,edges are in a finite number or in a
+259.519,4.481,countable number
+261.84,4.88,now the next type of graph is the
+264.0,5.28,infinite graph so what exactly is the
+266.72,4.88,infinite graph so the infinite graph is
+269.28,4.8,a typical opposite of the finite graph
+271.6,4.56,so this particular graph will not have
+274.08,4.88,countable number of edges and countable
+276.16,4.8,number of vertices
+278.96,5.28,the image here is an example for a
+280.96,5.04,typical infinite graph
+284.24,4.32,now followed by the infinite graph we
+286.0,3.919,have the trivial graph so what is a
+288.56,3.359,trivial graph
+289.919,4.401,a graph is said to be trivial if there
+291.919,3.601,is only one single vertex without any
+294.32,2.96,edges
+295.52,4.08,so this particular type of graph will
+297.28,4.479,only have vertex that is only one single
+299.6,5.12,vertex not more than one and there will
+301.759,4.561,be no edge if you have just one vertex
+304.72,4.24,then there is no possibility of having
+306.32,4.879,an edge unless if you have one single
+308.96,3.28,loop type of edge which is connecting to
+311.199,2.801,itself
+312.24,6.16,but in a trivial graph we don't even
+314.0,4.4,have that we just have one single vertex
+318.639,3.441,so followed by trivial graph we have a
+320.72,3.759,simple graph
+322.08,4.16,so what exactly is a simple graph a
+324.479,4.401,graph is said to be simple if there is
+326.24,3.76,only one and one edge between each
+328.88,2.8,vertex
+330.0,4.56,so this particular example can be
+331.68,5.76,considered as a simple graph so here
+334.56,6.079,each and every set of vertices have one
+337.44,3.199,single edge between them
+342.16,3.28,now followed by the simple graph we have
+344.0,3.68,the multi graph
+345.44,3.84,so if there are multiple edges between
+347.68,3.04,the pair of vertices then this
+349.28,4.08,particular type of
+350.72,5.44,graph is known as a multi graph so here
+353.36,4.8,you can see that we have two vertices a
+356.16,4.72,and b and we have two edges connecting
+358.16,4.72,them not one but two but in a simple
+360.88,4.08,graph we were supposed to have just one
+362.88,4.319,edge connecting the vertices so this is
+364.96,4.88,the difference between simple graph and
+367.199,4.961,a multi graph
+369.84,3.52,so followed by multi graph we have a
+372.16,3.759,null graph
+373.36,5.04,so what is a null graph a graph is said
+375.919,4.481,to be null if there are only vertices
+378.4,4.239,and no edges between them
+380.4,5.44,so remember the trivial graph right we
+382.639,5.761,just had one single vertex but no edges
+385.84,4.88,but here we do have multiple vertices
+388.4,4.4,but no edges connecting them so this
+390.72,5.28,type of a graph is considered as null
+392.8,6.239,graph so followed by null graph we have
+396.0,3.039,the complete graph
+399.68,4.4,so what is a complete graph
+401.919,4.161,a graph is called as a complete graph
+404.08,4.64,where each vertex must be connected with
+406.08,4.8,the other vertices using the edges
+408.72,4.64,so the meaning of this particular type
+410.88,4.8,of graph is all the edges are connected
+413.36,4.8,to all the other edges using at least
+415.68,5.2,one single edge so here you can see a is
+418.16,4.96,connected to b d and c all together with
+420.88,3.84,at least one edge and similarly all
+423.12,5.68,other vertices are connected to each
+424.72,4.08,other with at least one single edge
+429.12,3.44,now followed by the complete graph we
+430.8,4.56,have the pseudograph
+432.56,6.0,so what is a pseudograph a pseudograph
+435.36,5.839,is a graph where at least one vertex
+438.56,5.68,will have self-looping type of edge so
+441.199,5.761,remember the self-loop or self edge we
+444.24,4.959,have discussed in the trivial graph type
+446.96,5.04,so this particular type of an edge where
+449.199,6.081,it connects to itself is called as a
+452.0,5.52,loop or kind of self-connecting edge so
+455.28,5.44,any graph that has this kind of a edge
+457.52,5.2,is called as a pseudograph
+460.72,3.759,so followed by the pseudograph we have
+462.72,4.0,the directed graph
+464.479,4.321,so what is a directed graph
+466.72,4.8,any graph is called as a directed graph
+468.8,4.399,where each edge has a direction
+471.52,4.079,associated with it
+473.199,5.041,so so far we have just discussed the
+475.599,5.04,edges which are connecting to one or the
+478.24,4.32,other vertex but there was no direction
+480.639,4.56,but here you can see that this
+482.56,3.68,particular edge has a direction that is
+485.199,4.321,from b
+486.24,5.519,to a not from a to b it is from b to a
+489.52,4.88,this type of edges which are directing
+491.759,4.88,the traversal of the graph are known as
+494.4,4.079,the directed graphs
+496.639,3.68,now followed by the directed graphs we
+498.479,4.081,have the regular graph
+500.319,4.961,so a graph is a regular graph where each
+502.56,5.359,vertex of the graph has the same degree
+505.28,5.599,now here you can see all the vertices
+507.919,5.521,have the same amount of degree that is
+510.879,5.441,the connection between all the other
+513.44,5.44,vertices so the degree of a is 3 so the
+516.32,5.68,degree of b is also 3 and the degree of
+518.88,5.12,d is c and similarly the degree of c is
+522.0,4.08,also 3
+524.0,7.04,so what i mean to say is all of these
+526.08,4.96,vertices have the same degree that is 3.
+532.08,5.199,now we have the weighted graph so what
+534.72,5.6,is a weighted graph a weighted graph is
+537.279,5.201,where each edge holds some weight that
+540.32,4.88,denotes the traversal cost through those
+542.48,5.52,edges now here you can see that all the
+545.2,4.88,edges have a different weight the edge
+548.0,5.12,from a to b has the weight 5 and the
+550.08,6.0,edge from a to c has the weight 9
+553.12,7.52,and the h from c to b has 2 and the edge
+556.08,6.8,a 2 d as 8 and finally c 2 d as 7 so all
+560.64,5.6,these values are the weight or the cost
+562.88,5.76,to traverse from a to another vertex
+566.24,4.48,flow so from a to b we have the cost
+568.64,4.16,five and a to c we have the cost nine
+570.72,3.2,and similarly c to d we have seven and
+572.8,2.96,so on
+573.92,3.68,now followed by the weighted graph we
+575.76,4.639,have the connected graph
+577.6,4.88,so what exactly is a connected graph a
+580.399,5.361,graph is said to be connected where each
+582.48,5.039,pair in the graph is connected
+585.76,4.0,followed by a connected graph we have
+587.519,4.88,the disconnected graph so it is a
+589.76,4.72,typical opposite of the connected graph
+592.399,4.721,a graph is said to be disconnected where
+594.48,5.44,each pair in the graph is not connected
+597.12,2.8,to each other
+600.16,4.16,now next we have the cyclic graph so a
+602.72,4.88,graph is said to be cyclic if it
+604.32,5.84,contains at least one cycle in a graph
+607.6,5.359,that is one complete traversal
+610.16,6.56,connection so a can be traversed again
+612.959,6.481,from traveling a to c c to d d to b and
+616.72,6.08,b to a again so this type of a graph is
+619.44,3.36,called as a cyclic graph
+623.04,4.479,now next we have the acyclic graph
+625.519,4.32,so it is the typical opposite of the
+627.519,5.76,cyclograph so here you cannot traverse
+629.839,5.361,to a again by traversing from a to c c
+633.279,4.56,to d and there is no connection between
+635.2,4.72,d to b so the complete cycle is not
+637.839,4.801,available here this type of graphs are
+639.92,4.919,called as acyclic graphs
+642.64,4.48,so moving ahead we have the graph
+644.839,3.801,representation so generally there are
+647.12,3.92,two different ways to represent the
+648.64,4.56,graph data structure
+651.04,3.84,they are using adjacency matrix and
+653.2,5.68,adjacency list
+654.88,4.0,so what is adjacency matrix
+659.279,4.961,so adjacency matrix is a sequential
+661.68,4.64,representation adjacency matrix is used
+664.24,2.88,to represent which nodes are connected
+666.32,2.16,to
+667.12,3.6,which node
+668.48,3.84,if there is an edge between two vertices
+670.72,5.119,then the value of the corresponding
+672.32,5.519,element of the graph is 1 otherwise 0.
+675.839,4.721,if there is any weighted graph besides
+677.839,5.201,then 0s and 1s we can store the weight
+680.56,4.0,of the h as that particular number
+683.04,4.0,suppose that there is a connection
+684.56,5.44,between a and b and it is represented as
+687.04,6.08,a weight of 5 then there is a connection
+690.0,5.6,so we will use the connection as true
+693.12,5.04,but we will not represent it as 1.
+695.6,5.44,instead we will use the weight that is 5
+698.16,4.72,to represent it as 5 not as 1. if there
+701.04,4.08,is no weight then we will represent it
+702.88,5.76,as 1 and if there is no connection then
+705.12,3.52,we will represent it as 0.
+709.68,6.08,now undirected graph representation
+713.12,5.12,so here you can see how we have
+715.76,3.92,represented a graph so there is no
+718.24,3.44,connection between eight to a that is
+719.68,4.64,there is no loop so the value will be
+721.68,4.32,zero if there was a loop and if it was
+724.32,3.519,represented with a bit then we could
+726.0,4.079,have written a weight here since we do
+727.839,4.0,not have weight then the no connection
+730.079,3.921,is represented as 0 and a connection is
+731.839,4.961,represented as 1. we have a connection
+734.0,8.6,from a to b so we have represented as 1
+736.8,5.8,and similarly to a to c so and so on
+744.16,5.119,now directed graph representation
+746.88,4.24,so the simple difference between the
+749.279,4.161,directed and undirected graph
+751.12,4.88,representation is we did not have a
+753.44,5.199,direction in the previous segment but
+756.0,5.2,here we do have directions so
+758.639,6.241,b is connected to a but a is not
+761.2,5.84,connected to b so we will write it as 0
+764.88,5.04,because the control is traversing from b
+767.04,5.039,to a but not from a to b so we need to
+769.92,5.039,take care of the traversal of control so
+772.079,5.44,we are representing 0 and you can see
+774.959,5.361,from d to b we have one connection and
+777.519,5.201,the traversal is in the direction of d 2
+780.32,5.68,b so we will have 1 there so here we
+782.72,4.32,have d and b so we have 1. so in that
+786.0,4.639,way we
+787.04,3.599,represent the directed graphs
+791.04,6.16,next undirected weight graphs
+794.8,4.56,so this was what we discussed before
+797.2,4.96,instead of zeros and ones we will
+799.36,4.64,represent the weight here so we do not
+802.16,4.0,have a connection between a to a so that
+804.0,4.399,is zero as usual but we do have a
+806.16,4.32,connection from a to b so we have
+808.399,5.361,represented it with a number that
+810.48,4.799,happens to be the weight of the edge
+813.76,3.36,and remember we do not have the
+815.279,4.8,direction here this is undirected
+817.12,5.12,weighted graph now if it were the
+820.079,4.0,directed weighted graph then we could
+822.24,4.159,have seen the direction and represented
+824.079,4.56,the number with the weight
+826.399,4.161,now after this let us look into the
+828.639,3.921,adjacency list
+830.56,3.839,so what is adjacency list
+832.56,3.519,adjacency list is a linked
+834.399,3.68,representation
+836.079,4.241,in this representation we maintain the
+838.079,3.281,list of its neighbors for each vertex in
+840.32,3.28,the graph
+841.36,4.64,every vertex of the graph contains the
+843.6,4.72,list of adjacency vertices
+846.0,5.519,area of vertices which have vertices
+848.32,5.28,indexed by each vertex number for every
+851.519,4.081,vertex the array element points to the
+853.6,2.799,linked list of the neighbors of the
+855.6,2.479,vertex
+856.399,3.44,so this might be a little complicated to
+858.079,3.44,understand so let us understand this
+859.839,3.44,using an example
+861.519,4.241,so directed graph representation
+863.279,4.24,implemented using linked list
+865.76,2.8,so this is the directed graph we are
+867.519,2.721,using
+868.56,4.639,so you can see that a is not connected
+870.24,6.08,to anything so we have ended the address
+873.199,6.481,of next location as x but b is connected
+876.32,5.519,to a and c is connected to a similarly d
+879.68,5.36,is also connected to a
+881.839,7.12,so that is how we represent the
+885.04,3.919,directed graphs using linked lists
+889.839,4.881,next we have directed graph
+891.04,3.68,representation using array
+897.36,4.479,so a is not connected to anything so we
+899.279,6.161,have represented as 0 and b is connected
+901.839,5.841,to b as well as a so we have 1 there and
+905.44,5.199,c is connected to b
+907.68,6.48,so c is also connected to a so we have 2
+910.639,6.481,there d is connected to a c and b so we
+914.16,2.96,have 3 there
+917.44,3.92,now we have the graph traversal
+922.399,4.481,so graph traversal refers to the process
+924.32,3.759,of examining each edge and vertex in a
+926.88,3.68,graph
+928.079,4.241,graph traversing can be performed in two
+930.56,4.079,ways
+932.32,5.6,the first one is breadth first search or
+934.639,5.601,bfs algorithm bfs starts traversing the
+937.92,4.64,graph from root node and expose all the
+940.24,4.24,neighboring nodes then it selects the
+942.56,4.399,nearest node and explores all the new
+944.48,4.719,nodes queue data structure can be used
+946.959,4.481,in bfs algorithm
+949.199,4.08,so the following image depicts the epfs
+951.44,4.16,algorithm working
+953.279,6.081,it shows us the nearest node first then
+955.6,6.159,it traverses to all the other nodes
+959.36,5.12,so followed by bfs algorithm we have the
+961.759,5.601,dfs algorithm that is the depth first
+964.48,4.88,search algorithm dfs starts traversing a
+967.36,4.88,graph from the initial node of the graph
+969.36,5.68,and then it goes deeper and deeper until
+972.24,4.88,it finds the node has no child then
+975.04,4.88,backtrack from the dead end towards the
+977.12,5.839,recently explored nodes stack is used
+979.92,5.839,for bfs algorithms so this particular
+982.959,5.041,gif image can be considered as the graph
+985.759,4.32,traversal which is performed using dfs
+988.0,4.32,algorithms so if you don't know much
+990.079,4.481,about dfs and vfs algorithms don't worry
+992.32,4.24,about that those particular tutorial
+994.56,3.519,videos are added in the description box
+996.56,3.92,below you can go through it and
+998.079,3.921,understand bfs and dfs algorithms in a
+1000.48,2.96,much better way
+1002.0,3.92,now we will go through some of the
+1003.44,4.079,applications of graphs
+1005.92,3.839,so some of the major applications of
+1007.519,5.601,graphs are used in the
+1009.759,6.241,websites google maps and social media
+1013.12,4.48,websites like facebook and some security
+1016.0,4.32,systems
+1017.6,4.159,and also software programming
+1020.32,3.12,so with that we have come to an end of
+1021.759,3.601,this tutorial if you have any queries
+1023.44,3.759,regarding the topics discussed in this
+1025.36,2.959,particular tutorial then please feel
+1027.199,3.201,free to let us know in the comment
+1028.319,4.161,section below and our experts will be
+1030.4,4.72,happy to solve all your queries until
+1032.48,5.64,next time thank you stay safe and keep
+1035.12,3.0,learning
+1039.919,3.52,hi there if you like this video
+1041.679,4.4,subscribe to the simply learn youtube
+1043.439,4.801,channel and click here to watch similar
+1046.079,5.48,videos turn it up and get certified
+1048.24,3.319,click here

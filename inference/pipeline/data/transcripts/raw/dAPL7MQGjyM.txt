@@ -1,0 +1,235 @@
+second,duration,transcript
+0.53,5.499,in every single functional programming
+3.689,3.9,video you're gonna see that it says in
+6.029,3.841,functional programming we treat
+7.589,2.88,functions as a first-class citizens to
+9.87,3.54,the point
+10.469,5.011,absolutely 100% accurate but sometimes
+13.41,3.81,these phrases get so much popular that
+15.48,3.809,you start wondering what it actually
+17.22,4.8,means can somebody tell me in a plain
+19.289,4.441,simple language hey there everyone has a
+22.02,3.509,share back again with another video and
+23.73,3.57,in this video I'm gonna explain you what
+25.529,4.021,functional programming is and I promise
+27.3,4.709,you after watching this video it's gonna
+29.55,4.439,be absolutely simple and absolutely
+32.009,4.861,breeze to understand what functional
+33.989,4.771,programming is now before we move on to
+36.87,4.2,understand the functional programming I
+38.76,4.11,got a question for you as of now
+41.07,3.84,currently in whatever the programming
+42.87,3.509,language you are writing your code let
+44.91,3.87,me know in the comment section are you
+46.379,4.561,using procedural way of writing programs
+48.78,4.169,or you are using object-oriented way or
+50.94,3.63,you're already using functional
+52.949,3.781,programming another thing is that
+54.57,4.68,functional programming is absolutely
+56.73,4.649,amazing and it's mostly independent of
+59.25,4.379,programming language but support of
+61.379,3.841,functional programming is now very
+63.629,3.871,gentle in some of the programming
+65.22,4.38,language only some are supporting them
+67.5,4.409,some are releasing updates to support it
+69.6,4.019,and eventually in future many more
+71.909,3.331,programming language will come up and
+73.619,4.29,we'll support functional programming
+75.24,5.73,functional programming it's not a new
+77.909,5.311,jargon it just is a way a style of
+80.97,4.289,writing programming and treating some
+83.22,4.23,values and some function in a bit
+85.259,4.381,different way than we used to treat them
+87.45,3.57,in object-oriented programming now
+89.64,3.6,definitely there are a variety of
+91.02,4.559,definitions in every single programmer
+93.24,3.96,can debate in the world of functional
+95.579,4.051,programming whether this is functional
+97.2,5.07,or this is not but there are three core
+99.63,4.65,important things on which every single
+102.27,4.05,programmer is going to agree that yes
+104.28,4.11,these are the part of functional
+106.32,4.619,programming and I can explain you them
+108.39,4.74,in a much easier way on a code editor so
+110.939,3.811,let's move there so there are four core
+113.13,3.9,important things that you absolutely
+114.75,4.59,need to know the first one is that
+117.03,4.65,functional programming is more aware of
+119.34,4.379,writing style of code so it's majorly
+121.68,3.299,independent of programming language but
+123.719,3.18,there are some programming language
+124.979,4.681,which is supporting it's - it's at its
+126.899,4.56,best some are not so there are a couple
+129.66,4.14,of concepts that you need to understand
+131.459,4.501,let me expand this this is just simply
+133.8,4.38,is code and I'm not gonna be running any
+135.96,4.53,code I'm gonna just explain these syntax
+138.18,5.34,using the help of code so let's just say
+140.49,5.34,we got a score and you are playing on to
+143.52,4.83,some great level you got a score of 456
+145.83,5.1,now on that let's just say you have a
+148.35,4.29,function again this is not really a core
+150.93,3.75,function that just the gist of how
+152.64,4.59,function usually looks like so we're
+154.68,4.56,gonna simply say that at this exact
+157.23,4.35,stage you have done something so that we
+159.24,4.77,want to add a bonus appear what you can
+161.58,4.32,do up here you can simply call this up
+164.01,5.43,here simply say score is gonna be equals
+165.9,6.51,to score plus and you just add some
+169.44,4.95,number like 45 and finally you just go
+172.41,3.87,ahead and return score and don't yell at
+174.39,4.62,me by saying hey you should say this dot
+176.28,5.28,score it's more over about understanding
+179.01,4.98,the concept not exactly pinpointing the
+181.56,4.71,stuff so this is all okay but this is
+183.99,4.41,not really much of an acceptable thing
+186.27,3.78,in functional programming in functional
+188.4,3.84,programming you're gonna notice that
+190.05,4.35,these things don't happen moreover a
+192.24,4.11,functional if I write this into a
+194.4,3.84,functional programming way I would write
+196.35,3.66,it in a bit different manner I would
+198.24,3.57,write the same function like this and
+200.01,5.52,I'm gonna simply say that hey this is my
+201.81,6.06,function again add a bonus and this is
+205.53,3.99,gonna take a parameter score and what
+207.87,4.29,we're gonna do now here we are gonna
+209.52,5.37,simply just hit return and we're gonna
+212.16,4.71,simply say whatever the bonus or
+214.89,5.01,whatever the score we have got we just
+216.87,5.52,want to add let's just say 45 on to add
+219.9,4.38,now there's a huge difference between
+222.39,3.78,this piece of code and this piece of
+224.28,3.6,code now it's not much shorter you can
+226.17,2.73,also make it a shorter like this but
+227.88,3.15,that's not the point
+228.9,5.1,in the functional programming we keep
+231.03,5.46,our functions and data totally separate
+234.0,5.34,so that's the step number one or kind of
+236.49,4.68,a unspoken rule in the functional way so
+239.34,3.72,that keep your data and keep your
+241.17,3.81,functional totally separate while
+243.06,3.89,debugging this piece of code is much
+244.98,4.229,easier to debug because it is not
+246.95,3.91,referring to any global variable which
+249.209,4.201,might be causing the issue this is
+250.86,5.099,moreover like self intake function which
+253.41,4.5,just runs on its own and it's also not
+255.959,4.051,much very dependent on what kind of data
+257.91,4.47,we are passing whether it's a score or
+260.01,4.469,maybe it's life whatever it is it's just
+262.38,4.23,gonna add 45 to it so that's the basic
+264.479,3.091,gist of it so that's the one thing keep
+266.61,2.7,your data and
+267.57,4.32,your functions totally separate so
+269.31,5.43,that's one step now again one another
+271.89,5.1,thing is actually state change so this
+274.74,4.26,is state change is if I can write that
+276.99,4.77,this is state change is a very
+279.0,4.2,interesting thing and it's a bit
+281.76,3.42,difficult to understand for beginners
+283.2,4.59,but I'm gonna try my best these examples
+285.18,5.01,will just simplify like ridiculous level
+287.79,4.74,so it says that you should not change
+290.19,5.25,the state much often as much as you can
+292.53,5.58,avoid it just do it for example I am
+295.44,5.97,iteration I say let's just say hey a lot
+298.11,5.01,which is true and then later on I
+301.41,4.41,realized that this variable should not
+303.12,4.89,say hey it should say something like hey
+305.82,4.19,there and then I realize the same
+308.01,7.38,variable should say something like this
+310.01,7.3,hey there and then everyone so there is
+315.39,3.45,nothing wrong in this style of code we
+317.31,3.24,are just having a variable and this
+318.84,4.83,variable is getting updated all the time
+320.55,6.18,now keeping the track of this state is
+323.67,6.21,actually a bit tricky to understand this
+326.73,6.3,one so in functional programming style
+329.88,5.16,we actually don't reuse this variable
+333.03,4.29,much often we don't change it much often
+335.04,5.58,in fact what we do is let's just say hey
+337.32,5.67,page says hey and then we want to update
+340.62,6.78,the somehow so we're gonna say that H on
+342.99,8.13,have redness day says hey there if I can
+347.4,8.88,write it hey there and hit H on a
+351.12,9.03,Saturday says hey there again come on
+356.28,6.15,hey there everyone so this is more like
+360.15,4.05,a functional style you don't update the
+362.43,4.41,same variable in fact it is okay to
+364.2,4.95,really clear or kind of a newly declare
+366.84,3.84,again available with some more
+369.15,5.1,modification so that it's much more
+370.68,5.46,clear and it's okay for us so this thing
+374.25,3.72,is pretty common of the don't change
+376.14,3.48,your state and mutability immutability
+377.97,3.87,this is common thing in the function
+379.62,4.2,programming again the rule of thumb is
+381.84,3.63,that make sure you don't really update
+383.82,4.08,the same variable again and again you
+385.47,3.9,instead declare more of them now coming
+387.9,4.71,up on to the last part which is very
+389.37,5.79,funny and pretty interesting as well so
+392.61,6.15,in this what they say is something like
+395.16,6.33,this function or functions are treated
+398.76,6.99,as first
+401.49,5.85,class okay this is a bit of a bit
+405.75,2.97,difficult statement to understand for
+407.34,3.99,beginners but I'm gonna make it
+408.72,5.19,absolutely ridiculously simple so let's
+411.33,4.47,just say we have a Const with H and it
+413.91,4.83,is storing 45 I don't know why I'm
+415.8,5.369,always using 45 but that's it and we
+418.74,4.17,also have got a variable which is named
+421.169,3.93,in your language however you define it
+422.91,5.64,that's okay and if I just say this
+425.099,5.701,variable is it age that's okay but what
+428.55,4.2,functional programming says that the way
+430.8,3.119,you are treating your numbers and string
+432.75,3.27,and you are throwing them around
+433.919,4.081,anywhere like you can declare them in a
+436.02,3.869,variable you can pass them in a function
+438.0,3.78,you can return them in a function the
+439.889,4.171,same kind of treatment should be given
+441.78,5.31,to the functions as well so we can
+444.06,6.6,simply say Const add score something
+447.09,5.88,like that score and that can also be a
+450.66,4.8,simple function whatever you want to do
+452.97,5.009,inside that that should be the case
+455.46,4.5,I want to men want to say this so this
+457.979,3.87,is how the function should look like in
+459.96,4.92,a functional programming it can be it
+461.849,6.0,should be able to store functions into
+464.88,5.43,any variable and not only that if let's
+467.849,6.301,just say you have a method which say say
+470.31,5.82,hello and this is our method in here
+474.15,4.53,also you should be able to accept
+476.13,4.92,function as a parameter so I can simply
+478.68,4.56,say function and then simply say like
+481.05,4.53,this whatever you want to say or maybe a
+483.24,4.049,reference would be a better example but
+485.58,4.2,this actually makes things simple and
+487.289,5.31,easy and here also you can come up and
+489.78,5.06,simply say hey return and then we can
+492.599,4.951,say function and like this
+494.84,4.569,da-da-da-da-da so this is it we can
+497.55,4.109,store the function into available we can
+499.409,4.471,pass it as a parameter we can return it
+501.659,4.56,as whatever the data type it is so this
+503.88,3.99,is the gist of a functional programming
+506.219,3.901,so these are the three important thing
+507.87,4.859,now the fourth and the most important
+510.12,4.77,thing and the fourth most important
+512.729,4.23,thing is you need to hit that subscribe
+514.89,3.75,button so that I can keep on coming up
+516.959,4.14,with these amazing video and you can get
+518.64,3.66,notification for all of them I hope you
+521.099,3.661,have enjoyed it make sure you hit that
+522.3,4.38,like button - on this video and that's
+524.76,4.31,it for this one I'm gonna catch you up
+526.68,2.39,in annex
+530.07,10.99,[Music]
+537.82,16.32,you can't
+541.06,16.29,[Music]
+554.14,3.21,you see

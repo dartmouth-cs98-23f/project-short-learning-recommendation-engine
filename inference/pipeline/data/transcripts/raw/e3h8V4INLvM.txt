@@ -1,0 +1,312 @@
+second,duration,transcript
+6.96,5.12,hey everyone welcome to this week's live
+9.36,4.96,session today's topic is top programming
+12.08,4.32,languages for data science
+14.32,4.16,but before we begin i'd like to thank
+16.4,4.639,our viewers for tuning in and actively
+18.48,4.48,participating in these sessions
+21.039,4.4,now let's wait for a while for people to
+22.96,2.479,tune in
+25.84,4.16,also we have a dedicated team here to
+27.84,3.92,answer all your queries so if you have
+30.0,5.6,any questions let us know them in the
+31.76,3.84,chat section below we'll get back to you
+36.16,3.76,i see a few people joining in now
+42.719,3.84,also at the end of the session there's
+44.239,5.201,going to be a quiz and one lucky winner
+46.559,5.921,will get an amazon voucher
+49.44,3.04,so stay tuned for that
+53.92,4.68,all right i see people joining in
+59.76,4.32,alright so for the ones joined now
+61.76,6.0,today's topic is top programming
+64.08,3.68,languages for data science
+69.68,4.24,all right i think we're ready to begin
+71.84,4.4,the session now so let's go ahead and
+73.92,2.32,begin
+80.0,5.52,at number 10 we have ruby
+82.32,5.119,now developed by yukihiro matsumoto ruby
+85.52,4.56,is one of the top programming languages
+87.439,4.801,used it is the basis for frameworks like
+90.08,3.999,ruby on rails
+92.24,4.48,it has an expressive and easy to
+94.079,5.68,understand syntax and provides over 60
+96.72,6.399,000 libraries and has a definitive set
+99.759,5.36,of keywords and is dynamically typed
+103.119,5.601,when it comes to using ruby for data
+105.119,5.841,science it offers three core softwares
+108.72,4.16,first up is apache arrow which is a
+110.96,3.839,cross language data structure for
+112.88,4.32,in-memory data
+114.799,4.96,here calculations are taken care of by
+117.2,4.959,apache arrows table format where ruby
+119.759,5.04,can perform data manipulation
+122.159,4.64,another essential feature is numo which
+124.799,4.401,enables to handle numeric array like
+126.799,3.921,numpy and is the fundamental part of
+129.2,2.96,data science or machine learning
+130.72,4.08,execution
+132.16,5.12,kumo is the gpu version of pneumo and is
+134.8,5.68,75 times faster
+137.28,5.679,red trainer enables deep learning tasks
+140.48,4.479,ruby as of now is not a data science
+142.959,3.601,centric language with a very large
+144.959,6.161,established library
+146.56,4.56,it doesn't have an ecosystem like python
+152.959,4.961,at number nine we have julia
+155.36,4.08,now julia was recently developed by a
+157.92,4.16,group of four people at the
+159.44,4.079,massachusetts institute of technology
+162.08,4.0,it's a multi-purpose programming
+163.519,3.681,language specifically designed for data
+166.08,3.2,science
+167.2,4.319,now julia has an excellent dispatch
+169.28,4.16,making it extremely fast
+171.519,4.08,it is faster than python because it is
+173.44,4.48,designed to quickly implement the math
+175.599,4.72,concepts like linear algebra and matrix
+177.92,5.2,representations
+180.319,5.28,julia includes an repl which is a read
+183.12,5.6,eval print loop or interactive command
+185.599,5.36,line similar to that of python
+188.72,4.799,julia offers high scalability and
+190.959,5.041,companies like ford apple and amazon
+193.519,4.401,among others use julia
+196.0,5.2,other programming languages have better
+197.92,5.36,compelling advantages over this language
+201.2,5.28,julia is relatively new and still has a
+203.28,3.2,lot of scope for growth
+206.959,4.801,next up is kayla
+208.959,5.2,now scala was created by martin odersky
+211.76,3.92,and as an object-oriented and functional
+214.159,4.401,programming language
+215.68,5.44,it allows users to access java and java
+218.56,4.8,virtual machine libraries
+221.12,5.28,other key features include fewer lines
+223.36,5.2,of code faster deployment testing and
+226.4,3.68,development improved stability and
+228.56,3.679,productivity
+230.08,4.079,when it comes to data science apache
+232.239,3.841,spark is the widely used tool in the
+234.159,3.761,industry which is written using scalar
+236.08,4.239,programming language
+237.92,4.319,spark is an extension for hadoop which
+240.319,3.601,does batch processing as well as
+242.239,4.401,real-time processing
+243.92,5.36,there are many other features like val
+246.64,4.48,high order functions partial functions
+249.28,3.84,pattern matching and case classes and
+251.12,4.72,collections among others that scala
+253.12,2.72,offers
+256.88,4.0,next up is matlab
+258.959,4.24,matlab is a programming platform
+260.88,3.599,explicitly designed for engineers and
+263.199,3.361,scientists
+264.479,4.401,it was developed by mathworks and is
+266.56,4.56,used for mathematical computation
+268.88,5.12,it can be integrated with c and c plus
+271.12,5.84,plus to analyze data develop algorithms
+274.0,5.199,and create models and applications
+276.96,4.4,it offers powerful debugging tools and
+279.199,4.961,uses a graphics command to make
+281.36,4.88,visualization of results easier
+284.16,4.479,matlab offers rich machine learning
+286.24,4.239,libraries and is best suited for matrix
+288.639,4.0,calculations
+290.479,4.321,one can use matlab for a wide range of
+292.639,3.921,applications including deep learning and
+294.8,5.76,machine learning finance and
+296.56,4.0,computational biology among others
+301.68,5.04,at number six we have tensorflow
+304.32,5.2,tensorflow is a computational framework
+306.72,4.319,created in 2017 for building machine
+309.52,3.92,learning models
+311.039,4.561,it offers toolkits to write code at your
+313.44,3.92,preferred level of abstraction
+315.6,4.4,it allows abstract models which are
+317.36,5.44,highly optimized for components
+320.0,4.4,some of these methods include tf.layers
+322.8,3.0,which allows you to play with the layers
+324.4,5.28,of a neural net
+325.8,6.36,tf.metrics to evaluate model performance
+329.68,4.079,and tf.estimator to build production
+332.16,3.68,ready models
+333.759,4.321,all in all tensorflow is a pretty
+335.84,3.919,commonly used programming language and
+338.08,4.32,as advice for people who have a good
+339.759,2.641,hang of it
+343.759,5.921,at number five we have javascript
+346.88,4.879,developed by brendan ike in 1995
+349.68,4.16,javascript is a server-side and
+351.759,4.16,client-side programming language
+353.84,3.919,it offers a wide range of libraries and
+355.919,3.921,frameworks
+357.759,4.88,now moving on to pros when it comes to
+359.84,5.199,using javascript in data science
+362.639,4.881,first up is data visualization
+365.039,6.641,now javascript offers libraries such as
+367.52,6.08,d3.js chart.js plotley.js and many
+371.68,4.239,others that make powerful data
+373.6,5.12,visualization
+375.919,5.041,next up is product integration companies
+378.72,4.24,use web technologies with a node based
+380.96,3.84,tag for the core product
+382.96,3.76,as a result of which javascript is
+384.8,4.399,widely used
+386.72,4.64,next is tensorflow.js now this is a
+389.199,4.081,machine learning library developed by
+391.36,4.72,google
+393.28,4.8,moving on to cons functionality now
+396.08,3.839,javascript does not offer data science
+398.08,3.679,packages and functions when compared to
+399.919,4.321,other programming languages
+401.759,4.481,when it comes to productivity javascript
+404.24,4.72,doesn't make it easy with the help of
+406.24,4.799,manuals or guides
+408.96,3.92,nodejs is also not suitable for
+411.039,3.28,computationally intensive tasks and
+412.88,3.68,multi-threading
+414.319,4.241,when it comes to opportunity costs it is
+416.56,5.0,easier to learn languages like r or
+418.56,3.0,python
+422.72,3.599,the next commonly used language is our
+424.72,3.759,good old java
+426.319,4.88,more than 3 billion mobile phones use
+428.479,5.12,java today some of its saline features
+431.199,5.041,include incredible stability excellent
+433.599,5.201,memory management and good security
+436.24,5.04,given these advantages java products are
+438.8,6.16,also storming the market today
+441.28,6.0,libraries like weka java ml mlib and
+444.96,5.2,deep learning 4j are used for machine
+447.28,4.56,learning and data science problems java
+450.16,4.64,virtual machine is one of the best
+451.84,5.759,platforms to learn and write code
+454.8,5.519,then again popular frameworks like spark
+457.599,4.401,big data hadoop flink and hype are
+460.319,3.841,written in java
+462.0,4.56,java has scala which as we discussed
+464.16,5.68,earlier is good for data science
+466.56,5.12,and let's face it it is incredibly fast
+469.84,3.84,java has time and again proven to be
+471.68,4.639,useful in all aspects of growing
+473.68,2.639,technologies
+477.759,5.28,next up is sql
+479.68,5.919,sql was developed by raymond f boyce
+483.039,4.56,structured query language or sql is used
+485.599,3.361,to access and retrieve data from
+487.599,3.361,database
+488.96,4.32,it is easy to understand with its simple
+490.96,4.639,syntax and english-like commands
+493.28,3.919,from a data science perspective sql is
+495.599,3.521,used for pre-processing and machine
+497.199,4.72,learning purposes
+499.12,4.799,now about 2.5 quintillion bytes of data
+501.919,3.84,is generated every day
+503.919,3.84,in order to store such large amounts of
+505.759,3.761,data it is strictly necessary to make
+507.759,4.241,use of databases
+509.52,4.879,sql is best suited for this
+512.0,5.36,with features like slicing filtering
+514.399,5.921,aggregation and sorting sql allows you
+517.36,4.479,to handle such large amounts of data it
+520.32,5.839,also integrates well with other
+521.839,4.32,programming languages like python and r
+527.839,4.801,at number 2 we have r
+530.0,4.8,it was created in 1992 by robert e
+532.64,3.6,harker and robert gentleman
+534.8,3.2,it provides an environment for
+536.24,3.599,implementing statistical techniques
+538.0,3.12,along with data handling and storage
+539.839,3.281,features
+541.12,4.719,it offers a wide range of packages and
+543.12,5.68,libraries and can be compiled on unix
+545.839,4.721,windows and macos platforms
+548.8,4.24,r has an extensive library for
+550.56,5.76,manipulation and wrangling some of the
+553.04,5.919,packages are data dot table read r g
+556.32,5.04,plot 2 and gg edit the last two of which
+558.959,5.521,are used for data visualization
+561.36,4.8,other ml packages include mice carrot
+564.48,3.6,and random forest
+566.16,3.76,now our programming language is open
+568.08,6.0,source which makes it highly cost
+569.92,4.16,effective for a project of any size
+574.88,3.28,and to top the list as always we have
+577.04,3.52,python
+578.16,3.76,python developed by guido van rossen is
+580.56,3.76,an open source general purpose
+581.92,4.24,programming language with simple syntax
+584.32,3.76,and english-like commands
+586.16,3.359,it is used for web frameworks and web
+588.08,3.6,applications
+589.519,4.481,python also provides a massive database
+591.68,6.159,of libraries like cyclic learn
+594.0,4.959,tensorflow cbon pytorch matplotlib and
+597.839,4.081,many more
+598.959,5.121,there are now over 70 000 libraries in
+601.92,3.68,the python package index and the number
+604.08,4.24,continues to grow
+605.6,5.04,the library matplotlib provides a strong
+608.32,5.44,foundation around which other libraries
+610.64,4.639,like ggplot pandas plotting pytorch and
+613.76,4.319,others are built
+615.279,5.12,arguably the most popular data analysis
+618.079,4.161,library is pandas
+620.399,4.0,python has the tool set to perform a
+622.24,4.56,variety of powerful functions and it's
+624.399,5.401,no wonder by data scientist embrace
+626.8,3.0,python
+634.0,4.079,all right now before we move on to the
+635.92,4.64,quiz let me quickly show you the data
+638.079,4.481,science programs offered by simply learn
+640.56,3.36,anybody who wishes to take up the data
+642.56,3.2,science program
+643.92,3.12,can just navigate
+645.76,4.4,to our
+647.04,3.12,official website
+654.16,4.919,and here just search for data science
+662.88,4.16,you get a list of programs offered by us
+665.36,2.88,you have the data science master's
+667.04,3.12,program
+668.24,4.159,integrated program in big data and data
+670.16,3.52,science a postgraduate program in data
+672.399,3.041,science
+673.68,3.279,data analyst program you have data
+675.44,4.24,science with python
+676.959,6.32,you also have data science certification
+679.68,5.44,training that is r using r
+683.279,4.8,so depending on your requirement you can
+685.12,4.88,choose the appropriate course
+688.079,3.921,and once you click on the course you get
+690.0,3.839,a brief overview of what the course
+692.0,4.32,includes
+693.839,5.361,and if it suits your requirements
+696.32,2.88,you can take it out
+700.72,6.239,all right then now back to the quiz
+704.64,4.639,so brace yourselves
+706.959,4.961,so the quiz question is which of the
+709.279,5.761,following languages is used to build the
+711.92,6.159,hadoop extension spark
+715.04,4.72,the options are a ruby
+718.079,3.121,b scala
+719.76,3.44,c python
+721.2,4.56,or d java
+723.2,4.8,comment your answers in the chat section
+725.76,5.24,one lucky winner will win an amazon
+728.0,3.0,voucher
+734.079,4.481,i'm going to let it stay on the screen
+736.0,2.56,for a while
+739.279,4.12,drop in your answers quickly
+744.48,4.32,one lucky winner gets an amazon voucher
+754.079,4.56,all right there you go these are the top
+756.48,3.039,programming languages used in data
+758.639,2.561,science
+759.519,4.32,with that we've reached the end of this
+761.2,3.92,video do you agree with our list
+763.839,3.601,think we missed out on something
+765.12,4.399,important let us know in the live chat
+767.44,4.079,or in the comment section below
+769.519,4.401,thank you so much for being here
+771.519,5.88,stay safe keep learning and stay tuned
+773.92,3.479,to simply learn
+803.2,2.079,you

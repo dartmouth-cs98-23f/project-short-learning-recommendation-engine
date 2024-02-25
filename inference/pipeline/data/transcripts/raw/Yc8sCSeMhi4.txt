@@ -1,0 +1,189 @@
+second,duration,transcript
+7.919,3.921,hey everyone my name is ishaan and i
+10.08,3.519,welcome you all to the session
+11.84,4.64,in this session we shall learn the
+13.599,4.561,concept of version control in general
+16.48,4.4,we shall learn the basics of version
+18.16,5.359,control system followed by the benefits
+20.88,4.399,of the system and finally we shall have
+23.519,4.0,a look at some of the best version
+25.279,4.801,control systems in the market
+27.519,4.401,but before we begin make sure you're
+30.08,3.92,subscribed to our youtube channel and
+31.92,4.08,don't forget to click on the bell icon
+34.0,4.16,so you never miss an update from simply
+36.0,4.8,learn to start learning about the
+38.16,4.559,version control system let's begin by
+40.8,4.16,talking about a use case
+42.719,4.481,imagine there's a multinational company
+44.96,4.96,that has offices spread over several
+47.2,4.879,countries with thousands of employees
+49.92,4.56,so when it is such a big company there
+52.079,3.761,might be a set of issues and challenges
+54.48,2.88,it would face
+55.84,4.48,what could be the possible set of
+57.36,5.12,challenges the company faces
+60.32,3.36,the company faces the challenge to
+62.48,3.36,collaborate
+63.68,4.479,there are so many people located at
+65.84,5.04,different places there may be a need to
+68.159,4.561,communicate for a particular reason or a
+70.88,5.36,set of people who are working on the
+72.72,6.079,same project but from different regions
+76.24,5.04,second challenge is related to storing
+78.799,2.481,versions
+81.36,4.24,the project is not completed in a single
+83.439,3.04,version there may be n number of
+85.6,3.44,versions
+86.479,4.96,in that situation the problem of storing
+89.04,4.079,all such commits in a single place is a
+91.439,4.081,huge challenge
+93.119,3.841,then another problem is restoring
+95.52,4.16,previous versions
+96.96,5.04,sometimes it is important to go back to
+99.68,5.28,the previous versions to find the root
+102.0,5.119,cause of any bug
+104.96,3.92,one more common challenge is to figure
+107.119,4.561,out what happened
+108.88,4.48,at times it is critical to know
+111.68,3.6,what changes are made to the previous
+113.36,4.079,version of the source code
+115.28,4.64,or where exactly has the changes been
+117.439,5.441,made in a file
+119.92,5.36,then comes the problem of backup in case
+122.88,5.04,the system or the disk of the user
+125.28,5.84,breaks down and there is no backup then
+127.92,5.2,all the efforts will go in vain
+131.12,4.56,these are some of the basic problems
+133.12,3.759,that any small or big company might
+135.68,3.44,encounter
+136.879,5.281,now the question arises what could be a
+139.12,5.119,possible solution to all such problems
+142.16,5.04,and this is when the version control
+144.239,5.121,system comes into picture
+147.2,4.08,the version control system will take
+149.36,4.48,care of the collaboration between
+151.28,4.72,employees storing different versions
+153.84,4.96,will help in having backups on the
+156.0,5.28,remote repository it will also help in
+158.8,5.519,rolling back to the previous commits and
+161.28,5.599,to the last version of the source code
+164.319,5.041,we will talk about each of these reasons
+166.879,4.481,in detail when we learn the benefits of
+169.36,4.239,the version control system
+171.36,5.12,let's first have a look at what is
+173.599,2.881,version control
+176.64,4.8,as the name version control suggests it
+179.12,4.32,refers to the category of software tools
+181.44,4.24,that make it possible for the software
+183.44,5.12,team to look after the changes made to
+185.68,4.8,the source code the system records all
+188.56,4.72,the mail changes to a file
+190.48,4.399,so a specific version may be rolled if
+193.28,3.28,needed in future
+194.879,4.161,it is the responsibility of the version
+196.56,4.319,control system to keep all the team
+199.04,4.32,members on the same page
+200.879,4.241,it makes sure that everyone on the team
+203.36,4.959,is working on the latest version of the
+205.12,5.039,files and most importantly make sure
+208.319,4.961,that all these people can work
+210.159,5.121,simultaneously on the same project
+213.28,3.92,let's try to understand the process with
+215.28,4.16,the help of this picture
+217.2,4.0,there are three workstations or three
+219.44,2.96,different developers at three different
+221.2,3.28,locations
+222.4,4.0,and there's one repository that is
+224.48,3.759,acting as a server
+226.4,3.839,the workstations are using the
+228.239,4.801,repository either for the process of
+230.239,4.56,committing or updating the tasks
+233.04,3.759,there may be a larger number of
+234.799,3.44,workstations using a single server
+236.799,3.601,repository
+238.239,4.961,each workstation will have its own
+240.4,5.039,working copy and all these workstations
+243.2,4.8,will be saving their source codes into a
+245.439,5.601,particular server repository
+248.0,5.04,this makes it easy for any developer to
+251.04,5.039,access the task being done using the
+253.04,5.68,repository in case the system of any
+256.079,5.361,particular developer breaks down
+258.72,4.72,then also the work won't stop as there
+261.44,4.96,will be a copy of the source code in the
+263.44,5.12,central repository
+266.4,4.48,now after knowing the basics of version
+268.56,4.639,control it's time for us to check the
+270.88,4.72,benefits of version control
+273.199,4.161,the first and the foremost advantage of
+275.6,4.4,the version control system
+277.36,5.68,is that it helps in managing and
+280.0,5.04,protecting the source code the system
+283.04,3.84,helps in management of the source code
+285.04,3.599,for the software team
+286.88,4.0,by keeping track of all the
+288.639,3.12,modifications that are being made to the
+290.88,3.36,code
+291.759,4.641,it also protects the source code from
+294.24,3.6,any unintended human error and
+296.4,4.079,consequences
+297.84,5.2,then the next advantage is it keeps
+300.479,3.841,record of all the modifications made to
+303.04,3.2,the code
+304.32,4.0,as we learned in the previous step the
+306.24,2.88,way it manages the code for the software
+308.32,3.12,team
+309.12,4.72,the team is working continuously
+311.44,4.4,producing new source codes and it is
+313.84,3.44,making amendments to the already
+315.84,3.68,existing code
+317.28,4.96,these changes are to be recorded for
+319.52,5.04,future references and in case they are
+322.24,4.32,needed to discover the root cause of any
+324.56,4.16,particular problem
+326.56,4.56,then the third advantage here talks
+328.72,3.44,about comparing earlier versions of the
+331.12,3.28,code
+332.16,4.16,as we saw that all the versions of the
+334.4,4.4,source code are saved
+336.32,5.28,this makes it possible for developers
+338.8,5.2,to go back at any time and compare the
+341.6,5.28,earlier versions of the code to help fix
+344.0,4.88,the mistake while reducing disruption to
+346.88,3.52,all team members
+348.88,4.159,the fourth and the final benefit we
+350.4,3.68,shall see is that the version control
+353.039,3.681,system
+354.08,4.48,supports developers workflow and not any
+356.72,4.24,rigid way of working
+358.56,5.199,any good version control system will not
+360.96,5.2,impose any particular way of working
+363.759,4.481,the version control systems are known to
+366.16,4.4,provide smooth continuous flow of
+368.24,4.72,changes made to the code and prevent
+370.56,5.359,developers from getting frustrated in
+372.96,5.76,the course of this mechanism
+375.919,4.961,now towards the end of the video let's
+378.72,5.52,have a look at some of the best version
+380.88,6.159,control systems in the market today
+384.24,5.28,the first one here is github
+387.039,6.081,then comes git lab
+389.52,6.72,followed by perforce and bean stock
+393.12,4.16,then on number fifth we have aws code
+396.24,4.88,commit
+397.28,7.199,moving further we have apache subversion
+401.12,6.24,team foundation server and mercurial
+404.479,6.0,finally we have bitbucket
+407.36,4.88,and concurrent version control and now
+410.479,3.041,with this we have come to the end of
+412.24,3.84,this session
+413.52,3.6,i hope you guys found it informative and
+416.08,2.88,helpful
+417.12,5.479,thanks for watching and stay tuned for
+418.96,3.639,more from simpler
+424.639,3.521,hi there if you like this video
+426.4,4.32,subscribe to the simply learn youtube
+428.16,4.72,channel and click here to watch similar
+430.72,5.479,videos turn it up and get certified
+432.88,3.319,click here

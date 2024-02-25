@@ -1,0 +1,223 @@
+second,duration,transcript
+0.62,2.2,"- Hey, if you scroll down slightly further"
+2.82,2.67,there is a picture of me(laughs)
+5.49,2.882,"- [Man] Use that as the
+beginning of this episode please."
+8.372,2.583,(upbeat music)
+21.799,1.541,Welcome back to coding with Qiskit.
+23.34,1.48,"I'm your host, Jin."
+24.82,1.38,"If you're new to the series,"
+26.2,2.42,"we cover topics in quantum
+algorithms each week."
+28.62,1.65,So be sure to like and subscribe.
+31.14,1.16,Today we are gonna be learning
+32.3,1.28,how to install a Qiskit
+33.58,1.741,and use a very specific Circuit Library
+35.321,2.469,"in order to build our
+first quantum algorithm."
+37.79,1.83,In order to access this library
+39.62,2.33,"we're gonna have to install
+a Qiskit locally first."
+41.95,2.61,"So let's go through really
+quickly how to do this."
+44.56,2.22,"So Qiskit is an open source SDK,"
+46.78,3.13,"use for programming quantum
+computers using Python."
+49.91,2.35,"And don't worry if your Python
+skills aren't there yet."
+52.26,2.04,We'll work through things slowly.
+54.3,1.43,So the first thing I'm gonna do
+55.73,2.7,is navigate to Qiskit.org
+58.43,1.1,this will tell me exactly
+59.53,2.42,how to install Qiskit on my machine.
+61.95,3.38,"And there is generally two
+options for running Qiskit,"
+65.33,3.09,"you can either run it on
+IBM's hosted jupyter notebooks"
+68.42,1.98,or you can install it locally.
+70.4,1.35,And the first thing I wanna do
+71.75,2.81,is if I don't have Python installed yet
+74.56,1.65,is to just install Anaconda
+76.21,2.36,"and this will install
+all the things I need"
+78.57,2.7,"for Python, click download"
+82.61,1.48,"I have a Mac,"
+84.09,5.0,"so I'll just do the 64 bit
+graphical installer and download."
+89.32,1.84,"And like always, if you have a windows"
+91.16,2.843,"or Linux just choose the
+appropriate downloader."
+94.95,2.78,"Okay, so now that Anaconda has downloaded"
+97.73,1.064,I'll just open this up.
+98.794,2.417,(soft music)
+102.44,1.57,And I'll install.
+104.01,2.417,(soft music)
+114.56,1.06,So what I'm gonna do first
+115.62,1.99,is set up my Python environment
+117.61,1.4,which just is a good way
+119.01,2.33,for me to organize my Python packages
+121.34,1.64,so that I have all the correct versions
+122.98,2.133,of all the packages in one place.
+126.06,4.83,So what I'll do is Conda create dash
+130.89,2.98,and name of my environment
+133.87,4.98,which will be coding with Qiskit or cwq.
+138.85,2.85,I'll set my Python version equal to three
+141.7,3.183,and the Anaconda distribution.
+149.32,4.11,"Okay, and I'm just gonna
+watch this little thing spin."
+153.43,0.93,"Okay, now it's done."
+154.36,2.67,"Okay, so I'm gonna proceed,"
+157.03,0.833,yes.
+159.9,2.66,And that thing is gonna spin some more
+164.65,1.59,this might take a minute.
+166.24,3.26,So now that I have my environment set up
+169.5,1.22,I'm gonna enter my environment
+170.72,4.4,"by going to Conda activate
+the name of my environment"
+175.12,1.84,which is coding with Qiskit
+178.91,4.18,"and I'm going to now install
+Qiskit into my environment."
+183.09,1.82,So from the Qiskit.org site
+186.26,2.73,"just following these
+instructions start locally"
+188.99,3.92,"I'm gonna choose the
+Qiskit stable installation."
+192.91,1.41,I have Mac so I will choose Mac
+194.32,3.25,"but it's the same if you
+have Linux or windows"
+197.57,2.07,just choose the correct distribution
+201.42,2.14,and then I'll copy this
+203.56,2.15,"and PIP install Qiskit
+into my environment."
+209.51,1.64,So now I have Qiskit installed
+211.15,2.9,"and I'm just gonna open
+up a jupyter notebook"
+214.05,2.05,so we can get started with our algorithm.
+219.46,0.833,Perfect.
+221.4,3.26,"So I'm gonna open up a
+new Python 3 Notebook"
+224.66,2.453,and let's get started with our algorithm.
+228.14,1.47,So let's build our first algorithm
+229.61,1.63,from the circuits library now
+231.24,2.11,in order to do this we need a few parts
+233.35,3.65,"some data to input, a circuit
+to run the calculation"
+237.0,1.3,and then an output.
+238.3,2.02,In physics we often talk about signals
+240.32,2.78,"and signals represent the
+transmission of information."
+243.1,1.56,And generally we use basis
+244.66,2.1,or units such as frequency or time
+246.76,1.58,to represent what kind of information
+248.34,1.06,that we're transmitting.
+249.4,2.08,"I'm gonna show you a quick
+example of an algorithm"
+251.48,2.59,"that's already built in
+Qiskit Circuit Library"
+254.07,1.79,called the Fourier Checking Circuit.
+255.86,1.26,A Fourier Checking circuit
+257.12,1.25,is an important tool used
+258.37,1.83,from the signal processing domain.
+260.2,1.163,And as a fundamental circuit used
+261.363,1.767,"in many other quantum algorithms,"
+263.13,1.79,"for example, Shor's algorithm"
+264.92,1.94,which we'll cover in a future episode
+266.86,2.59,"these circuits can be run
+on a real quantum back-end"
+269.45,2.52,"or on one of the high
+performance simulators"
+271.97,1.78,that are available through Qiskit.
+273.75,2.01,"All right, so let's get
+started with the algorithm."
+275.76,3.689,"So the first thing I'm
+gonna do is do my imports."
+279.449,3.768,"I'm going to import
+qiskit.quantum_info as qi"
+285.94,3.75,"and this is going to be
+doing the calculation."
+289.69,2.57,I'm going to import
+293.43,1.72,from the Circuit Library
+297.5,1.47,the Fourier Checking Circuit
+301.85,2.49,"and I'm going to import my visualizer,"
+304.34,5.0,"qiskit.visualization
+import plot histogram."
+314.84,1.07,Okay.
+315.91,2.47,Shift+ Enter to execute that.
+318.38,3.31,"So for this, algorithm, I'm
+gonna define two functions."
+321.69,1.69,"They're just lists,"
+323.38,4.0,"f is equal to one minus
+one minus one minus one"
+328.24,5.0,"and g is equal to one,
+one minus one minus one."
+336.35,2.22,"So now that we have our
+two functions f and g"
+338.57,1.77,the Fourier Checking Circuit will tell us
+340.34,3.34,how correlated the Fourier transform of g
+343.68,1.67,is to our function f.
+345.35,2.55,"And it turns out that a
+quantum computer can perform"
+347.9,2.92,"this calculation much faster
+than a classical computer can."
+350.82,1.75,So the circuit will output a probability
+352.57,1.4,for the zero zero state.
+353.97,2.82,"And if the probability
+is greater than 0.05"
+356.79,2.66,then the Fourier transform our function g
+359.45,1.753,is correlated with our function f.
+362.08,0.833,Okay.
+362.913,2.157,So I'm gonna set up my circuit equals
+365.07,3.98,"Fourier checking and I'll
+put in my two functions"
+369.05,1.47,f is equal to f
+370.52,1.823,"and g is equal to g,"
+376.415,1.675,circ.draw
+378.09,1.25,See what this looks like.
+380.54,0.92,Okay.
+381.46,3.23,"This is what my quantum circuit
+will actually look like."
+384.69,1.87,"So let's run this,"
+386.56,1.24,zero equals
+388.883,2.327,qi.state vector
+392.98,3.76,from label zero zero
+396.74,2.16,"is going to evolve this,"
+398.9,3.847,state vector is equal to zero.evolve.circ
+406.0,2.63,"and I'm gonna get my
+probabilities back here."
+408.63,4.15,probs equals sv.probabilities
+422.12,1.43,Okay and then I'm gonna plot
+423.55,1.51,what this looks like.
+425.06,1.85,And remember I'm only interested
+426.91,1.45,in the zero zero probability.
+433.096,1.624,"Okay, perfect."
+434.72,3.11,"So I get back a histogram
+here am only interested"
+437.83,1.27,in the zero zero probabilities
+439.1,2.13,which I get 0.25
+441.23,2.21,"so what this means is
+the Fourier transform"
+443.44,4.063,"of my g function is
+correlated with my f function."
+448.73,1.44,So you can try to circ it yourself
+450.17,2.09,"and see how the output
+changed depending on"
+452.26,1.49,your input functions.
+453.75,1.52,This is where we'll stop for today.
+455.27,2.07,"But hopefully now you
+have Qiskit installed"
+457.34,1.77,you're familiar with the Circuit Library
+459.11,2.7,"and you're able to run your
+first quantum algorithm."
+461.81,1.3,Make sure to like and subscribe
+463.11,1.33,because next time we're gonna be talking
+464.44,1.33,about what it actually means
+465.77,1.7,to be a slur algorithm
+467.47,1.43,and why certain algorithms are better
+468.9,2.98,"for quantum computers
+versus classical computers."
+471.88,1.612,Jin out.
+473.492,2.083,(laughs)
+477.31,1.02,Can you just have a jump cut
+478.33,1.577,where I like tap it away (laughs)
+479.907,1.5,- [Man] Absolutely
+482.678,2.583,(upbeat music)

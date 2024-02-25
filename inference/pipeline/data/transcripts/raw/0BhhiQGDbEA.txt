@@ -1,0 +1,158 @@
+second,duration,transcript
+0.475,2.0,"Hello friends, welcome to Gate Smashers."
+2.5,3.5,"In this video we are going to discuss
+ introduction to dynamic programming."
+6.0,5.0,Dynamic programming we use to solve optimization problems.
+11.0,4.0,Optimization problem means where I have to find optimal answer.
+15.0,6.0,"Optimal means either I have to find 
+maximum answer or minimum answer."
+21.025,4.95,"Maximum means let's say if we are finding
+ profit then I will find maximum profit."
+26.0,4.875,Let's say if I am finding cost then I will find minimum cost.
+30.9,3.075,So this is actually optimization problem.
+34.0,5.0,Now optimization problem must be coming in your mind that we have solved this with greedy method.
+39.0,5.808,"Dynamic programming is also doing the same work 
+but there is a lot of difference in both the approaches."
+44.833,4.167,"If we talk about greedy method, what we 
+did there is let's say this is my source."
+49.0,8.0,"Source is connected to destination and 
+this is intermediate nodes in between."
+57.0,6.0,"I have directed graph, let's say this is my directed 
+graph and this is my source and destination."
+63.0,4.0,"Now these are intermediate nodes, let's say I
+ have to reach destination from source."
+67.025,4.975,"Now here obviously what I will use, I want to find minimum cost."
+72.0,5.0,"What is the optimal answer? You reach 
+destination from source with minimum cost."
+77.0,6.0,"What does greedy method do? Let's 
+say this is distance, this is 10, 22."
+83.0,7.0,"Now what will greedy method do? By default
+ it will choose this arrow or this edge only."
+90.0,6.0,"Reason for that is at the stage you 
+are standing, at that stage, the minimum one,"
+96.0,5.0,"means if we talk from cost point of view, \
+who is giving the best answer? S to A."
+101.0,3.0,So what will it do? It will close both these paths.
+104.0,3.0,"Means it will not even look at this, which one? Greedy method."
+107.0,4.0,Because what we are doing is which one is the best out of these three? This one.
+111.0,4.0,"So we are going above this. Now is it necessary 
+that it will always give right answer? No."
+115.0,7.0,"Let's say the cost of the next path A to B is 100
+ and this cost is let's say 10, 20,"
+122.0,7.0,"take anything, 5, 3. Obviously here my cost is 2, I chose this first."
+129.0,7.0,"Now next cost A to B is 100. So obviously 
+what will be my wrong answer here?"
+136.0,6.0,"Reason for that is at the stage you are standing, 
+you have found the minimum solution here."
+142.0,6.0,"This is the approach of greedy approach. 
+But what does dynamic programming do?"
+148.0,5.0,"Dynamic programming does not take 
+such decisions. It will follow all the path,"
+153.0,6.0,"it will follow all the sequence of decisions 
+first, it will traverse all those sequence of decisions"
+159.0,6.0,"then it will reach a final solution. So here 
+you can say that dynamic programming"
+165.0,8.0,always give the optimal answer. Yes. Greedy always give the optimal answer may or may not be true.
+173.0,5.0,"As I told you in the example here, what is 
+the method of greedy here? It is failing."
+178.0,6.0,"But dynamic programming will not fail 
+here because it will check all the paths"
+184.0,5.0,"then it will give the final answer here. 
+So the first point is here, greedy"
+189.0,6.0,"and dynamic programming actually divides
+ the problem into series of overlapping subproblems."
+195.0,5.0,Means we are dividing a big problem into small subproblems
+200.0,5.0,then we are combining the solutions of my subproblems.
+205.0,4.0,Like we do in divide and conquer. What we did in divide and conquer?
+209.0,3.0,Like there is an example of merge sort. So what we do in merge sort?
+212.0,8.0,"We divide the array which we have into two parts, then we divide it into two parts."
+220.0,6.0,"In this way we convert it into subproblems. Then we combine these two,"
+226.0,5.0,means we combine all the problems and convert it into a final answer again.
+231.0,5.0,"But if we talk about dynamic programming here, 
+then the first approach is also the same."
+236.0,4.0,Means what is the first feature of these two features? Optimal substructure.
+240.0,5.0,What does optimal substructure mean? That your problem is divisible.
+245.0,5.0,"Means your problem is divisible in parts in this way, all the problems are being made."
+250.0,5.0,You solve all those problems and combine them and convert them into final answer.
+255.0,8.0,"But the main difference is this from divide 
+and conquer dynamics. That is overlapping subproblems."
+263.0,3.0,"What does it mean by subproblems? What 
+does it mean by overlapping subproblems?"
+266.0,8.0,"That all the problems here are repeated but
+ in divide and conquer, non-overlapping will come here."
+274.0,6.0,"Because it will not be repeated there. 
+Let's say if I take 5, 3, 2, 1, 10, 20."
+280.0,5.0,"If I take it like this, let's say here 
+5, 3, 2 came, here 1, 10, 20 came."
+285.0,6.0,"Here I have 5 and 3 came. Now when I combine
+ 5 and 3, I obviously sorted these two."
+291.0,3.0,"What do we do in merge sort? 
+We sorted these two, 3 and 5."
+294.0,6.0,"Now see 3 and 5 are not being repeated 
+anywhere else in the whole program."
+300.0,5.0,"Means all these problems are not being repeated 
+anywhere. You solved it, use it, that's it."
+305.0,6.0,"But in dynamic programming, what are the 
+problems? All the problems are repeated."
+311.0,7.0,"What do you do with those repetitions? You store them 
+so that you do not solve all the problems again and again."
+318.0,5.0,"Once you have solved it, store it. Next time
+ if the same subproblem comes again,"
+323.0,6.0,"you pick up data from the direct table. Means pick up 
+data from the table where you have stored the result."
+329.0,3.0,How? Let's say if we take the example of Fibonacci series.
+332.0,5.0,Now how does the program work in Fibonacci series? Let's say we have f of n.
+337.0,7.0,"What do we do with f of n? F of n-1 plus f of n-2, we convert it."
+344.0,7.0,"Means if my series is 0, 1, 2, 3, 4, 5. So what is Fibonacci series?"
+351.0,8.0,"Fibonacci series is 0 on 0, 1 on 1. Next 
+1 plus 0, 1. 1 plus 1, 2. 2 plus 1, 3. 3 plus 2, 5."
+359.0,5.0,"5 plus 3, 8. 8 plus 5, 13. It moves forward in this way."
+364.0,7.0,"Means here my actual recurrence relation 
+comes that f of n is equal to f of n-1 plus n-2."
+371.0,9.0,"When will my f of n come? When n value is 1. 
+If my n value is 0, then my f of n will come 0."
+380.0,6.0,Otherwise my recurrence relation becomes this. Now if I solve f of 4 here.
+386.0,7.0,"If we solve f of 4, then what will happen? f of 3, f of 2. See this is what we did."
+393.0,6.0,"First of all optimal substructure means we 
+are dividing a problem. So are we able to divide?"
+399.0,6.0,"Yes, we are able to divide. What will we do next? 
+f of 2, f of 1. What will we do with this?"
+405.0,7.0,"f of 1, f of 0. So see the problem is dividing
+ in your substructure in all the problems."
+412.0,6.0,"But the second point here is overlapping subproblem. 
+What does overlapping subproblem mean?"
+418.0,7.0,"When we solve this, see leave level, here I can write f of 1, f of 0."
+425.0,7.0,"This f of 1 is already a small subproblem. 
+This is also small. Now see here when I solve f of 1."
+432.0,5.0,"How much answer did f of 1 give? 1. When n value is 1, then the answer will be 1."
+437.0,7.0,"When n value is 0, then the answer will be 0. What will 
+be 1 plus 0? 1. So see what you do with f of 2, store it."
+444.0,5.0,"Now next time f of 2 is coming somewhere, see f of 2 is being repeated here."
+449.0,7.0,"f of 1 is being repeated, f of 0 is being repeated. So 
+you don't need to solve all these problems again and again."
+456.0,10.0,"What you do is store the data in a table. 
+Means we have stored f of 2, f of 1, f of 0,"
+466.0,5.0,"f of 3 so that when the same subproblem will 
+be repeated again. I have only written f of 4."
+471.0,7.0,"If you try to write f of 10 or f of 11, then you will 
+see that a lot of subproblems are being repeated."
+478.0,6.0,"That is called the overlapping subproblems.
+ So what does dynamic programming do here?"
+484.0,7.0,"We will store these subproblems, we will store their results so that we don't solve them again and again."
+491.0,7.0,"Because if we solve them again and again, then 
+its time complexity order of 2 raised to power n."
+498.0,5.0,"Means exponential time complexity will 
+be created here. But if you store it,"
+503.0,8.0,"let's say you have stored f of 2, f of 3, f of 4, 
+that is how many functions will be opened?"
+511.0,8.0,"f of 4, f of 3, f of 2, 1 and 0. You don't need to
+ solve this repetition again and again."
+519.0,7.0,"So this is actually the foundation of dynamic 
+programming. We will use this in multiple problems."
+526.0,6.0,"Like matrix chain multiplication, multi-stage graph, 
+we have a traveling salesman problem,"
+532.0,7.0,"longest common subsequence, sum of subset 
+problem. We use all these problems in them."
+539.025,6.861,"Even all pair shortest path, 0-1 knapsack. 
+What do we use in all these? Dynamic programming."
+545.911,1.576,Thank You.

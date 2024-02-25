@@ -1,0 +1,192 @@
+second,duration,transcript
+0.0,4.44,"This is you in a Coding interview. And this is 
+the dream job that you really want. If you don’t  "
+4.44,4.5,"prepare data structures and algorithms, there’s 
+a good chance that you will be rejected. Now,  "
+8.94,3.42,"I am no Love Guru when it comes to 
+relationships. But for coding interviews,  "
+12.36,5.1,"I do have some expertise. And to crack all these interviews, the only course I have ever used is called"
+17.46,4.08,"Data Structures and Algorithms. And the best 
+part is that I did not master DSA sitting in  "
+21.54,3.18,"a classroom of a fancy university. 
+I did it online, all by myself,  "
+24.72,4.2,"because I have no Computer Science degree. 
+Today, I will share my entire journey in detail  "
+28.92,3.72,"so that you don’t repeat the same mistakes 
+that I made when I was struggling with DSA."
+32.64,3.12,"Before we go too deep into how to 
+learn data structures and algorithms,  "
+35.76,4.08,"we need to first understand what data structures 
+and algorithms means. Believe it or not,  "
+39.84,4.5,"you might have already used data structures and 
+algorithms in your life. For example, I want you  "
+44.34,4.44,"to remember the time when the meaning of every new 
+word was not available on Google and you had to  "
+48.78,5.1,"use an actual physical dictionary to look up the meaning of 
+a word. To find a word, let’s say “programming”,  "
+53.88,4.38,"you would open the dictionary in the middle and look at 
+the words that are there on that page. Let’s  "
+58.26,4.14,"say you landed on a page with words starting 
+with “m”. You know that “m” comes before the  "
+62.4,4.2,"“p” of programming. So, the word “programming” 
+must come after the page you just opened. So,  "
+66.6,3.9,"you start looking for “programming” in the right 
+half of the dictionary. If you repeat this step  "
+70.5,4.26,"multiple times, you will end up finding the 
+word programming. The process or in other words,  "
+74.76,4.56,"the algorithm that you just saw is called “Binary 
+Search''. And the way data is stored, which  "
+79.32,3.9,"is “dictionary” in this case, is called a data 
+structure . Don’t confuse this “dictionary” with  "
+83.22,3.66,the data structure “dictionary” that we might have seen in Python because they are slightly different.
+86.88,4.26,"But why does a Software Engineer even need 
+data structures and algorithms? Imagine that  "
+91.14,4.68,"in the dictionary example I just gave you, someone 
+starts from the beginning and keeps flipping one  "
+95.82,3.0,"page at a time to find the word 
+“programming” . It will take them many  "
+98.82,4.32,"minutes to find just this one word. With “binary 
+search”, you will find it in a matter of seconds.  "
+103.14,4.5,"That’s the power of algorithms. Now imagine 
+that instead of giving you a dictionary where  "
+107.64,4.98,"the words are neatly organized in alphabetical 
+order, I gave you a bag full of paper slips each  "
+112.62,5.22,"containing a word and its meaning. How long do you think 
+it would take you to find the word “programming”? At  "
+117.84,3.72,"least a few hours unless you are really lucky. 
+That’s the power of ‘Data Structures'."
+121.56,3.96,"I hope that this example makes you even more 
+excited about learning Data Structures and  "
+125.52,4.714,"Algorithms.To make learning DSA easier for you, 
+I recommend that you learn at least one Object  "
+130.234,4.586,"Oriented Programming language before you start 
+DSA. That’s because most online resources for  "
+134.82,5.34,"DSA will be using an object oriented programming language. 
+You can pick any popular language like Java,  "
+140.16,4.26,"Javascript, C++ or Python. If you already 
+have a language that you are comfortable with,  "
+144.42,4.62,"you can continue with that. But if you don’t, 
+I recommend that you pick Python for DSA.  "
+149.04,4.68,"That’s because Python is less verbose and you 
+can write code really fast in Python. And in  "
+153.72,4.68,"an interview, where you only have 45 minutes to 
+solve a question, this would be really helpful."
+158.4,5.04,"Now that we have that out of the way, let's talk 
+about how I started my DSA journey. If you have  "
+163.44,3.96,"seen any of my previous videos, you know that 
+I am a strong advocate for “Learning by Doing”.  "
+167.4,4.08,"Unfortunately, for DSA, I don’t think there is 
+any good resource that you can jump  "
+171.48,4.92,"into and start learning by doing. That’s because 
+DSA requires a good theoretical foundation before  "
+176.4,4.5,"you can actually apply it to any problems. 
+That’s why, I took the online course  "
+180.9,4.44,route for DSA. I used this course called Algorithms by Princeton University on Coursera.  
+185.34,4.02,This course is divided into 2 parts and is taught in Java. But if you are
+189.36,4.68,"looking for a good DSA course in languages other 
+than Java, I do have some recommendations for  "
+194.04,4.5,"you later in the video. Professor Sedgewick, who 
+is one of the instructors of this course, is  "
+198.54,6.72,"famous for taking the worst case space complexity 
+of Quicksort from big o of n to big o of logn in  "
+205.26,4.5,"5 extra lines of code. If you don’t know 
+what that means, don’t worry about it. The point  "
+209.76,4.5,"I am trying to make here is that this course is 
+taught by the best of the best. The instructors  "
+214.26,4.92,"of this course have seen many algorithms come and 
+go during their career. Their book on Algorithms  "
+219.18,5.1,"has been a bestseller since the 1980s. That’s why 
+instead of just saying: “here are data structures  "
+224.28,4.26,"and algorithms that exist”, they are able to 
+provide a complete context of why a particular data  "
+228.54,4.38,"structure or algorithm exists and when to use 
+it. And purely from a learning standpoint,  "
+232.92,4.56,this course make you fall in love with algorithms. I can not recommend this course enough.
+237.48,4.38,"But there is one big issue when it comes to 
+learning DSA. Most people don’t know how much  "
+241.86,4.2,"is enough and where to draw the line. And I 
+also made a same mistake here. This is the first  "
+246.06,5.536,of the 3 big mistakes I made on my journey. I will share the other 2 later in the video. The mistake I made was that I  
+251.596,7.064,I ended up completing both algorithms 1 and algorithms 2. I realized it much later in my journey that I did not need full  
+258.66,5.1,"Algorithms 2 for coding interviews. If I could 
+go back in time, I would skip the entire Week 3  "
+263.76,5.34,"and everything after Week 4. I am not saying that 
+these things are not useful, it’s just that they  "
+269.1,4.26,"are rarely asked in the interviews. And even if 
+there is some uncommon question that uses them,  "
+273.36,4.14,"you would be able to solve it if you follow what 
+we are going to discuss in the rest of the video."
+277.5,4.8,"Anyway, if Java is not your primary 
+language and you want to use C++ instead,  "
+282.3,4.38,"there’s this course by IBM that you can 
+use. If Python is your language of choice,  "
+286.68,4.32,"you can use this free course by Google on 
+Udacity. This Udacity course might not be  "
+291.0,4.92,"free in your country but it’s free in the US. All 
+the links will be in the description. By the way,  "
+295.92,3.9,"in case you are wondering, I do not 
+get paid anything if you use any of  "
+299.82,4.62,"the resources I am recommending today. So, the only 
+way to support us is by subscribing."
+304.44,4.26,"After finishing a course on DSA, you will 
+become very powerful. And you might start  "
+308.7,4.14,"believing that you can bend the entire 
+universe to get that dream job. And that  "
+312.84,5.22,"would be the second big mistake that I made. I 
+applied for many jobs after completing DSA but  "
+318.06,3.66,"it did not get me anywhere. That’s because 
+knowing all these different algorithms and  "
+321.72,3.48,"actually applying them to a new problem 
+are very different things. Add the  "
+325.161,5.079,"interview time limit of 45 minutes on top of that 
+and it suddenly starts looking like an impossible  "
+330.24,4.92,"task. For those who are having a hard time 
+finding a job even after learning DSA, trust me,  "
+335.16,5.64,"I have been in your place. Here is how I solved 
+this issue. I went to Leetcode and started solving  "
+340.8,3.96,"some interview questions there. If you don’t 
+already know, Leetcode is pretty much the best  "
+344.76,5.1,"resource out there to practice DSA questions. All the 
+questions are labeled easy medium or hard based  "
+349.86,4.92,"on difficulty level. In the beginning, you might 
+not be able to solve medium or hard problems. So,  "
+354.78,4.98,"stick to easy questions. And when easy problems 
+really become easy for you, move on to the mediums  "
+359.76,3.36,"and so on. And when 
+mediums start feeling easy, you are ready for  "
+363.12,4.14,"the coding interviews. If you want me to make 
+a full video on how to use Leetcode efficiently,  "
+367.26,4.92,"let me know in the comments. Another resource that 
+I would like to mention here is “Top 10 algorithms  "
+372.18,4.38,"in interview questions” on GeeksforGeeks. If you 
+have done your Leetcoding well, you would already  "
+376.56,4.08,"know most of the algorithms here. But, it’s still 
+a good place to revise what you have learnt."
+380.64,4.68,"But before you start applying for jobs, it’s very 
+important to set your expectations right. The  "
+385.32,4.44,"first few interviews are most likely going to be 
+a disaster. And that’s perfectly fine. That’s why,  "
+389.76,3.78,"I recommend that you don’t start by applying 
+to your dream companies in the beginning. Do  "
+393.54,4.452,"some practice by applying for companies that 
+might not be your top choice. And once you  "
+397.992,3.588,"are doing well there, move on to the ones 
+that you really desire. And always remember  "
+401.58,4.44,"that rejections are part of the process. Like 
+they say, there are two ways to walk in life.  "
+406.02,4.62,"The first is to walk like you are the king of 
+the world. The second one is to walk like you don’t  "
+410.64,4.5,"give a f**k who the king is. Choose the second 
+one and don’t let anyone’s opinion discourage  "
+415.14,3.54,"you from working towards your goal. And 
+as always, we are here to support you."
+418.68,4.08,"Before I forget, let me tell you the third 
+big mistake that I made. I used to think  "
+422.76,4.68,"that mastering DSA will make sure that I can crack 
+any software engineer interview. But in reality,  "
+427.44,4.56,"DSA is not the endgame. You still need 
+to impress the hiring managers and crack the"
+432.0,2.52,"behavioral interviews. If you 
+want to know how to do that,"
+434.507,4.033,"you can watch this video at the top. My name is 
+Sahil and I will see you in the next one."

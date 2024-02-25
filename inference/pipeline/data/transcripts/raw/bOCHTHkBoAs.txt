@@ -1,0 +1,312 @@
+second,duration,transcript
+0.0,3.899,people often say you don't need to know
+1.86,4.14,any math to program a computer and
+3.899,3.96,that's truthy however any sufficiently
+6.0,4.32,advanced technology is indistinguishable
+7.859,4.501,from Magic but magic isn't real math
+10.32,3.84,Explains It All developers often avoid
+12.36,3.72,learning math because it looks scary but
+14.16,3.66,it actually makes complicated magic like
+16.08,3.72,computer graphics and neural networks
+17.82,3.84,easier to understand and not just that
+19.8,3.96,but it unlocks the secrets of the entire
+21.66,4.08,physical Universe there's a few abstract
+23.76,3.72,math concepts for programmers that you
+25.74,3.18,just can't ignore and understanding them
+27.48,3.78,will make you think more like a true
+28.92,3.9,engineer I'm no math genius in fact I'm
+31.26,3.18,the opposite which makes me uniquely
+32.82,3.48,qualified to teach 10 essential math
+34.44,3.48,concepts using memes and other visual
+36.3,3.66,aids that almost anybody can understand
+37.92,3.479,the first person who survives until the
+39.96,3.72,end and cracks the code will win this
+41.399,4.081,one of a kind Balenciaga fireship hoodie
+43.68,4.08,let's jump right into topic number one
+45.48,4.559,Boolean algebra which is used almost
+47.76,3.9,every time you write code a Boolean is a
+50.039,4.321,binary variable that can have two
+51.66,4.44,possible values true or false now there
+54.36,3.839,are three operators that you can use to
+56.1,4.439,work with them and or in not or
+58.199,3.721,conjunction disjunction and negation if
+60.539,2.761,you want to be fancy imagine you're
+61.92,3.419,trying to get a girlfriend we can use
+63.3,3.78,the Boolean variables of rich and
+65.339,3.6,handsome to describe you if you're both
+67.08,3.719,rich and handsome you'll definitely get
+68.939,3.54,a girlfriend but if you're not rich and
+70.799,3.481,not handsome you'll have to pay for an
+72.479,3.18,only Fan's girlfriend if you're rich or
+74.28,3.6,handsome you can still get a girlfriend
+75.659,3.96,but your selection is more limited we
+77.88,3.54,can represent this logic and code with
+79.619,3.721,things like if statements but we can
+81.42,3.059,also do it visually with Venn diagrams
+83.34,2.639,like you've been doing since grade
+84.479,3.301,school and you can also create truth
+85.979,3.421,tables like this one here which comes in
+87.78,3.479,handy in zombie apocalypse type
+89.4,4.62,situations but that brings us to concept
+91.259,4.081,2 numeral systems like base 2 throughout
+94.02,3.0,history humans have come up with all
+95.34,3.54,kinds of clever ways to count things but
+97.02,3.599,almost all of them use base 10 like the
+98.88,4.14,10 fingers on your hands like in the
+100.619,4.261,number 423 the four is in the hundreds
+103.02,3.54,place which represents four times one
+104.88,3.54,hundred the two is in the tens place or
+106.56,3.9,two times ten then the final number is
+108.42,4.26,multiplied by one but computers work off
+110.46,3.96,of a base 2 numeral system in base 2
+112.68,3.42,things work the exact same way but
+114.42,3.659,because we only have two symbols to work
+116.1,4.92,with each place is multiplied by two
+118.079,5.04,like two four eight sixteen Thirty 32 64
+121.02,4.44,128 and so on now that you understand
+123.119,4.92,that you also understand how other bases
+125.46,4.92,work like base 16 or hexadecimal which
+128.039,3.78,uses the digits 0 through 9 along with a
+130.38,2.999,through F and is commonly used to
+131.819,3.601,represent binary values in a more
+133.379,4.141,concise way because each hexadecimal
+135.42,4.319,digit can translate into four bits and
+137.52,4.079,you also have base64 which introduces
+139.739,3.841,even more letters and symbols to encode
+141.599,4.381,binary values allowing developers to
+143.58,4.379,represent binary data like an image as a
+145.98,3.6,string of text while computers use base
+147.959,3.721,2 under the hood they still need to
+149.58,3.54,represent base 10 numbers for humans and
+151.68,3.0,the most common way to do that is with
+153.12,4.08,floating Point numbers go ahead and
+154.68,4.26,execute 0.1 plus 0.2 in your favorite
+157.2,3.92,programming language the result should
+158.94,2.18,be
+161.3,3.659,0.30004 How could a computer make such a
+163.68,3.839,silly mistake
+164.959,4.42,well in science numbers can get very big
+167.519,3.781,when talking about space and very small
+169.379,3.181,when talking about things like atoms we
+171.3,3.06,don't write these numbers out completely
+172.56,3.539,and instead use scientific notation
+174.36,3.239,where an exponent raises it to an
+176.099,3.481,approximate value making the number
+177.599,3.42,appear far more concise computers use a
+179.58,3.239,similar approach with floating Point
+181.019,3.661,numbers because they only have a limited
+182.819,3.901,amount of space either 32 bits for
+184.68,3.6,single Precision or 64 for double
+186.72,3.12,Precision which is the default in
+188.28,3.12,languages like Python and JavaScript
+189.84,3.179,it's called a floating point because
+191.4,3.419,there's no fixed number of digits before
+193.019,3.3,or after the decimal point allowing
+194.819,3.541,developers to make a trade-off between
+196.319,4.681,range and precision some numbers like
+198.36,4.14,.01 can't be represented perfectly as a
+201.0,3.18,binary floating point which is the
+202.5,3.3,reason we get those tiny rounding errors
+204.18,3.18,now that you know how numbers work we
+205.8,3.18,can start talking about logarithmic
+207.36,3.659,functions which you might remember from
+208.98,4.259,algebra class to understand them think
+211.019,4.14,of an actual log the log starts at 16
+213.239,4.201,feet then we saw it in half over and
+215.159,3.66,over again until we reach a length of 2.
+217.44,2.7,notice how when we try to draw a line
+218.819,3.48,through it it's not perfectly straight
+220.14,3.42,but rather it curves gradually in
+222.299,3.121,computer science this is how many
+223.56,3.36,algorithms work like binary search
+225.42,3.239,what's interesting though is that if we
+226.92,3.239,know how many times we cut the log we
+228.659,3.36,can raise 2 to the power of that value
+230.159,3.421,in this case 4 to get the original
+232.019,3.841,length of the log that's called
+233.58,4.079,exponentiation and logarithm is the
+235.86,3.239,exact opposite imagine we don't know the
+237.659,3.181,exponent we only know the original
+239.099,3.241,length and want to figure out how many
+240.84,3.3,times we'd have to cut the log to get a
+242.34,3.72,length of 2 we could calculate that with
+244.14,4.019,a base 2 log on the original length
+246.06,3.959,returning a value of 4 when it's base 2
+248.159,3.66,it's called a binary logarithm however
+250.019,3.36,in math it's more common to use base 10
+251.819,3.0,which is called the common logarithm
+253.379,3.901,that'll come in handy but now let's
+254.819,4.561,shift gears to set theory a set is just
+257.28,3.72,an unordered collection of unique values
+259.38,3.84,the best example is a relational
+261.0,4.199,database where each table is a set of
+263.22,3.539,unique rows these tables can be joined
+265.199,3.421,together in a variety of different ways
+266.759,3.601,based on set theory like to select
+268.62,3.12,records that match on both tables you do
+270.36,3.24,an inner join which is called an
+271.74,3.42,intersection and set theory or to grab
+273.6,3.539,all matching records from both tables
+275.16,4.02,you do a full outer join which is a
+277.139,3.901,union and set theory when doing left and
+279.18,3.959,right joins these concepts are combined
+281.04,3.84,like by combining an intersection with
+283.139,3.0,the difference between the two sets now
+284.88,2.52,one thing that's important to notice at
+286.139,3.241,this point is that we're talking about
+287.4,3.84,structures that have a finite number of
+289.38,3.42,elements which falls under the umbrella
+291.24,3.6,of discrete math as opposed to
+292.8,3.899,continuous math like geometry and
+294.84,3.84,calculus that deal with real numbers and
+296.699,3.901,approximations and that brings us to our
+298.68,4.019,next discrete topic com combinatorics
+300.6,3.96,simply put this is all about counting
+302.699,4.141,things especially when combining sets
+304.56,3.84,into combinations or permutations like
+306.84,2.639,if you have an app like Tinder you might
+308.4,3.06,need to count all the possible
+309.479,3.421,combinations of matches as part of a
+311.46,3.06,more complex algorithm that figures out
+312.9,3.12,what to show the end user where maybe
+314.52,3.119,you're building a globally distributed
+316.02,3.179,database and need to figure out how many
+317.639,2.941,database partitions you'll need around
+319.199,3.241,the world ultimately it's all about
+320.58,3.36,understanding how patterns can emerge
+322.44,3.599,what you're looking at here is the
+323.94,3.479,formula for the Fibonacci sequence a
+326.039,3.6,great exercise is to write a function
+327.419,4.381,that generates it congrats bro you just
+329.639,3.961,did combinatorics and unlock the secrets
+331.8,3.66,of the universe engineers at Google use
+333.6,3.72,the same kind of logic to render tiles
+335.46,3.299,on tools like Google Maps and the gods
+337.32,3.54,use this pattern all over the place in
+338.759,4.201,nature combinatorics is closely related
+340.86,4.74,to graph Theory a graph has two basic
+342.96,4.2,parts nodes or vertices and edges that
+345.6,3.599,connect them together like a person
+347.16,3.479,might be a node and an edge might be a
+349.199,3.361,relationship that connects them together
+350.639,3.721,like you love your mom and your mom
+352.56,3.6,loves you back this is an undirected
+354.36,3.779,graph because the relationship goes both
+356.16,4.08,ways however you might also love your
+358.139,3.481,only Fan's girlfriend but this would be
+360.24,3.54,a directed graph because that
+361.62,3.299,relationship only goes One Way edges can
+363.78,2.699,also be weighted meaning one
+364.919,3.241,relationship is more important than the
+366.479,3.481,other if a node can Traverse back to
+368.16,3.9,itself it's called cyclic otherwise it's
+369.96,3.6,known as acyclic as a programmer you'll
+372.06,3.18,often need to build graphs from the
+373.56,3.24,ground up but more importantly know how
+375.24,3.239,to Traverse them like when using
+376.8,3.119,dijkstra's algorithms you find the most
+378.479,2.94,efficient way to navigate through
+379.919,3.12,traffic but before you start writing
+381.419,3.12,graph traversal algorithms you should
+383.039,3.301,know a little bit about complexity
+384.539,3.66,Theory which can tell us in theory how
+386.34,3.84,much time and memory an algorithm should
+388.199,3.84,use we use Big O notation to express
+390.18,3.959,complexity and when talking about time
+392.039,4.081,the input represents the number of steps
+394.139,3.661,it will take to complete a task like if
+396.12,3.66,we read a single element from an array
+397.8,3.66,that would give us o of 1 or constant
+399.78,3.72,time which is extremely fast and simple
+401.46,3.72,if we need to Loop over an array that
+403.5,3.06,would give us o of n where n is the
+405.18,3.239,length of the array but if for each
+406.56,3.72,iteration in that Loop we Loop over the
+408.419,3.241,same array again that would give us o of
+410.28,3.12,N squared which would be far less
+411.66,3.78,efficient however more sophisticated
+413.4,3.72,algorithms like binary search cut the
+415.44,3.42,search area in half after each iteration
+417.12,3.6,providing us with logarithmic time
+418.86,3.54,understanding how to measure complexity
+420.72,3.18,is essential for technical interviews
+422.4,3.12,and is just a good thing to think about
+423.9,3.54,in general but now let's move away from
+425.52,3.239,discrete math and talk about statistics
+427.44,2.759,which is crucial if you want to do
+428.759,3.181,anything with artificial intelligence
+430.199,3.661,because machine learning is kind of just
+431.94,3.96,a fancy way of doing statistics like
+433.86,4.02,when you type in a chat GPT it generates
+435.9,3.78,a response based on the probability that
+437.88,3.18,it fits the prompt provided by the user
+439.68,3.66,at the very least you should understand
+441.06,4.44,mean median and mode and how standard
+443.34,4.139,deviation indicates how close values in
+445.5,3.78,a set are correlated to the mean there's
+447.479,3.241,a ton to learn beyond that but what I
+449.28,3.359,found especially useful is the
+450.72,3.72,difference between linear regression and
+452.639,3.421,logistic regression in a linear
+454.44,3.36,regression the goal is to predict a
+456.06,3.24,continuous value like the amount of
+457.8,3.239,money you'll lose after buying a stock
+459.3,3.66,the relationship between the input and
+461.039,3.66,output variable is linear and the idea
+462.96,4.079,is to find a line that best fits the
+464.699,3.84,data set however logistic regression is
+467.039,3.72,used for an entirely different set of
+468.539,3.901,problems like classification maybe an
+470.759,3.66,app that predicts if an image is a hot
+472.44,3.78,dog or not a hot dog in this case the
+474.419,3.541,relationship is not linear but rather a
+476.22,4.02,sigmoid function which might predict the
+477.96,4.26,probability that a Boolean variable is
+480.24,4.079,true or false and that brings us to our
+482.22,4.14,final and most difficult topic linear
+484.319,4.201,algebra which comes into play in things
+486.36,4.02,like computer graphics and deep neural
+488.52,4.32,networks to comprehend it you'll need to
+490.38,4.62,understand three weird words scalar is a
+492.84,4.079,single numeric value a vector is a list
+495.0,4.379,of numbers like a one-dimensional array
+496.919,4.441,and finally a matrix is like a grid or
+499.379,3.901,two-dimensional array that contains rows
+501.36,3.54,and Columns of numeric values what's
+503.28,3.539,cool is that vectors can represent
+504.9,3.419,points and directions in a 3D space
+506.819,3.301,while matrices can represent
+508.319,3.481,Transformations that happen to these
+510.12,3.359,vectors when you move a player around in
+511.8,3.599,a video game the lighting and shadows
+513.479,3.841,and the graphics change magically but
+515.399,3.781,it's not magic it's linear algebra
+517.32,4.019,that's being distributed on your GPU
+519.18,5.219,imagine you have a 2d Vector that's at
+521.339,4.5,0.2 X 3y it represents a single point in
+524.399,3.181,an image we can perform linear
+525.839,4.381,Transformations here like scaling
+527.58,4.439,translation rotation shear and so on
+530.22,4.86,let's imagine we now want to scale the
+532.019,4.741,point to a value of 4X 6y we can
+535.08,3.6,represent the scaling factors in a
+536.76,3.78,matrix then represent the point as a
+538.68,3.9,column vector and now we can use matrix
+540.54,4.02,multiplication to scale the point to its
+542.58,3.12,Target location operations like this are
+544.56,3.719,also essential in things like
+545.7,4.199,cryptography such as RSA encryption and
+548.279,3.361,are also essential in deep neural
+549.899,3.661,networks which use vectors to represent
+551.64,4.199,features then use matrix multiplication
+553.56,3.719,to propagate values between nodes in the
+555.839,3.241,network the underlying math is
+557.279,3.481,surprisingly simple but requires a
+559.08,3.06,massive amount of computing power to
+560.76,3.48,handle the Staggering amount of data
+562.14,3.66,required as you can see now math is
+564.24,3.0,actually not that complicated and the
+565.8,3.42,more you study it the more the computer
+567.24,3.539,will reveal its magic tricks thanks for
+569.22,3.799,watching and I will see you in the next
+570.779,2.24,one

@@ -1,0 +1,1218 @@
+second,duration,transcript
+1.62,3.0,foreign
+7.639,4.781,visualization in data science
+10.559,3.901,my thanks for talk was that hosts for
+12.42,3.66,making the stock possible I trust a
+14.46,4.7,couple of words about me as it was
+16.08,5.64,already set I am book Grand Master
+19.16,4.48,in in hold the first place in the
+21.72,4.26,ranking for some time so I have some
+23.64,3.899,experience in data visualization and
+25.98,3.6,currently I am working at the senior
+27.539,4.56,data scientist at Karim and use that
+29.58,5.04,resultation at my job too so I have some
+32.099,4.8,practical experience in Industry too
+34.62,3.0,uh let me present you the content of my
+36.899,2.881,talk
+37.62,4.56,first of all I'll speak about better
+39.78,4.92,reservation in general why is it useful
+42.18,5.34,how can it be used for everyday tasks
+44.7,5.1,and what is it then I'll speak a bit
+47.52,5.219,about the history the history of data
+49.8,6.02,visualization is a huge topic so I'll
+52.739,5.64,just highlight several important points
+55.82,4.66,nowadays people usually use specialized
+58.379,4.261,software for data visualization and I'll
+60.48,5.22,show examples and when possible the
+62.64,4.92,pieces of code for it uh there are a lot
+65.7,4.62,of types of charts which people use for
+67.56,5.46,data visualization so they have various
+70.32,4.619,ways of being categorized and I'll show
+73.02,3.48,these ways
+74.939,3.961,um next if you are doing that
+76.5,4.56,visualization like for yourself or
+78.9,4.859,infrequently then you could use just
+81.06,5.04,default ways of doing it but you aim to
+83.759,6.021,do it professionally you would need more
+86.1,6.24,skills and I will talk about the skills
+89.78,4.6,is that previous points were more about
+92.34,3.3,the theory even though with some pieces
+94.38,4.08,of code and next I'll talk about
+95.64,4.979,practice I'll show several examples of
+98.46,4.26,taking a mediocre visualization and
+100.619,4.86,improving it we will see how can they be
+102.72,4.32,improved step by step and then I will
+105.479,3.78,show some practical examples of
+107.04,3.539,visualizations used for machine learning
+109.259,3.621,specifically for models for
+110.579,5.761,interpretation and so on
+112.88,5.62,so what is that visualization if we use
+116.34,3.84,a formal definition then data
+118.5,3.84,visualization is the graphical
+120.18,6.18,representation of information and data
+122.34,6.54,Yeah so basically we are humans our life
+126.36,5.099,our eyes are drawn to colors to shapes
+128.88,5.34,and patterns so data visualization uses
+131.459,4.621,them and regrets our interest and tries
+134.22,5.34,to keep us interested in the message
+136.08,5.58,when we see a chart we usually can see
+139.56,4.16,the trends and developers if we see
+141.66,4.62,something we can easily easily
+143.72,4.78,internalize and understand it and this
+146.28,4.02,is how storytelling works this is much
+148.5,3.42,better than just studying at a huge
+150.3,4.68,spreadsheet with data and then selling
+151.92,5.1,nothing but it's not that easy you can't
+154.98,3.72,just slap a random chart on the data
+157.02,4.079,yeah to create an efficient that
+158.7,5.22,visualization we need to balance the
+161.099,4.92,form and the function for example if we
+163.92,3.84,have a practical bad playing graph it
+166.019,3.961,could be too boring to capture people's
+167.76,5.339,attention yeah on the other hand if you
+169.98,4.8,have Estonian visualization it may have
+173.099,4.261,may fail at delivering the right message
+174.78,4.739,information yes so the data and the
+177.36,3.72,visualization need to work together and
+179.519,4.621,there is not to combine in great
+181.08,4.92,analysis with great storytelling now I
+184.14,3.84,will show two practical examples where
+186.0,4.7,data visualization shines compared to
+187.98,5.339,these looking at simple back statistics
+190.7,5.14,this small data set is called as
+193.319,5.34,compressed that it worked it shows four
+195.84,4.619,pairs of X and Y they have different
+198.659,3.541,values and yet they have the same
+200.459,4.5,statistics and correlation as you can
+202.2,7.259,see in all the cases the mean value of x
+204.959,6.541,is nine the mean value of y is 7 7.5
+209.459,5.101,when the correlation is the same yeah
+211.5,5.34,but if we look at the plots we see a
+214.56,4.2,completely different story yeah the
+216.84,4.5,first Port is something which we could
+218.76,5.58,expect of a Europe situation when I have
+221.34,5.1,some data or some random noise and but
+224.34,3.78,it's still currently yeah but if you
+226.44,3.06,look at the second and the third charts
+228.12,3.66,you can see that they are very different
+229.5,4.379,from the first one and of course there
+231.78,5.519,is the last plot which has a huge
+233.879,6.061,outlier and uh yes so so you can see
+237.299,4.981,that we have the similar data they have
+239.94,4.74,similar statistics but they look
+242.28,4.2,completely different of course when we
+244.68,4.38,have this small table we can see the
+246.48,5.1,problem almost immediately here but if
+249.06,4.02,we have some huge data some big data
+251.58,3.48,with million Scrolls it would be
+253.08,4.14,impossible to just understand something
+255.06,4.859,by looking at it so visualization would
+257.22,5.22,really help in this case yeah another
+259.919,4.981,fun example if this is the set it's
+262.44,5.16,called the resource doesn't yeah as you
+264.9,5.88,could guess from its name it has 12 data
+267.6,6.72,sets with the same stats so basically we
+270.78,5.52,have a 12 uh different data sets which
+274.32,3.9,have the same means the same statistics
+276.3,4.08,but as you can see they look completely
+278.22,3.84,different yeah so this is another great
+280.38,4.08,example of the importance of data
+282.06,4.32,visualization
+284.46,4.38,um as I said history about the
+286.38,4.62,visualization is a huge and vast topic
+288.84,4.68,yeah but it's not possible to speak
+291.0,4.919,about everything in my talk so if you
+293.52,4.92,want to know more about
+295.919,5.301,some important Milestones then you could
+298.44,6.479,read this slide yeah but I'll talk about
+301.22,6.28,two points first of all I want to show
+304.919,5.101,this awesome visualization yeah this
+307.5,5.52,visualization was done around two
+310.02,5.52,centuries ago and it's called the minor
+313.02,7.02,minor diagram it shows the losses
+315.54,7.499,suffered by Napoleon's Army in the 1812.
+320.04,5.999,here you can see six variables the size
+323.039,6.121,of the army the location in the
+326.039,4.321,two-dimensional surface this time the
+329.16,3.66,direction of movement and the
+330.36,4.44,temperature Yeah so basically when you
+332.82,4.02,look at the line the width illustrates
+334.8,5.82,the size of the army at a specific point
+336.84,5.22,of time the temperature axis shows the
+340.62,3.9,possible cause of the change of
+342.06,5.94,environment size yeah and you can also
+344.52,5.58,see where the Army was situated Yeah so
+348.0,4.639,basically you have six variables on the
+350.1,5.939,two-dimensional surface
+352.639,5.081,wrote in 1900 take a series that it
+356.039,4.021,could be the best statistical graph ever
+357.72,4.74,drawn of course since the time there
+360.06,4.32,were some other awesome graphs but this
+362.46,3.54,is still amazing for the time that
+364.38,5.24,Bishop was created
+366.0,7.08,uh speaking of two uh John 2K and Denver
+369.62,5.16,are two famous uh persons because they
+373.08,4.74,did a lot of progress data visualization
+374.78,5.08,one of them had a statistical approach
+377.82,3.42,for exploratory data analysis and the
+379.86,2.959,other one wrote the book the visual
+381.24,4.2,displays of quantitative information
+382.819,4.421,they paved the way for refining data
+385.44,3.84,visualization techniques so that can be
+387.24,5.04,used by simple people and not only by
+389.28,5.46,statisticians yeah in this book that
+392.28,5.039,also defines the principles for a fixed
+394.74,4.679,effective graphical display and they are
+397.319,4.741,still actually in use nowadays yeah
+399.419,4.321,there are a lot of great ideas but they
+402.06,4.5,can be received in the following points
+403.74,5.399,the first one is maximize data in
+406.56,4.859,Croatia the think ratio is the term of
+409.139,5.041,the also and he uses it a lot in his
+411.419,4.62,book yeah basically he was against using
+414.18,3.959,excessive decorations he performed
+416.039,5.1,simple and functional charts yeah
+418.139,5.101,another point is minimize life Factor so
+421.139,3.961,avoid distorting what the data has to
+423.24,4.2,say I will show several examples of it
+425.1,5.76,and there's the points I think are
+427.44,7.14,self-explanary so it's understandable
+430.86,5.64,now I want to talk about the software if
+434.58,3.72,we talk about some beautiful data
+436.5,4.08,visualizations they're usually done by
+438.3,4.86,hand or maybe by usual visual editors
+440.58,4.32,even Photoshop for example but usually
+443.16,3.539,it's too time consuming pretty
+444.9,3.78,inefficient and people prefer to use
+446.699,4.141,more practical software
+448.68,3.84,let's start with python yeah python is
+450.84,3.359,commonly used to programming language
+452.52,3.84,used for machine learning data science
+454.199,4.5,and many other things there are a lot of
+456.36,4.739,packages and MacBook leap is the most
+458.699,4.44,popular one for data visualization it's
+461.099,4.081,possible to do almost anything with it
+463.139,4.5,yeah also it would require a lot of code
+465.18,4.98,those people who already tried math
+467.639,4.201,complete know that it's very verbose
+470.16,3.72,sometimes you need to write a real
+471.84,5.46,result of code yeah but it's extremely
+473.88,5.46,flexible and versatile yeah once in it
+477.3,4.739,isn't very good at is making interactive
+479.34,4.139,clothes because the world's well it's
+482.039,3.121,possible to create them yeah it's
+483.479,4.5,possible but it will be very difficult
+485.16,5.28,and there are better tools for example
+487.979,4.981,this tool this is plotly this is another
+490.44,4.74,python library and it is what's created
+492.96,4.739,for interactive visualizations making
+495.18,4.98,pop-ups filtering zooming and many other
+497.699,4.62,things there is a huge ecosystem around
+500.16,4.8,it for example there is a dash for
+502.319,4.5,creating the dashboards yeah of course
+504.96,4.26,there are many different libraries for
+506.819,4.081,interactive visualizations but for
+509.22,4.319,example I like this one
+510.9,4.68,and some of my visualizations will have
+513.539,4.5,a code illustrating them so here you can
+515.58,5.28,see how to make a singular similar
+518.039,6.12,visualization basically you import the
+520.86,5.88,plotly you get some data as a point of
+524.159,5.341,the frame and you make a plot you define
+526.74,6.0,what data you use so what will be the
+529.5,5.22,high values what do the flow values and
+532.74,3.84,so on and then you make a plot so it's
+534.72,3.5,quite consistent yeah and not very
+536.58,4.5,difficult
+538.22,5.64,uh another Library which can be used
+541.08,2.78,both foreign
+544.64,5.319,I think it deserves a separate mention
+547.2,5.52,well it may be not very popular not as
+549.959,4.801,popular as possible but it's still very
+552.72,3.72,awesome yeah it's one of the few
+554.76,4.32,libraries that are based on the grammar
+556.44,4.68,Graphics grammar of Graphics is like a
+559.08,5.58,huge separate topic I can't discuss it
+561.12,5.339,now too but basically it's a framework
+564.66,3.66,which follows a layered approach to
+566.459,4.5,describing and construct visualizations
+568.32,5.16,of graphic and structured many when you
+570.959,4.981,define different parts of the plot in
+573.48,5.94,different ways so here is an example
+575.94,5.24,yeah it's very different from plotly but
+579.42,5.16,basically you also import this Library
+581.18,6.04,you have the data and you pass it to the
+584.58,4.68,code and then you define what you want
+587.22,3.9,to show you want to show Colors you want
+589.26,4.32,to show tool tips and you can Define
+591.12,4.8,that it will be interactive or not yeah
+593.58,5.04,so it I think it's about it's
+595.92,5.82,interesting properly yeah and very
+598.62,4.92,likely to use it now if we talk about
+601.74,4.44,visualizations and the programming
+603.54,4.5,languages we have to speak about r r is
+606.18,4.32,a widely used programming language for
+608.04,4.739,data science and machine learning and
+610.5,4.44,the digi plot 2 is the most famous
+612.779,4.321,library for visualization many people
+614.94,4.74,say it's the best that we can use for
+617.1,5.64,visualizations even if we compare iron
+619.68,4.92,python yeah so and you can notice that
+622.74,3.719,this button the previous ones are pretty
+624.6,4.14,similar yeah yeah and this is because
+626.459,4.201,digital plot 2 is also based on the gram
+628.74,4.2,of graphics and you can see that the
+630.66,4.44,syntax is even simpler yeah and many
+632.94,4.38,people prefer the syntax they say is
+635.1,4.26,that JoJo Port 2 is awesome and very
+637.32,4.26,easy to use and they can't use anything
+639.36,4.08,else well difficult to argue with them
+641.58,3.379,considering that we need someone to code
+643.44,4.56,for it right
+644.959,4.781,uh now while a lot of people use
+648.0,3.6,programming languages for visualization
+649.74,4.26,yeah there are many solutions to for
+651.6,4.2,making visualizations without them for
+654.0,3.899,example Tableau is one of the most
+655.8,4.2,famous tools for creating visualizations
+657.899,3.961,and dashboards yeah it can be you
+660.0,4.2,published a white audience it can be
+661.86,5.219,self-hosted and so on and so on it's
+664.2,4.98,very flexible it allows a lot of things
+667.079,3.481,to do and it's quite popular so if you
+669.18,4.44,don't want to use programming language
+670.56,5.339,yeah you can use this for example
+673.62,5.459,but there is another side of the
+675.899,4.801,spectrum so while Python and R have some
+679.079,3.421,Syntax for right for making
+680.7,4.139,visualizations that would be difficult
+682.5,5.339,it would be simple but there is that
+684.839,4.68,redress it's a library for JavaScript it
+687.839,4.201,produces Dynamic and interactive
+689.519,4.141,visualizations many stunning
+692.04,4.08,visualizations on the internet are done
+693.66,4.08,create with Nick but it's like extremely
+696.12,4.2,difficult to use it requires a lot of
+697.74,4.86,code it's very difficult so yeah you can
+700.32,3.72,you should use it only if you are ensure
+702.6,4.2,that you want to invest a lot of time
+704.04,4.32,when making that organizations but yes
+706.8,3.599,you will be able to create awesome
+708.36,4.18,things which you won't be able to do any
+710.399,3.321,other way yeah
+712.54,3.979,[Music]
+713.72,5.2,now let's talk about different types of
+716.519,5.041,charts yeah there are really a lot of
+718.92,5.52,them there are box plots error charts
+721.56,5.279,and so on I don't think it's possible to
+724.44,4.92,talk about each and one and every of
+726.839,5.521,them in details yeah I'll speak about
+729.36,5.94,them in a different way so if we have so
+732.36,5.28,many different types of we need to have
+735.3,4.56,some way to structure them to categorize
+737.64,4.139,them to understand which one should we
+739.86,4.38,use because if we know that there are
+741.779,4.861,like 50 different types of graphs then
+744.24,5.279,we maybe we won't have any idea which
+746.64,5.52,one to use in our case so there are many
+749.519,5.88,different ways to categorize them so
+752.16,5.7,here for example this nice visualization
+755.399,4.321,shows different types of plots which can
+757.86,4.8,be used for different types of data so
+759.72,5.88,basically this is categorization based
+762.66,6.239,on the nation of data for example if you
+765.6,5.46,have a single numerical feature yeah you
+768.899,4.921,can use some density photo histogram
+771.06,6.12,it's a basic approach and it's pretty
+773.82,4.94,useful now if you use two of them you
+777.18,4.8,need to show some kind of interaction
+778.76,4.6,and the Scatter Plots or box plots are
+781.98,4.2,great ways of doing
+783.36,4.979,when you have more than then it could be
+786.18,4.92,something difficult and you will have to
+788.339,4.861,use some Advanced types of codes stack
+791.1,4.44,the reports and so on but in practice
+793.2,4.379,they are rarely used so usually you just
+795.54,3.06,take one or two features and compare
+797.579,3.481,them
+798.6,4.919,now if you have categorical variables
+801.06,4.62,then there are different approaches I
+803.519,4.741,suppose bar plot is the most popular one
+805.68,5.099,you just make blocks which shows for
+808.26,4.62,example the account or the variable or
+810.779,4.68,some statistics of it yeah it's pretty
+812.88,6.24,popular it's pretty easy to use and it's
+815.459,5.701,extremely good and versatile now if you
+819.12,4.019,have more than there are some other
+821.16,4.739,types of visualizations and you can see
+823.139,6.061,them on the screen but I think that most
+825.899,5.161,of them are rarely used like well maybe
+829.2,5.1,if we don't speak about Trend diagram
+831.06,4.2,but things like shorts are currently
+834.3,3.74,unique
+835.26,5.22,but also you could have some like
+838.04,6.16,non-tabulary data yeah for example
+840.48,6.06,networks well it's possible to make to
+844.2,6.3,keep the network data in structured and
+846.54,6.12,table that are uh interview but they
+850.5,3.959,usually it's kept some different way and
+852.66,3.179,here you can see for example networks
+854.459,3.06,are doing the grounds that can be used
+855.839,4.201,to plot
+857.519,5.76,now it was about the nature of the data
+860.04,5.58,but now let's see if what sharp should
+863.279,4.381,be used based on what we want to show so
+865.62,4.14,basically if you want to show some
+867.66,5.82,distribution if you want to show the
+869.76,5.579,variable it's maximum minimum value how
+873.48,4.5,it behaves over time then you will use
+875.339,4.44,violence histograms Rich spots and so on
+877.98,3.719,if you want to show the correlation
+879.779,3.961,between two more variables you will use
+881.699,4.681,catapults for example and so on and so
+883.74,5.82,on so there are many ways of showing
+886.38,7.44,different things which you want to show
+889.56,6.48,and that was more about like uh what you
+893.82,4.74,want to show that was more about like
+896.04,4.739,just taking reservation and making yeah
+898.56,4.2,but if you want to make a profession of
+900.779,4.981,it if you want to work in that
+902.76,5.759,visualization as a specialist and use it
+905.76,5.34,yeah then you would need some much much
+908.519,4.861,more skills yeah I want to go into
+911.1,5.16,someone details but I'll describe them
+913.38,5.759,at least a week so for example that
+916.26,4.5,realization is self-explanatory yeah but
+919.139,4.021,for example if you want to make a
+920.76,4.5,dashboard or some other complex
+923.16,5.76,visualization you would need to know
+925.26,5.34,experience interface design ux and many
+928.92,3.599,other things because you need to
+930.6,4.14,understand how to present data so people
+932.519,3.781,are interested for example there are a
+934.74,3.659,lot of dashboards which no one uses
+936.3,4.2,because they have too many plots or the
+938.399,4.321,ports are not understandable yeah it's
+940.5,4.98,important to do it next point is
+942.72,4.619,storytelling because one thing is when
+945.48,3.9,you have some visualization you send it
+947.339,3.841,to someone and that's it another point
+949.38,3.899,is when you're making some presentation
+951.18,4.2,so for example you're showing the
+953.279,3.721,audience some thoughts and that is
+955.38,3.66,describes them in this case it's
+957.0,3.959,important to have storytelling when you
+959.04,4.22,capture the audience you tell the story
+960.959,4.44,and prove the points which you're making
+963.26,4.72,there are many other things like
+965.399,4.321,selecting good colors uh making the
+967.98,4.2,books accessible for different groups of
+969.72,4.859,people and so on and so on and one
+972.18,5.88,separate and very important thing is
+974.579,5.581,style guides so basically style guides
+978.06,5.7,are some standards for formatting and
+980.16,5.76,designing the graphs so basically they
+983.76,3.9,show what graphs should be used in
+985.92,3.24,specific cases what colors should be
+987.66,3.6,used what formation should be used and
+989.16,3.84,so on and so on usually there are some
+991.26,3.48,templates to make it easy for people to
+993.0,4.68,apply the science of the guide
+994.74,5.219,usually these tailgates are created to
+997.68,4.62,buy some organization to show that
+999.959,4.861,people work in this organization who
+1002.3,4.74,made a similar plot yeah so for example
+1004.82,4.259,they could think have things like logo
+1007.04,5.159,brand colors language stones and so on
+1009.079,5.101,and so on so it makes uh it easier for
+1012.199,3.781,different people to make great
+1014.18,4.26,visualizations without spending too much
+1015.98,4.74,time on designing it and it provides
+1018.44,5.94,some uniformity yeah
+1020.72,6.479,so right now I talked a lot about the
+1024.38,3.78,theory but now let's move a bit into
+1027.199,4.98,practice
+1028.16,6.179,so for example if we have some kind of
+1032.179,4.62,not good visualization what are the
+1034.339,4.5,general ways of improving it first of
+1036.799,4.5,all we'll fix errors because there are
+1038.839,4.021,some mistakes in visualizations and this
+1041.299,4.38,is precisely what I will talk about a
+1042.86,5.52,bit later next to make it look better
+1045.679,6.601,because sometimes people choose bad
+1048.38,5.88,colors sometimes people don't don't show
+1052.28,4.56,the nested information
+1054.26,4.74,another point is crypto audience for
+1056.84,4.26,example if you show presentation for
+1059.0,4.32,technical people you would show the
+1061.1,5.22,information detailed analysis detailed
+1063.32,5.099,numbers but if you show the presentation
+1066.32,4.26,to some high-level audience to business
+1068.419,3.901,people you don't need all the details
+1070.58,4.02,you need to show the trends some general
+1072.32,4.62,high-level information yeah
+1074.6,4.92,so right now we will show several
+1076.94,4.859,examples of taking mediocre pots in the
+1079.52,3.96,province them most of them are from a
+1081.799,5.161,wonderful book storytelling with dated
+1083.48,6.54,by by called nothing
+1086.96,4.86,so let's take the first one let's try to
+1090.02,5.64,understand what do we see on the screen
+1091.82,7.26,so we have some survey yeah it seems
+1095.66,5.759,that people asked how do they feel about
+1099.08,5.76,doing science and there are some groups
+1101.419,5.221,of people yeah but I'm not sure what
+1104.84,3.12,exactly they also was supposed to show
+1106.64,4.32,in this visualization
+1107.96,5.94,so let's see how can this be improved
+1110.96,5.219,this is the same data but presented in a
+1113.9,4.74,different way so what is what is the
+1116.179,5.521,difference first of all we have a
+1118.64,5.22,different title and it shows us like
+1121.7,4.74,everything we have the title pilot
+1123.86,4.86,program was a success so we know that
+1126.44,3.9,this is about pilot programming we know
+1128.72,3.78,that it was successful and it was
+1130.34,5.64,complete yeah so it's much better much
+1132.5,5.34,more understandable next we have a few
+1135.98,4.02,recovers because when we have too many
+1137.84,4.44,colors it's difficult to concentrate
+1140.0,6.299,yeah here we have only several colors
+1142.28,6.48,yeah we have only important info and
+1146.299,5.461,it's more structure so basically let's
+1148.76,4.86,see on the both spots again here we will
+1151.76,4.5,see two pie charts and it's difficult to
+1153.62,5.4,compare the categories which were worse
+1156.26,4.919,which were good yeah and we don't really
+1159.02,5.58,understand what was the message but here
+1161.179,7.081,we can see that at first the people were
+1164.6,5.4,like okay before the program and now we
+1168.26,2.82,can see that most people are excited to
+1170.0,3.44,kind of Interest
+1171.08,5.28,so it's like this visualization it
+1173.44,4.66,accentuates the information it doesn't
+1176.36,3.48,distract you and it shows the main
+1178.1,3.06,message right now this is why it's
+1179.84,5.339,better
+1181.16,6.96,next one is this so basically it's the
+1185.179,5.281,quote about uh it demonstrates
+1188.12,3.66,Effectiveness that's the most important
+1190.46,4.44,consideration When selecting the
+1191.78,4.98,provider yeah but basically we like have
+1194.9,3.54,a lot of text on the screen it's
+1196.76,4.799,difficult to understand what we should
+1198.44,5.099,look at at first we have a lot of bars
+1201.559,4.98,and we are not sure what which of them
+1203.539,4.38,are more important yeah so what can be
+1206.539,4.321,done by time
+1207.919,4.921,you can see right now that the most
+1210.86,4.98,important information is highlighted in
+1212.84,5.82,the text so we now see that the code is
+1215.84,5.52,about attributes yeah this the survey
+1218.66,4.8,shows some results and which results are
+1221.36,4.559,the most important yeah this is the
+1223.46,5.52,source and we see three most important
+1225.919,5.161,parts so basically here we attract with
+1228.98,4.439,properly on purpose and track the
+1231.08,4.02,attention of the readers to the parts of
+1233.419,4.321,the port which are important yeah so
+1235.1,5.459,it's really good idea to do it
+1237.74,4.74,another case we have this plot Yeah so
+1240.559,4.74,basically it's some kind of line chart
+1242.48,4.74,of the time we see that something was
+1245.299,3.681,received something was processed and
+1247.22,3.9,that's it there is no other information
+1248.98,4.78,so obviously we need some other
+1251.12,6.179,information so what could we do
+1253.76,5.46,now we can see the clear message that we
+1257.299,5.821,have some action item please approve the
+1259.22,6.24,value to people we show that the number
+1263.12,4.32,of process and the received tickets were
+1265.46,4.38,almost the same so all the problems were
+1267.44,4.68,processed but after some event happened
+1269.84,4.5,two people left we see that the real
+1272.12,4.86,discrepancy so basically this chart
+1274.34,4.8,shows that there was a problem it shows
+1276.98,4.14,the consequences of this problem and it
+1279.14,4.08,shows how can the problem be solved so
+1281.12,4.5,it's like a perfect thing which is a
+1283.22,4.26,call to action we know what happened we
+1285.62,4.2,know what should we do yeah so it's like
+1287.48,6.66,an amazing thing I think
+1289.82,7.739,and the last example we can see that
+1294.14,7.08,here we see two bars we show the
+1297.559,6.181,population of U.S and the customers of
+1301.22,5.76,some company and we have some segments
+1303.74,7.14,with uh some of them highlighted yeah
+1306.98,6.059,but for me this is like uh not very
+1310.88,5.4,looking good looking how can this be
+1313.039,6.061,improved yeah first of all this text
+1316.28,6.06,they are aligned in the same way because
+1319.1,5.34,we don't have this like credit team with
+1322.34,4.38,different climate next we have less
+1324.44,5.4,colors and the most important parts are
+1326.72,4.62,highlighted so now we see or what is
+1329.84,5.839,what are the differences between them
+1331.34,4.339,yeah and it's much more aesthetically
+1335.78,5.639,okay this was about improving some
+1338.299,6.36,mediocre plots now let's talk about some
+1341.419,6.681,things which you shouldn't do at all on
+1344.659,6.541,the screen you can see a cargo notebook
+1348.1,5.38,this is just me scrolling it as you can
+1351.2,4.979,see it shows the distribution of some
+1353.48,5.939,feature and that's it so we have we see
+1356.179,5.521,like thousands or hundreds of plots they
+1359.419,4.201,are almost the same they don't have any
+1361.7,4.62,titles they don't have any comments they
+1363.62,5.58,don't have any analysis so it's like
+1366.32,5.52,it's very it isn't really useful so if
+1369.2,4.74,you want to do something useful okay so
+1371.84,4.56,in this case I would say that there are
+1373.94,4.92,two approaches to the generalized data
+1376.4,3.84,first one is for your own analysis and
+1378.86,3.42,the second is for demonstrating your
+1380.24,4.98,results when you're doing your own
+1382.28,4.98,analysis it could be okay to make dozens
+1385.22,4.98,of thoughts yeah but even in this case
+1387.26,5.34,you should like make titles make
+1390.2,4.979,descriptions for this box so that you
+1392.6,4.14,could say understand them yourself on
+1395.179,2.701,the other hand when you're presenting
+1396.74,3.54,something within your Publishers
+1397.88,5.58,notebook it is much better to have
+1400.28,4.8,several plots which are made with scare
+1403.46,4.68,which have explanations with share
+1405.08,5.94,analysis and some comments yeah so this
+1408.14,5.039,is uh this is what you should do instead
+1411.02,4.98,of this visualization
+1413.179,5.341,next point is that using the
+1416.0,5.34,three-dimensional plots is often not
+1418.52,5.1,very useful because it's like it's very
+1421.34,5.04,difficult to compare the things so for
+1423.62,4.32,example if we look at this plot if we
+1426.38,4.02,look at the column view but it's this
+1427.94,4.44,value can you guess it just by looking I
+1430.4,4.44,would say it's for example 14 but if we
+1432.38,4.14,pronounce lines it's certified so it's
+1434.84,3.36,like this visualization can be
+1436.52,5.519,misleading it could be difficult to
+1438.2,6.54,compare the things so try to avoid it
+1442.039,5.461,and the one more thing is like pie chart
+1444.74,5.1,pie charts in general are very like hot
+1447.5,4.799,debated topics some people say that no
+1449.84,5.1,one should use them some people say that
+1452.299,5.161,you should take care when using them but
+1454.94,4.26,anyway in this case when we have a
+1457.46,3.06,three-dimensional pie chart it's
+1459.2,3.839,extremely difficult to compare the
+1460.52,5.639,things like for example is B bigger than
+1463.039,6.421,C I have no idea from this chart so like
+1466.159,5.041,this could be useful like when the
+1469.46,4.02,different categories have clearly
+1471.2,4.44,different percentages yeah but when we
+1473.48,3.78,want to compare them then it's like not
+1475.64,3.6,very useful
+1477.26,3.899,and this is like a pretty different
+1479.24,3.72,topic
+1481.159,4.861,if you look at this plot you could think
+1482.96,5.099,that the difference was like extremely
+1486.02,4.74,huge like something draws the values
+1488.059,4.201,dropped and now is a much lower but if
+1490.76,3.6,you look at the values you can see that
+1492.26,5.34,the difference is around 10 percent yeah
+1494.36,5.34,so the authors on purpose cut of the
+1497.6,4.62,part of the visualization maybe he
+1499.7,4.02,wanted to mislead some people and uh to
+1502.22,3.36,make them think that the things are
+1503.72,4.579,different from the reality yeah so
+1505.58,5.4,please don't do it
+1508.299,4.781,now I want to show a couple of examples
+1510.98,3.66,of good visualizations here you can see
+1513.08,4.62,the link at the bottom of the screen
+1514.64,4.26,just do this visualization so basically
+1517.7,3.359,I think it's like an awesome
+1518.9,3.84,visualization it's first of all it's
+1521.059,5.461,like pleasing to the eye it has nice
+1522.74,6.72,colors next it has a lot of data so we
+1526.52,5.58,have categories we have two two groups
+1529.46,5.16,of people we have ages we have their
+1532.1,4.26,values for some variable and also we
+1534.62,4.38,have the highlight of the most important
+1536.36,4.98,part of the graph so it's like this plot
+1539.0,4.559,is concise it's aesthetically pleasing
+1541.34,4.079,and it prevents information a lot of
+1543.559,3.48,information is an understandable way
+1545.419,4.201,yeah
+1547.039,5.701,another plot from the same cargo
+1549.62,6.48,notebook it's like it uses a very cool
+1552.74,5.939,type of chart so basically when you want
+1556.1,4.98,to show the quantities or percentages of
+1558.679,4.801,some variable you could use some buyer
+1561.08,5.579,charts in this case we have multiple
+1563.48,6.24,variables multiple categories and we use
+1566.659,5.041,a stacked bar chart but if you used we
+1569.72,4.62,used like absolute values we would have
+1571.7,3.9,bar charts with very different heights
+1574.34,3.24,and it would be very difficult to
+1575.6,5.34,compare them but here we can see that
+1577.58,5.64,all the values sum up to 100 so it's
+1580.94,4.859,very easy to compare them yeah so it's
+1583.22,4.68,like an amazing tool showing how to
+1585.799,3.801,compare different values for many
+1587.9,4.68,categories
+1589.6,5.439,no this is an extremely simple but at
+1592.58,5.82,the same time like awesome chart it's a
+1595.039,5.221,pair plot from Seaborn so it shows a lot
+1598.4,4.32,of things it shows a variable
+1600.26,4.62,distribution it shows clusters of the
+1602.72,4.38,data based on the class it shows
+1604.88,5.46,configure interaction so it's like
+1607.1,4.98,extremely easy to use very aesthetically
+1610.34,3.839,pleasing and shows the very useful
+1612.08,3.78,information so for example we considered
+1614.179,4.401,one of the classes is very difficult
+1615.86,6.0,from the others yeah
+1618.58,7.18,uh this is a completely different type
+1621.86,5.52,of visualization it's a Kepler tool for
+1625.76,4.019,visualizing High dimensional
+1627.38,5.1,geographical data it was developed by
+1629.779,4.861,Uber so if you have like a lot of the
+1632.48,4.38,data a lot of geographical data which
+1634.64,5.519,you want to show on the plot it's a
+1636.86,5.22,perfect rule for this purpose because it
+1640.159,5.0,supports showing like millions of points
+1642.08,3.079,and it's very cool
+1645.279,4.541,now now I want to show how to use
+1647.96,3.719,visualizations for machine learning for
+1649.82,4.68,interpreting the models for showing the
+1651.679,5.1,models and so on this tool you can see a
+1654.5,5.159,visualization from a library called shop
+1656.779,6.241,so it's for explaining machine learning
+1659.659,5.341,models uh you can see here that there
+1663.02,3.779,are like multiple things shown on the
+1665.0,3.24,screen when you see this Library it
+1666.799,3.901,could be pretty difficult to understand
+1668.24,5.22,it but after you get used to it it's
+1670.7,5.4,like awesome because it shows a lot of
+1673.46,5.699,information in a conscious way basically
+1676.1,5.459,it shows that for example High although
+1679.159,4.741,values of some variable how do they
+1681.559,4.201,contribute to the Target variable so for
+1683.9,5.34,example if we have some classification
+1685.76,5.94,for a binary we have two classes and we
+1689.24,5.039,see that blue values are on the left
+1691.7,5.4,part of the screen then we say that the
+1694.279,4.621,low is this value variable the more
+1697.1,4.14,chances that the class is zero the
+1698.9,4.92,higher this variable the high chance of
+1701.24,5.64,this class is one some other variables
+1703.82,5.76,are different yes they're open so it's
+1706.88,4.62,like it's easy to put and it's very
+1709.58,4.68,useful pointer opening things and that
+1711.5,4.559,often is used for industry it's really a
+1714.26,4.5,business key to understand it so it can
+1716.059,5.941,be used and it very it really helps to
+1718.76,7.019,explain people how the models work
+1722.0,6.299,this is another type of Port it ports
+1725.779,4.441,modern buildings so there are many ways
+1728.299,4.801,to create more than weddings like Fast
+1730.22,4.439,text Perth and many other things but
+1733.1,5.52,usually they have a huge dimensionality
+1734.659,7.02,like 300 values 700 values or more so
+1738.62,5.1,you can't compare them directly but if
+1741.679,4.081,you do some dimensionality reduction and
+1743.72,3.839,put them in two-dimensional space you
+1745.76,3.72,can see some awesome scenes so here you
+1747.559,4.801,see different clusters you can see that
+1749.48,5.819,some words belong to specific groups and
+1752.36,4.76,you can understand them much better
+1755.299,5.461,yeah
+1757.12,6.039,uh next this is the the screenshot from
+1760.76,5.34,weights and biases weights and biases is
+1763.159,5.281,a cool library and like local new
+1766.1,4.559,library it's like huge platform for
+1768.44,4.619,login machine learning model training
+1770.659,4.74,for example here you can see that
+1773.059,4.921,someone made a heapers parameter of
+1775.399,5.701,optimization for some gradient boosting
+1777.98,5.52,model yes or maybe no I think it's for
+1781.1,4.02,neural Nets so and the main thing is
+1783.5,3.659,like you can see on the left part of the
+1785.12,4.799,screen different experiments and you can
+1787.159,4.921,select only several of them you can see
+1789.919,4.26,how different keeper parameters
+1792.08,3.38,influence the accuracy and you can see
+1794.179,5.701,that some of them
+1795.46,7.24,have have like high values of the first
+1799.88,5.76,variable they have a high impact on
+1802.7,4.979,accuracy some have low impact you can
+1805.64,4.919,see that some of the parameters have
+1807.679,5.701,like values and uh like some here
+1810.559,4.681,parameters have a higher influence on
+1813.38,4.44,the model performance are lower so it's
+1815.24,4.38,better to optimize only some of them you
+1817.82,3.9,can see the best performance you can see
+1819.62,4.32,compare training plots for different
+1821.72,4.679,brands so it's like an extremely great
+1823.94,6.18,visualization and it's used in practice
+1826.399,6.66,for comparing the models
+1830.12,5.46,this is sharper game and it can be used
+1833.059,4.62,not only for tabular data but also for
+1835.58,4.86,some neural Nets so in this case it's
+1837.679,5.22,for Imaging we can say that when we have
+1840.44,5.4,this image it's a photo of an apple and
+1842.899,4.621,the strawberry when we try to predict a
+1845.84,3.78,strawberry we can see that some part of
+1847.52,4.62,the image is very important like it's
+1849.62,4.679,logical but when we try to predict some
+1852.14,4.259,completely different classes then there
+1854.299,5.041,is nothing useful in the image and we
+1856.399,5.64,can see that nothing is highlighted
+1859.34,4.5,another tool which is also used for
+1862.039,5.341,analysis analyzing the images and the
+1863.84,6.48,models for images use grotcom basically
+1867.38,4.98,it shows activations on different layers
+1870.32,4.079,of the network so you can see that for
+1872.36,4.26,example we try to do something with an
+1874.399,5.4,image of pizza and you can see that
+1876.62,5.039,different parts of neural net highlight
+1879.799,4.321,different parts of the images so this
+1881.659,4.561,way you can see how some internal layers
+1884.12,4.32,of neural network work yeah it's pretty
+1886.22,4.38,cool and can be useful to improve the
+1888.44,4.92,model performance
+1890.6,5.579,this is a different tool it's called
+1893.36,5.58,neuron it shows it can show the model
+1896.179,4.38,structure it's the model agnostic it's
+1898.94,3.479,like framework agnostic so you can use
+1900.559,3.901,it for by torch for tensorflow for
+1902.419,4.98,carrots for some other libraries you can
+1904.46,5.459,use it for on a mix and for many other
+1907.399,5.581,formats and it will show the structure
+1909.919,5.88,of the neural net in details yeah so
+1912.98,4.38,there are some inbuilt capabilities and
+1915.799,4.74,different Frameworks for making
+1917.36,4.86,visualizations of the structure but here
+1920.539,4.62,you can see it's like presented in a
+1922.22,5.1,very nice way and it's easy to look at
+1925.159,4.041,it to share it and so on so it's like a
+1927.32,5.16,great tool
+1929.2,5.859,uh now this was most of the things that
+1932.48,4.98,I wanted to say yeah you can see there
+1935.059,4.681,are several pages with references so you
+1937.46,4.26,can see the examples of the plots you
+1939.74,4.08,can see the code from the plots which I
+1941.72,5.1,may which I showed to you you can see
+1943.82,5.7,some additional thoughts and uh some
+1946.82,4.38,blog posts about them also if you are
+1949.52,3.84,interested like in pursuing that
+1951.2,3.78,visualization more seriously I would
+1953.36,4.08,suggest joining data visualization
+1954.98,4.799,Society it's a huge Society of
+1957.44,4.92,professionals working in naturalization
+1959.779,4.5,industry yeah I'm part of it and it's
+1962.36,4.559,pretty interesting and cool
+1964.279,5.461,so these were the things which I wanted
+1966.919,5.281,to talk about like so that resolution is
+1969.74,4.08,an interesting topic like it can be
+1972.2,3.9,interesting both in theoretical and
+1973.82,4.14,practical matters there's a lot of ways
+1976.1,2.939,to make simple visualizations there are
+1977.96,3.42,a lot of ways to make some awesome
+1979.039,4.14,visualizations and it's up to you to
+1981.38,5.7,decide where you want to draw the line
+1983.179,6.0,and to make the plot yeah so these are
+1987.08,4.74,my contacts I hope this talk was
+1989.179,4.081,interesting to you and now I can answer
+1991.82,3.739,the questions because if you're left in
+1993.26,2.299,the chat
+1998.5,4.779,do you want me to read out the questions
+2000.519,4.981,or how do you want to do this
+2003.279,5.061,I can agree with myself if you are oh
+2005.5,5.94,okay it isn't sure
+2008.34,5.02,sorry sir but uh I'd request you to read
+2011.44,3.359,out the questions as well so that the
+2013.36,2.819,larger audience knows what the question
+2014.799,3.661,is about
+2016.179,3.781,okay yes so I'll start with the
+2018.46,4.88,questions from the chat and then I'll
+2019.96,6.42,move to the Q a section
+2023.34,4.66,okay sorry please uh I mean the
+2026.38,3.6,questions will will take all the
+2028.0,4.019,questions to the question and answer you
+2029.98,4.86,needn't worry about the chat section
+2032.019,5.821,okay sure so okay
+2034.84,5.339,first one uh how do you connect data
+2037.84,6.36,visualizations from python in to nice
+2040.179,6.6,infographics so I think I showed the
+2044.2,6.719,some examples of the plots in my
+2046.779,6.36,presentations basically if you want to
+2050.919,5.401,make some interactive plots you would
+2053.139,6.48,use broadly or for example Tire if you
+2056.32,5.4,want to use some simple mobile flexible
+2059.619,5.22,plots you could use for example metal
+2061.72,5.1,clip the examples we showed are pretty
+2064.839,4.08,basic but it's really possible to make
+2066.82,5.12,very nice infographics in MacBook leap
+2068.919,8.121,but interactive is yeah it's more about
+2071.94,5.1,broadly bokeh and Altair for example
+2077.859,4.441,um the next question can we make
+2079.96,4.679,visualization model of data like
+2082.3,5.64,progressing of spreading disease and
+2084.639,5.581,timeline on the map with real data or
+2087.94,4.459,how we could do that or where we could
+2090.22,5.82,find how to do that
+2092.399,7.121,yeah it's pretty possible I would think
+2096.04,5.52,that there are well right now I can
+2099.52,3.42,think about two approaches so for
+2101.56,4.559,example in Python there are two
+2102.94,5.52,libraries which a good mention the first
+2106.119,7.801,one is again probably another one is
+2108.46,7.56,volume so following is a library for
+2113.92,4.5,um showing visualizations of
+2116.02,5.94,geographical data so basically it has a
+2118.42,5.82,map and you can do anything on it and it
+2121.96,5.22,supports uh supports different widgets
+2124.24,7.02,and for example it it has some time
+2127.18,6.0,access so basically you can make like a
+2131.26,3.78,lot of visualizations for each point of
+2133.18,3.96,time so basically you have your data set
+2135.04,4.559,and you have a column showing some point
+2137.14,4.979,of them for example the date and then
+2139.599,4.861,you will be able to make putting volume
+2142.119,5.101,where you will be able to show to move
+2144.46,5.04,the slider of the time and show show how
+2147.22,3.72,the disease is spread over the time and
+2149.5,4.14,something similar could be done in
+2150.94,5.76,broadly it isn't supposed to be used for
+2153.64,4.62,with all this in geographical data but
+2156.7,4.94,there are some plugins and support for
+2158.26,5.88,it and I also use it for showing some
+2161.64,6.18,geodata so it's pretty possible yeah you
+2164.14,3.68,can find it for example living in cargo
+2168.04,6.02,um the next question is what do we use
+2170.92,6.36,nowadays for interactive dashboards
+2174.06,8.26,uh as I already said for example in
+2177.28,8.04,Python it's uh Dash in R it's uh would
+2182.32,4.56,be shining also if you use Python right
+2185.32,5.4,now there is an awesome Library called
+2186.88,6.6,stream leap it allows you to make uh
+2190.72,4.139,like to make websites very easily and of
+2193.48,4.56,course uh you could include
+2194.859,5.76,visualizations in them and the it's very
+2198.04,4.62,easy to publish your like what you do
+2200.619,4.381,and it's very easy to make like several
+2202.66,4.62,tabs several plots several
+2205.0,5.46,visualizations so I suggest trying
+2207.28,4.86,streamlined it's widely used for showing
+2210.46,3.78,some kind of analysis it's used in
+2212.14,5.12,organization and I use them for example
+2214.24,5.7,in my in my current company too
+2217.26,5.8,yeah so that's it
+2219.94,4.98,uh next question is I also worry about
+2223.06,4.5,which color combinations to use in
+2224.92,5.28,graphs uh do you have any tips and
+2227.56,5.1,tricks about color combinations can I
+2230.2,6.06,keep using same combinations for all my
+2232.66,6.24,graphs thanks yeah so first of all if
+2236.26,5.339,you look at the references in my slides
+2238.9,7.32,you will see several links to the
+2241.599,6.721,articles about selecting uh like colors
+2246.22,4.26,for the visualization basically I would
+2248.32,5.519,say is there are three General
+2250.48,6.3,approaches the first one is that you use
+2253.839,5.341,some color maps from the library so for
+2256.78,4.62,example in R and in Python in most
+2259.18,5.399,libraries you could select some color
+2261.4,4.62,map so color map is uh is like it
+2264.579,3.721,defines the colors used in the
+2266.02,4.38,visualization and the Styles so you can
+2268.3,4.2,just use one of the popular Styles and
+2270.4,4.38,it will be fine yeah so you don't you
+2272.5,3.72,won't be you won't have to select every
+2274.78,4.559,color by yourself
+2276.22,4.8,another point is when you select the
+2279.339,3.901,columns by yourself each time for each
+2281.02,5.7,plot it's very time consuming but it
+2283.24,5.64,could be satisfying but again as you
+2286.72,4.44,answered asked if it's possible to use
+2288.88,4.62,the same combination for all the graphs
+2291.16,5.22,yes it would be like your own style
+2293.5,5.22,guide so you at first decide that for
+2296.38,4.26,example you like using I don't know uh
+2298.72,3.899,yellow and green colors on your plugs
+2300.64,3.719,yeah then you would Define them in some
+2302.619,3.841,settings of your library and you use
+2304.359,4.621,them by yourself later so it will be
+2306.46,5.28,like your own personal style guide and
+2308.98,4.44,those people who make visualizations
+2311.74,3.9,professionally often have their own
+2313.42,4.76,style so it's like a great idea it's
+2315.64,5.04,good that it's not about it
+2318.18,5.399,uh next question
+2320.68,7.5,how would you present sharp values for
+2323.579,5.821,121 features top to 80 covered by 77 of
+2328.18,4.14,the feature
+2329.4,5.32,I would say that it's like a lot of
+2332.32,4.799,features first of all I'm not sure if
+2334.72,6.48,you would really need all of them yeah
+2337.119,6.361,because it's like too many fishes but if
+2341.2,4.8,we really need to show all of them I
+2343.48,6.0,would do something like that first of
+2346.0,6.06,all I would calculate shape values then
+2349.48,5.82,I would make two separate clothes one
+2352.06,5.34,for example for top 10 or top 20 fishes
+2355.3,3.96,because they're most important they have
+2357.4,3.36,the most impact and the second thought
+2359.26,3.66,for the rest of the features so
+2360.76,4.02,basically people who don't have enough
+2362.92,3.78,attention will just look at the first
+2364.78,3.36,plot and people who have enough time and
+2366.7,5.0,attention will look at the second clock
+2368.14,3.56,so I think it will work
+2371.98,4.619,um
+2373.359,6.621,which visualization tool is best power
+2376.599,6.061,bi Tableau operation libraries
+2379.98,5.5,I would say that it depends on the
+2382.66,4.679,purpose like it would depend on how many
+2385.48,3.84,time how much time do you have at hand
+2387.339,4.081,how much experience do you have these
+2389.32,4.86,programming languages and what is used
+2391.42,6.12,in your company so for example if you
+2394.18,5.399,work in some company usually they
+2397.54,4.92,already have some software for making
+2399.579,4.861,visualization so for example if in a
+2402.46,3.72,company it's commonly accepted that
+2404.44,4.919,everyone should use Tableau or everyone
+2406.18,5.46,should use power bi to present uh close
+2409.359,4.381,to each other then like you won't have
+2411.64,3.959,much choice you will have to use it yeah
+2413.74,3.72,next point if you're comfortable with
+2415.599,3.661,using programming languages then you of
+2417.46,4.32,course can use right person libraries
+2419.26,5.099,the only question is will be how would
+2421.78,5.22,you show this plot so you can't expect
+2424.359,4.381,people just to launch YouTube feature
+2427.0,3.72,notebook and look at it you will either
+2428.74,5.46,have to share screenshots or you will
+2430.72,5.28,have to post your code in some way yeah
+2434.2,4.04,so it's like really depends on the use
+2436.0,2.24,case
+2438.339,3.661,um
+2439.48,5.94,the next question do you have a roadmap
+2442.0,4.2,for becoming a databilization expert
+2445.42,4.32,um
+2446.2,6.24,I don't have really a roadmap but for
+2449.74,4.8,example on one of my slides there was an
+2452.44,4.1,information about which skills do you
+2454.54,4.2,need for
+2456.54,4.66,to become an expert in that
+2458.74,5.4,visualization you could just use it like
+2461.2,4.62,at the start and then research how to
+2464.14,4.64,improve your skills in each of the areas
+2465.82,2.96,I mentioned in this slide
+2469.839,4.74,um next question is you showed us a lot
+2472.42,4.62,of good examples but how can you create
+2474.579,5.881,it often I see that such full charts are
+2477.04,5.88,made with uh in this in the skin or
+2480.46,5.22,something like that because Japan and Co
+2482.92,4.439,are too limited what do you prefer yes
+2485.68,3.72,this is a good point and I mentioned
+2487.359,4.5,that the most beautiful visualizations
+2489.4,5.76,are usually created by rent or in visual
+2491.859,7.021,visual editors yeah but again for
+2495.16,6.419,example I showed this uh several slides
+2498.88,4.5,with cool data visualizations I think
+2501.579,4.741,the for example that these
+2503.38,4.86,visualizations like look pretty good and
+2506.32,3.72,you can use you can make them
+2508.24,4.619,importantly you can see the link at the
+2510.04,4.62,bottom of the screen yeah but yeah if
+2512.859,4.26,you want to make something perfect you
+2514.66,5.4,would need to delve deeper so one of the
+2517.119,4.861,options is using day 3.js you will have
+2520.06,3.6,to learn JavaScript but you will be able
+2521.98,6.32,to produce amazing database validation
+2523.66,4.64,yeah uh if you want to
+2529.56,6.76,you will have to do it by hand or by
+2532.56,6.4,using some visual editor so like if you
+2536.32,4.5,have a lot of time and like uh your job
+2538.96,3.899,is about creating it for utilizations
+2540.82,5.279,you will have to do it but if
+2542.859,5.701,visualization is like a small a small or
+2546.099,4.74,well not very small but like only one of
+2548.56,4.14,the parts of a drop it's like much more
+2550.839,5.881,efficient to use the libraries like
+2552.7,6.62,visual button python or uh but broadly
+2556.72,5.49,and just find a good color scheme to use
+2559.32,3.46,to use and show
+2562.21,2.149,[Music]
+2562.78,4.2,um
+2564.359,6.601,the next question is are there any
+2566.98,6.98,resources to develop storytelling skill
+2570.96,5.56,it's difficult to say because basically
+2573.96,4.54,storytelling is like a combination of
+2576.52,4.26,various skills first of all it's about
+2578.5,5.78,creating the good presentation or good
+2580.78,6.66,resultation itself another one is
+2584.28,5.98,like having some good presentation
+2587.44,5.46,skills capturing your audience making
+2590.26,6.9,good accents noticing when your audience
+2592.9,7.5,become like more bored and like like in
+2597.16,5.82,living in them it's also about being
+2600.4,5.64,able to make a good story so I would
+2602.98,5.46,suppose that you need to understand what
+2606.04,4.5,is storytelling is about which skills do
+2608.44,4.32,you need to create a storytelling so
+2610.54,5.52,like I said good presentation creating
+2612.76,5.579,the presentation oratory skills uh
+2616.06,7.1,understanding the audience and then work
+2618.339,4.821,on each of the skills step by step yeah
+2623.44,5.879,um next question
+2626.52,5.799,about classical switch engineering
+2629.319,6.061,very often there are similar steps can
+2632.319,6.121,you advise some after email framework
+2635.38,5.219,for visual validation I know Picard has
+2638.44,4.379,something but maybe other
+2640.599,4.561,as far as I know there is a pandas
+2642.819,5.04,profiling it's a cool Library which will
+2645.16,4.86,show a lot of visualizations for your
+2647.859,4.201,variables most of them will be like
+2650.02,3.9,monotonics new edit so like
+2652.06,3.84,visualization only for single feature
+2653.92,4.08,but it's pretty good it shows a lot of
+2655.9,5.18,Statistics a lot of visualization so
+2658.0,3.599,it's a great start so you could try it
+2661.08,2.519,[Music]
+2661.599,2.0,um
+2663.96,5.8,next question I am fresh out of which
+2667.06,5.039,visualization too you prefer to me then
+2669.76,4.2,I would say just use Python and Seaborn
+2672.099,4.101,for example almost it will be a good
+2673.96,2.24,start
+2676.56,7.24,uh and another question is uh
+2681.52,4.68,sometimes I find it difficult to select
+2683.8,4.799,the type of photograph can you elaborate
+2686.2,4.919,or give more tips on when and which type
+2688.599,4.74,of Charities visualization like for time
+2691.119,4.98,series that which one to use and when we
+2693.339,5.041,group the data then which one previews
+2696.099,5.341,I had a section in my presentation about
+2698.38,9.18,different ways of equalizing the data so
+2701.44,8.7,like this for example if you have some
+2707.56,5.34,cream series there is some specific
+2710.14,4.32,types of visualization if you have like
+2712.9,3.36,network data there are other types of
+2714.46,4.44,visualization in the reference section
+2716.26,4.2,you can find the links to this plot you
+2718.9,3.24,will be able to see all the plot it's
+2720.46,3.48,like I wasn't able to make a full
+2722.14,3.84,screenshot because the plot is very huge
+2723.94,3.6,yeah but you will be able to see which
+2725.98,4.56,visualization should you use in which
+2727.54,6.43,case so it's like uh you will be able to
+2730.54,4.02,find this information by references
+2733.97,1.129,[Music]
+2734.56,1.799,um
+2735.099,3.841,okay
+2736.359,6.5,next question is which is better to show
+2738.94,7.2,correlation cutter plots or heat Maps
+2742.859,6.46,basically I would say they are both to
+2746.14,6.06,good things but they depend on the
+2749.319,5.161,nature of your data so for example if
+2752.2,4.26,you have two numerical variables to
+2754.48,4.5,continuous variables it's much easier to
+2756.46,6.3,use the scatter plot between them yeah
+2758.98,6.18,but heat map is I would say it's uh it's
+2762.76,3.839,better when you have some categories so
+2765.16,3.5,for example you have two categorical
+2766.599,6.72,variables and you want to show the
+2768.66,6.34,values of color across like different
+2773.319,3.841,values of the combinations of these two
+2775.0,4.64,features then it would be easier to use
+2777.16,2.48,a heat map
+2779.859,6.181,um so it was two questions
+2782.68,5.28,next one what to do if I didn't find the
+2786.04,3.66,influential factors in the date to know
+2787.96,3.96,in order to predict the right decision
+2789.7,4.13,and what is the best tool to know the
+2791.92,2.04,factors
+2793.83,1.749,[Music]
+2793.96,4.44,um
+2795.579,5.0,I would say that okay so I suppose it's
+2798.4,5.459,more about machine learning so basically
+2800.579,5.561,uh we need we need to know the most
+2803.859,6.781,influential features in the data to make
+2806.14,6.3,the model yeah uh I would say that if
+2810.64,3.959,you want to start then you can simply
+2812.44,3.78,train some model for example if you step
+2814.599,3.781,over data you could just take some
+2816.22,4.68,gradient boosting model or in the forest
+2818.38,5.04,you train it then you use for example
+2820.9,5.459,shop or some other library to see Fisher
+2823.42,5.76,importance and you can consider this uh
+2826.359,4.74,which is to be most influential then you
+2829.18,3.54,could create some features and see that
+2831.099,5.361,maybe the new features will be even
+2832.72,3.74,better than the additional ones
+2837.64,5.459,um another question this is a very
+2840.579,5.341,beautiful presentation may we have it or
+2843.099,4.98,code being used in the presentation
+2845.92,4.8,uh yes of course I will share the link
+2848.079,5.341,with the hosts and they will share it
+2850.72,4.379,with everyone using email so you will
+2853.42,3.96,have the link to the whole presentation
+2855.099,6.121,and every content in it
+2857.38,6.68,I see some people raise hands so how how
+2861.22,2.84,do we manage it
+2864.46,4.859,um most of the uh raised hands I mean
+2867.28,5.039,the questions they had have been put
+2869.319,7.821,into the Q a section
+2872.319,4.821,um so that's pretty much it so
+2877.54,5.88,okay if anyone has any questions you can
+2880.18,5.76,again post them on the Q a and I will
+2883.42,5.28,answer them yes guys we have a couple
+2885.94,5.22,more minutes as well uh to anyone if you
+2888.7,5.76,have questions if you do please post
+2891.16,4.56,those questions in the Q a section
+2894.46,4.08,um there were actually a couple of
+2895.72,5.16,people's people who have raised their
+2898.54,5.779,hands and I had asked them to put their
+2900.88,3.439,questions in the Q a section so
+2904.66,4.74,um and for all others uh just wanted to
+2908.14,4.62,let you know
+2909.4,4.5,we have put up a feedback poll please do
+2912.76,3.839,fill in
+2913.9,5.219,okay so you have a question here
+2916.599,6.841,it's the question please post quote and
+2919.119,6.901,the presentation it will be sent okay
+2923.44,5.94,see guys we've repeatedly told you all
+2926.02,6.059,that you'll get these files via a mail
+2929.38,5.82,so don't worry about it
+2932.079,5.341,um so um I guess that's the end of it uh
+2935.2,3.72,thank you thank you Mr Luke and Uncle
+2937.42,3.6,thanks for the session
+2938.92,4.62,um on behalf of analytics video I'd like
+2941.02,4.799,to uh thank you for your time and for
+2943.54,4.2,you know delivering such wonderful
+2945.819,3.841,knowledge
+2947.74,4.74,um and also for being patient with all
+2949.66,6.6,these questions we had I must say
+2952.48,4.859,a bit more questions than we usually do
+2956.26,3.54,um
+2957.339,3.661,and I hope you have a wonderful day in
+2959.8,3.18,Moscow
+2961.0,4.92,I'd also like to thank our audience for
+2962.98,4.98,being with us until the end so once
+2965.92,4.199,again thank you sir
+2967.96,4.8,and thank you also it was very
+2970.119,4.2,interesting and it was nice seeing so
+2972.76,4.26,many questions and being able to answer
+2974.319,4.941,them oh we'll be glad you'll be happy
+2977.02,4.38,have a great day
+2979.26,4.0,engaging with my
+2981.4,5.1,okay everyone thank you for being here
+2983.26,5.46,uh hope to see you all again
+2986.5,4.72,um again have a wonderful day ahead
+2988.72,6.86,thank you
+2991.22,4.36,[Music]

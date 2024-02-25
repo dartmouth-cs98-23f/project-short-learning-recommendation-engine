@@ -1,0 +1,216 @@
+second,duration,transcript
+0.06,2.76,hey friends welcome back to the channel
+1.62,2.699,so in this video we're going to be
+2.82,2.82,covering the five different types of
+4.319,3.181,software testing that you need to know
+5.64,3.12,as a software developer now if you've
+7.5,2.94,looked into software testing before
+8.76,3.299,you're probably aware of the testing
+10.44,3.3,pyramid chances are you probably haven't
+12.059,3.24,thought much about why the pyramid is a
+13.74,3.24,pyramid to start off with test at the
+15.299,3.181,bottom of the pyramid should make up the
+16.98,2.94,majority of the test in your test Suite
+18.48,3.299,this is where you should be focusing
+19.92,3.42,most of your efforts on as we move up
+21.779,3.601,the pyramid the tests becomes slower
+23.34,4.14,they become more complex and they take
+25.38,4.86,more time to maintain at the base of our
+27.48,4.98,pyramid we have the unit tests now most
+30.24,4.08,developers are aware of what unit tests
+32.46,3.72,are and the importance of them we write
+34.32,3.54,unit tests for all the methods and
+36.18,3.36,functions in our code to make sure that
+37.86,3.3,our program is working correctly at the
+39.54,3.06,lowest level the number of unit tests
+41.16,2.88,you have to write is really dependent on
+42.6,3.54,what the goal is for your testing
+44.04,3.72,strategy you should try and test every
+46.14,3.419,single line of your code in your methods
+47.76,3.299,if you're not able to do that then it's
+49.559,3.18,usually a sign that your function is
+51.059,3.541,doing too much or you haven't written it
+52.739,4.081,with testability in mind when we write
+54.6,4.139,unit tests to test every single line of
+56.82,3.84,code this is what we refer to as code
+58.739,3.901,coverage typically one hundred percent
+60.66,3.719,code coverage refers to line coverage
+62.64,3.42,but this will vary depending on what
+64.379,3.121,type of Industry you're working in if
+66.06,2.94,you're working for the military or the
+67.5,2.88,aviation Industries then you'll
+69.0,4.38,generally need what they call modified
+70.38,5.46,condition decision coverage or mcdc for
+73.38,4.08,short for mcdc you not only test every
+75.84,3.599,single line of code you also have to
+77.46,3.36,test every single decision as well let's
+79.439,2.701,say you have an if statement that has
+80.82,3.839,three different conditions in it
+82.14,4.08,therefore under mcdc coverage you need
+84.659,2.761,to write at least eight different unit
+86.22,3.3,tests to cover all the different
+87.42,3.36,scenarios you would assume that if
+89.52,2.4,everything is working at the lowest
+90.78,2.699,level then it's all going to work when
+91.92,3.0,you put it together but that isn't
+93.479,3.481,always the case which is why we need the
+94.92,3.36,next level of tests the next level up in
+96.96,3.72,our testing pyramid is what we call
+98.28,4.14,component tests this is where we test a
+100.68,2.939,complete section of your application for
+102.42,2.879,example if you're writing a web
+103.619,4.441,application you might have a front end
+105.299,4.981,an API and a database a component test
+108.06,3.599,for the API would therefore test the API
+110.28,3.24,in isolation from all the other
+111.659,3.6,components we wouldn't include the front
+113.52,3.12,end for example and we'd also mock out
+115.259,3.0,the database as well as any other
+116.64,3.299,components that your API is talking to
+118.259,3.781,the purpose of the component test is to
+119.939,4.081,make sure that your application is doing
+122.04,3.84,what you expect it to do without the
+124.02,3.3,interference of the other components by
+125.88,3.599,mocking out the database we can test
+127.32,4.26,both the happy path and the unhappy path
+129.479,3.661,of your application we can see how the
+131.58,3.42,application will behave under certain
+133.14,3.9,conditions such as if the database is
+135.0,4.26,down or if you send in a bad request
+137.04,3.66,component tests make sure that all those
+139.26,3.42,units that you tested in the previous
+140.7,3.66,level work well when you put them
+142.68,3.12,together the next level on our testing
+144.36,4.08,pyramid is what we call the integration
+145.8,4.439,tests in the previous level we mocked
+148.44,3.06,out the database and other factors but
+150.239,3.301,here we want to make sure that those
+151.5,3.78,Integrations actually work this is where
+153.54,3.0,you'll usually find out that this team
+155.28,2.94,that you've been working with that have
+156.54,4.08,decided to use camel case instead of
+158.22,3.36,snake case for their API the monsters or
+160.62,2.1,you'll find out that you have the
+161.58,3.0,connection string wrong for your
+162.72,3.84,database or you've written a typo in one
+164.58,3.42,of your SQL queries for all of these
+166.56,2.819,tests that we've done so far we
+168.0,3.9,generally don't do it on a natural
+169.379,4.021,environment unit tests component tests
+171.9,3.54,and integration tests are all generally
+173.4,3.96,run as part of the build process or at
+175.44,4.079,the very least before a release thanks
+177.36,3.72,to Docker it's fairly easy to spin up a
+179.519,3.901,database and use it when you're running
+181.08,4.14,your tests on your cicd server a lot of
+183.42,3.42,developers get confused by integration
+185.22,3.239,tests thinking they need to test all of
+186.84,3.24,their application but that isn't the
+188.459,3.481,case you just need to test the
+190.08,3.84,Integrations between your components
+191.94,3.42,generally depending on who writes your
+193.92,3.599,integration tests whether it be a
+195.36,3.42,developer or a tester will determine
+197.519,3.481,whether they're considered white box
+198.78,3.84,testing or Black Box testing for example
+201.0,3.599,if your integration tests are written by
+202.62,3.78,a developer and you're testing whether
+204.599,3.481,your database repository can correctly
+206.4,3.66,write you your database then this would
+208.08,3.54,be considered a white box test however
+210.06,3.42,if your integration tests are written by
+211.62,3.66,a tester then they might be calling the
+213.48,3.24,API and then seeing whether there's
+215.28,3.239,something in the database this would
+216.72,3.48,therefore be more of a black box because
+218.519,3.961,they don't need to know the internals of
+220.2,3.66,the application it's not just the calls
+222.48,3.24,to the database that you might want to
+223.86,3.42,include in your integration tests you
+225.72,3.36,also want to test things like calling
+227.28,4.019,other apis as well as writing a message
+229.08,3.9,for a message queue so far we've tested
+231.299,3.421,the individual functions we've tested
+232.98,3.66,the components and we've tested how they
+234.72,4.019,interact together the next level is to
+236.64,3.48,test the application from end to end if
+238.739,2.821,you're writing a web application then
+240.12,3.6,these will typically be in the form of
+241.56,4.739,automated UI tests and we generally use
+243.72,4.86,tools such as selenium or Cyprus to
+246.299,3.841,drive the UI through a web browser the
+248.58,3.84,goal here is to test that everything is
+250.14,3.739,working as expected end-to-end tests
+252.42,3.719,typically include a mix between
+253.879,4.42,functional testing such as making sure
+256.139,4.32,the login works or a list is populated
+258.299,3.78,correctly and acceptance testing which
+260.459,3.721,makes sure that your application is
+262.079,3.421,meeting business requirements we tend to
+264.18,3.6,write end-to-end tests in what we call
+265.5,4.199,gherkin language which follows the given
+267.78,3.78,when then pattern Frameworks such as
+269.699,4.081,spec flow and cucumber allow us to
+271.56,4.26,execute code in this format while still
+273.78,3.96,having the tests understandable by the
+275.82,4.14,business stakeholders end-to-end tests
+277.74,3.42,can take a really long time to run and
+279.96,2.94,typically they're not run on every
+281.16,3.539,single build once you have a lot of them
+282.9,3.239,they can take several hours to run so
+284.699,3.241,you generally need to run them overnight
+286.139,3.84,this isn't ideal if you want to be
+287.94,4.02,releasing multiple times per day and
+289.979,4.321,therefore most teams split up their
+291.96,3.959,tests into multiple groups with a
+294.3,3.66,critical group that they can run before
+295.919,4.141,each deployment unlike the other tests
+297.96,3.66,that we've looked at so far end-to-end
+300.06,3.24,tests needs all the components working
+301.62,4.32,together and therefore they typically
+303.3,4.74,run on an environment such as QA or uat
+305.94,4.02,it can take a while to have a stable set
+308.04,3.78,of end-to-end tests especially if you're
+309.96,3.54,running them in a browser subtle things
+311.82,3.54,such as your application taking a little
+313.5,3.72,longer to load can cause your tests to
+315.36,3.3,break and therefore you generally need
+317.22,3.66,someone working full time on your
+318.66,3.72,automation tests many of the Frameworks
+320.88,3.599,allow you to take screenshots when a
+322.38,3.539,test fails this can be really useful to
+324.479,3.301,help you see what caused the failure
+325.919,3.421,there are quite a lot of different tests
+327.78,3.419,that fall under this bracket such as
+329.34,3.9,performance testing regression testing
+331.199,3.481,and security testing finally at the very
+333.24,3.42,top of our pyramid we have the manual
+334.68,3.54,tests these are the tests that are
+336.66,3.36,either too complicated to try and
+338.22,3.539,automate or they're not worth the time
+340.02,3.239,in trying to do it usually it's a case
+341.759,3.421,of having not enough testers to
+343.259,3.66,developers which results in tests having
+345.18,3.72,to be run manually instead of automating
+346.919,3.361,them ideally you want to have the
+348.9,2.579,majority of your tests automated
+350.28,2.94,otherwise you're going to be in this
+351.479,3.301,vicious cycle of not having enough time
+353.22,3.3,to test your application before each
+354.78,3.24,release if you find a bug in your
+356.52,3.06,application then it's always better to
+358.02,3.36,find it lower down the pyramid than it
+359.58,3.179,is near the top let's say you find a bug
+361.38,3.36,while you're doing your manual testing
+362.759,3.78,you now have to search for your logs and
+364.74,3.42,try and work out where exactly your
+366.539,3.6,application failed compare that to
+368.16,3.539,finding a bug in your unit tests and
+370.139,2.881,you'll be given a stack Trace that shows
+371.699,3.181,you the exact line where the problem
+373.02,3.3,occurred if you like this video then
+374.88,3.0,please hit that like button it really
+376.32,3.659,helps with the YouTube algorithm and it
+377.88,3.36,helps others find my videos thank you
+379.979,3.681,for watching and I'll see you in the
+381.24,2.42,next video

@@ -1,0 +1,168 @@
+second,duration,transcript
+7.68,2.48,"When building a highly scalable system,  "
+10.16,4.96,"choosing the right database is often the 
+single most important decision we'll ever make."
+15.12,5.04,"If we are fortunate enough to be tasked with 
+the challenge of picking the next database  "
+20.16,4.08,"for our super-fast growing business, 
+here are some key points to consider."
+25.2,3.28,"We are talking about a database 
+for a real growing business,  "
+28.48,6.64,"where a bad choice would lead to extended 
+downtime, customer impact, and even data loss."
+35.12,2.4,"We are not picking something 
+for our weekend project."
+38.16,2.8,This take is probably a bit controversial.
+40.96,0.96,Let’s dive right in.
+42.84,3.48,"First, are we positive that 
+we need a different database?"
+47.2,3.28,"There is a compelling reason we started 
+to look for an alternative, right?"
+51.44,2.24,Is the existing database breaking at the seams?
+54.24,2.48,Maybe the p95 latency is through the roof.
+57.36,3.52,"Maybe the working set is 
+overflowing the available memory,  "
+60.88,5.04,"and even the most basic requests need to 
+go to the disk and slow everything down."
+66.88,4.96,"Whatever the issues are, make 
+sure they are not easily solvable."
+72.56,2.8,Let’s read the database manual of our current  
+75.36,3.44,"database system - front to 
+back - and read it again."
+79.92,6.24,"There could be a configuration knob or two that 
+we can tweak to give us a bit more breathing room."
+86.16,6.08,"This breathing room could come in handy, because 
+migrating a database could take a long time,  "
+92.24,1.84,usually much longer than we think.
+95.12,4.8,"These knobs could come in the form of 
+tuning the working set memory size,  "
+99.92,6.0,"choosing a different compaction strategy or 
+even changing some garbage collection behavior."
+106.88,2.88,Databases are complex and highly tunable.
+110.48,2.16,Understand the architecture of our database.
+113.28,1.52,Know its limitations.
+116.0,2.64,Reach out to experts in the community.
+118.64,1.36,Describe our problems.
+120.0,3.68,"People in the know could help, 
+and often in surprising ways."
+124.48,5.28,"To look for more untapped headroom, maybe there 
+are some fixes to our application architecture  "
+129.76,1.84,that would give us more breathing room.
+132.4,4.72,"Can we put a cache in front of it, and 
+give us a few more months of runway?"
+137.68,3.76,"Can we add read replicas 
+to offload some read load?"
+141.44,3.52,"Can we shard the database, or 
+partition the data in some way?"
+145.52,4.8,"Maybe the data is naturally siloed, 
+and sharding is an acceptable solution."
+151.28,1.2,The bottomline is this:
+153.04,4.24,"Migrating live production 
+database is risky and costly."
+157.28,4.4,"We better be damn sure that there is no 
+way to keep using the current database."
+162.72,4.4,"Okay, we have exhausted all 
+avenues for the current database."
+167.12,2.0,How do we go about choosing the next one?
+169.76,5.28,"We, developers, are naturally drawn to 
+the new and shiny, like moths to a flame."
+175.04,3.28,"When it comes to databases, 
+though, boring is good."
+178.88,4.96,"We should prefer the ones that have been around 
+for a long time and have been battle tested."
+184.56,4.32,"Depending on the industry we are in, 
+our posture could be a little different."
+189.52,3.28,"Banking and finance are a lot 
+more conservative, for example."
+193.36,4.8,"Whatever it is, there should be a ready 
+market of experienced administrators  "
+198.16,2.72,"and developers for the 
+database we are considering."
+201.92,2.96,Software engineering at scale is about tradeoffs.
+204.88,2.96,"When it comes to databases, it is even more true."
+208.72,1.92,Keep in mind there is no free lunch.
+210.64,2.88,Be weary of outrageous marketing claims.
+214.24,4.8,"Infinite, effortless horizontal 
+scalability comes with a hidden cost."
+219.04,2.56,Dig deep to find where that cost is hiding.
+222.48,3.36,"Instead of reading the shiny 
+brochures, go read the manual."
+226.48,2.16,There is usually a page called “Limits”.
+229.36,1.36,That page is a gem.
+231.44,2.96,The FAQ section is also very useful.
+235.12,4.72,"These pages in the manual are where we 
+learn the real limits of a new database."
+240.4,3.84,"Its design constraints - 
+the fine prints so to speak."
+244.24,4.16,"If the brochure promised 
+infinite horizontal scalability,  "
+248.4,3.92,"these are the places to fact-check 
+those claims and to find the catch."
+253.44,4.88,"In our experience, the fancier the claims, 
+the longer the disclaimers are in the back."
+259.2,3.28,"For example, many NoSQL databases support  "
+262.48,3.6,"much higher scale than the 
+trusty old relational databases."
+266.64,4.48,"They often claim to support near 
+linearly horizontal scalability."
+272.16,2.8,"Here are the common trade-offs 
+that come with them."
+275.6,3.6,"One, they eliminate or limit 
+transactional guarantees."
+279.76,4.16,"Two, they severely limit 
+data modeling flexibility."
+283.92,2.88,There are no queries across data entities.
+286.8,3.2,The data is highly denormalized where the same  
+290.0,6.24,"piece of data is stored in many collections 
+to support different data access patterns."
+296.24,4.32,"To learn even more about a particular 
+database, join the chat room."
+300.56,1.44,Ask lots of questions.
+302.0,3.52,"For open source projects, read the GitHub issues."
+305.52,3.2,Learn as much as possible about the candidate now.
+308.72,2.72,"The investment is relatively 
+small at this juncture."
+312.0,3.12,"Once we narrow down the 
+database options, what’s next?"
+315.68,1.2,"Well, let’s have a shoot-out."
+317.6,5.04,"Create a realistic test bench for 
+the candidates using our own data,  "
+322.64,2.64,with our own real-world access patterns.
+325.28,1.68,"We have that data, right?"
+326.96,3.76,"After all, our current database 
+is bursting at the seams,  "
+330.72,3.44,"so getting some representative 
+dataset should be possible."
+335.04,3.12,"Yes, this is costly, and it could take weeks."
+338.16,2.16,But we cannot afford to skip this step.
+341.04,5.6,"Migrating a production database is risky, and 
+it takes a lot more work than benchmarking."
+346.64,5.2,"If we are staking our career on this new 
+database, let’s make sure it will work."
+352.48,2.8,"During benchmarking, pay 
+attention to the outliers."
+355.28,2.08,Measure P99 of everything.
+357.36,1.76,The average is not meaningful.
+360.0,5.84,"Try hard to replicate the real workload, and then 
+push it further and see where it starts to break."
+366.8,4.48,"Try some of the more risky operational 
+tasks - like failing over a node,  "
+371.28,2.96,"or testing for data corruption 
+during network partitions."
+374.8,2.88,"Try up- or down-sharding, if it is applicable."
+378.88,3.36,"After everything checks out, 
+plan the migration carefully.  "
+382.8,3.12,Write out a detailed step-by-step migration plan.
+385.92,2.4,Have your peers review it thoroughly.
+388.32,5.52,"If possible, migrate a small service first, 
+and learn as much as we can from that."
+394.72,5.04,"Picking the right database is not glamorous, 
+and there is a lot of hard work involved."
+399.76,5.36,"Migrating to a new database in the real world 
+could literally take years at a high scale."
+405.92,0.6,Good luck.
+406.52,3.56,"If you would like to learn 
+more about system design,  "
+410.08,2.56,check out our books and weekly newsletters.
+412.64,2.24,Please subscribe if you learned something new.
+414.88,2.72,"Thank you so much, and we’ll see you next time."

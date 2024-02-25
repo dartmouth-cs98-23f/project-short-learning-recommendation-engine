@@ -1,0 +1,223 @@
+second,duration,transcript
+7.0,5.59,hello all welcome back to building
+9.92,5.01,predictive systems with Python and
+12.59,3.87,machine learning we're in a new section
+14.93,4.29,about building our first model
+16.46,5.88,classifying iris flowers by petal length
+19.22,5.61,and width and in this section we're
+22.34,5.82,going to take a look at number one
+24.83,5.88,exploring our first data sets number two
+28.16,6.24,building our first model and number
+30.71,7.26,three assessing our model let's talk
+34.4,5.4,about exploring our first data sets in
+37.97,3.6,this video we're gonna take a look at
+39.8,5.16,three topics so we're going to talk
+41.57,5.1,about what is - IRS data sets number two
+44.96,5.279,is what is the machine learning tasks
+46.67,5.22,associated with this iris data sets and
+50.239,5.25,number three is what I trained has
+51.89,6.509,splits and the features let's go in and
+55.489,4.531,take a look so here we are back in our
+58.399,3.84,trivia notebooks under building
+60.02,4.709,predictive systems where I'm going to
+62.239,5.371,just bring you through all of how we can
+64.729,5.551,build predictive learning systems in
+67.61,5.25,driven notebooks so it also teaches you
+70.28,4.71,how to use the popular two in the data
+72.86,4.259,science community the first thing to do
+74.99,5.46,is to get up data sets right so what we
+77.119,7.11,do is this data sets is actually within
+80.45,6.36,second learn already to create the iris
+84.229,5.191,data sets within your Python memory we
+86.81,5.13,actually because as the iris dataset is
+89.42,4.32,such a classic data sets to learn
+91.94,4.289,machine learning with it actually comes
+93.74,7.01,with secular first thing we need to do
+96.229,10.471,is from SK learn the
+100.75,13.03,in port load Maris and we need to create
+106.7,10.11,the data sets so we have iris load let's
+113.78,8.16,look at I receive a so iris data is a
+116.81,8.339,big dictionary so we have description we
+121.94,6.659,have the data itself and we have two
+125.149,7.391,feature names and the targets right so
+128.599,7.351,let's first look at the description
+132.54,9.3,so iris data is an iris plants database
+135.95,8.77,so it has a hundred 50 data points 50 in
+141.84,6.209,each of the three classes and it has
+144.72,6.39,four attributes for numeric predictive
+148.049,4.741,attributes and each attribute is
+151.11,4.59,described here we have sepal length
+152.79,6.15,sepal width petal length and petal width
+155.7,5.7,and there are three classes of iris we
+158.94,7.5,have setosa versicolor
+161.4,6.959,and virginica right so this is our
+166.44,4.609,introduction to our first data sets
+168.359,6.681,right so let's talk in depth about
+171.049,8.41,particular features of this data set so
+175.04,8.619,to do this let's first print out the
+179.459,6.9,data so I've printed this out actually
+183.659,5.66,with the pandas dataframe so that we can
+186.359,7.831,discuss this in a more visual sense and
+189.319,7.901,again we can see 150 data points in this
+194.19,6.81,table so a data point is very simple a
+197.22,6.629,data point is a collection of all the
+201.0,6.18,values of all the features in your data
+203.849,6.091,set and the correct answer right so in
+207.18,4.559,the Irish data sets we have three
+209.94,5.159,different types of flowers we want to
+211.739,7.62,classify and each type is denoted by a
+215.099,7.95,number so the type 1 is 0 type 2 is 1
+219.359,5.791,and type 3 is 2 we also have these
+223.049,5.671,things called features so features you
+225.15,7.14,can think of it as features of the thing
+228.72,6.12,we are looking at right so in the IRS
+232.29,5.279,data set a data point is represents a an
+234.84,4.619,individual flower right so the flower
+237.569,5.28,has many features right a flower can be
+239.459,5.071,tall wide different colors etc and in
+242.849,4.711,particular in the Irish data set the
+244.53,5.97,features that are present in the data
+247.56,7.139,sets are the sepal length sepal width
+250.5,7.32,and petal length and petal width of the
+254.699,6.331,individual flower measured and also what
+257.82,5.099,type of flower it is right so here we
+261.03,5.34,have to first have a flower which I
+262.919,5.761,believe should be iris setosa
+266.37,5.34,and this atossa flower has the sepal
+268.68,7.14,length of 5 cm sieve a width of 3 and
+271.71,7.05,how cm petal length of 1.4 cm and put a
+275.82,4.89,width of point 2 cm so always visualize
+278.76,4.14,in your head actually each data point
+280.71,5.1,it's not just a set of numbers but is
+282.9,6.06,actually an actual flower or maybe his
+285.81,5.46,actual house after person actual picture
+288.96,6.33,actual fashion item whatever it is
+291.27,7.11,always remember that machine learning is
+295.29,5.58,about discovering truth and patterns in
+298.38,4.83,the real world so half the real world in
+300.87,5.43,your head in this case we've measured
+303.21,5.55,for features from the flowers and these
+306.3,7.41,four features are the first four columns
+308.76,9.12,and the target is the type of flower
+313.71,6.69,that's is associated with or the type of
+317.88,4.23,flower that we measured and so let's
+320.4,4.68,talk a little bit about machine learning
+322.11,6.0,tasks wait under here so here we're
+325.08,5.899,trying to use the features of the flower
+328.11,5.25,to predict what type of flower it is
+330.979,4.781,because there are only three types of
+333.36,5.01,flowers and there you can only be one of
+335.76,5.4,the three types this is what's called a
+338.37,7.5,classification task where you're trying
+341.16,7.47,to predict group or label this opposes
+345.87,6.81,or mirrors what's called a regression
+348.63,6.21,task where you are trying to predict a
+352.68,3.63,number that is continuous
+354.84,4.139,right so you're trying to predict a
+356.31,6.77,number where there are no separation
+358.979,8.19,between nicely bucket the classes and
+363.08,5.8,there are also no predefined classes
+367.169,4.291,right so you can predict any number you
+368.88,5.61,wants but then you obviously have to
+371.46,5.459,target as a bunch of dots on a real
+374.49,4.89,number line and the idea is you want to
+376.919,4.231,predict the right dots every time you
+379.38,4.14,are presented with a particular feature
+381.15,6.389,the last thing I want to talk about is
+383.52,6.24,this idea of a train test split so
+387.539,4.591,imagine if you're building a predictive
+389.76,5.49,system on a data set like iris and you
+392.13,5.099,have 150 data points like this if you
+395.25,4.57,have trained your predictive system on
+397.229,4.691,the 150 data point you didn't
+399.82,4.05,do right because you can't test this
+401.92,4.98,predictive system you can validate this
+403.87,4.65,particular system all you can do is say
+406.9,5.49,ok I've used all my data
+408.52,6.09,I can't conceivably say I have trained
+412.39,4.59,my whole data sets but trained my whole
+414.61,4.62,motto on the data sets and I'm going to
+416.98,4.26,test the data or to test the model on a
+419.23,4.73,subset of data because the model has
+421.24,5.22,access to that data it can just remember
+423.96,4.99,what is in the data and show you the
+426.46,4.89,right answers so the only thing you can
+428.95,5.46,do is to expose this predictive system
+431.35,5.16,in real life into new unseen data that
+434.41,4.29,comes in organically and hope that it
+436.51,5.04,works right because you have no idea
+438.7,5.49,whether this data sets is the same as
+441.55,4.26,all the data that's coming forward you
+444.19,6.03,hope that it is you hope that your data
+445.81,6.99,and a model together has founded general
+450.22,5.31,patterns in the data and so it could
+452.8,5.04,generalize forward when we have new and
+455.53,4.32,thin data but you don't know that so the
+457.84,5.04,idea is to split your datasets into
+459.85,6.06,three sets we have the training sets
+462.88,5.58,which is typically 60 or 70% of data
+465.91,5.01,sets where you use to expose this data
+468.46,4.8,set to the model you know the testing
+470.92,4.8,sets which is the remaining let's say 15
+473.26,5.79,where you use it to test your model so
+475.72,5.31,that you can do train your model on a
+479.05,5.4,training set test it in the test sets
+481.03,5.52,and back and forth unto your test set
+484.45,3.84,performance which is not exposed in a
+486.55,4.13,model but it's just used to test a model
+488.29,5.19,until your test performance is good and
+490.68,4.3,then the last 15 percent of 20 percent
+493.48,4.38,of the data is called a validation set
+494.98,5.01,so only after you're happy with the test
+497.86,3.0,sets performance do you try it on a
+499.99,3.18,validation set
+500.86,4.89,the idea being when you are as a data
+503.17,5.37,scientist when you look at the test sets
+505.75,4.71,and test your models or the test sets no
+508.54,4.439,matter how much you don't expose that
+510.46,4.8,test set data into the model you as a
+512.979,4.111,data scientist still learn from the
+515.26,5.76,characteristics of this test sets right
+517.09,6.3,so eventually the data and characters in
+521.02,4.29,the test sets will leak into your model
+523.39,3.75,and your model would behave a certain
+525.31,4.62,way because you have seen some behavior
+527.14,4.67,in the test set so then the test set is
+529.93,4.05,again no longer unbiased and
+531.81,4.03,assimilating new unseen
+533.98,4.83,which is why of the validation sets
+535.84,5.939,which is the actually the ultimate test
+538.81,5.01,of whether your model works and you
+541.779,3.931,should use it as little as possible and
+543.82,4.17,you should never look at what's in the
+545.71,4.77,validation sets you should only look at
+547.99,4.5,it as oh you know this is how my model
+550.48,4.89,would perform in if we were exposed to
+552.49,5.4,some unseen data so that's the idea of a
+555.37,4.35,trained have split for any given data
+557.89,4.32,sets for some of the Irish data sets we
+559.72,5.82,have 150 data points will splits it and
+562.21,4.86,say 120 or even 100 goes into the
+565.54,5.19,training sets we'll use a hundred two
+567.07,7.019,trainer model will then test our model
+570.73,6.39,on 25 of the new data points or the
+574.089,4.921,remaining data points to see how our
+577.12,3.87,model works if it doesn't work well or
+579.01,3.48,we've written improve it then go back to
+580.99,4.32,the hundred and try to tweak down
+582.49,5.34,parameters and then also we're happy
+585.31,6.33,with this we then use the last final 25
+587.83,5.4,to judge how good a model is and that's
+591.64,4.65,all there is to it we talked about the
+593.23,6.12,Irish data sets which is 150 data points
+596.29,4.31,of Irish flowers we talked about the
+599.35,3.27,machine learning task which is
+600.6,4.15,classification tons of my trained has
+602.62,4.4,splits which allows us to simulate what
+604.75,4.589,happens if our model sees new data and
+607.02,5.38,we talked about features which are
+609.339,4.651,features of the underlying thing that
+612.4,4.02,the data points is measuring in this
+613.99,4.74,case features are the features of
+616.42,5.63,flowers that 150 flowers that were
+618.73,3.32,measured in the IRS data sets

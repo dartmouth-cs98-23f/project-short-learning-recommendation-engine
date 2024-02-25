@@ -1,0 +1,186 @@
+second,duration,transcript
+4.66,8.859,[Music]
+11.44,2.48,well congratulations you've almost made
+13.519,3.84,it
+13.92,6.56,almost welcome to our
+17.359,4.961,last lecture lecture eight in which we
+20.48,3.68,are going to talk about quantum error
+22.32,3.279,correction how to deal with quantum
+24.16,4.8,noise how to
+25.599,6.241,recover quantum states and protect our
+28.96,4.48,precious quantum computations or quantum
+31.84,4.08,communication
+33.44,4.4,it's been long journey we started with
+35.92,5.04,four introductory lectures where i
+37.84,5.36,introduced some basic stuff for
+40.96,3.759,you to understand why quantum
+43.2,4.32,information processing is
+44.719,4.401,uh more powerful so we talk about
+47.52,3.679,quantum interference we talk about
+49.12,5.36,quantum entanglement
+51.199,4.88,and then we we we could see how quantum
+54.48,3.52,interference and quantum entanglement
+56.079,6.561,play a significant role
+58.0,8.159,in making quantum communication secure
+62.64,7.04,or computation more powerful
+66.159,6.0,but we also observed that the reason
+69.68,5.04,we do not have for example quantum
+72.159,4.64,computers yet is because
+74.72,3.12,quantum systems or quantum interference
+76.799,4.241,in particular is
+77.84,6.319,is quite fragile right so you
+81.04,4.96,expose it to any interaction with the
+84.159,4.64,environment the environment may learn
+86.0,5.2,about the state of the system and
+88.799,6.0,quantum interference is gone
+91.2,6.959,um so we took some time to describe
+94.799,4.561,the system environment kind of
+98.159,4.801,interaction so that
+99.36,5.439,is the dynamics of open quantum systems
+102.96,3.76,our quantum computers or quantum
+104.799,3.36,communication devices are open quantum
+106.72,3.2,system because
+108.159,3.6,even though we can control them to some
+109.92,3.839,extent they're embedded in
+111.759,5.281,some sort of environment which upon
+113.759,6.32,which we do not have complete control
+117.04,4.56,so um it's it's not quite right to
+120.079,5.201,describe the evolution of
+121.6,5.76,open quantum system as a as a unitary
+125.28,4.08,evolution we know that you can take two
+127.36,3.92,approaches here right so you can
+129.36,4.32,think about the unit evolution of the
+131.28,4.88,whole when you include the environment
+133.68,3.919,that's the so-called stein spring
+136.16,3.2,representation
+137.599,3.441,but you can also look at the system
+139.36,4.4,alone and
+141.04,4.0,analyze the evolution of of such system
+143.76,3.36,in the presence of vine
+145.04,3.6,of the environment but not necessarily
+147.12,3.52,just including the environment
+148.64,4.4,in in your equation so that's the
+150.64,5.599,crowd's representation
+153.04,3.52,now we have the tools so we can now move
+156.239,3.841,on
+156.56,6.8,and discuss how we can
+160.08,6.48,deal with quantum errors so whenever
+163.36,4.239,remember we call kraus operators quantum
+166.56,4.72,errors
+167.599,6.401,um but um
+171.28,3.039,the question really is so given a system
+174.0,3.599,that
+174.319,5.521,undergoes some sort of
+177.599,3.441,evolution described by a completely
+179.84,4.72,positive map
+181.04,5.76,is it possible to recover
+184.56,3.759,the original state of the system so i
+186.8,4.88,would like you to have
+188.319,4.241,this kind of uh scenario in mind so
+191.68,2.88,compare
+192.56,4.0,the two cases the case where we have a
+194.56,3.92,system let's say it's a cube it is
+196.56,3.599,you can always choose the simplest
+198.48,2.72,possible quantum system so we have a
+200.159,4.64,qubit
+201.2,5.84,this qubit undergoes the coherence so
+204.799,5.041,interacts with the environment
+207.04,4.72,and as a result the state of the qubit
+209.84,6.479,is modified in
+211.76,8.32,in some way now is there
+216.319,6.961,a way to diminish the impact
+220.08,6.96,of the environment and here we are
+223.28,7.599,going to borrow ideas from classical
+227.04,6.8,theory of information so we are going to
+230.879,3.761,use the concept of error correcting
+233.84,3.44,codes
+234.64,3.679,so instead of this kind of scenario we
+237.28,4.48,are going to
+238.319,6.56,encode the state of the qubit
+241.76,5.679,into a number of qubits so we are going
+244.879,6.0,to bring a few more qubits
+247.439,5.681,and take our original qubit
+250.879,4.321,and we are going to perform a unitary
+253.12,6.079,operation
+255.2,7.999,maps unknown state of the qubit
+259.199,9.521,into a set of
+263.199,7.761,cubits that will form our encoded qubit
+268.72,3.28,so this mathematically speaking we are
+270.96,3.76,just going to
+272.0,3.12,pick up a two-dimensional hilbert space
+274.72,3.44,um
+275.12,4.639,and we are going to embed it in a higher
+278.16,4.72,dimensional hilbert space
+279.759,3.44,rotate somehow that's isometry right so
+282.88,3.759,that
+283.199,6.56,that's going to be the an encoding part
+286.639,8.161,and then all the qubits go to
+289.759,6.561,the coherence area so arrows will appear
+294.8,4.32,and then at this point you may be a
+296.32,4.879,little bit um
+299.12,5.04,confused you say okay well now the
+301.199,6.161,errors will appear on many qubits
+304.16,6.879,well yes but
+307.36,4.96,if you just take quantum state of one
+311.039,5.281,qubit
+312.32,7.36,and somehow spread this state
+316.32,5.92,number of qubits then the error on one
+319.68,5.359,qubit may not perhaps be so significant
+322.24,5.12,it may be possible to recover it under
+325.039,4.801,certain conditions and indeed
+327.36,4.0,we will see that under certain
+329.84,5.28,conditions
+331.36,6.16,it is possible to recover to reverse
+335.12,4.079,this completely positive map so the
+337.52,4.0,first one
+339.199,3.361,the errors are induced by the
+341.52,4.239,environment
+342.56,5.919,which you cannot control but
+345.759,4.0,as long as you can find out roughly what
+348.479,4.881,happened
+349.759,5.44,then you can then just um apply another
+353.36,3.36,completely positive map
+355.199,3.761,in this case we don't have the
+356.72,5.28,environment but we just bring
+358.96,5.92,extra even more qubits or some other
+362.0,4.88,quantum systems auxiliary qubits are a
+364.88,2.96,system that we call ancilla a kind of a
+366.88,3.599,helper to
+367.84,3.68,help us to perform in a controlled way
+370.479,3.201,another
+371.52,4.48,completely positive map so that's going
+373.68,4.88,to be error recovery
+376.0,4.08,and then once hopefully we managed to
+378.56,5.12,recover the original state
+380.08,8.8,of all those qubits then we just simply
+383.68,9.68,decode the quantum state so we just
+388.88,6.96,map the state into the
+393.36,5.04,qubit and hopefully we'll have something
+395.84,5.04,that is very close to the original
+398.4,3.359,so i would like you to have this
+400.88,3.36,scenario
+401.759,4.56,in mind and of course you know in the
+404.24,3.92,lecture we will go through
+406.319,3.28,all the details and i'm going to tell
+408.16,5.2,you how to encode
+409.599,4.561,how to um construct the recovery
+413.36,4.0,procedure
+414.16,4.64,and how we are going to
+417.36,3.44,what kind of conditions have to be
+418.8,3.519,satisfied for this to be possible in the
+420.8,4.799,first place
+422.319,5.28,then we'll say a few words about quantum
+425.599,5.281,computation that
+427.599,5.281,protects about a way of computing that
+430.88,4.159,you protect not only quantum state but
+432.88,3.84,also the whole process of computation so
+435.039,4.081,you would like to have your
+436.72,3.919,evolving state modified by your quantum
+439.12,5.6,logic case protected at
+440.639,6.481,all time well so this will
+444.72,5.12,essentially this will actually um
+447.12,4.56,conclude our basic introduction to
+449.84,3.919,quantum information processing it should
+451.68,5.44,give you some sort of
+453.759,8.72,simple but complete
+457.12,5.359,picture of how things work

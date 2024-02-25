@@ -1,0 +1,252 @@
+second,duration,transcript
+0.35,2.65,"Hello friends, welcome to Gate Smashers"
+3.025,3.54,"In today's video, we are going to
+discuss about Von Newmann's architecture"
+6.59,4.41,"or we call it stored memory
+architecture or stored memory program"
+11.001,1.999,What does it mean by stored memory?
+13.225,3.775,Where we keep two things inside memory
+17.001,5.999,"one is data and second is
+program or set of instructions"
+23.001,2.551,"Data means like we
+write in program"
+25.577,7.804,"or in processing in C program
+int A=10, B=20, C=A+B"
+33.406,5.846,"the kind of variables or constants 
+we are defining there"
+39.277,4.911,"where will we store all this data?
+inside memory!"
+44.2,3.458,"Which memory? 
+Main memory!"
+47.683,2.242,"and secondly we store, program"
+49.95,2.064,Program means set of instructions
+52.059,3.066,Instructions are how to do work
+55.15,3.85,"we have many different 
+type of instruction set available"
+59.15,3.487,"Like if you have
+heard about MBI, MOV command"
+62.649,3.918,"we have ADD,
+SUB, branch statement"
+66.592,3.03,"All these commands or processes
+has different commands"
+69.647,4.058,"All these commands and
+this data where to store it?"
+73.73,3.454,"In one memory and which memory is that?
+Main memory"
+77.318,4.682,"Yes, you can store it in different
+addresses in main memory"
+82.001,6.276,"In some addresses you can store instructions
+and in some addresses you can store data"
+88.302,4.054,"Its opposite Harvard architecture
+which was opposite of Von Newmann's"
+92.512,3.928,"It said that we will store instruction
+set in different memory"
+96.465,2.686,and data in different memory.
+99.176,3.509,"But here we are keeping
+both things in same memory"
+102.763,4.746,"And if you look carefully, in today's
+time whatever architecture we are using"
+107.534,6.353,We are keeping data and program in main memory
+113.912,2.231,Secondly we have here is component
+116.315,3.228,"This Von Newmann's diagram,
+Von Newmann's architecture"
+119.568,4.809,"Basically it also tells us which
+components of basic computer architecture."
+124.402,2.657,Which help in processing data
+127.192,6.197,"What components are there
+to convert input to output"
+133.414,3.929,"So one is main memory where we are
+keeping two things data and instructions"
+137.454,2.116,After that comes our CPU
+140.059,4.941,"CPU central processing unit 
+And from here main work starts"
+145.237,2.825,In this we have different components
+148.074,3.533,"First is arithmetic and logical unit, ALU"
+151.632,2.186,What is the purpose of ALU?
+153.843,3.69,In ALU many circuits are available
+157.558,3.873,"In digital we have different circuits 
+We have adder, we have subtractor"
+161.456,6.544,"With the help of which we do addition,
+subtraction, multiplication, division,"
+168.001,5.63,"AND operation, OR operation,
+XOR, AND and we have shift operation"
+173.656,5.043,"Many operations we use like
+arithmetic operation or logical operation"
+178.724,3.15,We perform them through ALU
+181.94,2.469,"And in ALU different
+circuits are available"
+184.421,3.579,"which help in performing
+all these operations"
+188.001,2.999,Then we have registers
+191.001,6.478,"Registers are basically the fastest
+memory available we have is registers"
+197.504,7.027,"They store temporary
+data and size is very small"
+204.731,6.269,"Smallest size memory is called registers
+and it is storing data temporarily"
+211.1,1.9,How much size can it be basically?
+213.001,4.264,"Let's say 8 bits, means 1 byte 16 bits"
+217.29,3.775,So basically we have sequence of bits
+221.225,2.956,Sequence of bits is called registers
+224.206,3.068,Or you can say sequence of flip flops
+227.407,2.983,Because flip flops also store one bit
+230.479,4.032,"So if you combine multiple flip
+flops it will become registers"
+234.689,4.311,"But the important point here
+is that why are registers used?"
+239.001,2.446,When we already have main memory available
+241.472,2.053,"So what is the benefit of the
+register when there is memory?"
+243.55,3.829,"And why is the register
+embedded on the CPU chip?"
+247.404,1.639,The reason is speed
+249.131,7.153,"Any operation we perform 
+Let's say A=10, B=20, C=A+B"
+256.309,1.922,Now where is this data stored?
+258.298,2.702,"In main memory
+Where will it perform?"
+261.001,2.0,"This is arithmetic operation
+Where will it perform?"
+263.15,4.892,In ALU. So ALU has a very fast speed
+268.067,3.109,And the main memory is also fast
+271.242,2.821,But compatible to ALU is very slow
+274.088,0.988,Now what will happen?
+275.165,1.501,"If speed mismatches,"
+276.691,3.309,"One person is working fast 
+And other is working slowly"
+280.001,1.593,"Then obviously there will
+be a burden on one person"
+281.619,3.46,"So the registers help
+to reduce that burden"
+285.104,1.392,What registers do is
+286.607,4.393,"Temporarily store the data, the
+intermediate results, the output and input"
+291.025,3.975,"They are used to store them
+temporarily and intermediately"
+295.001,2.446,"You must have heard the
+name of many different registers."
+297.472,3.804,Although we will discuss this in detail later
+301.301,1.531,But like program counter
+302.978,5.414,"The next instruction to execute, that
+address is stored in program counter"
+308.44,3.56,"This is also a register 
+Apart from that we have accumulator"
+312.001,3.401,"Which is used to store
+the intermediate results"
+315.427,3.573,"There is input register, output
+register, MAR, memory addressable"
+319.175,5.825,"So all these registers help
+to speed up the processing"
+325.001,6.047,"And work as an intermediator 
+between ALU and main memory"
+331.073,1.927,Then we have control unit
+333.001,3.93,Control unit is a very important factor
+336.956,2.575,We have two things in control unit
+339.731,1.916,One is timing signal
+345.59,3.6,And the second is control signals.
+353.05,2.569,Timing signal basically means timing
+355.644,3.356,"Means which instruction will be
+executed first and which will be after"
+359.001,5.999,"Means let's say we have
+10 instructions in the program"
+365.001,3.999,"Now which instructions to
+execute first and which later"
+369.001,2.773,This is basically a very important factor
+371.799,2.602,Let's say if you drive a car
+374.489,2.732,Now we know in the car what the instructions are
+377.246,3.464,"First we press the clutch 
+Then we put the gear"
+380.735,2.597,Then we accelerate slowly
+383.399,2.601,this sequence of instructions
+386.001,3.7,"Sequence of steps 
+Do not do them up and down"
+389.726,3.274,"If you do so,then the 
+output can be different"
+393.001,3.567,"So to do this work we
+need dedicated hardware"
+396.58,2.968,"And that hardware is
+basically control unit"
+399.573,3.131,So timing signals generate timing here
+402.949,3.8,Every timing signal performs some action
+407.001,3.999,"Then we have control signal
+Control signal basically,"
+411.3,5.7,"That we have so many registers, input
+register, output register, PC, accumulator"
+417.001,4.999,"There are many registers We can read
+them, we are writing something in them"
+422.001,4.999,"How to control all these, It should
+not be that you are accessing the data"
+427.001,3.27,"And the registers are busy somewhere
+else, executing some other work"
+430.296,3.139,"To perform all these
+read write operations"
+433.46,3.54,"We use control
+signals in the register"
+437.001,1.999,Control signals are like your mind
+439.2,2.8,"Like our arms, our legs"
+442.15,3.186,"How to move them, how to give instructions"
+445.402,2.177,"Who is giving these instructions, our mind is"
+447.604,2.173,So here the control signals
+449.802,5.198,"Control signals control them How
+to read and access the registers"
+455.001,2.055,"Who has to do it first,
+who has to do it later"
+457.068,2.572,"So this control unit
+is very important here"
+459.665,2.335,Which is playing a major role.
+462.45,5.55,"This Von Neumann's architecture, is
+a very basic architecture given in 1945"
+468.001,5.999,"But the main point here is
+How the data is processed"
+474.15,2.596,The data that we keep in the main memory
+476.771,2.464,We call the data from there to the CPU
+479.368,4.979,"And we process the registers in the
+CPU, the ALU processes them"
+484.413,2.296,"And gives the output
+back to the main memory"
+486.753,2.247,"And from the
+main memory to the next"
+489.001,1.999,"Where ever it is, the user
+has to show on the monitor"
+491.001,1.959,Or have to store in the secondary memory
+492.985,2.131,This is how we process the data
+495.204,3.796,"So this also helps you 
+As a computer science student, you will know"
+499.225,4.775,"How the work is done in a computer 
+So it is showing that too here"
+504.001,2.999,"So these are all the main components
+After that we have input-output system"
+507.001,3.999,"Means we have peripheral devices
+Input devices like keyboard, monitors"
+511.001,2.223,"And output devices, we have monitors"
+513.249,2.915,So all these devices come to our next level
+516.252,2.748,So basically we have this main architecture
+519.001,3.934,"It tells us what is
+the benefit of these components"
+523.093,2.723,Now how can we attach these components
+525.841,3.025,Attaching means network topology
+529.049,1.73,Like we study in networks
+530.804,1.96,"There is mesh topology, bus topology,"
+532.776,3.224,"star topology it helps
+different components"
+536.001,5.582,"Because we have main memory, registers
+Control unit, means this is the whole CPU"
+541.672,4.839,"How we have to connect them
+We connect them through bus"
+547.001,4.676,"There are different types of buses
+Means we have address bus, data bus"
+551.702,2.298,"There are different types of
+buses And how their work is"
+554.001,2.999,We will discuss this later in the next video
+557.025,2.975,"We basically implement this
+with the help of multiplexers"
+560.001,2.999,"So this is the Von Neumann's
+diagram Von Neumann's architecture"
+563.001,3.999,"Basically you have to remember this
+That stored memory program is there"
+567.001,3.999,"What is there in memory and
+apart from this we have all the components"
+571.001,3.999,"And what is the benefit of those
+components, how they perform"
+575.001,2.901,So this is all about the Von Neumann's architecture
+577.991,0.867,Thank you.

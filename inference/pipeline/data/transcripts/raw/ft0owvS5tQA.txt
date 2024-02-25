@@ -1,0 +1,310 @@
+second,duration,transcript
+0.0,3.6,hey everyone welcome back and today
+2.159,3.68,let's do something a little bit
+3.6,4.72,different let's talk about the top six
+5.839,5.281,coding interview concepts that you need
+8.32,5.04,for interviews and by top six i mean the
+11.12,4.08,top six most common at least in my
+13.36,3.679,experience i think some people might
+15.2,3.44,disagree with a couple of these but
+17.039,3.841,overall these are definitely not
+18.64,4.559,controversial i think generally speaking
+20.88,4.319,these are six of the most common uh you
+23.199,4.641,know things that come up in interviews
+25.199,5.041,and spoiler alert dynamic programming is
+27.84,4.239,not gonna show up on my list for how
+30.24,3.999,difficult dynamic programming is and how
+32.079,4.561,much it's talked about it actually
+34.239,4.081,doesn't show up that much in interviews
+36.64,3.84,i think it's kind of funny people spend
+38.32,3.84,so much time studying that because they
+40.48,3.04,think it's really difficult and they
+42.16,3.52,feel like it's definitely going to show
+43.52,3.68,up in their interview well chances are
+45.68,2.879,it's actually not going to show up in
+47.2,2.8,your interview there's a lot of
+48.559,3.52,companies that have actually banned
+50.0,4.48,asking dynamic programming questions and
+52.079,4.32,even the ones that do ask it don't ask
+54.48,4.0,it super frequently so i think your time
+56.399,4.16,would be better invested studying some
+58.48,4.48,of these other more common
+60.559,3.761,patterns and concepts and definitely
+62.96,3.12,feel free to let me know if you'd like
+64.32,3.2,to see more videos like this or maybe
+66.08,3.6,other videos i've seen a lot of
+67.52,4.08,suggestions for people asking about my
+69.68,3.84,google interview experience and other
+71.6,3.839,videos like that so feel free to suggest
+73.52,4.959,it but okay now let's get into the top
+75.439,4.801,six list let's start with number six and
+78.479,3.921,that is going to be a data structure
+80.24,5.04,called a heap you may or may not be
+82.4,4.719,familiar with heaps but they are a very
+85.28,3.44,common data structure that comes up
+87.119,3.841,there's some problems where actually the
+88.72,4.0,entire problem itself is just using a
+90.96,3.199,heap like okay you know there's some
+92.72,2.8,operation you're trying to do maybe
+94.159,4.161,you're trying to get the minimum value
+95.52,5.36,or the maximum value or one problem that
+98.32,4.64,comes up very frequently is the top k
+100.88,4.48,values or something like that and that's
+102.96,4.0,really what a heap is designed to do
+105.36,4.16,because with a heap there's two
+106.96,4.24,variations a minimum heap and a maximum
+109.52,3.76,heap if you were doing a minimum heap
+111.2,5.44,for example you could get the minimum
+113.28,4.96,value from the heap in big o of one time
+116.64,3.68,which is very efficient but when it
+118.24,5.519,comes to actually popping that minimum
+120.32,6.72,value or adding a value to a heap that
+123.759,5.84,is done in log n time which is also very
+127.04,4.4,efficient one thing about the heap that
+129.599,3.121,i see a lot of people get wrong and even
+131.44,3.2,i've had interviews where the
+132.72,3.76,interviewer didn't know this and it was
+134.64,3.92,kind of an awkward situation because i
+136.48,4.479,was trying to explain my solution but
+138.56,5.2,it's that if you're building a heap you
+140.959,5.121,have 10 values or n values let's say and
+143.76,5.28,you're building a heap you can build
+146.08,5.04,that heap in big o of n time as long as
+149.04,4.08,you have all the values available from
+151.12,4.399,the start you can build the heap and big
+153.12,4.64,of and time but if you're actually
+155.519,3.761,manually adding each value to the heap
+157.76,2.8,you don't have them available all at
+159.28,3.44,once but you have to like you know go
+160.56,4.24,through some kind of data stream to add
+162.72,5.36,each value to the heap then that will
+164.8,5.28,take n log n time because adding a value
+168.08,3.76,to a heap is log n if you have to do
+170.08,3.68,that n times that's how you're going to
+171.84,3.759,get that time complexity but heaps
+173.76,3.44,actually also show up in a lot of
+175.599,3.601,standard algorithms like graph
+177.2,3.84,algorithms shortest path algorithms and
+179.2,4.08,things like that so i think it's a very
+181.04,3.44,very good data structure to definitely
+183.28,2.8,understand because
+184.48,3.6,the implementation is a little bit
+186.08,3.68,complex but usually you don't have to
+188.08,3.68,implement a heap you can just use it and
+189.76,5.36,it's very easy to use this data
+191.76,4.88,structure okay next up is sliding window
+195.12,3.36,when i actually first learned this
+196.64,3.519,algorithm i didn't even know it was a
+198.48,3.36,standard algorithm i was just doing some
+200.159,3.36,leak code problems i couldn't figure out
+201.84,3.84,the problem so i looked at the solution
+203.519,4.161,and saw okay there's this algorithm
+205.68,4.24,where you use two pointers to iterate
+207.68,4.4,through a array and i remember thinking
+209.92,3.599,wow this is a really clever technique if
+212.08,3.439,only i had known that it's actually a
+213.519,4.161,very standard algorithm it would
+215.519,3.681,actually have been easier to understand
+217.68,4.24,because this is the type of algorithm
+219.2,5.44,you can memorize and then apply it in
+221.92,4.64,many many different places the idea is
+224.64,4.0,usually that you know to solve some
+226.56,4.64,problem you have to iterate through a
+228.64,4.4,array n times so if you have to do that
+231.2,4.0,n times the overall time complexity
+233.04,4.88,becomes n squared but there's a lot of
+235.2,5.2,problems where you can have two pointers
+237.92,4.399,and then use them kind of intelligently
+240.4,4.32,and in that way you only end up
+242.319,4.721,iterating through the entire array once
+244.72,4.48,well twice if you count the two pointers
+247.04,4.479,but that's still big o of n time you
+249.2,3.84,don't have to do nested for loops with a
+251.519,2.881,sliding window you just keep track of
+253.04,3.759,two pointers you
+254.4,4.64,increment them in an intelligent way and
+256.799,3.761,then you get a very efficient algorithm
+259.04,3.28,we've done a ton of sliding window
+260.56,3.04,problems on this channel so definitely
+262.32,3.36,take a look at the sliding window
+263.6,4.319,playlist if you want to see some
+265.68,5.28,examples the next algorithm is going to
+267.919,5.121,be binary search i think every cs major
+270.96,3.84,will learn this algorithm and usually
+273.04,4.08,think it's pretty simple at least
+274.8,3.52,conceptually right the whole idea comes
+277.12,3.44,from you know if you were guessing a
+278.32,4.08,number between one and a hundred and you
+280.56,3.76,got some kind of feedback right like if
+282.4,4.32,you got the wrong answer you knew if it
+284.32,3.92,was too high or too low of course if you
+286.72,4.16,were guessing between 1 and 100 you
+288.24,5.04,would guess 50 because if it was too big
+290.88,4.319,then you would eliminate all the numbers
+293.28,3.359,that are smaller than 50. if it's too
+295.199,3.121,small then you'd eliminate all the
+296.639,3.201,values larger than 50 and then just
+298.32,3.84,continue to do that just take the
+299.84,4.079,halfway point between whatever you're
+302.16,3.759,trying to determine so in that sense
+303.919,3.84,it's a very simple algorithm usually
+305.919,3.361,binary search problems are really
+307.759,3.521,obvious that you're supposed to use
+309.28,4.16,binary search you're given some kind of
+311.28,3.919,array and you have to search for a value
+313.44,4.319,usually you can search for that value in
+315.199,4.0,big o of n time which you might think is
+317.759,4.0,efficient but if there's a more
+319.199,5.601,efficient algorithm using binary search
+321.759,5.121,login is actually a lot more efficient
+324.8,3.2,than big o of n which is why binary
+326.88,2.8,search is
+328.0,4.32,you know an important algorithm but
+329.68,4.88,there's also a lot of problems that are
+332.32,4.48,easy once you know that you're supposed
+334.56,4.079,to use binary search but it's not
+336.8,3.52,obvious that you are supposed to use
+338.639,3.521,mine research sometimes there's a lot of
+340.32,4.0,data structures involved there's a lot
+342.16,4.0,of things going on you might think it's
+344.32,4.08,a sliding window problem but in
+346.16,3.84,actuality it's a binary search problem
+348.4,3.44,so i think that's kind of the hard part
+350.0,4.4,about binary search sometimes even
+351.84,4.56,identifying the problem needs binary
+354.4,3.6,search we've also solved a lot of binary
+356.4,3.04,search problems on this channel if you
+358.0,3.44,want to take a look at the playlist for
+359.44,4.24,that okay next up is going to be
+361.44,4.72,actually two algorithms that are very
+363.68,5.76,similar depth first search and breadth
+366.16,4.96,first search these are two incredibly
+369.44,4.0,common algorithms probably the most
+371.12,4.16,common algorithms you'll use in coding
+373.44,3.52,interviews because they can be applied
+375.28,4.08,in so many different places they can be
+376.96,5.12,applied to trees but they can also be
+379.36,6.48,applied to general graphs whether it's a
+382.08,7.52,2d matrix type graph or a graph of nodes
+385.84,6.16,and edges and dfs and bfs are actually
+389.6,4.8,the building blocks for more complex
+392.0,5.6,algorithms things like jixtra's
+394.4,6.799,algorithm shortest path kruskal's prim's
+397.6,7.36,algorithm bellman ford right most graph
+401.199,6.321,algorithms build on top of dfs and bfs
+404.96,5.6,so if you have a very good understanding
+407.52,5.76,of dfs and bfs you can actually solve a
+410.56,5.6,very large number of problems not just
+413.28,4.4,graphs but also trees and even more and
+416.16,3.759,i would say if you can get to the point
+417.68,4.88,where you can write a dfs algorithm or
+419.919,4.481,bfs in your sleep you're going to be in
+422.56,3.28,very good shape for coding interviews
+424.4,3.359,because these are very standard
+425.84,4.32,algorithms once you've written them so
+427.759,4.0,many times it becomes like second nature
+430.16,3.439,but when you're a beginner these
+431.759,4.321,algorithms can be pretty daunting to
+433.599,4.0,learn we do have a trees playlist and a
+436.08,4.16,graph playlist on the channel if you
+437.599,6.0,want to practice some dfs or bfs okay
+440.24,5.12,next up is recursion recursion was super
+443.599,4.72,difficult for me when i learned it back
+445.36,5.839,in college but now it's actually very
+448.319,5.6,intuitive just like dfs and bfs
+451.199,5.041,recursion is applied in so many places
+453.919,4.72,and it's also used in graphs as well as
+456.24,4.799,many other categories like backtracking
+458.639,3.921,sometimes with dynamic programming if
+461.039,3.521,you're talking about the memoization
+462.56,4.8,solution and in so many other ways
+464.56,4.319,recursion is just a huge category i
+467.36,3.519,don't know how you would even prepare
+468.879,4.641,for coding interviews if you didn't know
+470.879,5.921,recursion and i definitely recommend
+473.52,4.56,getting pretty proficient with recursion
+476.8,3.44,you definitely want to have a good
+478.08,5.36,understanding of the base case the
+480.24,4.72,recursive step and just the general idea
+483.44,3.199,of what's going on with the recursion
+484.96,4.48,you should understand that recursion
+486.639,4.721,does take extra memory to do it's not
+489.44,4.24,free you should understand how what's
+491.36,4.559,going on with the call stack as you do
+493.68,3.6,recursive algorithms and i think this
+495.919,2.96,category is probably one of the most
+497.28,3.759,difficult for people to learn i think
+498.879,4.641,recursion is the reason why people think
+501.039,4.401,graphs are hard trees are hard
+503.52,3.519,backtracking is hard it's usually
+505.44,4.72,because they don't have a very good
+507.039,5.281,understanding of recursion okay last up
+510.16,3.759,the number one pattern i think you
+512.32,3.92,should understand for coding interviews
+513.919,4.56,is definitely hashmaps it's the most
+516.24,5.12,simple thing on this list probably but
+518.479,4.881,it's also the most common there are so
+521.36,4.4,many problems that can literally just be
+523.36,4.56,solved by using a hashmap the famous
+525.76,4.24,problem is probably twosome because
+527.92,4.96,instead of iterating through the entire
+530.0,5.04,array to search for a matching value
+532.88,4.079,with twosome you can just literally use
+535.04,3.6,a hash map that's the entire problem if
+536.959,3.361,you use a hashmap then you solve it
+538.64,3.759,efficiently and the important thing to
+540.32,3.76,know about a hashmap is basically that
+542.399,3.681,every operation that you do on it pretty
+544.08,5.36,much any operation at least can be done
+546.08,5.759,in big o of one time in constant time
+549.44,5.519,now technically that's not true
+551.839,4.481,in that technically it's amorotized
+554.959,3.361,because there's a lot of different ways
+556.32,4.32,to implement a hashmap under the hood
+558.32,4.8,but basically on average it'll take big
+560.64,4.319,o of one time and usually 99 of the time
+563.12,3.68,in real interviews people will just say
+564.959,3.361,okay yeah it takes big o of one time to
+566.8,4.0,do that in a hashmap you don't really
+568.32,4.4,need to get too technical with it adding
+570.8,4.8,removing and searching for values in a
+572.72,4.32,hashmap is very efficient and even in a
+575.6,4.32,lot of the other categories i was
+577.04,5.359,talking about dfs recursion and sliding
+579.92,4.88,window hash maps actually come in handy
+582.399,4.401,for those as well so even if the hashmap
+584.8,5.36,itself won't solve the entire problem
+586.8,6.08,hash maps are always used as utility
+590.16,4.08,data structures to do things efficiently
+592.88,3.36,if you don't have a good understanding
+594.24,3.68,of hash maps or know how efficient they
+596.24,2.88,are then pretty much any coding
+597.92,3.68,interview problem is going to be
+599.12,4.56,challenging for you so those are the top
+601.6,4.16,six coding interview concepts i think
+603.68,3.279,you should be preparing for let me know
+605.76,2.48,if you think there's anything that i
+606.959,2.961,missed or there's anything that you
+608.24,3.52,disagree with of course i could have
+609.92,3.84,made this list a lot longer but i like
+611.76,3.519,to be concise and i think if you are
+613.76,2.96,preparing for your coding interviews and
+615.279,2.961,you don't feel like you have a really
+616.72,3.119,good understanding of the six things
+618.24,3.839,that i talked about here definitely
+619.839,4.161,recommend studying that before you get
+622.079,4.161,into more complex things like dynamic
+624.0,5.2,programming or getting into those really
+626.24,5.36,advanced and obscure algorithms like kmp
+629.2,3.84,pattern matching or maybe kruskal's
+631.6,3.04,algorithm which most likely you're
+633.04,3.6,probably not going to see in a real
+634.64,4.0,coding interview you're more likely to
+636.64,4.0,see the things that i talked about here
+638.64,3.439,as always thank you so much for watching
+640.64,2.879,don't forget to like and subscribe if
+642.079,3.041,you found this helpful it really helps
+643.519,3.041,the channel a lot consider checking out
+645.12,3.12,my patreon if you'd like to further
+646.56,5.6,support the channel and hopefully i'll
+648.24,3.92,see you pretty soon thanks for watching

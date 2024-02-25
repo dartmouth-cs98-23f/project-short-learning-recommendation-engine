@@ -1,0 +1,1051 @@
+second,duration,transcript
+0.24,1.5,"Hi everyone, Kevin here."
+1.74,3.3,Today we are going to walk through step-by-step  
+5.04,5.82,"how you can use SQL or ‘sequel’ 
+for data reporting and analysis."
+11.4,3.84,"I'm going to assume you have 
+absolutely no background in SQL,  "
+15.24,5.58,"and we're also going to use all free tools, 
+so there's really no barrier to learning."
+21.6,6.12,"By the end of this video, my goal is that you 
+will know how to retrieve data from databases,  "
+27.72,4.44,"and if you stick around until the end, 
+I will also share a really neat trick  "
+32.16,4.92,"that helps you write some of the most 
+complex queries with very little effort."
+37.08,5.82,"So first off, why would you even want to learn 
+SQL? I mean there are so many other videos that  "
+42.9,6.54,"you could be watching on YouTube. Well, all 
+businesses keep track of data in databases, and  "
+49.44,6.78,"when I worked at Microsoft as a Product Manager, 
+I used SQL all the time to get insights from data."
+56.22,5.46,"I worked on the website office.com, and 
+I could write a SQL query to tell me how  "
+61.68,4.62,"many people clicked on this button, and I 
+could use that data then to decide, well,  "
+66.3,4.08,"should we make this button stand out a little bit 
+more? Should we move it to a different location?  "
+70.38,5.34,"Without being able to get that data using 
+SQL, I would have had no idea what to do."
+76.62,3.48,"Your data contains all sorts of hidden insights,  "
+80.1,3.96,"and with SQL, you can unlock 
+some of that hidden value."
+84.06,5.52,"In this video, we're going to focus on 
+how you can retrieve data from databases."
+89.58,1.92,"This is really perfect if, say,  "
+91.5,4.56,"you're a business analyst or a product 
+manager, or maybe you're a researcher."
+96.78,3.54,"We're not going to focus on how 
+you can create a new database,  "
+100.32,4.92,"or how you could add new tables, or 
+even how you can add or remove data."
+105.24,4.08,"If that's something you want to see in a future 
+video, let me know down below in the comments."
+109.86,7.26,"What is SQL? Well, SQL stands for 
+structured query language, or SQL."
+117.96,4.62,"It's a language that you can 
+use to interact with databases."
+123.3,2.34,"You can retrieve data, you can filter,  "
+125.64,4.2,"you can sort, you can add, update, 
+and remove data from a database."
+130.68,4.26,"The great thing is that anyone can 
+learn how to write SQL queries."
+134.94,3.84,"You definitely do not need a 
+degree in computer science,  "
+139.56,6.18,"and once you learn SQL, this will be another 
+superpower that you have in your toolbox at work."
+145.74,3.12,"So, what is even a database?"
+149.82,7.98,"A database is a collection of tables, and those 
+tables have relationships, and don't worry if  "
+157.8,4.2,"that sounds confusing, we're going to make 
+it real coming up shortly with an example."
+162.9,3.48,"If you look at any major website, 
+whether it's Facebook, Twitter,  "
+166.38,3.42,"LinkedIn, all of those are powered by databases."
+170.64,3.24,"Even here at the Kevin Cookie 
+Company, we use databases."
+173.88,3.96,"We track our customers, our orders, 
+and all of our product information."
+178.98,3.78,"What, you thought we just wrote 
+all that down by hand on paper."
+185.94,2.88,We recently transitioned over to databases.
+189.66,6.96,"To interface with a database, we are going 
+to use something called an RDBM. A what?"
+196.62,3.96,"Well, that stands for relational 
+database management system."
+200.58,3.36,I know they get kind of crazy with their acronyms.
+204.54,5.04,"You have a lot of very popular options, and you've 
+probably even heard of some of these before."
+209.58,7.92,"You have Oracle, Postgres SQL, Microsoft SQL 
+Server, MySQL, is just a few of the many options."
+218.22,6.18,"In this video, we are going to use Microsoft SQL 
+Server, and the reason why is, well, first off,  "
+224.4,4.56,"I'm a Microsoft boy, so I'm a little 
+biased, but also it happens to be one  "
+228.96,5.04,"of the most popular options and when you're 
+learning, the tools are completely free."
+234.84,4.38,"Also, once you learn one RDBMS, 
+there's that acronym again,  "
+239.22,2.7,you'll be able to easily pick up any other system.
+241.92,5.76,"You'll know the essentials of SQL, and there 
+may be some slight syntax differences or the  "
+247.68,3.96,"way the code is written, but you'll 
+understand all of the core concepts."
+251.64,6.12,"To get started, we're going to use Microsoft 
+SQL Server and you can download that at the  "
+257.76,4.8,"following website. You'll find the link up 
+above, and I've also included a link down  "
+262.56,4.98,"below in the description. On this website, 
+if you scroll down just a little bit,  "
+267.54,6.42,"we have two different editions that we can choose 
+from, and for this tutorial, either one will work."
+273.96,3.24,"You can get either the developer 
+edition or the Express edition."
+277.2,4.14,"But what is the difference and why 
+should you choose one versus the other?"
+281.94,6.18,"The express version can be used for business 
+purposes, but it's a little bit more limited."
+288.12,1.92,"You don't have the full functionality,  "
+290.04,5.28,"your database can only be up to 10 gigabytes 
+in size, and it only supports 4 cores."
+295.32,2.88,"But once again, for this 
+tutorial, that's totally fine."
+298.98,5.16,"Then you also have the developer version and 
+this cannot be used for business purposes."
+304.14,6.0,"It has full functionality, but once again, it can 
+only be used for development and testing purposes."
+311.04,3.0,"For this tutorial, I'm going to 
+download the developer edition,  "
+314.04,2.4,but once again you can choose either one.
+316.44,4.08,"When you kick off the install, you'll 
+see a prompt that looks like this,  "
+320.52,1.92,and you have three different options.
+322.44,3.78,"You can proceed with basic, and 
+this is what I'm going to do,  "
+326.22,5.64,"but you could also choose custom where you 
+get to choose what components are installed."
+331.86,2.76,You also have the option that says download media.
+334.62,5.28,"This is if say you want to install SQL Server 
+on multiple machines, you can simply download  "
+339.9,3.84,"the installation media and then you can use it 
+elsewhere, so you don't have to re-download."
+343.74,2.34,Let's continue by clicking on basic.
+346.62,5.04,"Once you finish installing, you won't 
+see any icons on your taskbar or on your  "
+351.66,4.14,"desktop and you might be wondering, well, 
+what did I install and is it even running?"
+356.58,6.18,"Let's click on the Start menu and then click 
+on all apps and here let's navigate down to M  "
+363.42,5.16,"and right here I see that I've now 
+installed Microsoft SQL Server 2019."
+368.58,3.06,"When I drop this down, we 
+have a few different apps."
+371.64,3.0,"Let's click on the one 
+titled Configuration Manager."
+375.24,5.34,"This opens up the Configuration Manager and we're 
+not going to make any changes here, but I want to  "
+380.58,5.4,"show you that the service is running. Here we 
+can see that SQL Server is currently running.  "
+386.7,2.28,"Right up here, we can stop it if we want to."
+388.98,3.12,"We could also restart it. You can 
+pause it and if it were stopped,  "
+392.1,1.56,here we could start the service again.
+394.56,4.8,"Right over here, we can also see the start 
+mode, and it's currently set to automatic."
+399.36,6.06,"This means that any time you boot your PC, the 
+SQL Server instance will automatically start up."
+405.42,4.56,"But once again, we simply open this just to 
+confirm that SQL Server is currently running."
+409.98,6.42,"We can now close this out. Now that we have our 
+server running and our database engine in place,  "
+416.4,6.54,"we also need a graphical front end that will 
+allow us to write queries against our database,  "
+422.94,3.18,and for that we are going to use a tool called  
+426.12,5.4,"SQL Server Management Studio or 
+what's also referred to as SSMS."
+432.12,1.62,Head to the following website.
+433.74,3.96,"I've included a link up above and you'll 
+also find it down below in the description."
+438.54,3.0,"Scroll down just a little bit and 
+here you'll see a link that says  "
+441.54,2.28,free download for SQL Server Management Studio.
+443.82,3.06,"Click on that and then run 
+through the install process."
+446.88,3.6,"Once you finish installing 
+SQL Server Management Studio,  "
+450.48,3.72,"launch the app and you should see 
+an interface that looks like this."
+454.8,4.38,"A prompt should also appear 
+asking you to connect to a server."
+459.84,3.3,"The first item we installed 
+provided us with the server,  "
+463.14,4.74,"and now this second item that we installed 
+will allow us to connect to that server.  "
+468.48,5.475,"Right here, for the server name, it should be 
+your PC’s name, but if you don't see anything  "
+473.955,4.605,"prepopulated in here, you can click on this 
+drop down and then click on browse for more."
+479.28,3.9,"Expand the database engine category 
+and then you can click on your PC name."
+483.72,2.46,"Once you do that it should 
+fill it in in this field."
+486.96,3.6,"For the authentication, I'll leave 
+it set to Windows authentication,  "
+490.56,2.88,"and once all of that is 
+set, let's click on connect."
+493.44,3.72,"This drops us into the main 
+SQL Server management view,  "
+497.16,4.68,"and over on the left-hand side, we have 
+something called the Object Explorer."
+502.38,6.24,"Right up here we can click on this plug icon, and 
+this allows us to connect to additional servers."
+508.62,4.56,"So maybe at work you want to connect to multiple 
+servers at the same time, you can do that,  "
+513.18,4.68,"and once you connect to additional servers, 
+you'll simply see more in this list."
+518.58,2.82,"If you no longer need access 
+to one of these servers,  "
+521.4,2.28,you can simply click on this icon to disconnect.
+524.82,4.98,"Right up here at the top, I can see the instance 
+or the server that I'm currently connected to,  "
+529.8,4.74,"and I'm currently connected to my own 
+computer because I set up SQL Server there."
+535.26,5.58,"Underneath that, we'll see a tree view of all 
+of these different folders. You have databases,  "
+540.84,2.76,"you have security, and the list goes on and on."
+543.6,4.08,"In this tutorial, we're only going 
+to use the one titled databases."
+548.22,4.14,"When I click on the plus icon, you'll 
+see that there are no databases yet and  "
+552.36,3.96,"we need to create one, and to do 
+that, let's right click on here."
+556.32,4.68,"Now we could start a new database from 
+scratch, but we are going to restore a  "
+561.0,4.2,"database for the Kevin Cookie Company so 
+we can use some existing data to analyze."
+565.2,3.6,"Let's click on this. If you'd 
+like to follow along today,  "
+568.8,5.22,"I've included a sample database up above, and 
+you'll also find it down below in the description."
+574.02,4.5,"Probably the best way to learn is to follow 
+along, but you can also just watch this video."
+579.18,4.02,"Once you download the file, let's 
+click on this option that says device."
+583.2,3.42,Then click on the ellipsis and here click on add.
+587.88,3.3,"Next, navigate to where 
+you saved your backup file."
+591.18,4.5,"Here, I'll click on the backup file 
+and then click on OK. Once again,  "
+595.68,3.3,"let's click on OK, and here too, I'll click on OK."
+600.06,5.46,"Here I see that the database KCC 
+restored successfully. That's great."
+605.52,5.7,"Let's click on OK. Over on the left-hand 
+side, you'll now see a new cylinder icon."
+611.22,6.84,"This is the database icon, and the database is 
+called the KCC for the Kevin Cookie Company."
+618.9,3.66,"I'll click on this plus icon, and this expands it."
+622.56,4.02,"Within here, we have database 
+diagrams, tables, and the list goes on."
+627.18,3.72,"The one that we're most interested 
+in today is the one titled Tables."
+630.9,6.0,"Here I can click on the plus icon, and we see 
+that this database has four different tables."
+636.9,4.98,"We have one titled Customers, Order 
+Product, Orders, and also Product."
+642.66,4.14,"You might be wondering, why do we break 
+a database up into separate tables,  "
+646.8,4.98,"can’t we just have everything in one big 
+file, and here's what that would look like,  "
+651.78,4.14,"and if you look closely, you might 
+start to notice some issues here."
+656.46,5.1,"Here we repeat the customer name again and again, 
+and all of their address and contact information."
+661.56,3.42,We also repeat the cookie name again and again.
+664.98,5.1,"Instead of repeating this information again and 
+again, we can break it up into separate tables."
+670.08,6.24,"So here for example, imagine I have an orders 
+table and for this order it's for customer 5."
+676.32,5.7,"So instead of putting all of that customer’s 
+information here, instead I can say oh customer 5,  "
+682.02,4.38,"and then I can jump to another table 
+with all of the details on customer 5,  "
+686.4,2.46,and here's all of their contact information.
+688.86,3.6,This is the core idea behind databases.
+692.46,5.58,"We can use various IDs to connect together 
+these tables and that's why it's referred to  "
+698.04,5.34,"as a relational database, because we have 
+relations between these different tables."
+703.38,5.46,"When you're designing a database, you want 
+your data to repeat as few times as possible."
+708.84,5.28,"The benefit of that is that it takes up less 
+space and it's also easier to get back to data,  "
+714.12,3.36,and this process is referred to as normalization.
+718.02,4.86,"So here I've now separated all of the data out 
+into separate tables so there's a Customers table,  "
+722.88,4.92,"an Orders table, a table with all of the 
+Orders and the Products in those orders,  "
+727.8,5.1,"and then one table with all of the Products, 
+and if you look at these four tables, this takes  "
+732.9,6.9,"up a lot less space than this one massive flat 
+file. Back within SQL Server Management Studio,  "
+739.8,5.76,"here you'll see our four different tables, 
+and each table name starts with dbo."
+746.28,4.14,"This beginning portion is the default schema name,  "
+750.42,4.32,"and the schema is simply a way that you 
+can bucket together different tables."
+754.74,5.64,"You can also use it to provide access to certain 
+tables, so certain users might have access to  "
+760.38,5.58,"one schema and other users might have access to a 
+different schema. For this tutorial, we're simply  "
+765.96,5.64,"going to stick with the default of dbo. Let's 
+now look at what's contained within one of these  "
+771.6,6.78,"tables. Here I can right click on the customers 
+table, and I can select the top 1000 rows."
+779.16,5.28,"Here when I select that, here you'll see the SQL 
+query that gives me the results or all of the  "
+784.44,4.62,"data within the table, and in a moment, we'll come 
+back to how we can write these queries on our own."
+789.06,2.4,"But first, let's look down below at the results."
+792.42,3.84,"Here, this looks similar to what you 
+would find in, say, a spreadsheet."
+796.26,3.72,"You have a whole bunch of columns, and 
+you also have a number of different rows."
+800.64,5.22,"These columns here, within a database, 
+these are referred to as fields and then  "
+805.86,4.86,"the rows are referred to as records. Within 
+the table, you might also be wondering,  "
+810.72,3.54,"why do we have separate columns for all 
+of this information, like the address,  "
+814.26,5.88,"the city, the state, and the reason why is if 
+we just put it all together in one big column,  "
+820.14,5.34,"it would be harder to get back and to query 
+against that data, so if we break it down to  "
+825.48,4.56,"the most granular level, that makes it easier 
+to access that data again in the future."
+830.82,3.42,"Now that we've looked into one 
+of our tables, let's take a look  "
+834.24,4.32,"into another one of our tables and look at 
+how we'll make a connection between them."
+838.56,4.38,"I'll go over to orders, right click 
+and here too, just like we did before,  "
+842.94,6.78,"let's select the top 1000 rows. Here once again, 
+we see the SQL query that gives us these results.  "
+850.56,5.46,"So here we have all of our order 
+information, so we have orders 1 through 50,  "
+856.02,4.38,"and here in this table you'll see 
+that it references a customer ID."
+860.4,4.56,"So here this order number 1 
+references customer ID number 5."
+865.68,4.44,"If I go back to the customer table, 
+here I can see who customer #5 is,  "
+870.12,4.2,"so we can relate these 
+tables using the customer ID."
+874.32,7.02,"The customer ID in this table also happens 
+to be what's called the primary key,  "
+881.34,3.12,and this is an important concept for databases.
+884.46,7.74,"The primary key is the minimum number of columns 
+that you need to uniquely identify a record."
+892.2,2.22,"So, let's just work through this."
+895.02,2.94,"Could you use the customer 
+name as the primary key?"
+897.96,2.16,"Well, here you have Tres Delicious."
+900.12,3.42,"So, if I say, hey, Trey Delicious, in this case,  "
+903.54,5.16,"you cannot uniquely identify the row or the 
+record, because here we have Trey Delicious twice."
+908.7,2.4,We also have the phone number show up twice.
+911.1,1.32,You could have an address repeat.
+912.42,1.2,You could have a city repeat.
+913.62,5.7,"So, you can't use any of this information 
+to uniquely identify one of these records."
+919.32,4.32,"Instead, we have the customer 
+ID, and with this customer ID,  "
+923.64,6.12,"you know exactly which row we're talking about and 
+that's why it's referred to as the primary key."
+930.36,7.98,"In the orders table, we have two different ID but 
+four orders. The order ID is the unique identifier  "
+938.34,3.96,"and that's why it's the primary key, and the 
+reason why is, here if we look at customer ID,  "
+942.3,5.34,"you see that customers can have multiple 
+orders and so here we see the customer ID  "
+947.64,4.86,"show up multiple times, so once again, 
+the primary key is the minimum number  "
+952.5,5.88,"of columns to uniquely identify a row, and so 
+in this case the order ID is the primary key."
+958.98,4.56,"Now that we've touched on primary keys and 
+also how we relate these different tables,  "
+963.54,3.9,"we can actually visualize how 
+all these tables are connected."
+967.44,3.84,"Go up to database diagrams 
+and expand this category."
+971.28,3.9,"If you want to create your own database 
+diagram, you can right click here,  "
+975.18,5.16,"and then you can create a new database diagram, 
+but it should already be part of the database."
+980.34,2.04,Simply click on this option.  
+983.16,5.88,"This opens up our database diagram, and here 
+we can see the four different tables that are  "
+989.04,5.34,"part of our database, and here you can also 
+see all the different fields that are within  "
+994.38,4.86,"each one of these tables, and right here 
+we can see which one is the primary key."
+999.24,2.52,You can see this small yellow key icon.
+1001.76,5.16,"So here we can see what the primary key is 
+in each table. In the order product table,  "
+1006.92,4.56,"there is no individual primary 
+key to uniquely identify an item,  "
+1011.48,3.0,"it's a combination of the 
+order ID and the cookie ID."
+1015.38,1.74,"So here just to walk through this,  "
+1017.12,3.78,"for every single customer, you 
+can have many different orders."
+1020.9,5.22,"So here we have the infinity symbol indicating 
+that it's a one-to-many relationship,  "
+1026.66,6.24,"and for each order, you can have many products 
+part of the order, so for one order, you can  "
+1032.9,5.76,"have many different products, and then for all of 
+the different products, we have our product table."
+1038.66,3.78,"So, for one product, it can show 
+up in multiple different orders."
+1042.44,6.66,"Setting up a database diagram is a nice way to get 
+a visual of how a database is laid out, and also,  "
+1049.1,3.9,"when you're querying against a database, 
+it helps you understand how they relate."
+1053.6,5.64,"You can also visualize how a table is organized 
+over on the left-hand side in the object explorer."
+1059.24,2.7,"Here for example, I have my orders table."
+1061.94,4.68,"I can click on this plus icon and here 
+I can click on the plus next to columns,  "
+1066.62,4.38,"and here I can see all of the different 
+columns that are contained within this table,  "
+1071.0,4.26,"and here I see a visual indication 
+of what the primary key is."
+1075.26,2.34,Here the primary key is the order ID.
+1078.8,2.82,I can also review all of the different data types.
+1081.62,6.24,"Here I'll right click on orders and here I 
+can select design. Within the design view,  "
+1087.86,5.16,"here I can see all of the different column names 
+and I could also see the associated data type."
+1093.02,4.68,"Now this will be important, especially 
+as we start querying. For example,  "
+1097.7,5.1,"for customer ID, the data type is set 
+to integer, so it has to be a number."
+1102.8,4.86,"So, you wouldn't want to say, compare 
+it or filter for a customer ID with a  "
+1107.66,4.92,"letter because that isn't part of 
+the integer data type. With all of  "
+1112.58,5.28,"this foundational information now out of the 
+way, you're in a good spot to start querying."
+1117.86,5.04,"To write our first query, let's go up to 
+the top bar and then click on new query."
+1122.9,5.76,"You can also press the shortcut key control 
++ n. This opens up a new window where we  "
+1128.66,4.74,"can now write our query, but before we 
+do that, let's just check a few things."
+1134.0,4.8,"Right up here you'll see a drop down 
+and it currently says the KCC database."
+1138.8,5.58,"When we write our query in this window, 
+it’s going to execute against this database."
+1144.38,4.92,"If you have multiple databases, here 
+you can choose which database you want  "
+1149.3,4.74,"the query to execute against. Also, 
+to help us with writing this query,  "
+1154.04,4.92,"we're going to write a query against the 
+customers table. To help us with this,  "
+1158.96,4.38,"let's click on the plus icon and this way 
+we can see all the different column names."
+1164.3,4.74,"For the first query, I simply want to 
+see a list of all of our customers."
+1169.64,2.58,"When I look over here at the customers table,  "
+1172.22,3.66,"here I see that one of the 
+columns is called customer name."
+1175.88,3.84,"I just want to see all of the 
+different customer names in this table."
+1180.5,3.24,"To start the query, let's first type in select."
+1183.74,6.54,"Select allows us to retrieve data from a table 
+and once again I want to get the customer name,  "
+1190.28,3.9,so I'll type in select and then customer name.
+1194.18,3.48,"Here it matches the column header name exactly,  "
+1198.2,4.44,"and next I need to specify where I 
+want to get the customer name from."
+1202.64,4.44,"So next I'll enter in from 
+and I want to get it from the  "
+1207.08,7.14,"customers table, so I'm going to type 
+in dbo.customers and this is our query."
+1214.22,5.46,"That's all we have to enter in. Now that we've 
+finished entering the query, up here we can  "
+1219.68,5.82,"click on execute and that'll run the query, 
+or alternatively, as I hover over that button,  "
+1225.5,5.94,"you might have noticed that the shortcut key is 
+F5. Here I'll press F5 and that runs the query.  "
+1231.44,4.98,"Here we can see all the different customer 
+names contained within the customers table,  "
+1236.42,5.58,"and congratulations, you just wrote your 
+first query. See, that wasn't that hard."
+1242.54,4.08,"Now let's say I want to get more 
+information than just the customer name."
+1246.62,5.52,"Let's say I want to see all of the notes 
+associated with each one of these customers."
+1252.14,5.52,"Right now, I'm just selecting one of these 
+columns, but if I want to include another column,  "
+1257.66,4.5,"I simply enter a comma and then I can 
+type in the other column name that I want."
+1262.16,5.04,"I also want to get the notes, so I'll type 
+in comma and notes and the rest of the query  "
+1267.2,5.76,"is exactly the same. And now once again I want 
+to run this, so I'm going to press the F5 key,  "
+1272.96,5.94,"and here now I can see all of the different 
+customer names along with the associated notes."
+1278.9,3.66,"As you start working with 
+more and more SQL queries,  "
+1282.56,4.2,"you'll likely find yourself jumping 
+in between different databases."
+1286.76,5.52,"Here, for instance, I'll move from the Kevin 
+Cookie Company database to the master database."
+1293.12,5.82,"Now when I try to execute this query, I 
+get an error message because in the master  "
+1298.94,5.46,"database there's no table called 
+dbo.customers, so my query fails."
+1305.0,1.92,"If you want to prevent this from happening,  "
+1306.92,4.02,"instead of just specifying the table 
+that you want to get this data from,  "
+1310.94,5.82,"you can also specify the database. Now 
+remember that this database is called KCC."
+1316.76,5.76,"So, before the table name, I 
+can type in KCC.dbo.customers."
+1322.52,4.98,"So now not only does it specify the 
+table name, but also the database name."
+1327.5,4.08,"Now when I try to execute this query, I 
+get the same results that I got before,  "
+1331.58,5.28,"even though right up here the master 
+database is currently the active one."
+1336.86,5.22,"Within the results, you'll see that the 
+customer name column doesn't have a space."
+1342.08,4.98,"I can customize or define what this 
+column header should look like."
+1347.84,2.04,"Right up above in the select statement,  "
+1349.88,5.94,"I select the customer name, and right after 
+that I can type in as and then I can insert  "
+1355.82,5.22,"a bracket and within here I can type in 
+exactly how I want the name to appear."
+1361.04,2.7,"So, I want to type in customer name with a space."
+1364.34,3.66,"Now when I run this query, you'll 
+notice that the column header now  "
+1368.0,4.32,"has a space. Now once again, I can 
+type in any value into this alias."
+1372.32,4.2,"Next, I'm going to remove notes 
+from the query, and once again,  "
+1376.52,3.54,"when I run this, I see a list of 
+all of our different customers."
+1380.72,5.16,"One thing you might notice is within this 
+customer list, Tres Delicious shows up twice."
+1386.48,3.54,"That's because the customer has 
+two different headquarters and  "
+1390.02,2.82,"we've included them in our 
+customer table two times,  "
+1392.84,6.54,"but let's say I just want a list of all of the 
+distinct or unique customers that we work with."
+1400.28,4.98,"Before the customer name in the select 
+statement, here I can type in distinct,  "
+1405.26,5.46,"and then I’ll enter a space, and when 
+I run this query again, here I only see  "
+1410.72,4.74,"Tres Delicious once because it's only 
+showing me all of the distinct values."
+1416.06,6.12,"So far, we've been looking at how we can get 
+specific columns back, but what if I want to  "
+1422.18,5.7,"get all of the columns back in this table? Do 
+I have to enter in all of the different column  "
+1427.88,5.04,"headers within the select statement? Of course 
+not, we can have the computer do this for us."
+1432.92,3.42,"Here I'm going to remove 
+this portion of the query,  "
+1436.94,6.78,"and here I can enter the asterisk symbol 
+or the wild card, and now when I press F5,  "
+1443.72,4.86,"here this returns all of the different columns 
+and all of the different records within this  "
+1448.58,5.7,"table. Now let's say I don't want to see 
+everything, but I just want a sample of the data."
+1455.0,5.4,"I can type in top, here I'll type in the top, 
+and maybe I just want the top three records,  "
+1461.06,5.34,"and here once again, I could run this, and here 
+I just see the top three records. As we've been  "
+1466.4,4.02,"running these queries, there's a yellow 
+bar down below that tells us whether or  "
+1470.42,4.44,"not the query executed successfully. 
+Also over on the right-hand side,  "
+1474.86,3.42,"you'll see some helpful information 
+telling you how many rows you got back."
+1478.28,4.74,"So here we wanted the top three, and I 
+can confirm that we got three rows back."
+1483.68,3.06,"Especially when you start running 
+some more complex queries,  "
+1486.74,4.56,"here you'll see the runtime to see how 
+long your query has been running for."
+1491.3,6.0,"Now that we know how to get some basic data 
+back using queries, how can you filter the data?"
+1497.3,1.44,"So, let's say for example,  "
+1498.74,3.9,"I want to get a list back of all of our 
+customers in the state of Washington."
+1503.6,3.48,"Here I'll remove the top 
+three portion of our query."
+1507.8,4.26,"So right now, when I run this, we get 
+all the customer information back."
+1512.78,5.34,"At the very end of this query, I can 
+enter where and once again I want to  "
+1518.12,1.86,find all customers in the state of Washington.
+1519.98,7.2,"So here I'll type in state equals Washington, 
+and that's all I need to enter in. Now when  "
+1527.18,5.04,"I press F5, we only get back this one 
+customer that's based out of Seattle, WA."
+1533.0,5.88,"To make this query easier to read, here I 
+can insert spacing, I can also press enter,  "
+1538.88,4.86,"and I can add newlines, and when I run 
+this query, I get the exact same result."
+1543.74,4.56,"So, as you're pulling together your 
+queries, feel free to insert spaces  "
+1548.3,3.96,"or character returns to make it 
+easier for you to follow along."
+1552.26,5.46,"Another thing that will help you follow along 
+with your code and also help other people with  "
+1557.72,6.18,"your code is entering comments. Here for example, 
+I can enter two dashes and I can write a comment."
+1564.68,3.3,"Here I typed in this returns all 
+customers in Washington state."
+1568.76,6.42,"Alternatively, instead of entering the dash dash, 
+I could also enter a slash in the asterisks and at  "
+1575.18,5.04,"the end I can enter the asterisks and a slash 
+again, and this will also create a comment."
+1580.22,3.6,"So, you have those two different 
+options. In this example,  "
+1583.82,3.3,"I'm looking at just customers 
+located in Washington state,  "
+1587.12,5.28,"but instead of saying equal to Washington state, 
+I could also say not equal to Washington state."
+1592.4,5.58,"So, show me all the customers who are 
+not located here. When I press F5 to run,  "
+1597.98,4.26,"here I see the five other customers who 
+are not based out of Washington state,  "
+1602.96,5.46,"and here I could also enter the exclamation mark 
+in the equal sign. That also means not equal to,  "
+1608.42,3.6,"and when I press F5, once again 
+I get this same exact result."
+1612.02,3.78,"In my where clause, I can 
+also use an or statement."
+1615.8,4.68,"So, let's say I want a list back of all of 
+my customers who are in Washington state  "
+1621.26,6.72,"or in New York state. Here I can enter 
+in New York and when I run my query,  "
+1627.98,4.68,"here I see my two different customers, 
+one’s in Washington and one’s in New York."
+1632.66,3.84,"Now let's say I also want to 
+see customers who are in Utah."
+1636.5,4.8,"Now, once again, I could type in or 
+state equals and let's now look for Utah."
+1641.3,6.66,"I’ll press F5 and here I see that I have three 
+customers and each one is in one of these states,  "
+1647.96,4.74,"but especially as I start expanding 
+this, it becomes somewhat unwieldy."
+1652.7,7.68,"Instead, I can use in. Here I'll change 
+this to in and I'll insert a parenthesis,  "
+1660.38,3.3,"and let me leave Washington, 
+but I'll remove or and state.  "
+1664.4,4.8,"I'll insert a comma and then I'll remove 
+this portion and then I'll leave in Utah.  "
+1669.2,5.4,"Now I'll close the parentheses and when 
+I press F5, I get the exact same result,  "
+1674.6,5.7,"but the code is a little bit cleaner and a little 
+bit more efficient. Currently, this query shows me  "
+1680.3,5.94,"all of my customers who are in either Washington 
+or New York or in Utah, but what if I want to see  "
+1686.24,6.66,"all of my customers who are not in these states. 
+Right here in front of in, I can type in not in,  "
+1692.9,5.76,"and here I'll press F5, and this shows me all 
+of those customers who are not in those states."
+1699.68,4.62,"I've now gone back to the base query where 
+we get all the records back in this table."
+1704.3,2.76,Now let's say I want to filter down to the  
+1707.06,3.84,"customer Tres Delicious who's 
+located in the United States."
+1710.9,8.16,"Now once again, I can enter where, and here I'll 
+type in customer name equals Tres Delicious."
+1719.84,3.54,"When I run this query, I get two 
+customers back, but once again,  "
+1723.38,6.9,"I only want to see the one in the United States. 
+So, unlike the previous query where we used or,  "
+1730.28,6.72,"here we can type in and, then I’ll 
+type in country equals United States."
+1737.72,2.82,"Now when I run the query, I 
+just get this result back."
+1740.54,3.36,"So, we can also use and to filter our data."
+1743.9,4.38,We can also combine ands together with ors.
+1748.28,3.36,"Right now, we're looking for the 
+customer name, and this country."
+1752.36,3.9,"Let me enter down to a new line. 
+Here I could also type in or and  "
+1756.26,2.88,maybe I say country equals let's say France.
+1759.68,4.86,"When I press F5, here we're 
+looking for this customer and  "
+1764.54,4.26,"either the United States or France, 
+and I get these two results back."
+1769.58,3.18,"Especially when you start 
+adding a lot of ands and ors,  "
+1772.76,3.12,"it might be confusing as to 
+how the query is going to run."
+1775.88,1.62,Which part does it execute first?
+1777.5,1.5,Which part does it execute second?
+1779.0,3.66,"To make it extremely clear, 
+you can use parentheses."
+1782.66,2.76,"So, I want the customer to be Tres Delicious,  "
+1785.42,5.88,"and I want the country to be either the United 
+States or France, and it works as is right now,  "
+1791.3,3.9,"but to make it clear, I can insert 
+a parentheses here and here."
+1795.86,5.34,"So, this way I know that it evaluates 
+this customer name and this portion here.  "
+1801.74,5.58,"When I press F5, it gives me this same result, 
+but it's a little bit easier and cleaner to read."
+1807.32,5.28,"So far in our where clause, we've been 
+looking for a specific customer name,  "
+1812.6,3.36,"but what if I just want to see 
+all customers who say begin with  "
+1815.96,4.56,"the letter A? Instead of entering the 
+equal sign here, I can type in like,  "
+1821.18,6.0,"and here I'll remove the name, and let me type 
+in an A and next I'll type in the percent sign."
+1827.18,4.68,"So, I want it to begin with an A, but there 
+can be any number of characters after the A."
+1832.64,4.8,"When I press F5 to run, here I see that 
+there are two customers that begin with an A."
+1838.04,4.98,"Now instead of saying like, I could 
+also say not like, and when I run this,  "
+1843.02,3.9,"I see all the customers who do 
+not begin with the letter A."
+1846.92,4.32,"Next, let's shift our focus 
+over to the orders table,  "
+1851.24,5.76,"and I want to show you how you can also 
+filter based on numbers and numerical values.  "
+1857.0,5.28,"Here I'll right click on orders and 
+let's select the top 1,000 rows."
+1863.0,5.88,"Here we see the query that returns the top 
+1,000 rows. Now this table only has 50 rows,  "
+1868.88,3.42,"so we see all the different data 
+contained within this table."
+1872.96,5.58,"Now let's say that I want to see all of the 
+orders that exceed $1,000. Here, once again,  "
+1878.54,8.28,"I can type in where and I can then type in 
+order total is greater than 1,000. Now when  "
+1886.82,4.98,"I run the query, I only see all the different 
+orders where the order total exceeds 1,000."
+1892.64,2.82,"Along with that, I could also 
+say greater than or equal to."
+1895.46,3.0,Here I could also enter in less than or equal to.
+1898.46,4.32,"When I run this again here, I see all 
+of the orders that are less than 1000,  "
+1902.78,2.46,and I could also use something called between.
+1905.24,7.08,"Here I'll type in between and let's say between 
+1,000 and 2,000. Here once again, I’ll press F5  "
+1912.32,5.88,"to run the query and now we only see orders 
+with an order total between 1,000 and 2,000."
+1918.2,7.38,"Now one thing to note, this will be 
+inclusive of both 1,000 and 2,000. So far,  "
+1925.58,3.66,"we've been looking at how you can 
+retrieve data from just one table."
+1929.24,4.92,"We pulled some data from the customers table, 
+and we pulled some data from the orders table."
+1934.16,5.94,"But what if you want to pull data from let's 
+say two tables or even three different tables.  "
+1940.1,4.74,"Here I can see all of our order data, 
+so we have quite a few orders here."
+1944.84,5.28,"But here it simply refers to the customer 
+ID, and that doesn't really do me much good."
+1950.12,4.8,"If let's say there's an order and I want to 
+follow up with the customer on that order,  "
+1954.92,3.3,"I need the customer name, and 
+I also need their phone number."
+1958.22,5.28,"So, it'd be really nice if I could also 
+see those two columns alongside all of  "
+1963.5,4.5,"the order information. To join these two 
+tables together, let's start from scratch."
+1968.0,4.38,"I'm going to remove this query 
+altogether and once again I want  "
+1972.38,2.04,to pull some information from the orders table.
+1974.42,4.56,"I want the order ID and the 
+order date and the order total."
+1979.64,4.26,"So here I'll type in select and 
+then I'll type in the order ID,  "
+1984.8,6.72,"the order date, and the order total, and once 
+again, this is coming from the orders table,  "
+1991.52,7.44,"so I'll type in from dbo.orders, and when I run 
+this, here's all of the data that I want back."
+1998.96,2.22,"To make things a little bit cleaner,  "
+2001.18,3.48,"I'm going to insert enters here just 
+so it's a little bit easier to read."
+2005.74,3.84,"Here now this is exactly the same and when 
+I run it, once again, I get the same result."
+2010.18,4.14,"Now I mentioned earlier that I also want to get 
+the customer name back and the phone number."
+2014.98,3.66,"So here in the select statement, let 
+me also type in the customer name,  "
+2018.64,3.0,"and right here I'm also going 
+to type in phone number."
+2022.24,3.48,"Now when I execute this query, 
+I get an error message back,  "
+2025.72,5.16,"and the reason why is in the orders table, there's 
+no customer name and there's no phone number."
+2031.54,4.26,"First I need to connect the orders 
+table to the customers table,  "
+2035.8,2.94,and we can do that by using a join.
+2039.34,3.48,"I want to join my orders 
+table with my customers table."
+2042.82,4.92,"So here I'll type in join and 
+then I'll type in dbo.customers."
+2047.74,5.88,"So right now, I've joined these tables, but I 
+need to specify how I'm going to join these,  "
+2054.16,4.74,"and here when I look at the customer 
+table, there's a customer ID, and here  "
+2058.9,6.06,"when we look at the order table, there's also a 
+customer ID here, so I can join on that column."
+2065.98,1.86,"To join on that column,  "
+2067.84,5.04,"I simply type in on and here I'm going 
+to type in on dbo.orders.customerID."
+2074.74,3.6,"So here once again I'm referring 
+to this value right here,  "
+2078.88,5.28,"and I want to join it on the 
+customer ID in dbo.customers."
+2084.16,4.2,So here I'll type in dbo.customers.customerID.
+2089.14,4.08,"Now when I run this query, here I 
+get back all of the different orders  "
+2093.22,2.94,along with the customer name and the phone number.
+2096.16,1.32,That's exactly what I want.
+2098.32,3.24,"To clean things up, I can also use an alias here."
+2101.56,4.86,"So here from dbo.orders, instead of 
+referring to dbo.orders, I can simply  "
+2106.42,7.02,"refer to O and the same down here where I say 
+dbo.customers, here maybe I use an alias of C."
+2113.98,5.76,"The benefit of that is here I can remove 
+the reference to dbo.orders and instead I  "
+2119.74,5.94,"can insert an O, and right down here where 
+I say dbo.customers, here I can insert a C."
+2126.4,3.18,"When I press F5 to run, I 
+get the exact same result,  "
+2129.58,2.58,but my code is a little bit easier to read now.
+2132.16,6.3,"When we ran this query, we did something called 
+an inner join, and in fact I can go back to this  "
+2138.46,5.46,"join statement, and I can type in inner join, and 
+here when I run it, we get the exact same result."
+2143.92,5.04,"In fact, when you just enter join, 
+that by default runs an inner join."
+2148.96,7.86,"So, what is an inner join? Well an inner join 
+gives me all the customers back who have an order,  "
+2156.82,6.84,"and it also gives me back all orders that have a 
+customer associated with it. So let's say there  "
+2163.66,5.46,"were, let's say a customer that doesn't have 
+any orders. That would not show up in this list."
+2169.12,3.54,"Basically, there has to be 
+overlap between orders and  "
+2172.66,2.7,customers for the result to show up down below.
+2175.36,4.38,"Now let's say I have a customer 
+who doesn't have any orders,  "
+2179.74,4.08,"but I still want to see the 
+customer in the results down below."
+2184.42,3.72,"Let me bring this line up just to make 
+it a little bit easier to visualize."
+2188.68,5.88,"Here I'll remove the portion that says inner 
+join and here I'll type in right outer join,  "
+2195.1,3.12,"and here when I run this, let's 
+go to the very bottom of the list,  "
+2198.22,3.78,"and here now we see that there's 
+one customer without any order."
+2202.9,2.94,"So, what does a right outer join do? Well,  "
+2205.84,3.48,"here it's saying the right item 
+here, which is dbo.customers."
+2209.32,5.28,"I want to see all customers irrespective 
+of whether they have an order."
+2214.6,5.1,"So here I get all customers back 
+even if that customer has no order."
+2219.7,3.12,"So here for the order value 
+down below, it says null."
+2222.82,4.14,"Now let's say I want to see all orders 
+whether or not there's a customer."
+2226.96,4.92,"Well orders is on the left side over here, 
+so instead of saying right outer join."
+2231.88,6.96,"I want to do a left outer join instead and now 
+when I run this query, it gives me the same  "
+2238.84,5.82,"result as the inner join, but the only reason why 
+is every order happens to also have a customer."
+2244.66,4.62,"But if there were, say, an order without 
+a customer, the left outer join would have  "
+2249.28,4.86,"given me orders and then for the customer name and 
+phone number it would have given me null values."
+2254.14,4.44,"In my query, let's say I also 
+want to get back the customer ID."
+2258.58,2.76,"So right up here in the 
+select portion of the query,  "
+2261.34,4.32,"I'll insert a comma, and here 
+let's type in customer ID."
+2266.74,3.18,"When I run the query though, 
+I get an error message,  "
+2269.92,3.48,"and it tells me that it's 
+an ambiguous column name,  "
+2273.94,6.66,"and the reason why is here in the customer table, 
+I have a customer ID, and also down below in the  "
+2280.6,6.0,"orders table, there's also a customer ID, so it 
+doesn't know which customer ID it should use."
+2286.6,6.36,"Well, that's simple to solve, I could simply 
+tell it which table I want to use, and let's  "
+2292.96,5.28,"just pull it from the customers table. Here 
+the alias for that is C so I can enter a C dot  "
+2298.24,5.64,"and then customer ID, and now when I run it, once 
+again, it works, and here I have the customer ID."
+2303.88,5.22,"Now that I have these results back, let's 
+say I want to order these by the order total."
+2309.1,2.64,"Right now, they're all just 
+kind of randomly mixed in."
+2311.74,3.06,"I have large values, smaller 
+values, and large value again."
+2315.46,1.98,"At the very bottom of this query,  "
+2317.44,4.98,"I can add order by and here I want 
+to order by the order total column."
+2322.42,3.36,"Here I can type in order total, 
+and then run my query again,  "
+2325.78,2.88,and here you see that it's in ascending order.
+2328.66,4.08,"So here I start with 39 and 
+then we finish off at 3,518."
+2333.34,2.94,"Instead, I could also look 
+at it in descending order."
+2336.28,3.24,"Here I'll type in descending, execute,  "
+2339.52,3.78,"and here you see that we start large and 
+then it goes down to the smallest value."
+2343.96,4.26,"SQL also gives you access to a 
+number of different functions,  "
+2348.22,5.22,"so you could do things like get the current 
+date, or you could sum up values, or you can  "
+2353.44,4.74,"get a count. Those are just a few examples 
+of the functions that you have access to.  "
+2358.84,4.26,"Here in this example, I want to see 
+all of the orders from the past month."
+2363.64,5.22,"So here I'm selecting all orders from the orders 
+table and I'm looking at where the order date is  "
+2368.86,6.06,"greater than or equal to a date that's one month 
+in the past, but let's say in a week from now,  "
+2374.92,4.08,"I want to run this same query again where 
+I look at all of the orders from the past."
+2379.96,3.84,"Well, this date would no longer 
+be just the past month, so I would  "
+2383.8,5.04,"have to update this date. Instead, I 
+could replace this with a function."
+2389.38,5.28,"Here I'll remove this date and 
+let's use the date add function."
+2395.38,4.32,"Here I need to specify what the interval is, and 
+I want to look at the last month, so I'll type  "
+2399.7,6.24,"in month, and I want to look at the last month, so 
+for the increment, here I'll type in a negative 1,  "
+2406.66,4.62,"and for the expression, that's the 
+current time, and for this I can  "
+2411.28,6.12,"use yet another function. I'll type in get 
+date, and then I'll close the parentheses,  "
+2417.4,4.56,"and here I can run it, and I get the 
+exact same results that I got before."
+2421.96,5.76,"Except now when I run this again next week, it'll 
+also show me all the orders from the past month,  "
+2427.72,3.54,"but I no longer have to go in 
+and update this date manually."
+2431.98,5.04,"I can also use aggregate functions, 
+so instead of selecting all orders,  "
+2437.02,3.9,"what if I just want to see a count 
+of all orders from the last month?"
+2440.92,4.32,"Here I could type in count and let's 
+count all of the different rows."
+2445.24,4.56,"Now when I run this, I see that there 
+were 16 orders in the last month."
+2449.8,5.76,"Instead of counting, I can also sum up all the 
+different order totals from the last month."
+2455.56,4.74,"Here I'll type in order total and run again, 
+and here I can see that in the last month,  "
+2460.3,4.02,"we had over $17,000 of revenue. Not too bad for a  "
+2464.32,4.92,"cookie company. Now let's say I want to 
+see the order total by the customer ID."
+2469.24,3.9,"Down at the end of this query, I can 
+type in something called group by,  "
+2473.14,2.52,and here I'll type in the customer ID.
+2475.66,4.2,"Now when I run this, I see 
+the sum of the order total  "
+2479.86,3.48,by the various customer IDs in the last month.
+2483.34,5.82,"We've written some fairly complex queries, but 
+next I want to show you how you can write just  "
+2489.16,5.58,"about any query with ease, and we're going 
+to use something called the query designer.  "
+2495.46,6.36,"Here in a new query, simply press your right mouse 
+button, and then select design query in editor."
+2501.82,3.66,This opens up the query designer and first we  
+2505.48,2.88,"can choose the tables that we 
+would like to query against."
+2508.36,4.14,"Now I want to pull data from the 
+customers table and the orders table."
+2512.5,4.86,"So here I'll press control and select both 
+of these tables and then click on add."
+2518.86,3.66,"Next, I’ll click on close. 
+Within the query designer,  "
+2522.52,5.04,"here I can see all of my different tables, and 
+all of the different columns within those tables,  "
+2527.56,3.6,"and here I could also see how 
+these two tables are related."
+2531.16,6.0,"So, a really nice way to visualize, but now look 
+at how easy it makes it to pull together a query."
+2537.16,4.44,"Let's say I want to get a customer 
+name and all of their different orders."
+2541.6,5.16,"Here I simply click on customer name and 
+here I can click on let's say the order ID,  "
+2546.76,2.64,"maybe I want the date, and also the order total."
+2550.24,6.12,"Here I see all those different fields or columns 
+populate in this grid down below, and here you see  "
+2556.36,5.4,"that it automatically writes the SQL statement 
+for me, and it joins these two tables together."
+2562.42,3.78,"When I click on OK, here I can now 
+run the query and here I get all  "
+2566.2,3.42,"the customer names with the order ID, 
+the order date and the order total."
+2569.62,2.16,That was really easy to pull together.
+2572.5,4.62,"To go back to the query editor, 
+here I can highlight my query and  "
+2577.12,4.2,"then I can right click and once again 
+I'll click on design query in editor."
+2581.32,3.9,"Back within the query editor, 
+here I could also add an alias,  "
+2585.22,2.34,so we see that customer name doesn't have a space.
+2587.56,5.22,"Here I can type in customer name and that 
+automatically adds an alias down below."
+2593.5,4.44,"I can also add filters. Let's say I 
+just want to see all orders from the  "
+2597.94,7.14,"last month. Over here in filter, I could say 
+greater than or equal to 2/18/2022 and when I  "
+2605.08,5.04,"enter that in it automatically adds where and 
+now it'll just provide me with those orders."
+2611.14,3.84,"If I don't want to show the output from 
+order date, here I can check this box,  "
+2614.98,3.84,"and it leaves the where condition, but 
+it removes it from the select statement."
+2618.82,3.12,"Here I can also select the 
+sort type, the sort order,  "
+2621.94,3.96,"and if I right click up here, 
+I can even add the group by."
+2625.9,4.44,"So, let's say I want to pull a sum 
+of the order total by customer name."
+2630.34,1.68,I could do that as well.  
+2632.02,6.12,"Here for instance, I'll change order total 
+to sum, and let me remove the order ID."
+2638.14,3.3,"So here I want to see all 
+of the customer names and  "
+2641.44,2.4,the sum of their order total in the past month.
+2644.38,5.4,"I'll click on OK, and when you look at this, 
+this is fairly complex query, but here when  "
+2649.78,5.88,"I execute it, it just runs easily. All right, 
+well, that's how you can get started using SQL,  "
+2655.66,5.1,"and hopefully you agree with me now that SQL 
+is not really that hard to get started with,  "
+2660.76,5.22,"and it's really tremendous what types of 
+insights you can extract from your data."
+2666.88,4.68,"Let me know in the comments, what other 
+topics related to SQL would you like to  "
+2671.56,5.16,"see on this channel? To watch more videos 
+like this one, please consider subscribing.  "
+2677.68,1.8,I'll see you in the next video.

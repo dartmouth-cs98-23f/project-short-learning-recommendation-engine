@@ -1,0 +1,718 @@
+second,duration,transcript
+0.62,3.94,[Applause]
+1.29,3.27,[Music]
+7.08,3.199,[Music]
+13.42,4.019,[Music]
+15.119,4.24,yeah you're listening to autodesk's
+17.439,3.6,digital Builder podcast a show that
+19.359,3.68,inspires construction professionals to
+21.039,3.16,innovate and use technology to improve
+23.039,3.281,how they build our
+24.199,3.601,world I'm Eric Thomas and I've been
+26.32,3.279,working in construction for nearly a
+27.8,3.639,decade and now I have the privilege to
+29.599,3.601,sit down with industry Trailblazers to
+31.439,3.721,hear how they're solving construction's
+33.2,4.8,biggest challenges and redefining the
+35.16,2.84,future of the built
+39.36,4.519,environment all right welcome to another
+42.0,4.28,episode of Autodesk digital Builder
+43.879,4.721,podcast we are coming to you live from
+46.28,4.72,Autodesk University it is the first of
+48.6,5.04,three days right now our first interview
+51.0,4.92,for the week actually so I'm excited I
+53.64,4.439,hope uh you are as well I'm sitting down
+55.92,4.68,today with Tanya custus the director of
+58.079,3.921,AI research with Autodesk today we're
+60.6,4.48,going to talk a little bit about what
+62.0,5.28,the heck AI is what ml is artificial
+65.08,4.2,intelligence machine learning what those
+67.28,4.36,impacts are and you know really leaning
+69.28,3.96,in on the the concept of why those tools
+71.64,3.76,are not scary and they're actually going
+73.24,4.199,to be our friend moving forward so I'm
+75.4,3.96,very grateful for uh Tanya to join me
+77.439,3.281,today and uh you know dispel some of
+79.36,2.96,those rumors Tanya how are you doing
+80.72,3.48,today we're back at at you it's great
+82.32,4.159,doing great yeah it's great to be here
+84.2,4.959,there's so many people here it's
+86.479,5.121,exciting to be back in Vegas yeah
+89.159,4.28,there's a I'd say what thousands of
+91.6,4.24,people staring at us right now so no big
+93.439,3.881,deal or any pressure right now I'm
+95.84,3.08,really excited to build on what we did
+97.32,3.119,last year at AES University in New
+98.92,3.12,Orleans and so we're going to have a
+100.439,3.36,super fun conversation and we're going
+102.04,3.56,to get into the thi of it so can you
+103.799,4.64,tell me a little bit more what does your
+105.6,4.559,team do at Autodesk because it's it's
+108.439,2.881,incredibly interesting and I'd really
+110.159,3.721,love if you could kind of give an
+111.32,4.839,overview of your role as AI research
+113.88,6.0,lead so my team does fundamental and
+116.159,5.721,applied AI research so we um extend and
+119.88,4.48,Advance the state-of-the-art in Ai and
+121.88,5.4,machine learning and you know in areas
+124.36,5.319,that can be applied to Autodesk products
+127.28,4.8,um doing computer science research uh
+129.679,4.361,doesn't look that interesting um we're
+132.08,4.84,not like it's not like a chemistry lab
+134.04,3.88,with um lab coats or anything but you
+136.92,2.76,know it's a lot of people in front of
+137.92,5.08,computers running
+139.68,6.16,experiments and um we do a lot of
+143.0,8.12,research on deep learning and generative
+145.84,6.72,AI for 3D 2D and C geometry you've got a
+151.12,2.96,robust amount that you're covering your
+152.56,3.2,team's doing some really cool stuff
+154.08,3.879,which is is great and I think it gives
+155.76,4.08,us a fantastic foundation for the rest
+157.959,3.28,of our conversation to kind of do away
+159.84,4.399,with those myths that we were talking
+161.239,5.08,about but the the media cycle is is a
+164.239,4.0,buzz right now about the impact of
+166.319,4.321,artificial intelligence and I think
+168.239,5.08,that's been growing for months and I was
+170.64,5.16,hoping you could give me some context
+173.319,3.681,why is this explosion of AI media
+175.8,4.359,happening and what do these what do
+177.0,4.959,these tools do right so why now um I've
+180.159,3.681,been doing this for the last 15 years
+181.959,5.0,and let me tell you no one has ever been
+183.84,4.72,interested in what I do until now um my
+186.959,3.521,parents have not understood what I've
+188.56,7.0,done till now um I deal with that all
+190.48,9.6,the time so um you know this isn't new
+195.56,6.84,okay the math isn't new um AI is not new
+200.08,5.12,it's it's more that we've reached this
+202.4,4.64,kind of Tipping Point where data is in
+205.2,5.319,the cloud it's in a place where we can
+207.04,5.72,run compute on it and so the collocation
+210.519,4.881,of data and compute is super important
+212.76,5.8,to why we're seeing this now but then
+215.4,6.039,also the side you know which leads to
+218.56,6.52,the size of the models and they be have
+221.439,6.08,become useful to people they become
+225.08,4.359,almost humanlike so they've they've
+227.519,4.0,become interesting like previously they
+229.439,3.44,were not so interesting yeah they've
+231.519,4.241,come to a point where they can help
+232.879,5.041,people save time and so you know like 10
+235.76,4.52,years ago I worked um at a place where
+237.92,4.84,we were generating summaries
+240.28,5.679,of legal legal briefs and legal cases
+242.76,5.96,the editors took more time to fix the
+245.959,5.881,garbage the computer generated then it
+248.72,5.439,took them to just write things but now
+251.84,4.519,we're at that Tipping Point where you
+254.159,5.36,can generate something and the editor
+256.359,5.921,can save time by just editing that thing
+259.519,4.561,that the computer generated so that's
+262.28,3.639,why now you know it's it's such a great
+264.08,5.28,inflection point too and I'm hearing
+265.919,5.921,more folks talk about Ai and our data
+269.36,5.839,and managing their data in a in a really
+271.84,5.28,robust way that I wasn't hearing 2 3 4
+275.199,3.321,years ago and I think the light bulb is
+277.12,3.2,starting to turn on people are starting
+278.52,3.84,to understand as you just alluded to
+280.32,4.319,like this is going to save me time this
+282.36,4.52,is going to make a big impact on the
+284.639,4.161,work that I do in my business and so
+286.88,3.879,there's there's just a lot happening
+288.8,3.399,right now and I'm excited I'm glad that
+290.759,4.481,you're excited and your team's doing so
+292.199,5.56,much fantastic work but could you dive
+295.24,4.64,into that ambiguity Gap a little bit for
+297.759,4.201,me right now so I think a lot lot of the
+299.88,3.759,challenge that we deal with is folks
+301.96,4.36,don't necessarily understand what these
+303.639,4.361,different tools and Technologies do and
+306.32,3.56,that is the Catalyst for the anxiety
+308.0,2.88,that folks are feeling and so I'd love
+309.88,3.28,it if you could you know lift the
+310.88,3.92,curtain a little bit and give a high
+313.16,4.0,level overview of you know what
+314.8,4.08,artificial intelligence is what machine
+317.16,3.2,learning is and you know what large
+318.88,2.84,language models are because I think that
+320.36,3.36,buzzword is starting to show up more
+321.72,4.4,often now too definitely definitely is
+323.72,4.64,um so generally we will Define
+326.12,4.72,artificial intelligence AI as
+328.36,4.92,capabilities that are being done by a
+330.84,5.52,computer that are typically thought of
+333.28,5.44,as being done by a human Okay so tasks
+336.36,4.16,that a human usually does they're being
+338.72,4.4,done by a computer so it's a pretty wide
+340.52,6.36,definition um machine learning is a
+343.12,7.16,subset of AI so not all AI is machine
+346.88,6.319,learning but machine learning is all
+350.28,6.88,AI the layer Nuance is exciting and
+353.199,5.761,machine learning is when we learn we use
+357.16,5.479,the computer learns from data so it's
+358.96,6.48,learning patterns and probabilities and
+362.639,6.041,and other information from the data
+365.44,5.56,itself like classification things um
+368.68,4.68,recommendation algorithms a lot a lot of
+371.0,4.199,things you see every day are just simple
+373.36,3.239,you know machine learning large language
+375.199,5.321,models
+376.599,7.281,are models built with machine learning
+380.52,6.399,and they are built on huge amounts of
+383.88,4.64,data and what they are trained to do the
+386.919,5.361,training objective of large language
+388.52,7.64,models is is to predict the next word
+392.28,5.72,which sounds so boring um however when
+396.16,4.96,you can do that and you can do it at
+398.0,5.039,scale you also get a ton of other tasks
+401.12,4.079,for free you get things like question
+403.039,5.081,answering summarization um even
+405.199,6.161,answering like math problems so you know
+408.12,5.72,there's that scale is something that I
+411.36,5.239,think surprised all of us um because we
+413.84,5.639,had never trained at that scale before
+416.599,5.04,we can use it for almost anything that
+419.479,4.241,we use traditional machine learning for
+421.639,4.721,like classification and and things like
+423.72,6.479,that so yeah it's a really really
+426.36,5.16,interesting place to be um but but again
+430.199,3.28,they're not perfect they don't do
+431.52,4.679,everything and they literally only
+433.479,5.921,predict the next word it's they also
+436.199,5.961,sound very confident so psychologically
+439.4,5.28,you would really like to believe them
+442.16,5.0,but they literally know nothing they
+444.68,5.199,know no facts what they are exceedingly
+447.16,5.52,good at large language models is
+449.879,5.76,syntax linguistic syntax so like
+452.68,4.799,structure of language and and there's so
+455.639,3.68,much there especially with the the way
+457.479,3.321,that I can learn from data and when I
+459.319,4.16,talk to construction folks on the
+460.8,4.6,regular I I really lean in on Data
+463.479,4.16,standards and being really intent with
+465.4,3.68,the way they capture the data because
+467.639,3.481,that impacts everything you're talking
+469.08,3.88,about so heavily as you start building
+471.12,3.32,on that it's the garbage in garbage out
+472.96,3.199,you know acronym where everybody goes
+474.44,3.96,okay well you you know put everything in
+476.159,4.121,at random and you know you're going to
+478.4,3.199,get random back out if you're not you
+480.28,3.84,know being very deliberate about how you
+481.599,4.32,set that up and so I think it it really
+484.12,3.639,is an exciting moment for our industry
+485.919,3.761,because we're we're starting to step
+487.759,3.601,back and say okay where where does this
+489.68,3.84,get to augment what we're doing where
+491.36,3.679,can it make improvements and I think
+493.52,5.2,that's where I really like to emphasize
+495.039,6.081,with folks that this isn't the the scary
+498.72,4.0,Skynet that's coming at you right now
+501.12,3.799,we're we're at this opportunity where
+502.72,4.199,you say Okay a computer can do something
+504.919,3.72,at scale that I can't do as a person or
+506.919,4.0,can do it much more quickly and now I
+508.639,3.96,get to go home at five instead of seven
+510.919,4.12,or I get to go do something else and
+512.599,5.36,100% you know that's that that feels a
+515.039,5.401,lot better than this weird big brothery
+517.959,4.481,Vibe of somebody watching everything
+520.44,3.64,you're doing like that's not the value
+522.44,3.72,and that's not what people are doing no
+524.08,4.72,and honestly computers really are quite
+526.16,4.72,stupid or I would not have a job so you
+528.8,5.12,know they they don't learn what you
+530.88,4.28,don't teach them number one and a lot of
+533.92,4.4,the
+535.16,5.96,Skynet you know Terminator scenarios
+538.32,4.84,thanks movies yeah are are from movies
+541.12,4.6,and it's also a little bit of like
+543.16,4.76,psychological projection right so
+545.72,4.239,whenever someone is afraid of like AI
+547.92,4.08,doing bad stuff I'm like well what bad
+549.959,4.841,stuff are you going to do you know no
+552.0,5.399,Tech is neutral and it's the people
+554.8,4.84,behind it that you know do bad stuff
+557.399,4.841,right so like databases you could use
+559.64,4.4,those for a lot of bad things but again
+562.24,5.08,it's not the database's fault but we
+564.04,5.239,tend to anthropomorphize Ai and sort of
+567.32,5.6,like treat it like it's a person a
+569.279,6.081,little bit and so there is a weird um
+572.92,5.72,psychological aspect to it as well but
+575.36,4.8,but honestly like AI is very not scary
+578.64,2.879,yeah and and I feel like everything
+580.16,3.08,you're sharing right now there there's a
+581.519,3.0,bit of a confirmation bias in there too
+583.24,3.2,where you go oh the bad thing happened
+584.519,4.44,and we noticed but how many times was
+586.44,3.68,the technology leveraged perfectly where
+588.959,3.0,nothing happened and it was just the
+590.12,4.36,most boring thing ever but you got to go
+591.959,5.161,home at 5 and if it's intuitive yeah if
+594.48,4.64,it's if it makes sense to you you don't
+597.12,3.92,notice it right like yeah like every
+599.12,4.399,every predictive texting suggestion you
+601.04,4.919,get you know 99 out of 100 are great and
+603.519,4.161,then you get one that's really weird and
+605.959,4.281,then you like laugh at how bad the
+607.68,4.12,algorithm is yeah okay yeah you're happy
+610.24,3.24,with your Google home mini until it's
+611.8,3.8,you know doing the wrong thing and then
+613.48,3.799,you're yelling at it or at least I am in
+615.6,3.6,my house don't tell anybody about that
+617.279,4.761,one but i' I'd like to move a little bit
+619.2,4.319,on into uh generative AI because that's
+622.04,3.84,another topic that comes up fairly
+623.519,4.721,regularly so can you tell me what what
+625.88,3.44,the heck is generative Ai and and what
+628.24,3.64,role does it have with in the
+629.32,6.04,construction industry just with AI
+631.88,5.88,generally um in the past traditional AI
+635.36,3.84,we've been encoding things so we've been
+637.76,3.56,taking a lot of information and kind of
+639.2,3.439,compressing it down and encoding it now
+641.32,3.959,what we're doing is we're taking those
+642.639,5.681,encodings and decoding them and in so
+645.279,5.041,doing it generates things okay so so
+648.32,4.6,it's sort of just like The Logical next
+650.32,6.319,step of figuring out how to do stuff
+652.92,6.28,with AI generative AI is when you put in
+656.639,4.961,a prompt and that prompt could be you
+659.2,4.68,know a word it could be a phrase it
+661.6,4.88,could be part of a drawing it could be
+663.88,4.44,you know an image whatever right and
+666.48,4.64,then the output of the algorithm
+668.32,4.24,actually generates the output for you so
+671.12,4.08,it's not like search where it's just
+672.56,4.76,finding the output it's actually you
+675.2,4.28,know generating so we see it a lot with
+677.32,5.68,um language models like we were talking
+679.48,5.76,about so chat gbt right can um you know
+683.0,6.04,you give it a question it generates an
+685.24,5.92,answer you um give it a couple articles
+689.04,3.239,and it will generate a summary for you
+691.16,3.28,that's what we're seeing and I think
+692.279,4.521,we'll see it more and more because
+694.44,4.28,generating things saves people time we
+696.8,4.76,can take pictures of a construction site
+698.72,5.239,and generate possible code violations
+701.56,4.92,here's a drawing and it can generate you
+703.959,5.641,know try these materials right so so
+706.48,5.44,there's anything where you kind of you
+709.6,4.039,know yeah generate anything namesake
+711.92,3.44,makes sense when you start digging a
+713.639,3.601,little bit in but you know anybody in
+715.36,3.279,construction now it it makes so much
+717.24,3.719,sense to think about these tools in
+718.639,4.561,their application because is the the
+720.959,5.361,labor shortages are not going away and
+723.2,5.52,anything that we can do to improve how
+726.32,4.92,our teams are able to go to work and do
+728.72,5.239,things at scale with less time and
+731.24,4.64,increasingly less resources available is
+733.959,3.641,a huge win and so I'm really excited to
+735.88,3.48,start seeing you know all these shifts
+737.6,3.32,and all the buzz but we have to
+739.36,3.8,obviously parse what's real and what
+740.92,4.2,isn't as we kind of get into it but i
+743.16,4.08,I'd like to take a look at uh some of
+745.12,3.8,the exciting announcements that came out
+747.24,3.64,today during our keynote so I know
+748.92,3.76,Andrew shared some exciting things can
+750.88,3.56,you share your reaction to some of these
+752.68,3.0,developments and the the impacts that
+754.44,3.399,they're going to bring to Autodesk
+755.68,4.12,customers yeah absolutely I mean I think
+757.839,4.961,the the takeaways at least from my
+759.8,5.8,standpoint today were one you know we
+762.8,6.12,have been doing AI yeah this this isn't
+765.6,7.599,new so it's not new um but you know
+768.92,6.8,looking more at how do we leverage and
+773.199,6.08,sort of sew that AI together into an
+775.72,6.44,open platform um you know that approach
+779.279,5.441,is so important because data is so
+782.16,6.119,important and you can't do AI without
+784.72,6.64,data but also capturing the workflow and
+788.279,5.321,how the data moves through the workflow
+791.36,3.56,is is also just such an important part
+793.6,3.16,of AI because you're again you're
+794.92,3.44,predicting things so you want to be able
+796.76,3.68,to predict what's next and you can't
+798.36,3.8,predict what's next if you don't know
+800.44,3.639,what the next thing that's going to
+802.16,4.119,happen is like in the design workflow
+804.079,4.841,for example the importance of context
+806.279,5.201,also so like what Amy was talking about
+808.92,5.479,with um importing different contexts and
+811.48,5.039,contextual information again that is so
+814.399,4.521,important to you know the more the more
+816.519,4.041,data you give the computer the more it
+818.92,3.32,I'm not going to say understands but the
+820.56,4.68,better it can predict you know and
+822.24,5.32,thinking about um how we use AI at
+825.24,4.64,different levels right so we can use AI
+827.56,4.839,for analysis right so that's you know I
+829.88,5.16,have a lot of data I aggregated it and I
+832.399,5.401,learned these really interesting things
+835.04,4.76,right like that is great and you know
+837.8,4.44,but beyond that we can automate things
+839.8,4.2,right so boring things that designers
+842.24,3.719,don't want to do or that that take them
+844.0,3.04,a lot of time and then beyond that like
+845.959,3.68,you were talking about before
+847.04,5.919,augmentation so like that's the ultimate
+849.639,5.521,goal right like we want to make the
+852.959,3.88,computer better but we also want to make
+855.16,3.799,the human better right so like peanut
+856.839,4.961,butter and chocolate right all of those
+858.959,4.721,things sort of build on each other and I
+861.8,3.76,think you know Andrew did a good job of
+863.68,3.079,of sort of setting it up that way and
+865.56,2.719,and we don't want to take the humanity
+866.759,3.0,out of what we're doing as well like
+868.279,2.721,absolutely you see a lot of the buzz in
+869.759,3.401,the news right now where somebody goes
+871.0,4.16,oh we're gonna you know AI music and
+873.16,3.4,everything else it's like no like we
+875.16,2.919,want to automate the things people don't
+876.56,3.639,want to do so I can go sit on a beach
+878.079,3.76,and play music instead of you know doing
+880.199,3.721,some middle drawing you know takeoffs
+881.839,4.321,for 19 years or whatever it happens to
+883.92,3.88,be ex and you know AI it's it's a how
+886.16,4.84,not a what so we talk about like I want
+887.8,5.32,to do AI like okay but what do you want
+891.0,5.32,what problem are you solving right and
+893.12,5.04,AI honestly is not always the answer
+896.32,3.879,it's not always the best way to solve a
+898.16,4.64,problem and so you know it's a really
+900.199,6.241,important tool in a modern software
+902.8,5.76,engineering toolbox but you know you
+906.44,4.68,need to use it when it's right and when
+908.56,4.48,it's appropriate and I think you know
+911.12,4.68,obviously people want to use it because
+913.04,4.44,it's cool and fun but you know there's
+915.8,3.479,there's a lot of problems you don't need
+917.48,3.479,it for either yeah absolutely I think
+919.279,3.68,that's where that the hype narrative
+920.959,3.601,comes up a little bit sometimes we go I
+922.959,3.32,think every technology company
+924.56,3.399,regardless of what industry they're in
+926.279,3.761,in the last six months has announced
+927.959,3.88,something with I and it's just like well
+930.04,3.599,does that really do anything for your
+931.839,3.12,customers or did you think that that was
+933.639,3.041,important for round you know raising
+934.959,4.36,your series B round or something right
+936.68,5.159,and I mean so ultimately a new product
+939.319,4.96,should address like a either a customer
+941.839,4.8,need you haven't addressed in the past
+944.279,4.841,or you know we have plenty of products
+946.639,5.721,that we could just you know replace the
+949.12,5.0,guts of with AI and improve them right
+952.36,4.599,and and in those cases maybe you won't
+954.12,5.04,notice and maybe that's good that you
+956.959,3.601,don't notice right because it's working
+959.16,3.359,yeah sometimes that's okay if it's in
+960.56,3.8,the background it's just amplifying the
+962.519,3.44,workflows that you have but I think I
+964.36,3.24,think that leads into my next question
+965.959,4.0,actually can you talk a little bit about
+967.6,5.039,the the real risks that might you know
+969.959,4.161,come from introducing AI technology and
+972.639,3.481,how the teams that are developing the
+974.12,3.44,tools are really making sure that
+976.12,5.76,they're protecting our friends working
+977.56,6.519,in a first of all a data right so like
+981.88,4.56,you said garbage in garbage out making
+984.079,6.44,sure that you have the right data to
+986.44,6.199,train the right use cases so important
+990.519,4.361,there are a lot of things we're learning
+992.639,4.721,about different kinds of data right we
+994.88,4.24,don't have all the answers um sometimes
+997.36,5.0,processing data one way will lead to
+999.12,6.04,better results sometimes you know that
+1002.36,4.56,there's there's a lot of Science and
+1005.16,5.479,experimentation going on which is a lot
+1006.92,5.8,of what my team does um but again it's
+1010.639,5.281,looking at what's the right tool for the
+1012.72,5.2,job there's always going to be danger in
+1015.92,5.32,construction work what we're aiming for
+1017.92,6.6,is to make it safer and using aii in
+1021.24,5.799,ways that will make it safer so like
+1024.52,5.88,augmentation maybe like seeing things or
+1027.039,5.681,or patterns or trends that people are
+1030.4,5.36,not seeing like what are the strengths
+1032.72,6.0,of using AI for something and then you
+1035.76,4.88,know using it correctly and I think not
+1038.72,4.239,taking the human out of the loop is
+1040.64,5.039,really important for things that are
+1042.959,5.921,dangerous and we're also working um on
+1045.679,6.561,my team to do a lot of AI alignment
+1048.88,4.039,which is where we look at the output of
+1052.24,3.64,the
+1052.919,4.681,algorithms and we then kind of train
+1055.88,6.0,secondary algorithms or use
+1057.6,7.6,reinforcement learning to align them to
+1061.88,6.0,what is either safer or people like
+1065.2,4.68,better right um and you know so that
+1067.88,3.4,that also is a really important tool for
+1069.88,3.2,what we're doing in the safety
+1071.28,4.08,conversations one that I I really like
+1073.08,3.88,using it as an example actually because
+1075.36,3.24,you think about it from you know a large
+1076.96,2.92,project $200 million Construction
+1078.6,3.24,project you've got your safety
+1079.88,3.48,professionals on site they do their site
+1081.84,4.28,walks they're looking for risks they're
+1083.36,4.679,analyzing all these things technology
+1086.12,3.84,can analyze these risks at a scale that
+1088.039,4.241,a person can't do yeah and so if you're
+1089.96,4.88,doing uh different types of scanning
+1092.28,5.36,photography the technology can look for
+1094.84,4.12,fall hazards or scaffolding issues
+1097.64,3.039,that's not to say that your super
+1098.96,3.44,shouldn't go out and do these site walks
+1100.679,4.841,or anything because that human element
+1102.4,4.92,is so important but what it means is
+1105.52,4.0,you're just getting so much more
+1107.32,4.68,opportunity to check and see if
+1109.52,4.92,everything is safe and at a at a level
+1112.0,4.039,that just a human just can't do it's
+1114.44,3.76,just not possible it's processing more
+1116.039,4.281,information for you yeah right so it's
+1118.2,3.479,augmenting yep you and anybody on a
+1120.32,2.56,construction site knows first thing you
+1121.679,2.48,think about and last thing you think
+1122.88,2.32,about is going to be safety so
+1124.159,2.961,absolutely you know anything we can do
+1125.2,3.56,to improve that is going to be great is
+1127.12,3.64,there anything else that we can do to
+1128.76,4.159,reduce some of these you know Common
+1130.76,3.68,concerns that folks have or fears about
+1132.919,4.24,these tools anything else that comes to
+1134.44,5.8,mind um I mean a lot of what I do is
+1137.159,5.441,just education right explain today right
+1140.24,5.04,explaining to people that it's just math
+1142.6,4.84,it's not scary um explaining to people
+1145.28,5.44,that it's really the data that gives a
+1147.44,5.4,company a competitive advantage in AI
+1150.72,4.319,right so like Google and Bing if you
+1152.84,4.52,look at both search engines you know
+1155.039,4.681,Bing probably has better algorithm to be
+1157.36,4.559,honest but Google has a lot more data
+1159.72,4.959,right and so the data really is that
+1161.919,5.281,competitive advantage and I think you
+1164.679,5.36,know educating people how it works
+1167.2,5.12,demystifying it is really important um
+1170.039,4.921,but just you know transparency making
+1172.32,4.719,sure people feel that their privacy is
+1174.96,3.68,being protected or just when they're
+1177.039,5.281,interacting with a tool being
+1178.64,4.72,transparent that hey this this is AI
+1182.32,3.04,right or this you know this
+1183.36,4.52,recommendation was generated by a
+1185.36,4.16,computer like and giving them choices
+1187.88,3.84,right so here are a bunch of
+1189.52,4.279,recommendations you can take them or not
+1191.72,4.4,take them and that's totally cool and
+1193.799,5.0,that's totally different than having it
+1196.12,5.12,generate one answer
+1198.799,4.36,and forcing them to use it right this is
+1201.24,4.0,it we've seen when it makes mistakes and
+1203.159,3.561,what it does you kind of back away and
+1205.24,3.6,no thank you ex so a lot of it is like
+1206.72,4.92,how do we interact with it in a design
+1208.84,5.16,workflow especially even if you have
+1211.64,4.48,another person generating something for
+1214.0,4.6,you behind the scenes you probably don't
+1216.12,4.919,want it or or don't love it as much as
+1218.6,5.48,your own right and so you know it is
+1221.039,6.12,about that choice and using the AI like
+1224.08,5.64,a collaborator I think is will go a long
+1227.159,4.041,way towards building trust I appreciate
+1229.72,3.16,that and that that continued education
+1231.2,3.12,and the conversation around it
+1232.88,3.84,especially as it becomes more and more
+1234.32,4.239,Buzzy I I think is incredibly important
+1236.72,3.079,it's unfortunate almost that we've had
+1238.559,2.521,all these Terminator movies and
+1239.799,2.841,everything and somebody goes artificial
+1241.08,2.959,intelligence they're coming like I wish
+1242.64,3.519,I could have Arnold pop out right now or
+1244.039,3.961,something join our conversation to help
+1246.159,3.801,dissuade some of the uh the myths around
+1248.0,3.32,it but sadly I called them a couple
+1249.96,3.52,times and he wasn't available so we'll
+1251.32,4.16,just have to roll solo but I've got a
+1253.48,4.16,couple more questions for you today one
+1255.48,3.679,more on AI can you can you tell me a
+1257.64,3.32,little bit more more about the aspects
+1259.159,4.681,of artificial intelligence that people
+1260.96,4.76,are not talking about and they and what
+1263.84,3.199,else should they be talking about like
+1265.72,2.64,where are those gaps in the narrative
+1267.039,4.921,right now that you're seeing sort of the
+1268.36,5.96,no Tech is neutral situation right like
+1271.96,4.16,again this is the next step of software
+1274.32,5.2,engineering we've been using software
+1276.12,6.0,for a long time right and so thinking of
+1279.52,5.96,AI as something totally different than
+1282.12,6.4,just using software I mean it's it's
+1285.48,5.559,harmful but also a little naive um and
+1288.52,5.639,you know just really people don't think
+1291.039,4.76,enough about the data they don't think
+1294.159,4.161,enough about you know they're like I
+1295.799,4.521,want to do AI well like first you have
+1298.32,4.04,to put your data in the cloud and that's
+1300.32,4.2,probably boring and hard then you have
+1302.36,5.28,to organize it in certain ways which
+1304.52,5.44,again is like feels very remedial to
+1307.64,4.159,people who want this big fireworks
+1309.96,3.68,moment right they want it now yeah they
+1311.799,4.641,want it now and and you know and a lot
+1313.64,4.76,of AI is built on like smaller AI a lot
+1316.44,5.119,of times the first thing things you're
+1318.4,5.36,going to see out of using AI are I mean
+1321.559,5.0,kind of boring there's a patient aspect
+1323.76,6.24,to it there's the interface aspect right
+1326.559,6.48,we're in control of how people interact
+1330.0,6.039,with our AI making sure that the
+1333.039,4.801,customers know that they're in control
+1336.039,3.88,of their workflow that we're trying to
+1337.84,4.0,help them we're not trying to replace
+1339.919,4.201,them right I think all of those things
+1341.84,4.439,are just super super important and
+1344.12,4.559,there's no secret math right my team and
+1346.279,4.4,I we publish a lot of papers
+1348.679,5.161,and it's because the AI research
+1350.679,7.24,Community is super open no one company
+1353.84,5.6,has like some secret box of technology
+1357.919,3.88,that hidden tool that we're all going to
+1359.44,4.119,sneak in I mean no one does it is a very
+1361.799,4.801,open conversation in the scientific
+1363.559,5.641,Community I wish more people would learn
+1366.6,5.12,about it so they're not afraid um but
+1369.2,4.44,but yeah it's very open it's it's math
+1371.72,3.839,honestly like are you afraid of math I
+1373.64,3.8,mean kind of there there's a reason why
+1375.559,4.321,I didn't go well I I abandoned
+1377.44,5.28,engineering school just leave it at that
+1379.88,4.76,all right well well I I appreciate that
+1382.72,4.079,level set and and I think the point that
+1384.64,3.8,you made about just the importance of
+1386.799,3.841,you know just cleaning house with your
+1388.44,3.92,data is huge we did a research report
+1390.64,3.48,with FMI a couple years ago it was
+1392.36,4.16,called harnessing the data advantage and
+1394.12,5.08,construction and we really just leaned
+1396.52,4.44,in on what folks were doing where were
+1399.2,3.68,they concerned where were the success
+1400.96,3.319,factors were and we found that a lot of
+1402.88,3.159,people sit in a state of decision
+1404.279,3.081,paralysis right now because they don't
+1406.039,4.0,know where to start because it is
+1407.36,5.04,overwhelming I I I have so much empathy
+1410.039,4.801,for an organization especially a large
+1412.4,4.44,one that hasn't standardized fully in a
+1414.84,3.36,certain way and how they capture data or
+1416.84,3.68,had the opportunity to think about what
+1418.2,4.0,they want to do with their data which is
+1420.52,3.2,I think the important part about where
+1422.2,2.88,you start you got to go what what do you
+1423.72,3.92,want to achieve you don't just start
+1425.08,4.12,Gathering data madly exactly and when
+1427.64,3.32,you think about that then you get to
+1429.2,4.0,start identifying those little areas
+1430.96,4.56,where you go okay where where is our TCH
+1433.2,3.839,stack set up so well that making
+1435.52,3.24,improvements on our data is going to
+1437.039,3.52,have an impact with without as much of a
+1438.76,3.44,burden you fix that and then you've got
+1440.559,3.561,a win you get to show this to your team
+1442.2,4.12,and you go look at this and now this
+1444.12,3.559,cloud-based tool can figure this out
+1446.32,3.28,what if we did this everywhere else and
+1447.679,3.561,then you slowly start building if you
+1449.6,3.52,try to boil the ocean with your entire
+1451.24,4.0,data strategy and you've got none to
+1453.12,3.08,start with it's a losing proposition
+1455.24,2.76,because you're just going to be so
+1456.2,3.44,overwhelmed got pick that Focus area
+1458.0,4.039,absolutely again that sort of Paradigm
+1459.64,4.56,of like analyze automate and then
+1462.039,5.88,augment right like those go in in an
+1464.2,6.52,order and they're you know progressively
+1467.919,5.12,more thing you know more magnitude of
+1470.72,5.36,things you can do with that data as you
+1473.039,4.76,get it into shape for use so I think
+1476.08,3.76,we're uh We've covered the gamut as far
+1477.799,3.801,as high level on what the heck AI is and
+1479.84,3.68,why you know people shouldn't be afraid
+1481.6,3.92,of hanging out and uh you know
+1483.52,3.519,installing some tool whether it's chat
+1485.52,3.12,GPT or something there's a there's a
+1487.039,3.441,myriad of things you can jump into and
+1488.64,3.039,of course Autodesk has announced some
+1490.48,2.799,new stuff and we've been doing a lot of
+1491.679,3.841,cool stuff with regards to data as well
+1493.279,5.601,so don't forget about that but moving on
+1495.52,5.32,to our final question what is one tool
+1498.88,4.2,that you will always use on any project
+1500.84,4.24,that you work on Creative problem
+1503.08,4.719,solving I like it it's the number one
+1505.08,4.56,thing I look for when I hire people um
+1507.799,5.161,you know my my undergrad degrees is in
+1509.64,5.68,music my grad degrees are in linguistics
+1512.96,5.319,and I'm here talking to you about
+1515.32,5.079,construction so I like but it makes
+1518.279,3.76,sense when we talk through it your your
+1520.399,3.201,uh your background is so impressive so
+1522.039,3.081,I'm really glad that we're here yeah
+1523.6,3.64,being able to take something you know
+1525.12,3.12,from somewhere and apply it to a new
+1527.24,2.679,place
+1528.24,4.319,you know AI is inherently
+1529.919,4.681,interdisciplinary and and it's you know
+1532.559,3.761,the thing I use every single day I like
+1534.6,3.679,it and I think the the creative Focus
+1536.32,4.4,that folks can bring to the table really
+1538.279,4.28,helps us think about like what that what
+1540.72,3.48,that what can we do what's possible
+1542.559,2.961,what's the options and then you know we
+1544.2,3.24,start trying things out and see where
+1545.52,3.8,we're at and you know a few years
+1547.44,3.479,hopefully the the level of automation as
+1549.32,3.12,we move further and further into the
+1550.919,3.76,cloud is going to continue to increase
+1552.44,3.68,and I think I think that's applicable to
+1554.679,3.24,you know no matter what industry you're
+1556.12,3.159,working in whether it's construction or
+1557.919,3.721,you know any of the other industries
+1559.279,4.161,that AES serves or otherwise so
+1561.64,3.759,absolutely well thank you so much for
+1563.44,3.64,joining me today on digital builder for
+1565.399,3.241,everybody who is sitting and staring at
+1567.08,3.959,me right now and listening to the show
+1568.64,5.08,of course I am your host Eric Thomas we
+1571.039,4.24,are a weekly podcast a video first
+1573.72,3.28,podcast as you might notice with all
+1575.279,3.721,these cameras pointing directly at me
+1577.0,3.72,right now if you are interested in
+1579.0,3.799,checking out another episode make sure
+1580.72,4.679,you head over to the Autodesk
+1582.799,4.441,construction Cloud digital Builder blog
+1585.399,4.88,or you can find me on LinkedIn at
+1587.24,4.4,Builder unor digital and uh if you also
+1590.279,2.88,have a moment and you like what we're up
+1591.64,3.279,to I'd appreciate if you take a second
+1593.159,3.76,to you know rate US five stars and
+1594.919,5.441,whatever player that you listen to and
+1596.919,3.441,uh without further Ado
+1600.41,9.67,[Music]
+1607.08,3.0,goodbye

@@ -1,0 +1,1631 @@
+second,duration,transcript
+19.789,6.421,our second speaker is tim roughgarden
+22.039,6.57,from stanford university and like i said
+26.21,6.14,before i'm not you you have access to
+28.609,7.321,everything about Tim in your program the
+32.35,5.349,rest of the the three speakers remaining
+35.93,3.57,are younger than me so I don't remember
+37.699,5.221,them from my graduate school but I
+39.5,5.97,suddenly remember each of them from the
+42.92,7.979,time they were graduate students and Tim
+45.47,8.759,Roth Gardens see this sort of amazed me
+50.899,5.431,in its generality it's about it's about
+54.229,4.26,the price of anarchy I don't know if he
+56.33,6.57,is going to talk about this if it
+58.489,7.261,doesn't then you should find out since
+62.9,5.16,working on the price of Anarchy Tim went
+65.75,4.71,on to work on the prices of everything
+68.06,6.18,and more generally study economic
+70.46,7.97,mechanisms and their efficiency
+74.24,10.02,efficiency and computational
+78.43,9.25,perspectives Tim also all two books one
+84.26,6.02,on an algorithmic game theory and one on
+87.68,7.86,on the price of Anarchy I guess that's a
+90.28,7.629,book of his thesis if you like his talk
+95.54,5.1,like I'm sure we will you should check
+97.909,6.991,later he's the website where he has many
+100.64,6.24,more talks video talks of his lectures
+104.9,3.95,where he explains in much more detail
+106.88,5.63,the stuff we talked about today please
+108.85,3.66,welcome Tim after
+117.159,5.5,check one two okay
+119.659,4.74,thanks very much Evie so my goal for
+122.659,4.111,today is to introduce you to a few of
+124.399,4.801,the many points of contacts between
+126.77,4.89,theoretical computer science and game
+129.2,3.96,theory and more broadly economics and
+131.66,2.31,you know a lot of the times when you're
+133.16,2.189,preparing a talk
+133.97,2.489,you kind of know most of what you want
+135.349,2.881,to say and it's just kind of the
+136.459,4.11,beginning it's really hard to figure out
+138.23,3.509,like what goes on the first slide but
+140.569,3.78,but then when you're giving a talk
+141.739,4.711,that's it's about computing it's about
+144.349,4.081,game theory at the Institute for
+146.45,3.72,Advanced Studies there's kind of like a
+148.43,7.71,mandate I think about how you have to
+150.17,7.23,start start to talk so it's so what the
+156.14,1.65,game theory computing have to do with
+157.4,1.8,each other
+157.79,3.509,well for starters there was a single
+159.2,4.23,individual who have heard of courses
+161.299,3.811,here at the Institute who played a major
+163.43,2.7,role in the founding of both and of
+165.11,2.49,course I'm talking about John von
+166.13,3.3,Neumann who we've already heard about
+167.6,4.38,and even you know seen the same picture
+169.43,5.07,earlier this morning and you know while
+171.98,4.05,he had worked out a lot of his theory of
+174.5,4.41,games in the 20s in particular his
+176.03,4.739,min/max theorem really you know the game
+178.91,3.69,theory really became a major subject and
+180.769,4.53,started having a lot of influence in the
+182.6,4.74,publication of his book in 44 with Oskar
+185.299,3.841,Morgenstern and just a couple years
+187.34,3.51,later is when he started supervising the
+189.14,3.24,development of some of the first the
+190.85,3.12,world's you know first computers so
+192.38,4.38,first as a consultant on the ENIAC but
+193.97,9.18,then also here as also professor Valle I
+196.76,8.49,mentioned on the IAS machine and so von
+203.15,3.99,Neumann had some common motivations for
+205.25,4.14,both of these activities specifically in
+207.14,3.629,military strategy and technology you
+209.39,2.73,know but I don't think his his work of
+210.769,3.181,these two strands really interacted
+212.12,4.619,directly that much and indeed as the
+213.95,4.08,20th century unfolded well there was
+216.739,2.911,tons of progress in theoretical computer
+218.03,3.69,science and also in theoretical
+219.65,4.08,economics those two communities really
+221.72,4.23,didn't interact or communicate much and
+223.73,4.289,this talk I really mean to contrast that
+225.95,4.14,with the 21st century where there's been
+228.019,4.5,a very lively and useful conversation
+230.09,4.049,between those two fields but before I
+232.519,3.331,fast forward to the 21st century I do
+234.139,3.481,want to just point out you know one sort
+235.85,4.169,of revolutionary idea from each of these
+237.62,4.53,two communities in the 20th century both
+240.019,3.511,of which really fundamentally shaped the
+242.15,3.71,the research that's preceded it
+243.53,5.22,including what I'll be talking about
+245.86,5.95,so first on the on the economic side we
+248.75,4.709,have Nash's theorem so in the von
+251.81,3.629,Neumann and Morgenstern book in 44
+253.459,3.421,they're really focusing on two-player
+255.439,3.54,games of pure competition
+256.88,3.09,okay also called zero-sum games or when
+258.979,2.461,there are many players they were
+259.97,3.63,thinking about how coalition's might
+261.44,3.96,form and naturally founded non
+263.6,3.81,cooperative game theory or you can have
+265.4,3.78,any number of players and each player
+267.41,3.96,acts as an individual in its own
+269.18,4.049,self-interest and the games weren't
+271.37,3.45,necessarily competitive that could be or
+273.229,4.891,they could have aspects of cooperation
+274.82,5.31,so this non cooperative formalism really
+278.12,4.5,enabled game theory to in principle be
+280.13,5.159,double applied to many more situations
+282.62,4.29,that had earlier impossible but even
+285.289,3.541,better than that Nash's theorem in some
+286.91,3.96,sense gave game theorists and economists
+288.83,4.35,everything they wanted it gave them a
+290.87,4.74,universal existence result namely
+293.18,3.989,knowing nothing at all about whatever
+295.61,3.57,game you care about just that there's a
+297.169,4.201,finite set of players and that each can
+299.18,3.66,take on a finite number of actions this
+301.37,2.76,game has to have at least one
+302.84,3.06,equilibrium point
+304.13,5.58,well Nash called it an equilibrium point
+305.9,5.67,we now call them Nash equilibria so I'm
+309.71,3.48,not going to define that formally I
+311.57,3.96,think you all have an intuitive sense of
+313.19,5.759,what equilibria look like and that will
+315.53,5.73,suffice for the talk pretty much you
+318.949,4.021,have a bunch of agents and given what
+321.26,3.089,they're doing right now nobody wants to
+322.97,4.229,move they're all perfectly happy and
+324.349,5.221,staying where they are now the one the
+327.199,3.451,one twist may be and in Nash equilibria
+329.57,2.76,is you need to allow players to
+330.65,2.93,randomize but if you just think about
+332.33,3.809,two players playing rock-paper-scissors
+333.58,4.99,it is clear you want to be able to allow
+336.139,4.321,players to hedge over various actions
+338.57,4.05,okay so Nash equilibria a universal
+340.46,5.55,existence giving economists in some
+342.62,4.799,sense everything they wanted on the
+346.01,3.3,computer science side and this is now a
+347.419,3.091,couple decades later we have the
+349.31,3.359,invention and development of
+350.51,5.159,np-completeness by Cooke Karp and Levin
+352.669,5.551,so this is something obvious and
+355.669,4.441,basically NP completeness was telling
+358.22,4.14,computer scientists that were almost
+360.11,2.73,never going to be able to get what we
+362.36,3.029,want
+362.84,4.74,so what a computer scientists want they
+365.389,4.261,want efficient computation they want
+367.58,3.899,good algorithms for solving fundamental
+369.65,3.69,problems what do I mean by fundamental
+371.479,3.721,problems well we want to be able to
+373.34,3.81,predict how our proteins going to fold
+375.2,3.24,so we can do better drug design we want
+377.15,1.92,to have more efficient scheduling of
+378.44,2.67,airplanes
+379.07,4.47,to make better use of airport resources
+381.11,5.04,we might want to in a big social network
+383.54,4.35,find meaningful patterns and most
+386.15,4.32,computational problems of this sort are
+387.89,4.02,what's called np-complete and for the
+390.47,3.6,purposes of my talk you should just
+391.91,4.77,interpret empty completes as meaning
+394.07,5.64,very difficult to solve computationally
+396.68,5.34,at least in some general purpose way so
+399.71,3.66,in other words when a computational
+402.02,3.57,problem you really care about is
+403.37,4.65,np-complete you've got to be ready to
+405.59,4.38,compromise compromise can take many
+408.02,3.51,forms and computer scientists have many
+409.97,3.66,decades of experience about different
+411.53,3.72,ways to do it so for example you can
+413.63,3.51,resort to heuristics you can solve your
+415.25,4.68,computational problem not exactly but
+417.14,4.5,only approximately or you can narrow the
+419.93,4.17,domain you can focus on small instances
+421.64,4.71,instances with special structure and so
+424.1,5.25,forth okay but these do not assuming the
+426.35,4.14,P not equal to P NP conjecture that avi
+429.35,2.97,mentioned these do not admit
+430.49,4.56,general-purpose efficient computation
+432.32,4.86,procedures and in some sense theoretical
+435.05,5.01,computer science has evolved completely
+437.18,4.7,in the long shadow of this widespread
+440.06,3.69,intractability and we'll see how that
+441.88,5.7,influences the kinds of contributions
+443.75,6.51,computer science has made to economics
+447.58,5.62,so what I want to do for the most of
+450.26,5.63,this talk now is highlights three I hope
+453.2,5.43,lustrated but certainly not exhaustive
+455.89,6.43,examples of points of contact again
+458.63,7.08,between theoretical CS and economics I'm
+462.32,5.13,gonna begin with a model which you know
+465.71,4.26,the one hand is near and dear to my
+467.45,3.42,heart but I also think it remains it's
+469.97,2.79,still one of the most vivid
+470.87,4.05,illustrations about how in hindsight
+472.76,3.75,it's really obvious that computer
+474.92,4.2,science and economists had to start
+476.51,5.58,talking to each other with the coming of
+479.12,4.98,the 21st century so it's a application
+482.09,2.52,that involves routing traffic through
+484.1,2.52,networks
+484.61,3.66,now the reason computer scientists got
+486.62,2.97,interested this in the late 90s was
+488.27,3.03,they're motivated by communication
+489.59,3.78,networks and of course the late 90s is
+491.3,3.9,exactly when the internet was exploded
+493.37,4.62,so you know engineers have been thinking
+495.2,4.41,about routing data for a long time but
+497.99,3.09,with the internet really we were for the
+499.61,3.08,first time thinking about routing
+501.08,4.23,through networks where you had multiple
+502.69,4.33,self-interested users like you do in the
+505.31,3.84,internet and so that really called out
+507.02,4.26,for game theoretic or economic reasoning
+509.15,3.329,so that was the motivation but for the
+511.28,2.669,purposes of this talk
+512.479,2.73,I encourage you all to just think about
+513.949,2.94,something you're all probably very
+515.209,3.63,intimately familiar with which is
+516.889,3.601,vehicular traffic as you're just driving
+518.839,3.48,around on roads the fundamental
+520.49,5.039,principle principles are largely the
+522.319,4.68,same so let me introduce this model just
+525.529,3.99,through an example and this is a very
+526.999,4.44,old example discussed by ICI pigua in
+529.519,5.19,his book the economics of welfare way
+531.439,5.31,back in 1920 so in the Bay Area where I
+534.709,4.29,live between Stanford and San Francisco
+536.749,5.07,there are two parallel highways there's
+538.999,4.44,highway 101 and there's highway 280 if
+541.819,3.51,it's 4:00 in the morning you should
+543.439,4.411,definitely take Highway 101 it's going
+545.329,4.92,to be faster when there's no traffic but
+547.85,4.019,101 is more prone to congestion okay so
+550.249,5.7,it's more it gets it's more subject to
+551.869,5.97,congestion effects as it gets traffic so
+555.949,3.541,we can have a cartoon of that as follows
+557.839,2.91,okay so here's one of the endpoints
+559.49,3.509,here's the other these are the two
+560.749,4.2,highways each edge is labeled with a
+562.999,3.51,cost function think of this as
+564.949,4.05,describing the amount of delay incurred
+566.509,4.95,by traffic as a function of the fraction
+568.999,4.89,X of the population that's using that
+571.459,4.35,road at any given time so Highway 280
+573.889,3.42,let's just say takes an hour no matter
+575.809,4.08,what no matter how many people are using
+577.309,3.87,it highway 101 let's just abstract it
+579.889,3.721,and saying if an X fraction of the
+581.179,3.9,traffic uses it it takes X hour so if
+583.61,3.75,half the traffic's on the 101 it's half
+585.079,6.271,an hour if everybody's on 101 it takes a
+587.36,5.55,full hour okay so the goal was
+591.35,4.109,interested in understanding what would
+592.91,4.83,self-interested drivers do and whether
+595.459,3.06,or not what they did was a good thing or
+597.74,2.67,a bad thing
+598.519,3.54,so let's first understand you know what
+600.41,3.149,do we expect self-interested drivers
+602.059,3.9,what do we expect the equilibrium to be
+603.559,4.32,and then let's ask could we do better if
+605.959,4.98,we hypothetically could coordinate their
+607.879,4.38,actions so if you were one of these
+610.939,3.0,drivers and you think about it for a
+612.259,2.31,second you realize it's sort of a
+613.939,2.31,no-brainer
+614.569,3.601,what you should do the way I've set it
+616.249,3.69,up so every driver has what's called a
+618.17,2.909,dominant strategy one action which is
+619.939,4.38,always at least as good as every other
+621.079,5.281,and that's to take highway 101 the worst
+624.319,3.51,case scenario on highway 101 is that
+626.36,3.12,everybody's using it then it takes an
+627.829,3.901,hour and that's also the best case
+629.48,4.589,scenario on highway 280 so there's no
+631.73,4.199,reason not to take 101 so at equilibrium
+634.069,5.61,the outcome of selfish behavior we
+635.929,6.361,expect 101 to be fully fully congested
+639.679,4.47,everybody's taking an hour to get from s
+642.29,3.359,to T and that's going to be the only
+644.149,1.751,equilibrium otherwise people would want
+645.649,3.101,to
+645.9,5.52,which back from 280 to 101 so is this
+648.75,4.17,good or bad so it turns out this is an
+651.42,3.39,illustration of what an economist would
+652.92,3.38,call the congestion externality it turns
+654.81,4.02,out you could do better than this
+656.3,4.27,equilibrium and that's the and the
+658.83,3.69,reason it's inefficient is because
+660.57,3.95,drivers don't take into account the
+662.52,5.43,extra congestion their presence causes
+664.52,5.14,for other users of the edge so in fact
+667.95,3.96,any other traffic pattern when in some
+669.66,4.68,sense be better than that green one but
+671.91,4.23,an altruistic dictator if who could
+674.34,3.87,hypothetically control everybody's
+676.14,4.35,routes would be wise to split the
+678.21,4.59,traffic fifty-fifty okay between 101 and
+680.49,3.63,280 now the drivers on to idiot takes
+682.8,3.6,them an hour just what it took them
+684.12,3.84,before but the drivers on 101 get there
+686.4,3.06,pretty quickly just a half an hour so
+687.96,4.17,the average commute time has dropped
+689.46,5.64,from 60 minutes in the green traffic
+692.13,4.98,pattern to 45 minutes in the red traffic
+695.1,4.02,pattern okay so that shows you something
+697.11,3.75,which in hindsight is not surprising you
+699.12,4.28,let people do whatever they want the
+700.86,4.56,outcome need not be what's an altruistic
+703.4,5.32,dictator would have been posed on the
+705.42,4.95,system and so to measure this cost of
+708.72,3.75,selfish behavior could sue Pearson pop
+710.37,4.32,dimitru introduced the colorful phrase
+712.47,4.29,the price of Anarchy and as a
+714.69,4.86,mathematical definition that's nothing
+716.76,5.19,but the old commute I'm the equilibrium
+719.55,4.38,average delay compared to this optimal
+721.95,5.25,ie minimum possible delay ie
+723.93,4.74,60 over 45 ie 4/3
+727.2,5.67,okay so we'd say the price of Anarchy in
+728.67,8.19,pig news example is 4 over 3 there's a
+732.87,5.67,more well-known example of this routing
+736.86,3.18,network which is sort of you know
+738.54,3.54,popular it's sort of a good thing to
+740.04,4.7,know the cocktail party at least if it's
+742.08,4.95,a sufficiently nerdy cocktail party so
+744.74,5.53,is there something called braces paradox
+747.03,5.22,this is from 1968 and so here's our
+750.27,4.08,initial network so again we have one
+752.25,4.26,origin one destination two parallel
+754.35,3.66,routes one an X means the same thing as
+756.51,3.54,before so one that always takes an hour
+758.01,4.14,X it takes proportional to the amount of
+760.05,4.32,traffic that are using it now by
+762.15,4.08,symmetry at equilibrium the drivers will
+764.37,3.06,just load balanced ok those there's no
+766.23,3.39,reason to prefer one route over the
+767.43,4.05,other so those split 50/50 and the
+769.62,4.92,commute time will be 90 minutes each way
+771.48,3.6,so it seems pretty boring where's the
+774.54,3.66,paradox
+775.08,3.76,well the paradox emerges you know
+778.2,2.53,suppose
+778.84,4.38,Google X announces that the newest
+780.73,4.76,technology invention is a teleportation
+783.22,2.27,device
+788.399,4.05,midpoint of the Bock map and moreover it
+790.889,5.041,has infinite capacity any number of
+792.449,5.37,people can use it so what effect does
+795.93,4.079,this have on the network well suppose
+797.819,4.231,you're one of these drivers it's a
+800.009,3.781,no-brainer to use the teleportation
+802.05,3.63,device okay so if everybody else stays
+803.79,3.719,the same it used to take you an hour and
+805.68,3.449,a half now it's gonna take you 30 plus
+807.509,3.411,zero plus 30 minutes that's an hour
+809.129,4.531,there's at 60 minutes 30 minutes
+810.92,4.0,improvement Goris you know you're not
+813.66,4.589,the only one thinking this way
+814.92,5.399,so actually you expect everybody to make
+818.249,4.111,use of this new technology so the new
+820.319,5.25,equilibrium after adding the teleporter
+822.36,4.949,has everybody on the zigzag path as a
+825.569,3.63,consequence the congestion on the upper
+827.309,3.51,left and lower right edges they're now
+829.199,3.661,fully congested they take an hour each
+830.819,6.12,so the commute times actually gone up
+832.86,5.399,from 90 minutes to 120 and this is
+836.939,3.09,actually the unique equilibrium in this
+838.259,4.111,new network it's again the case that the
+840.029,5.37,zigzag path individually is a no-brainer
+842.37,4.5,strategy a dominant strategy so this is
+845.399,2.73,the paradox that when you're dealing
+846.87,3.149,with selfish individuals when you're
+848.129,4.291,looking at equilibria you intuitively
+850.019,3.271,can only add resources make a network
+852.42,2.969,only better
+853.29,4.229,and yet the outcome is somehow worse for
+855.389,3.99,everybody you'll notice that if we think
+857.519,3.42,about the price of Anarchy in the second
+859.379,3.63,network so what would be the difference
+860.939,4.77,between selfish behavior and the
+863.009,5.341,altruistic dictator it's again four over
+865.709,4.29,three and that's because and even in
+868.35,3.179,this new network there's actually no way
+869.999,4.351,to make use of the new teleportation
+871.529,4.711,device to improve the traffic okay so
+874.35,5.399,we'll explain that coincidence of the
+876.24,5.099,second four over three in a second so
+879.749,3.301,one thing I'll point out given that it's
+881.339,3.84,a this is sort of general science
+883.05,3.81,audience is it braces paradoxes
+885.179,3.15,innocence I've shown it to you as a
+886.86,3.87,phenomena in traffic networks but it's
+888.329,3.87,actually something much more basic the
+890.73,3.0,same equations that govern the
+892.199,3.3,equilibria of these traffic networks
+893.73,3.63,also govern the many other notions of
+895.499,4.56,equilibria like physical equilibria
+897.36,4.529,so you can for example and I've had
+900.059,3.87,classes of mine students of mine do this
+901.889,5.221,for extra credit you can take a bunch of
+903.929,4.38,strings and a bunch of springs and you
+907.11,2.789,can tie these strings and Springs
+908.309,4.051,together into a physical contraption
+909.899,3.87,okay and you hang the top of the strings
+912.36,2.639,and Springs you know from the from some
+913.769,3.271,heavy weight you know at the bottom of
+914.999,4.08,the table and then you hang a weight
+917.04,3.57,from the bottom okay so that stretches
+919.079,2.161,everything out right the weight exerts
+920.61,2.34,force
+921.24,3.81,stretches out the string stretches out
+922.95,5.31,the springs and if you build that just
+925.05,5.37,so you can take a pair of scissors snip
+928.26,4.17,a taut string from the middle of this
+930.42,4.71,contraption intuitively weakening it and
+932.43,5.07,yet that weight will levitate further
+935.13,3.69,off of the ground you can really
+937.5,3.149,demonstrate this search for braces
+938.82,4.04,paradox on YouTube you'll get some extra
+940.649,4.081,credit projects from my graduate courses
+942.86,3.669,now why does that happen
+944.73,4.049,one reason so one reason would just be
+946.529,4.321,it's just braces paradox the equilibrium
+948.779,5.101,is governed by the exact same equations
+950.85,5.9,the correspondences in elastic strings
+953.88,5.87,correspond to these constants 1 0 & 1
+956.75,6.06,elastic Springs correspond to the X
+959.75,6.279,travel time corresponds to distance and
+962.81,5.469,the flow corresponds to force ok so
+966.029,5.191,cutting the taut string just corresponds
+968.279,5.221,to deleting the zero edge and recovering
+971.22,4.41,the original network a way to see it
+973.5,4.41,directly is that when you cut that taut
+975.63,5.22,string what really happens is it frees
+977.91,5.489,up two Springs to carry awaits in
+980.85,4.44,parallel ok so to share it the force
+983.399,3.961,that it exerts rather than being forced
+985.29,5.19,to carry the weights exerted the force
+987.36,5.49,exerted by the weights in series okay so
+990.48,4.29,it allows two Springs to share the load
+992.85,4.77,as opposed to each bearing the fulcrum
+994.77,5.91,brunt of the exhorted force so that's
+997.62,5.88,Bryce's paradox now let's try to think
+1000.68,4.409,about you know we've seen these lower
+1003.5,3.75,bounds on how inefficient things could
+1005.089,3.841,be and for letting people do totally
+1007.25,3.06,whatever they want obviously we would
+1008.93,3.51,have loved it if decentralized
+1010.31,2.7,optimization resulted in a fully optimal
+1012.44,2.339,solution
+1013.01,4.079,we're not that surprised to see that
+1014.779,3.721,it's you know less than optimal but
+1017.089,3.271,maybe we're not that discouraged that
+1018.5,3.72,it's pretty close for thirds in these
+1020.36,3.539,networks so if you have you're a
+1022.22,3.9,graduate student looking for something
+1023.899,4.41,to do looking for something to prove you
+1026.12,4.079,could imagine you know a good rule of
+1028.309,3.301,thumb is always to be optimistic so like
+1030.199,3.36,I tell my students always you know
+1031.61,4.709,what's the coolest thing that could be
+1033.559,4.411,true but you haven't it falsified so we
+1036.319,3.901,okay we have two examples price of
+1037.97,3.959,entropy is 4/3 and both maybe it's never
+1040.22,3.15,bigger than 4/3 that's sort of the
+1041.929,3.931,coolest thing that I can figure that
+1043.37,4.62,could be true at this point so that's
+1045.86,4.62,pretty easy to show that that's a little
+1047.99,4.53,bit too good to be true if we just
+1050.48,4.29,modify Piggy's example in a very small
+1052.52,4.44,way so we used to have an X on the
+1054.77,4.65,toplink let's make that X to the D okay
+1056.96,4.17,where D is big d is you know 10 20
+1059.42,4.41,whatever okay some highly nonlinear
+1061.13,5.43,function on top so how does this change
+1063.83,4.29,Pickers example well The Selfish outcome
+1066.56,3.57,is no different than before for exactly
+1068.12,3.99,the same reasoning the worst case here
+1070.13,4.35,remains one the best case here remains
+1072.11,3.63,one so again in the equilibrium we
+1074.48,3.12,expect the top length to be fully
+1075.74,4.5,congested and everybody's cost to be one
+1077.6,4.56,what's different is that now with
+1080.24,4.56,dictatorial control of the network we
+1082.16,4.98,can do far far better how do we do that
+1084.8,4.62,we remove an epsilon fraction of the
+1087.14,3.87,traffic off of the top and reroute them
+1089.42,4.86,on the bottom okay where epsilon is
+1091.01,5.13,small D is big epsilon is small so what
+1094.28,3.75,happens well if you think about it
+1096.14,4.62,almost all the traffic gets from s to T
+1098.03,4.77,almost instantaneously one minus epsilon
+1100.76,4.74,to the D D powers that down to basically
+1102.8,4.32,zero if d is sufficiently big so almost
+1105.5,3.63,everybody gets there instantaneously a
+1107.12,3.21,few martyrs are stuck taking an hour but
+1109.13,3.6,they contribute very little to the
+1110.33,4.77,average so as d grows large and epsilon
+1112.73,4.47,goes small the best possible solution is
+1115.1,4.38,going to zero so the price of Anarchy
+1117.2,4.98,which is the ratio is going to infinity
+1119.48,4.35,so there's no universal upper bound on
+1122.18,5.15,what this price of Anarchy can be even
+1123.83,6.6,in these simplest of routing networks
+1127.33,4.69,okay but so you can't get this you can't
+1130.43,3.75,get to gets discouraged in research you
+1132.02,4.05,just have to sort of take a step back so
+1134.18,3.63,now what do we know is true we know that
+1136.07,3.18,the price of Anarchy is small in these
+1137.81,3.18,networks and we know that it's big in
+1139.25,3.75,this one okay and in general it can be
+1140.99,4.41,arbitrarily big so could it be that
+1143.0,4.64,there are relatively weak conditions on
+1145.4,4.59,a network you could impose that
+1147.64,3.88,guarantee under those conditions the
+1149.99,3.69,price of Anarchy is close to one that
+1151.52,3.75,the outcome of selfish behavior is not
+1153.68,4.47,significantly worse than what could be
+1155.27,4.35,attained with perfect regulation so you
+1158.15,3.15,know looking at these three networks
+1159.62,4.29,again if you were feeling kind of very
+1161.3,4.8,glib you might say well this one's bad
+1163.91,3.33,it has a nonlinear function here are two
+1166.1,2.97,different networks that don't have
+1167.24,3.42,nonlinear functions they're good so
+1169.07,3.36,maybe all you need is to just say
+1170.66,3.66,there's no highly nonlinear functions
+1172.43,2.97,that's sort of the coolest thing I can
+1174.32,4.65,think of right now that would be true
+1175.4,4.68,okay and that actually is true turns out
+1178.97,3.96,so this is a theorem you can actually
+1180.08,3.9,prove so consider any network I should
+1182.93,2.58,say the reason there's something to
+1183.98,2.8,prove is because networks can get really
+1185.51,2.68,big and complicated
+1186.78,3.39,they're not just two nodes in four nodes
+1188.19,3.84,but no matter how complicated a gay they
+1190.17,4.53,get as long as the cost functions have
+1192.03,3.93,this affine form ax plus B a and B can
+1194.7,4.2,be whatever you want for different links
+1195.96,4.86,then you'll never see a worse example
+1198.9,4.11,than the two I just showed you so in
+1200.82,4.55,particular pig is - no - link example
+1203.01,5.04,already realizes the maximum possible
+1205.37,4.63,efficiency loss amongst so these
+1208.05,3.84,so-called selfish routing networks with
+1210.0,4.14,a find cost functions and so again this
+1211.89,4.23,network can be arbitrarily large any
+1214.14,3.18,number of origins and destinations it
+1216.12,2.73,doesn't matter you let people do
+1217.32,3.87,whatever they want and it just won't
+1218.85,5.75,ever drift that much worse than what you
+1221.19,5.88,could do with full centralized control
+1224.6,4.66,so I wasn't planning on proving this
+1227.07,5.1,theorem but maybe just you know you let
+1229.26,4.41,me give you sort of a morally why maybe
+1232.17,3.33,something like this should be true just
+1233.67,4.86,sort of a you know rough proof by
+1235.5,4.17,analogy so instead of routing traffic
+1238.53,3.18,through networks let's think about
+1239.67,4.98,electrical current in an electrical
+1241.71,4.41,network okay between two terminals so
+1244.65,3.3,what do we know about electrical current
+1246.12,3.15,well so we know that on the one hand
+1247.95,3.24,they can be it can be thought of as an
+1249.27,3.78,equilibrium it equalizes the voltage
+1251.19,3.87,drop across any two paths between the
+1253.05,3.63,two terminals on the other hand we also
+1255.06,2.97,know that we can think of electrical
+1256.68,3.39,current is optimizing something
+1258.03,4.32,thompson's principle tells us that it
+1260.07,3.57,minimizes the dissipated energy so
+1262.35,3.3,that's really nice electro currents
+1263.64,5.04,simultaneously in equilibrium and it's
+1265.65,4.83,an optimizer turns out electrical
+1268.68,4.05,current and electrical networks is just
+1270.48,4.59,a special case of traffic equilibria in
+1272.73,4.05,these traffic networks it corresponds to
+1275.07,4.08,networks where every link has a cost
+1276.78,4.92,function of the form ax okay some of the
+1279.15,4.14,x over here - X over there 4x over there
+1281.7,3.39,corresponding the resistances an
+1283.29,3.39,electrical current is just going to be
+1285.09,3.78,correspond to the corresponding traffic
+1286.68,3.78,equilibrium so the two things we know
+1288.87,4.17,about electrical current actually says
+1290.46,5.58,that the price of Anarchy equals 1 if
+1293.04,4.59,all the cost functions have the form ax
+1296.04,3.75,that's what Thompson's principle tells
+1297.63,4.2,us so we've generalized the model a
+1299.79,3.6,little bit we now have a find cost
+1301.83,4.62,functions not just these pure linear
+1303.39,4.53,ones but you might hope that you know we
+1306.45,2.49,know that it's not fully efficient but
+1307.92,1.92,you might hope that it doesn't break
+1308.94,3.93,down too badly
+1309.84,5.34,and indeed traffic equilibria in these
+1312.87,3.96,networks do still minimize some kind of
+1315.18,2.13,energy function some kind of potential
+1316.83,2.52,function
+1317.31,2.55,it just happens to not be exactly the
+1319.35,2.28,right one
+1319.86,4.77,we care about the average traveled
+1321.63,5.16,travel time of the traffic the good news
+1324.63,3.929,is for these a fine cost functions those
+1326.79,4.41,two potential functions don't differ by
+1328.559,4.081,very much so because equilibria exactly
+1331.2,2.46,optimize something that's an almost
+1332.64,3.18,correct function
+1333.66,4.019,they almost optimize the function which
+1335.82,4.08,we really care about the average delay
+1337.679,4.261,so that's sort of a proof by metaphor
+1339.9,3.42,about why some kind of guarantee for
+1341.94,3.9,equilibria should be true for these
+1343.32,4.83,selfish routing networks so just to
+1345.84,3.33,close the loop I said the computer
+1348.15,4.019,scientists were coming from a
+1349.17,4.53,communication network standpoint and to
+1352.169,2.971,reason about communication networks you
+1353.7,3.27,really want to go beyond a find cost
+1355.14,3.45,functions and we know that this theorem
+1356.97,4.14,as stated is false for a fund cost
+1358.59,4.29,functions it's no longer 4/3 but there
+1361.11,3.78,is one aspect of the theorem that
+1362.88,4.049,remains true for any types of cost
+1364.89,4.08,functions which is the structure of the
+1366.929,4.051,worst case example so one way to
+1368.97,3.87,interpret this theorem is look I showed
+1370.98,4.439,you Pickers example I showed you the
+1372.84,4.74,price of Anarchy can be as big as 4 over
+1375.419,3.661,3 this theorem says it can't be any
+1377.58,3.9,bigger than what you already see in this
+1379.08,4.589,trivial to no Tunick Network and that
+1381.48,4.11,statement is actually true whatever the
+1383.669,4.201,cost functions no matter what the cost
+1385.59,3.719,functions you care about go hunting far
+1387.87,3.42,and wide for the worst network you're
+1389.309,3.631,ever going to find the worst network is
+1391.29,3.6,always one of these simple pig-like
+1392.94,3.39,networks to node to link networks ok so
+1394.89,4.47,that's true even if they're not a fine
+1396.33,5.19,cost functions now knowing that you can
+1399.36,4.5,actually compute this price of Anarchy
+1401.52,4.529,this magic number for any class of cost
+1403.86,3.24,functions that you care about it reduces
+1406.049,4.201,it just to a back-of-the-envelope
+1407.1,4.8,calculation so you know if you open up
+1410.25,4.679,page 1 of a typical data networks
+1411.9,4.47,textbook the first order bit of a cost
+1414.929,4.291,function you usually use something like
+1416.37,4.29,a delay function of them mm1 queue so
+1419.22,3.06,here's you think of you as being some
+1420.66,3.63,capacity the maximum amount of traffic
+1422.28,4.17,that a link can support and this is a
+1424.29,4.29,cost function which looks like this so
+1426.45,3.719,there's an asymptote at the capacity the
+1428.58,3.42,delay is very low when you're far from
+1430.169,3.151,the capacity and it shoots up very
+1432.0,4.559,suddenly once you get close to the
+1433.32,5.28,capacity now people who actually manage
+1436.559,3.811,telecommunication networks one of the
+1438.6,3.99,standard heuristics they use to keep
+1440.37,3.96,performance sensible as they look at
+1442.59,3.69,link utilization and park is this is a
+1444.33,3.75,pretty easy thing to measure so you have
+1446.28,2.97,some cable you have some maximum amount
+1448.08,3.12,of traffic that can be going through at
+1449.25,3.66,any one time and you basically you know
+1451.2,2.5,stick your finger in it and you see how
+1452.91,3.7,much is going across
+1453.7,4.89,right now and networks are often managed
+1456.61,3.63,to keep link utilizations bounded away
+1458.59,3.12,from a hundred percent because that's a
+1460.24,2.76,good heuristic or it's been empirically
+1461.71,3.87,observed that that works well for
+1463.0,4.169,keeping network performance good so the
+1465.58,3.24,theory I just described can turn that
+1467.169,4.11,into it into a theorem into a rigorous
+1468.82,4.17,statement so to quantify link
+1471.279,4.411,utilization let me use this parameter
+1472.99,5.46,beta so this is the fraction of a link
+1475.69,4.56,that's unused so beta equal point one
+1478.45,3.78,would mean that all the links of your
+1480.25,5.34,network have link utilization at most
+1482.23,5.189,ninety percent okay so using the theory
+1485.59,3.6,I just mentioned you can compute exactly
+1487.419,3.99,what the worst-case price of Anarchy is
+1489.19,3.51,as a function of this beta as this
+1491.409,3.9,function of your maximum link
+1492.7,3.599,utilization and you know you know we're
+1495.309,2.311,all supposed to be in kind of
+1496.299,3.24,quantitative sciences here and I've got
+1497.62,4.98,you for an hour so I feel like I owe you
+1499.539,5.431,at least one kind of obscure formula so
+1502.6,4.169,here's your obscure formula but this is
+1504.97,3.51,exact this is really the right answer so
+1506.769,3.721,if all I tell you about a network is
+1508.48,3.27,that the link utilization is at most 1
+1510.49,2.88,minus beta so if it's beta
+1511.75,3.09,over-provision and I tell you nothing
+1513.37,3.57,else otherwise the network can be
+1514.84,4.65,arbitrarily large and complicated then
+1516.94,4.92,in fact the worst-case ratio between
+1519.49,6.299,selfish and optimal behavior is exactly
+1521.86,6.27,this so what is this okay well let's let
+1525.789,3.75,one go to zero so beta go to zero so
+1528.13,3.659,that says the link utilization is going
+1529.539,4.921,to 100% this thing is shooting off to
+1531.789,4.89,infinity as beta goes to zero but that
+1534.46,4.559,shouldn't surprise us because right at
+1536.679,3.901,the asymptotes we see that these cost
+1539.019,3.27,functions look a lot like super high
+1540.58,3.12,degree polynomials and we already knew
+1542.289,3.12,that you could have undoubted efficiency
+1543.7,4.109,loss for super high degree polynomials
+1545.409,3.961,on the other extreme as beta goes to 1
+1547.809,3.391,that means your networks basically empty
+1549.37,2.85,so there's basically no problem with
+1551.2,3.27,selfish routing you get a price of
+1552.22,4.14,anarchy of 1 the reason it's nice having
+1554.47,3.63,such a crisp formula is you can plug in
+1556.36,4.59,quite modest values of beta and see what
+1558.1,4.199,you get so if you plug in point 1 so
+1560.95,3.3,again this is just keeping the link
+1562.299,3.931,utilization down to 90% there's still
+1564.25,3.899,mostly used it's 90% or less
+1566.23,3.6,already this ratio drops to something
+1568.149,3.601,close to 2 and again this is a
+1569.83,3.42,worst-case guarantee over all networks
+1571.75,7.799,subject to this link utilization
+1573.25,8.73,guarantee so what did we learn by
+1579.549,4.08,applying the lens of theta or it's
+1581.98,2.73,basically the toolbox of theoretical
+1583.629,3.011,computer science to these routing
+1584.71,4.0,networks so the MA
+1586.64,3.6,it's an age-old economic model okay so
+1588.71,3.84,piggy was discussing it almost a hundred
+1590.24,5.55,years ago in his book it was made
+1592.55,5.4,rigorous by war drop and beckon McGuire
+1595.79,3.84,and Winston in the 50s and there's been
+1597.95,4.02,literally hundreds if not thousands of
+1599.63,5.43,papers written on this model largely in
+1601.97,4.08,transportation but before computer
+1605.06,2.67,scientists started seeing about this
+1606.05,4.02,problem no one was thinking about
+1607.73,4.44,approximation indeed the first
+1610.07,4.11,experience I can remember describing
+1612.17,3.99,this result to an economist was here at
+1614.18,4.05,the Institute I was visiting in 2002
+1616.16,4.5,professor Victor Shin was kind enough to
+1618.23,3.93,introduce me to Eric Maskin who since
+1620.66,4.2,then is one of Nobel Prize in Economics
+1622.16,5.01,and Eric very patiently listened to my
+1624.86,4.59,description and he said it's a very
+1627.17,3.09,natural result I never would have
+1629.45,2.76,thought to prove it
+1630.26,3.81,and I've heard that over and over again
+1632.21,4.23,from economists as I told them about
+1634.07,3.81,this work and so you know I have I've
+1636.44,2.49,sort of wondered you know why is that
+1637.88,3.09,not true especially when I was a
+1638.93,3.63,graduate student and I was terrified of
+1640.97,4.2,you know finding the main result of my
+1642.56,5.55,thesis you know in some 1972 obscure
+1645.17,4.47,econ Journal so I had to tell myself a
+1648.11,3.27,story I needed a narrative why
+1649.64,3.0,conceivably this might be a novel result
+1651.38,3.15,and of course I still might be proved
+1652.64,3.84,wrong in the future but the best i've
+1654.53,4.29,come up with is that you know really
+1656.48,4.26,even though this application had nothing
+1658.82,3.21,to do with computation okay i wasn't
+1660.74,4.11,didn't want an algorithm
+1662.03,4.62,nothing was np-complete still you know
+1664.85,4.35,as a theoretical peter scientist I've
+1666.65,4.71,lived my whole life in the long shadow
+1669.2,3.87,cast by NP completeness and I've
+1671.36,3.66,absorbed the toolbox that we've all
+1673.07,3.93,developed for compromising when you
+1675.02,3.69,can't get what you want and so when
+1677.0,3.72,you're just analyzing equilibria in
+1678.71,3.39,games in the wild they're not going to
+1680.72,3.36,be fully efficient which is what you
+1682.1,3.66,would really want but turning to
+1684.08,3.99,approximation we can nevertheless
+1685.76,4.02,salvage I think some very positive and
+1688.07,4.41,kind of really new insights into
+1689.78,5.16,economic models that are almost 100
+1692.48,4.29,years old I think that's what the seus
+1694.94,6.54,lens gets you in this particular case
+1696.77,6.3,for the second application I want to
+1701.48,4.23,talk about something actually quite
+1703.07,4.26,practical so this will be probably maybe
+1705.71,3.75,one of the more you know immediately
+1707.33,3.54,real-world things that we you know
+1709.46,4.59,really engineering projects that we talk
+1710.87,5.49,about today and so what I want to
+1714.05,4.02,highlight here is how a novel and
+1716.36,3.179,large-scale auction which is being
+1718.07,3.15,designed as we speak
+1719.539,3.63,I want to point out all of the different
+1721.22,4.23,ways in which the high-level aspects of
+1723.169,6.421,that design have been influenced by work
+1725.45,9.0,in computer science so the story here
+1729.59,6.299,starts in 2012 when Congress cost a bill
+1734.45,4.62,passed the bill which is sometimes
+1735.889,5.37,called this spectrum Act okay and the
+1739.07,6.809,point of this bill was to authorize the
+1741.259,6.51,FCC to run design and execute a novel
+1745.879,4.28,type of auction and the goal of the
+1747.769,5.551,option is to sell wireless spectrum
+1750.159,5.98,probably mostly to telecoms for wireless
+1753.32,5.279,broadband use now that by itself is not
+1756.139,4.02,novel so whether whether you may or may
+1758.599,4.111,not have been aware of this but the FCC
+1760.159,5.34,for over 20 years has been running these
+1762.71,5.219,so-called combinatorial auctions to sell
+1765.499,3.93,wireless spectrum to in effect the
+1767.929,3.87,highest bidder whoever could make the
+1769.429,4.32,best use of that technology here's
+1771.799,3.0,what's different this time around what's
+1773.749,3.721,different this time around is the
+1774.799,5.161,spectrum which is most valuable for
+1777.47,5.039,wireless broadband is pretty much all
+1779.96,4.23,already accounted for okay the
+1782.509,4.26,government just doesn't really have any
+1784.19,5.429,free spectrum lying around to give away
+1786.769,5.01,and so on the other hand a lot of the
+1789.619,4.351,people who own that spectrum are
+1791.779,4.32,arguably not using it in particularly
+1793.97,4.139,interesting or valuable ways in fact a
+1796.099,4.231,ton of it is owned by just television
+1798.109,4.231,broadcasters who frankly if they went
+1800.33,5.809,poof overnight not many people would
+1802.34,6.899,notice so we're talking about
+1806.139,8.71,broadcasters on the UHF channels 38 to
+1809.239,7.231,51 okay and regional broadcasters so the
+1814.849,5.13,proposal here which is very interesting
+1816.47,5.429,is to repurpose that spectrum for more
+1819.979,4.741,valuable use so this is actually going
+1821.899,4.76,to be a double auction which means that
+1824.72,5.49,the FCC is responsible for
+1826.659,5.86,simultaneously buying back licenses from
+1830.21,5.13,television broadcasters and turning
+1832.519,6.21,around and selling it to wireless
+1835.34,4.949,telecoms okay for broadband use so what
+1838.729,3.42,they've been running for 20 years are
+1840.289,3.72,so-called forward options so a forward
+1842.149,4.59,auction is like when you're selling your
+1844.009,3.931,house okay you accept bids and then you
+1846.739,2.16,figure out who the winner is and what
+1847.94,3.75,they're going to pay like the highest
+1848.899,4.351,bidder a reverse auction is like when
+1851.69,3.9,you're hiring a contractor
+1853.25,3.6,can you accept bids and then you you
+1855.59,2.7,know you pick one of them okay they're
+1856.85,2.97,gonna provide a service to you like you
+1858.29,4.02,picked the lowest bit of any of the
+1859.82,4.14,contractors so the FCC is has a lot of
+1862.31,3.06,experience with forward auctions selling
+1863.96,3.36,wireless spectrum this will be the first
+1865.37,3.75,time ever that they've run a reverse
+1867.32,4.83,auction they've actually bought by
+1869.12,4.65,spectrum back okay the numbers the
+1872.15,3.75,estimated numbers are fairly eye-popping
+1873.77,4.8,so the the most recent Congressional
+1875.9,4.02,Budget Office estimates that I saw was
+1878.57,4.53,that they would be spending fifteen
+1879.92,5.01,billion dollars buying these licenses
+1883.1,4.08,back from the broadcaster's and are
+1884.93,6.24,hoping to make 40 billion selling them
+1887.18,6.66,to telecoms probably some of you are
+1891.17,6.99,wondering about you know it's pretty big
+1893.84,5.91,spread and as part of the bill passing
+1898.16,3.66,that's already been earmarked really
+1899.75,4.44,won't be surprised to hear so after
+1901.82,3.9,covering auction costs and funding a new
+1904.19,3.3,first responder Network which is really
+1905.72,3.3,totally cheap the bill claims to be
+1907.49,4.47,hoping to have twenty billion of that go
+1909.02,5.1,into budget deficit reduction okay and
+1911.96,3.99,so I said one name was the spectrum axe
+1914.12,3.72,the other name of the real name of the
+1915.95,6.15,bill is the middle-class tax relief and
+1917.84,6.15,Job Creation Act because I mean are you
+1922.1,8.31,really gonna vote against a bill called
+1923.99,9.81,the middle-class tax room okay so the
+1930.41,5.4,numbers are big and to thicken the plot
+1933.8,4.86,further if you design these actions
+1935.81,4.98,auctions badly terrible things can
+1938.66,4.44,happen ok debacles really have occurred
+1940.79,4.95,so one famous one was in New Zealand
+1943.1,4.74,this is quite a while ago 1990 and they
+1945.74,4.08,were just selling licenses to broadcast
+1947.84,4.92,on TV again it was a very simple setup
+1949.82,5.01,they had 10 licenses to broadcast and
+1952.76,3.6,they were basically interchangeable okay
+1954.83,5.1,so you just needed to sell all ten of
+1956.36,6.63,them and for reasons that I still do not
+1959.93,6.78,understand they decided on the option
+1962.99,6.12,format of simultaneous sealed bid second
+1966.71,4.56,price auctions so a second price or
+1969.11,3.99,Vickrey auction in some cases is a
+1971.27,2.97,really good idea okay here it wasn't a
+1973.1,3.3,really good idea but so here's what a
+1974.24,4.62,second price sealed bid auction is it's
+1976.4,4.2,almost equivalent to eBay so you write
+1978.86,3.24,down a bit in an envelope you pass all
+1980.6,3.9,of those to the seller the seller opens
+1982.1,4.2,them up the winner is the obvious one
+1984.5,3.51,the highest bidder
+1986.3,3.54,the price may not be the first one you
+1988.01,3.39,think about the price is actually the
+1989.84,3.48,second highest bid okay so the highest
+1991.4,3.63,bid by one of your competitors all right
+1993.32,4.8,but if you think about it like you know
+1995.03,4.59,in a art auction or on eBay the winner
+1998.12,3.57,doesn't really pay their bid generally
+1999.62,3.63,they pay the lowest bid necessary to
+2001.69,3.15,beat out everybody else which is
+2003.25,3.81,basically the second highest bid overall
+2004.84,5.55,okay so this is a very sensible auction
+2007.06,5.01,in some contests however now I imagine
+2010.39,3.69,that those tennety is going on at once
+2012.07,3.66,and you're somebody who just you just
+2014.08,3.39,want a license okay you don't care which
+2015.73,3.21,of the ten you get okay you have no use
+2017.47,3.78,for two okay
+2018.94,4.35,use one one and they're saying oh yeah
+2021.25,4.77,submit anywhere up to ten bids in these
+2023.29,8.37,ten sealed bid auctions so what should
+2026.02,8.13,you do well you could like pick your
+2031.66,5.49,favorite number like seven and go all in
+2034.15,4.62,for license number seven you could say
+2037.15,3.0,well you know maybe not that many people
+2038.77,2.61,are bidding for these right maybe
+2040.15,3.24,there's only like fifteen or twenty
+2041.38,4.32,people actually bidding and then maybe I
+2043.39,4.5,should bid super low on a bunch of them
+2045.7,3.84,hoping I get one at a bargain it's
+2047.89,3.51,another totally legitimate strategy and
+2049.54,3.48,one rule of thumb is is if you have an
+2051.4,3.54,auction where it's not clear how to play
+2053.02,4.74,there's definitely vulnerable to bad
+2054.94,4.41,results in particular the New Zealand
+2057.76,4.62,government was really hoping to make a
+2059.35,6.09,quarter billion dollars in this auction
+2062.38,9.51,that was the projection they wanted
+2065.44,9.15,making 36 million and to add insult to
+2071.89,4.35,injury I guess for reasons of
+2074.59,6.3,transparency they were required to
+2076.24,6.33,actually publish the winning bids in the
+2080.89,3.32,prices at which things were sold and
+2082.57,4.68,remember this is a second-price auction
+2084.21,4.39,okay so the winner pays not what they
+2087.25,4.8,said they would be willing to pay but
+2088.6,5.579,rather the next highest bid one of these
+2092.05,5.73,licenses the high bid was for a half a
+2094.179,7.981,million so 500 thousand the second
+2097.78,8.37,highest bid was for six not six thousand
+2102.16,7.16,but six okay so someone got a broadcast
+2106.15,3.17,license for six bucks
+2111.95,4.869,now right and then if you scale that up
+2115.26,2.609,to sort of modern-day in the US we're
+2116.819,3.75,also talking about two orders of
+2117.869,4.95,magnitude more money okay so the lesson
+2120.569,4.53,being it's that is people know they need
+2122.819,5.01,to think very very carefully about these
+2125.099,4.801,auction designs so let me tell you so
+2127.829,4.111,this is double auction it's currently
+2129.9,4.26,slated to be run in early 2016
+2131.94,3.629,though all of the details have not been
+2134.16,4.29,announced okay so some of this is
+2135.569,4.591,speculation based on my conversations
+2138.45,4.32,with people and meetings I've been to
+2140.16,4.889,but let me tell you what seems has all
+2142.77,4.43,has you know coagulated as the high
+2145.049,4.26,order bits of the of the auction format
+2147.2,3.55,and so I'm only gonna I'm gonna
+2149.309,2.901,focus mostly on the reverse auction cuz
+2150.75,3.63,that's just the part where you're buying
+2152.21,3.73,licenses from TV broadcasters because
+2154.38,4.32,that's the part which really has to be
+2155.94,5.25,invented from scratch so it looks like
+2158.7,4.5,they're gonna go with a proposal by two
+2161.19,4.23,economist colleagues of mine at Stanford
+2163.2,3.93,Paul Milgram in Elia Segal Illya Segal
+2165.42,3.51,incidentally I also met for the first
+2167.13,4.919,time at the Institute that same visit in
+2168.93,5.85,2002 and so what they proposed is a
+2172.049,4.05,descending clock auction okay and I'll
+2174.78,3.059,give you some more details later but
+2176.099,4.95,first let me just kind of tell you at a
+2177.839,5.701,high level how this works so there's a
+2181.049,3.721,bunch of broadcasters participating in
+2183.54,2.61,this auction and remember what we're
+2184.77,3.27,trying to figure out we're trying to
+2186.15,4.56,figure out which broadcasters we're
+2188.04,6.36,going to buy out and if we buy them outs
+2190.71,5.909,at what prices okay so you're probably
+2194.4,3.84,used to ascending auctions okay but here
+2196.619,4.351,because we're buying out people rather
+2198.24,3.93,than buying goods we start high and we
+2200.97,4.079,go low all right
+2202.17,4.62,so initially so at every every round
+2205.049,4.441,every broadcaster has offered some
+2206.79,4.44,buyout price which they can accept in
+2209.49,3.089,which case I can say yep I'm gonna take
+2211.23,5.069,the money and run you can have the
+2212.579,6.27,license or they can decline all right
+2216.299,4.651,now in any given round if a buyer
+2218.849,3.51,accepts the price that just means they
+2220.95,2.58,proceed to the next round that doesn't
+2222.359,3.271,necessarily mean they're gonna be bought
+2223.53,4.049,out at that price we may ask them again
+2225.63,4.77,next round if they're still willing to
+2227.579,5.191,be bought out at a lower price however
+2230.4,4.89,if a broadcaster ever refuses and says
+2232.77,4.529,no I'm not willing to pay 400 I'm not
+2235.29,4.11,willing to be paid 400 million dollars
+2237.299,4.05,for my license then they're kicked out
+2239.4,2.85,of the auction forever okay and they get
+2241.349,3.331,to keep their license
+2242.25,4.71,and they got no compensation okay so the
+2244.68,4.38,the bidder is still in the auction are
+2246.96,5.28,those who still might get bought out by
+2249.06,5.13,the FCC so what you do is you initially
+2252.24,2.55,start with a huge buyout price for
+2254.19,1.8,everybody
+2254.79,3.24,probably we're talking something like a
+2255.99,3.42,half a billion dollars so that everybody
+2258.03,3.81,in the auction contractually is
+2259.41,5.13,obligated to accept that initial opening
+2261.84,5.25,buyout price but then you know the FCC
+2264.54,4.26,says well you know for the amount of
+2267.09,3.36,spectrum we actually want to sell that's
+2268.8,3.42,overkill we don't need to buy everybody
+2270.45,3.51,out so in the next round we're gonna
+2272.22,3.27,lower some of these buy out prices we're
+2273.96,3.03,gonna try to get we're gonna try to buy
+2275.49,4.17,a bunch of licenses at a at a smaller
+2276.99,4.29,cost and then that just continues so the
+2279.66,3.33,auction keeps lowering prices and
+2281.28,3.99,eventually some of these broadcasters
+2282.99,5.07,refuse and say no I'm not willing to be
+2285.27,4.26,bought out at that lower price so what I
+2288.06,3.75,need to tell you more about is when the
+2289.53,4.29,option stops okay so again you start
+2291.81,4.53,high and you decrease the prices of
+2293.82,4.35,everybody as the auction proceeds so
+2296.34,4.14,intuitively what this auction is
+2298.17,4.23,aspiring to do is it's expiring it's
+2300.48,4.61,aspiring to buy a target amount of
+2302.4,5.13,wireless spectrum as cheaply as possible
+2305.09,3.79,so what would be an example of a target
+2307.53,2.73,amount of spectrum so think of it in
+2308.88,3.18,terms of TV channels and this this
+2310.26,3.54,really is how they think about it so
+2312.06,4.83,we're talking about people broadcasting
+2313.8,5.19,between channels 38 and 51 that's 14
+2316.89,4.14,channels let's say we'd like to free up
+2318.99,3.869,ten of them okay so we're gonna retain
+2321.03,3.03,four channels worth of TV stations but
+2322.859,4.141,10 of those channels will be freed up
+2324.06,4.98,for wireless broadband okay now there's
+2327.0,3.9,a really interesting issue which is that
+2329.04,3.63,these television stations are scattered
+2330.9,5.07,across 14 channels and they're not just
+2332.67,5.13,going to conveniently fall out of a
+2335.97,5.43,particular 10 piece of channels ok these
+2337.8,6.289,buyouts will happen across all 14 so a
+2341.4,5.55,crucial part of this auction design is
+2344.089,4.841,that after you buy out some of the TV
+2346.95,4.35,stations you look at who's left
+2348.93,4.11,who's retaining their license and then
+2351.3,3.39,you're actually going to repack them
+2353.04,3.63,you're gonna give television stations
+2354.69,4.02,who still have their license a new
+2356.67,4.62,channel ok so your favorite TV station
+2358.71,4.11,might go from channel 37 to channel 40
+2361.29,4.049,that's totally possible in this option
+2362.82,5.16,so you take who's left and you repack
+2365.339,3.481,them in a small amount of channels let
+2367.98,4.29,me show you how this works with a
+2368.82,5.7,picture so suppose initially things look
+2372.27,4.36,like this okay so here each circle
+2374.52,5.23,represents a broadcaster
+2376.63,5.64,the circle indicates the radius on which
+2379.75,4.53,they broadcast and the color indicates a
+2382.27,3.93,channel ok so there's three channels in
+2384.28,3.54,this picture you'll notice whenever two
+2386.2,3.24,circles overlap they have different
+2387.82,2.34,colors that's what they don't interfere
+2389.44,3.06,with each other
+2390.16,4.23,okay that's a constraint and anything
+2392.5,3.69,about it if you have all of these TV
+2394.39,3.66,stations there's no way to use fewer
+2396.19,3.18,than three channels because there's
+2398.05,3.84,three different stations here who
+2399.37,4.8,mutually overlap okay so three three
+2401.89,3.54,channels are really necessary to have
+2404.17,4.32,all these broadcasters without
+2405.43,5.52,interference on the other hand you could
+2408.49,4.98,buy out one of the TV broadcasters they
+2410.95,4.02,disappear and at the moment that didn't
+2413.47,4.32,help because we're still using three
+2414.97,6.0,channels but now if we do a channel
+2417.79,5.16,reassignment we can have them all not
+2420.97,4.5,interfere with each other using only two
+2422.95,4.08,channels okay so we just bought someone
+2425.47,4.65,out and we've freed up one channels
+2427.03,4.65,worth of spectrum after a repacking okay
+2430.12,3.06,so that's how this auctions going to
+2431.68,3.84,work it's going to buy out a ton of
+2433.18,4.08,people free up a bunch of space and
+2435.52,3.21,repack the people who are left into a
+2437.26,3.18,small number of channels and then the
+2438.73,5.31,freedom channels will be sold for
+2440.44,5.19,wireless spectrum okay so that's the
+2444.04,4.02,gist of the auction let me tell you a
+2445.63,4.17,little bit about how work in computer
+2448.06,4.92,science has influenced this design and
+2449.8,4.77,implementation so first of all the high
+2452.98,3.87,level design these descending clock
+2454.57,4.11,auctions these are actually a direct
+2456.85,3.87,extension of some previous work by
+2458.68,4.29,computer scientists specifically my
+2460.72,4.29,first ever PhD student Mukunda Rajan
+2462.97,5.37,also with ronique Mehta who at that
+2465.01,4.77,point was at IBM and so the really nice
+2468.34,3.09,property of these auctions is they have
+2469.78,3.42,strong incentive properties so if you're
+2471.43,3.45,one of the bidders in these auctions you
+2473.2,5.04,have very strong incentives to behave
+2474.88,6.12,honestly okay meaning to drop out of the
+2478.24,4.59,auction exactly when the price reaches
+2481.0,3.18,your value for that license okay so
+2482.83,3.05,you're not gonna drop out early and
+2484.18,4.44,you're not going to stay in too long
+2485.88,4.51,ironically again even though these these
+2488.62,3.45,types of mechanisms so these strong
+2490.39,3.12,incentive constraints are inherited by
+2492.07,3.48,the more general proposal of Milgram and
+2493.51,3.96,Segal but the reason we propose these
+2495.55,3.18,mechanisms again it's because we
+2497.47,3.09,actually wanted computationally
+2498.73,3.48,efficient mechanisms we were aware of
+2500.56,3.27,these incentives all of their incentive
+2502.21,3.57,properties but we wanted also
+2503.83,3.72,computational efficiency because of the
+2505.78,4.2,NP completeness intractability barrier
+2507.55,3.27,and we wanted to harness the big toolbox
+2509.98,1.92,of approximate
+2510.82,3.21,algorithms that have come out of
+2511.9,4.65,theoretical computer science turns out
+2514.03,3.99,the definition we came up with is more
+2516.55,4.83,broadly useful for this double auction
+2518.02,5.28,design second connection and this
+2521.38,5.31,involves a colleague of mine at Stanford
+2523.3,5.04,CSU I've shown so I mentioned that's in
+2526.69,3.69,each round of the auction you can
+2528.34,4.47,decrease the buyout price of various
+2530.38,4.23,broadcasters and know where the
+2532.81,3.51,flexibility of the auction is that you
+2534.61,3.48,can decrease different broadcasters by
+2536.32,3.45,different amounts so some you can
+2538.09,4.23,decrease really aggressively and others
+2539.77,3.81,you can leave very high now why might
+2542.32,3.33,you want to treat two different people
+2543.58,5.97,asymmetrically well remember at the end
+2545.65,6.63,of the day whoever you don't buy out has
+2549.55,4.26,to get repacked okay and because some
+2552.28,4.14,television stations interfere with
+2553.81,5.1,others much more than some you're really
+2556.42,5.49,scared about having a very difficult to
+2558.91,4.44,repack television station dropout okay
+2561.91,3.69,that makes your repacking problem really
+2563.35,3.9,hard so if someone's really hard to
+2565.6,3.84,repack he might be much less aggressive
+2567.25,3.72,about decreasing their buyout price
+2569.44,3.57,whereas if someone doesn't interfere
+2570.97,3.21,with anybody then you can decrease their
+2573.01,2.85,price as far as you want you don't
+2574.18,2.82,really care if they drop out and you're
+2575.86,4.17,not gonna be able to buy their license
+2577.0,4.83,from them okay so there's a question of
+2580.03,3.51,how do you do that how do you choose how
+2581.83,3.09,aggressively to decrease these buyout
+2583.54,3.69,prices for different television for
+2584.92,4.2,broadcasting stations and again the
+2587.23,3.48,details have not been announced but what
+2589.12,3.69,has been being proposed and the
+2590.71,5.43,preliminary plans are very directly
+2592.81,5.58,inspired by you know really aspects of
+2596.14,4.5,approximation so heuristic algorithms
+2598.39,3.48,for np-hard problems which you off show
+2600.64,3.3,them was dealing with in a forward
+2601.87,3.99,auction context so exactly the same
+2603.94,3.84,issues of trading off you know how much
+2605.86,5.01,money versus how many conflicts does a
+2607.78,4.47,does a bidder creates that's exactly the
+2610.87,3.0,what these heuristics are meant to
+2612.25,3.63,address and again the motivation here
+2613.87,6.24,was because of the NP completeness of a
+2615.88,6.75,certain optimization problem alright so
+2620.11,4.38,are the computer science toolbox has
+2622.63,3.68,more than just approximation as far as
+2624.49,4.29,ways of coping with NP completeness
+2626.31,4.45,sometimes you really want to solve a
+2628.78,4.11,problem exactly and you're really
+2630.76,4.74,willing to devote tremendous human
+2632.89,4.86,monetary and computational resources for
+2635.5,4.26,doing it and we have an example of such
+2637.75,4.8,an np-complete problem in this very
+2639.76,4.5,auction format I showed you the
+2642.55,2.91,repacking problem okay
+2644.26,3.66,with all of these colored circles
+2645.46,4.89,overlapping with each other that's an
+2647.92,4.02,instantiation of a totally canonical and
+2650.35,3.93,p-complete problem known as graph
+2651.94,4.17,coloring and it's a difficult and B
+2654.28,3.57,complete problem there's really no easy
+2656.11,5.19,way to solve it efficiently on all
+2657.85,5.22,instances so other parts of the toolbox
+2661.3,3.24,are being opened to tackle this part of
+2663.07,2.82,the auction design and this is led by
+2664.54,3.93,Kevin Leighton Brown as computer
+2665.89,5.33,scientist at UBC and an expert in this
+2668.47,5.22,kind of stuff and so he showed how these
+2671.22,4.06,repacking problems can be formulated
+2673.69,5.31,very nicely as instances of
+2675.28,5.46,satisfiability or SATs he showed how you
+2679.0,3.42,know this a huge amount of satsang
+2680.74,3.36,technology in computer science the
+2682.42,3.6,off-the-shelf ones still aren't quite
+2684.1,3.57,good enough to get the performance they
+2686.02,3.87,need in practice so they really want to
+2687.67,3.6,solve sad instances with like tens of
+2689.89,3.12,thousands of variables hundreds of
+2691.27,3.87,thousands of constraints and maybe a
+2693.01,3.57,second or something like that so
+2695.14,3.48,off-the-shelf techniques aren't quite
+2696.58,4.05,good enough but if you encode additional
+2698.62,3.84,domain knowledge about the interference
+2700.63,3.66,constraints in this particular auction
+2702.46,3.18,setting then you can usually get the
+2704.29,3.9,desired performance so just a few
+2705.64,4.56,seconds to solve really reasonable size
+2708.19,3.84,set problems so that's a third
+2710.2,4.05,ingredient from computer science which
+2712.03,4.5,is really kind of a necessary condition
+2714.25,7.29,for this auction format to be
+2716.53,7.16,practically viable okay how much time to
+2721.54,2.15,F
+2727.22,7.93,ten minutes or 15 minutes or something
+2730.68,7.2,okay all right so let me just what do
+2735.15,4.62,you say five is better
+2737.88,3.54,five is better okay five is better I'll
+2739.77,4.95,skip this part I'll just mention this
+2741.42,5.22,briefly at the end okay all right so
+2744.72,3.12,that was the second vignette and so the
+2746.64,3.36,goal of this thing yet was to show you
+2747.84,3.6,how computer science ideas have been
+2750.0,3.21,influencing not only the theory of
+2751.44,3.81,economics but also the practice of
+2753.21,3.54,economics so again the high-level
+2755.25,3.69,auction design even though it's
+2756.75,4.35,motivated by incentive issues the
+2758.94,3.87,precursor actually emerged from work
+2761.1,3.78,inspired by computational efficiency
+2762.81,3.75,considerations you know design and
+2764.88,4.38,greedy heuristics about how to decrease
+2766.56,3.809,prices that's bread-and-butter kind of
+2769.26,2.64,techniques that come out of
+2770.369,3.721,approximation algorithms that come out
+2771.9,5.61,of theoretical computer science and then
+2774.09,5.22,fast relatively fast exact Sat solvers
+2777.51,4.23,was also crucial for the by Villa the
+2779.31,3.51,viability of that format one thing I
+2781.74,3.81,skipped and I'll just mention very
+2782.82,4.77,briefly is that in the forward part of
+2785.55,3.93,the auction there's a lot of folklore
+2787.59,4.08,understanding and economics about which
+2789.48,4.41,auction designs work well which options
+2791.67,3.99,design don't work well so for example
+2793.89,3.39,can you do can you get away with simple
+2795.66,3.81,auctions or do you need much more
+2797.28,4.589,complex auctions with additional
+2799.47,4.8,features such as package bidding and so
+2801.869,4.651,there's a lot of empirical rules of
+2804.27,4.53,thumb but really theoretic computer
+2806.52,4.16,science gives the vocabulary to turn
+2808.8,4.77,those empirical rules of thumb into
+2810.68,4.8,theorems so for example one rule of
+2813.57,4.47,thumb is that when items have
+2815.48,4.09,complementarities so this means you have
+2818.04,3.54,a bunch of items where you don't have a
+2819.57,3.6,lot of value for them individually but
+2821.58,4.44,you do have a lot of value for them in
+2823.17,4.68,concert so think about say a telecom who
+2826.02,3.72,has a business plan which only makes
+2827.85,4.38,sense if it gets coverage all across the
+2829.74,4.74,US and really as business plan Falls to
+2832.23,4.92,pieces if it has just spotty coverage
+2834.48,4.83,all over the nation so now if you have a
+2837.15,3.84,budget independent auctions it's really
+2839.31,3.33,hard to pull off bidding in them because
+2840.99,3.36,you need to simultaneously win in all of
+2842.64,3.87,them if you win in only half of them
+2844.35,3.75,it's a total disaster so that's why
+2846.51,3.599,auctions can be hard when items can be
+2848.1,3.36,confident have complementarities it's
+2850.109,3.541,hard to coordinate the outcomes of
+2851.46,3.78,multiple independent auctions so the
+2853.65,3.84,rule of thumb in the field then is that
+2855.24,4.809,you really need complicated auctions if
+2857.49,4.119,you want to be able to have good outcome
+2860.049,2.88,when you have these complementarities
+2861.609,3.36,among items but again it was not
+2862.929,3.991,previously a theorem it can be made a
+2864.969,3.09,theorem and it builds on a field of
+2866.92,3.059,theoretical Peter science known as
+2868.059,3.39,communication complexity so it's
+2869.979,3.421,historically thought of as a you know a
+2871.449,3.54,pretty hard core part of theoretical
+2873.4,3.809,pure science but it turns out it's
+2874.989,4.29,exactly the right tool for making
+2877.209,4.171,precise these well known rules of thumb
+2879.279,8.55,among practitioners in these kinds of
+2881.38,8.339,commercial auctions okay so let me go
+2887.829,4.35,back to a sort of more theoretical even
+2889.719,5.911,almost sort of philosophical example to
+2892.179,5.58,conclude so let me return to Nash's
+2895.63,6.709,theorem which I mentioned early on in
+2897.759,8.1,the talk I mentioned how in some sense
+2902.339,5.081,this theorem gave game theorists and
+2905.859,3.061,economists who are using game theory
+2907.42,4.319,everything that they wanted in the form
+2908.92,4.589,of a sweeping Universal existence
+2911.739,4.08,theorem and indeed I mean this this
+2913.509,4.5,theorem is so general it honestly it
+2915.819,4.74,spoils you if you work in game theory
+2918.009,4.86,because it just sets the bar so high for
+2920.559,3.75,the applicability of any other result so
+2922.869,2.761,I don't even know anything about your
+2924.309,4.111,game as long as I know it's finite I
+2925.63,4.939,know there's a there's an equilibrium so
+2928.42,3.689,that's great but for many of the usual
+2930.569,3.13,interpretations of a Nash equilibrium
+2932.109,4.47,from any of the reasons why you might
+2933.699,5.15,care about Nash equilibria it's not
+2936.579,5.1,enough to just know that it exists
+2938.849,5.11,ultimately somebody maybe the players
+2941.679,4.32,themselves or maybe some helper a
+2943.959,3.931,designer or a mediator is gonna be
+2945.999,3.96,responsible for figuring out what one of
+2947.89,3.839,these equilibria are okay the players
+2949.959,3.57,have to know what to play either by
+2951.729,4.11,discovering it themselves or by being
+2953.529,4.141,told by some third party okay but some
+2955.839,4.59,boundedly rational agent has to figure
+2957.67,4.559,out what this equilibrium is so what
+2960.429,3.84,we'd really like is we'd like a sort of
+2962.229,3.45,more constructive version of Nash's
+2964.269,4.02,theorem which indicates not just
+2965.679,7.86,existence but how might one figure out
+2968.289,6.69,how to play so Nash's original proof
+2973.539,3.3,actually had two proofs but they were
+2974.979,3.87,both based on fixed point theorems and
+2976.839,3.45,so those have a non constructive nature
+2978.849,4.01,that don't really give any clues about
+2980.289,5.101,about how to have a constructive version
+2982.859,6.7,so this has been a this was a major open
+2985.39,5.76,question for a long time and evidence
+2989.559,2.961,started amassing that maybe there could
+2991.15,3.77,not be
+2992.52,4.68,Universal efficiently efficient
+2994.92,4.29,computation a fish on the computable
+2997.2,3.629,version of Nash's theorem the first
+2999.21,3.72,instance I know of of someone really
+3000.829,4.141,shining a spotlight on this question and
+3002.93,5.04,also sort of raising alarm bells was
+3004.97,4.29,Michael Rabin in a paper in 1957 so a
+3007.97,2.79,computer scientist and the audience will
+3009.26,3.21,already know many reasons why Michael
+3010.76,3.45,Ravens sort of a hero of computer
+3012.47,3.629,science for his work in atomic theory
+3014.21,3.57,randomized algorithms cryptography and
+3016.099,4.411,so on I guess it's probably not that
+3017.78,4.89,many of you know that in 1957 he wrote a
+3020.51,4.829,paper on the intractability of computing
+3022.67,4.53,Nash equilibria but he did so he says
+3025.339,3.631,it's quite obvious that not all games
+3027.2,3.899,can you know captured by the theory
+3028.97,4.05,encompassed in theory can actually be
+3031.099,4.98,realistically played by human beings
+3033.02,5.849,remember 57 is well before we had NP
+3036.079,4.621,completeness 15 years before right so
+3038.869,3.48,what could he have meant by sort of an
+3040.7,3.96,intractable result well we did have
+3042.349,3.99,undecidability in the sense of girdle
+3044.66,3.929,and Turing and that's what Raven meant
+3046.339,3.75,so he exhibited a game okay we're
+3048.589,3.721,actually the there was account it was
+3050.089,4.02,accountably infinite action spaces where
+3052.31,3.42,it was easy to prove the existence of a
+3054.109,3.391,Nash equilibrium but you could also
+3055.73,3.33,prove that there was no decidable
+3057.5,3.75,procedure that would give you that
+3059.06,4.62,equilibrium okay so this showed that
+3061.25,3.81,there could be big gaps between the
+3063.68,3.63,types of existence theorems that could
+3065.06,4.94,be shown and the types of constructive
+3067.31,4.92,existence theorems that could be shown
+3070.0,3.79,then later we did have NP completeness
+3072.23,3.99,and we could prove intractability
+3073.79,4.68,results for finite games like the ones
+3076.22,5.609,that are squarely in the domain of
+3078.47,4.68,Nash's theorem so Gilboa and Zemel
+3081.829,3.121,proved that various decision problems
+3083.15,3.66,around Nash equilibria or np-complete
+3084.95,3.18,and there have a sequence of results
+3086.81,3.75,showing that at least particular
+3088.13,4.32,algorithms for example algorithms that
+3090.56,4.049,attempt to quickly learn Nash equilibria
+3092.45,6.11,are doomed to fail do not in general
+3094.609,6.391,work in a computationally efficient way
+3098.56,4.24,so this sounds like it's right in the
+3101.0,2.97,wheelhouse now of computational
+3102.8,3.9,complexity theory you have a
+3103.97,6.09,computational problem namely given a
+3106.7,5.909,game find a Nash equilibrium we know one
+3110.06,4.2,exists and we're starting to believe
+3112.609,3.871,that may be an efficient algorithm
+3114.26,4.23,doesn't exist and again this is what
+3116.48,2.79,many people in the community basically
+3118.49,2.07,do for a living
+3119.27,3.18,prove these kinds of intractability
+3120.56,3.509,results and the first thing one thinks
+3122.45,2.3,about oh maybe this is another one of
+3124.069,2.751,those NP
+3124.75,5.31,complete problems okay like I mentioned
+3126.82,5.57,earlier but the answer is actually a
+3130.06,5.88,little bit trickier than that
+3132.39,5.92,so megiddo pointed out that's actually
+3135.94,3.6,Nash equilibria are not np-complete at
+3138.31,2.91,least understand the complexity
+3139.54,3.36,assumptions and it's because there's
+3141.22,4.23,almost a sort of type checking error
+3142.9,4.74,between Nash equilibria and typical
+3145.45,4.14,np-complete problems so remember what a
+3147.64,4.62,typical np-complete problem looks like I
+3149.59,5.1,want to know in the facebook graph are
+3152.26,4.41,there a hundred people who are all
+3154.69,3.24,friends with each other this is called a
+3156.67,3.66,clique is there a clique of a hundred
+3157.93,5.07,people in the facebook graph the answer
+3160.33,4.41,might be yes the answer might be no and
+3163.0,4.38,I want an algorithm an algorithm to tell
+3164.74,4.44,me which is which now if I give you a
+3167.38,4.2,game and I tell you to find a Nash
+3169.18,3.63,equilibria it's not a question of
+3171.58,3.15,whether or not there is a Nash
+3172.81,3.42,equilibrium to be found we know the
+3174.73,4.86,answer Nash told us the answer the
+3176.23,6.12,answer is yes the only difficulty only
+3179.59,4.38,difficulty is in finding it okay so
+3182.35,3.3,because of this lack of a binary
+3183.97,3.72,decision problem underlying Nash
+3185.65,4.08,equilibrium computation it is in a
+3187.69,3.69,provable sense not as difficult as
+3189.73,5.51,np-complete problems because there's
+3191.38,6.45,guaranteed existence of a solution so
+3195.24,5.5,Papadimitriou then proposed to have a
+3197.83,4.95,refined version of NP to say okay so
+3200.74,3.42,maybe we can't prove that computing Nash
+3202.78,3.21,equilibria is as hard as all this other
+3204.16,3.54,stuff but maybe we can at least prove
+3205.99,4.2,that it's as hard as all the other
+3207.7,4.65,problems that have guaranteed existence
+3210.19,4.32,because of a fixed point argument okay
+3212.35,4.14,like brower's fixed points and several
+3214.51,4.55,other problems okay so that's a
+3216.49,6.26,refinement of the complexity class NP
+3219.06,8.64,papademetriou decided to call it PP ad
+3222.75,7.48,so allegedly allegedly this stands for
+3227.7,4.95,polynomial parity argument directed
+3230.23,2.42,version
+3240.25,5.65,christos a strata convinced me that he
+3242.3,5.04,was unaware that this was a substring of
+3245.9,3.51,the first five letters of his last name
+3247.34,4.7,when he proposed it but if you believe
+3249.41,6.33,that I've got a bridge to sell you
+3252.04,5.59,so the 94 proposal was to say look if
+3255.74,3.39,computing Nash equilibria is going to be
+3257.63,2.82,intractable and we want to prove its
+3259.13,3.42,complete for some complexity class
+3260.45,3.93,here's a proposal for what that class
+3262.55,3.03,should be okay so that was just a
+3264.38,2.46,proposal there was not a proof of
+3265.58,3.84,intractability it was just really a
+3266.84,4.77,program for in tractability and it took
+3269.42,5.42,more than ten years but it was indeed
+3271.61,6.03,proven okay mid last decade that indeed
+3274.84,5.71,computing a Nash equilibrium is as hard
+3277.64,4.47,as any other problem with guaranteed
+3280.55,1.92,existence coming from a fixed point
+3282.11,2.7,theorem
+3282.47,3.81,okay so formally this is a ppat complete
+3284.81,3.03,problem okay so it's like np-complete
+3286.28,3.18,but with this technical distinction
+3287.84,3.87,because of the guaranteed existence of
+3289.46,4.14,solutions this is a difficult result the
+3291.71,4.17,proofs are real tour de force Duskull
+3293.6,5.88,Optus goldberg papadimitriou chen Deng
+3295.88,6.06,and tang as far as how to interpret this
+3299.48,4.53,I mean this is the way we would in
+3301.94,4.77,theoretical pure science make precise
+3304.01,4.95,what up till now had been sort of more
+3306.71,4.86,of a folklore belief that there cannot
+3308.96,4.62,be a constructive version of Nash's
+3311.57,4.95,theorem that has as sweeping
+3313.58,5.12,universality as the existence okay so
+3316.52,5.73,Nash proved Nash equilibria always exist
+3318.7,4.99,assuming P is different than P P ad that
+3322.25,3.9,cannot be the case that there is
+3323.69,4.26,universal efficient computation of Nash
+3326.15,5.94,equilibria okay that's the meaning of
+3327.95,6.15,this result okay so in particular if you
+3332.09,3.63,want a constructive version of Nash's
+3334.1,3.81,theorem just like with np-complete
+3335.72,4.56,problems you have to make compromises
+3337.91,3.57,and again in theoretical your science we
+3340.28,3.42,have many ideas for how you can
+3341.48,3.33,compromise you have approximation for
+3343.7,2.28,equilibrium computation more
+3344.81,3.03,realistically you probably want to
+3345.98,2.91,narrow the domain okay so you probably
+3347.84,3.54,want to look at games that are either
+3348.89,4.05,not too big or have extra special
+3351.38,3.36,structure where it's easier to
+3352.94,6.66,understand and compute what the Nash
+3354.74,7.14,equilibria might be so what did we get
+3359.6,4.59,from the computational lens applying it
+3361.88,3.86,squarely to the fundamental concept of
+3364.19,4.61,Nash equilibria
+3365.74,4.619,well you know what is what is not a new
+3368.8,3.75,idea is the idea that the Nash
+3370.359,4.321,equilibria has problems okay there's a
+3372.55,3.9,long list of well-known criticisms of
+3374.68,3.51,the Nash equilibrium concept for example
+3376.45,3.24,already the fact that it's not unique
+3378.19,2.97,you can have lots and lots of Nash
+3379.69,4.169,equilibria in different games that
+3381.16,4.86,already makes its predictive power not
+3383.859,4.711,as sweeping as one might like okay so
+3386.02,4.29,there are many criticisms but the
+3388.57,3.87,computational lens has highlighted
+3390.31,3.75,really an orthogonal and I think novel
+3392.44,3.659,type of criticism of the Nash
+3394.06,3.33,equilibrium concept again it doesn't
+3396.099,2.731,mean it should be removed from the
+3397.39,3.75,pedestal of being the fundamental
+3398.83,4.17,equilibrium concept it just means it's
+3401.14,3.32,just sort of advice about when it makes
+3403.0,4.56,sense and when it doesn't make sense and
+3404.46,4.81,the critique is that even with all of
+3407.56,3.99,the setting all the other criticisms
+3409.27,4.349,aside that predictive power is
+3411.55,3.51,diminished by the fact that we can't
+3413.619,3.811,have confidence that down at the
+3415.06,3.48,rational agents or designer can actually
+3417.43,2.85,figure out what one of these Nash
+3418.54,3.569,equilibria is at least not in the
+3420.28,4.17,general case ok so again in specific
+3422.109,3.931,domains you get a positive results but
+3424.45,5.93,you cannot have a general purpose
+3426.04,4.34,constructive version of Nash's theorem
+3430.41,6.1,ok so just to wrap up quickly so I've
+3434.14,4.89,given you a highly non exhaustive but I
+3436.51,3.93,hope representative set of the
+3439.03,2.91,interactions that have been taking place
+3440.44,3.63,on the boundary of computer science and
+3441.94,3.72,economics over the past 15 years and I
+3444.07,3.6,really don't think this is some fad I
+3445.66,4.8,mean the interaction that's happening is
+3447.67,4.02,only accelerating as we speak and I
+3450.46,2.909,think it makes sense these are two
+3451.69,3.33,communities that have a lot to benefit
+3453.369,3.271,from each other and indeed you know
+3455.02,4.29,arguably even need each other to a
+3456.64,4.5,certain degree computer science right
+3459.31,3.87,many of the 21st century applications
+3461.14,4.229,that were struggling with really require
+3463.18,3.6,economic reasoning to make good sense of
+3465.369,3.211,them I tried to highlight this with a
+3466.78,3.12,network routing application but if you
+3468.58,2.97,look at the big data companies you look
+3469.9,3.63,at Microsoft and Google they now have
+3471.55,4.08,positions called chief economist okay up
+3473.53,3.6,toward the top grass of the company so
+3475.63,2.43,this is really I think a well understood
+3477.13,3.2,new thing
+3478.06,5.37,computer science needs economic advice
+3480.33,4.509,in the other direction theoretical
+3483.43,4.86,computer science is really uniquely
+3484.839,5.491,situated to articulate computational
+3488.29,4.079,intractability when it exists and
+3490.33,4.08,whether we like it or not it exists
+3492.369,4.261,pretty broadly in the world whether
+3494.41,4.12,you're trying to run some auction at
+3496.63,3.76,large scale like in the FCC
+3498.53,3.66,auction or whether you're just trying to
+3500.39,3.81,understand whether or not equilibria are
+3502.19,3.63,generally going to be realized in games
+3504.2,5.04,like we saw in the previous application
+3505.82,7.44,with ppat completeness but the good news
+3509.24,5.76,is is because of our long history coping
+3513.26,3.72,with intractability we have a lot of
+3515.0,3.78,ways of getting around it a lot of ways
+3516.98,3.69,to still make progress and get insights
+3518.78,3.78,into fundamental models even when
+3520.67,4.88,there's intractability there so I'll
+3522.56,2.99,leave you with that thanks

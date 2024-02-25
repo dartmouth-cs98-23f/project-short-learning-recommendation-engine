@@ -1,0 +1,383 @@
+second,duration,transcript
+9.79,1.09,OLIVIA: So I'm Olivia.
+10.88,4.34,"I work at Fathom
+Information Design."
+15.22,2.14,We're over in Boston.
+17.36,3.74,"And we do-- a lot of our
+work is in data visualization"
+21.1,1.64,and information design.
+22.74,2.37,"And we use processing
+for that, which is what"
+25.11,1.61,we're going to be using today.
+26.72,4.5,"So processing is both a
+community and development"
+31.22,3.624,"environment and a
+language to kind of make"
+34.844,1.416,"it as simple as
+possible to get up"
+36.26,2.89,"and running with something
+visual on the screen."
+39.15,2.125,So you can use it for making 3D.
+41.275,1.941,"You can do what
+we're going to do,"
+43.216,1.374,"image processing,
+kind of looking"
+44.59,2.16,"at the pixel
+information of images."
+46.75,3.47,"Or kind of pulling in data and
+creating things based on that."
+53.75,2.83,"So do any of you guys
+have an idea of what"
+56.58,2.43,"you think of when you
+hear image processing"
+59.01,2.136,or what that might be?
+61.146,0.813,Yeah.
+61.959,0.875,AUDIENCE: [INAUDIBLE]
+66.09,0.94,OLIVIA: Yes.
+67.03,1.7,"Yes, so a lot of
+it is about kind"
+68.73,3.24,"of manipulating the
+information that you get when"
+71.97,1.94,you kind of take a picture.
+73.91,2.29,"Usually, it's to enhance
+it so whether that"
+76.2,3.19,"means you're making
+it more clear to be"
+79.39,1.58,"able to kind of
+analyze information"
+80.97,2.744,"in there or in enhancing
+it in an aesthetic way"
+83.714,1.666,"kind of like with
+Instagram or Snapchat."
+88.37,2.775,"So kind of doing
+that through code"
+91.145,1.333,is what we're going to do today.
+95.27,3.57,"It uses a mix of math and
+computer science so a lot of it"
+98.84,1.9,"is these mathematical
+functions that"
+100.74,3.84,"manipulate the different pieces
+of the image information."
+104.58,1.71,"And we're going to
+use computer science"
+106.29,2.42,"with processing to kind
+of mix it all together"
+108.71,2.35,and create our filters.
+111.06,2.15,"So there are a lot of
+different things you can do."
+113.21,4.86,"It can be as simple as kind
+of enhancing the contrast."
+118.07,1.73,"So in this case, this
+is a photo that's"
+119.8,2.13,taken underwater on the left.
+121.93,1.86,"And you can't
+really see anything"
+123.79,4.37,"so people have gone in and just
+enhanced the contrast, which"
+128.16,3.39,"usually means playing with the
+values, the light and the dark"
+131.55,2.5,"of the image to start to make
+out the different shapes."
+134.05,3.456,"And then they can use it for
+analysis or to put in a book."
+140.1,2.61,"Sometimes we take
+images-- you guys"
+142.71,3.0,"were building cameras
+earlier using visible light,"
+145.71,2.05,"x-rays are another
+way of taking images,"
+147.76,2.365,"but you're using x-rays
+instead of the visible light,"
+150.125,1.205,the wavelengths.
+151.33,1.7,"And then, again, kind
+of enhancing those"
+153.03,4.56,"images so that we can find
+different medical anomalies."
+157.59,3.61,"You can also use x-rays to
+look at layers behind paint."
+161.2,4.35,"So a lot of times you might
+hear a story about they found"
+165.55,2.31,"that a person was in this
+painting and then it got"
+167.86,1.11,painted over.
+168.97,2.21,"The way they know
+that is through taking"
+171.18,1.98,"these different
+images and enhancing"
+173.16,2.86,the information in them.
+176.02,4.68,"And one that I think is really
+cool is a lot of space images"
+180.7,5.01,"that you see are mixes of image
+data from different telescopes."
+185.71,1.4,"So this is actually
+a combination"
+187.11,2.04,from three different telescopes.
+189.15,5.02,"I think the blue is
+x-ray information,"
+194.17,2.68,"the gold is information
+from Hubble,"
+196.85,4.09,"and then the red might be a
+different x-ray telescope."
+200.94,2.73,"So kind of merging all of those
+together and coloring them"
+203.67,1.91,"in a certain way
+so that people can"
+205.58,5.12,"start to get scientific
+knowledge from the photos."
+210.7,3.78,"And then there's also this
+kind of cyclical process"
+214.48,3.45,"of so now we have cameras that
+are really good at recognizing"
+217.93,4.37,"faces so that our pictures of
+our family can be way better."
+222.3,1.55,"But the way we were
+able to do that"
+223.85,2.684,"is by looking at pictures
+of faces and kind"
+226.534,1.666,"of teaching the camera
+what to look for."
+228.2,3.295,"So kind of using images
+to enhance later images."
+234.34,1.98,"And what we're going
+to focus on today"
+236.32,4.81,"is manipulating the color
+information of our photos"
+241.13,2.24,for purely aesthetic purposes.
+243.37,4.13,"So Instagram uses a set of
+filters which really is just"
+247.5,2.91,"a set of mathematical functions
+that are applied to the image"
+250.41,1.07,information.
+251.48,2.306,"And then spit back out your
+image with its new colors."
+257.05,2.55,"So in order for us to
+be able to do this,"
+259.6,2.71,"I'm going to talk a little bit
+about the different ways you"
+262.31,3.13,"might access the color
+information of your photo."
+265.44,3.637,"And kind of how
+computers see color."
+269.077,2.583,"You might have talked about this
+a little bit with the cameras"
+271.66,3.28,"earlier so it's
+a good refresher."
+274.94,2.53,"But let's start with
+a grayscale image."
+277.47,3.6,"So on the left is our
+image of the baboon."
+281.07,2.6,"And when you have
+a grayscale image,"
+283.67,3.0,"everything is on
+a range of black"
+286.67,5.46,"to white that can be stored as
+a number, usually zero to 255."
+292.13,2.32,"And then over here,
+it's just kind"
+294.45,2.42,"of plotting what
+those values are."
+296.87,4.62,"So you start to get a sense
+of how image information can"
+301.49,2.95,"be seen as just sort of a set
+of numbers, a set of values."
+307.95,3.22,"This is up close at like
+one square of your image,"
+311.17,2.79,"so again, every pixel
+in a gray scale image"
+313.96,1.305,will have one value.
+318.07,2.88,"So it can be from zero for
+black and 255 for white."
+323.47,2.0,"And then a color
+image is usually just"
+325.47,2.53,"like three layers
+of that information."
+328.0,3.91,"So if you're looking at
+an image in RGB mode,"
+331.91,3.62,"which is pretty standard for
+how digital cameras work,"
+335.53,2.77,"usually how computers
+are thinking about color"
+338.3,5.13,"information, it's three layers
+of those zero to 255 values."
+343.43,3.29,"But in this case, it's
+like from black to pure red"
+346.72,3.53,"or black to pure green
+and black to pure blue."
+350.25,2.21,"And then we kind of
+add those all together"
+352.46,3.45,"with the correct weights, you'll
+get your full color image."
+355.91,2.79,"So this is one way to start
+pulling out the information"
+358.7,1.14,and playing with it.
+359.84,2.19,"So in processing, you'll
+see in the filters"
+362.03,4.13,"that sometimes people will go
+through and for every pixel,"
+366.16,2.21,"take out what is the
+red, what is the green,"
+368.37,2.04,"and what is the
+blue of that pixel."
+370.41,2.759,"And then you can just
+say OK, add 10 to red"
+373.169,1.666,"and that will totally
+change your image."
+378.48,2.5,"So this is just
+an example of what"
+380.98,5.741,"happens when you start playing
+with the different RGB values."
+386.721,2.499,"And we'll see an example of a
+different kind of color scheme"
+389.22,2.56,in a second.
+391.78,2.7,"So if this is my
+original image over here,"
+394.48,3.25,"I've started bumping up the
+blue or taking down the red,"
+397.73,2.81,"so the whole image
+has this color shift."
+400.54,2.54,"But it also starts to manipulate
+the lights and the dark"
+403.08,3.96,"because in RGB mode, the
+lightness and the darkness"
+407.04,3.07,"of an image is tied to
+the color of the image."
+410.11,4.7,"So sometimes you might want
+to edit those separately."
+414.81,3.87,"And that's where HSB mode
+is really helpful, so hue,"
+418.68,2.1,"saturation, and brightness."
+420.78,3.62,"So you can also,
+through processing,"
+424.4,3.24,"take the color
+information of your image,"
+427.64,3.41,"but separate how bright
+it is, what color it is,"
+431.05,2.21,and how intense that color is.
+433.26,2.87,"So in this case, what we're
+looking at across here"
+436.13,3.4,"is where someone has-- if
+this is their original image,"
+439.53,2.15,they've shifted the hue.
+441.68,3.12,So hue is the color you see.
+444.8,2.4,"But they haven't
+changed the lightness"
+447.2,3.28,or the intensity of the color.
+450.48,4.77,"If we think of an apple
+as red and this is also--"
+455.25,2.53,"this is chalk, which
+is also technically red"
+457.78,2.14,"but it looks more
+like pink because it"
+459.92,1.76,has a lower saturation.
+461.68,3.03,"So this is like when you have
+a pure red versus something"
+464.71,2.61,that's lower saturation.
+467.32,5.15,"And then cherries are also red,
+but they have a darker value."
+472.47,1.39,So that's the brightness.
+473.86,4.44,"So again, pure red versus
+something with a lot more black"
+478.3,0.6,in it.
+478.9,3.63,"So you can also think of this as
+like if you were mixing colors"
+482.53,4.01,"with paint, if it needs a lot
+of white to create that color,"
+486.54,2.51,"then it probably has
+a lower saturation."
+489.05,2.04,"If you needed a lot of
+black to make that color,"
+491.09,2.0,"then it probably
+has a lower value."
+493.09,2.49,"So here you can start
+to play with your image"
+495.58,1.87,"and say I want
+everything to be darker,"
+497.45,1.55,"but I want it to
+stay the same color."
+499.0,2.56,"Or like with the
+butterfly, I want"
+501.56,4.17,"to like-- so like in this
+case, the one on the right,"
+505.73,2.88,"I changed just the color
+but I didn't change any"
+508.61,2.96,of the saturation or the value.
+511.57,3.585,"So you can see how
+these are equally bright"
+515.155,1.375,"and this one in
+the middle starts"
+516.53,3.44,"to get more gray because as
+I've manipulated the RGB values,"
+519.97,4.4,"I've also manipulated
+how light it is."
+524.37,3.54,"So now we can start to
+make filters of our own."
+527.91,3.79,"And the filters that we have
+kind of set up for you guys"
+531.7,3.52,"to play through are--
+these are some of them."
+535.22,4.05,"So there is this one, which
+is kind of like posterization."
+539.27,5.139,"So a lot of the time if you want
+to print something as a poster,"
+544.409,2.541,"you kind of have to get it as
+close as possible to like black"
+546.95,1.94,"and white as opposed
+to like having"
+548.89,2.8,all the range of gray values.
+551.69,2.644,"So kind of just messing
+around and seeing what"
+554.334,1.416,"happens when you
+start to take out"
+555.75,2.01,those middle values of gray.
+557.76,2.73,"And then, also
+manipulating the colors."
+560.49,3.88,"This one is not so much playing
+with the color information,"
+564.37,2.095,"but if you have your
+image dimensions"
+566.465,1.875,"and you want to add
+something like a vignette"
+568.34,3.325,"to it, being able to say, here
+is where the center of my image"
+571.665,4.415,"is and then how, based on that,
+you can add a color on top."
+576.08,4.17,And so adding this ring on top.
+580.25,3.46,"This one, it allows as you
+click around the image,"
+583.71,3.996,"it'll pick one color so this
+is using like hue saturation"
+587.706,0.624,and brightness.
+588.33,3.64,"So it'll pick the hue and then
+light up all the other pixels"
+591.97,3.37,"with that hue and get rid of
+the hue in all the other ones."
+595.34,2.61,"So kind of seeing how many
+colors there are in an image"
+597.95,4.35,"or being able to highlight
+just the red pieces."
+602.3,2.78,"And then the last one is-- so
+I don't know how many of you"
+605.08,2.22,"guys have ever played
+around with Photoshop,"
+607.3,2.57,"but they have this thing
+called blend modes, which"
+609.87,4.38,"is what a lot that people use to
+apply different colors on top."
+614.25,2.17,"And so that just says
+if you put a color"
+616.42,3.7,"on top, what's
+the math that it's"
+620.12,3.41,"taking with that color on top
+and the image on the bottom."
+623.53,2.49,And how it adds them together.
+626.02,3.46,"So this is trying to imitate
+the overlay mode, which"
+629.48,2.94,"just kind of taking
+part of one color"
+632.42,4.46,"and part of the other and then
+spitting back out a new color."
+636.88,4.282,"So those are the different
+filters we have today."
+641.162,1.958,"SPEAKER: Let's give Olivia
+a round of applause."
+643.12,3.05,[APPLAUSE]

@@ -1,0 +1,247 @@
+second,duration,transcript
+0.08,3.799,"Bellman-Ford algorithm, A* algorithm and Floyd
+Warshall algorithm."
+3.879,3.181,"If you have never heard about any of these,
+don’t worry about it."
+7.06,4.619,"You see, I have interviewed at all these companies
+and got offers from Google, Facebook, Amazon"
+11.679,1.0,and some others.
+12.679,3.16,"If there’s one thing I have learnt from
+my experience, it’s this."
+15.839,3.681,"You do not need to know every algorithm in
+this world to crack coding interviews."
+19.52,3.15,"In most interviews, they are asking you very
+similar kinds of questions."
+22.67,4.429,"And if you have heard of the 80-20 rule or
+Pareto’s principle, you know that 20% of"
+27.099,2.961,algorithms will be asked in 80% of the interviews.
+30.06,4.769,"In this video, I will tell you the top 5 algorithms
+I was asked in my interviews so that you can"
+34.829,2.031,pick the top 20% algorithms by yourself.
+36.86,4.0,"I will also share exact problems where these
+algorithms can be applied."
+40.86,2.83,"This video is going to be very information
+dense."
+43.69,3.209,"At number 5, we have the “top k elements”
+algorithm."
+46.899,3.521,"“top k elements” algorithm shows up in
+many different problems."
+50.42,3.99,"Finding k largest or smallest numbers in an
+array or finding the k most frequent numbers"
+54.41,3.89,"in an array are some examples where you would
+need to know this algorithm."
+58.3,2.329,"It also shows up in some “Sliding Window”
+problems."
+60.629,2.121,We will cover “sliding window” shortly.
+62.75,4.53,"For the purpose of this video, let’s look
+into finding k largest numbers in an array."
+67.28,4.81,"Sorting the array and taking k largest elements
+is one way of doing it but it’s not optimal"
+72.09,3.79,because the big O of doing this would be nlogn.
+75.88,5.029,"That’s why, in the “top k elements”
+algorithm, we use a heap data structure to"
+80.909,2.001,track top k largest numbers.
+82.91,3.74,"Now if you don’t know what a heap is and
+want me to make a video on the top 5 most"
+86.65,2.73,"asked Data structures, let me know in the
+comments."
+89.38,6.129,"For simplicity, just know that a heap makes
+getting the maximum or minimum number very"
+95.509,1.0,efficient.
+96.509,3.04,"In the “top k elements” algorithm, we
+add the first k numbers of the array on a"
+99.549,1.0,heap.
+100.549,4.441,"For every number after that, we put it on
+the array and right after doing that, we remove"
+104.99,1.64,the minimum number from the heap.
+106.63,4.86,"This way, we maintain the heap size of K and
+the heap always contains the largest K numbers"
+111.49,1.36,we have seen so far.
+112.85,4.39,"This step of adding and removing the number
+from the heap has a big O of logK and we do"
+117.24,2.729,"this for every number of the array which is
+n times."
+119.969,6.121,"So, the big O of the “top k elements”
+algorithm is nlog(K) instead of nlogn."
+126.09,3.089,"At number 4, we have the “Sliding window”
+algorithm."
+129.179,5.06,"This algorithm shows up in many problems like
+Largest Substring without repeating characters,"
+134.239,4.451,"Maximum Sum subarray of size k and Largest
+substring with k distinct characters etc."
+138.69,3.769,"Here, we will learn the “Sliding window”
+algorithm using the Largest Substring without"
+142.459,7.971,"repeating 
+characters problem."
+150.43,3.4,"You can pause the video if you need some time
+to understand the problem better."
+153.83,4.629,"In the first step, we initialize two pointers:
+left and right at the beginning of the array."
+158.459,3.991,"Now, we increment the right pointer to expand
+the window between left and right."
+162.45,4.78,"As we do this, we store the information of
+all the characters present inside the window."
+167.23,4.14,"We keep incrementing the right pointer and
+updating this information until we find a"
+171.37,1.88,"character that’s already present in the
+window."
+173.25,4.22,"We have reached the maximum window size because
+the right index can not be part of this window"
+177.47,1.47,due to the repeating character.
+178.94,5.43,"So, we will update the answer and start shrinking
+the window by incrementing the left pointer"
+184.37,2.61,"until the repeating character goes outside
+the window."
+186.98,4.08,"As we increment the left pointer, we will
+remove the characters that are no longer there"
+191.06,2.009,in the window from the stored information.
+193.069,4.401,"Once the left pointer reaches its final state,
+we start incrementing the right pointer again"
+197.47,6.45,to expand the window and repeat this process.
+203.92,3.68,"To help you understand this algorithm better,
+I will provide the link to this code in the"
+207.6,1.0,description.
+208.6,1.82,"At number 3, we have Backtracking."
+210.42,4.84,"In Backtracking, we explore all possible solutions
+by building them step by step."
+215.26,5.05,"When we reach an invalid state, we backtrack
+or go back and start exploring other possible"
+220.31,1.52,solutions.
+221.83,1.93,"Backtracking is usually implemented using
+recursion."
+223.76,2.5,"I know that none of this makes sense right
+now."
+226.26,4.16,"So, let’s understand backtracking with the
+help of this very famous problem called Combination"
+230.42,1.0,sum.
+231.42,3.599,"In this problem, you are given a list of positive
+numbers and a target sum."
+235.019,4.151,"You need to pick some numbers from the list
+so that they add up to the target sum."
+239.17,5.679,"In the end, you have to return all unique
+ways or combinations that satisfy this condition."
+244.849,2.131,"You are allowed to pick a number more than
+once."
+246.98,3.79,"In this example, 2, 3 and 3 add up to the
+target sum of 8."
+250.77,2.7,"So, it’s one of the combinations in the
+answer."
+253.47,3.34,"Pause the video if you need more time to understand
+the problem."
+256.81,3.53,"Let’s create different combinations from
+scratch."
+260.34,4.44,"We start at index 0 with an empty combination
+and current combination sum of zero."
+264.78,4.93,"Wherever the total sum of a combination is
+more than target, we backtrack or return because"
+269.71,4.59,"adding more positive numbers to the combination
+will only increase the combination sum and"
+274.3,1.93,can’t lead to a valid answer.
+276.23,5.51,"If the combination sum is the same as the
+target, we add it to the answer and return."
+281.74,5.82,"Otherwise, for every number that comes after
+the current index, we add it to the combination,"
+287.56,5.37,"update the combination sum, update the current
+index and call the function recursively."
+292.93,3.54,"Updating the current index ensures that we
+only get unique combinations in the answer."
+296.47,3.699,"I will link this code in the description for
+you to check out."
+300.169,4.891,"Backtracking is used in many problems like
+Word Ladder, Permutations and Sudoku Solver."
+305.06,2.49,"At number 2, we have Dynamic Programming."
+307.55,4.56,"In Backtracking, we explored all possible
+solutions from scratch piece by piece."
+312.11,4.79,"In Dynamic programming, we are more thoughtful
+about the solutions that we explore while"
+316.9,1.23,still building our solutions from scratch.
+318.13,3.759,"And we do this by breaking a problem into
+smaller subproblems."
+321.889,6.611,"Let’s take the example of Combination sum
+and see how we can solve it with Dynamic Programming."
+328.5,4.9,"The problem asks us to find all possible unique
+combinations that add up to target sum using"
+333.4,1.36,all the numbers or candidates.
+334.76,2.06,But let me change this problem a little bit.
+336.82,5.26,"Imagine that I give you all the combinations
+that add up to target sum, target sum - 1,"
+342.08,5.05,"target sum - 2 using all the given numbers
+except the last one."
+347.13,8.52,"And now, I will give you the last number."
+355.65,5.29,"Can you use this new information to find all
+the combinations that add up to the target"
+360.94,2.93,sum using all the numbers?
+363.87,2.65,"You can pause the video and take a moment
+to think."
+366.52,1.64,You can start from the left.
+368.16,3.009,"Until you reach the target sum equal to the
+last number, do nothing."
+371.169,4.631,"For the target sum equal to the last number,
+you can simply add the last number by itself"
+375.8,1.56,as a new combination.
+377.36,4.55,"For the target sum equal to last number +
+1, you can just add the last number to all"
+381.91,4.16,"the combinations that add up to 1 and all
+those combinations would now add up to the"
+386.07,1.36,last number + 1.
+387.43,4.82,"Add the last number to all the combinations
+with target sum equal to 2 and all those combinations"
+392.25,2.449,would now add up to the last number + 2.
+394.699,2.87,"And you can keep doing this until you reach
+the target sum."
+397.569,1.07,And voila!
+398.639,1.361,You have found your answer.
+400.0,5.389,"If you look at the code, you keep track for
+all sums from 1 to target with this array."
+405.389,4.211,"For target sum equal to 0, add a combination
+which is an empty list."
+409.6,3.87,"Now start with the first number and keep adding
+more numbers with this for loop."
+413.47,4.44,"And for a particular target sum, just add
+more combinations by using all the combinations"
+417.91,1.969,for target sum - current number.
+419.879,2.391,I will leave a link to this code in the description.
+422.27,3.549,"At the very top, we have Breadth First Search
+and Depth First Search."
+425.819,4.141,"I have kept them together because both of
+them are used for graph traversal and are"
+429.96,1.0,very similar.
+430.96,2.69,Let's start with Depth First Search or DFS.
+433.65,5.38,"In DFS, you start from a vertex and explore
+as far as possible along each branch."
+439.03,4.66,"If you reach a point where there is no unvisited
+neighboring vertex to explore, you backtrack"
+443.69,2.92,and try to find another branch that is unvisited.
+446.61,5.36,"In BFS, you explore the neighboring vertices
+first before moving onto the other deeper"
+451.97,1.349,univisited vertices.
+453.319,4.771,"DFS is implemented using a Stack whereas BFS
+is implemented using a queue."
+458.09,3.919,"That’s because in DFS, you want to explore
+the neighbors of the last vertex that you"
+462.009,1.0,visited first.
+463.009,3.72,"So, you want Last in First Out which is what
+Stack does."
+466.729,4.641,"In BFS however, you want to explore the neighbors
+of the first vertex you visited first."
+471.37,3.19,"So, you want First in First out which is what
+Queues are for."
+474.56,4.03,"I will link a couple videos in the description
+that explain this in much more detail."
+478.59,5.21,"BFS is used to find the shortest path from
+Vertex A to Vertex B. Another famous algorithm"
+483.8,2.64,that does the same is Dijkstra’s algorithm.
+486.44,5.12,"An algorithm that is closely related to DFS
+and is a must for coding interviews is Topological"
+491.56,1.0,sort.
+492.56,3.46,"I recommend you to read Dijkstra’s algorithm
+and Topological sort on your own."
+496.02,3.97,"To master all the algorithms we discussed
+today, you need to have a deep understanding"
+499.99,1.41,of Data Structures.
+501.4,4.01,"And you can not crack coding interviews just
+with these 5 algorithms obviously."
+505.41,4.249,"If you want to know how I mastered Data Structures
+and Algorithms, watch this video."
+509.659,2.22,"My name is Sahil and I will see you in the
+next one."

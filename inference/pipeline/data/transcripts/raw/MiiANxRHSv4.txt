@@ -1,0 +1,526 @@
+second,duration,transcript
+2.44,6.71,[Music]
+10.24,4.399,let's now start this lesson by defining
+12.48,4.24,what data visualization is
+14.639,4.001,data visualization is the technique to
+16.72,3.36,present the data in a pictorial or
+18.64,3.28,graphical format
+20.08,4.56,it enables stakeholders and decision
+21.92,5.119,makers to analyze data visually
+24.64,4.479,the data in graphical format allows them
+27.039,4.961,to identify new trends and patterns
+29.119,4.96,easily well you might think why data
+32.0,4.48,visualization is important
+34.079,4.16,let's explain with an example
+36.48,4.32,you are a sales manager in a leading
+38.239,4.721,global organization the organization
+40.8,5.2,plans to study the sales details of each
+42.96,4.88,product across all regions and countries
+46.0,3.76,this is to identify the product which
+47.84,4.48,has the highest sales in a particular
+49.76,4.08,region and up the production
+52.32,3.04,this research will enable the
+53.84,3.44,organization to increase the
+55.36,3.519,manufacturing of that product in the
+57.28,3.599,particular region
+58.879,4.32,the data involved for this research
+60.879,4.721,might be huge and complex
+63.199,4.481,the research on this large numeric data
+65.6,4.559,is difficult and time consuming when it
+67.68,4.56,is performed manually
+70.159,4.721,when this numeric data is plotted on a
+72.24,4.8,graph or converted to charts it's easy
+74.88,4.08,to identify the patterns and predict the
+77.04,4.32,result accurately
+78.96,3.76,the main benefits of data visualization
+81.36,3.6,are as follows
+82.72,5.2,it simplifies the complex quantitative
+84.96,4.72,information it helps analyze and explore
+87.92,3.839,big data easily
+89.68,4.16,it identifies the areas that need
+91.759,4.081,attention or improvement
+93.84,4.239,it identifies the relationship between
+95.84,4.48,data points and variables
+98.079,5.121,it explores new patterns and reveals
+100.32,5.119,hidden patterns in the data
+103.2,5.12,there are three major considerations for
+105.439,5.36,data visualization they are clarity
+108.32,4.96,accuracy and efficiency
+110.799,4.64,first ensure the data set is complete
+113.28,4.479,and relevant this enables the data
+115.439,4.881,scientist to use the new pattern's yield
+117.759,4.801,from the data in the relevant places
+120.32,4.32,second ensure using appropriate
+122.56,3.519,graphical representation to convey the
+124.64,3.839,right message
+126.079,4.481,third use efficient visualization
+128.479,3.521,technique which highlights all the data
+130.56,3.36,points
+132.0,3.68,there are some basic factors that one
+133.92,3.679,would need to be aware of before
+135.68,3.279,visualizing the data
+137.599,3.201,visual effect
+138.959,3.841,coordination system
+140.8,4.56,data types and scale
+142.8,4.799,informative interpretation
+145.36,4.879,visual effect includes the usage of
+147.599,4.961,appropriate shapes colors and size to
+150.239,4.401,represent the analyzed data
+152.56,3.92,the coordinate system helps to organize
+154.64,3.28,the data points within the provided
+156.48,3.839,coordinates
+157.92,5.84,the data types and scale choose the type
+160.319,5.521,of data such as numeric or categorical
+163.76,3.92,the informative interpretation helps
+165.84,4.399,create visuals in an effective and
+167.68,5.76,easily interpretable manner using labels
+170.239,4.961,title legends and pointers
+173.44,3.76,so far you have learned what data
+175.2,4.48,visualization is and how it helps
+177.2,3.44,interpret results with large and complex
+179.68,2.88,data
+180.64,3.92,with the help of the python programming
+182.56,3.52,language you can perform this data
+184.56,3.44,visualization
+186.08,3.76,you'll learn more about how to visualize
+188.0,5.599,data using the python programming
+189.84,3.759,language in the subsequent screens
+195.36,4.56,many new python data visualization
+197.599,5.841,libraries are introduced recently
+199.92,4.56,such as matplot library vispy boca
+203.44,4.32,seaborne
+204.48,5.839,pigel folium and networks
+207.76,5.039,the matplot library has emerged as the
+210.319,4.321,main data visualization library
+212.799,4.961,let's now learn about this matplot
+214.64,3.12,library in detail
+219.04,3.919,matplot library is a python
+220.959,3.92,two-dimensional plotting library for
+222.959,4.721,data visualization and creating
+224.879,5.44,interactive graphics or plots
+227.68,5.279,using python's matplot library the data
+230.319,4.401,visualization of large and complex data
+232.959,3.761,becomes easy
+234.72,4.879,there are several advantages of using
+236.72,4.879,matplot library to visualize data
+239.599,4.481,they are as follows
+241.599,5.041,it's a multi-platform data visualization
+244.08,3.68,tool built on the numpy and scipy
+246.64,4.08,framework
+247.76,5.119,therefore it's fast and efficient
+250.72,4.4,it possesses the ability to work well
+252.879,4.001,with many operating systems and graphic
+255.12,3.92,back-ends
+256.88,4.639,it possesses high quality graphics and
+259.04,5.68,plots to print and view for a range of
+261.519,6.721,graphs such as histograms bar charts pie
+264.72,5.759,charts scatter plots and heat maps
+268.24,4.239,with jupiter notebook integration the
+270.479,4.401,developers have been free to spend their
+272.479,4.0,time implementing features rather than
+274.88,3.759,struggling with cross-platform
+276.479,4.401,compatibility
+278.639,3.761,it has large community support and
+280.88,3.759,cross-platform support
+282.4,4.48,as it is an open source tool
+284.639,5.041,it has full control over graph or plot
+286.88,5.759,styles such as line properties fonts and
+289.68,2.959,axis properties
+294.8,5.28,let's now try to understand a plot
+297.759,4.561,a plot is a graphical representation of
+300.08,4.32,data which shows relationship between
+302.32,3.28,two variables or the distribution of
+304.4,3.92,data
+305.6,4.879,look at the example shown on the screen
+308.32,4.4,this is a two-dimensional line plot of
+310.479,4.72,the random numbers on the y-axis and the
+312.72,4.4,range on the x-axis
+315.199,2.961,the background of the plot is called
+317.12,3.84,grid
+318.16,5.68,the text first plot denotes the title of
+320.96,5.28,the plot and text line one denotes the
+323.84,2.4,legend
+328.16,3.68,you can create a plot using four simple
+330.639,3.28,steps
+331.84,5.44,import the required libraries
+333.919,5.361,define or import the required data set
+337.28,5.52,set the plot parameters
+339.28,3.52,display the created plot
+344.32,3.599,let's consider the same example plot
+346.56,3.359,used earlier
+347.919,3.521,follow the steps below to obtain this
+349.919,3.601,plot
+351.44,3.28,the first step is to import the required
+353.52,4.399,libraries
+354.72,5.84,here we have imported numpy and pi plot
+357.919,4.881,and style from matplot library
+360.56,4.72,numpy is used to generate the random
+362.8,4.72,numbers and the pi plot which is built
+365.28,4.639,in python library is used to plot
+367.52,4.48,numbers and style classes used for
+369.919,4.481,setting the grid style
+372.0,6.0,matplot library inline is required to
+374.4,5.84,display the plot within jupiter notebook
+378.0,4.16,the second step is to define or import
+380.24,4.32,the required data set
+382.16,5.599,here we have defined the data set random
+384.56,5.6,number using numpy random method
+387.759,4.081,note that the range is 10.
+390.16,4.159,we have used the print method to view
+391.84,4.96,the created random numbers the third
+394.319,4.561,step is to set the plot parameters
+396.8,2.959,in this step we set the style of the
+398.88,3.039,plot
+399.759,5.201,labels of the coordinates title of the
+401.919,6.081,plot the legend and the line width
+404.96,4.72,in this example we have used ggplot as
+408.0,3.84,the plot style
+409.68,4.4,the plot method is used to plot the
+411.84,4.799,graph against the random numbers
+414.08,4.959,in the plot method the word g denotes
+416.639,4.881,the plot line color as green
+419.039,4.401,label denotes the legend label and it's
+421.52,4.799,named as line one
+423.44,5.68,also the line width is set to two note
+426.319,5.681,that we have labeled the x-axis as range
+429.12,5.519,and the y-axis as labels and set the
+432.0,4.56,title as first plot
+434.639,3.041,the last step is to display the created
+436.56,3.52,plot
+437.68,4.799,use the legend method to plot the graph
+440.08,6.72,based on the set conditions and the show
+442.479,4.321,method to display the created plot
+448.72,3.599,let's now learn how to create a
+450.56,3.84,two-dimensional plot
+452.319,4.481,consider the following example
+454.4,4.32,a nutri worldwide firm wants to know how
+456.8,3.679,many people visit its website at a
+458.72,3.759,particular time
+460.479,4.401,this analysis helps it control and
+462.479,4.881,monitor the website traffic
+464.88,4.879,this example involves two variables
+467.36,4.72,namely users and time
+469.759,4.081,therefore this is a two dimensional or
+472.08,3.76,2d plot
+473.84,3.919,take a look at the program that creates
+475.84,4.16,a 2d plot
+477.759,5.12,object web customers is a list on the
+480.0,4.0,number of users and time hours indicates
+482.879,3.121,the time
+484.0,5.84,from this we understand that there are
+486.0,7.199,123 customers on the website at 7 am
+489.84,4.96,645 customers on the website at 8 am and
+493.199,4.0,so on
+494.8,4.48,the gg plot is used to set the grid
+497.199,5.28,style and the plot method is used to
+499.28,5.84,plot the website customers against time
+502.479,4.641,don't forget to map plot library in line
+505.12,4.079,to display or view the plot on the
+507.12,4.639,jupiter notebook
+509.199,5.2,the website traffic curve is plotted and
+511.759,4.561,the graph is shown on the screen
+514.399,4.241,it's also possible to change the line
+516.32,4.959,style of the plot to change the line
+518.64,5.92,style of the plot use define the line
+521.279,5.601,style as dashed in the plot method
+524.56,3.6,observe the output graph changes to a
+526.88,3.44,dashed line
+528.16,3.119,also note that the color is defined as
+530.32,3.68,blue
+531.279,4.881,using matplot library it's also possible
+534.0,3.6,to set the desired axis to interpret the
+536.16,4.32,required result
+537.6,5.28,use the axis method to set the axis
+540.48,6.359,in this example shown on the screen the
+542.88,7.2,x-axis is set to range from 6.5 to
+546.839,5.401,17.5 and the y-axis is set to range from
+550.08,3.92,50 to 2000
+552.24,4.08,let's now understand how to set the
+554.0,4.08,transparency level of the line and to
+556.32,3.68,annotate a plot
+558.08,4.72,alpha is an attribute which controls the
+560.0,5.44,transparency of the line lower the alpha
+562.8,7.039,value more transparent the line
+565.44,6.56,here the alpha value is defined as 0.4
+569.839,3.361,the annotate method is used to annotate
+572.0,3.36,the graph
+573.2,3.6,the syntax for annotate method is shown
+575.36,3.599,on the screen
+576.8,4.719,the keyword max is the attribute that
+578.959,5.681,denotes the annotation text
+581.519,6.161,h a indicates the horizontal alignment
+584.64,6.48,va indicates the vertical alignment
+587.68,6.4,xy text indicates the text position and
+591.12,5.12,x y indicates the arrow position
+594.08,3.92,the keyword arrow props indicates the
+596.24,4.08,properties of the arrow
+598.0,4.72,in this example the arrow property is
+600.32,5.04,defined as the green color
+602.72,4.64,the output graph is shown on the screen
+605.36,5.76,so far you've learned how to set line
+607.36,7.039,width title x-axis and y-axis label
+611.12,6.159,title of the plot legend line color and
+614.399,5.201,annotate the graph for a single plot
+617.279,4.881,the plot we created for website traffic
+619.6,3.52,in the previous screens is for only one
+622.16,2.96,day
+623.12,4.64,let's now learn how to create multiple
+625.12,3.68,plots say for three days using the same
+627.76,3.519,example
+628.8,4.56,the data set number of user for monday
+631.279,4.881,tuesday and wednesday is defined with
+633.36,4.8,respect to its time distribution
+636.16,4.56,use different color and line width for
+638.16,4.799,each day to distinguish the plot
+640.72,5.119,in this example we have used red for
+642.959,5.521,monday green for tuesday in blue for
+645.839,5.521,wednesday the output graph is shown on
+648.48,5.359,the screen a subplot is used to display
+651.36,4.56,multiple plots in the same window
+653.839,3.521,with a subplot you can arrange plots in
+655.92,3.44,a regular grid
+657.36,4.88,all you need to do is specify the number
+659.36,5.039,of rows columns and plot
+662.24,3.2,the syntax for subplot is shown on the
+664.399,3.44,screen
+665.44,5.04,it divides the current window into an m
+667.839,5.601,by n grid and creates an axis for a
+670.48,4.08,subplot in the position specified by p
+673.44,5.04,for example
+674.56,6.48,subplot 2 1 2 creates two subplots which
+678.48,4.799,are stacked vertically on a grid
+681.04,4.72,if you want to plot four graphs in one
+683.279,5.12,window then the syntax used should be
+685.76,4.8,subplot 2 1 4
+688.399,4.241,layout and spacing adjustment are two
+690.56,4.0,important factors to be considered while
+692.64,5.52,creating subplots
+694.56,6.56,use plt subplots adjust method with the
+698.16,5.2,parameters h space and w space to adjust
+701.12,5.6,the distances between the subplot and
+703.36,3.36,move them around on the grid
+707.92,5.12,in this demo you can see how to create
+710.56,4.64,two subplots that will display side by
+713.04,4.56,side in a single frame
+715.2,4.639,two subplots stacked one on top of the
+717.6,3.04,other or vertically split in a single
+719.839,1.68,frame
+720.64,3.12,and
+721.519,4.56,four subplots displayed in a single
+723.76,2.319,frame
+727.12,5.12,first import matplotlib plot and style
+738.8,6.839,type percentage matplotlib inline to
+741.44,4.199,view the plot in jupiter notebook
+746.88,4.48,define the parameters such as
+748.56,6.32,temperature wind humidity precipitation
+751.36,3.52,data and time data
+755.2,4.639,you can see the data being typed here
+764.16,4.96,next to create two subplots to be
+766.48,6.799,displayed side by side in a given frame
+769.12,7.36,for one two one and one two two
+773.279,6.081,specify the figure size subplot space
+776.48,5.84,title the color for time and temperature
+779.36,6.2,data which is blue here and line style
+782.32,3.24,and width
+817.839,8.361,similarly specify the color for wind
+820.56,5.64,which is red its line style and width
+839.44,4.8,you can see the temperature and wind
+841.44,5.199,subplot charts displayed side by side in
+844.24,7.52,a given frame here
+846.639,8.76,to create subplots 4 2 1 1 and 2 1 2
+851.76,3.639,specify the parameters
+868.959,4.32,this will create two subplots stacked
+871.199,4.721,one on top of the other or vertically
+873.279,5.12,split in a given frame
+875.92,5.919,let's use humidity and precipitation
+878.399,3.44,data to plot the graphs
+883.12,7.8,specify the title color line style and
+886.48,4.44,line width for both the graphs
+917.36,4.56,you can see the two subplots stacked one
+919.92,4.56,on top of the other with two different
+921.92,5.68,colors indicating precipitation
+924.48,5.52,and humidity here the two graphs are
+927.6,2.4,separate
+934.72,4.64,finally let's draw four subplots four
+937.44,4.0,two two one
+939.36,6.64,2 2 2
+941.44,7.959,2 2 3 and 2 2 4 that will display in a
+946.0,3.399,given frame
+958.88,6.16,specify the title subplot data color
+962.399,5.641,line style and line width for all four
+965.04,3.0,subplots
+1034.0,4.64,you can see the four subplots displayed
+1036.319,4.801,in a single frame
+1038.64,4.88,in this demo you learned how to create
+1041.12,4.719,subplots displayed side by side
+1043.52,4.88,vertically split subplots and four
+1045.839,4.96,subplots displayed in a single frame
+1048.4,4.56,using matplotlib
+1050.799,4.321,you can create different types of plots
+1052.96,5.599,using matplot library
+1055.12,4.32,histogram scatter plot heat map pie
+1058.559,2.401,chart
+1059.44,3.119,error bar
+1060.96,4.0,histograms
+1062.559,5.281,histograms are graphical representations
+1064.96,5.52,of a probability distribution in fact a
+1067.84,5.04,histogram is a kind of bar chart
+1070.48,5.76,using matplot library and its bar chart
+1072.88,6.08,function you can create histogram charts
+1076.24,4.88,a histogram chart has several advantages
+1078.96,4.16,some of them are as follows
+1081.12,3.84,it displays the number of values within
+1083.12,4.16,a specified interval
+1084.96,5.44,it's suitable for large data sets as
+1087.28,4.88,they can be grouped within the intervals
+1090.4,3.6,scatter plots
+1092.16,3.44,a scatter plot is used to graphically
+1094.0,2.96,display the relationship between
+1095.6,3.6,variables
+1096.96,4.8,a basic plot can be created using the
+1099.2,4.96,plot method however if you need more
+1101.76,4.56,control of a plot it's recommended that
+1104.16,4.48,you use the scatter method provided by
+1106.32,3.68,matplot library it has several
+1108.64,2.96,advantages
+1110.0,2.799,it shows the correlation between
+1111.6,3.52,variables
+1112.799,4.481,it's suitable for large data sets
+1115.12,4.24,it's easy to find clusters
+1117.28,5.759,it's possible to represent each piece of
+1119.36,5.84,data as a point on the plot in this demo
+1123.039,6.241,you'll learn how to generate a histogram
+1125.2,4.08,and scanner plot using matplotlib
+1129.6,4.64,let's import a data set called boston
+1131.84,4.32,dataset which we will use to create the
+1134.24,5.28,histogram and scanner plot from the
+1136.16,3.36,scikit-learn library
+1143.36,5.16,let's import matplotlib pi plot
+1155.76,7.24,type percentage matplotlib inline to
+1158.72,4.28,view the plot in jupiter notebook
+1165.12,4.64,let's use the data in boston real estate
+1167.52,3.6,data set to create the histogram and
+1169.76,5.0,scatter plot
+1171.12,3.64,load this data
+1180.799,4.721,you can view this data by using the
+1182.88,2.64,print command
+1191.039,6.721,now define the x-axis for the data which
+1193.919,3.841,is boston real estate data
+1200.32,5.28,likewise define the y-axis for the data
+1203.28,5.68,which is boston real estate data with
+1205.6,3.36,the target extension
+1212.48,5.84,specify the plot style figure style
+1215.44,4.4,number of bins and labels of the x-axis
+1218.32,3.44,and y-axis
+1219.84,6.28,use the show method to display the
+1221.76,4.36,histogram created by you
+1261.2,4.959,specify the style size data sets and
+1264.159,3.201,labels of the scatter plot that you want
+1266.159,2.961,to create
+1267.36,6.12,use the show method to display the
+1269.12,4.36,scatter plot created by you
+1308.0,3.84,heat maps
+1309.6,3.92,a heat map is a better way to visualize
+1311.84,4.319,two-dimensional data
+1313.52,4.88,using heat maps you can gain deeper and
+1316.159,5.121,quicker insight into data than those
+1318.4,5.2,afforded by other types of plots
+1321.28,4.639,it has several advantages
+1323.6,3.6,it draws attention to the risky prone
+1325.919,3.601,area
+1327.2,5.359,it uses the entire data set to draw
+1329.52,5.36,bigger and more meaningful insights
+1332.559,5.921,it's used for cluster analysis and can
+1334.88,3.6,deal with large data sets
+1344.72,4.24,in this demonstration you'll learn how
+1346.64,5.44,to generate a heat map for a data set
+1348.96,3.12,using matplotlib
+1352.96,3.68,let's import the required libraries
+1355.12,5.64,matplotlib
+1356.64,4.12,pipot and seaborn
+1366.799,7.321,type percentage matplotlib inline to
+1369.84,4.28,view the plot in jupiter notebook
+1375.36,6.48,let's load the flights data set from the
+1377.44,4.4,built-in data sets of seaborne library
+1386.64,5.279,use head to view the top five records of
+1389.28,2.639,the data set
+1394.0,3.6,we have to arrange the columns to
+1395.84,3.76,generate the heat map
+1397.6,7.199,let's use the pivot method to arrange
+1399.6,5.199,the columns month year and passengers
+1412.96,5.52,let's view the flight data set that's
+1414.72,3.76,now ready to generate the heat map
+1421.2,5.839,let's use the heat map method and pass
+1423.44,3.599,slight data as an argument
+1429.52,4.08,this will generate the heat map which
+1431.6,4.4,you can see here
+1433.6,4.88,in this demo you learned how to create
+1436.0,3.919,and display a heat map
+1438.48,3.28,pie charts
+1439.919,4.561,pie charts are typically used to show
+1441.76,4.799,percentage or proportional data note
+1444.48,4.319,that usually the percentage represented
+1446.559,4.801,by each category is provided next to the
+1448.799,5.12,corresponding slice of the pie
+1451.36,4.48,matplot library provides the pie method
+1453.919,4.88,to make pie charts
+1455.84,6.079,it has several advantages it summarizes
+1458.799,5.281,a large data set in visual form
+1461.919,4.721,it displays the relative proportions of
+1464.08,4.479,multiple classes of data
+1466.64,6.159,the size of the circle is made
+1468.559,6.561,proportional to the total quantity
+1472.799,6.561,in this demonstration you'll learn how
+1475.12,4.24,to create a pie chart and display it
+1480.24,5.319,first import matplotlib pie plot
+1487.36,6.559,type percentage matplotlib inline to
+1490.24,3.679,view the plot in jupiter notebook
+1494.72,7.12,type the job data within parentheses
+1497.039,4.801,using single quotes separated by commas
+1507.36,3.679,specify the labels as i t
+1510.0,3.039,finance
+1511.039,6.041,marketing admin
+1513.039,4.041,hr and operations
+1528.88,5.24,specify the slice i t to explode
+1542.159,4.4,use the show method to display the pie
+1544.24,2.319,chart
+1548.64,6.48,you can see the pie chart with the
+1550.559,6.0,slices labels and i t the largest slice
+1555.12,3.039,error bars
+1556.559,3.281,an error bar is used to show the
+1558.159,3.52,graphical representation of the
+1559.84,4.56,variability of data
+1561.679,4.641,it's used mainly to point out errors
+1564.4,4.08,it builds confidence about the data
+1566.32,4.08,analysis by unleashing the statistical
+1568.48,3.12,differences between the two groups of
+1570.4,3.279,data
+1571.6,4.48,it has several advantages
+1573.679,4.401,it shows the variability in data and
+1576.08,4.16,indicates the errors
+1578.08,3.599,it depicts the precision in the data
+1580.24,3.439,analysis
+1581.679,5.041,it demonstrates how well a function and
+1583.679,5.761,model are used in the data analysis
+1586.72,4.8,it defines the underlying data
+1589.44,4.88,seaborn is a python visualization
+1591.52,4.96,library based on matplot library
+1594.32,4.959,it provides a high level interface for
+1596.48,4.88,drawing attractive statistical graphics
+1599.279,4.161,it was originally developed at stanford
+1601.36,4.319,university and is widely used for
+1603.44,4.239,plotting and visualizing data
+1605.679,4.161,there are several advantages
+1607.679,3.6,it possesses built-in themes for better
+1609.84,3.6,visualizations
+1611.279,4.321,it has tools built-in statistical
+1613.44,4.4,functions which reveal hidden patterns
+1615.6,4.88,in the data set it has functions to
+1617.84,4.8,visualize matrices of data which become
+1620.48,5.48,very important when visualizing large
+1622.64,3.32,data sets
+1628.32,4.08,hey want to become an expert in big data
+1630.88,3.44,then subscribe to the simply learn
+1632.4,4.159,channel and click here to watch more
+1634.32,6.52,such videos to nerd up and get certified
+1636.559,4.281,in big data click here

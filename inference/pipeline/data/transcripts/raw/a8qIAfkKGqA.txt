@@ -1,0 +1,668 @@
+second,duration,transcript
+0.53,3.909,[Music]
+1.439,3.0,foreign
+6.18,6.24,hi there welcome to Computing with Andy
+8.88,6.36,and we continue to look at human
+12.42,5.42,computer interface design and in this
+15.24,5.34,session we want to see how
+17.84,5.199,human computer interface design can be
+20.58,3.6,incorporated in the software development
+23.039,4.4,process
+24.18,3.259,so let's see what we have
+32.52,6.32,all right now
+34.38,7.62,it is important to know that uh
+38.84,5.14,HCI gets incorporated into software
+42.0,8.28,development through the following
+43.98,8.7,activities or approaches number one uh
+50.28,6.24,through software engineering
+52.68,6.8,and two through usability engineering
+56.52,5.28,iterative design practices and finally
+59.48,5.98,using uh
+61.8,7.139,what we'll call the design rationale
+65.46,5.64,now in this uh lecture
+68.939,3.841,I am starting with the first item on the
+71.1,4.68,list and that is
+72.78,6.18,software engineering and we're going to
+75.78,5.699,talk a great deal about this in so much
+78.96,4.74,that even this presentation will have
+81.479,5.221,two sub parts
+83.7,4.98,okay and let's see
+86.7,4.26,what we want to talk about
+88.68,5.22,now the first thing is
+90.96,6.18,we we need to have a good understanding
+93.9,5.399,of what software engineering is
+97.14,4.26,do you know that
+99.299,4.86,very few people know the difference
+101.4,5.34,between software engineering and
+104.159,4.621,software development
+106.74,5.159,um the term software engineering
+108.78,6.24,especially in Zambia I don't know about
+111.899,5.101,other places I've noticed uh
+115.02,4.919,software developers calling themselves
+117.0,6.84,software Engineers okay so it's a term
+119.939,4.981,that is Loosely used but the two things
+123.84,3.72,are
+124.92,5.58,very different
+127.56,5.039,a software engineer is different from a
+130.5,4.26,software developer and it is important
+132.599,3.78,to know that difference and I want us to
+134.76,5.04,start on that note
+136.379,6.321,okay because here we are looking at how
+139.8,6.26,are using software engineering
+142.7,7.0,human computer interface design
+146.06,5.98,uh gets uh facilitated
+149.7,4.74,so before we can know the difference
+152.04,5.04,between software engineering and
+154.44,6.24,software development it will help to
+157.08,5.34,look at the historical background uh to
+160.68,5.22,software engineering
+162.42,7.56,and a good starting point is what was
+165.9,6.419,happening in the 1960s through the 1980s
+169.98,4.46,during this period
+172.319,2.121,um
+174.72,5.94,there was a software crisis okay and
+177.9,5.16,what we mean by that is
+180.66,5.359,there were a lot of projects which were
+183.06,7.38,being done software development projects
+186.019,7.781,but which were characterized by failure
+190.44,7.079,okay and the following were things that
+193.8,6.9,happened that led to this period of time
+197.519,4.681,being labeled as a period of software
+200.7,4.74,crisis
+202.2,5.16,now this period was characterized by
+205.44,3.98,failed projects like I earlier mentioned
+207.36,4.799,many software projects failed
+209.42,5.819,and I need to say that some projects
+212.159,5.58,actually caused property damage
+215.239,3.181,and you know
+217.739,3.241,um
+218.42,5.679,where because of certain carelessness
+220.98,4.64,and Satan
+224.099,3.601,um
+225.62,3.759,vulnerabilities which were in the
+227.7,2.459,programs which were designed it was very
+229.379,4.381,easy
+230.159,6.36,uh for someone for example to uh to get
+233.76,5.64,an authorized access a lot of bags and
+236.519,6.061,all such things but it didn't just end
+239.4,5.94,there a few projects actually caused
+242.58,4.739,problems like even the loss of life like
+245.34,4.86,in the 1980s
+247.319,5.28,um the thorac 25
+250.2,3.98,was a computer-controlled radiation
+252.599,4.561,therapy machine
+254.18,5.2,which sometimes gave its patients
+257.16,4.079,radiation doses that were hundreds of
+259.38,3.72,times greater than normal
+261.239,6.661,and of course that resulted in injuring
+263.1,8.7,patients okay so uh it was 40 software
+267.9,7.739,running this system the thorac 25 okay
+271.8,4.74,and that is how terrible it was and
+275.639,3.12,um
+276.54,6.659,there were also many projects which
+278.759,6.841,experienced budget ovarence okay and a
+283.199,5.461,classic example of this was the OS 360
+285.6,6.0,this was a batch operating system which
+288.66,4.979,was developed by IBM for
+291.6,5.76,uh for their new computer system the men
+293.639,6.181,from 360 okay and this project was
+297.36,4.5,managed by Fred Brooks the gentleman who
+299.82,5.819,are seeing in the picture here uh he
+301.86,4.44,actually just died last year and
+305.639,4.681,um
+306.3,5.64,he was a great man uh did a lot of
+310.32,4.98,uh works
+311.94,6.24,and well what is interesting about this
+315.3,5.94,project he did it was a pre project I
+318.18,5.76,believe it lasted for over a decade and
+321.24,7.08,it was so large scale very big and huge
+323.94,5.22,it had about 1 000 programmers not lines
+328.32,4.2,of code
+329.16,6.9,programmers all right and in his book
+332.52,6.66,titled the mythical uh man month
+336.06,5.28,essay on software engineering uh Brooke
+339.18,4.5,Brooks remembered that you know he made
+341.34,4.199,a multi-million dollar mistake
+343.68,5.64,and what was the problem he pointed out
+345.539,6.421,that uh he should have first
+349.32,5.52,uh designed or developed a coherent
+351.96,4.32,architecture okay where you look at a
+354.84,4.02,whole system the overview of everything
+356.28,5.04,health is component fits uh with the
+358.86,4.32,other component he felt that should have
+361.32,3.92,been done first before starting the
+363.18,4.62,development project okay
+365.24,5.32,and well
+367.8,5.88,so many problems were going on and the
+370.56,7.079,good thing is uh
+373.68,5.76,there was an effort to point out what is
+377.639,3.361,causing these problems what is causing a
+379.44,3.9,lot of these software failures and we're
+381.0,5.039,spending a lot of money and so many
+383.34,4.02,budget failures and all that you know
+386.039,3.481,and
+387.36,3.899,there were a couple of many other things
+389.52,5.1,which characterized the software crisis
+391.259,6.06,era one of them is unreliable software
+394.62,5.94,okay you invest so much into developing
+397.319,6.541,software but which ultimately fails and
+400.56,5.88,uh the the software which managed to get
+403.86,6.0,implemented had very expensive very high
+406.44,5.58,maintenance costs all right and it is
+409.86,3.959,said that the cost of owning and
+412.02,4.26,maintaining software in the 1980s was
+413.819,4.38,twice as expensive as developing the
+416.28,6.06,software can you imagine that
+418.199,5.761,and you know there was also a problem of
+422.34,4.38,um
+423.96,5.579,when for example you've implemented the
+426.72,5.22,software and maybe in the course of
+429.539,4.261,designing or coding it
+431.94,3.539,when customers give you new requirements
+433.8,4.86,at all we also need these features and
+435.479,5.401,that feature to be added and included uh
+438.66,4.56,there was a challenge to meet the
+440.88,3.84,growing requirements or new requirements
+443.22,3.18,which were coming from the users how do
+444.72,3.66,you incorporate them when you've already
+446.4,4.019,started doing certain works okay and
+448.38,4.379,you've gone through stages in the
+450.419,4.441,software development life cycle
+452.759,4.081,and there were also uh scalability
+454.86,4.98,problems okay
+456.84,6.06,um as software projects increased uh
+459.84,6.66,whenever maybe because uh Hardware has a
+462.9,7.859,new capability or new speed and maybe uh
+466.5,6.06,there's a need to uh to add new
+470.759,3.78,components to the software or maybe to
+472.56,3.359,make this software cutter for a large
+474.539,4.621,number of users
+475.919,6.361,there were problems of you know trying
+479.16,5.159,to update these systems okay to
+482.28,3.539,accommodate new requirements to
+484.319,3.32,accommodate
+485.819,4.5,um you know
+487.639,4.601,the Dynamics which were characterizing
+490.319,5.701,the business environment
+492.24,7.44,okay and uh there was also a problem of
+496.02,5.76,uh you know as demand was increasing for
+499.68,4.62,new software you know the demand
+501.78,5.34,exceeded the ability for the developers
+504.3,5.459,to generate new software so demand is
+507.12,4.799,increasing people want software but uh
+509.759,4.741,developers can't keep up with the with
+511.919,7.04,the purse all right
+514.5,8.52,and so that was the crisis all right but
+518.959,7.0,uh every now and then
+523.02,5.4,um companies individuals expats would
+525.959,5.281,come up with what they felt was okay
+528.42,4.74,this is a silver bullet it's going to
+531.24,4.56,to be a good answer to this software
+533.16,4.619,crisis to all these problems so well in
+535.8,4.92,the course of time you had
+537.779,5.461,the solution this proposal and all that
+540.72,5.1,so through the 1970s various approaches
+543.24,5.039,were touted as silver bullets to solve
+545.82,4.86,the crisis and among them
+548.279,4.981,um you know
+550.68,4.32,there were twos automation tools you
+553.26,4.139,know which were getting developed you
+555.0,4.459,know as a way to
+557.399,2.06,um
+559.5,2.459,to develop software you know which will
+561.24,3.06,have
+561.959,5.161,quality and meet certain standards and
+564.3,5.64,reduce on errors and all such things and
+567.12,4.74,uh there was also an approach of
+569.94,4.14,structured programming object-oriented
+571.86,4.56,programming and so on and so forth okay
+574.08,4.14,all these were attempts you know uh you
+576.42,4.979,know to provide a solution to all these
+578.22,6.299,problems which were prevailing and well
+581.399,5.641,some some planets uh blamed the software
+584.519,5.701,crisis on their lack of discipline by
+587.04,5.94,programmers it seems some programmers
+590.22,4.76,were in a rush just to develop Solutions
+592.98,6.12,without following
+594.98,5.799,are properly laid down procedure okay uh
+599.1,3.0,documentation doing thorough
+600.779,5.221,requirements analysis and all such
+602.1,8.22,things okay so there's also an issue of
+606.0,7.44,um uh discipline where some experts felt
+610.32,4.68,there was a lack of discipline okay in
+613.44,5.459,this industry
+615.0,6.42,and also uh with time former methods
+618.899,4.321,were being uh developed because some
+621.42,3.12,believe that if formal engineering
+623.22,2.64,methodologists now you know how
+624.54,2.46,traditional engineering when I say
+625.86,3.18,traditional engineering I mean
+627.0,5.7,engineering as people knew it where
+629.04,6.6,you're looking at machine equipment how
+632.7,5.34,Engineers of these devices would take
+635.64,4.56,great care in how you design this
+638.04,4.08,component and how it needs to work with
+640.2,3.72,another component and you make sure all
+642.12,4.44,the measurements are correct accurate
+643.92,7.02,and all that now that is very typical of
+646.56,7.92,uh engineering all right and well some
+650.94,6.839,felt if we can introduce formal methods
+654.48,4.74,okay formal engineering methodologies if
+657.779,3.541,they could be applied to software
+659.22,5.04,development then production of software
+661.32,5.94,will become as predictable an industry
+664.26,4.86,as other branches of engineering okay so
+667.26,3.78,you know that in engineering you want to
+669.12,5.159,quantify things you want to measure
+671.04,4.979,things precisely and you use all the
+674.279,5.641,mathematical tools and formulas you know
+676.019,8.221,to ensure that accuracy is the
+679.92,5.82,is the m is the goal and so uh former
+684.24,3.9,methods were being introduced you know
+685.74,5.4,to uh
+688.14,4.56,uh to provide a way for software which
+691.14,4.68,is getting developed you know to be
+692.7,6.24,accurately measured assessed you know so
+695.82,4.8,that uh errors could reduce all right
+698.94,2.88,now
+700.62,3.899,um
+701.82,5.579,other issues which came up and where
+704.519,5.76,being advanced was the issue of process
+707.399,4.741,men advocated the use of defined
+710.279,4.321,processes and methodologies like the
+712.14,5.16,capability maturity model
+714.6,4.679,okay and there was also emphasis on
+717.3,4.56,professionalism it was during this time
+719.279,4.62,that uh
+721.86,4.74,uh works also were being laid to the
+723.899,5.281,development of code of ethics licensing
+726.6,5.1,and professionalism okay you have people
+729.18,4.5,like Professor benam you know who really
+731.7,4.56,advocated for you know the importance of
+733.68,6.06,core of Ethics issues of Licensing
+736.26,7.259,issues of you know defining the
+739.74,5.7,software uh you know career as a
+743.519,4.141,profession not just something
+745.44,4.5,any person you can do in their own way
+747.66,3.9,you know but there has to be code of
+749.94,3.6,ethics which needs to be established
+751.56,4.32,code of conduct you know professional
+753.54,4.799,associations to Define you know the
+755.88,5.34,right way to do things in an ethical in
+758.339,6.3,an in a responsible way
+761.22,6.119,and well over time former methods best
+764.639,4.741,practices and standards you know have
+767.339,3.901,been developed and this has uh
+769.38,3.42,culminated into what we call software
+771.24,3.0,engineering
+772.8,6.06,now
+774.24,6.719,let us Define software engineering
+778.86,4.08,now you notice immediately that there
+780.959,4.141,are two words in this term that is
+782.94,4.86,software and that is engineering well
+785.1,5.46,what is software we know that software
+787.8,4.62,is a collection of codes documents and
+790.56,5.04,triggers that does a specific job and
+792.42,4.919,fills a specific requirement simply well
+795.6,5.46,series of instructions that enable a
+797.339,6.06,computer system to function now that is
+801.06,4.2,what we can say about software but then
+803.399,3.74,what is engineering and why are these
+805.26,5.34,two terms being brought together
+807.139,7.901,engineering is uh you know it refers to
+810.6,6.72,the development of products using
+815.04,5.94,best practices
+817.32,5.1,principles and methods the listings
+820.98,4.44,characterize engineering okay
+822.42,4.979,engineering really emphasizes on you
+825.42,3.659,don't just develop a product anyhow
+827.399,3.361,you know there has to be best practices
+829.079,3.841,which have to be defined they have to be
+830.76,4.68,principles you need to adhere to there
+832.92,5.58,are particular formal defined methods
+835.44,5.66,all right now bringing in uh bringing
+838.5,7.92,software and Engineering together means
+841.1,8.4,uh uh software engineering is the
+846.42,4.7,application of a systematic
+849.5,4.74,disciplined
+851.12,7.0,quantifiable approach to the development
+854.24,6.039,operation and maintenance of software
+858.12,6.18,so what we are simply saying is the
+860.279,6.06,application of engineering to Software
+864.3,3.36,okay
+866.339,3.841,um
+867.66,5.66,ultimately that's how we come to Define
+870.18,6.18,software engineering so we want to apply
+873.32,4.54,systematic a systematic approach you
+876.36,4.08,know to the development of software we
+877.86,4.14,want to apply a disciplined approach to
+880.44,4.62,the development of software we want to
+882.0,6.779,apply a quantifiable approach you know
+885.06,8.339,to the development of software okay and
+888.779,6.721,now this leads us to what we wanted to
+893.399,4.981,explain the difference between a
+895.5,4.76,software engineer and a developer a
+898.38,5.34,developer simply designs and codes
+900.26,4.96,specific application software so if it
+903.72,4.14,is a software to perform a particular
+905.22,6.239,task or for a certain one organization
+907.86,7.62,where you develop that system and
+911.459,6.301,it is uh not only focused okay it's
+915.48,4.02,really about developing software but
+917.76,4.86,when you talk about software engineering
+919.5,7.199,it goes beyond that a software engineer
+922.62,5.219,uh typically we work on a large a large
+926.699,4.741,scale
+927.839,6.901,system okay and well of course that
+931.44,6.12,means uh even the design is of a large
+934.74,5.039,scale and it involves developing and
+937.56,3.959,testing Entire Computer Systems and
+939.779,4.021,application software for a company or
+941.519,4.141,organization now this implies that
+943.8,5.039,software development is just a subset of
+945.66,4.979,software engineering because in software
+948.839,4.201,engineering you're going to look at the
+950.639,4.44,overall architecture the over overall
+953.04,3.78,architecture you're going to investigate
+955.079,4.921,the different components which are there
+956.82,6.18,okay how will this module fit in with
+960.0,5.579,this and you look at all that and then
+963.0,4.74,you you you you do what is known as
+965.579,5.521,architectural design then later on you
+967.74,5.76,do detailed design to make sure is all
+971.1,6.539,these different sub systems get
+973.5,7.019,integrated there should be uh
+977.639,5.101,um uh you know a seamless flow of
+980.519,4.5,information there should be proper
+982.74,4.58,integration okay so here you are looking
+985.019,4.921,at large-scale systems
+987.32,4.18,so software engineering like I've just
+989.94,4.5,mentioned involves architectural design
+991.5,4.62,and this requires decomposing a
+994.44,3.66,large-scale system into interacting
+996.12,5.639,components again simulate what happens
+998.1,5.94,in the actual engineering okay a block
+1001.759,4.08,diagram can be used to define an
+1004.04,3.96,overview of the system structure
+1005.839,3.781,features of the components and how these
+1008.0,4.259,components communicate with each other
+1009.62,5.579,to share data now why is there a trouble
+1012.259,5.041,to do a detailed investigation like this
+1015.199,5.461,it is for this simple fact that you are
+1017.3,5.58,looking at a large system with uh
+1020.66,4.38,different components in it but as these
+1022.88,4.86,different components begin to work you
+1025.04,5.34,don't want them to uh to fail to
+1027.74,4.079,communicate or to pass data from one
+1030.38,3.66,components to the other you want them to
+1031.819,5.1,fail to do that so software engineering
+1034.04,5.759,involves a meeting with different units
+1036.919,5.4,and users of system to identify their
+1039.799,3.961,requirements and the letter you know you
+1042.319,3.6,want to analyze all these different
+1043.76,5.52,things and how they can fit into a
+1045.919,5.941,coherent Hall okay and so what is
+1049.28,4.139,important is software engineering is the
+1051.86,3.54,discipline for understanding the
+1053.419,5.401,software design process
+1055.4,5.76,or life cycle okay and designing for
+1058.82,4.44,usability occurs at all stages of the
+1061.16,5.639,life cycle not as a single isolated
+1063.26,5.46,activity so what we mean by this is uh
+1066.799,4.5,when you look at software engineering it
+1068.72,5.22,really focuses on uh you want to
+1071.299,5.701,understand the software design process
+1073.94,6.479,the the whole systems development life
+1077.0,6.24,cycle you are interested in that and
+1080.419,4.861,um you focus on issues of usability not
+1083.24,4.679,just as a particular stage at a certain
+1085.28,5.46,time but from the beginning you want to
+1087.919,6.961,see if this system we are developing
+1090.74,6.0,will satisfy user requirements you are
+1094.88,3.539,not just given a particular task to say
+1096.74,4.86,oh okay we've done the requirements now
+1098.419,4.981,can you start coding this module no you
+1101.6,3.78,look at an overview of everything and
+1103.4,3.84,you make sure as the work is starting
+1105.38,3.14,issues of usability have already been
+1107.24,5.04,taken care into
+1108.52,5.32,taken care of been taken care of okay
+1112.28,5.66,and so
+1113.84,7.44,here is the traditional waterfall model
+1117.94,5.2,listing the main phases of a systems
+1121.28,3.48,development life cycle you of course
+1123.14,4.08,begin with requirement specification
+1124.76,5.24,then architectural design then detailed
+1127.22,5.16,design coding and unit testing
+1130.0,4.9,integration and testing operation and
+1132.38,4.98,maintenance so when you talk about
+1134.9,4.139,software development you are really
+1137.36,4.38,interested
+1139.039,5.341,in these stages here coding and testing
+1141.74,5.22,okay and integration testing and all
+1144.38,3.78,that but when you're looking at software
+1146.96,3.54,engineering
+1148.16,5.22,you're really concerned about this whole
+1150.5,5.76,thing here okay and you're looking at a
+1153.38,6.78,large scale system
+1156.26,5.039,and now if you notice there is what
+1160.16,5.16,we've stated here requirement
+1161.299,6.961,specification and let us talk about that
+1165.32,5.099,okay and what happens
+1168.26,4.56,during this stage
+1170.419,5.701,now in requirement specification the
+1172.82,5.04,designer and customer try to capture a
+1176.12,3.36,description of what the eventual system
+1177.86,3.54,will be expected to provide in other
+1179.48,4.86,words whatever project you are working
+1181.4,5.94,on whatever system you want to develop
+1184.34,4.74,what is it required to do what is it
+1187.34,4.62,required to achieve
+1189.08,4.92,and so uh the important artifact that
+1191.96,3.719,comes out of this is the requirement
+1194.0,3.78,specification document
+1195.679,4.021,now requirement specification involves
+1197.78,4.32,eliciting information from the customer
+1199.7,4.92,about the work environment or domain in
+1202.1,6.06,which the final product will function so
+1204.62,6.299,you really want to interact with the
+1208.16,4.56,prospective users okay you need you you
+1210.919,3.961,want to understand how is their work
+1212.72,4.62,environment because this system you're
+1214.88,5.52,developing remember we're talking about
+1217.34,4.74,human computer interface it is these
+1220.4,3.779,people who will be interacting with this
+1222.08,3.839,system so rather than just locking
+1224.179,3.62,yourself up in some room and trying to
+1225.919,4.14,develop or write some lines of code
+1227.799,4.781,software engineering you want to
+1230.059,5.061,understand what kind of environment will
+1232.58,4.62,this system run in okay you want to
+1235.12,4.96,capture the requirements you want to
+1237.2,4.08,interview these users you want to ensure
+1240.08,2.04,that
+1241.28,4.44,um
+1242.12,6.48,um what this system uh is designed to do
+1245.72,7.38,ultimately it has to answer to what
+1248.6,6.0,people uh need okay and aspects of the
+1253.1,3.12,web domain include not only the
+1254.6,3.78,particular functions that the software
+1256.22,4.38,product must perform but also details
+1258.38,5.039,about the environment in which it must
+1260.6,4.439,operate such as the people uh whom it
+1263.419,3.0,will potentially affect and the new
+1265.039,3.541,products relationship to any other
+1266.419,5.161,products which is which it is updating
+1268.58,7.02,or replacing and remember this whole
+1271.58,5.64,approach is an attempt to do away with
+1275.6,3.959,the crisis which happened in the 19th
+1277.22,5.339,century instance so you want you don't
+1279.559,5.941,just limit the activity to developing
+1282.559,6.12,lines of chords and all that but you
+1285.5,5.94,know you extend it to uh wanting to
+1288.679,5.401,establish a good understanding of what
+1291.44,5.34,kind of environment or this system
+1294.08,5.099,operating okay
+1296.78,3.96,now requirements must be formulated in a
+1299.179,3.541,language suitable for implementation
+1300.74,3.12,okay now requirements are usually
+1302.72,2.88,initially expressed in the native
+1303.86,3.42,language of the customer okay and that
+1305.6,4.8,is how a requirement specification looks
+1307.28,4.32,like it is just written in a natural
+1310.4,2.639,language
+1311.6,4.68,uh
+1313.039,5.88,which we use you know uh it can be
+1316.28,5.04,English and you describe in detail what
+1318.919,4.861,the system is required to do but however
+1321.32,3.9,what will happen is whatever those
+1323.78,5.04,things you are expressing will need to
+1325.22,5.459,end up as software code okay so the
+1328.82,3.479,executable languages for software are
+1330.679,3.421,less natural and they're more closely
+1332.299,3.961,related to a mathematical language in
+1334.1,4.26,which each term in the language has a
+1336.26,4.56,precise interpretation so what that
+1338.36,5.46,means is a data of description which can
+1340.82,5.52,be in English can even be ambiguous but
+1343.82,7.02,uh whatever requirements you generate
+1346.34,6.6,they need to be stated in uh in form of
+1350.84,4.26,precise statements where there is no
+1352.94,3.9,ambiguity because remember it has to end
+1355.1,3.959,up a software called
+1356.84,4.319,so the transformation from the
+1359.059,4.74,expressive but relatively ambiguous
+1361.159,5.701,natural language of requirements to the
+1363.799,5.041,more precise but less expressive
+1366.86,4.439,executable language is one key to
+1368.84,4.02,successful development okay and that is
+1371.299,3.541,true
+1372.86,5.1,um what ultimately should end up a
+1374.84,4.74,successful chord should be
+1377.96,4.339,um
+1379.58,5.24,through a process of
+1382.299,4.801,refining these expressions
+1384.82,5.62,in the requirement specification
+1387.1,4.72,refining them to such an extent that you
+1390.44,3.719,come up with
+1391.82,4.739,non-ambiguous statements okay which can
+1394.159,5.941,be expressed in form of an algorithm
+1396.559,7.281,uh or a pseudocode and ultimately it
+1400.1,7.74,will end up as software called
+1403.84,5.5,now after you know
+1407.84,3.9,producing your requirements
+1409.34,5.219,specification the next
+1411.74,4.559,uh critical activity is architectural
+1414.559,4.321,design
+1416.299,5.281,and this focuses on how the system
+1418.88,5.039,provides the services it is expected to
+1421.58,4.5,provide now when you are doing
+1423.919,3.541,requirements elicitation or when you
+1426.08,4.26,produce the requirement specification
+1427.46,6.18,the requirement specification merely
+1430.34,6.12,States what the system needs to achieve
+1433.64,6.6,what it needs to do but architectural
+1436.46,6.42,design specifies how the system will
+1440.24,4.14,work okay and this is a high level
+1442.88,4.44,description of how the system will
+1444.38,5.34,function so the first activity is a high
+1447.32,5.46,level decomposition of the system into
+1449.72,5.459,components that can either be brought in
+1452.78,5.1,from existing software products or be
+1455.179,6.36,developed from scratch independently so
+1457.88,7.679,remember you first had an overall
+1461.539,4.981,um specification but then now this high
+1465.559,3.781,level
+1466.52,3.779,the specification has to
+1469.34,2.06,um
+1470.299,3.801,uh
+1471.4,4.899,later on you know be
+1474.1,4.54,decomposed but at this point when you're
+1476.299,4.26,looking at architectural Design This is
+1478.64,3.779,a high level decomposition of the system
+1480.559,4.5,into components that can either be
+1482.419,4.081,brought in okay from existing software
+1485.059,5.341,products or be developed from scratch
+1486.5,6.84,independently okay so you are looking at
+1490.4,6.72,what was described in Broad terms but
+1493.34,5.28,now you are looking at
+1497.12,3.24,a high level
+1498.62,3.96,structure where you show the different
+1500.36,3.6,components which are there okay then
+1502.58,4.86,overall thing which needs to be achieved
+1503.96,5.94,is broken down into these components
+1507.44,5.4,which are interconnected okay and
+1509.9,5.88,certain components can
+1512.84,4.98,uh be brought in as already existing
+1515.78,4.2,software products or they may have to be
+1517.82,4.92,developed independently okay but
+1519.98,4.62,architectural design goes on further to
+1522.74,4.02,describe the interdependencies you know
+1524.6,3.9,between these separate components and
+1526.76,3.84,the sharing of resources that varies
+1528.5,3.36,between companies so all this thing has
+1530.6,3.179,to be done during architectural design
+1531.86,3.299,so that later on you don't have problems
+1533.779,3.78,which used to happen during the software
+1535.159,5.101,crisis where after doing a lot of work
+1537.559,6.781,later on as you try to integrate these
+1540.26,5.58,things you know like uh Frederick let us
+1544.34,3.06,say to say we should have started by
+1545.84,3.3,looking at the architectural design of
+1547.4,3.6,the whole thing looking at the
+1549.14,4.44,components which are there and how this
+1551.0,4.679,has to interact with this way before you
+1553.58,4.199,start any coding activity you know you
+1555.679,4.62,avoid a lot of problems by doing that
+1557.779,4.38,okay and of course what follows after
+1560.299,5.341,architectural design is detailed design
+1562.159,5.64,and this refers to the refinement of
+1565.64,3.84,Architectural Components and in the
+1567.799,4.681,relations to identify modules to be
+1569.48,4.98,implemented so you further break down
+1572.48,4.319,whatever was identified during
+1574.46,5.16,architectural design where you refine
+1576.799,4.86,this Architectural Components okay to
+1579.62,4.14,identify which modules have to be
+1581.659,3.421,implemented which modules depend on each
+1583.76,3.06,other and you forecast on those
+1585.08,3.3,particular modules how they need to
+1586.82,3.42,function what input they have to take
+1588.38,3.179,which other components do they need to
+1590.24,4.799,interface with
+1591.559,5.281,okay and the behavioral uh the the
+1595.039,3.541,behavior implied by the higher level
+1596.84,4.38,description must be preserved in the
+1598.58,4.26,more detailed description so you don't
+1601.22,4.26,uh
+1602.84,5.28,you uh you you don't forget what you're
+1605.48,4.799,from doing at architectural design
+1608.12,4.5,uh whatever was described under
+1610.279,5.88,architectural design should be preserved
+1612.62,6.179,there should be consistency okay you
+1616.159,5.161,don't introduce new things on detailed
+1618.799,5.281,design which are not reflected in the
+1621.32,5.339,architectural design so the behavior
+1624.08,4.979,implied by the higher level description
+1626.659,4.321,remember that behavior was only implied
+1629.059,4.561,it wasn't detailed you know it was just
+1630.98,3.92,alluded to but that same thing which was
+1633.62,4.14,implied
+1634.9,6.82,in the high level description during
+1637.76,6.659,architectural design must be preserved
+1641.72,5.339,it must be returned in the more detailed
+1644.419,4.021,description okay and typically there
+1647.059,2.941,will be more than one possible
+1648.44,2.88,refinement of the Architectural
+1650.0,3.72,Components that will satisfy the
+1651.32,4.739,behavioral constraints choosing choosing
+1653.72,4.319,the best refinement is often a matter of
+1656.059,3.48,trying to satisfy as many of the
+1658.039,5.581,non-functional requirements of the
+1659.539,6.361,system as possible okay so for this part
+1663.62,7.439,we shall end here and then we shall
+1665.9,7.019,continue moving on uh to coding testing
+1671.059,4.74,and all that that will be covered in the
+1672.919,5.24,next lecture okay see you in the next
+1675.799,2.36,lecture
+1678.61,6.98,[Music]

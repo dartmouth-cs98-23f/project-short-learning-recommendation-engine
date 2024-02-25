@@ -1,0 +1,299 @@
+second,duration,transcript
+8.24,4.8,hello everyone welcome to simply learn's
+10.559,4.96,youtube channel in this session we will
+13.04,3.76,learn about stacks and cues in data
+15.519,3.441,structures
+16.8,4.16,but before we begin make sure that you
+18.96,4.0,have subscribed to our youtube channel
+20.96,4.159,and don't forget to hit that bell icon
+22.96,4.88,to never miss an update from simply
+25.119,4.4,learn now without further ado let's get
+27.84,4.0,started with the agenda for today's
+29.519,2.321,discussion
+32.559,5.121,so at first we will discuss what exactly
+35.04,5.12,is a stack followed by that we will go
+37.68,4.96,through some of the examples on stack
+40.16,5.28,then we will learn the application of
+42.64,4.96,stacks followed by that we will enter
+45.44,4.0,into what is q
+47.6,4.24,then we will understand some of the
+49.44,4.56,basic examples of queue then we will
+51.84,3.68,understand the types of queue and we
+54.0,4.0,will go through the applications of
+55.52,4.4,queue and finally we will wrap up this
+58.0,5.28,session by understanding the fundamental
+59.92,5.68,differences between stacks and queues i
+63.28,4.159,hope i made myself clear with the agenda
+65.6,5.36,now let's get started with our first
+67.439,6.321,topic that is what is a stack
+70.96,5.199,so to define stack in a more generalized
+73.76,5.44,way we can consider stack as a linear
+76.159,3.841,data structure that follows lifo order
+79.2,4.16,or
+80.0,6.4,lost in first out order or another way
+83.36,4.799,of putting it down is first come last
+86.4,4.24,out order
+88.159,4.96,so some of the basic operations that can
+90.64,5.04,be performed on stack are insertion and
+93.119,4.64,deletion and that can be done only at
+95.68,3.84,the end which is called as the top of
+97.759,3.601,the stack
+99.52,4.08,now let us understand the basic
+101.36,3.92,operations on stack so the three
+103.6,4.159,fundamental operations that can be
+105.28,5.839,applied onto a data structure like stack
+107.759,5.281,are push pop and peak so the push
+111.119,4.561,operation involves inserting a new
+113.04,4.64,element from the top of the stack the
+115.68,4.64,pop operation involves removing the
+117.68,5.28,element from the top of the stack and
+120.32,5.04,finally the peak operation which returns
+122.96,4.32,the topmost element from the stack
+125.36,4.319,without removing the element from the
+127.28,4.64,stack
+129.679,4.401,now we shall go through some generalized
+131.92,4.24,examples of stack
+134.08,4.4,so some of the generalized examples of
+136.16,5.12,stack are you can see a stack of books
+138.48,6.72,here and a stack of utensils stack of
+141.28,5.84,coins and stack of dollars of bills
+145.2,4.56,now let us go through a practical
+147.12,4.88,example based on stack and data
+149.76,4.24,structures we shall be using c
+152.0,3.68,programming language for this particular
+154.0,3.76,example
+155.68,4.4,so you can see that on my screen i have
+157.76,4.32,an example for stack data structure
+160.08,3.76,don't worry about the code this code
+162.08,3.6,will be attached in the description box
+163.84,3.92,below and you can always have access to
+165.68,3.839,it and you can run the same code in your
+167.76,3.68,personal system so that you have a
+169.519,3.761,deeper and better understanding of the
+171.44,4.32,program now let's quickly run this
+173.28,2.48,program
+183.76,4.479,so there you go you can see the program
+185.36,4.48,is getting executed now
+188.239,3.841,so you can see that the program got
+189.84,5.679,successfully executed and the elements
+192.08,5.68,are being inserted into the stack
+195.519,4.72,now the elements are a b
+197.76,5.119,and finally the elements are popped back
+200.239,5.521,again that is b a and the last element
+202.879,4.801,that is popped away from the stack is a
+205.76,5.839,and you can see that the stack is
+207.68,5.279,currently empty so top is pointing to -1
+211.599,3.601,now with that let's get back to the
+212.959,3.761,presentation again
+215.2,3.679,now let us understand some of the
+216.72,5.12,applications of stack
+218.879,6.161,so one of the applications of stack is
+221.84,5.119,function call or recursion the recursive
+225.04,4.0,function call is also known as the
+226.959,4.481,called stack whenever a function is
+229.04,4.24,called then the function goes to the top
+231.44,3.76,of the stack
+233.28,4.72,now another important application of
+235.2,4.8,stack is expression conversion there are
+238.0,4.48,three types of notations that is prefix
+240.0,4.64,notation inflectionation and postfix
+242.48,4.64,notation so these particular notations
+244.64,3.679,can be taken care by using stacks in
+247.12,4.319,real time
+248.319,4.961,now the next one is checking parenthesis
+251.439,4.08,stack is used to check if the given
+253.28,4.0,parenthesis are balanced or not
+255.519,4.321,sometimes if you forget to add a
+257.28,5.199,parenthesis then the compiler will throw
+259.84,4.639,an error so using stack this can be
+262.479,4.241,found if there are balanced parenthesis
+264.479,3.921,used in your program or not balanced
+266.72,4.08,parenthesis means opening and closing
+268.4,5.2,brackets are of the same type that means
+270.8,4.8,if you have two open flower brackets
+273.6,3.92,then you need to have two closed flower
+275.6,3.76,brackets it should not be an equal it
+277.52,3.28,should be completely equal to complete
+279.36,3.36,the code segment
+280.8,4.24,now another application of stack is
+282.72,4.72,expression evaluation stack can be used
+285.04,4.8,to evaluate the expressions as you can
+287.44,6.08,see here we have an expression that is 6
+289.84,5.44,plus 2 star 3 minus 12 divided by 4.
+293.52,4.239,now this particular expression will be
+295.28,4.56,evaluated based on the precedency table
+297.759,3.921,so the stack is used to check the
+299.84,5.44,precedence and then the expression gets
+301.68,5.519,evaluated into the result which is 21
+305.28,4.08,right over here
+307.199,4.881,now another application is the tower of
+309.36,4.72,hanoi tower of hanoi is a mathematical
+312.08,4.8,puzzle which consists of three rods and
+314.08,5.119,n number of discs of different diameters
+316.88,4.64,all the discs are placed on one rod one
+319.199,6.72,over the other and in ascending order of
+321.52,6.0,size similarly into a cone-shaped tower
+325.919,3.761,now we will enter into the next segment
+327.52,4.239,where we will discuss about queues so
+329.68,4.239,what exactly is a queue a queue is a
+331.759,5.121,linear data structure that follows the
+333.919,3.761,fifo order that is the first and first
+336.88,4.0,out
+337.68,4.64,whereas stack followed first in last out
+340.88,3.44,so this is one of the fundamental
+342.32,3.52,difference between stacks and queues so
+344.32,2.48,we'll be discussing those in the next
+345.84,2.56,section
+346.8,3.92,for now let's continue with the
+348.4,4.96,operations on queue the queue is an
+350.72,5.28,ordered list in which insertion is done
+353.36,5.04,at one end that is called rear and
+356.0,5.28,deletion is done at another end which is
+358.4,4.96,called front the operations on queue are
+361.28,4.08,enqueue operation that adds a new item
+363.36,4.64,to the queue if the queue is complete
+365.36,5.279,then there is an overflow condition
+368.0,5.039,dq operation is the operation which
+370.639,4.4,deletes an item from the queue and if
+373.039,3.761,the queue is empty then there is an
+375.039,3.44,underflow condition through it as an
+376.8,3.92,exception
+378.479,4.801,now let us understand some of the basic
+380.72,4.88,examples of q you can consider the
+383.28,4.639,patients at hospital registration and
+385.6,6.48,you can also consider an example of
+387.919,6.641,customers making use of atm
+392.08,4.239,now let us understand the types of queue
+394.56,4.4,so there are basically three types of
+396.319,5.681,queues those are circular queues doubly
+398.96,5.519,ended queues and priority queues
+402.0,4.72,now let us understand the circular queue
+404.479,4.16,in a circular queue the last element
+406.72,3.28,points to the first element to form a
+408.639,3.601,circular link
+410.0,5.199,circular queue is also known as ring
+412.24,4.959,buffer insertion is done at the rear and
+415.199,3.681,deletion is done at the front as
+417.199,4.0,discussed before
+418.88,4.96,now we will go through the doubly ended
+421.199,5.041,queue in doubly ended queue both
+423.84,5.68,insertion and deletion can be done at
+426.24,5.76,both rear and front of the queue
+429.52,4.56,now the last one the priority queue in
+432.0,4.8,the priority queue the notes have same
+434.08,5.44,predefined priority insertion can be
+436.8,4.88,done as the arrival of the notes node
+439.52,4.56,having the least priority will be the
+441.68,4.32,first node removed from the queue now we
+444.08,4.48,will go through a general practical
+446.0,5.12,example of queues and then we will go
+448.56,4.639,through the applications of queues now
+451.12,4.4,on my screen you can see an example for
+453.199,3.84,queues don't worry about the code this
+455.52,3.36,code will be attached in the description
+457.039,4.481,box below and you can always have access
+458.88,5.12,to it and learn executing this on your
+461.52,5.84,own system so without further ado let's
+464.0,3.36,start to execute this code
+467.759,3.601,so you can see that the code got
+469.199,4.72,successfully executed and the terminal
+471.36,4.239,is asking for us to give an operation so
+473.919,4.241,the first one is to insert an element
+475.599,4.241,into the queue second one is to delete
+478.16,3.2,an element and the third one is to
+479.84,4.88,display the elements in the queue and
+481.36,5.36,the fourth one is the quote let's insert
+484.72,4.4,so now let us insert an element into the
+486.72,4.159,queue that is 10.
+489.12,3.199,now let's try to display the elements in
+490.879,3.121,the queue for that i need to select the
+492.319,4.0,option number three
+494.0,4.639,and there you go the queue has element
+496.319,4.241,number 10. now let's try to delete that
+498.639,3.441,element for that we might have to choose
+500.56,3.44,the second option
+502.08,3.519,so you can see that the element got
+504.0,4.08,deleted from the queue and the element
+505.599,3.44,deleted from the queue is 10
+508.08,3.44,and
+509.039,4.961,you have another choice now so let's try
+511.52,4.48,to quit it now so that i need to select
+514.0,4.88,the option for because we have seen how
+516.0,4.88,to insert view and delete the element
+518.88,3.76,let's not make further delay and let's
+520.88,3.519,quickly enter into the next part of our
+522.64,2.879,session that is the application of
+524.399,3.041,queues
+525.519,4.561,so the first application of queue is
+527.44,5.28,breadth first search breadth first
+530.08,5.04,search or bfs traverses a graph in a
+532.72,4.559,breadth what direction and uses a queue
+535.12,3.279,to remember the next node to start a
+537.279,3.361,search
+538.399,4.961,the second application is level order
+540.64,4.96,traversal entry level order traversal
+543.36,4.88,processes all the nodes of a tree by
+545.6,4.239,depth first the root then the children
+548.24,4.8,of the source
+549.839,6.241,next one is first come first serve cpu
+553.04,4.96,scheduling first come first serve fcfs
+556.08,4.24,is an operating system algorithm that
+558.0,4.72,works on queued requests and implements
+560.32,4.079,them according to their arrival
+562.72,3.84,now the fibonacci
+564.399,4.161,fibonacci heap is a data structure that
+566.56,4.16,implements priority queue operations
+568.56,3.839,consisting of the collection of heap
+570.72,4.32,order trees
+572.399,7.201,now our last segment that is the
+575.04,7.52,comparison between stack and queue
+579.6,6.08,so at first both stack and queue are
+582.56,6.24,linear data structures and stack follows
+585.68,5.52,last in first out whereas q follows
+588.8,4.56,first in and first out
+591.2,5.199,and when you are considering stack the
+593.36,5.68,insertion takes place at the top
+596.399,3.761,and deletion takes place from the top as
+599.04,3.28,well
+600.16,5.119,whereas when it comes to stack the
+602.32,4.88,insertion starts from rear but deletion
+605.279,5.12,or elimination of the element from the
+607.2,5.6,queue starts from the front
+610.399,4.56,in stacks the insert operation is called
+612.8,5.68,as push
+614.959,5.921,and deletion process is called as pop in
+618.48,7.2,queues the insertion is called as
+620.88,4.8,enqueue and deletion is called as dq
+625.76,3.759,in stacks you mainly maintain one
+627.68,4.32,pointer to access the list that is
+629.519,4.56,called top which always points to the
+632.0,4.24,last element present in the list in
+634.079,4.401,queues we maintain two different
+636.24,4.08,pointers the first one is the front
+638.48,3.68,pointer which always points to the front
+640.32,4.32,element or the first element inserted in
+642.16,5.04,the list and the next one is the rare
+644.64,4.879,pointer which always points to the rare
+647.2,3.12,or the last element inserted into the
+649.519,2.961,list
+650.32,5.199,stack is used in solving problems that
+652.48,5.28,work on recursion whereas q is used in
+655.519,4.481,solving problems having sequential
+657.76,4.48,processing so these are the fundamental
+660.0,3.68,differences between stacks and queues
+662.24,3.839,with that we have come to an end of this
+663.68,4.08,tutorial on stacks and queues if you
+666.079,3.521,have any queries regarding the topics
+667.76,3.36,discussed in this particular tutorial or
+669.6,3.52,if you are in need of the course
+671.12,3.36,executed in this particular tutorial
+673.12,2.959,then please feel free to let us know in
+674.48,3.76,the comment sections below and our team
+676.079,4.561,of experts will be happy to resolve all
+678.24,6.0,your queries until next time thank you
+680.64,3.6,stay safe and keep learning
+686.8,3.599,hi there if you like this video
+688.64,4.319,subscribe to the simply learn youtube
+690.399,4.721,channel and click here to watch similar
+692.959,5.481,videos turn it up and get certified
+695.12,3.32,click here

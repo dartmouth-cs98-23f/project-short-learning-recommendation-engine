@@ -1,0 +1,352 @@
+second,duration,transcript
+0.03,3.57,welcome back you're just in time for
+1.589,4.141,coffee today I wanted to give you a
+3.6,3.779,technical rundown of systems design
+5.73,4.02,interview concepts that you need to know
+7.379,3.961,to ace your job interview so the systems
+9.75,3.33,design interview usually does not have
+11.34,3.27,to do so much with coding people don't
+13.08,3.69,want to see you write actual code but
+14.61,3.6,little snippets here and there and they
+16.77,3.87,really want to know how you glue an
+18.21,4.44,entire system together and that is part
+20.64,3.84,of the job interview especially for
+22.65,3.389,senior engineers so usually in the
+24.48,3.36,software engineering interview you may
+26.039,3.961,have three coding sessions one behavior
+27.84,3.99,and then one systems design for senior
+30.0,3.51,candidates you may even have two systems
+31.83,3.36,design interviews like what I had over
+33.51,3.959,at Facebook when I interviewed there and
+35.19,4.38,it's very open and it's a chance for you
+37.469,3.961,to show your expertise and dive into any
+39.57,3.54,area that you want to it's not really
+41.43,3.449,about the language and syntax which is
+43.11,3.84,why a lot of engineers who focus on
+44.879,4.11,primarily like which language they
+46.95,3.48,should know that's not going to come
+48.989,3.451,into play here it's really about the
+50.43,3.66,frameworks the api's the design patterns
+52.44,3.599,how you may put the entire system
+54.09,3.48,together and that architectural portion
+56.039,3.45,and a lot of it may have to do with
+57.57,3.96,scalability as well and coming up with
+59.489,3.57,good design choices there so to help you
+61.53,3.269,all out I wanted to run through some of
+63.059,3.42,the top concepts that you may need to
+64.799,3.75,know for your systems design interview
+66.479,5.07,so why don't we get started now the
+68.549,4.831,first one is load balancing quick pause
+71.549,3.301,computer science may be hard but holiday
+73.38,3.029,shopping doesn't have to be spread the
+74.85,2.94,love of computer science by gifting a
+76.409,2.971,loved one a brilliant premium
+77.79,2.939,subscription this really excites me
+79.38,3.21,because it's such a fun way to nurture
+80.729,4.081,chaos the build confidence and develop
+82.59,4.08,problem-solving skills crucial to school
+84.81,3.57,job or career so help your loved one
+86.67,3.9,spark a lifelong love of learning get
+88.38,4.77,20% off premium at brilliant work slash
+90.57,4.29,tech lead so load balancers usually help
+93.15,3.42,to distribute traffic to many different
+94.86,4.5,web servers in order to help with
+96.57,4.53,throughput latency scalability so for
+99.36,3.149,example when the user accesses your web
+101.1,3.6,site instead of hitting a single
+102.509,4.29,computer and it can take the single
+104.7,3.84,hosting machine down for instance you
+106.799,3.541,can put a load balancer in front of that
+108.54,3.48,request and then that load balancer will
+110.34,3.93,route the client request to a number of
+112.02,4.139,different web servers and you can set up
+114.27,3.3,rules for how this load balancer will
+116.159,3.091,function now there are various
+117.57,3.63,techniques for load balancing one is you
+119.25,3.81,can use specialized software like nginx
+121.2,3.959,where you can route your L request to
+123.06,3.93,many different IP addresses host
+125.159,4.35,machines which can actually serve the
+126.99,4.17,request another popular technique which
+129.509,2.7,I like to use personally is I just use
+131.16,4.499,DNS load
+132.209,4.92,we're given a URL website you can have
+135.659,3.841,that website resolve to a number of
+137.129,3.901,different IP addresses and the benefit
+139.5,3.18,of this is very simple you don't need
+141.03,3.84,any machines but then you don't have
+142.68,3.69,much customizability in here as well you
+144.87,2.729,can set that bruise for load balancing
+146.37,3.599,like round-robin
+147.599,4.081,has Y on the IP address or figuring out
+149.969,3.0,which mission has the least load and
+151.68,3.419,assigning traffic to that machine
+152.969,4.261,figuring out which machines are offline
+155.099,4.351,and removing traffic from those all
+157.23,3.509,sorts of techniques here so that's the
+159.45,2.879,first technique and it's a very simple
+160.739,3.211,one but the thing to know is usually
+162.329,3.72,your web server is not the first to go
+163.95,3.719,down in fact quite often is your
+166.049,3.961,database server which may be under high
+167.669,3.871,load for lots of writes or reads and in
+170.01,3.33,order to handle that that brings us to
+171.54,3.419,our second concept which is caching
+173.34,3.509,quite often you'll be hitting the
+174.959,3.571,database very hard you may be doing a
+176.849,3.931,bunch of sequel joints and queries but
+178.53,3.72,for example the front page of the New
+180.78,3.15,York Times they have to go into that
+182.25,3.48,database but it's the same data for
+183.93,3.119,every single user for each day so
+185.73,3.149,instead what you can do is insert a
+187.049,4.02,caching layer and cache the results of
+188.879,4.351,that request this is an in-memory cache
+191.069,3.87,it's very fast to access it doesn't have
+193.23,3.539,to hit the disk at all which makes it
+194.939,4.41,efficient and you can just have that
+196.769,4.351,cache last for like say 24 hours or so
+199.349,2.491,some common caching services are
+201.12,2.91,memcache
+201.84,3.989,read as Cassandra I've seen all of them
+204.03,4.049,used in production before a large tech
+205.829,4.38,companies Facebook uses memcache quite a
+208.079,4.141,bit and it's a very common technique
+210.209,4.53,now speaking of caching we can also use
+212.22,4.25,CDN content delivery networks to cache
+214.739,5.49,and static asset files like images
+216.47,5.68,JavaScript files HTML CSS files video
+220.229,3.811,files usually anytime you see an image
+222.15,4.32,or video it is being served through a
+224.04,4.949,CDN which is a global network of servers
+226.47,4.439,which can cache your content and this
+228.989,3.84,serves a number of purposes number one
+230.909,3.48,it decreases the load on your actual
+232.829,3.81,servers so that people around the world
+234.389,3.63,can access your images or videos and it
+236.639,3.03,won't take down your servers but the
+238.019,3.451,second critical aspect is it makes
+239.669,3.78,accessing your content very fast for
+241.47,3.629,your users who may be around the world
+243.449,3.421,and then these CD ends they're located
+245.099,3.72,that geographically near these people
+246.87,3.959,all across the world so that people can
+248.819,3.51,access your content quickly it makes a
+250.829,3.601,big difference if your website or app is
+252.329,2.88,able to load fast and CDN store fairly
+254.43,2.64,easy to set up
+255.209,3.691,one common technique is using the pool
+257.07,4.11,technique where the first time a user
+258.9,4.47,accesses your file it may be slow
+261.18,3.57,because the CDN has to actually fetch
+263.37,2.05,your file and then cache it but then
+264.75,2.47,after that
+265.42,4.47,for all subsequent users within that
+267.22,4.32,vicinity that local region then the axis
+269.89,2.91,is going to be very quick and another
+271.54,3.12,technique is pushed where you can
+272.8,3.6,actually put your files onto the CD and
+274.66,4.11,such that it would be fast even for the
+276.4,4.77,first access but usually that has some
+278.77,4.53,higher upfront cost because then you may
+281.17,3.99,be storing files on CD ends that may not
+283.3,3.75,be used necessarily and if you allow
+285.16,3.69,users to upload images then you may want
+287.05,4.2,like a distributed file system maybe
+288.85,4.2,something like Amazon s3 now in the
+291.25,3.54,systems design interview is not uncommon
+293.05,3.93,that ought to be asked to design the
+294.79,4.26,database schema about what tables you
+296.98,3.6,may be using you know like what are the
+299.05,3.24,primary key is going to look like and
+300.58,3.33,what are your indices now database
+302.29,3.51,indexes are important because they make
+303.91,3.63,your course fast for example if you're
+305.8,3.78,designing a dating app and you want all
+307.54,3.96,of the users who are active within your
+309.58,3.72,neighborhood then your query is going to
+311.5,4.59,need to be indexed by the users say
+313.3,5.25,latitude and longitude with their date
+316.09,4.17,less active right and that compound
+318.55,3.84,index essentially creates like a binary
+320.26,3.87,tree of your users sorted by the
+322.39,3.75,latitude longitude and then their day
+324.13,3.9,active and that allows you to issue the
+326.14,4.14,queries like that you may also want
+328.03,3.96,additional indexes for example like you
+330.28,3.24,can have another index on say just less
+331.99,3.39,active so you could get a list of all of
+333.52,4.47,the users globally who are less active
+335.38,4.05,now even with these indices though as we
+337.99,3.54,mentioned one of your first points of
+339.43,3.9,failure will be the database and back in
+341.53,3.75,the day when I would be building apps my
+343.33,3.54,database would be under so much low that
+345.28,3.6,what you have to do after that is you
+346.87,3.99,use replication so you have like slave
+348.88,3.57,master replication in this setup you
+350.86,3.9,have a single master database where you
+352.45,4.47,write into and then it is essentially
+354.76,4.62,cloned duplicated into many slave
+356.92,3.96,databases where you only read from you
+359.38,3.42,can configure a database to act as a
+360.88,4.62,slave and replicate from another host
+362.8,4.23,master machine and as is bringing in the
+365.5,3.33,day that there may be like a one or two
+367.03,3.39,second delay sometimes which is okay
+368.83,3.78,sometimes you don't necessarily need
+370.42,4.47,consistent data so consistency is the
+372.61,4.23,concept work if you write to the
+374.89,3.93,database then you immediately are able
+376.84,3.75,to read back the same value this may be
+378.82,3.45,important in certain scenarios like say
+380.59,3.36,a user updates their profile they want
+382.27,3.51,to see the changes reflected right away
+383.95,3.72,so then you could read from say the
+385.78,3.57,master database or you can just read
+387.67,4.32,from a cache that's always up-to-date
+389.35,4.05,all right so let's take a step back we
+391.99,3.27,have a number of techniques here for
+393.4,4.02,scaling out a web application server
+395.26,3.659,right usually you have a web server a
+397.42,3.929,database server as a
+398.919,4.321,image server or video server asset
+401.349,4.261,server right the web server you can
+403.24,4.139,scale out using load balancers right and
+405.61,3.389,you can just add as many web servers as
+407.379,3.331,you want and then your load balancers
+408.999,3.72,are able to distribute load to these
+410.71,4.019,machines so that sounds good for the
+412.719,3.72,image server and any static assets we
+414.729,3.511,can use content delivery networks to
+416.439,3.391,scale out to thousands of machines
+418.24,3.239,around the world and that makes it
+419.83,4.079,faster for the database server we can
+421.479,4.05,use caching indexes and replication we
+423.909,3.421,can have hundreds of caching servers and
+425.529,3.931,slave servers in order to scale out our
+427.33,4.29,reads so that we can do as many reads as
+429.46,5.03,we like but what we haven't myself so
+431.62,4.68,far is database writes for example for
+434.49,4.209,application like Twitter where you're
+436.3,3.81,writing into the database a lot so how
+438.699,3.33,do we handle that where users are
+440.11,4.44,hammering the database with new data and
+442.029,4.5,you can use database sharding where you
+444.55,4.589,split up the database into multiple
+446.529,4.651,master databases now there are a number
+449.139,3.421,of ways to charge your database vertical
+451.18,3.449,charting is where you take each table
+452.56,3.93,and just put it into a new machine so
+454.629,4.41,you may have like a user table a tweets
+456.49,4.56,table a comments table a user support
+459.039,3.69,table a chat table and each of these
+461.05,3.209,just are in different machines and that
+462.729,3.72,can work for a while but what if you
+464.259,4.41,have a single tweets table and it's just
+466.449,3.96,going very large how do we handle that
+468.669,3.3,well that's horizontal charting where
+470.409,3.63,you take a single table and split that
+471.969,3.66,across multiple machines there are a
+474.039,3.36,number of techniques for doing this but
+475.629,3.931,one common way is you take the user ID
+477.399,3.75,and you just modify the total number of
+479.56,3.9,machines that you want to allocate the
+481.149,4.8,user ID to so if you have say five
+483.46,5.189,master machines for a table you just
+485.949,4.74,take the user ID modified and that rusts
+488.649,3.841,each user to a different machine now
+490.689,3.72,there are a number of complexities here
+492.49,3.899,which we go over in more detail over in
+494.409,4.5,our program tech interview pro combat
+496.389,4.381,way so I'll give a quick plug but we do
+498.909,3.331,have an entire systems design interview
+500.77,3.299,portion that covers all of these
+502.24,3.81,concepts in far more detail along with
+504.069,3.75,systems design concepts for mobile
+506.05,3.45,developers as well so check that out if
+507.819,3.69,you're interested at Tech interview
+509.5,3.75,procom but as I was saying with
+511.509,3.78,horizontal charting another technique at
+513.25,4.169,once did was I had this master table
+515.289,3.81,which indicated for each user which
+517.419,3.511,machine they would be located on and
+519.099,3.63,this master table was responsible
+520.93,4.05,essentially for the Chardon algorithm
+522.729,4.831,now in recent years we've also seen no
+524.98,4.589,sequel databases coming up and no sequel
+527.56,3.69,databases they're not relational so that
+529.569,2.791,means you pretty much can't do say range
+531.25,2.49,queries on them
+532.36,3.39,not like my sequel but the good thing
+533.74,4.62,about them is they're essentially key
+535.75,4.62,value pairs so with these key value pair
+538.36,4.08,models these know sequel databases are
+540.37,4.23,naturally able to scale automatically by
+542.44,4.38,themselves across multiple different
+544.6,4.919,machines easily some common no sequel
+546.82,4.889,engines are MongoDB Amazon's dynamodb or
+549.519,3.361,fire based fire store so pretty much you
+551.709,3.211,can use a combination of these
+552.88,4.139,techniques to scale out your application
+554.92,3.599,you can use a hybrid of these maybe for
+557.019,3.0,example if you have active chat server
+558.519,3.601,you could be using no sequel engine or
+560.019,3.721,simply an in-memory table and then for
+562.12,3.3,your more persistent needs like a user
+563.74,3.719,table you could be using a standard
+565.42,3.78,relational database like my sequel and
+567.459,3.57,then to round it all out you often be
+569.2,3.36,asked about API design you know you may
+571.029,3.151,have a client and server how do they
+572.56,3.42,communicate with each other what are the
+574.18,3.48,functions and methods they use what is
+575.98,3.69,the date the transport mechanism are you
+577.66,2.88,using JSON or protocol buffers what does
+579.67,2.4,that data look like
+580.54,3.21,how do you handle security do you
+582.07,3.449,support offline usage how do you make it
+583.75,3.149,fast so as you can see it's really
+585.519,3.421,open-ended and depending on the
+586.899,3.87,application and the usage scenarios and
+588.94,3.839,where your load is going to be no two
+590.769,4.231,applications are going to scale exactly
+592.779,4.111,the same way which is why it's important
+595.0,3.66,to ask a lot of clarifying questions and
+596.89,3.99,figure out what type of load and usage
+598.66,4.679,scenarios this system will be put under
+600.88,4.47,you never want to scale too early or put
+603.339,3.75,in premature optimizations because it
+605.35,4.02,just complicates the system way too much
+607.089,4.321,and what people really value these days
+609.37,4.17,is simplicity the simpler you can keep
+611.41,3.359,the system the better now you can learn
+613.54,3.15,more about math science or computer
+614.769,3.451,science at brilliant auric slash tech
+616.69,3.24,lead brilliant is a problem-solving
+618.22,3.6,based website and app with a hands-on
+619.93,3.81,approach with over 60 interactive
+621.82,3.78,courses all of brilliance courses have
+623.74,3.63,storytelling code writing interactive
+625.6,3.359,challenges and problems to solve
+627.37,3.45,they'll puzzle you surprised you and
+628.959,3.901,expand your understanding of the modern
+630.82,3.72,world and brilliant premium is a perfect
+632.86,3.75,year for anyone on your list from ages
+634.54,3.6,13 to 100 they have brand-new
+636.61,3.69,interactive content that makes solving
+638.14,3.9,puzzles and challenges even more fun and
+640.3,3.479,hands-on with brilliant your unravel
+642.04,3.299,concepts bit by bit and build up to an
+643.779,3.571,understanding of our world so check Emma
+645.339,4.11,and get 20% off premium at brilliant
+647.35,3.72,Thorpe slash tech lead so I hope I cover
+649.449,3.241,some of the key concepts and tools that
+651.07,4.35,you may need to scale a web application
+652.69,4.23,server for systems design interview let
+655.42,3.0,me know if you have any additional tips
+656.92,3.3,and tricks or questions post them in the
+658.42,3.0,comments below and I'll see you there if
+660.22,2.849,you like the video give it a like and
+661.42,4.43,subscribe and I'll see you next time
+663.069,2.781,Thanks bye

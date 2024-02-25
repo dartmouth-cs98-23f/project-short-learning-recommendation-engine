@@ -1,0 +1,1083 @@
+second,duration,transcript
+0.03,4.68,we've seen sort of compositionality of
+2.22,4.26,programming languages where terms are
+4.71,3.51,made up from sub terms and maybe
+6.48,5.76,semantics are defined by induction on
+8.22,5.789,this subterms structure so so we've seen
+12.24,3.689,this in you know Gordon Stark
+14.009,3.061,Christine's talk many many talks okay
+15.929,3.481,and then there's the other kind of
+17.07,4.26,compositionality that we've seen mostly
+19.41,4.289,for example from people who work in
+21.33,5.31,string diagrams and categorical quantum
+23.699,6.15,mechanics david Spivak stark was full of
+26.64,6.029,stuff like God so is Jamie's and you
+29.849,6.3,know John's and Brandon's and Ross isn't
+32.669,5.851,a lot of lot of people so we've seen two
+36.149,3.901,different kinds of compositionality they
+38.52,5.07,have some things in common but they're
+40.05,6.06,still somewhat different and what I will
+43.59,4.98,tell you about is sort of one one
+46.11,7.82,attempt to marry these two worlds
+48.57,8.04,actually together so five years ago I
+53.93,4.24,was part of a big project for the US
+56.61,3.719,government and we were developing a
+58.17,5.31,quantum programming language the purpose
+60.329,4.83,was not to actually program a quantum
+63.48,3.959,computer because they don't actually
+65.159,5.28,have one we think but of course if they
+67.439,5.101,did it would be classified but as I
+70.439,4.621,understand it the main purpose was to do
+72.54,4.259,resource estimate so implement some
+75.06,3.629,actual quantum algorithms from the
+76.799,3.96,literature and then figure out how many
+78.689,4.711,what powers of ten you know like how
+80.759,4.711,many gates or resources these algorithms
+83.4,3.81,would actually consume so as part of
+85.47,3.539,this project we developed the quantum
+87.21,4.949,programming language quicker quicker
+89.009,7.351,which I will talk more about and we also
+92.159,7.551,had to it was sort of a given sort of
+96.36,6.6,goal of the project to implement seven
+99.71,5.619,quantum algorithms that they specified
+102.96,4.38,okay so they were not trivial algorithms
+105.329,4.021,like teleportation but they were really
+107.34,4.169,complicated algorithms like estimating
+109.35,4.049,the ground state of some molecule or
+111.509,3.661,playing the game of hex one of the
+113.399,4.231,algorithms played the game of hex was a
+115.17,5.489,winning strategy for hex and it's faster
+117.63,5.46,than the classical algorithm and one of
+120.659,4.471,them was solving a linear system of
+123.09,4.62,equations which everyone thinks it's
+125.13,4.349,easy until the equations are until
+127.71,4.32,they're exponentially many equations in
+129.479,3.061,exponentially many variables then again
+132.03,2.099,it's something
+132.54,3.779,you can do on a quantum computer faster
+134.129,4.83,and and there were several other things
+136.319,5.071,like walking around random grab random
+138.959,5.37,walk you know quantum random walks on a
+141.39,6.15,graph and things like that so very so so
+144.329,5.28,this language that we implemented is
+147.54,4.649,scalable in the sense that we have
+149.609,5.19,generated quantum circuits with I think
+152.189,5.401,some of the largest ones was 30 trillion
+154.799,4.981,gates okay so these you know it's quite
+157.59,4.14,scalable compared to say if you do
+159.78,6.78,teleportation all right which has like
+161.73,8.459,five gates one of the algorithms dealt
+166.56,5.28,with doing some computations in number
+170.189,5.461,theory actually computing the class
+171.84,5.94,number of some kind of ring okay and to
+175.65,4.199,do that sort of thing you need to
+177.78,4.65,manipulate sort of in a quantum way
+179.849,4.411,quite complicated data structures like
+182.43,3.839,data structures for example representing
+184.26,4.08,an ideal in a ring okay
+186.269,5.011,so we have in inquire we have quantum
+188.34,4.94,data types similar to sort of data types
+191.28,4.349,in a usual programming language and
+193.28,3.97,among these types of course we things
+195.629,3.631,like lists and trees but also more
+197.25,4.819,complicated types and we actually have a
+199.26,5.849,whole fix point real number computation
+202.069,5.831,sort of we implemented fixed point real
+205.109,4.35,numbers with functions like plus and
+207.9,4.89,times and sine and cosine and the
+209.459,5.041,hyperbolic cosine and so on all in in
+212.79,3.659,sort of this quantum setting so it's
+214.5,4.109,quite scalable in pig and it's high
+216.449,4.29,order so you have functions inputting
+218.609,4.321,other functions this often happens when
+220.739,3.93,some circuit is depending for example on
+222.93,5.13,a family of Oracle's or something like
+224.669,5.1,that and the whole and we had to do this
+228.06,4.53,very quickly so quit was actually
+229.769,6.03,originally sort of designed in about six
+232.59,5.099,months and to implement all seven
+235.799,4.351,algorithms took another year after that
+237.689,4.2,and in order to be able to do it fast we
+240.15,3.329,embedded the whole language in Haskell
+241.889,3.511,which is an existing functional
+243.479,3.48,programming language and when you write
+245.4,3.929,an embedded language you can basically
+246.959,3.84,do it very fast because you don't have
+249.329,4.231,to write a new compiler in your type
+250.799,4.231,checker and you anything just use the
+253.56,4.22,infrastructure of the existing
+255.03,4.59,programming language and one of the
+257.78,3.699,disadvantages of being embedded in
+259.62,5.21,Haskell is that the language didn't end
+261.479,6.561,up being completely type safe
+264.83,4.74,Haskell has many wonderful features but
+268.04,3.45,one thing it doesn't have is linear
+269.57,4.08,types and another thing it doesn't have
+271.49,4.17,is dependent types and if you don't have
+273.65,3.93,those two things it's not going to be
+275.66,4.26,completely typesafe for quantum language
+277.58,5.04,so let me actually show you quicker for
+279.92,7.47,a second here I could probably spend the
+282.62,6.6,rest of the I could spend all the time
+287.39,4.29,just demoing web because it has many
+289.22,4.89,interesting features but I just want to
+291.68,5.34,give you very quickly a flavor okay so
+294.11,4.77,here's a very simple Ripper program for
+297.02,4.29,for constructing a circuit that takes
+298.88,4.74,the and the boolean and you know of a
+301.31,3.96,bunch of bits it's written as qubits
+303.62,2.94,here but these are actually classical
+305.27,3.39,gates you know they're all in the
+306.56,4.77,classical basis so if you want to add
+308.66,5.19,together two bits and I'll put another
+311.33,5.7,bit then what you do is you you generate
+313.85,5.07,a third bit initialize it to false and
+317.03,4.02,then you do a control not gate which
+318.92,5.34,will negate the third bit if and only if
+321.05,5.04,the first two are both equal if if and
+324.26,4.44,only if the first two are both equal to
+326.09,4.65,one okay so that's good that's this
+328.7,4.2,control not gate here and then you
+330.74,4.2,return see so that's as as you can see
+332.9,3.45,it's a functional program okay with me
+334.94,3.51,in a functional programming language and
+336.35,4.23,then when you want to end together a
+338.45,4.62,list of it then you do the obvious thing
+340.58,4.65,if the list is empty you return true if
+343.07,6.39,the list is a singleton you return just
+345.23,5.76,Q which is actually redundant but for
+349.46,3.78,singleton I didn't really want to return
+350.99,4.08,Q and true so as a sort of slight
+353.24,4.11,optimization we have a singleton right
+355.07,4.95,and then if you have a longer list you
+357.35,4.77,just add together the tail of the list
+360.02,3.66,and then you do one more and with the
+362.12,4.38,head of the list and you turned out so
+363.68,5.04,it's functional okay it's just writing
+366.5,3.9,more or less ordinary functional
+368.72,3.9,programs and then there is a bit of
+370.4,4.32,plumbing here print generic preview
+372.62,4.26,means print this quantum circuit as a
+374.72,4.8,graphic and then use the previewer to
+376.88,4.59,display it and this is the function that
+379.52,5.49,that we want the quantum circuit that we
+381.47,6.24,want to view and replicate 10 cubed is a
+385.01,4.53,parameter that tells you because this
+387.71,3.75,function actually will take any list of
+389.54,3.9,qubits as an input but when we want to
+391.46,3.93,actually view it the quantum circuit we
+393.44,3.69,need to pick out a particular
+395.39,4.23,member of the family so here we're
+397.13,6.06,picking the circuit with 10 cubits for
+399.62,5.91,example okay so if I run this little
+403.19,4.41,program so you see at the top of the
+405.53,3.48,page it says import Clippers so that's
+407.6,5.07,that's where the embedded language
+409.01,8.04,actually lives and as as you will so
+412.67,6.12,let's run this and tada you know it
+417.05,3.86,generates the quantum circuit for adding
+418.79,4.8,together ten bits it's not the most
+420.91,4.39,ingenious circuit for doing this you
+423.59,5.43,could do this with logarithmic Li many
+425.3,5.79,ancilla instead of instead of n okay but
+429.02,4.74,it's exactly what the what this program
+431.09,5.55,does and you could write a more clever
+433.76,4.59,program if you wanted to here we're
+436.64,3.27,designing the programming language we're
+438.35,3.96,not trying to write clever programs
+439.91,5.54,another example is the algorithm for the
+442.31,6.0,binary welded tree that's some kind of
+445.45,4.42,walk on a graph you have a graph with
+448.31,3.18,some kind of nodes and you they're
+449.87,3.93,colored and you're trying to find the
+451.49,3.75,unique node with some property by
+453.8,3.75,randomly walking around on this graph
+455.24,4.2,and I just wanted to show it as a quick
+457.55,3.9,example just so you see that you know
+459.44,3.72,relatively large quantum circuits can
+461.45,3.57,easily be generated with these
+463.16,4.8,functional programs so here you have
+465.02,5.15,some kind of Oracle this is some kind of
+467.96,4.95,Oracle implementing like some edge
+470.17,4.99,finding computing whether or not there
+472.91,5.13,exists an edge computing actually the
+475.16,5.27,neighbor of a vertex in the graph then
+478.04,5.94,there's then you do something whoops
+480.43,7.39,kind of hard to let me switch to a
+483.98,6.47,better view here fit fit height okay
+487.82,6.69,it's no keyboard shortcut for that
+490.45,5.86,whoops yeah there is some kind of Oracle
+494.51,3.75,and there's some kind of step that this
+496.31,3.42,all these gates are classical all of
+498.26,3.12,them are just control knob gates you
+499.73,3.15,could apply them to ordinary bits it
+501.38,3.66,wouldn't have to be qubits at this point
+502.88,3.69,then there's a relatively small part of
+505.04,3.87,the circuit where it's actually quantum
+506.57,4.71,that's the actual time step you do a
+508.91,4.02,kind of basis change then another kind
+511.28,3.99,of basis change then you perform a
+512.93,5.88,single quantum gate here which is
+515.27,6.06,actually some kind of tiny rotation but
+518.81,4.65,about about some angle and then you undo
+521.33,3.51,the bases change and then you undo the
+523.46,4.06,whole Oracle and so on this is sort of
+524.84,5.23,how these quantum algorithms work and
+527.52,4.77,okay so that's the idea of crapper you
+530.07,6.329,write a functional program and it
+532.29,7.08,generates the circuit for you now what
+536.399,6.031,could I do with my slides I think I have
+539.37,6.55,quit my slides
+542.43,5.68,again all right now but it wasn't
+545.92,4.41,typesafe okay so what we're currently
+548.11,4.53,working on is making a sort of type save
+550.33,4.14,redesign of paper now five years have
+552.64,3.21,passed we have a bit more time the whole
+554.47,3.54,project doesn't have to be finished in
+555.85,4.08,six months so we want to actually from
+558.01,4.02,the bottom up actually design a
+559.93,3.84,programming language for that does
+562.03,4.62,exactly the same thing that creeper does
+563.77,5.13,but that has some kind of theory some
+566.65,4.35,kind of soundness theorems and hopefully
+568.9,4.23,you do educational semantics okay
+571.0,4.8,and we call these languages proto
+573.13,4.05,creeper all all of the languages that we
+575.8,4.11,might develop that I sort of quicker
+577.18,6.15,like currently are called proto quiver
+579.91,4.83,for prototype creeper okay okay so let
+583.33,4.23,me end and what I want to tell you about
+584.74,4.95,today is we actually have a denotational
+587.56,4.92,semantics for proto quicker now which i
+589.69,4.26,think is quite neat so what is proto
+592.48,3.59,quicker how should we think about it
+593.95,5.1,it's a it's a language for describing
+596.07,5.17,families of quantum circuits not just a
+599.05,4.05,quantum circuit but a family of quantum
+601.24,3.78,circuits you might want you might want
+603.1,3.57,one of the inputs to be a parameter like
+605.02,3.42,the number of bits that this circuit
+606.67,3.45,should have or the number n that you
+608.44,4.53,wish to factor if you want to use a
+610.12,4.44,quantum computer to factor okay or any
+612.97,4.41,other or you know or any kind of
+614.56,5.01,parameter so a per app so when you have
+617.38,4.56,a language for describing the family of
+619.57,4.23,circuits this is very similar to a
+621.94,4.2,hardware description language this kind
+623.8,4.26,of thing exists right programming
+626.14,3.66,languages for specifying hardware and
+628.06,3.39,what all these hardware description
+629.8,3.24,languages or circuit description
+631.45,4.38,languages have in common is that they
+633.04,4.38,have two different runtimes first you
+635.83,3.84,run the program and it generates the
+637.42,6.08,circuit then you run the circuit and it
+639.67,7.11,generates some output okay and these two
+643.5,4.84,levels are separate you cannot change
+646.78,3.72,the circuit after you've already started
+648.34,3.93,running it for example so that's why
+650.5,5.52,there is a distinction between parameter
+652.27,5.67,and state so a parameter is some value
+656.02,4.2,that is known at circuit generation time
+657.94,3.09,such as the number of qubits or
+660.22,3.36,something like that
+661.03,4.71,and a state is a value that's known when
+663.58,4.29,the circuit actually runs such as the
+665.74,3.9,value of an actual qubit in the circuit
+667.87,5.19,or a bit in the circuit also if you have
+669.64,4.74,classical circuit and informally the
+673.06,2.34,state can be a function of the
+674.38,3.47,parameters you
+675.4,5.55,initialize a bit you know from a boolean
+677.85,5.14,but a parameter cannot be a function of
+680.95,3.69,the state and that's basically the
+682.99,5.46,essential thing that our denotational
+684.64,5.28,semantics has to capture so I will start
+688.45,7.32,with a simple model of parameters and
+689.92,7.59,state and this is very surprising
+695.77,4.53,because it's a very simple category
+697.51,5.01,theoretical model here in fact this we
+700.3,4.02,have seen this model sort of as a model
+702.52,3.99,for other kinds of phenomena and it's
+704.32,4.53,interesting that it works here so let to
+706.51,3.69,be a to object category so I mean the
+708.85,3.27,category with two objects and one
+710.2,4.2,non-trivial morphism between them and
+712.12,4.88,there's also two identities so it's a
+714.4,5.49,two object three morphism category and
+717.0,4.0,consider the factor category set to the
+719.89,2.91,two up okay
+721.0,3.96,every category theories knows what this
+722.8,4.31,is most of you are not category
+724.96,6.15,theorists so let's just describe it
+727.11,6.64,concretely an object of this category is
+731.11,4.83,a triple consisting of a set and another
+733.75,4.65,set and a morphism between them like
+735.94,4.47,this vertical this vertical a here is a
+738.4,4.23,morphism is an object of the category
+740.41,3.99,and then a morphism of the category is
+742.63,4.41,just one of the commutative diagrams
+744.4,4.44,okay now why in the world should this
+747.04,4.64,have anything to do with parameters or
+748.84,5.49,state or quantum programming languages
+751.68,5.83,we can think of these so if you have one
+754.33,6.12,of these here's your a1 that's a set
+757.51,6.78,okay I'm just talking about a set a 0 is
+760.45,6.45,a sent okay this set a zero has some
+764.29,4.8,elements maybe set a1 also has some
+766.9,4.98,elements and there's a function between
+769.09,5.81,them mapping you know these elements to
+771.88,3.02,those elements
+776.28,4.68,we if one of these elements here is
+778.47,3.96,called little eggs we think of the
+780.96,5.25,elements of the lower set as the
+782.43,5.61,parameters okay so here's a parameter
+786.21,5.64,little X that's an element of the set a
+788.04,6.84,zero then above this lives a certain
+791.85,6.3,subset of a one namely just those things
+794.88,5.58,that are mapped to a zero right so we
+798.15,4.95,call this the fiber over X and we call
+800.46,5.4,it a sub X okay and here's another
+803.1,5.88,element Y for example and then use the
+805.86,5.73,fiber a sub y sometimes the fiber can be
+808.98,3.84,empty sometimes it's singleton and
+811.59,4.8,sometimes it has more than one element
+812.82,6.21,so we think of these elements as the
+816.39,5.22,parameters and once a parameter is given
+819.03,5.16,then you have a set of states okay think
+821.61,4.59,of the upstairs things as the States but
+824.19,4.11,the set of states is not just a set but
+826.2,4.65,it's a set of states all over X and
+828.3,4.86,another set of states over Y and so on
+830.85,5.34,for example if a parameter is the length
+833.16,5.22,of a list of bits then if you have a if
+836.19,3.93,the parameter is 5 then you have 32
+838.38,3.66,elements which are all the bit list of
+840.12,4.38,length 5 but if the parameter is 6 you
+842.04,5.12,have 64 elements and so on so we
+844.5,6.75,structure so we have a state and per
+847.16,5.77,state and parameters and and I have this
+851.25,2.66,on the next slide but without a picture
+852.93,4.14,okay
+853.91,5.32,so this this fiber is correct and then
+857.07,4.2,the interesting thing is how we think of
+859.23,7.35,the morphisms now so suppose you have
+861.27,7.83,another one be p1 p0 right you another
+866.58,8.43,bunch of states and they also have
+869.1,8.01,fibers you know like B sub Z okay now a
+875.01,4.92,morphism is by definition a commutative
+877.11,5.7,diagram so that means a func first of
+879.93,6.75,all a morphism is a function f 0 from
+882.81,5.82,parameters to parameters and second of
+886.68,5.22,all then for every second we also have a
+888.63,6.54,function here F 1 from States to States
+891.9,5.28,but it's not arbitrary the diagram has
+895.17,3.6,to commute and if you think for a second
+897.18,4.32,about what it means for the diagram to
+898.77,6.99,commute it just means that any state
+901.5,7.2,over X must be mapped to a state over F
+905.76,3.99,0 X so you have a map from parameters
+908.7,3.389,through parameters and then
+909.75,4.889,for each little X you have a map from
+912.089,4.23,the fiber to the corresponding fiber so
+914.639,3.69,that the state Maps must be somehow
+916.319,7.83,compatible with with the parameter part
+918.329,8.791,and now you can see that you know for
+924.149,6.601,example if if this point here we're
+927.12,6.659,being mapped to to a point over here in
+930.75,5.61,one of these fibers then you can see
+933.779,5.1,that that point is somehow a function at
+936.36,7.409,this point but also of a Y in a sense
+938.879,8.361,but at the point that Y Maps who is only
+943.769,8.01,a function of Y like if this is a 0 of Y
+947.24,6.849,F 0 of Y will be the same thing even if
+951.779,4.05,you look at different states if you vary
+954.089,3.901,the state but keep in the same fiber
+955.829,3.721,that does not change F 0 Y and this
+957.99,3.539,formula is this intuition that
+959.55,4.529,parameters the parameter is a function
+961.529,5.1,of parameters but state is a function of
+964.079,5.19,state and parameters ok so that's
+966.629,4.95,basically the whole idea now what's a
+969.269,4.38,simple idea and in fact this is a
+971.579,3.99,well-known model for example in security
+973.649,4.351,where you talk about classified and
+975.569,5.01,unclassified information and you have a
+978.0,4.889,new policy is that classified
+980.579,4.11,information might depend on unclassified
+982.889,3.541,information like you can read something
+984.689,3.87,in a newspaper and then still put it in
+986.43,3.389,a classified document but you cannot
+988.559,3.33,read something in the classical
+989.819,4.981,Declassified document and then put it in
+991.889,4.56,a newspaper so so all the all the
+994.8,4.259,unclassified output should only be a
+996.449,4.26,function of the unclassified input but
+999.059,3.78,the classified output can be a function
+1000.709,5.221,of everything so they use exactly this
+1002.839,5.341,model actually for in that situation but
+1005.93,4.05,but it's a different interpretation ok
+1008.18,4.74,go and then what I have in mind but it's
+1009.98,5.159,the same model and surprisingly we can
+1012.92,4.8,get relatively far with this simple idea
+1015.139,6.601,so here's here's some examples of object
+1017.72,7.609,so bool is of course the the type of
+1021.74,6.059,true and false but viewed as a parameter
+1025.329,4.181,so that here I have a two element set
+1027.799,4.081,and the identity function that means
+1029.51,4.14,there's two boolean parameters to run
+1031.88,3.569,false and then over each of them the
+1033.65,5.009,state is the the fiber is just a
+1035.449,5.161,singleton so the object bowl we can
+1038.659,4.481,think of as the boolean that are known
+1040.61,4.99,at circuit generation times
+1043.14,5.3,and time and they have basically only
+1045.6,8.61,parameter and then trivial state and
+1048.44,7.78,conversely you have bit which is in some
+1054.21,3.78,sense also bullion but this is bullion
+1056.22,4.23,state things that will be known at
+1057.99,4.8,circuit runtime and you have no
+1060.45,5.04,parameter the bit has no parameter but
+1062.79,8.16,it has a two different kind of state
+1065.49,8.189,okay so the object so I didn't I I think
+1070.95,4.62,on the slide I have but I didn't say we
+1073.679,4.771,say a generalized element of this object
+1075.57,6.09,is just a pair it's just a generalized
+1078.45,5.87,element it's just a pair of a of a
+1081.66,5.22,parameter and a state such that you know
+1084.32,5.14,such that a of the state is equal to
+1086.88,4.74,that parameter so so this object has two
+1089.46,4.469,generalized elements namely 0 0 and 1 1
+1091.62,4.5,which we can identify with false and
+1093.929,4.771,true and this object also has two
+1096.12,4.5,generalized elements namely star 0 and
+1098.7,4.71,star 1 if we think star is the unique
+1100.62,4.799,element of the singleton set here and we
+1103.41,4.23,also identify these with false and true
+1105.419,3.841,and now there is easy it's easy to see
+1107.64,4.02,that there's a morphism from rule 2 bit
+1109.26,4.23,mapping false - false intruder true but
+1111.66,3.98,there isn't a morphism from bit - bool
+1113.49,4.92,mapping false or false and true - true
+1115.64,4.57,that's because this diagram commutes but
+1118.41,3.54,you cannot possibly make this diagram
+1120.21,4.38,commute this question mark here doesn't
+1121.95,4.76,actually have a solution that this again
+1124.59,4.29,sort of formalize is the idea that
+1126.71,4.839,parameters should not be functions of
+1128.88,5.91,state of course there are functions from
+1131.549,4.741,from BigTable there are commutative
+1134.79,4.04,diagrams but they're not going to be the
+1136.29,4.71,identity up here in fact the only two
+1138.83,4.39,existing ones are the two constant
+1141.0,5.4,functions indeed you can have a constant
+1143.22,8.07,function you know that depends on the
+1146.4,7.05,stage okay so it this is not yet a model
+1151.29,4.98,for quantum circuits okay I didn't have
+1153.45,6.66,any quantum thing in this model this is
+1156.27,5.07,sort of a model for let's say well let's
+1160.11,2.93,sort of see what kind of programming
+1161.34,5.4,language we get in this model actually
+1163.04,6.37,my game is I will first define a model
+1166.74,5.429,and then I will define the programming
+1169.41,3.99,language that fits the model okay so
+1172.169,3.031,what kind of programming language would
+1173.4,2.639,fit this model here well first of all
+1175.2,2.49,it's it
+1176.039,4.47,the Cartesian clothes category so
+1177.69,4.199,certainly you know vanilla simply typed
+1180.509,3.811,lambda calculus can be immediately
+1181.889,4.561,interpreted in there with no problems
+1184.32,4.65,category also has Co products so I can
+1186.45,5.13,have some types you know disjoint Union
+1188.97,4.35,types basically bull and bit we've just
+1191.58,3.329,seen our objects in this category so
+1193.32,3.599,these can be base types my lambda
+1194.909,4.2,calculus has a type bool and a type it
+1196.919,4.11,also this function in it from bolt AB it
+1199.109,3.78,would for example be a morphism that can
+1201.029,4.89,be a constant in my lambda calculus and
+1202.889,4.711,I have other things here for example
+1205.919,4.11,constant story falls and if-then-else
+1207.6,4.679,construction as well as built in gates a
+1210.029,4.411,gate would be something like a function
+1212.279,3.99,from bid cross bid to a bit like which
+1214.44,5.069,we think of as a gate in a circuit
+1216.269,5.431,rather than when if it were from bull
+1219.509,3.63,cross rule to bull then it's like
+1221.7,3.779,if-then-else in the programming language
+1223.139,6.54,but it's from bit cross bit to bit then
+1225.479,5.52,we think of it as a gate okay the sort
+1229.679,4.021,of thing that will be evaluated at
+1230.999,5.49,circuit run time rather than circuit
+1233.7,5.849,generation time so we have all that
+1236.489,5.79,moreover the category is complete so we
+1239.549,6.45,have initial quality bruh initial
+1242.279,5.25,algebra of of continuous factors in
+1245.999,4.471,other words we have inductive datatypes
+1247.529,5.671,here as well natural numbers lists the
+1250.47,4.379,trees you know all the usual types so
+1253.2,6.299,that's quite a rich programming language
+1254.849,6.721,actually and and so it's a simple
+1259.499,4.61,functional programming language for
+1261.57,5.4,describing families of boolean circuits
+1264.109,5.32,these are ordinary boolean circuit so I
+1266.97,5.399,have bit by a fool I don't have qubit
+1269.429,5.19,right but you have gates such as and for
+1272.369,5.37,example so this this describes ordinary
+1274.619,4.951,circuits not the reversible kind and
+1277.739,3.81,that's you can actually use this
+1279.57,3.87,programming language it's actually quite
+1281.549,6.271,convenient and type safe all right
+1283.44,7.199,because it has a model but we want to do
+1287.82,4.079,oh sorry there's more structure in this
+1290.639,3.691,model even that I haven't talked about
+1291.899,4.95,yet there are five functors between set
+1294.33,4.169,and set to the two up and all of them
+1296.849,4.05,are add joins to each other in this way
+1298.499,3.78,and from these are junctions so here's
+1300.899,3.21,what the functors are there's an imp
+1302.279,5.25,there's an obvious embedding from set
+1304.109,6.091,where you just take a set and let a 0
+1307.529,4.321,and a 1 both be that same set and take
+1310.2,3.9,that kind of thing is called a parameter
+1311.85,4.23,type a type that has just parameter and
+1314.1,4.829,no state like bool is an example of
+1316.08,5.04,something of that shape okay and then it
+1318.929,3.99,turns out to have both left and right ad
+1321.12,3.63,joints and they interns have left and
+1322.919,3.991,right joints and of course this is not a
+1324.75,4.08,new thing to category theories true for
+1326.91,3.93,any pre-shift category that you have you
+1328.83,3.75,know such factors but for us it's
+1330.84,3.719,interesting because the fact that these
+1332.58,4.979,who are are in a junction for example
+1334.559,4.86,gives you a comonad on the model and
+1337.559,3.87,that common ad will be the bang of
+1339.419,3.931,linear logic we are not going to really
+1341.429,3.99,use it here because we have sort of
+1343.35,4.59,classical circuits and we not are not
+1345.419,4.441,worried about linearity but later the
+1347.94,4.109,bang of linear logic will come in handy
+1349.86,3.66,when we are in a linear setting and then
+1352.049,3.63,certain things might be nonlinear
+1353.52,4.409,similarly the fact that you have in a
+1355.679,4.201,junction between these two factors gives
+1357.929,3.301,you all gives you a monad on the object
+1359.88,4.71,and that one that also has a
+1361.23,5.85,computational interpretation we call it
+1364.59,4.38,the shape monad but I will actually sort
+1367.08,4.5,of skip that one out in the interest of
+1368.97,6.089,time but so we have interesting stuff
+1371.58,5.4,and like I said the bang kind of course
+1375.059,3.481,the bank kind of Court well I'm going to
+1376.98,4.079,skip the bank okay because we're going
+1378.54,4.41,to get to the bank again later what I
+1381.059,6.691,want to do now is do a model of proto
+1382.95,6.24,quicker so reversible circuits of some
+1387.75,4.44,kind or quantum circuits should be
+1389.19,5.79,synthesized here now my model was very
+1392.19,5.01,set theoretic okay absolutely it was
+1394.98,3.63,Cartesian and so on it's not clear how
+1397.2,3.469,you're going to get linear logic really
+1398.61,4.319,in there in sort of a meaningful way so
+1400.669,6.161,when we want to make a model for proto
+1402.929,6.211,paper we should ask at a fundamental
+1406.83,4.55,level what is Pro gripper well it's a
+1409.14,5.61,language for describing families of
+1411.38,5.32,quantum circuits so what in the world is
+1414.75,5.91,a quantum circuit now I could go and
+1416.7,6.09,define it okay it's a certain pictorial
+1420.66,4.259,diagram made up from boxes or whatever
+1422.79,3.9,but actually it's much better to take
+1424.919,5.341,the abstract point of view and say a
+1426.69,5.58,quantum circuit you know definition let
+1430.26,4.86,a symmetric mulato category of quantum
+1432.27,5.67,circuits be given okay a quantum circuit
+1435.12,6.12,therefore is just a morphism
+1437.94,5.28,of a symmetric monado category so this
+1441.24,3.75,so we the whole language connect
+1443.22,3.66,should be described at this generality
+1444.99,3.87,doesn't matter what your category of
+1446.88,3.81,quantum circuits is only matters that
+1448.86,4.17,it's symmetric monoidal so you take your
+1450.69,5.19,favorite gate set take quantum circuits
+1453.03,4.47,over Q bits or Q trades or just or have
+1455.88,3.179,bits in there also and measurement or
+1457.5,4.289,whatever whatever you want to gate set
+1459.059,5.281,to be that's your monoidal category so
+1461.789,4.051,proto paper the generalized view is that
+1464.34,3.66,proto paper is a language for describing
+1465.84,5.01,families of morphisms in a symmetric
+1468.0,5.28,melodic category no longer even have to
+1470.85,4.439,talk about quantum which is nice I think
+1473.28,5.009,most people don't like quantum mechanics
+1475.289,9.63,for some reason they like to think about
+1478.289,8.01,it but yeah anyway so we need so we need
+1484.919,2.821,to keep now we need to keep the best
+1486.299,3.62,parts of this model that I just
+1487.74,5.85,described but we need to make it work
+1489.919,7.471,with the monoidal category rather than
+1493.59,6.27,set ok so how do you do that turns out
+1497.39,4.6,this category is set to the to up has
+1499.86,6.0,many properties some of which I already
+1501.99,6.12,discussed what what is the property that
+1505.86,3.929,we need to generalize now it turns out
+1508.11,4.08,the viewpoint is something of it's
+1509.789,4.471,surprising set to the to up among all
+1512.19,7.68,the other things that it is is also the
+1514.26,8.22,freako product completion of set ok as i
+1519.87,4.559,think john or someone pointed out that
+1522.48,3.96,definition of Korpela completion already
+1524.429,3.601,has set built into it because set itself
+1526.44,4.619,is the free core product completion of
+1528.03,4.56,the one object category that's exactly
+1531.059,4.291,what we will generalize so here's the
+1532.59,4.44,model on one slide that's the whole
+1535.35,5.52,definition everything after that will be
+1537.03,6.6,theorems ok more or less fix a symmetric
+1540.87,5.07,model category of em of circuits this is
+1543.63,4.38,a concrete category we imagine that if
+1545.94,4.109,we had a morphism in this category we
+1548.01,4.529,could print it out in some way ok or
+1550.049,4.981,display it or put it in a data structure
+1552.539,4.081,these will be the actual circuit it may
+1555.03,6.12,have some distinguished objects such as
+1556.62,6.09,bid cubed q trait ok and maybe some
+1561.15,5.25,distinguished morphisms called gates
+1562.71,5.339,whatever they are is up to the user of
+1566.4,3.11,the programming language but let's say
+1568.049,4.411,there are some distinguished objects
+1569.51,3.73,morphisms called gates so this is given
+1572.46,2.67,ok
+1573.24,5.039,now we're going to construct the model
+1575.13,4.47,in two steps and then after that we're
+1578.279,4.02,going to construct the programming
+1579.6,4.62,language to fit this model first we're
+1582.299,4.5,going to fully embed em in some
+1584.22,5.61,arbitrary way in a semantic monoidal
+1586.799,5.791,closed category M is only symmetric
+1589.83,4.5,monoidal so it has tensor products but
+1592.59,3.449,it doesn't have function spaces which
+1594.33,3.99,would be appropriate for circuits all
+1596.039,4.11,right but we're going to fully embed it
+1598.32,3.479,in a symmetric model closed category
+1600.149,4.38,that means we add the function we add
+1601.799,5.311,the high order structure for example and
+1604.529,4.62,and also we want this category m bar to
+1607.11,4.26,be product complete as well this can
+1609.149,5.88,always be done for example by the UN a
+1611.37,5.61,dilemma with the date answer or you
+1615.029,4.111,could do it in the freeway or you could
+1616.98,3.54,do it the point is in my model
+1619.14,3.3,construction I'm not even going to
+1620.52,3.72,specify how we're going to do this I'm
+1622.44,4.56,just going to specify that we're going
+1624.24,4.77,to do this and as a consequence any
+1627.0,3.87,theorems that I prove later will be
+1629.01,3.6,independent of the particular way in
+1630.87,3.539,which I have done this which means I
+1632.61,3.6,will never actually compute anything in
+1634.409,3.841,a generic category or anything like that
+1636.21,4.29,all the theorems will - will be
+1638.25,4.83,independent of how you do that so that's
+1640.5,9.09,a purely abstract thing it only exists
+1643.08,8.339,to support the high order structure at
+1649.59,3.78,the end of the talk someone will ask is
+1651.419,4.11,the model fully abstract because
+1653.37,4.5,everyone feels obliged to ask a question
+1655.529,4.26,like that but full abstraction while is
+1657.87,4.35,of great theoretical interest has no
+1659.789,4.801,practical application whatsoever and the
+1662.22,4.35,proof is whether or not it's fully
+1664.59,4.319,abstract depends entirely on how you
+1666.57,4.26,chose this category m bar if you choose
+1668.909,3.75,it freely then it will be fully abstract
+1670.83,4.319,if you choose the eunetta I'm I will be
+1672.659,4.77,manifestly not fully abstract but the
+1675.149,4.861,point is the model will be adequate and
+1677.429,3.961,ground fully abstract which means
+1680.01,3.84,anything that we can write down at
+1681.39,3.84,ground type that will be distinguished
+1683.85,3.42,by the model if and only if it's
+1685.23,3.09,distinguished in reality all right and
+1687.27,3.149,at higher types
+1688.32,4.77,it's the abstract question not only do
+1690.419,4.23,we not answer it but we manufacture the
+1693.09,3.63,definitions so that tough question
+1694.649,6.421,cannot have an answer and I think
+1696.72,8.36,there's actually a point there you know
+1701.07,7.41,so referees beware right
+1705.08,5.8,so that's first what we do so that's the
+1708.48,4.2,category of state in a sense and then we
+1710.88,4.11,add the parameters by letting M double
+1712.68,4.5,bar be the freako product completion of
+1714.99,4.2,M bar not Coe limit but Co product
+1717.18,4.62,competition what does this concretely
+1719.19,4.77,mean the objects of M double bar are
+1721.8,4.29,going to be families of objects of M bar
+1723.96,4.56,essentially sequences of objects of M
+1726.09,5.58,bar but could be indexed by a set rather
+1728.52,5.85,than just by some natural numbers so an
+1731.67,6.6,object concretely is a pair consisting
+1734.37,6.9,of a set X and then an X index family of
+1738.27,5.55,objects of the category m bar so the set
+1741.27,4.44,X is this but rather than saying over
+1743.82,3.78,each little over each element of this X
+1745.71,3.78,we have a fiber that's a set we're
+1747.6,4.86,saying over H X we have a fiber that's
+1749.49,5.16,an object of the category m bar the
+1752.46,4.29,fibers are object of M bar and then the
+1754.65,4.11,morphisms are the appropriate thing so
+1756.75,3.57,think of so the picture is the same
+1758.76,4.56,right the bottom guy is still an
+1760.32,5.31,honest-to-god set but here I have this a
+1763.32,5.31,sub X is now an object of the category
+1765.63,5.31,it no longer has elements right this a
+1768.63,5.07,sub y is an object of the category M bar
+1770.94,4.83,and a morphism now we'll be a pair F 0
+1773.7,5.729,of a morphism between the underlying set
+1775.77,6.96,and then for each X for each little X
+1779.429,5.461,sort of a morphism of the category m bar
+1782.73,6.84,that's called F sub X which goes from a
+1784.89,6.66,sub X 2 to B sub F of X B sub F 0 of X
+1789.57,3.72,right and that's exactly the definition
+1791.55,4.23,of morphism that's written on the slide
+1793.29,5.16,it's the thing that it has to be if you
+1795.78,6.42,want to follow you know what we did
+1798.45,6.26,before but this category M double bar
+1802.2,6.03,has surprisingly many properties
+1804.71,5.86,obviously it has Co products because I
+1808.23,5.579,added them freely so certainly it will
+1810.57,5.04,have Co products okay the fact that it's
+1813.809,4.231,monoidal the fact that it's symmetric
+1815.61,5.61,monoidal is also not too surprising
+1818.04,4.62,because you can sort of imagine the way
+1821.22,3.3,you define the melodic structure is
+1822.66,4.68,completely straightforward right you
+1824.52,5.039,take the Cartesian product of the states
+1827.34,3.93,and then for each given pair of states
+1829.559,4.261,you take the tensor product of those two
+1831.27,5.35,parameters spaces over those states and
+1833.82,7.18,it's it's it's not surprising to me
+1836.62,6.3,that gives you monoidal structure so the
+1841.0,6.09,parameters are the elements of the set X
+1842.92,7.29,and the states are virtual right they
+1847.09,4.56,would be they live in the object a sub X
+1850.21,4.32,but they're not elements of course
+1851.65,4.5,because that's not a set but we don't
+1854.53,4.02,have to talk about States we're talking
+1856.15,5.82,about circuits which are morphisms right
+1858.55,7.02,we think of States as sort of existing
+1861.97,4.98,but yeah so so these are so we don't
+1865.57,4.65,have States but we have state spaces
+1866.95,5.7,okay the fact that it's symmetric
+1870.22,5.76,monoidal closed is actually surprising
+1872.65,5.37,to me at least so you have this semantic
+1875.98,3.63,model structures actually close normally
+1878.02,3.39,when I freely add co-products to
+1879.61,4.05,something I don't expect it to be closed
+1881.41,5.1,because that's not one of the structures
+1883.66,5.399,I sort of explicitly preserved but there
+1886.51,4.44,is you can check there exists these
+1889.059,3.961,function spaces and it actually does it
+1890.95,4.32,give you give you a right adjoint to the
+1893.02,4.23,tensor product moreover there is an
+1895.27,5.34,obvious embedding offset in M double bar
+1897.25,5.04,which just takes the set X and then the
+1900.61,4.4,trivial fiber over each element which is
+1902.29,5.1,the the unit of the of the tensor and
+1905.01,4.54,that functor again has a right edge
+1907.39,5.28,right just like it did before maybe also
+1909.55,5.25,surprising and this Junction actually
+1912.67,4.8,forms a nonlinear nonlinear model of
+1914.8,4.86,intuitionistic linear logic in exactly
+1917.47,3.839,the sense of Benton 1994
+1919.66,5.94,so there's a model of linear logic right
+1921.309,6.331,here so and we don't have cold limits
+1925.6,4.23,because I only add a co-product freely
+1927.64,5.34,but it turns out usually you need Co
+1929.83,6.84,limits to do initial algebra because you
+1932.98,6.18,want to do 0 arrow F of 0 arrow F of F
+1936.67,3.66,of 0 arrow F of F of F of 0 and then
+1939.16,2.94,you're going to take the cool limit of
+1940.33,3.24,this whole sequence that's how you
+1942.1,3.9,construct the initial algebra for the
+1943.57,4.56,factor f this factor this one this
+1946.0,4.559,category only has Co products but it
+1948.13,4.02,turns out that's enough to compute the
+1950.559,3.421,sort of initial algebras that we're
+1952.15,3.39,interested in namely if you have
+1953.98,3.6,functors that are only built from sum
+1955.54,4.44,and product then it turns out the co
+1957.58,4.86,limit that you have to compute turns out
+1959.98,4.53,to actually be an infinite co product so
+1962.44,3.989,so this you can actually interpret
+1964.51,4.71,inductive types in here for example list
+1966.429,3.341,of qubit is a type is an object in this
+1969.22,3.13,category
+1969.77,5.19,okay or at least a bit or even the
+1972.35,5.99,natural numbers or trees or any of these
+1974.96,5.79,other so you have so we have quite a lot
+1978.34,5.17,so we have boolean we have natural
+1980.75,6.36,numbers an object is a parameter object
+1983.51,5.61,if all its state spaces are trivial we
+1987.11,5.28,have sort of basic objects for the
+1989.12,5.85,category M so these are wire types like
+1992.39,4.56,bit and qubit labeled you know objects
+1994.97,6.75,of the category M correspond to labels
+1996.95,6.54,on wires and then we have gates and and
+2001.72,4.53,it turns out the and and we have a model
+2003.49,6.21,of linear logic okay and the in the in
+2006.25,5.82,the in the model bang of you arrow T if
+2009.7,4.59,you and T are objects of M then bang of
+2012.07,4.56,you arrow T is actually a parameter
+2014.29,5.49,object whose underlying set is exactly
+2016.63,5.61,the home set of uart so the elements of
+2019.78,5.25,bang you era T or the closed values of a
+2022.24,7.41,are you of that type are going to be
+2025.03,7.74,exactly the circuits from you to T so
+2029.65,5.55,then we define so now we have okay it's
+2032.77,4.2,it's mano de close so we can interpret a
+2035.2,4.229,standard linear lambda calculus in it
+2036.97,5.4,with co-products also we can have base
+2039.429,5.701,types like bit cubed bull we have
+2042.37,4.2,inductive types and we can and the
+2045.13,4.44,variables that happen to be off
+2046.57,4.65,parameter type of type bang a can also
+2049.57,4.53,be duplicated so even though you have a
+2051.22,5.49,linear lambda calculus it's you know for
+2054.1,4.079,ordinary lambda calculus for those you
+2056.71,4.26,can also have some external operations
+2058.179,4.411,like you saw in my quiver example at the
+2060.97,4.26,end I printed the circuit for example
+2062.59,4.17,and I viewed it in Acrobat Reader so if
+2065.23,3.24,you have a function print which takes
+2066.76,4.649,you far mahom set to a set of documents
+2068.47,5.459,then this actually that's external to
+2071.409,5.52,the category M but it would internally
+2073.929,5.611,turn into a morphism in my model so even
+2076.929,6.48,the print function lives in the model
+2079.54,5.4,okay and then you make and now we make
+2083.409,3.841,the programming language that basically
+2084.94,4.26,contains all this stuff I told you so
+2087.25,4.02,these are the types you know we talked
+2089.2,3.36,about all these operations sometimes our
+2091.27,3.48,parameter types and you can say
+2092.56,4.23,syntactically what they are simple types
+2094.75,5.25,correspond to objects of the original
+2096.79,5.819,category m and sir corresponds to
+2100.0,2.76,circuits contexts are as usual judgments
+2102.609,2.461,are
+2102.76,4.41,as usual and the terms and typing rules
+2105.07,5.76,are as usual because everyone knows what
+2107.17,4.8,a linear lambda calculus is okay the
+2110.83,3.81,only thing that's maybe slightly
+2111.97,4.23,different is a further bang bang is a
+2114.64,4.56,common ad so you have lift and force
+2116.2,5.07,okay so that's really sort of as simple
+2119.2,3.51,as it can be and and of course when you
+2121.27,3.03,have parameter types then they do
+2122.71,6.3,pickable so you can use them in both
+2124.3,7.29,hypotheses so Tara now I've made a
+2129.01,4.5,language to fit this model now we also
+2131.59,4.74,made a operational semantics for this
+2133.51,4.59,language I've done alright and then it
+2136.33,4.62,satisfies all the usual theorems in
+2138.1,5.7,particular it sound so you have a small
+2140.95,4.98,step semantics each state denotes a
+2143.8,4.2,morphism of the category when one state
+2145.93,3.99,reduces to another state they denote the
+2148.0,3.54,same morphism therefore the initial
+2149.92,3.66,state and the final state denotes the
+2151.54,3.48,same morphism therefore the program
+2153.58,3.29,therefore the operational semantics
+2155.02,4.47,computes the same circuit as the
+2156.87,4.57,denotational semantics so that makes the
+2159.49,3.93,language sound and as Gordon pointed out
+2161.44,5.25,the sound semantics is automatically
+2163.42,5.28,adequate I always forget to say this in
+2166.69,4.11,my papers I just proved soundness and
+2168.7,3.9,forget to say it's adequate and then
+2170.8,4.2,later some someone else writes a paper
+2172.6,3.99,saying it was not known to be a decrypt
+2175.0,4.95,and you know now we've proved it to be
+2176.59,5.25,adequate this actually has happened so
+2179.95,9.21,the end thank you very much
+2181.84,9.88,[Applause]
+2189.16,4.0,you're a mathematical abstraction I'm
+2191.72,3.48,not disagreeing with you or your
+2193.16,4.74,methodology here but I think you're
+2195.2,4.86,overstating things a bit okay
+2197.9,3.66,as an example of level abstraction is
+2200.06,3.42,useful is when people are doing
+2201.56,4.44,compositional bubble checking you're
+2203.48,4.32,looking at program fragments so knowing
+2206.0,3.69,that the semantics of respect to each
+2207.8,4.65,other model checking is for the abstract
+2209.69,4.8,is actually directly used there in
+2212.45,4.2,showing that you're you're in a
+2214.49,6.98,verification apply to the open piece of
+2216.65,7.05,program is relevant to the observation
+2221.47,6.31,you're absolutely correct I was being
+2223.7,5.73,political of course there are some good
+2227.78,3.51,reasons to want to proof fully up full
+2229.43,6.33,abstraction results in these sort of
+2231.29,6.78,situations yes however even if it but
+2235.76,5.55,often if you have a model for something
+2238.07,5.4,and and and you're not fully abstract at
+2241.31,3.27,the high order types but as long as you
+2243.47,1.83,sort of fully abstract at the
+2244.58,3.09,ground-types
+2245.3,4.32,for many practical things says
+2247.67,4.2,absolutely all you would ever hope for
+2249.62,3.72,or even want so of course there are
+2251.87,3.57,exceptions like when you want to reason
+2253.34,4.67,about all programs in some for example
+2255.44,4.71,in an adversarial context like
+2258.01,4.45,photography and you want to reason about
+2260.15,3.87,all attackers you think of the attacker
+2262.46,4.47,as being a morphism in the models
+2264.02,5.49,composition I know that the PLC for so
+2266.93,4.44,there's yes that based off take it with
+2269.51,4.44,a grain of salt right what I said I
+2271.37,5.66,don't mean this as a criticism but I
+2273.95,5.27,think finally one said that
+2277.03,5.37,good thing about quantum computing is to
+2279.22,5.28,help us understand quantum mechanics so
+2282.4,5.52,might ask what's the best choice for
+2284.5,6.39,heaven and far but maybe not ask a
+2287.92,5.78,question different choices of M&M bar
+2290.89,5.07,give different properties of sugar
+2293.7,4.15,different choices of M will just give
+2295.96,4.56,you different classes of circuits so we
+2297.85,8.19,can use this same language as a language
+2300.52,10.8,for describing so the program would
+2306.04,6.45,behave in one way semantics right and
+2311.32,3.96,that's right
+2312.49,4.53,the M is sort of like the signature of
+2315.28,3.45,the language usually when you define a
+2317.02,3.6,language you say and then there are some
+2318.73,3.48,arbitrary base types and constant
+2320.62,3.45,symbols for example you might want to
+2322.21,3.63,have a language about natural numbers
+2324.07,3.51,and then you have one kind of base types
+2325.84,3.3,and constant symbols if you want a
+2327.58,3.09,language about boolean you have
+2329.14,3.84,different kind of base type and constant
+2330.67,3.9,symbols so that's a signature the M gear
+2332.98,5.1,plays the role of the signature the
+2334.57,5.52,given set of gates and types over which
+2338.08,3.57,but the interesting thing is that the
+2340.09,4.83,rest of the language then works
+2341.65,8.46,uniformly you know as the signature was
+2344.92,7.74,given embedding into n bar doesn't make
+2350.11,5.61,any difference as long as it's full and
+2352.66,5.67,faithful I mean it doesn't make any
+2355.72,6.42,difference to the theorems that that we
+2358.33,6.03,could I may have misheard you but you
+2362.14,5.46,rule of d-wave as doing quantum
+2364.36,5.46,computing I didn't say anything about do
+2367.6,5.49,you buy up to them I mentioned that if
+2369.82,6.41,they had a quantum computer be using
+2373.09,3.14,will of it up to something
+2377.209,4.96,if the NSA had a quantum computer that
+2380.429,3.721,could factor then they would certainly
+2382.169,4.14,keep that classified I don't think the
+2384.15,6.329,d-wave machine can factors so whether
+2386.309,12.12,it's a universal quantum device I have
+2390.479,9.151,no opinion about relate this question
+2398.429,2.88,very well but I'm probably not the first
+2399.63,3.299,person to ask it so maybe you can give
+2401.309,4.98,Fitbit answers the question I should be
+2402.929,6.33,asking fine so in describing this is a
+2406.289,4.95,language for producing quantum circuits
+2409.259,3.901,and I think when you refer to the
+2411.239,3.69,operational semantics the end you were
+2413.16,4.47,describing the operational semantics of
+2414.929,4.32,the construction officer something a
+2417.63,3.03,little bit different here compared with
+2419.249,4.68,the way we think about classical
+2420.66,5.25,programming languages and so for example
+2423.929,4.02,you shows a very enormous circuit at the
+2425.91,3.99,beginning so if you imagine using quick
+2427.949,3.81,butter to end up actually doing
+2429.9,3.779,computation I don't think you're
+2431.759,3.48,suggesting the Clipper would construct
+2433.679,4.201,this enormous circuit which you don't
+2435.239,4.32,physically built and feed data through
+2437.88,4.76,it's not these are not Hardware circuits
+2439.559,8.04,well this is my this is my question
+2442.64,6.429,so I mean by analogy with them so say
+2447.599,2.91,when you define a classical programming
+2449.069,3.54,language and give it it operational
+2450.509,3.74,semantics what you're doing here seems
+2452.609,4.56,to be a bit like saying that the
+2454.249,6.01,operational semantics of a a Java
+2457.169,5.731,program is the process of constructing
+2460.259,6.68,an assembly language program but that
+2462.9,4.039,does the same computation no no no no
+2467.839,5.561,whenever you have a operational
+2471.9,3.059,semantics let's say a call-by-value
+2473.4,4.919,language because this is call by value
+2474.959,6.06,it turns out for example you describe
+2478.319,4.62,you have your big step semantics which
+2481.019,4.7,somehow evaluates your program to a
+2482.939,5.37,value and we consider for it sort of
+2485.719,4.6,observable to be values of ground-type
+2488.309,3.72,like for example bool in many languages
+2490.319,2.97,you just take bulls or integers it
+2492.029,3.601,should be the final log you know we have
+2493.289,3.96,all your high order programs and so on
+2495.63,3.329,but at the end of the day you compare
+2497.249,3.901,like whether two programs compute the
+2498.959,4.61,same boolean so here what the point of
+2501.15,6.059,view is that a circuit is an observable
+2503.569,4.431,so the circuit is the thing that you are
+2507.209,2.351,actually computing
+2508.0,4.2,the circuit itself is just a list of in
+2509.56,4.08,list of gates and the list of kids it's
+2512.2,3.21,a personal hardware brand it's something
+2513.64,4.98,you would pass as a set of instructions
+2515.41,6.27,say to a quantum computer so yeah that's
+2518.62,4.71,actually that is what what it computes
+2521.68,4.17,right this is this is the difference
+2523.33,4.83,between clipper and the and the quantum
+2525.85,4.11,lambda calculus the quantum lambda
+2528.16,3.63,calculus is also a high order language
+2529.96,4.17,for quantum computing but we imagine it
+2531.79,4.02,running sort of directly on the quantum
+2534.13,3.51,computer or with access to the quantum
+2535.81,3.09,computer so when you do a measurement in
+2537.64,3.09,the language the measurement will be
+2538.9,3.96,done when you apply a gate in the
+2540.73,5.79,language the gate will be applied but in
+2542.86,6.03,fact it turns out one thing when you
+2546.52,4.8,want to actually implement quantum
+2548.89,4.83,algorithms that are non-trivial there's
+2551.32,4.53,a lot of meta operations in the research
+2553.72,3.75,paper it might say it is well known that
+2555.85,2.52,such-and-such program can be solved in
+2557.47,2.64,polynomial time
+2558.37,3.75,therefore they exist a boolean circuit
+2560.11,3.57,for it now use the standard trick to
+2562.12,4.44,make this building circuit reversible
+2563.68,4.62,then you know turn it into a quantum
+2566.56,3.6,circuit then apply amplitude
+2568.3,4.02,amplification which is another sort of
+2570.16,4.74,strategy that takes the circuit and
+2572.32,5.46,produces another circuit so it turns out
+2574.9,4.74,for all these higher operations you want
+2577.78,4.32,to treat these circuits actually as data
+2579.64,3.99,not just as something that you do on the
+2582.1,4.89,quantum computer but the circuit itself
+2583.63,5.22,is constructed and then modified so this
+2586.99,4.65,you can do in this is sort of the whole
+2588.85,4.38,philosophy of crepper for example you
+2591.64,3.18,have constructed a circuit and now you
+2593.23,3.5,would like to decompose it into a
+2594.82,4.77,different set of elementary gates
+2596.73,8.97,typically what you can do in propelling
+2599.59,6.11,languages okay thank you very much
+2608.48,2.06,you

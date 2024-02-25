@@ -1,0 +1,471 @@
+second,duration,transcript
+3.92,7.839,[Music]
+10.24,2.24,hello everyone welcome to another
+11.759,3.281,episode
+12.48,4.32,and today we have devon chatterjee a
+15.04,3.04,predictive analytics consultant at
+16.8,2.72,lasalle network
+18.08,3.44,and today we're speaking more about the
+19.52,3.36,topic of quantum computing and data
+21.52,3.599,science for it
+22.88,3.28,so welcome to the show devon i'm such a
+25.119,2.721,pleasure to have you today
+26.16,3.279,hi hi catherine and thanks for having me
+27.84,3.279,on the program yeah absolutely
+29.439,3.28,could you tell the audience just more
+31.119,3.6,about where you're coming from
+32.719,3.68,and your background and just what led
+34.719,4.801,you to your role today
+36.399,3.521,sure uh so i majored in physics and went
+39.52,2.16,to
+39.92,3.6,university of new mexico to study
+41.68,3.68,quantum information processing that was
+43.52,3.199,around 2000 2001
+45.36,3.28,i studied under people like murray
+46.719,4.801,gilman from there
+48.64,4.8,i went to university of chicago to study
+51.52,5.44,math and computer science
+53.44,4.639,then on to iit to work on my phd in
+56.96,3.36,analytics where
+58.079,3.841,my dissertation topic was hedge fund
+60.32,3.36,replication with deep neural networks
+61.92,4.16,and generative adversarial networks
+63.68,4.479,when i was in chicago i started working
+66.08,3.92,in systems engineering
+68.159,3.361,and because of my analytics background i
+70.0,3.84,started doing analytics
+71.52,4.639,within it and that was before data
+73.84,4.72,science was even mainstream
+76.159,4.721,so my last position was as a senior data
+78.56,6.0,scientist in a cyber security group
+80.88,4.08,now i'm consulting helping a company on
+84.56,3.04,their
+84.96,3.519,digital transformation journey to
+87.6,3.28,improve their
+88.479,3.841,quality and governance and expand their
+90.88,3.76,analytics capabilities
+92.32,3.759,in addition i've taught business
+94.64,4.72,analytics and data science
+96.079,6.08,at iit in northeastern illinois
+99.36,5.119,university and i'm currently a course
+102.159,4.481,developer and adjunct professor
+104.479,3.761,in business analytics at indiana tech
+106.64,3.04,yeah that's awesome so you're clearly
+108.24,4.559,doing a lot of different things
+109.68,4.399,in the data field right now yeah
+112.799,3.041,and so what do you think are some
+114.079,2.4,similarities and differences that you've
+115.84,2.559,seen in
+116.479,3.201,quantum computing and data science since
+118.399,3.76,i'm sure there's a lot of
+119.68,3.439,overlap between these two areas there's
+122.159,4.32,actually
+123.119,5.12,probably not um that's yeah people might
+126.479,3.361,think that but there's actually mostly
+128.239,3.681,differences between the two fields
+129.84,4.479,as far as similarities i would say both
+131.92,5.36,areas are you know expanding due to
+134.319,5.041,advances in technology but there's also
+137.28,3.44,like a prevalent lack of understanding
+139.36,3.36,of both topics
+140.72,3.68,mostly quantum computing since it's so
+142.72,4.239,much newer than data science
+144.4,4.64,but anyone experiencing the uses of you
+146.959,5.36,know machine learning and ai
+149.04,5.68,at mainly as like buzzwords for example
+152.319,3.841,can fully appreciate that comment now
+154.72,3.92,quantum computing
+156.16,4.96,is one part of a broader quantum
+158.64,4.16,technology umbrella similar to ai
+161.12,3.199,being you know like under machine
+162.8,3.76,learning but
+164.319,3.521,in quantum computing there's things like
+166.56,3.44,quantum key distribution
+167.84,4.64,post quantum cryptography quantum
+170.0,4.72,software quantum materials
+172.48,3.039,one idea was to utilize quantum
+174.72,3.2,mechanics
+175.519,4.0,in a computer to speed up the
+177.92,3.84,computation of complex
+179.519,4.161,problems like those in optimization and
+181.76,4.64,finance and biology
+183.68,4.32,and eventually machine learning and ai
+186.4,3.6,so there's currently some research in
+188.0,4.879,the area of quantum machine learning
+190.0,4.64,and ai now some of the differences are
+192.879,3.28,that data science you know obviously
+194.64,3.519,uses classical computers
+196.159,3.201,which uses bits you know zeros and ones
+198.159,3.921,to perform the operations
+199.36,3.36,quantum computers use quantum bits or q
+202.08,2.879,bits
+202.72,4.64,to process the data so due to their
+204.959,3.121,basis in quantum mechanics qubits can be
+207.36,3.84,in both
+208.08,6.159,a zero and a one state simultaneously
+211.2,3.44,due to a concept called superposition so
+214.239,2.321,these
+214.64,3.92,and other aspects of quantum mechanics
+216.56,2.72,will allow quantum computers to obtain
+218.56,2.72,what's called
+219.28,3.92,quantum supremacy over classical
+221.28,4.16,computers quantum supremacy
+223.2,4.319,is where a quantum computer can solve a
+225.44,2.879,problem much faster than a classical
+227.519,2.881,computer
+228.319,4.081,so the more complex the problem the
+230.4,2.559,better a quantum computer will actually
+232.4,3.759,be
+232.959,5.121,at solving it faster right google
+236.159,3.521,has actually claimed to achieve quantum
+238.08,4.4,supremacy in
+239.68,4.32,back in 2019 it was around october
+242.48,3.44,november of 2019.
+244.0,3.519,now before that the progression of
+245.92,3.76,quantum computing had been
+247.519,3.121,essentially linear but now it's like
+249.68,3.04,exponential
+250.64,3.36,so there's new participants entering
+252.72,4.0,that field every year
+254.0,3.28,whether it's startups r d or developing
+256.72,2.799,hardware
+257.28,3.199,some other differences between the two
+259.519,3.041,are
+260.479,3.601,in the knowledge required so data
+262.56,2.96,science mainly requires
+264.08,3.839,you know as you know like knowledge of
+265.52,4.16,statistics econometrics programming
+267.919,3.761,visualization tools
+269.68,4.64,but quantum computing requires knowledge
+271.68,4.72,of quantum mechanics and matrix theory
+274.32,3.84,to start with so at this point i would
+276.4,3.359,also probably say that knowledge of
+278.16,3.92,quantum hardware materials and
+279.759,4.641,architectures are also needed
+282.08,4.08,since there's a few contending
+284.4,4.079,approaches to quantum computing
+286.16,4.96,like ibm's gate-based solution and
+288.479,5.521,d-wave's annealing-based solution
+291.12,5.12,so really data science is a way to use
+294.0,4.0,statistics visualizations and machine
+296.24,3.92,learning and ai algorithms
+298.0,3.6,to create solutions to problems and get
+300.16,3.2,more answers from the
+301.6,3.76,ever-increasing amounts of data that
+303.36,4.32,exist whereas
+305.36,4.24,quantum computing is mainly a technology
+307.68,4.079,based on quantum mechanics
+309.6,3.2,that will help solve those problems
+311.759,3.841,significantly
+312.8,4.239,faster and push past the current
+315.6,3.599,computational limits
+317.039,3.681,when doing data science on those
+319.199,2.961,classical computers
+320.72,3.36,it sounds like from just your
+322.16,4.0,explanation here it sounds like they can
+324.08,3.839,come hand in hand with each other as
+326.16,2.08,well and they can really complement each
+327.919,2.401,other
+328.24,3.12,also um even despite you know their
+330.32,3.52,differences right
+331.36,3.6,yes absolutely they're you know quantum
+333.84,4.079,computing is
+334.96,4.4,mainly for you know speeding up those
+337.919,3.521,types of problems which
+339.36,3.04,machine learning and ai models and
+341.44,3.12,algorithms
+342.4,3.28,help solve right in a better way than
+344.56,3.12,some other things like think
+345.68,3.68,think deep neural networks right
+347.68,2.799,although you know deep neural networks
+349.36,2.72,is a black box but
+350.479,3.28,quantum computing i think is probably
+352.08,4.8,even more
+353.759,4.56,obscure and unknown as to how that works
+356.88,2.0,it's a little bit more difficult even
+358.319,3.44,but
+358.88,4.08,yes definitely uh quantum computing will
+361.759,3.44,be able to
+362.96,3.04,work hand-in-hand at that point in the
+365.199,2.481,future with
+366.0,3.68,you know machine learning and ai you
+367.68,2.239,know with data science yeah absolutely
+369.68,1.92,and
+369.919,4.161,for these two topics how are they kind
+371.6,4.0,of being used in the it world today
+374.08,3.28,everyone kind of knows that data science
+375.6,4.159,has a number of business use cases
+377.36,3.04,but it also has a number of use cases in
+379.759,2.56,it
+380.4,3.76,so when hearing about data science i
+382.319,4.32,think most people tend to think of
+384.16,3.12,business applications like marketing
+386.639,3.28,health care
+387.28,4.56,claims finance etc right but data
+389.919,2.72,science applications in iet and cyber
+391.84,3.359,security
+392.639,3.201,are comparatively newer application
+395.199,3.12,areas
+395.84,4.16,in cyber security the main use cases are
+398.319,3.6,things like anomaly detection
+400.0,3.6,behavioral analytics attack
+401.919,4.0,classification or prediction
+403.6,4.24,predicting distributed denial of service
+405.919,2.321,attacks and privileged user analytics
+407.84,2.16,right
+408.24,3.6,and one of the big issues or the
+410.0,4.479,probably the biggest issues i found
+411.84,3.359,was that data is not as easily
+414.479,2.401,structured
+415.199,3.44,as it is on the business side you know
+416.88,3.599,within cyber security and i t
+418.639,4.721,and since cyber security leadership
+420.479,5.041,tends to be you know people with
+423.36,3.36,you know backgrounds and security but
+425.52,3.92,not much
+426.72,4.0,background in big data and data science
+429.44,3.199,then they need to trust the data
+430.72,3.44,scientists and data engineers to be the
+432.639,3.521,data experts
+434.16,3.439,right just like on the business side now
+436.16,3.759,in it
+437.599,3.121,outside of cyber security there's use
+439.919,3.041,cases that
+440.72,3.039,that may not be typically implemented at
+442.96,2.88,most companies
+443.759,3.921,one example from my last position was
+445.84,3.6,using machine learning to create
+447.68,4.4,a probability risk score for change
+449.44,3.92,management so here we used historical
+452.08,4.239,features of changes
+453.36,4.399,incidents and configuration information
+456.319,4.32,from infrastructure
+457.759,4.081,to help determine a risk score for new
+460.639,3.68,changes
+461.84,3.039,and their risk of causing an outage so
+464.319,2.56,the model
+464.879,3.121,used logistic regression to create the
+466.879,2.641,risk score
+468.0,3.36,if that score was above a certain
+469.52,4.079,threshold the it
+471.36,4.16,change management team could put it on
+473.599,3.841,hold they could reschedule it
+475.52,4.239,require additional information and
+477.44,4.159,sign-offs things like that
+479.759,3.12,so this actually had a realized savings
+481.599,4.401,associated with it
+482.879,5.201,due to the cost avoidance of outages and
+486.0,3.84,i'm doing something similar to this for
+488.08,2.559,the company i'm currently consulting for
+489.84,3.919,as well
+490.639,3.441,now for quantum computing it's actually
+493.759,1.921,too
+494.08,3.36,new to have current applications in
+495.68,4.32,business or it
+497.44,3.92,but there is a lot of r d happening in
+500.0,3.919,this area right now
+501.36,3.2,for example well goldman sachs recently
+503.919,2.161,said that they
+504.56,3.12,expected to be utilizing quantum
+506.08,2.88,applications within the next three to
+507.68,3.76,five years
+508.96,4.319,anthem is currently developing practical
+511.44,2.8,quantum computing applications to
+513.279,2.961,enhance the
+514.24,3.84,consumer healthcare experience but
+516.24,4.479,personally my opinion is
+518.08,3.92,i think that quantum programs and
+520.719,3.12,applications
+522.0,4.08,will take a little bit longer like maybe
+523.839,4.241,in the seven to ten year time frame
+526.08,3.199,because it's that crawl walk run
+528.08,2.96,scenario where
+529.279,4.24,you know everyone tends to focus more on
+531.04,4.08,the walk and run phases right so
+533.519,3.361,but they're still definitely in that
+535.12,3.68,crawl phase so
+536.88,3.36,there's some some work that needs to be
+538.8,4.08,done still but
+540.24,3.92,however i want to point out a caveat to
+542.88,3.6,that is
+544.16,4.08,one area of quantum technology that will
+546.48,2.72,definitely be relevant within the next
+548.24,4.4,three to five years
+549.2,6.24,is quantum security so within that time
+552.64,4.72,quantum computing will pose a threat to
+555.44,3.76,the security built into every company's
+557.36,3.76,it systems
+559.2,4.079,state-sponsored quantum computing
+561.12,4.56,hacking labs already exist
+563.279,3.041,and if a company's existing encrypted
+565.68,3.04,data
+566.32,4.32,is compromised a threat actor can
+568.72,3.6,actually hold onto that data
+570.64,3.36,and unencrypt it when the quantum
+572.32,3.68,technology is available so
+574.0,4.24,last fall i created a quantum risk
+576.0,4.24,presentation for our company ciso or the
+578.24,4.56,chief information security officer
+580.24,3.84,at that time there was a survey that
+582.8,3.28,determined that about
+584.08,3.36,half of it leaders viewed quantum
+586.08,4.56,computing as a threat
+587.44,4.399,but 71 percent of them said that they
+590.64,2.639,thought it would be a threat within the
+591.839,4.641,next three years
+593.279,5.361,and this was last year so companies need
+596.48,2.799,to look at transitioning to what are
+598.64,2.96,called
+599.279,3.761,quantum safe solutions there's a number
+601.6,3.44,of vendors already offering these
+603.04,3.84,solutions but the first thing that
+605.04,4.56,companies will need to do is perform
+606.88,3.6,a quantum risk assessment then evaluate
+609.6,2.96,vendors
+610.48,3.919,and quantum safe products and then
+612.56,4.32,develop some internal knowledge on
+614.399,3.601,quantum technology also finally you know
+616.88,3.36,you have to keep track of the
+618.0,3.839,developments in quantum computing and
+620.24,3.12,quantum key distribution and quantum
+621.839,5.601,safe solutions
+623.36,6.719,so that's mainly how quantum computing
+627.44,3.68,i feel would be utilized then within it
+630.079,2.561,in the near future
+631.12,3.6,yeah definitely and i think that's such
+632.64,3.759,an interesting insight to kind of think
+634.72,3.44,about for the future as well with
+636.399,3.761,everything really growing in this
+638.16,3.359,technology field right now is there any
+640.16,2.239,interesting projects that you'd like to
+641.519,2.56,talk about that
+642.399,3.12,you were able to utilize content
+644.079,4.32,computing yeah well
+645.519,5.121,so far the only projects i've worked on
+648.399,4.721,have been part of you know workshops
+650.64,4.08,textbooks or other online sources i
+653.12,3.44,started getting back into quantum
+654.72,3.119,information processing a few years ago
+656.56,4.56,when i ran my first
+657.839,6.081,quantum program using quiz kit on ibm
+661.12,4.159,q which is ibm's quantum computer you
+663.92,2.96,know since then i've obtained
+665.279,3.12,some professional certifications in
+666.88,3.76,quantum technology
+668.399,4.88,attended a number of workshops worked on
+670.64,5.84,some programming projects on topics like
+673.279,4.881,quantum tomography super dense coding
+676.48,3.76,swapping quantum states and quantum
+678.16,5.119,teleportation so some interesting
+680.24,5.68,projects involving some programming but
+683.279,4.721,in addition i'm also connected to
+685.92,5.2,founder of a startup in chicago
+688.0,4.399,called chicago quantum so last year they
+691.12,3.12,used d-waves
+692.399,3.201,quantum computers which is a quantum
+694.24,3.599,annealing computer
+695.6,4.479,to do portfolio optimization and they
+697.839,4.0,published a paper on that last july
+700.079,3.921,since my dissertation is on hedge fund
+701.839,2.961,replication and i use a factor-based
+704.0,3.12,approach
+704.8,4.32,to creating the portfolios i'm
+707.12,3.76,particularly interested in their work
+709.12,3.6,so at some point i would like to
+710.88,4.079,replicate what they did and possibly
+712.72,4.88,apply it to my research topic as well
+714.959,3.041,but outside of those types of things
+717.6,2.88,there's
+718.0,3.279,really not it's not like in data science
+720.48,2.479,where you have
+721.279,3.921,you know a bunch of stuff on udemy or
+722.959,4.081,wherever and and you can you know find a
+725.2,2.879,bunch of projects you know on github or
+727.04,3.039,whatever so
+728.079,3.281,it's kind of limited as far as projects
+730.079,3.44,really into quantum computing
+731.36,3.599,yeah definitely and i know that you
+733.519,2.161,would also mention that quantum
+734.959,3.041,computing is
+735.68,3.839,kind of a relatively newer field that's
+738.0,3.6,um emerging right now
+739.519,4.081,and what have been some resources that
+741.6,2.4,you've taken a look at just to help you
+743.6,2.72,with your
+744.0,3.279,journey with learning more about this
+746.32,3.92,specific niche
+747.279,4.161,sure um well i mean you know we're
+750.24,2.88,talking about data science
+751.44,3.6,too but those are obvious there's lots
+753.12,3.68,of sources available for data science
+755.04,4.4,outside of the university courses like i
+756.8,4.479,mentioned udemy coursera udacity
+759.44,3.6,even facebook groups right and i've
+761.279,2.481,utilized all of those at some point so
+763.04,2.64,it really
+763.76,3.36,depends on for data science it really
+765.68,3.12,depends on you know where you are in
+767.12,3.68,your data science journey as to what
+768.8,4.0,resources you need
+770.8,4.32,for quantum computing there's not as
+772.8,4.88,much available so aside from university
+775.12,5.519,courses in things like quantum mechanics
+777.68,3.92,there and quantum information processing
+780.639,4.241,there's not
+781.6,5.359,a lot of institutions offering programs
+784.88,4.639,for example in quantum computing yet so
+786.959,4.961,it's kind of like where data science was
+789.519,3.681,about 10 years ago or 12 years ago
+791.92,3.52,something like that
+793.2,3.759,there's a number of seminars conferences
+795.44,3.12,and workshops out there
+796.959,3.361,you just have to look a little harder to
+798.56,2.24,find them but if someone's interested in
+800.32,3.199,learning
+800.8,4.56,more about quantum computing or quantum
+803.519,2.32,technology in general like i would
+805.36,3.599,suggest
+805.839,4.8,starting there and expanding your
+808.959,3.841,resources and connections
+810.639,3.521,from there and that that's essentially
+812.8,3.44,how i approached it
+814.16,3.6,yeah no i think that's great and i
+816.24,3.52,wanted to say thank you so much devon
+817.76,3.68,for joining us today on the show
+819.76,3.12,we the data standard are trying to build
+821.44,3.36,a community where everyone can just
+822.88,3.519,network and collaborate with each other
+824.8,4.24,so what is something that you're kind of
+826.399,4.641,looking for out of the community here
+829.04,3.919,a couple of things i think first i would
+831.04,5.12,certainly be interested in networking
+832.959,5.281,collaborating sharing ideas with anybody
+836.16,4.239,who's interested in these topics
+838.24,4.24,second i've worked on quantum technology
+840.399,4.24,risk evaluations and road maps
+842.48,3.68,in cyber security so if anyone is
+844.639,3.281,interested in
+846.16,4.0,learning more about that or doing that
+847.92,3.68,within our company you know feel free to
+850.16,3.52,contact me for that as well
+851.6,4.16,yeah perfect and uh where can everyone
+853.68,4.0,find you online just to connect with you
+855.76,4.16,well probably the best place would be
+857.68,4.159,linkedin you know for anyone interested
+859.92,3.2,you can reach out to me on linkedin and
+861.839,3.44,and i i
+863.12,3.279,you know monitor that you know regularly
+865.279,2.721,so perfect
+866.399,3.201,and uh to our audience for more
+868.0,4.959,information on the data standard you can
+869.6,5.28,find us at www.datastandard.io
+872.959,3.68,as well as on our linkedin and youtube
+874.88,3.44,channel thank you so much devon for
+876.639,3.041,joining us it was so great to have you
+878.32,3.04,on the show to talk more about
+879.68,3.36,quantum computing and data science
+881.36,2.79,together hey thanks for having me on the
+883.04,31.36,show
+884.15,30.25,[Music]
+919.35,11.21,[Music]
+928.48,2.08,you

@@ -1,0 +1,469 @@
+second,duration,transcript
+4.46,1.28,- Good morning.
+5.74,1.44,"Okay, so I'm Zahra Ashktorab"
+7.18,2.52,"from IBM Research and I'm
+really excited to present to you"
+9.7,3.81,"the work we did on Quantum
+Human-Computer Interaction."
+13.51,1.43,"I did this work with my colleagues,"
+14.94,3.153,"Justin Weisz and Maryam
+Ashoori, from IBM Research."
+19.37,2.59,"So, quantum computing was once considered"
+21.96,1.49,"a purely theoretical domain,"
+23.45,2.87,"but it's rapidly becoming a
+reality with the availability"
+26.32,3.15,"of publicly accessible
+quantum computing systems"
+29.47,1.87,and has recently gained a lot of attention
+31.34,2.61,"for the things that it can
+potentially accomplish."
+33.95,3.15,"It has the potential
+to accomplish problems,"
+37.1,2.36,"considered intractable
+for classical computers."
+39.46,2.48,"For example, scientists
+have used computers"
+41.94,2.27,to determine the ground state energy
+44.21,4.26,"for Beryllium hydride, a
+complex inorganic molecule."
+48.47,1.87,"Performing these kinds of simulations,"
+50.34,2.41,"has a tremendous computational cost,"
+52.75,2.65,often intractable for classical computers
+55.4,1.48,but the results of these simulations
+56.88,2.83,"may lead to discovery of
+new drugs and materials"
+59.71,2.203,and even bolster clean energy efforts.
+63.01,2.8,"So, one might ask, how did HCI researchers"
+65.81,1.99,get involved with quantum HCI?
+67.8,2.65,"And are interested in
+defining a new practice"
+70.45,2.18,"of quantum HCI, stem from our experiences"
+72.63,2.44,"in joining a new team, that was focused"
+75.07,2.5,on building tools for quantum scientists.
+77.57,2.52,"As HCI researchers new
+to quantum computing,"
+80.09,2.59,we found ourselves spending a lot of time
+82.68,3.13,"familiarizing ourselves
+and learning new concepts"
+85.81,1.76,and terminology that were quite outside
+87.57,1.37,of our comfort zone.
+88.94,2.9,"And during this process, we
+realized the tremendous impact"
+91.84,3.0,"that good HCI research and
+practice could have on the field."
+97.87,1.5,"So in this talk, I'm gonna begin"
+99.37,2.683,with a short primer on quantum computing.
+103.93,2.54,"So in classical computing,
+information is encoded"
+106.47,4.0,"with bits that are either
+in the state of zero or one."
+110.47,4.55,"In quantum computing,
+information is encoded in qubits"
+115.02,1.36,"and as with classical computing,"
+116.38,2.79,they can be in a state of zero or one
+119.17,3.94,"but they may also exist in
+the state of superposition"
+123.11,3.13,"in which their true state is
+unknown until it is measured"
+126.24,2.58,"and they may also be entangled
+with each other such that,"
+128.82,2.94,measuring the state of one qubit tells us
+131.76,2.94,"about the state of the
+other without measuring it."
+134.7,2.33,"And so these are just
+some very basic features"
+137.03,2.333,that make quantum computing so powerful.
+141.52,0.99,"Next, I'm gonna talk about"
+142.51,3.3,existing quantum computing tools.
+145.81,2.29,So there's a number of tools available
+148.1,1.75,"for programming quantum systems,"
+149.85,3.18,"both in simulation and
+with actual hardware."
+153.03,2.69,"GUIs such as IBM's composer and Quirk,"
+155.72,2.78,"enable people to program
+their own quantum circuits"
+158.5,2.04,and visualize the results.
+160.54,3.1,"There's also programming
+languages and SDKs such as,"
+163.64,2.597,IBM's Qiskit and Microsoft's LIQUi.
+166.237,2.613,"And they allow people to
+develop quantum algorithms"
+168.85,3.313,"and run them in simulation,
+sometimes on actual hardware."
+174.29,3.36,"Next, I'm gonna talk about
+the methods that we used."
+177.65,2.43,"So we recruited a small
+batch of participants"
+180.08,2.04,"from our own organization
+through an email,"
+182.12,1.957,seeking individuals who conduct research
+184.077,1.653,and quantum computing.
+185.73,2.19,We then did snowball sampling by asking
+187.92,2.23,who they would recommend to speak with
+190.15,2.72,"both internal and external
+to our organization."
+192.87,1.9,We had a total of seven participants
+194.77,2.333,"from industry, government and academia."
+199.2,1.67,Our interviews were semi-structured
+200.87,3.29,"and probed the following areas;
+education and background,"
+204.16,1.98,"application and algorithms,"
+206.14,2.513,"programming tools and
+workflow and community."
+210.45,1.16,"So the next couple of slides,"
+211.61,2.3,I'm gonna talk about the areas of inquiry
+214.92,1.81,"which we identify
+through these interviews."
+216.73,3.5,"The first of which was,
+understanding quantum users,"
+220.23,3.54,"developing and evaluating
+educational materials,"
+223.77,2.59,designing programming and debugging tools
+226.36,2.163,"and finally, visualizing quantum."
+230.99,2.715,Designing effective technologies
+233.705,2.795,for effective programming quantum systems
+236.5,2.56,"requires an understanding of
+the different types of people"
+239.06,1.61,who will use those systems.
+240.67,1.41,And our quantum development team
+242.08,2.15,had conducted early stage user research
+244.23,2.36,that identified three quantum users;
+246.59,4.193,"quantum scientists, science
+enthusiasts and developers."
+251.62,3.05,"Our first group quantum
+scientists, include professors,"
+254.67,2.15,postdocs and graduate students in physics
+256.82,2.06,and quantum information science.
+258.88,2.8,"They perform experiments
+using quantum simulators"
+261.68,2.48,on real quantum computers.
+264.16,2.28,"Science enthusiasts are
+people who have an interest"
+266.44,2.16,"in quantum computing
+but no formal background"
+268.6,1.63,or training in it.
+270.23,2.26,"They may be university students, academics"
+272.49,2.35,"and industry professionals
+all with varying levels"
+274.84,2.69,of expertise and programming
+277.53,3.323,"and their primary needs are
+for educational materials."
+282.5,1.42,Our third group are developers
+283.92,1.79,and though this group may have
+285.71,2.67,"an extensive knowledge
+on classical computing,"
+288.38,2.58,"their knowledge of quantum
+computing is limited."
+290.96,1.75,"For this audience, SDKs"
+292.71,2.11,that provide a higher level functionality
+294.82,2.42,and hide the lower level technical details
+297.24,3.213,"of their quantum
+implementation are desired."
+302.39,3.09,"So we believe that we captured
+only a preliminary snapshot"
+305.48,1.65,"of quantum computing users,"
+307.13,1.65,and additional research is needed
+309.76,2.68,"to more comprehensively
+identify the people"
+312.44,2.333,who are currently using quantum computers.
+316.42,2.307,"One of our participants said,
+""I think there's another layer"
+318.727,2.19,"of user that we will
+eventually connect with,"
+320.917,1.87,"which is, I want to
+use a quantum computer"
+322.787,3.29,"to accelerate a certain
+aspect of a certain problem"
+326.077,2.57,"but I wanted as a piece
+of a much bigger solution."
+328.647,2.13,The technical folks and banks and finance
+330.777,2.35,"and chemical design
+already have environments"
+333.127,3.69,"they are using to work inside
+and I think I will eventually"
+336.817,1.83,take quantum and plug it in.
+341.15,2.27,"Quantum computing is a
+highly technical subject"
+343.42,2.08,"and that said, there are
+several notable efforts"
+345.5,1.53,that have aimed to make quantum computing
+347.03,3.2,"more accessible, interesting and fun."
+350.23,4.67,"There are introductory
+guides that have low math"
+354.9,2.69,"or no math introductions
+to quantum computing,"
+357.59,1.34,metaphor based approaches
+358.93,3.26,"to teach the fundamental
+principles of quantum mechanics,"
+362.19,2.903,"quantum games and online
+quantum communities."
+367.36,1.37,"So over the last decade,"
+368.73,1.65,"there've been emergence
+of introductory books"
+370.38,2.35,that are intended for general audiences.
+372.73,2.43,"Additionally, institutions
+like IBM, D-Wave,"
+375.16,3.68,"and Microsoft provide
+introductory tutorials"
+378.84,2.46,for beginners to quantum computing.
+381.3,1.12,Another approach to teach
+382.42,2.8,"principles of quantum
+computing is via metaphors."
+385.22,3.37,"So, Schrodinger's cat explains
+the concept of superposition"
+388.59,1.38,via thought experiment.
+389.97,2.77,"A cat is kept in a box
+with a bottle of poison"
+392.74,1.91,and is simultaneously dead and alive
+394.65,2.79,"because it is unknown whether
+the cat drank the poison."
+397.44,1.56,"And for HCI researchers here,"
+399.0,2.74,"there's an opportunity
+to evaluate the extent"
+401.74,1.51,to which these guides and metaphors
+403.25,2.003,teach beginners about quantum computing.
+406.96,3.12,"There's also been several
+noteworthy digital games,"
+410.08,2.92,"designed to specifically
+teach about quantum computing."
+413.0,3.27,"Quantum tic-tac-toe, mechanic
+and Hello quantum are games"
+416.27,2.64,that both require players to solve puzzles
+418.91,2.68,by trying to teach quantum concepts.
+421.59,1.56,Entanglion is a board game designed
+423.15,3.0,"to teach fundamental concepts
+of quantum computing."
+426.15,2.24,"And for HCI researchers
+here, there's an opportunity"
+428.39,2.28,"to both design and
+evaluate the effectiveness"
+430.67,2.9,"of these games for their
+ability to scaffold learners"
+433.57,1.84,through the process of understanding
+435.41,2.48,"core quantum computing
+concepts to the point"
+437.89,1.843,of programming quantum systems.
+442.24,2.07,"So from our interviews, we
+found that many of issues"
+444.31,2.77,"with the online communities
+stem from the fact that,"
+447.08,1.82,the platforms did not distinguish
+448.9,2.177,"between these novices and experts,"
+451.077,2.133,"and our participants,
+experts in their field,"
+453.21,1.801,"which is one of the
+limitations of our study,"
+455.011,3.209,"express preferences for
+specialized communities"
+458.22,3.5,"that encourage deep discussions
+and information exchange."
+461.72,1.79,"That being said, we're not advocating"
+463.51,2.47,"for creating a separation
+or information gate"
+465.98,2.14,"between the novices and experts,"
+468.12,1.87,"but a lot of these issues,"
+469.99,2.31,"these online communities
+can be vastly improved"
+472.3,3.5,"by applying the lessons learned
+by HCI and CSCW researchers"
+475.8,2.283,in building successful online communities.
+479.16,2.05,"I'm gonna go ahead and
+read one of the quotes"
+481.21,1.887,from an applied mathematician.
+483.097,2.2,"When you go in the community,
+you sometimes read questions"
+485.297,1.63,from people who clearly have no idea
+486.927,1.4,"what quantum computing is,"
+488.327,2.49,"because they have high
+expectations of what it can do"
+490.817,1.68,and that is not the case.
+493.66,2.19,We also ask participants about the tools
+495.85,2.87,"and programming languages they
+use and discuss the potential"
+498.72,2.84,of HCI research in the following areas;
+501.56,4.0,"Paper, GUI and code,
+documentation and sharing,"
+505.56,3.613,"debugging quantum algorithms
+and quantum native programming."
+511.47,1.82,Despite the numerous tools available
+513.29,1.55,"for programming quantum systems,"
+514.84,2.26,low fidelity tools have a strong foothold
+517.1,3.11,"in the day-to-day workflow
+of quantum scientists"
+520.21,3.08,"but, visual tools like
+IBM's composer and Quirk,"
+523.29,3.26,"are also really helpful in
+applying what has been drawn"
+526.55,2.16,on these low fidelity tools.
+528.71,2.39,"And they use circuit-like
+metaphor in which each qubit"
+531.1,2.41,is represented by a horizontal line.
+533.51,2.117,"One quantum chemist said,
+""There's a big difference"
+535.627,2.17,"between writing a circuit
+on a piece of paper"
+537.797,2.52,"and actually trying to
+implement it on a machine."
+540.317,1.83,"It's like trying to learn computing,"
+542.147,1.45,just reading the theory of computing
+543.597,1.68,but never learning a programming language
+545.277,2.89,"or getting anything to
+work or debug anything."
+550.35,2.46,"As more people delve
+into quantum computing"
+552.81,1.97,"such as science
+enthusiasts and developers,"
+554.78,2.51,"a need arises for environments
+that better integrate"
+557.29,2.15,documentation and sharing tools
+559.44,2.19,and well-documented workflows
+561.63,2.303,are integral to the learning process.
+567.1,2.84,"As with any development
+workflow, debugging is a part"
+569.94,2.06,of the quantum computing process.
+572.0,2.43,"One participant described
+how she debunked her code"
+574.43,1.987,by switching amongst different tools.
+576.417,1.55,When I'm tryna figure out an algorithm
+577.967,2.7,"or debug something, I will
+start with the composer"
+580.667,2.623,"and if I wanna make any
+changes, I go over to QASM."
+583.29,1.817,Which is quantum assembly language.
+585.107,1.02,"To change things there,"
+586.127,2.823,and I go back and forth between the two.
+588.95,2.24,"Another described how he
+used the quantum simulator"
+591.19,1.72,to perform debugging as a simulator
+592.91,1.67,"and able to want to
+view the internal state"
+594.58,1.397,of all the qubits.
+595.977,2.51,"To debug, we used a C
+simulator for everything."
+598.487,0.93,"Out of the simulator,"
+599.417,3.083,"you can get the internal
+state of all the qubits."
+602.5,2.57,"A deeper understanding of
+how quantum programmers"
+605.07,1.89,"could conduct the debugging process,"
+606.96,2.45,"would provide opportunities
+for developing new kinds"
+609.41,2.04,of quantum debugging tools
+611.45,2.02,"and this work should
+build on previous research"
+613.47,1.63,that demonstrates the best practices
+615.1,1.753,for scientific computing.
+619.41,1.83,"So the development of
+programming languages"
+621.24,2.3,for quantum computers largely mirrors that
+623.54,3.62,"of classical computers but on
+a much more rapid time scale."
+627.16,2.44,Early quantum system programming evolved
+629.6,2.36,"from placing quantum gates
+directly on a circuit"
+631.96,1.89,"to writing assembly style code,"
+633.85,3.28,"using the open quantum
+language, assembly language."
+637.13,2.32,"But there's also newer
+SDKs such as Qiskit,"
+639.45,3.04,"that rely on Python to provide
+a high-level abstraction"
+642.49,2.29,"which are then translated
+down to the level of QASM"
+644.78,3.824,"before executing on real
+quantum hardware simulation."
+648.604,2.046,"A one opportunity for HCI researchers,"
+650.65,2.36,"is to consider whether
+these abstractions use"
+653.01,2.68,"to programming classical
+computers should be applied"
+655.69,2.783,for programming quantum systems.
+661.52,3.47,"Visualization of qubit states
+are difficult to create"
+664.99,2.84,"because the number of
+achievable quantum states"
+667.83,3.26,"is exponential with respect
+to the number of qubits."
+671.09,2.14,"And so, HCI researchers here can utilize"
+673.23,1.99,information visualization methods
+675.22,1.75,to build more effective visualizations
+676.97,1.66,for quantum computing.
+678.63,2.48,"User studies exploring
+the interpretability"
+682.1,1.08,of large-scale graphs
+683.18,2.93,"and other large-scale
+visualizations can contribute"
+686.11,2.943,"to improve visualizations
+of quantum states."
+692.18,2.18,"So I'm going to also
+talk about moving forward"
+694.36,2.673,"and what next, what the
+future might look like."
+698.19,2.9,"So, while we favorably
+suggest potential directions"
+701.09,2.58,"for the expansion of quantum computing,"
+703.67,2.11,"we acknowledge that our
+optimism must be tempered"
+705.78,1.583,with realities of the field.
+708.79,3.31,"So a lot of these scientists
+did talk about skepticism."
+712.1,1.957,"One of the quantum chemist said,"
+714.057,2.04,The same thing happened with nano and AI.
+716.097,1.72,"At one point, they get hyped"
+717.817,1.95,"because they make a
+few advances and then,"
+719.767,1.66,they don't deliver on their promises
+721.427,1.62,"and then they get trashed so then,"
+723.047,1.58,no one gives them attention.
+724.627,1.67,"While they are being ignored, they slowly"
+726.297,1.7,or maybe even incrementally improve.
+727.997,3.133,"So suddenly, they have
+some major advances."
+731.13,1.847,"One of our other participants said,"
+732.977,1.343,We don't want the same thing happening
+734.32,1.577,with quantum as with AI.
+735.897,2.12,"Over hyping it and then realizing,"
+738.017,2.16,"that you can't accomplish
+what you want to accomplish"
+740.177,1.28,and then abandoning it.
+743.01,3.15,"But these insurgencies
+around quantum computing"
+746.16,2.76,"and potential for disillusionment
+should not be reasons"
+748.92,1.91,"to avoid approaching the field,"
+750.83,2.89,"instead, we see them as
+opportunities to show the strength"
+753.72,1.763,that great HCI research can bring.
+756.99,1.163,Thank you.
+758.153,2.25,(applause)
+764.06,1.39,- [Woman] Thank you.
+765.45,2.4,"So, if anybody has questions,"
+767.85,1.703,"we have this microphone here,"
+770.53,3.98,"we also have a loose microphone
+and the student volunteer"
+774.51,3.16,"who's gonna run around, so
+you can just raise your hand."
+777.67,0.833,Any questions?
+782.47,0.833,Yeah.
+785.24,2.15,"- [Eliana] Hey, I'm Eliana Husky Douglas"
+787.39,1.68,from Alta University.
+789.07,3.26,"So I've actually heard quantum
+physics not in this sense,"
+792.33,2.38,"but more in the sort
+of adjunct on realism,"
+794.71,2.26,"STS, sort of societal thing."
+796.97,3.313,"Do you see that more merging
+with this area of work?"
+801.99,1.94,"- That's not something
+that we really asked about,"
+803.93,4.8,we were focused on these front end tools
+808.73,2.35,for quantum computing but I think
+811.08,2.48,"it's such an expansive field
+and it's continuously growing."
+813.56,2.21,"So I can imagine that there
+are front ending tools"
+815.77,2.05,for those for those applications as well.
+823.1,2.913,"- [Woman] Any other
+questions from the audience?"
+831.53,2.19,"Last chance, all right."
+833.72,1.873,Let's thank Zahra again.
