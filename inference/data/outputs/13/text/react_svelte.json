@@ -1,0 +1,45 @@
+Introduction:
+The video compares React and Svelte, two popular front-end JavaScript frameworks used for building reactive user interfaces. Both frameworks organize code into reusable components, but they differ in their approach to rendering, component state, props, side effects, and computed state.
+
+Section 1: Rendering
+
+* React uses a virtual DOM to keep track of data changes in the application and render them in the actual DOM in the browser.
+* Svelte takes a different approach by using a compiler to eliminate the need for a runtime, resulting in a smaller hello world.
+
+Section 2: Component State
+
+* React uses functions to create components and add reactive state with the useState hook, which returns a reactive value and a setter function to update the state.
+* Svelte defines reactive state within the script tags and allows developers to create a function on the click event that mutates the value directly.
+
+Section 3: Props and Children
+
+* React passes props and renders components directly in the JSX, while Svelte uses slots to insert UI at specific points in the component markup.
+* React allows passing components as props, while Svelte has an entirely different system called slots.
+
+Section 4: Side Effects and Computed State
+
+* React uses the useEffect hook to create side effects that update the document title when the count changes.
+* Svelte uses reactive declarations that start with a dollar sign and a colon to rerun the code whenever any dependent data changes.
+
+Section 5: Templating
+
+* React uses JSX to put HTML in JavaScript, while Svelte has its own templating approach that brings JavaScript into HTML.
+* React cannot directly use an if statement because a function component needs to return a JavaScript expression that represents a single value.
+
+Topics:
+
+1. React vs. Svelte
+2. Virtual DOM
+3. Reactive State
+4. Component State
+5. Props
+6. Children
+7. Side Effects
+8. Computed State
+9. Templating
+
+General Topics:
+
+1. Web Development and Internet Technologies (React: 0.70, Svelte: 0.68)
+2. Software Engineering and System Design (React: 0.68, Svelte: 0.68)
+3. Data Science and Analytics (React: 0.42, Svelte: 0.51)

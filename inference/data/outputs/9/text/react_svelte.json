@@ -1,0 +1,66 @@
+{
+  "introduction": {
+    "content": [
+      "The video compares React and Svelte, two popular JavaScript frameworks for building web applications.",
+      "React uses a virtual DOM and a runtime, while Svelte uses a compiler to eliminate the need for a runtime.",
+      "React is known for its large ecosystem of dedicated libraries, while Svelte is more concise and easier to work with vanilla JavaScript.",
+      "React supports passing components as props, while Svelte uses slots for inserting UI at specific points in components."
+    ],
+    "topics": ["React", "Svelte", "Web Development"]
+  }
+}
+
+{
+  "Section 1: Rendering",
+  "content": [
+    "React and Svelte both help developers build reactive UIs with JavaScript by organizing code into reusable components.",
+    "React uses a virtual DOM and a runtime, while Svelte uses a compiler to eliminate the need for a runtime.",
+    "React's virtual DOM requires some initial JavaScript and has a larger baseline size (around 70 KB) for rendering a 'hello world' example.",
+    "Svelte's compiler results in a smaller 'hello world' example, but it may be considered 'cheating' by some JavaScript fundamentalists."
+  ],
+  "topics": ["React", "Svelte", "Rendering"]
+}
+
+{
+  "Section 2: Component State",
+  "content": [
+    "React uses functions to create components and add reactive state with the useState hook, which returns a reactive value and a setter function.",
+    "Svelte defines logic within the script tags to create reactive state and allows for more concise code.",
+    "Svelte does not require imports or function calls to initialize the state, while React does.",
+    "React has a massive ecosystem of dedicated libraries to help with component state, while Svelte has an entirely different system called reactive declarations."
+  ],
+  "topics": ["React", "Svelte", "Component State"]
+}
+
+{
+  "Section 3: Props and Children",
+  "content": [
+    "React passes props by defining them as function arguments that are typically destructured, while Svelte uses slots for inserting UI at specific points in components.",
+    "React allows for passing components as props and rendering them directly in the JSX, while Svelte has an entirely different system called slots.",
+    "Svelte's slots allow for more precise insertion of UI at specific points in components, while React's built-in propschildren value allows for more flexibility in rendering components.",
+    "Svelte's slots system can be more readable and easier to debug than React's props system."
+  ],
+  "topics": ["React", "Svelte", "Props and Children"]
+}
+
+{
+  "Section 4: Side Effects and Computed State",
+  "content": [
+    "React uses the useEffect hook to create side effects that update the document title whenever a count changes, while Svelte uses reactive declarations to rerun code whenever any dependent data changes.",
+    "React's useEffect hook requires more complex code to handle an async function, while Svelte's reactive declarations are more reliable and easier to debug.",
+    "Svelte's reactive declarations can be used for both side effects and computed state, while React requires a separate memo function to cache the value between renders.",
+    "Svelte's reactive declarations are more concise and easier to read than React's useEffect hook."
+  ],
+  "topics": ["React", "Svelte", "Side Effects and Computed State"]
+}
+
+{
+  "Section 5: Templating",
+  "content": [
+    "React uses JSX for templating, which combines HTML and JavaScript, while Svelte has its own templating approach.",
+    "React's JSX allows for more flexibility in rendering components, while Svelte's templating approach is more concise and easier to read.",
+    "Svelte's templating approach allows for more precise conditional logic and better performance than React's JSX.",
+    "React's JSX is more popular and widely used, while Svelte's templating approach is more niche and less well-known."
+  ],
+  "topics": ["React", "Svelte", "Templating"]
+}

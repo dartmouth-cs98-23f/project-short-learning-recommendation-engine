@@ -1,0 +1,478 @@
+second,duration,transcript
+0.0,3.84,hi this is inval innovation youtube
+1.839,4.161,channel welcome to the brand new series
+3.84,4.48,on git in this video we are going to see
+6.0,4.719,why we need version control key benefits
+8.32,4.399,of using version control two major
+10.719,4.641,divisions of version control one based
+12.719,5.041,on topology of the project and another
+15.36,4.8,how we represent the versions so based
+17.76,4.56,on the topology we have centralized
+20.16,4.24,version control and decentralized
+22.32,4.799,version control centralized version
+24.4,5.36,control example is svnda centralized
+27.119,5.041,version control is git based on how we
+29.76,4.72,represent version it is classified into
+32.16,4.72,snapshot based version control and delta
+34.48,4.72,based version control and we will also
+36.88,5.12,see what is good and benefits of using
+39.2,5.519,git and introduction to key terminology
+42.0,4.64,in git this is part one of this series
+44.719,4.32,we will cover a lot about git in the
+46.64,4.64,coming videos if you haven't subscribed
+49.039,4.881,till now try subscribing this channel
+51.28,4.08,that will motivate me to put more videos
+53.92,2.799,and thanks if you have already
+55.36,3.44,subscribed
+56.719,3.84,this video is divided into chapters so
+58.8,3.919,that you can navigate to any particular
+60.559,4.481,chapters with the timestamp we are going
+62.719,4.561,to see why we need version control in
+65.04,4.0,the first place and why it is mandatory
+67.28,2.879,for a developer to work with version
+69.04,3.119,control
+70.159,4.64,version control is a system that
+72.159,5.361,requires changes to a file or a setup
+74.799,5.36,file over time so that you can recall
+77.52,5.12,specific questions later version control
+80.159,4.481,is also called as revision controller
+82.64,4.72,source control for example you are
+84.64,5.68,editing image today and opening it
+87.36,4.799,tomorrow and making some more changes
+90.32,3.759,then you feel like you messed up
+92.159,3.521,something today and we want to go back
+94.079,4.481,to the previous version which you have
+95.68,5.439,saved yesterday one way to handle this
+98.56,4.96,without version control is save each
+101.119,4.561,version daily make a copy of yesterday's
+103.52,4.959,version and work on it this will work
+105.68,4.88,well if you have minimal change and what
+108.479,4.881,happens if you are working on a very big
+110.56,4.48,project which spans over a year and
+113.36,4.719,daily you want to create multiple
+115.04,4.88,versions on one biggest problem is it
+118.079,3.441,will become clumsy and data size
+119.92,3.76,increases
+121.52,4.48,what if multiple people want to
+123.68,4.559,contribute to the same project this is
+126.0,4.8,where we need version control and
+128.239,5.441,provided we are working remote now the
+130.8,4.96,version control tool is mandatory if you
+133.68,4.88,are a graphic or web designer or a
+135.76,5.68,software engineer and want to keep every
+138.56,5.28,version of image or layout or code base
+141.44,4.0,which you would most certainly want to a
+143.84,4.08,version control is very wise thing to
+145.44,5.12,use it allows you to revert selected
+147.92,4.88,files back to a previous state revert
+150.56,5.2,the entire project back to the previous
+152.8,5.84,state compare changes over time compare
+155.76,5.36,between different branches and see who
+158.64,4.959,last modified something and that might
+161.12,5.36,be causing a problem who introduced the
+163.599,5.441,issue win and more using a version
+166.48,5.68,control also means if you screw things
+169.04,5.68,up or lose files you can easily recover
+172.16,4.96,in addition you will get all this with a
+174.72,4.48,very little overhead there are lots of
+177.12,4.64,benefit if you use version control
+179.2,5.679,system now we will discuss about some of
+181.76,6.08,the key important benefits first thing
+184.879,4.961,is code together now in current world
+187.84,4.399,code together is very essential because
+189.84,4.479,you are from any part in the world
+192.239,3.92,version control synchronizes versions
+194.319,4.64,and make sure that your changes don't
+196.159,4.16,conflict with other changes from your
+198.959,3.601,team members
+200.319,5.361,your team relies on version control to
+202.56,6.0,help resolve and prevent conflicts even
+205.68,5.199,when people changes at the same time so
+208.56,4.399,developers can work remotely and still
+210.879,4.321,make sure that the changes are not
+212.959,4.241,conflicting with each other and they can
+215.2,4.64,work on same feature parallely if
+217.2,5.119,there's a conflict they can resolve at
+219.84,4.479,the earliest stage possible for example
+222.319,4.161,there are two developers who are working
+224.319,4.081,on the same project one developer commit
+226.48,4.479,the initial version to the remote
+228.4,4.64,repository and another developer who can
+230.959,4.801,be working from a different geographical
+233.04,5.04,area can take this file and modify this
+235.76,5.199,file and push it back to the same remote
+238.08,5.519,repository by this way they can code
+240.959,4.721,together on the same code base using
+243.599,4.56,this version control tool
+245.68,4.32,next is versioning think the software
+248.159,4.481,which you are creating as different
+250.0,4.72,versions in this case you can easily
+252.64,4.4,create multiple branches and that
+254.72,4.56,multiple branches can support different
+257.04,4.319,versions so version control allows you
+259.28,4.72,to save changes to each version
+261.359,4.961,individually and without affecting other
+264.0,4.72,version and you will also work on
+266.32,4.319,multiple versions parallelly you no need
+268.72,4.0,to wait for one version to go to
+270.639,3.041,production to work on the different
+272.72,2.96,version
+273.68,3.04,next important thing is keeping a
+275.68,3.2,history
+276.72,5.12,version control tags the history of
+278.88,5.92,changes as your team saves new version
+281.84,5.919,of code this history can be used to find
+284.8,5.2,who when and why changes are made and
+287.759,4.241,even what changes are made history gives
+290.0,3.919,you the confidence to experiment since
+292.0,3.68,you can roll back to any previous good
+293.919,4.481,version at any time
+295.68,5.519,history lets your base work from any
+298.4,5.2,version of code such as to fix a bug in
+301.199,4.481,the previous release for example here
+303.6,4.879,there are two developers who are working
+305.68,5.04,remotely each commit made by a developer
+308.479,4.641,has the information such as when the
+310.72,4.8,commit is made who did the commit and
+313.12,5.12,descriptive message developer added to
+315.52,4.399,the commit change history and unique
+318.24,4.0,commit hash
+319.919,5.441,we also have some of the very important
+322.24,5.36,benefits in today's world that is cicd
+325.36,4.399,version control automation features it
+327.6,5.28,saves your team time and generate
+329.759,5.041,consistent results ultimate unit testing
+332.88,4.08,static code analysis security
+334.8,4.16,vulnerabilities at the earlier stage
+336.96,4.4,possible and deploy when the versions
+338.96,4.56,are saved to version control and you can
+341.36,4.32,even set up your own continuous
+343.52,4.16,integration continuous deployment to a
+345.68,3.6,code base so that whenever user commits
+347.68,4.16,to a particular branch it will be
+349.28,4.8,deployed to any environment possible and
+351.84,5.52,you can also automate different tasks
+354.08,5.52,whenever a user commits to the repo
+357.36,4.08,workflow version control workflows
+359.6,3.68,prevent the chaos of everyone using
+361.44,4.64,their own development process with
+363.28,4.639,different and incompatible tools version
+366.08,4.8,control system provides process
+367.919,5.28,enforcement and permissions so everyone
+370.88,4.319,stays on the same page for example let's
+373.199,4.241,consider two developers working on a
+375.199,4.881,javascript project for which they are
+377.44,4.96,not using version control let's take one
+380.08,4.239,using gulp js to automate time consuming
+382.4,4.639,task and another one using grunt to
+384.319,5.041,automate time consuming task now when
+387.039,3.361,they want to merge their code they need
+389.36,4.0,to use
+390.4,5.28,not two but one so it requires
+393.36,5.2,substantial changes to unify the project
+395.68,5.84,to same tool this can be avoided easily
+398.56,4.56,if everyone is using version control
+401.52,3.92,from the day one
+403.12,3.68,and version control avoids this kind of
+405.44,3.759,conflict
+406.8,4.48,next we will see about two major
+409.199,4.161,divisions of version control there are
+411.28,4.56,two major divisions one based on the
+413.36,4.959,topology of project and another based on
+415.84,5.52,how we represent the versions based on
+418.319,4.801,topology it is divided into centralized
+421.36,3.679,version control and decentralized
+423.12,4.32,version control centralized version
+425.039,4.481,control systems are based on the idea
+427.44,5.039,that there is a single central copy of
+429.52,5.6,your project somewhere probably on the
+432.479,5.28,server and programmers will commit the
+435.12,5.199,changes to the central copy committing a
+437.759,4.88,change simply means recording the change
+440.319,5.681,in the central system other programmers
+442.639,6.0,can see this change here checkout means
+446.0,5.039,taking the latest version of code from
+448.639,4.96,the central server and history will be
+451.039,5.121,always preserved in the server only if
+453.599,5.201,server data gets corrupt the user cannot
+456.16,5.12,get the history of files example of
+458.8,5.519,centralized version control systems are
+461.28,5.28,svn and cvs people are not using
+464.319,4.401,centralized version control system much
+466.56,4.479,people have moved towards decentralist
+468.72,5.68,there are some legacy applications still
+471.039,5.761,using svn so understanding svn also
+474.4,4.56,vital if you are supporting a legacy
+476.8,4.079,project next we will see about
+478.96,3.919,decentralized version control
+480.879,4.561,decentralized version control system do
+482.879,4.641,not necessarily lay on a central server
+485.44,4.24,to store all the versions of a project
+487.52,5.119,file instead every developer machine
+489.68,5.04,clones a copy of a repository and has
+492.639,4.881,the full history of the project on their
+494.72,5.84,own hard drive this copy
+497.52,5.44,our clone has all the metadata of the
+500.56,5.359,original the act of getting new changes
+502.96,5.44,from a repository is usually called pull
+505.919,5.84,and the act of moving your code changes
+508.4,6.319,to this capacitor is push in both cases
+511.759,5.52,you move change sets that is changes to
+514.719,4.401,file groups as a coherent holds not
+517.279,3.921,single file difference
+519.12,4.719,advantages of using decentralized
+521.2,4.88,version control performing actions other
+523.839,4.721,than push and pull change senses
+526.08,4.64,extremely fast because the tool only
+528.56,5.44,needs to access the hard drive not the
+530.72,6.08,remote server so for push and pull you
+534.0,5.04,need active internet connection
+536.8,4.479,if the server is down or server data get
+539.04,4.16,deleted the developer will have the
+541.279,4.24,history of files in the local one
+543.2,4.72,developer can clone a version from other
+545.519,4.241,developer since we have history of files
+547.92,4.16,in their hardware examples of
+549.76,4.639,decentralized version control systems
+552.08,4.24,are git and mercurial
+554.399,4.801,now we will see based on how we
+556.32,5.36,represent the version it is divided into
+559.2,5.12,delta based version control system and
+561.68,5.04,snapshot based version control system
+564.32,4.24,delta based version control system store
+566.72,4.559,information as
+568.56,5.279,list of file based changes this system
+571.279,6.0,thinks information restore as a set of
+573.839,6.56,files and changes made to each file over
+577.279,5.281,time this is commonly described as delta
+580.399,4.241,based version control so we will see
+582.56,3.32,this with the example here i am creating
+584.64,5.36,a file named
+585.88,5.72,test.xml i am committing this test.xml
+590.0,3.92,for the first time so this is the
+591.6,5.359,initial version first it stores the
+593.92,5.039,complete tested.xml file i am committing
+596.959,3.841,again without doing any modification to
+598.959,4.161,the tested.xml
+600.8,5.12,this will be stored as the version 2 in
+603.12,4.839,the version 2 no code changes are stored
+605.92,4.88,now i made some changes to the
+607.959,5.32,tester.xml and committing it again now
+610.8,6.0,it is stored as version 2. only the
+613.279,5.841,modified information is stored here 36
+616.8,6.24,card replaced with 40 so it stored the
+619.12,7.52,delta as 36 as deleted and 40 has added
+623.04,7.6,and i added react and get to the content
+626.64,8.08,so it is stored the delta as iot python
+630.64,6.4,react git as newly added and iot python
+634.72,4.88,got deleted in the delta based version
+637.04,5.919,control not storing the full file only
+639.6,6.16,the changes are stored as the delta now
+642.959,6.081,if you rename the file test.xml to test
+645.76,5.28,underscore rn.xml it will be stored as
+649.04,4.56,file rename and this will point to the
+651.04,4.96,original test.xml
+653.6,5.04,what is snapshot based version control
+656.0,5.519,this system thinks of its data more like
+658.64,5.6,a series of snapshots of a miniature
+661.519,5.601,file system with snapshot based version
+664.24,5.36,control every time you commit or save
+667.12,4.56,the state of your project it basically
+669.6,4.64,takes the picture of what all your files
+671.68,4.399,look like at that moment and stores a
+674.24,5.039,reference to that snapshot to be
+676.079,5.601,efficient if the files have not changed
+679.279,4.24,it does not store the file again just a
+681.68,4.48,link to the previous identical file it
+683.519,5.44,has already stored git things about its
+686.16,4.72,data more like a stream of snapshots we
+688.959,3.961,will see this with the example
+690.88,4.32,here we have the same
+692.92,5.0,tested.xml and i am committing its
+695.2,6.079,initial version here it got saved as
+697.92,5.76,complete file with a unique hashcode for
+701.279,4.961,the sake of simplicity let's take the
+703.68,6.88,commit hash as x8n
+706.24,6.159,so this is the ash code here x8n
+710.56,4.8,hash key holds the complete file
+712.399,5.68,information i am committing the test.xml
+715.36,5.12,again without doing any modification so
+718.079,4.641,now in the version 2 we have same commit
+720.48,4.24,hash for the file which refers to the
+722.72,4.08,initial version of the file i am
+724.72,4.88,committing another version by adding
+726.8,5.039,some modification to the text xml now
+729.6,4.16,this will store the complete file with a
+731.839,3.68,new hash code this is the main
+733.76,3.68,difference between snapshot based
+735.519,4.241,version control versus delta based
+737.44,5.12,version control as we seen in the delta
+739.76,6.24,based version control this got saved as
+742.56,5.279,a delta file difference whereas here in
+746.0,4.0,the snapshot based version controller it
+747.839,3.921,is saved as a complete file with a
+750.0,3.8,different ash code representing this
+751.76,5.519,commit if you rename this file from
+753.8,6.039,tested.xml to test underscore r and xml
+757.279,4.721,the file got renamed but it still points
+759.839,4.0,to the previous commit hash if you are
+762.0,4.72,familiar with git you find some
+763.839,5.281,discrepancies here with the file name we
+766.72,5.359,will cover more about this when we
+769.12,4.24,discuss git mv command in the coming
+772.079,4.0,videos
+773.36,4.8,next we will see why we need git git is
+776.079,3.361,the most commonly used version control
+778.16,3.76,system today
+779.44,4.88,git is mature actively maintained open
+781.92,5.52,source project originally developed in
+784.32,5.04,2005 by linux star walls
+787.44,3.68,the famous creator of the linux
+789.36,3.919,operating system kernel
+791.12,4.56,a staggering number of software projects
+793.279,5.521,lay on grid version control system you
+795.68,5.839,may be very familiar with github kit lab
+798.8,3.92,bit bucket all those are laid on git
+801.519,3.521,technology
+802.72,4.72,including commercial projects as well as
+805.04,4.0,open source these are important benefits
+807.44,3.92,of using git
+809.04,4.56,git is a distributed source control
+811.36,3.76,system and snapshot based version
+813.6,4.479,control system
+815.12,5.04,git does not necessarily lay on central
+818.079,4.721,server to store all the versions of a
+820.16,5.2,project's files instead every developer
+822.8,4.56,clones a copy of a repository and has a
+825.36,5.12,full history of the project on their own
+827.36,6.08,hard drive git scales massively because
+830.48,4.96,of the distributed nature of git it can
+833.44,4.16,scale massively git is initially
+835.44,4.24,developed for linux project requirements
+837.6,4.479,today linux kernel has
+839.68,6.0,over 15 million lines of code and more
+842.079,6.56,than 1200 developers across the globe
+845.68,4.56,and git is free and open source there
+848.639,4.241,are many commercial projects which are
+850.24,4.959,based on git and you can also find free
+852.88,5.04,and open source system which are based
+855.199,4.88,on git one great example is github
+857.92,4.88,because of its distributed nature most
+860.079,4.241,operations in the git are local so you
+862.8,3.76,might not need active internet
+864.32,5.519,connection most often
+866.56,5.6,git as a very active community and it is
+869.839,4.721,evolving day by day it has already
+872.16,4.32,become mature but it is evolving day by
+874.56,3.76,day so that most of the answers which
+876.48,3.84,you are looking for is already answered
+878.32,4.319,by someone so it has a very active
+880.32,4.4,community and you can find answers to
+882.639,3.841,every problem you face
+884.72,4.799,now we will see about some of the key
+886.48,5.12,terminologies and basics about git
+889.519,4.88,every time you save your work git
+891.6,5.919,creates a commit a commit is a snapshot
+894.399,5.601,of all your files at a point in time if
+897.519,5.12,a file has not changed from uncommit to
+900.0,5.199,the next git uses a previously stored
+902.639,4.801,file commits create links to other
+905.199,5.121,commits forming a graph of your
+907.44,5.68,development history you can revert your
+910.32,5.28,code to the previous commit inspect all
+913.12,5.279,files change from one commit to the next
+915.6,5.2,and review information such as where and
+918.399,4.641,when changes were made commits are
+920.8,4.56,identified in git by a unique
+923.04,3.359,cryptographic hash of the contents of
+925.36,3.52,the commit
+926.399,4.88,because everything is ashed it is
+928.88,5.6,impossible to make changes and lose
+931.279,4.56,information or corrupt files without git
+934.48,3.68,detecting it
+935.839,5.201,each developer saves changes to their
+938.16,5.28,own local code repository as a result
+941.04,5.2,you can have different changes based of
+943.44,5.92,the same commit git provides tools for
+946.24,6.56,isolating changes and later merging them
+949.36,6.08,back together a branch and git is simply
+952.8,4.959,a lightweight mobile pointer a default
+955.44,5.04,branch name in git is master but this is
+957.759,5.121,completely customizable as you initially
+960.48,4.479,make commits you are given a master
+962.88,5.04,branch that points to the last commit
+964.959,5.361,you made every time you commit it moves
+967.92,4.88,forward automatically branches which are
+970.32,5.12,lightweight pointers just created for
+972.8,5.2,each and every future are epic
+975.44,4.88,once your feature are epic is completed
+978.0,5.279,and you have tested that feature then
+980.32,6.319,you can move the branch to the team main
+983.279,6.24,branch so here branches will be created
+986.639,5.12,for individual developers so if the
+989.519,4.56,developer works on a particular feature
+991.759,3.841,he or she will create a branch tagging
+994.079,3.76,that particular feature once that
+995.6,4.159,feature is done he or she can merge it
+997.839,4.401,back to the master branch
+999.759,6.08,files in git can be in one of the three
+1002.24,6.599,stages one is working directory next is
+1005.839,6.081,staging area and the third is the remote
+1008.839,5.641,repository when you first modify a file
+1011.92,4.719,the changes exist only in the working
+1014.48,4.799,directory they are not a part of the
+1016.639,4.241,commit or your development history here
+1019.279,5.68,i have created
+1020.88,6.799,three files html a css and a image file
+1024.959,4.96,in this working directory you must stage
+1027.679,3.52,the files you want to include in your
+1029.919,3.201,next commit
+1031.199,4.0,here you can do that by using the
+1033.12,3.919,command git add
+1035.199,5.12,and pointing to the files you want to
+1037.039,5.441,add to the staging area and you can even
+1040.319,6.081,omit files that you wish to commit
+1042.48,6.079,separately by doing add with one file
+1046.4,4.399,and then you can commit and you can add
+1048.559,4.881,another file and then you can commit
+1050.799,5.361,here i want to stage only the css and
+1053.44,5.119,image file so that it will be included
+1056.16,4.879,in the next commit the staging area
+1058.559,4.641,contains all the changes that you will
+1061.039,4.721,include in our next commit
+1063.2,4.88,once you are happy with the staged files
+1065.76,3.52,commit them with a message describing
+1068.08,3.2,what changed
+1069.28,4.48,this commit message might be really
+1071.28,5.12,important because this may be served as
+1073.76,3.919,a documentation for you and your
+1076.4,3.04,teammates
+1077.679,3.921,this commit becomes a part of your
+1079.44,5.68,development district here when i hit the
+1081.6,5.6,commit the staged css and image file got
+1085.12,4.24,committed here everything happens in
+1087.2,4.0,local so it does not require active
+1089.36,4.319,internet connection if you are from a
+1091.2,4.88,svn background or centralized repository
+1093.679,4.081,background then their commit is
+1096.08,4.4,different and here the commit is
+1097.76,4.08,different in svn world if you commit
+1100.48,3.68,that means you are pushing to the
+1101.84,4.48,central repository but here if you
+1104.16,4.32,commit you are pushing only to the local
+1106.32,4.4,repository you are not pushing to the
+1108.48,4.72,centralized global repository or the
+1110.72,4.959,remote repository so all the operations
+1113.2,4.32,can be done offline here once you are
+1115.679,4.561,finally okay with the changes you can
+1117.52,5.36,push the local commits to the remote
+1120.24,4.16,repository this is when you need active
+1122.88,4.48,internet connection because you are
+1124.4,4.72,trying to contact the remote repository
+1127.36,4.319,i believe you have learnt a lot in the
+1129.12,5.04,first part of this kids series subscribe
+1131.679,4.401,to this channel for more videos on git
+1134.16,4.08,and hit like if you have enjoyed this
+1136.08,4.24,content and share it with your friends
+1138.24,4.319,thanks for subscribing and watching this
+1140.32,2.239,video

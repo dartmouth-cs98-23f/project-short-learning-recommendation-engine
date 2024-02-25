@@ -1,0 +1,198 @@
+second,duration,transcript
+0.96,3.0,foreign
+6.919,6.401,welcome back algebra is one of the broad
+10.5,5.58,areas of mathematics we would have come
+13.32,5.1,across various algebra branches let's
+16.08,4.8,take abstract algebra where the abstract
+18.42,5.64,algebra is to study the algebraic
+20.88,5.159,structures such as groups Rings fields
+24.06,3.959,and abstract algebra has its wide
+26.039,4.861,application area in the field of
+28.019,5.281,cryptography coming to linear algebra
+30.9,5.22,linear algebra deals with the linear
+33.3,4.56,equations linear mappings and is used in
+36.12,4.619,the application area like the weather
+37.86,4.92,forecasting coming to Boolean algebra
+40.739,4.14,these Boolean algebra deals with the
+42.78,5.16,variables that are with the truth values
+44.879,5.34,true or false and Boolean algebra has
+47.94,4.619,its widespread applications in the areas
+50.219,5.101,of digital circuitry designed in
+52.559,5.52,personal computers pocket calculators CD
+55.32,5.34,players cell phones and other electronic
+58.079,4.441,products one such algebra that we are
+60.66,5.04,going to focus in today's presentation
+62.52,5.22,is the relational algebra and in today's
+65.7,5.52,presentation we are going to focus on
+67.74,5.76,the basics of relational algebra while
+71.22,4.56,waiting let's step into the topic of the
+73.5,4.619,day the relational algebra and
+75.78,4.56,relational algebra is basically a
+78.119,4.561,procedural query language what do we
+80.34,5.4,mean by this it means we need to
+82.68,4.86,instruct what to do how to do we are
+85.74,4.14,expecting the result from the database
+87.54,4.5,and the result is going to be a table or
+89.88,4.8,a relation and in order to get that
+92.04,5.46,result the table or the relation we need
+94.68,5.34,to instruct what is required and how to
+97.5,4.619,retrieve that data or how to retrieve
+100.02,4.739,the result and that is why we refer
+102.119,4.561,relational algebra as a procedural query
+104.759,4.021,language if you are directly watching
+106.68,4.74,this lecture I request you to navigate
+108.78,4.979,to chapter 1 of this playlist and find
+111.42,3.9,the lecture database languages where I
+113.759,3.841,have explained about the database
+115.32,4.32,languages the procedural query language
+117.6,4.5,and the non-procedural query language
+119.64,5.7,with examples for now just understand
+122.1,5.339,relational algebra is a procedural query
+125.34,5.52,language and what it actually does
+127.439,6.121,basically a relational algebra is a set
+130.86,4.98,of operations on relations this is like
+133.56,4.319,the normal algebraic operation where
+135.84,4.56,it's going to take input and it's going
+137.879,5.461,to produce the output likewise here also
+140.4,5.64,relational algebra is basically a set of
+143.34,4.8,operations on relations so it's going to
+146.04,4.32,work on the relation and does the
+148.14,4.38,operation and gives the result as a
+150.36,4.86,relation only and that's why we say
+152.52,5.76,relational algebra is basically a set of
+155.22,6.0,operations and to be precise it is like
+158.28,4.8,a set of algebraic operations these
+161.22,4.2,algebraic operations like the addition
+163.08,4.68,subtraction all these take some values
+165.42,4.679,as the input and does the operation and
+167.76,3.839,produces the output likewise here also
+170.099,4.081,relational algebra is going to take
+171.599,5.22,relations as input does the operation
+174.18,4.8,and generates the output which is also a
+176.819,4.5,relation in simple terms relational
+178.98,4.74,algebra is a set of operations which
+181.319,5.101,takes one or more relations as input and
+183.72,4.44,produces a relation as an output so so
+186.42,3.84,that's what the next Point says the
+188.16,4.68,input is going to be one or more
+190.26,5.399,relations and the output is going to be
+192.84,4.92,a relation and why one or more relations
+195.659,4.021,there are certain relational algebra
+197.76,4.259,operators which are unary operators
+199.68,3.96,where it takes only one relation as an
+202.019,4.08,input there are certain relational
+203.64,5.519,algebra operators with takes two or more
+206.099,5.821,inputs so they are binary or ternary so
+209.159,4.921,what I mean to say is in a nutshell it
+211.92,4.38,takes one or more relations as an input
+214.08,4.56,and produces another relation as an
+216.3,5.46,output and why do we need to study this
+218.64,4.98,relational algebra because it provides a
+221.76,3.839,theoretical foundation for relational
+223.62,3.72,databases we know the power of
+225.599,3.78,relational databases in this
+227.34,4.14,contemporary world when we want to work
+229.379,3.901,on the relational database or when we
+231.48,3.479,want to know the foundations of the
+233.28,4.019,relational database it's always
+234.959,5.461,recommended to have a sound knowledge on
+237.299,5.041,relational algebra because it provides a
+240.42,4.98,theoretical foundation for the
+242.34,4.979,relational databases the well-known dbms
+245.4,4.02,language that is widely used in today's
+247.319,4.321,world is the structured query language
+249.42,4.56,SQL and when you want to become
+251.64,4.26,proficient with SQL knowing relational
+253.98,4.8,algebra will give an additional
+255.9,4.2,advantage and not only that when we have
+258.78,4.32,a sound knowledge in the relational
+260.1,5.22,algebra obviously it allows us to
+263.1,5.46,understand database operations in more
+265.32,5.939,detail and also it motivates us to write
+268.56,4.68,optimized queries we know databases are
+271.259,4.141,going to respond to queries when we
+273.24,4.8,Supply a query to the database database
+275.4,5.04,accepts the query does the operation and
+278.04,5.4,gives the result if we want to get that
+280.44,4.92,output there may be multiple ways if we
+283.44,4.08,want an output from the database I mean
+285.36,4.32,a relation or a table there can be
+287.52,4.38,multiple queries where these queries
+289.68,4.44,gives the same output but giving an
+291.9,4.5,optimized query is always good because
+294.12,5.519,your databases will not take more time
+296.4,5.4,or more memory to execute that query so
+299.639,4.441,what I mean to say is instead of giving
+301.8,4.5,a query to the database if we give an
+304.08,5.04,optimized query the database will
+306.3,5.04,respond easily because this optimized
+309.12,4.32,queries will be having lower cost cost
+311.34,4.56,is one of the factors that are used to
+313.44,4.979,measure the query optimization in simple
+315.9,5.4,terms relational algebra helps us to
+318.419,4.441,write optimized queries and also it
+321.3,3.54,helps us to understand the database
+322.86,3.96,operations in more detail what's
+324.84,4.32,happening at the back end how queries
+326.82,4.98,are processed how query execution plans
+329.16,4.86,are generated how the plans are executed
+331.8,3.959,all these things no worries in the
+334.02,3.899,coming lectures we are going to focus on
+335.759,3.961,query optimization techniques at the
+337.919,4.021,time I will explain you how query
+339.72,5.1,optimization is actually taken care by
+341.94,5.22,database we are done with the basics of
+344.82,4.5,relational algebra before we move on to
+347.16,4.68,the next slide just revisit what is
+349.32,4.74,relational algebra it is a set of
+351.84,4.5,operations what are the operations that
+354.06,4.56,relational algebra contains that's what
+356.34,4.199,we are going to see now basically the
+358.62,4.139,relational algebra operations are
+360.539,4.5,classified into two categories number
+362.759,3.901,one the fundamental operations and
+365.039,3.901,number two the additional operations
+366.66,4.319,let's just focus on the names of the
+368.94,4.38,operations in this lecture in the coming
+370.979,5.16,lectures we are going to focus on all
+373.32,5.34,the operations one by one in detail with
+376.139,4.981,required examples for now let's just
+378.66,4.8,know the operation names talking about
+381.12,4.199,the fundamental operations there are six
+383.46,4.019,fundamental operations as far as
+385.319,4.141,relational algebra is concerned the
+387.479,4.681,first operation is select the second
+389.46,4.92,operation is Project the third one is
+392.16,4.5,Union the fourth one is the set
+394.38,4.2,difference fifth one is the Cartesian
+396.66,4.14,product and the last fundamental
+398.58,4.739,operation in relational algebra the
+400.8,5.459,sixth one is the rename operation
+403.319,5.82,these six operations are the fundamental
+406.259,5.101,operations in relational algebra and
+409.139,4.261,coming to the additional operations we
+411.36,4.5,have various additional operations in
+413.4,4.68,relational algebra they are the set
+415.86,5.58,intersection operation the assignment
+418.08,4.98,operation the inner join where in inner
+421.44,4.02,joint we are going to focus on the
+423.06,4.8,natural join equi join and Theta join
+425.46,4.739,but our emphasis in this subject will be
+427.86,4.02,more on natural joint and the next
+430.199,3.661,additional operation is the division
+431.88,3.659,operation and the last additional
+433.86,4.619,operation that we are going to focus on
+435.539,4.741,in this subject is the outer join where
+438.479,4.741,we are going to see three forms of Auto
+440.28,6.24,join the left outer join the right outer
+443.22,5.64,join and the full outer join so we have
+446.52,4.44,seen about the various fundamental and
+448.86,4.2,additional operations in the coming
+450.96,4.44,lectures we are going to focus on all
+453.06,4.74,the operations one by one with examples
+455.4,4.62,and that's it guys I hope you guys
+457.8,3.82,enjoyed this presentation and thank you
+460.02,1.77,for watching
+461.62,2.35,[Music]
+461.79,12.38,[Applause]
+463.97,10.2,[Music]

@@ -1,0 +1,213 @@
+second,duration,transcript
+2.08,6.4,"Hey guys, I'm Venkat and in this video, we'll 
+discuss how indexes actually work and help  "
+8.48,6.88,"improve the performance of our sql queries. We'll 
+discuss how both the index types work - clustered  "
+15.36,6.4,"and non-clustered. If you're new to indexes, we've 
+already covered all the basics you need in this  "
+21.76,6.88,"sql server tutorial for beginners course. Please 
+check out the videos from parts 35 to 38. I'll  "
+28.64,6.88,"include the link in the description of this video. 
+Now, consider this Employees table. EmployeeId is  "
+35.52,6.48,"the primary key, so by default a clustered index 
+on the EmployeeId column is created. This means,  "
+42.0,6.32,"employee data is sorted by EmployeeId column 
+and physically stored in a series of data pages  "
+48.32,4.8,"in a tree-like structure that looks like 
+the following. The nodes at the bottom of  "
+53.12,6.96,"the tree are called data pages or leaf nodes 
+and contains the actual data rows in our case  "
+60.08,6.72,"employee rows. These employee rows are sorted 
+by EmployeeId column because EmployeeId  "
+66.8,6.56,"is the primary key and by default, a clustered 
+index on this column is created. For our example,  "
+73.36,6.8,"let's say in this Employees table we have 
+1200 rows and let's assume in each data page  "
+80.16,8.4,"we have 200 rows. So, in the first data page we 
+have 1 to 100 rows, in the second 201 to 400,  "
+88.56,8.56,"in the third 401 to 600, so on and so forth. The 
+node at the top of the tree is called root node.  "
+97.12,6.4,"The nodes between the root node and the leaf 
+nodes are called intermediate levels. The root  "
+103.52,6.32,"and the intermediate level nodes contain index 
+rows. Each index row contains a key value,  "
+109.84,6.32,"in our case EmployeeId and a pointer to either 
+an intermediate level page in the B-Tree  "
+116.16,7.12,"or a data row in the leaf node. So, this tree-like 
+structure has a series of pointers that helps the  "
+123.28,7.52,"query engine find data quickly. For example, let's 
+say we want to find employee row with employee id  "
+130.8,8.08,"1120. So, the database engine starts at the root 
+node and it picks the index node on the right  "
+138.88,8.48,"because the database engine knows it is this node 
+that contains employee ids from 801 to 1200. From  "
+147.36,6.64,"there, it picks the leaf node that is present 
+on the extreme right because employee data rows  "
+154.0,7.92,"from 1001 to 1200 are present in this leaf node. 
+The data rows in the leaf node are sorted by  "
+161.92,6.96,"employee id so it's easy for the database engine 
+to find the employee row with id equals 1120.  "
+169.52,6.24,"Notice, in just 3 operations sql server is able to 
+find the data we are looking for. It's making use  "
+175.76,6.16,"of the clustered index we have on the table. Let's 
+look at this in action. This piece of sql script  "
+181.92,5.6,"at the top creates Employees table with these four 
+columns - Id, Name, Email and Department. First,  "
+187.52,7.12,"let's create the table. This second block of code 
+here inserts test data into Employees table. Let's  "
+194.64,5.44,"actually execute the script. It's going to take 
+a few seconds to complete and that's because,  "
+200.08,6.0,"if you take a look at this code, notice we're 
+using while loop to insert one million rows  "
+206.08,5.04,"into this table and if we click on the messages 
+tab, in a few seconds we should see a message  "
+211.12,5.28,"saying 100,000 rows inserted, that's because 
+for every hundred thousand rows that we insert,  "
+216.4,9.44,"we are logging the message. Let's 
+give it a few seconds to complete."
+228.32,5.04,"There we go, all the 1 million rows are 
+inserted. Now, let's execute this select  "
+233.36,8.0,"query. We are trying to find employee whose id is 
+932 000 and before we execute this query, click  "
+241.36,5.84,"on this icon right here which includes the actual 
+execution plan. You can also use the keyboard  "
+247.2,7.84,"shortcut CTRL + M. There we go, we got the one 
+row that we expected and when I click on the  "
+255.04,8.0,"execution plan and when I hover over this, notice 
+the operation is clustered index seek, meaning the  "
+263.04,5.44,"database engine is using the clustered index 
+on the EmployeeId column to find the employee  "
+268.48,7.68,"row we want. Number of rows read is 1, Actual 
+number of rows for all executions is also 1. Now,  "
+276.8,5.6,"number of rows read is the number of rows 
+sql server has to read to produce the query  "
+282.4,6.64,"result. In our case EmployeeId is unique, so 
+we expect one row and that is represented by  "
+289.04,6.48,"actual number of rows for all executions. With the 
+help of the index, sql server is able to directly  "
+295.52,7.52,"read that one specific employee row we want, hence 
+both number of rows read and actual number of rows  "
+303.04,7.04,"for all executions is 1. So, the point is if 
+there are thousands or even millions of records,  "
+310.08,4.56,"sql server can easily and quickly 
+find the data we are looking for,  "
+314.64,3.76,"provided there is an index that 
+can help the query find data.  "
+319.04,5.52,"Now, we have a clustered index on the EmployeeId 
+column, so when we search by EmployeeId,  "
+324.56,5.76,"sql server can easily and quickly find the data 
+we are looking for, but what if we search by  "
+330.32,5.52,"employee name? At the moment, there is no index 
+on the ""Name"" column. So, there is no easy way for  "
+335.84,5.84,"sql server to find the data we are looking for. 
+SQL server has to read every record in the table  "
+341.68,4.96,"which is extremely inefficient from performance 
+standpoint. Let's actually look at this in action.  "
+347.76,6.56,"Here is the query, we are trying to find the 
+employee by name. Let's execute it. There we go,  "
+354.32,7.12,"we have the one row that we expected and I click 
+on the execution plan and hover over this. Notice,  "
+361.44,5.68,"the operation is clustered index scan. Since 
+there is no proper index to help this query,  "
+367.12,6.48,"the database engine has no other choice than to 
+read every record in the table. This is exactly  "
+373.6,6.8,"the reason why number of rows read is 1 million, 
+that is every row in the table and if you take a  "
+380.4,6.56,"look at actual number of rows for all executions, 
+the value is 1. How many rows are we expecting in  "
+386.96,8.24,"the result? Well, only one row, because there is 
+only one employee whose name is ""ABC 932000"". So,  "
+395.2,7.12,"to produce this one row as the result, sql server 
+has to read all the 1 million rows from the table,  "
+402.32,6.4,"because there is no index to help this query. 
+This is called index scan and in general, index  "
+408.72,6.64,"scans are bad for performance. This is when we 
+create a non-clustered index on the ""Name"" column.  "
+416.24,6.48,"Actually, sql server is helping us here. Notice, 
+it's actually telling us there is a missing index.  "
+422.72,5.92,"To improve the performance of this select query, 
+it's asking us to create a non-clustered index  "
+428.64,5.36,"on the ""Name"" column. Why on the ""Name"" column? 
+Well, that's because we are looking up employees  "
+434.0,5.28,"by name. So, let's actually right click on this 
+and select this option - ""Missing Index Details"".  "
+440.24,6.0,"We actually have the required code here to 
+create non-clustered index. Let's uncomment this.  "
+446.24,5.44,"Create non-clustered index, we are creating on the 
+Name column and let's give this index a name ""IX""  "
+451.68,6.24,"for index, we are creating it on the Employees 
+table and on the Name column. Let's execute this."
+460.8,6.64,"Now, let's execute that same select query 
+again. Click on the ""Execution plan"" tab  "
+467.44,5.68,"and we have several steps here. We'll discuss 
+execution plans in detail in our upcoming videos.  "
+473.12,7.44,"For now, just understand, we read the execution 
+plans from right to left and top to bottom. So,  "
+480.56,7.12,"we start here and when I hover over this, 
+notice, now the operation is index seek  "
+487.68,6.96,"on the non-clustered index. Before we understand 
+this execution plan, let's first understand how  "
+494.64,7.28,"non-clustered index is stored in the database. In 
+a non-clustered index, we do not have table data.  "
+501.92,7.28,"We have key values and row locators. We created 
+a non-clustered index on the ""Name"" column. So,  "
+509.2,7.44,"the key values, in this case employee names 
+are sorted and stored in alphabetical order.  "
+516.64,6.96,"The row locators that are present at the bottom of 
+the tree contain employee names and cluster key of  "
+523.6,6.48,"the row, in our example employee id is the cluster 
+key. Why? because employee id is the primary key,  "
+530.08,6.88,"by default it is the cluster key. Now, if we look 
+at one of the row locators, notice the names of  "
+536.96,7.6,"the employees are sorted in alphabetical order and 
+we also have their respective employee id. Now,  "
+544.56,6.08,"if you remember, on the employee id we have the 
+clustered index. Now, when we search employee  "
+550.64,6.56,"by name both these indexes, non-clustered index 
+on the Name column and clustered index on the  "
+557.2,6.16,"EmployeeId column are going to work together to 
+find the employee that we are looking for. Let's  "
+563.36,6.64,"look at the steps involved. First, sql server 
+uses the non-clustered index on the Name column to  "
+570.0,6.08,"quickly find this employee entry in the index. In 
+a non-clustered index along with the employee name  "
+576.08,6.16,"we also have the cluster key, in our case its 
+employee id. The database engine knows there is  "
+582.24,6.8,"clustered index on employee id, so this clustered 
+index is then used to find the respective employee  "
+589.04,5.92,"record. Now, let's relate these steps to the 
+execution plan that we have in sql server  "
+594.96,6.8,"management studio. Remember, we read the execution 
+plan from right to left and top to bottom. So,  "
+601.76,6.72,"we start on the top right here. Notice, the first 
+step is index seek on the non-clustered index.  "
+608.48,5.84,"On the Name column, we have non-clustered index 
+and sql server is using it to find an entry for  "
+614.32,5.76,"this employee in the index and remember, in the 
+index along with the employee name we also have  "
+620.08,7.36,"employee id which is the primary key. Next, 
+this primary key is used to find an entry  "
+627.44,5.44,"in the clustered index, that's why we have 
+the operation here as key lookup clustered."
+636.08,6.48,"The value from the cluster index, in our case 
+employee id is then used in an inner join with  "
+642.56,6.16,"the Employees table to retrieve the respective 
+employee record. If you're new to these execution  "
+648.72,5.68,"plans and wondering why this nested loop or inner 
+join is required, we'll discuss these execution  "
+654.4,7.68,"plans in detail in our upcoming videos. Now, 
+on this slide, I have ""Estimated Subtree Cost""  "
+662.08,6.08,"with and without index. So, for this query - 
+Select * from employees where name equals whatever  "
+668.16,10.32,"name we supply, estimated subtree cost without 
+index is 11. something. With index, it is 0.006.  "
+678.48,5.92,"Just imagine the impact it can have on performance 
+if we don't have index on the Name column.  "
+685.28,4.8,"If you're wondering, how did I get these 
+statistics? Well, in SQL server management studio,  "
+690.08,6.96,"on the ""Execution plan"" tab, if you hover over the 
+""Select"" operation, you get the total estimated  "
+697.04,7.12,"subtree cost for all these operations. In our 
+upcoming videos in this series, we'll discuss sql  "
+704.16,11.68,"server execution plans in detail with examples. 
+That's it in this video. Thank you for listening."

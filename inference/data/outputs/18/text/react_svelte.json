@@ -1,0 +1,77 @@
+{
+  "introduction": "This video compares React and Svelte, two popular front-end JavaScript frameworks. Both frameworks help developers build reactive user interfaces using components and JavaScript. However, they differ in their approaches to rendering, state management, and other aspects.",
+  "sections": [
+    {
+      "title": "Section 1: Rendering",
+      "content": [
+        "React uses a runtime called the virtual dom to keep track of data changes in the application and render them in the actual DOM in the browser. This approach requires some initial JavaScript and has a baseline of around 70 kilobytes for a hello world app.",
+        "Svelte takes an entirely different approach by using a compiler to eliminate the need for a runtime. It takes the Svelte code and converts it into vanilla JavaScript, resulting in a far smaller hello world app.",
+        "React is just JavaScript, while Svelte can take non-JavaScript code to allow developers to do things more efficiently.",
+        "Svelte's vanilla JavaScript code is more concise and feels like JavaScript, but it's not as widely used as React."
+      ],
+      "topics": ["Rendering Approaches", "Initial JavaScript", "Vanilla JavaScript", "Non-JavaScript Code"]
+    },
+    {
+      "title": "Section 2: State Management",
+      "content": [
+        "React uses functions to create components and reactive state with the useState hook, which returns a reactive value and a setter function to update the state.",
+        "Svelte defines logic within the script tags to create reactive state and uses a single component file to define the logic.",
+        "Svelte's state management system is simpler and more concise compared to React's.",
+        "React has a massive ecosystem of dedicated libraries to help with state management, while Svelte has fewer libraries but they are more focused."
+      ],
+      "topics": ["Reactive State", "useState Hook", "Script Tags", "Dedicated Libraries"]
+    },
+    {
+      "title": "Section 3: Props and Children",
+      "content": [
+        "React passes props and components as arguments and uses destructuring to access them. It also allows components to render directly in the JSX.",
+        "Svelte uses slots and allows you to insert UI at specific points in the component markup. It doesn't have the ability to pass components as props.",
+        "React's useEffect hook takes a callback function and an empty array to signify that it doesn't have any dependent data, while Svelte's onMount function is more readable and can handle an async function.",
+        "React's side effects and computed state are managed using the useEffect hook, while Svelte uses reactive declarations that start with a dollar sign and a colon."
+      ],
+      "topics": ["Props and Components", "Destructuring", "Slots", "Side Effects and Computed State"]
+    },
+    {
+      "title": "Section 4: Templating",
+      "content": [
+        "React uses JSX where you put your HTML in your JavaScript, while Svelte has its own templating approach where you bring JavaScript into your HTML.",
+        "React's conditional logic can be represented using ternary operators and nested ternaries, while Svelte's is more verbose but more readable.",
+        "React's loops can be implemented using the map function on an array or making it a key loop by adding a key prop to the child.",
+        "Svelte has a similar mechanism called stores that are very similar to observables in libraries like rxj, allowing you to use reactive data throughout the entire application with surgical precision."
+      ],
+      "topics": ["JSX vs. Svelte Templating", "Conditional Logic", "Loops", "Stores"]
+    },
+    {
+      "title": "Section 5: Shared State",
+      "content": [
+        "React doesn't have a primitive way to share state, so you typically need to bring in a state management solution like MobX or Redux.",
+        "Svelte has a similar mechanism called stores that are very similar to observables in libraries like rxj.",
+        "Svelte allows you to use reactive data throughout the entire application with surgical precision and zero boilerplate.",
+        "Svelte's stores can be subscribed to inside any component both in the templates and in the JavaScript."
+      ],
+      "topics": ["Shared State", "MobX and Redux", "Stores", "Subscribing to Stores"]
+    }
+  ],
+  "topics": [
+    "React vs. Svelte",
+    "Rendering Approaches",
+    "State Management",
+    "Props and Children",
+    "Templating",
+    "Shared State"
+  ],
+  "general topics": [
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": "High School"
+    },
+    {
+      "name": "Programming Languages and Software Development",
+      "complexity": "High School"
+    },
+    {
+      "name": "Database Systems and Management",
+      "complexity": "High School"
+    }
+  ]
+}

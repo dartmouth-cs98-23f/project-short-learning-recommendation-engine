@@ -1,0 +1,13 @@
+JSON format:
+```json
+{
+  "introduction": {
+    "sections": [],
+    "topics": ["select star", "performances", "database storage", "rows"],
+    "conclusion": "The video explores the reasons behind the perceived slowess of 'select star' and how it affects database performance. The video discusses the different components of a database, including the stack and backend engineering fundamentals. A detailed review of an article on Medium is included, with the speaker's comments on why select star can impact performance, regardless of the number of columns being selected."
+  },
+  "sections": [
+    {
+      "title": "Select Star and its Effects on Performance",
+      "content":
+```

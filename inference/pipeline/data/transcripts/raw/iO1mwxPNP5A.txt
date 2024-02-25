@@ -1,0 +1,290 @@
+second,duration,transcript
+0.0,3.659,Nobel prize winning Economist Paul
+1.92,4.439,Krugman made an ominous prediction
+3.659,4.561,recently saying AI like chat GPT won't
+6.359,3.721,change the world anytime soon the reason
+8.22,4.2,this is terrifying is that he's the same
+10.08,4.019,guy who also predicted in the 1990s that
+12.42,3.12,the internet was about as game changing
+14.099,3.18,as a fax machine when it comes to
+15.54,3.48,programming I've already seen enough the
+17.279,4.141,need to memorize syntax for programming
+19.02,4.8,is done the future is deterministic AI
+21.42,3.66,pseudocode and the future is now uh
+23.82,4.08,ladies and gentlemen if you will look
+25.08,5.16,right here today's video is yet another
+27.9,4.08,react.js tutorial just one of Millions
+30.24,3.78,on the internet but it's no ordinary
+31.98,4.079,tutorial it's the first tutorial to
+34.02,3.84,leverage the full power of AI to write
+36.059,3.18,code like a 10x developer even if you've
+37.86,2.94,never written a single line of code in
+39.239,3.181,your life what's crazy though is that
+40.8,3.24,this tutorial can be applied to any
+42.42,3.24,language or framework once you know some
+44.04,3.359,basic programming principles and how to
+45.66,3.36,prompt like a pro you can build almost
+47.399,4.021,anything in your imagination but it's
+49.02,4.199,not as simple as just asking chatgpt to
+51.42,3.54,build you a react app you will need some
+53.219,3.66,domain knowledge and understand how to
+54.96,3.54,execute and validate the code that the
+56.879,3.061,AI spits out let's go ahead and get
+58.5,3.3,started with your AI printing
+59.94,3.599,masterclass I'm assuming you know
+61.8,3.6,nothing about react other than it's a
+63.539,3.241,library for building uis I could sit
+65.4,3.719,here and teach you about react and ask
+66.78,4.26,you to buy my 500 react course but the
+69.119,3.721,truth is that gpt4 can teach you better
+71.04,3.119,than I can I hate to admit it but it's
+72.84,3.0,true if you want to learn something you
+74.159,3.301,know absolutely nothing about go ahead
+75.84,3.3,and prompt it to explain it like you're
+77.46,3.9,five in this case it'll explain how
+79.14,4.08,react.js components are like Lego bricks
+81.36,3.72,but for building websites which is the
+83.22,3.3,perfect metaphor from there I ask it for
+85.08,3.06,the most important Concepts that I
+86.52,3.72,should know it then explains components
+88.14,3.659,State and props and hooks if there's
+90.24,3.12,anything you don't understand here you
+91.799,3.481,can then prompt it to explain that one
+93.36,3.719,thing in more detail or explain that to
+95.28,4.379,you like your five one problem though is
+97.079,4.381,that llms tend to hallucinate AKA makes
+99.659,3.42,stuff up so as of today it's not really
+101.46,3.479,a replacement for the react.js
+103.079,4.021,documentation which is excellent by the
+104.939,3.901,way however chat EBT has a browser
+107.1,3.18,plugin that's on a waitlist right now
+108.84,3.419,which will eventually solve that
+110.28,4.08,hallucination problem so the react.js
+112.259,3.421,docs are like the Bible and chatgpt is
+114.36,3.24,like a priest who makes all the money
+115.68,3.42,but sometimes invents his own ideas now
+117.6,2.879,once you have a general idea about the
+119.1,2.94,language or framework that you're trying
+120.479,3.6,to build with the next step is to set up
+122.04,4.079,a project that allows you to inject AI
+124.079,4.081,code in a safe and effective way there's
+126.119,4.081,an old programming proverb that says if
+128.16,3.299,code is not tested it doesn't work and
+130.2,3.3,that's especially true when working with
+131.459,4.5,an AI that acts like it's tripping bowls
+133.5,4.08,I'm freaking out man as someone who's
+135.959,3.121,done a lot of react development I'm just
+137.58,3.06,going to do it the old-fashioned way and
+139.08,3.299,set the project up the way I want it
+140.64,4.2,manually but doing things like this is
+142.379,4.08,very 2022. like yesterday on Twitter I
+144.84,3.6,saw this guy set up and build a project
+146.459,4.101,entirely from voice commands and then
+148.44,6.06,deploy it to versel
+150.56,6.88,which means it did in fact deploy dude
+154.5,5.459,it did it it nailed the background no
+157.44,4.56,way I'm using vs code for Microsoft as
+159.959,4.621,my editor it's not available today but
+162.0,4.98,GitHub copilot X is coming a plug-in for
+164.58,3.78,vs code that brings chat EPT directly
+166.98,2.88,into your editor make sure you're
+168.36,3.06,subscribed for the latest updates on
+169.86,4.62,that tool the only other tool you'll
+171.42,5.34,need is chat EPT ideally with gpt4 which
+174.48,4.08,is currently paid but 3.5 will work as
+176.76,4.02,well here I have vs code open to my
+178.56,3.72,terminal with node.js installed in the
+180.78,4.02,future we'll have tools like GitHub
+182.28,4.739,copilot CLI that can find and explain
+184.8,3.96,commands for us but for now I'm just
+187.019,3.661,going to initialize a new react project
+188.76,3.18,with VJs we'll go ahead and use
+190.68,2.699,typescript because I have some
+191.94,2.879,typescript tricks to show you and then
+193.379,2.94,once inside that project we'll go ahead
+194.819,3.541,and install another tool called
+196.319,3.84,playwright for end-to-end testing in the
+198.36,3.36,browser When developing an app testing
+200.159,3.3,is technically not required but it's
+201.72,3.36,extremely important when working with AI
+203.459,2.941,because we need to validate that it does
+205.08,3.12,what it's supposed to the good news
+206.4,3.419,though is that AI can write its own test
+208.2,3.36,as we'll see shortly now the main
+209.819,3.84,component in the source directory is in
+211.56,4.38,the app.tsx file let's go ahead and
+213.659,4.5,prompt chatgpt to replace it with a more
+215.94,4.62,basic hello world gpt4 is kind of slow
+218.159,4.08,and can often be overly verbose so one
+220.56,3.599,thing you can do is just say code only
+222.239,3.661,to shorten the response that looks
+224.159,3.601,pretty good let's copy and paste it into
+225.9,4.02,our project now go to the terminal and
+227.76,3.96,run npm run Dev and you should get this
+229.92,3.599,hello world component but that's a
+231.72,3.78,little too simple let's go back to chat
+233.519,3.78,EPT and now have it modify this code
+235.5,3.84,with a button that will toggle the
+237.299,3.421,visibility of the hello world text when
+239.34,3.36,doing that it explains how we'll need to
+240.72,3.599,use react state to manage the visibility
+242.7,3.179,paste the updated code into your project
+244.319,3.601,save it and now you have a working
+245.879,3.481,interactive react app that's pretty cool
+247.92,2.94,but we want to make sure that the AI
+249.36,3.18,doesn't accidentally break this code in
+250.86,3.599,the future so let's ask it to write a
+252.54,4.259,test with playwright once again copy the
+254.459,4.921,code then go into the test directory and
+256.799,4.56,create a new file called app.test.ts
+259.38,4.08,here's a pro tip as a printing engineer
+261.359,4.201,you can use control V on your keyboard
+263.46,3.9,instead of doing right click paste to
+265.56,3.6,maximize your speed now from there we
+267.36,3.779,need to go into the package Json file
+269.16,3.599,and set up a testing script if you
+271.139,3.0,already have copilot installed you can
+272.759,2.88,just type test and it should
+274.139,3.12,automatically detect playwright and
+275.639,3.12,create the script for you which is just
+277.259,3.72,playwright test from there we can open
+278.759,3.601,the terminal run npm run test and
+280.979,3.361,playwright will test this code on
+282.36,3.6,multiple browsers in parallel as you can
+284.34,3.419,see it fails because we don't have the
+285.96,3.239,right localhost Port set up so let's go
+287.759,3.601,ahead and modify that in our testing
+289.199,4.321,code and run it again this time it
+291.36,3.66,passes in the future GitHub copilot will
+293.52,3.54,know the full context of your project
+295.02,3.6,and won't make silly mistakes like these
+297.06,3.06,this is cool and all but what you'll
+298.62,3.54,find is your app grows more and more
+300.12,3.78,complex it becomes harder and harder to
+302.16,3.24,prompt the AI effectively it's
+303.9,2.88,non-deterministic which means you can
+305.4,3.299,get different results from the same
+306.78,4.02,prompt you never know what you're going
+308.699,3.481,to get and that's complete Madness for a
+310.8,2.94,programmer but now here's where things
+312.18,2.64,get really mind-blowing and will give
+313.74,2.76,you a glimpse into the future of
+314.82,3.48,programming at this point you have the
+316.5,3.36,general idea of how react works but you
+318.3,3.119,may not know JavaScript very well or
+319.86,3.059,haven't memorized all the little quirks
+321.419,2.881,in the framework or maybe you're a react
+322.919,3.241,expert and just don't want to go through
+324.3,3.6,the tedious process of writing perfectly
+326.16,3.599,structured code so what we can do next
+327.9,3.78,is have chat GPT come up with a
+329.759,3.601,pseudocode language for react what this
+331.68,3.299,will do is allow us to agree on some
+333.36,3.48,general guidelines to represent the
+334.979,3.481,structure of a react component as you
+336.84,3.359,can see here it looks kind of like yaml
+338.46,3.9,and allows us to Define State and then
+340.199,3.421,the rendering function or jsx and if we
+342.36,2.94,don't like the way it looks we can tell
+343.62,3.24,it to come up with a different idea like
+345.3,3.239,maybe make it look more like python
+346.86,3.6,actually no let's make it look like a
+348.539,3.781,cooking recipe which is surprisingly a
+350.46,3.66,very intuitive way to represent a react
+352.32,3.12,component and as an added benefit you
+354.12,3.0,could write this in any human language
+355.44,3.3,and have it translate your pseudocode
+357.12,3.0,back to English but from a practical
+358.74,3.0,standpoint I think you want something
+360.12,3.12,that kind of looks like yaml overall
+361.74,3.72,it's way more concise and doesn't
+363.24,3.78,require us to use precise syntax but at
+365.46,3.48,the same time it will give us relatively
+367.02,3.48,consistent results and we can make it
+368.94,3.96,even better by including relevant
+370.5,3.9,documentation or a style guide to force
+372.9,3.84,it to write code in a style that fits
+374.4,4.92,our project because gpt4 can now handle
+376.74,4.5,up to 25 000 tokens the end result is
+379.32,3.719,your own custom AI pseudocode language
+381.24,3.48,as you can see here I wrote out a
+383.039,3.301,relatively complex component in this
+384.72,3.72,language and it generates perfect react
+386.34,4.02,code as a result but most importantly it
+388.44,3.42,generates the same code every time most
+390.36,3.059,of the time maybe eighty percent of the
+391.86,3.3,time this is pretty mind-blowing because
+393.419,3.72,now any developer can have their own
+395.16,4.08,custom tailored pseudocode language that
+397.139,3.301,can transpile into complex code in
+399.24,3.6,virtually any language without
+400.44,4.14,understanding the underlying syntax in a
+402.84,3.54,previous video I predicted that someday
+404.58,3.54,there will be a universal AI language
+406.38,3.42,but maybe I was wrong maybe every
+408.12,3.6,developer gets to build their own AI
+409.8,3.78,language custom tailored to optimize
+411.72,4.199,their own productivity sounds like chaos
+413.58,4.26,on a team but AI can also translate your
+415.919,3.84,pseudo code into my pseudocode and my
+417.84,3.54,pseudocode into your pseudocode in fact
+419.759,3.841,one thing we could do right now is take
+421.38,4.379,the generated react code and convert it
+423.6,3.24,into a superior framework like svelte or
+425.759,2.761,solid there's a million different
+426.84,3.72,JavaScript Frameworks out there but now
+428.52,3.66,we can use them without learning them in
+430.56,2.759,fact we could use our pseudocode to
+432.18,2.88,build the same app in multiple
+433.319,3.361,Frameworks at the same time then and
+435.06,3.12,Benchmark their performance and just
+436.68,3.359,choose whichever one performs the best
+438.18,3.54,that's more of a futuristic idea but
+440.039,3.121,currently the main value of pseudocode
+441.72,3.36,is just getting things done faster
+443.16,3.84,without allowing the AI to become too
+445.08,3.78,magical like in this example you can see
+447.0,3.419,we're making an API call but currently
+448.86,3.899,we don't have any kind of interface for
+450.419,3.9,the response generally speaking gpt4
+452.759,2.88,will provide better results when you
+454.319,3.421,have statically typed code like
+455.639,3.78,typescript or even just type hints in a
+457.74,3.6,language like python in this case I have
+459.419,3.84,a Json object and what I'll do is paste
+461.34,3.84,that into chat GPT to turn it into a
+463.259,4.021,typescript interface it's able to detect
+465.18,3.84,the two different entities of TV shows
+467.28,3.72,and actors and now we can use it in our
+469.02,3.66,code now that chatgpt has this interface
+471.0,3.24,we can also tell it to generate any kind
+472.68,3.48,of helper functions we'll need like if
+474.24,3.72,we wanted to map this object to all the
+476.16,3.479,actor names that's a pretty handy trick
+477.96,4.019,right now but once again in the future
+479.639,4.921,it won't be necessary tools like copilot
+481.979,4.381,will be able to introspect any API to
+484.56,3.6,provide you with automatic and type
+486.36,3.3,safety without any effort on your part
+488.16,3.659,now the final thing we need to do as a
+489.66,3.18,print engineer is document our code we
+491.819,3.6,simply take the code we've already
+492.84,4.799,generated until chatgpt to document it
+495.419,4.081,congratulations you're now a 10x react
+497.639,4.62,proofed engineer the starting salary is
+499.5,4.8,about 335k this productivity boost is
+502.259,3.72,both exciting and scary Goldman Sachs
+504.3,3.839,just released a report saying that 300
+505.979,3.601,million jobs could be affected by AI in
+508.139,3.24,the near future but there's no reason to
+509.58,3.72,be afraid software systems in real life
+511.379,3.421,are complex beyond belief and not even
+513.3,3.419,state-of-the-artai will want to touch
+514.8,3.78,that code I do believe that AI will make
+516.719,3.301,writing code significantly easier but
+518.58,3.06,building complex software that powers
+520.02,3.54,the world will still be done by humans
+521.64,3.24,in the foreseeable future and my goal
+523.56,3.12,with this channel is to teach you how to
+524.88,4.94,do exactly that thanks for watching and
+526.68,3.14,I will see you in the next one

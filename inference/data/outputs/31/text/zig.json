@@ -1,0 +1,41 @@
+{
+  "introduction": "In this video, we will explore the Zig programming language, a high-performance system programming language created by Andrew Kelly in 2016. We will delve into its features, such as its minimal design, fast performance, and low-level memory control, as well as its unique comp time keyword and built-in testing framework. We will also discuss its memory management and error handling capabilities, and how to use Zig in a C or C++ codebase.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Zig Programming Language",
+      "content": [
+        "Zig is a high-performance system programming language that was created by Andrew Kelly in 2016.",
+        "It was quickly evolving into one of the most desired new languages in the world.",
+        "Zig is minimal, extremely fast, and allows for low-level memory control.",
+        "Unlike Rust or Go, Zig does not have any hidden memory allocations, making the code far more explicit and portable."
+      ],
+      "topics": ["Zig Programming Language", "Andrew Kelly", "Memory Management"]
+    },
+    {
+      "title": "Section 2: Zig Standard Library and Memory Management",
+      "content": [
+        "Zig ships allocators to provide a consistent interface for memory management.",
+        "Zig is not a memory-safe language like Rust or Go but it doesnt have any hidden memory allocations making the code far more explicit and portable because allocators can be easily swapped out in the code to target different architectures like x86, arm, webassembly, and bare metal.",
+        "Zig has no hidden control flow if it looks like a function and quacks like a function its a function theres no operator overloading and it doesnt even have exceptions if a function can fail it needs to return an explicit error value."
+      ],
+      "topics": ["Zig Standard Library", "Memory Management", "Function Calls"]
+    },
+    {
+      "title": "Section 3: Zig's Unique Comp Time Keyword",
+      "content": [
+        "Zig has a unique comp time keyword that makes it trivial to run kodak compile time instead of runtime.",
+        "There is no preprocessor or macros are necessary.",
+        "Zig can integrate well into a C or C++ codebase and supports cross-compilation out of the box with LLVM although divorce paperwork has been filed to get started install Zig then create a new project with the zignet exe command in the main file first to import the standard library then define a main function notice how the function returns a type of void with an exclamation point that exclamation point means that the function might return an error declare a mutable variable with the var keyword followed by a type like you wait to represent a single byte then assign and modify its value later or use cons to define an immutable variable that cannot be changed"]
+      ],
+      "topics": ["Zig Standard Library", "Compile Time Keyword", "Memory Management"]
+    },
+    {
+      "title": "Section 4: Zig's Built-In Testing Framework",
+      "content": [
+        "Zig has a built-in testing framework use the test keyword to evaluate code outside of the main program then use the zig test command to run it and finally build an executable with the zig build command and choose a build mode to optimize for speed size or safety"],
+      "topics": ["Zig Standard Library", "Testing Framework", "Test Keyword"]
+    },
+    {
+      "title": "Section 5: Memory Management in Zig",
+      "content": [
+        "Zig allows for memory swapping out in the code to target different architectures like x86 arm webassembly and bare metal in addition to

@@ -1,0 +1,64 @@
+{
+  "introduction": "ReactJS is a half-baked functional UI library created by Facebook. It was invented by Mark Zuckerberg in 2013 and is used by millions of developers. ReactJS is simple, but it gives you dozens of weird ways to solve the same problems. Its killer feature is the ability to write pure functional code, but this can make simple things more complicated than they need to be. ReactJS is a library and not a framework, and to build something cool, you'll need to find and install hundreds of different packages. Despite its high learning curve, ReactJS is blazingly fast and has been the most influential library in front-end development for the last decade.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction",
+      "content": [
+        "ReactJS was created by Mark Zuckerberg in 2013 and is used by millions of developers.",
+        "It is a simple library that allows you to write pure functional code.",
+        "However, this simplicity can make simple things more complicated than they need to be.",
+        "ReactJS is a library and not a framework, so you'll need to find and install hundreds of different packages to build something cool."
+      ],
+      "topics": ["ReactJS Creation", "Pure Functional Code", "Simplicity vs. Complexity", "ReactJS as a Library"]
+    },
+    {
+      "title": "Section 2: Functional and Class-Based Components",
+      "content": [
+        "ReactJS uses both functional and class-based components.",
+        "Functional components are simpler and easier to understand.",
+        "Class-based components have additional functionality, such as state and effects.",
+        "Functional components are often preferred over class-based components because they are more concise and easier to reason about."
+      ],
+      "topics": ["Functional Components", "Class-Based Components", "State and Effects", "Preferred Components"]
+    },
+    {
+      "title": "Section 3: Hooks, Forward Ref, Higher Order Components, Mixins, Render Props, Suspense",
+      "content": [
+        "ReactJS has a variety of hooks, such as useState, useEffect, and useContext, that allow you to manage state and side effects.",
+        "Forward Ref is a technique that allows you to pass a ref down to a child component.",
+        "Higher Order Components are functions that take a component as an argument and return a new component with additional functionality.",
+        "Mixins are a way to add functionality to a class-based component.",
+        "Render Props are a way to pass a function as a prop to a child component.",
+        "Suspense is a way to handle asynchronous data in a React component."
+      ],
+      "topics": ["Hooks", "Forward Ref", "Higher Order Components", "Mixins", "Render Props", "Suspense"]
+    },
+    {
+      "title": "Section 4: Templating with JSX",
+      "content": [
+        "ReactJS uses JSX for templating, which allows you to represent the UI entirely in non-portable callback hell.",
+        "JSX is a non-standard way to write HTML, which means that it is not supported by all browsers.",
+        "However, there are hundreds of CSS and JS libraries working on this problem, so you can still style your components effectively.",
+        "JSX allows you to write more concise and expressive code, which can make your components easier to read and maintain."
+      ],
+      "topics": ["JSX", "Non-Standard Way to Write HTML", "CSS and JS Libraries", "Expressive Code"]
+    },
+    {
+      "title": "Section 5: React as a Library",
+      "content": [
+        "ReactJS is a library and not a framework, which means that you'll need to find and install hundreds of different packages to build something cool.",
+        "Most of these packages were built by teenagers who stopped maintaining them years ago when they went off to college to learn a real language like C.",
+        "Despite its high learning curve, ReactJS is blazingly fast and has been the most influential library in front-end development for the last decade.",
+        "ReactJS is not perfect, but it does a lot of things right and for that it deserves our respect."
+      ],
+      "topics": ["React as a Library", "Hundreds of Different Packages", "Teenagers and Real Languages", "Blazing Fast and Influential"]
+    }
+  ],
+  "topics": ["ReactJS", "Functional and Class-Based Components", "Hooks", "JSX", "React as a Library"],
+  "general topics": [
+    {
+      "name": "Declarative UI",
+      "complexity": 0.8
+    },
+    {
+      "name":

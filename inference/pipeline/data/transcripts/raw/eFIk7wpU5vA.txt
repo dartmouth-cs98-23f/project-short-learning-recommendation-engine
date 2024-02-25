@@ -1,0 +1,438 @@
+second,duration,transcript
+0.16,3.6,so a quantum computer is a system that
+2.32,3.2,uses quantum properties like
+3.76,3.039,superposition and entanglement to
+5.52,2.88,perform computations
+6.799,3.281,but the quantum computers are being
+8.4,2.88,built are doing different things and are
+10.08,2.8,using different hardware
+11.28,3.519,so in this video let's clear up some
+12.88,3.68,terminology on universal gate-based
+14.799,3.041,quantum computers and quantum annealers
+16.56,2.879,talk about the different hardware
+17.84,2.8,implementations and the algorithms that
+19.439,2.961,these computers can run
+20.64,3.36,and cap it all off with an analysis of
+22.4,3.92,what makes a good quantum computer
+24.0,3.199,using the divincenzo criteria and ibm's
+26.32,2.64,quantum volume
+27.199,3.361,and this is also you don't get fooled by
+28.96,3.279,silly pop science articles that talk
+30.56,3.44,about the sky is falling because we've
+32.239,3.84,gotten a certain number of qubits
+34.0,3.44,because remember cubic counts don't
+36.079,3.681,matter well okay
+37.44,4.639,so they do matter some but a handful of
+39.76,4.4,amazing qubits is way better than a
+42.079,3.521,million cubits that just don't work so
+44.16,3.44,just like gpus can process
+45.6,4.4,graphics information way faster than
+47.6,3.52,cpus certain problems can be solved
+50.0,3.28,polynomially
+51.12,4.24,or exponentially faster using quantum
+53.28,4.0,algorithms by exploiting these effects
+55.36,3.76,of superposition and entanglement but
+57.28,2.48,what is a quantum annealer and what can
+59.12,1.84,it do
+59.76,3.119,while they rely on the same quantum
+60.96,2.399,mechanical concepts annealers are really
+62.879,2.32,good for
+63.359,3.521,optimization problems where you can
+65.199,4.001,quickly search over a space
+66.88,3.76,and find an optimal solution for that
+69.2,3.12,you can think of this as looking over a
+70.64,2.479,landscape and finding out where the low
+72.32,2.88,point is
+73.119,3.68,an annealer does that quantum annealers
+75.2,3.599,are built for translating quantum
+76.799,3.121,unconstrained binary optimization or
+78.799,3.041,cubo problems
+79.92,3.92,analyzing problems onto quantum hardware
+81.84,3.2,efficiently the problems this can solve
+83.84,3.279,are traveling salesman
+85.04,3.92,scheduling problems optimal placement
+87.119,2.96,problems graph coloring problems and
+88.96,2.799,even solving games
+90.079,3.601,the d-wave machine is probably the most
+91.759,3.841,famous example of a quantum annealer
+93.68,3.439,it's built using superconducting qubits
+95.6,2.24,which is a design based on having a
+97.119,2.481,cooper pair
+97.84,3.12,which is a pair of electrons or some
+99.6,3.36,other fermion with
+100.96,3.519,a josephson junction this is actually
+102.96,3.519,the same type of qubit that's used for
+104.479,4.161,many universal gate quantum computers
+106.479,4.561,so they also have this super cool gold
+108.64,4.08,steampunk chandelier looking thing which
+111.04,3.92,by the way is called a dilution fridge
+112.72,3.92,or a creostat this dilution fridge takes
+114.96,3.6,the superconducting chip and actually
+116.64,2.96,cools it down to temperatures below 15
+118.56,2.879,millikelvin
+119.6,3.6,then this big box is actually shielding
+121.439,3.441,from electromagnetic interference
+123.2,3.279,achieved using a radio frequency
+124.88,2.239,shielded enclosure and a magnetic
+126.479,2.161,shielding
+127.119,3.441,since qubits are controlled by this
+128.64,4.0,frequency and are very delicate we don't
+130.56,2.399,want any outside forces interfering with
+132.64,2.16,them
+132.959,3.92,for example crosstalk when we try and
+134.8,3.28,affect one qubit but accidentally end up
+136.879,3.281,affecting another as well
+138.08,3.84,so that sounds pretty standard so far
+140.16,3.76,right it's the same hardware as these
+141.92,3.679,universal gate-based quantum machines so
+143.92,3.44,what makes this a quantum annealer
+145.599,3.921,the layout of the quantum computer is
+147.36,3.92,absolutely the key for putting this cubo
+149.52,3.6,and icing objective functions into a
+151.28,4.08,format that d-wave can understand
+153.12,3.92,and doing so really efficiently binary
+155.36,2.32,objective functions can be looked at as
+157.04,2.4,graphs
+157.68,3.52,and these graphs can be translated onto
+159.44,3.36,the quantum hardware so you can take
+161.2,3.28,this optimization problem and you
+162.8,2.799,construct the hamiltonian equation we
+164.48,2.8,need to minimize
+165.599,3.041,you can represent it with this graph
+167.28,2.72,where the nodes are a and b
+168.64,3.04,with the weights corresponding to the
+170.0,3.599,equation and the edge between them
+171.68,3.839,a b with the weight 7. if this is a
+173.599,3.601,traveling salesman problem the 5 and 7
+175.519,2.64,can correspond to the time they spend in
+177.2,2.8,each location
+178.159,4.0,and edge between is the distance between
+180.0,4.0,the city d-wave has a couple chip
+182.159,4.16,designs the chimera and the pegasus
+184.0,4.0,and the pegasus is the latest one this
+186.319,3.28,pegasus and chimera structure is
+188.0,3.28,optimized to take the graph problem and
+189.599,3.441,translate it onto the quantum chip
+191.28,3.12,so the chimera hardware basically takes
+193.04,2.88,these superconducting qubits and
+194.4,2.88,arranges them in a way that you have a
+195.92,2.48,unit cell of qubits
+197.28,2.72,so the nodes that we have in the
+198.4,3.28,equation are mapped to qubits and the
+200.0,3.2,edges are mapped to couplers
+201.68,3.36,so since we're looking at it like a
+203.2,3.36,landscape physics says that everything
+205.04,3.6,wants to be in the lowest energy state
+206.56,4.0,configuration or the ground state
+208.64,4.08,the minimization of that function is the
+210.56,3.92,lowest energy state of the whole system
+212.72,3.92,so we apply a magnetic field to these
+214.48,3.92,qubits changing the superposition and
+216.64,2.879,controlling the probability of it being
+218.4,2.72,zero or one
+219.519,3.761,you can do the same thing with a coupler
+221.12,4.399,and that correlates these two qubits
+223.28,4.48,so what is the actual annealing part
+225.519,3.36,well in thermal annealing we use heat to
+227.76,3.52,raise the temperature of
+228.879,4.241,say some material when it slowly cools
+231.28,2.48,it wants to go back to the lowest energy
+233.12,2.479,state
+233.76,3.44,for quantum annealing instead of heat
+235.599,3.121,it's quantum fluctuations
+237.2,3.679,we set up the quantum problem in a
+238.72,4.0,hamiltonian and it slowly evolves
+240.879,3.601,just like a heated up metal slowly
+242.72,3.76,cooling down evolves into its lowest
+244.48,4.0,energy state but you may be wondering if
+246.48,3.52,it's more limited in the algorithms but
+248.48,3.119,is using the same hardware
+250.0,3.28,why would we even want to build this
+251.599,3.601,annealer the answer is is that the
+253.28,3.919,annealer is that much more efficient at
+255.2,3.599,solving these optimization problems than
+257.199,3.121,a quantum gate based computer is
+258.799,3.441,so yes this quantum computer that's
+260.32,4.08,universal gate based could do annealing
+262.24,4.0,hence universal but it'd be a lot less
+264.4,3.359,efficient the opposite is true as well
+266.24,3.04,quantum annealers could do other
+267.759,3.041,algorithms but it's going to be way less
+269.28,2.0,efficient than a gate-based quantum
+270.8,2.399,computer
+271.28,3.6,so what is universal gate-based quantum
+273.199,3.44,computing these quantum systems have a
+274.88,3.36,way broader application this system
+276.639,4.081,relies on building really reliable
+278.24,4.32,qubits we apply basic circuit operations
+280.72,2.8,or gates and put them together in any
+282.56,3.04,sequence to run
+283.52,3.84,more and more complex algorithms quantum
+285.6,3.2,computers however have their own set of
+287.36,2.48,gates that are very different from
+288.8,2.959,classical gates
+289.84,3.6,in classical computers we use gates like
+291.759,4.241,and not or
+293.44,3.68,nand xor and fanout to perform any
+296.0,3.12,computation
+297.12,3.519,however these gates are irreversible
+299.12,2.16,because we lose information in the
+300.639,2.56,process
+301.28,3.6,for example when we do an or gate we
+303.199,3.761,don't know if the first bit was one or
+304.88,2.96,the second bit was one or maybe both of
+306.96,3.04,them were one
+307.84,3.84,so we lose information in that process
+310.0,2.88,and the fanout classical gate requires
+311.68,2.72,the copying of a bit
+312.88,3.44,and we can't do that with quantum states
+314.4,2.72,due to the no cloning theorem so what
+316.32,2.48,can we do
+317.12,3.04,well there's a set of quantum gates
+318.8,3.839,unary one qubit
+320.16,3.12,binary two qubit and ternary three cubic
+322.639,2.161,gates
+323.28,3.44,and all these gates are reversible
+324.8,3.76,because irreversible gates will destroy
+326.72,3.039,the entanglement and superposition and
+328.56,3.12,we don't want to do that
+329.759,3.521,not until we want to measure the system
+331.68,4.799,so these one cubic gates like
+333.28,5.28,x y z hadamard and rotation gates change
+336.479,4.081,the state of one qubit the hadamard gate
+338.56,4.24,puts the qubit in an equal superposition
+340.56,4.24,of zero and one two cubic gates like the
+342.8,4.0,c naught can entangle two qubits
+344.8,3.2,the c naught gate bit flips the state of
+346.8,3.119,the target qubit
+348.0,3.759,if and only if the control qubit is in
+349.919,2.161,the one state there's also a controlled
+351.759,1.921,z
+352.08,3.36,gate which does a similar thing to c
+353.68,3.76,naught but applies a z gate instead of
+355.44,3.759,the x bit flip gate and there's also a
+357.44,2.479,swap gate to swap the states of two
+359.199,2.321,qubits
+359.919,3.361,there are also three cubic gates called
+361.52,3.92,the fredkin and to foley gates
+363.28,3.44,the fretkin gate is a c swap gate so
+365.44,3.12,it's a controlled swap
+366.72,3.52,which means it will only do that swap if
+368.56,3.199,the control qubit is in the one state
+370.24,3.6,and the to foley gate is a c
+371.759,3.921,c naught gate which means it only does
+373.84,3.44,the bit flip if both of the control
+375.68,3.2,qubits are in the one state
+377.28,2.96,universal gate quantum computers are
+378.88,2.8,also coming in a lot of different
+380.24,2.88,hardware implementations
+381.68,3.68,some are made out of superconducting
+383.12,3.359,qubits like the ibm the google and the
+385.36,2.959,bleximo machines
+386.479,3.28,and others are made out of trapped ions
+388.319,2.16,like the ion q and the honeywell
+389.759,2.72,machines
+390.479,4.321,however other companies like psyquanum
+392.479,4.321,are focusing on silicon photonic qubits
+394.8,3.76,so will we be able to solve a problem on
+396.8,2.88,a quantum computer that can't be solved
+398.56,2.96,on a classical machine
+399.68,3.359,well we can actually simulate a quantum
+401.52,3.84,computer on a classical machine
+403.039,4.0,however once we get to 30 or 40 qubits
+405.36,2.959,it becomes really hard to do so because
+407.039,3.201,it takes so many bits
+408.319,3.761,but because a classical computer could
+410.24,2.48,in theory simulate a quantum computer of
+412.08,2.239,any size
+412.72,3.199,assuming they have enough bits that
+414.319,2.961,means no we can't solve something like
+415.919,1.921,the halting problem with a quantum
+417.28,2.24,computer
+417.84,3.52,what quantum computers can do is solve a
+419.52,4.079,certain set of problems faster
+421.36,3.76,but it can't solve everything faster so
+423.599,3.761,then a big question
+425.12,4.24,is a quantum annealer actually a quantum
+427.36,3.839,computer so the official definition of a
+429.36,3.6,quantum computer is quantum computers
+431.199,4.081,use phenomena like entanglement and
+432.96,4.16,superposition to perform computations
+435.28,3.52,so yes by this definition quantum
+437.12,3.199,annealers are quantum computers
+438.8,3.2,they are more limited in the scope of
+440.319,3.201,computations that they can do but they
+442.0,2.24,still exploit superposition and
+443.52,2.079,entanglement
+444.24,3.2,but just because it's limited in the
+445.599,3.681,scope of algorithms that it can run
+447.44,3.68,does not make it not a quantum computer
+449.28,3.919,so i say that when you say quantum
+451.12,3.04,computer it can refer to both gate based
+453.199,2.72,and annealers
+454.16,3.599,however you can't efficiently implement
+455.919,3.441,shor's algorithm on those annealers
+457.759,3.28,so that means if you want to do that you
+459.36,3.44,have to have a lot more qubits not even
+461.039,3.201,counting all the error correction ones
+462.8,2.799,and that's where a lot of the confusion
+464.24,2.959,can come in understanding the
+465.599,3.28,differences between gate-based quantum
+467.199,3.361,computers and quantum annealers gives
+468.879,3.521,you context on how the same types of
+470.56,2.479,qubits can give very different final
+472.4,2.32,results
+473.039,3.28,two thousand qubits on a universal
+474.72,3.599,gate-based quantum machine is likely
+476.319,3.841,more powerful than a quantum annealer
+478.319,3.761,with a lot of other factors being equal
+480.16,2.879,of course however once you start looking
+482.08,2.959,into these factors
+483.039,3.921,things can change really drastically the
+485.039,3.681,number of qubits isn't everything it's
+486.96,3.44,just one factor for power
+488.72,3.28,but it's definitely not the only one
+490.4,2.88,cubic counts mean nothing if they're
+492.0,2.879,really poorly constructed
+493.28,2.88,it's also not super helpful to you if
+494.879,1.841,you have a quantum annealer with more
+496.16,1.84,qubits
+496.72,2.96,but the algorithm that you want to
+498.0,3.44,implement on it is not very efficient
+499.68,3.28,but maybe you have two universal
+501.44,3.36,gate-based quantum computers but they
+502.96,3.519,have very different error rates
+504.8,3.679,that means you're likely to get way
+506.479,3.84,noisy calculations or maybe you can't
+508.479,3.44,even complete the calculation at all due
+510.319,2.16,to the amount of coherence time the chip
+511.919,2.56,has
+512.479,3.68,or maybe the topology so the way the
+514.479,3.601,cubes are connected to one another
+516.159,3.281,is so convoluted that you can't really
+518.08,1.92,make efficient circuits on it and
+519.44,2.159,there's also
+520.0,3.279,one other thing you should consider when
+521.599,2.721,comparing these cubic counts and the
+523.279,3.12,algorithm counts
+524.32,3.92,many algorithms show in theory how many
+526.399,3.681,qubits are needed for that calculation
+528.24,3.599,however in physical implementations of
+530.08,3.52,these quantum computers these qubits
+531.839,2.801,need air correction qubits and other
+533.6,2.88,processed qubits
+534.64,3.44,so when i say for example that rsa and
+536.48,2.24,elliptic curve cryptography can be
+538.08,3.52,broken by
+538.72,3.92,2500 to 4 000 cubits i'm referring to
+541.6,3.04,logical qubits
+542.64,3.68,that algorithm may need 10 million
+544.64,3.36,physical cubits to actually run the
+546.32,3.36,shallowness and depth of the circuit
+548.0,3.68,also play a role in how many supporting
+549.68,3.68,qubits you need a shallow algorithm like
+551.68,3.04,variational quantum eigensolver will
+553.36,2.08,need a lot less of these supporting
+554.72,3.04,qubits
+555.44,3.28,so what is a bad qubit and what is a bad
+557.76,2.8,quantum computer
+558.72,3.44,we have the divincenzo criteria which
+560.56,2.8,talks about the physical implementation
+562.16,2.56,of a quantum computer
+563.36,3.28,also note this doesn't talk about what
+564.72,3.84,the quantum computer can do but just the
+566.64,2.96,physical details the implementation of
+568.56,2.48,the hardware itself
+569.6,2.799,and i'll link the original paper down
+571.04,3.52,below in the description so the
+572.399,4.241,dimensions of criteria has five points
+574.56,4.32,number one we need a scalable physical
+576.64,4.24,system with well characterized qubits
+578.88,3.84,so we need physical qubits a two level
+580.88,3.76,system that can be entangled
+582.72,3.119,that we know the internal parameters of
+584.64,3.36,and that we can control
+585.839,3.281,number two the ability to initialize the
+588.0,2.56,state of qubits
+589.12,3.52,so we have to be able to put these
+590.56,4.08,qubits in initial states accurately
+592.64,3.759,a lot of error with initializing qubits
+594.64,3.28,to their beginning state means a lot of
+596.399,2.481,error down the road when we actually do
+597.92,3.2,the calculation
+598.88,3.92,number three long coherence times which
+601.12,3.2,are much longer than the amount that we
+602.8,3.44,need to do a gate operation
+604.32,2.959,the length of coherence or the amount of
+606.24,2.64,time that you want the quantum
+607.279,3.361,information to be stored needs to
+608.88,3.92,increase the more gates that you do
+610.64,4.08,number four a universal set of quantum
+612.8,3.76,gates for classical computers if you
+614.72,3.04,have a gate set that's called universal
+616.56,1.44,it means that when you put together
+617.76,1.92,those
+618.0,3.76,gates we can express any boolean
+619.68,3.839,function so for quantum computers it's
+621.76,3.199,universal if we can approximate any
+623.519,3.121,unitary transformation
+624.959,3.361,a unitary transformation is a
+626.64,2.96,transformation that preserves the inner
+628.32,2.32,product which is a property of the
+629.6,2.96,hilbert space
+630.64,3.12,and number five a qubit-specific
+632.56,3.04,measurement capability
+633.76,3.92,we have to be able to measure individual
+635.6,3.84,qubits trapped ions and superconducting
+637.68,3.76,qubits do really well on all five of
+639.44,3.519,these divinchenzo criteria so that's why
+641.44,3.36,a lot of companies are using them
+642.959,3.12,but there's definitely other contenders
+644.8,2.719,there's others that we haven't done a
+646.079,3.121,lot of research on so maybe in the
+647.519,3.361,future they'll be better candidates
+649.2,3.199,so first the cubes themselves actually
+650.88,3.04,have to be good but we also need to
+652.399,2.0,connect these qubits and have them work
+653.92,2.08,together
+654.399,3.521,so how do we measure the goodness of the
+656.0,3.76,whole quantum chip ibm has come up with
+657.92,3.52,a metric called quantum volume and other
+659.76,3.44,companies have started using it as well
+661.44,3.2,so quantum volume is a single number but
+663.2,3.44,it weighs different factors of the
+664.64,3.759,quantum chip to measure the performance
+666.64,3.84,it uses many more features of a quantum
+668.399,4.161,computer including number of qubits
+670.48,3.919,and gate and measurement errors and the
+672.56,3.36,crosstalk and the topology or
+674.399,3.041,connectedness of the quantum chip
+675.92,2.88,and this metric was introduced because
+677.44,3.36,the number of transistors like in a
+678.8,2.88,classical computer doesn't directly map
+680.8,2.96,to quantum bits
+681.68,3.12,qubits actually decohere or lose that
+683.76,3.199,quantum information
+684.8,4.159,very quickly a few super fault tolerant
+686.959,3.681,qubits with long coherence times that
+688.959,2.32,have good gait fidelities and are fully
+690.64,2.639,connected
+691.279,3.761,are so much more valuable than hundreds
+693.279,3.521,of poorly connected qubits with lots of
+695.04,3.44,noise and crosstalk so as you see with
+696.8,3.76,this quantum volume definition
+698.48,4.16,we actually see that the honeywell h1
+700.56,3.36,has a higher quantum volume than the ibm
+702.64,2.96,27 qubit machine
+703.92,3.039,so hopefully next time that you read an
+705.6,2.0,article about a quantum computing
+706.959,2.241,breakthrough
+707.6,3.359,you ask some really deep and serious
+709.2,3.439,questions what's the type of quantum
+710.959,3.44,computer what's the hardware
+712.639,3.521,what are the error rates and what's the
+714.399,3.12,topology so if you feel like this video
+716.16,3.2,is helpful to you please
+717.519,3.681,like this video i appreciate it a lot
+719.36,5.039,and subscribe for more videos on quantum
+721.2,3.199,computing coding and tech

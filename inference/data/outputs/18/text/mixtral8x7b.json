@@ -1,0 +1,70 @@
+{
+"introduction": "In this video, we will explore the architecture of the Mistral language model, specifically focusing on the vanilla transformer and the sliding window attention mechanism. We will also discuss the kv cache, prefilling, and chunking techniques used in model sharding.",
+"sections": [
+{
+"title": "Section 1: Understanding the Vanilla Transformer",
+"content": [
+"Explaining the self-attention mechanism and its importance in the transformer model",
+"Introducing the concept of the vanilla transformer architecture",
+"Explaining the sliding window attention mechanism and its relationship to the receptive field",
+"Discussing the k-cache and its role in reducing computations"
+],
+"topics": ["Self-attention mechanism", "Vanilla transformer architecture", "Sliding window attention", "K-cache"]
+},
+{
+"title": "Section 2: Sliding Window Attention and Receptive Field",
+"content": [
+"Explaining the concept of receptive field in convolutional neural networks",
+"Introducing the sliding window attention mechanism and its relationship to the receptive field",
+"Explaining the dot product calculation in the self-attention mechanism",
+"Discussing the importance of the mask in the sliding window attention mechanism"
+],
+"topics": ["Receptive field", "Sliding window attention", "Dot product calculation", "Mask"]
+},
+{
+"title": "Section 3: K-Cache and Prefilling",
+"content": [
+"Explaining the k-cache and its role in reducing computations",
+"Discussing the importance of prefilling in reducing computations",
+"Explaining the difference between prefilling and chunking",
+"Introducing the concept of block diagonal with offset padding mask"
+],
+"topics": ["K-cache", "Prefilling", "Chunking", "Block diagonal with offset padding mask"]
+},
+{
+"title": "Section 4: Model Sharding and Block Diagonal with Offset Padding Mask",
+"content": [
+"Explaining the concept of model sharding and its importance in handling large models",
+"Introducing the block diagonal with offset padding mask",
+"Discussing the importance of the mask in model sharding",
+"Explaining the dot product calculation in the self-attention mechanism with the block diagonal with offset padding mask"
+],
+"topics": ["Model sharding", "Block diagonal with offset padding mask", "Dot product calculation", "Mask"]
+},
+{
+"title": "Section 5: Sparse Mixture of Experts and Block Attention",
+"content": [
+"Explaining the concept of sparse mixture of experts and its importance in language modeling",
+"Introducing the block attention mechanism",
+"Discussing the importance of the mask in the block attention mechanism",
+"Explaining the dot product calculation in the block attention mechanism"
+],
+"topics": ["Sparse mixture of experts", "Block attention", "Mask", "Dot product calculation"]
+}
+],
+"topics": ["Vanilla transformer architecture", "Sliding window attention", "K-cache", "Model sharding", "Sparse mixture of experts", "Block attention"],
+"general topics": [
+{
+"name": "Language Models",
+"complexity": 0.50
+},
+{
+"name": "Transformer Architecture",
+"complexity": 0.60
+},
+{
+"name": "Model Sharding",
+"complexity": 0.70
+}
+]
+}

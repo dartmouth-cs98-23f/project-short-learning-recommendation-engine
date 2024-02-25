@@ -1,0 +1,70 @@
+{
+  "introduction": "The video tutorial demonstrates the process of building a job board app that serves as a real startup platform for entry-level or junior developer positions. The app uses a single data feed from a job board API, a super minimal simple frontend with React and Material UI, and an Express server with Redis for data storage. The app's main component is a job list that fetches jobs from the API and filters them down based on seniority and other criteria. The video covers the frontend development, including creating a new component for jobs and a single job row. It also discusses the importance of testing and the use of typography for better rendering and styling.",
+  "sections": [
+    {
+      "title": "Section 1: Setting up the Project",
+      "content": [
+        "Introduction to the project and its goal of simplifying job search for entry-level developers.",
+        "Decision to start with a single data feed from a job board API.",
+        "Explanation of the Minimum Viable Product (MVP) concept and the use of an Express server with Redis for data storage.",
+        "Installation of React and Material UI for the frontend."
+      ],
+      "topics": ["Project Introduction", "Single Data Feed", "MVP", "Express Server with Redis", "React and Material UI"]
+    },
+    {
+      "title": "Section 2: Frontend Development",
+      "content": [
+        "Creation of a new component for jobs and a single job row.",
+        "Explanation of the use of typography for better rendering and styling.",
+        "Discussion of the importance of testing.",
+        "Addition of CSS for job styling and display flex for better layout."
+      ],
+      "topics": ["Component Creation", "Typography", "Testing", "CSS for Job Styling"]
+    },
+    {
+      "title": "Section 3: Backend Development",
+      "content": [
+        "Explanation of the node cron job for fetching and refreshing jobs.",
+        "Filtering of jobs based on seniority and other criteria.",
+        "Discussion of the algorithm for job filtering.",
+        "Overview of the data feed from multiple job board APIs."
+      ],
+      "topics": ["Node Cron Job", "Job Filtering Algorithm", "Data Feed from Multiple Job Board APIs"]
+    },
+    {
+      "title": "Section 4: Deployment",
+      "content": [
+        "Explanation of the deployment process on a virtual private server.",
+        "Configuration of Nginx and security with SSL certificates.",
+        "Final adjustments for production readiness.",
+        "Live deployment and testing of the job board app."
+      ],
+      "topics": ["Deployment", "Nginx Configuration", "SSL Certificates", "Production Readiness"]
+    },
+    {
+      "title": "Section 5: Conclusion",
+      "content": [
+        "Summary of the key takeaways from the video tutorial.",
+        "Discussion of the importance of testing and the use of typography.",
+        "Emphasis on the MVP concept and the need for continuous improvement.",
+        "Final thoughts on the potential for the job board app as a real startup platform."
+      ],
+      "topics": ["Key Takeaways", "Testing", "Typography", "MVP Concept", "Real Startup Platform"]
+    }
+  ],
+  "topics": ["Job Board API", "Express Server with Redis", "React and Material UI", "Node Cron Job", "Filtering Algorithm", "Deployment", "Testing", "Typography", "MVP Concept", "Real Startup Platform"],
+  "general topics": [
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.68
+    },
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": 0.68
+    },
+    {
+      "name": "Data Science and Analytics",
+      "complexity": 0.41
+    }
+  ]
+}

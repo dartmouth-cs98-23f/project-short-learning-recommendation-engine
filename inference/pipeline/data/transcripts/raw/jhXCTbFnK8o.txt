@@ -1,0 +1,361 @@
+second,duration,transcript
+3.12,2.839,"Hi, I’m Carrie Anne, and welcome to CrashCourse
+Computer Science!"
+5.959,3.22,"Over the past two episodes, we’ve talked
+a lot about computer security."
+9.179,4.901,"But the fact is, there’s no such thing as
+a perfectly, 100% secure, computer system."
+14.08,3.06,"There will always be bugs and security experts
+know that."
+17.14,4.2,"So system architects employ a strategy called
+defence in depth, which uses many layers of"
+21.34,2.44,varying security mechanisms to frustrate attackers.
+23.78,4.2,"It’s a bit like how castles are designed
+– first you’ve got to dodge the archers,"
+27.98,4.56,"then cross the moat, scale the walls, avoid
+the hot oil, get over the ramparts, and defeat"
+32.54,3.909,"the guards before you get to the throne room,
+but in this case we’re talking about one"
+36.449,3.411,"of the most common forms of computer security
+- Cryptography."
+39.86,9.2,INTRO
+49.06,4.06,"The word cryptography comes from the roots
+‘crypto’ and ‘graphy’, roughly translating"
+53.12,1.66,to “secret writing”.
+54.78,4.099,"In order to make information secret, you use
+a cipher – an algorithm that converts plain"
+58.879,5.07,"text into ciphertext, which is gibberish unless
+you have a key that lets you undo the cipher."
+63.949,4.481,"The process of making text secret is called
+encryption, and the reverse process is called"
+68.43,0.87,decryption.
+69.3,2.28,"Ciphers have been used long before computers
+showed up."
+71.58,4.31,"Julius Caesar used what’s now called a Caesar
+cipher, to encrypt private correspondence."
+75.89,2.55,"He would shift the letters in a message forward
+by three places."
+78.44,3.32,"So, A became D, and the word ""brutus"" became
+this: ""euxwxv""."
+81.76,3.33,"To decipher the message, recipients had to
+know both the algorithm and the number to"
+85.09,2.27,"shift by, which acted as the key."
+87.36,4.9,"The Caesar cipher is one example of a larger
+class of techniques called substitution ciphers."
+92.26,3.68,"These replace every letter in a message with
+something else according to a translation."
+95.94,4.56,"A big drawback of basic substitution ciphers
+is that letter frequencies are preserved."
+100.5,4.32,"For example, E is the most common letter in
+English, so if your cipher translates E to"
+104.82,3.45,"an X, then X will show up the most frequently
+in the ciphertext."
+108.27,3.69,"A skilled cryptanalyst can work backwards
+from these kinds of statistics to figure out"
+111.96,1.0,the message.
+112.96,3.49,"Indeed, it was the breaking of a substitution
+cipher that led to the execution of Mary,"
+116.45,3.69,"Queen of Scots, in 1587 for plotting to kill
+Queen Elizabeth."
+120.14,2.61,"Another fundamental class of techniques are
+permutation ciphers."
+122.75,3.97,"Let’s look at a simple example, called a
+columnar transposition cipher."
+126.72,3.099,"Here, we take a message, and fill the letters
+into a grid."
+129.819,2.071,"In this case, we’ve chosen 5 by 5."
+131.89,4.09,"To encrypt our message, we read out the characters
+in a different order, let’s say from the"
+135.98,3.149,"bottom left, working upwards, one column at
+a time."
+139.129,4.33,"The new letter ordering, what’s called a
+permutation, is the encrypted message."
+143.459,4.31,"The ordering direction, as well as the 5 by
+5 grid size, serves as the key."
+147.769,4.19,"Like before, if the cipher and key are known,
+a recipient can reverse the process to reveal"
+151.959,1.221,the original message.
+153.18,4.169,"By the 1900s, cryptography was mechanized
+in the form of encryption machines."
+157.349,4.81,"The most famous was the German Enigma, used
+by the Nazis to encrypt their wartime communications."
+162.159,4.251,"As we discussed back in Episode 15, the Enigma
+was a typewriter-like machine, with a keyboard"
+166.41,2.27,"and lampboard, both showing the full alphabet."
+168.68,4.3,"Above that, there was a series of configurable
+rotors that were the key to the Enigma’s"
+172.98,1.0,encryption capability.
+173.98,2.42,"First, let’s look at just one rotor."
+176.4,3.129,"One side had electrical contacts for all 26
+letters."
+179.529,3.841,"These connected to the other side of the rotor
+using cross-crossing wires that swapped one"
+183.37,1.05,letter for another.
+184.42,2.899,"If ‘H’ went in, ‘K’ might come out
+the other side."
+187.319,2.48,"If “K’ went in, ‘F’ might come out,
+and so on."
+189.799,4.58,"This letter swapping behavior should sound
+familiar: it’s a substitution cipher!"
+194.379,4.94,"But, the Enigma was more sophisticated because
+it used three or more rotors in a row, each"
+199.32,1.62,feeding into the next.
+200.94,4.64,"Rotors could also be rotated to one of 26
+possible starting positions, and they could"
+205.58,4.06,"be inserted in different orders, providing
+a lot of different substitution mappings."
+209.64,2.849,"Following the rotors was a special circuit
+called a reflector."
+212.489,4.711,"Instead of passing the signal on to another
+rotor, it connected every pin to another,"
+217.2,2.269,"and sent the electrical signal back through
+the rotors."
+219.469,3.05,"Finally, there was a plugboard at the front
+of the machine that allowed letters coming"
+222.519,3.851,"from the keyboard to be optionally swapped,
+adding another level of complexity."
+226.37,5.049,"With our simplified circuit, let’s encrypt
+a letter on this example enigma configuration."
+231.419,4.74,"If we press the ‘H’ key, electricity flows
+through the plugboard, then the rotors, hits"
+236.159,3.401,"the reflector, comes back through the rotors
+and plugboard, and illuminates the letter"
+239.56,1.0,‘L’ on the lampboard.
+240.56,1.37,So H is encrypted to L.
+241.93,4.059,"Note that the circuit can flow both ways – so
+if we typed the letter ‘L’, ‘H’ would"
+245.989,1.0,light up.
+246.989,3.97,"In other words, it’s the same process for
+encrypting and decrypting; you just have to"
+250.959,3.61,"make sure the sending and receiving machines
+have the same initial configuration."
+254.569,4.561,"If you look carefully at this circuit, you’ll
+notice it’s impossible for a letter to be"
+259.13,3.07,"encrypted as itself, which turned out to be
+a fatal cryptographic weakness."
+262.2,4.38,"Finally, to prevent the Enigma from being
+a simple substitution cipher, every single"
+266.58,4.62,"time a letter was entered, the rotors advanced
+by one spot, sort of like an odometer in a"
+271.2,0.76,car.
+271.96,4.66,"So if you entered the text A-A-A, it might
+come out as B-D-K, where the substitution"
+276.62,1.88,mapping changed with every key press.
+278.509,2.28,"The Enigma was a tough cookie to crack, for
+sure."
+280.789,4.231,"But as we discussed in Episode 15, Alan Turing
+and his colleagues at Bletchley Park were"
+285.02,2.84,"able to break Enigma codes and largely automate
+the process."
+287.86,4.54,"But with the advent of computers, cryptography
+moved from hardware into software."
+292.4,4.0,"One of the earliest software ciphers to become
+widespread was the Data Encryption Standard"
+296.4,3.52,developed by IBM and the NSA in 1977.
+299.92,5.119,"DES, as it was known, originally used binary
+keys that were 56 bits long, which means that"
+305.039,4.151,"there are 2 to the 56, or about 72 quadrillion
+different keys."
+309.19,4.969,"Back in 1977, that meant that nobody – except
+perhaps the NSA – had enough computing power"
+314.159,1.991,to brute-force all possible keys.
+316.15,5.82,"But, by 1999, a quarter-million dollar computer
+could try every possible DES key in just two"
+321.97,2.22,"days, rendering the cipher insecure."
+324.19,4.87,"So, in 2001, the Advanced Encryption Standard
+(AES) was finalized and published."
+329.06,7.97,"AES is designed to use much bigger keys – 128,
+192 or 256 bits in size – making brute force"
+337.03,1.06,"attacks much, much harder."
+338.09,6.12,"For a 128-bit keys, you'd need trillions of
+years to try every combination, even if you"
+344.21,2.67,used every single computer on the planet today.
+346.88,1.159,So you better get started!
+348.039,5.451,"AES chops data up into 16-byte blocks, and
+then applies a series of substitutions and"
+353.49,4.56,"permutations, based on the key value, plus
+some other operations to obscure the message,"
+358.05,3.519,"and this process is repeated ten or more times
+for each block."
+361.569,2.271,You might be wondering: why only ten rounds?
+363.84,3.389,"Or why only 128 bit keys, and not ten thousand
+bit keys?"
+367.229,2.491,"Well, it’s a performance tradeoff."
+369.72,4.19,"If it took hours to encrypt and send an email,
+or minutes to connect to a secure website,"
+373.91,1.25,people wouldn't use it.
+375.16,3.86,"AES balances performance and security to provide
+practical cryptography."
+379.02,4.769,"Today, AES is used everywhere, from encrypting
+files on iPhones and transmitting data over"
+383.789,4.041,"WiFi with WPA2, to accessing websites using HTTPS."
+387.83,4.66,"So far, the cryptographic techniques we’ve
+discussed rely on keys that are known by both"
+392.49,1.609,sender and recipient.
+394.1,4.78,"The sender encrypts a message using a key, and the recipient decrypts it using the same key."
+398.88,4.8,"In the old days, keys would be shared by voice,
+or physically; for example, the Germans distributed"
+403.68,2.84,"codebooks with daily settings for their Enigma
+machines."
+406.52,3.13,"But this strategy could never work in the
+internet era."
+409.65,3.06,"Imagine having to crack open a codebook to
+connect to youtube!"
+412.71,3.91,"What’s needed is a way for a server to send
+a secret key over the public internet to a"
+416.62,2.4,user wishing to connect securely.
+419.02,3.94,"It seems like that wouldn’t be secure, because
+if the key is sent in the open and intercepted"
+422.96,4.03,"by a hacker, couldn’t they use that to decrypt
+all communication between the two?"
+426.99,2.139,The solution is key exchange!
+429.129,3.971,"– An algorithm that lets two computers agree
+on a key without ever sending one."
+433.1,4.86,"We can do this with one-way functions – mathematical
+operations that are very easy to do in one"
+437.96,1.919,"direction, but hard to reverse."
+439.879,4.111,"To show you how one-way functions work, let’s
+use paint colors as an analogy."
+443.99,4.0,"It’s easy to mix paint colors together,
+but it’s not so easy to figure out the constituent"
+447.99,2.519,"colors that were used to make a mixed paint
+color."
+450.509,2.88,"You’d have to test a lot of possibilities
+to figure it out."
+453.389,3.161,"In this metaphor, our secret key is a unique
+shade of paint."
+456.55,2.83,"First, there’s a public paint color that
+everyone can see."
+459.38,2.45,"Then, John and I each pick a secret paint
+color."
+461.83,4.089,"To exchange keys, I mix my secret paint color
+with the public paint color."
+465.919,4.53,"Then, I send that mixed color to John by any
+means – mail, carrier pigeon, whatever."
+470.449,4.071,"John does the same – mixing his secret paint
+color with the public color, then sending"
+474.52,1.0,that to me.
+475.52,3.429,"When I receive John’s color, I simply add
+my private color to create a blend of all"
+478.949,1.0,three paints.
+479.949,1.96,John does the same with my mixed color.
+481.909,1.0,And Voila!
+482.909,1.79,We both end up with the same paint color!
+484.699,4.9,"We can use this as a shared secret, even though
+we never sent each other our individual secret"
+489.599,1.0,colors.
+490.599,4.29,"A snooping outside observer would know partial
+information, but they’d find it very difficult"
+494.889,2.041,to figure out our shared secret color.
+496.93,3.31,"Of course, sending and mixing paint colors
+isn’t going to work well for transmitting"
+500.24,1.26,computer data.
+501.5,4.09,"But luckily, mathematical one-way functions
+are perfect, and this is what Diffie-Hellman"
+505.59,1.35,Key Exchange uses.
+506.94,3.62,"In Diffie-Hellman, the one-way function is
+modular exponentiation."
+510.56,4.05,"This means taking one number, the base, to
+the power of another number, the exponent,"
+514.61,3.289,"and taking the remainder when dividing by
+a third number, the modulus."
+517.899,5.81,"So, for example, if we wanted to calculate
+3 to the 5th power, modulo 31, we would calculate"
+523.709,6.75,"3 to the 5th, which is 243, then take the
+remainder when divided by 31, which is 26."
+530.459,3.75,"The hard part is figuring out the exponent
+given only the result and the base."
+534.209,5.18,"If I tell you I raised 3 to some secret number,
+modulo 31, and got 7 as the remainder, you'd"
+539.389,2.811,"have to test a lot of exponents to know which
+one I picked."
+542.2,4.61,"If we make these numbers big, say hundreds
+of digits long, then finding the secret exponent"
+546.81,1.41,is nearly impossible.
+548.22,4.08,"Now let’s talk about how Diffie-Hellman
+uses modular exponentiation to calculate a"
+552.3,1.0,shared key.
+553.3,4.539,"First, there's a set of public values – the
+base and the modulus, that, like our public"
+557.839,3.391,"paint color, everyone gets to know... even
+the bad guys!"
+561.23,3.66,"To send a message securely to John, I would
+pick a secret exponent: X."
+564.89,3.389,"Then, I’d calculate B to the power of X,
+modulo M."
+568.279,2.261,I send this big number over to John.
+570.54,4.93,"John does the same, picking a secret exponent
+Y, and sending me B to the Y modulo M."
+575.47,4.809,"To create a shared secret key, I take what
+John sent me, and take it to the power of"
+580.279,1.81,"X, my secret exponent."
+582.089,3.631,"This is mathematically equivalent to B to
+the XY modulus M."
+585.72,4.03,"John does the same, taking what I sent to
+him to the power of Y, and we both end up"
+589.75,1.78,with the exact same number!
+591.53,4.67,"It’s a secret shared key, even though we
+never sent each other our secret number."
+596.2,4.39,"We can use this big number as a shared key
+for encrypted communication, using something"
+600.59,1.91,like AES for encryption.
+602.5,3.85,"Diffie-Hellman key exchange is one method
+for establishing a shared key."
+606.35,4.13,"These keys that can be used by both sender
+and receiver, to encrypt and decrypt messages,"
+610.48,4.19,"are called symmetric keys because the key
+is the same on both sides."
+614.67,3.729,"The Caesar Cipher, Enigma and AES are all
+symmetric encryption."
+618.399,4.68,"There’s also asymmetric encryption, where
+there are two different keys, most often one"
+623.079,1.581,that’s public and another that’s private.
+624.66,4.82,"So, people can encrypt a message using a public
+key that only the recipient, with their private"
+629.48,1.33,"key, can decrypt."
+630.81,4.469,"In other words, knowing the public key only
+lets you encrypt, but not decrypt – it’s"
+635.279,1.0,asymmetric!
+636.279,3.131,"So, think about boxes with padlocks that you
+can open with a key."
+639.41,3.6,"To receive a secure message, I can give a
+sender a box and padlock."
+643.01,2.079,They put their message in it and lock it shut.
+645.089,4.671,"Now, they can send that box back to me and
+only I can open it, with my private key."
+649.76,4.36,"After locking the box, neither the sender,
+nor anyone else who finds the box, can open"
+654.13,1.37,it without brute force.
+655.51,3.89,"In the same way, a digital public key can
+encrypt something that can only be decrypted"
+659.4,1.0,with a private key.
+660.4,4.58,"The reverse is possible too: encrypting something
+with a private key that can be decrypted with"
+664.98,1.0,a public key.
+665.98,4.48,"This is used for signing, where a server encrypts
+data using their private key."
+670.46,2.9,"Anyone can decrypt it using the server's public
+key."
+673.36,4.5,"This acts like an unforgeable signature, as
+only the owner, using their private key, can"
+677.86,1.19,encrypt.
+679.05,3.92,"It proves that you're getting data from the
+right server or person, and not an imposter."
+682.97,5.09,"The most popular asymmetric encryption technique
+used today is RSA, named after its inventors:"
+688.06,2.0,"Rivest, Shamir and Adleman."
+690.06,4.279,"So, now you know all the “key” parts of
+modern cryptography: symmetric encryption,"
+694.339,2.06,key exchange and public-key cryptography.
+696.399,3.981,"When you connect to a secure website, like
+your bank, that little padlock icon means"
+700.38,5.11,"that your computer has used public key cryptography
+to verify the server, key exchange to establish"
+705.49,4.769,"a secret temporary key, and symmetric encryption
+to protect all the back-and-forth communication"
+710.259,1.041,from prying eyes.
+711.3,4.93,"Whether you're buying something online, sending
+emails to BFFs, or just browsing cat videos,"
+716.24,2.28,"cryptography keeps all that safe, private
+and secure."
+718.52,2.12,Thanks cryptography!

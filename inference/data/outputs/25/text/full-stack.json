@@ -1,0 +1,70 @@
+{
+  "introduction": "In this video, we'll discuss building a job board app that can be used as a real startup. We'll start with a minimum viable product (MVP) using a single data feed from a job board API, a simple front end with React and Material UI, and an Express server with Redis for data storage. We'll fetch jobs from the API, filter them, and display them in our app. Our goal is to create a production application in less than 100 minutes.",
+  "sections": [
+    {
+      "title": "Section 1: Setting Up the Project",
+      "content": [
+        "Create a new directory for your project and navigate to it.",
+        "Initialize a new Node.js project with npm.",
+        "Install required dependencies: express, redis, cron, and node-cron.",
+        "Create a new file called 'app.js' in your project directory."
+      ],
+      "topics": ["Project Setup", "Dependency Installation", "File Creation"]
+    },
+    {
+      "title": "Section 2: Front-end Development",
+      "content": [
+        "Create a new React app using create-react-app.",
+        "Install Material UI for styling.",
+        "Create a simple component for displaying job listings.",
+        "Implement pagination to handle large amounts of data."
+      ],
+      "topics": ["React Setup", "Material UI Integration", "Job Listing Component", "Pagination"]
+    },
+    {
+      "title": "Section 3: Backend Development",
+      "content": [
+        "Set up an Express server.",
+        "Connect to Redis for data storage.",
+        "Create a new route for fetching job listings.",
+        "Implement error handling and logging."
+      ],
+      "topics": ["Express Server Setup", "Redis Integration", "Job Listings Route", "Error Handling and Logging"]
+    },
+    {
+      "title": "Section 4: Integrating Job Board APIs",
+      "content": [
+        "Choose a job board API to fetch job listings.",
+        "Set up a cron job to fetch new job listings at regular intervals.",
+        "Parse job listings data and store it in Redis.",
+        "Filter job listings based on specific criteria (e.g., entry-level positions)."
+      ],
+      "topics": ["Job Board API Integration", "Cron Job Setup", "Data Parsing and Storage", "Filtering"]
+    },
+    {
+      "title": "Section 5: Deployment and Testing",
+      "content": [
+        "Deploy your app to a hosting provider.",
+        "Configure a domain name and SSL certificate.",
+        "Test your app to ensure it's functioning correctly.",
+        "Optimize performance and scalability for production use."
+      ],
+      "topics": ["Deployment", "Domain Name and SSL Certificate Configuration", "Testing", "Performance and Scalability Optimization"]
+    }
+  ],
+  "topics": ["React", "Express", "Redis", "Node.js", "API Integration"],
+  "general topics": [
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.65
+    },
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.55
+    },
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": 0.75
+    }
+  ]
+}

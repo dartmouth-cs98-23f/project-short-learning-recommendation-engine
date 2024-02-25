@@ -1,0 +1,431 @@
+second,duration,transcript
+0.78,5.1,hello guys so in this video we will
+3.3,5.94,discuss about databases
+5.88,5.82,and in databases we will discuss about a
+9.24,4.68,relational and non or relational
+11.7,5.04,databases
+13.92,5.52,so in what is the relational databases
+16.74,5.64,basically it consists of tables many
+19.44,6.9,tables and uh and each table we have
+22.38,6.0,rows which are Horizon horizontal and we
+26.34,5.04,have vertical change which is called as
+28.38,7.14,columns uh we might have seen the CSV
+31.38,7.98,format dot PSP format file which we can
+35.52,7.14,see in Excel and when we open that we
+39.36,7.199,see that there are a tabular format data
+42.66,6.84,and each cell has some value in it could
+46.559,6.961,be numeric it could be some string
+49.5,6.239,format data in each of the cell but in
+53.52,5.4,whole horizontal if we see the
+55.739,6.541,horizontal uh series of those cells are
+58.92,5.4,known as rows and in columns we know
+62.28,5.4,that it is the vertical series of the
+64.32,6.24,cells so I think it is uh we already
+67.68,5.46,know what is PSP format and what is the
+70.56,6.3,table but in relational details we have
+73.14,6.479,multiple tables so it can have 10 tables
+76.86,4.439,or 20 tables like that depending on your
+79.619,4.86,requirement
+81.299,5.701,then uh before creating any database we
+84.479,4.801,need to define the schema which is a
+87.0,4.619,logical design of the database
+89.28,3.96,so for defining the schema we need to
+91.619,4.921,Define what would be the name of the
+93.24,6.18,columns in each of the tables we have
+96.54,6.96,so say we have 10 tables and each table
+99.42,7.32,have maybe 50 200 uh columns we need to
+103.5,5.88,Define each column names each of the
+106.74,4.98,tables we need to define the data types
+109.38,4.919,whether it is numeric uh whether it is
+111.72,5.7,date time variable whether it is a
+114.299,5.701,string data what kind of data format it
+117.42,4.08,is you need to define the data type
+120.0,4.92,depending
+121.5,6.24,on the database which we are using and
+124.92,6.059,so basically this is a logical design uh
+127.74,4.92,and we need to plan it before we create
+130.979,5.221,the database
+132.66,6.299,we can also change it uh but uh it's
+136.2,6.3,good to decide it before you create a
+138.959,7.86,database so that uh there is nothing
+142.5,6.239,wrong happens in future uh now uh let us
+146.819,4.56,see what are the examples of relational
+148.739,6.801,database now examples of relational
+151.379,7.021,database is the myth equal Oracle
+155.54,5.08,postgres and sqlite
+158.4,4.8,these are some of the examples of the
+160.62,4.979,databases which we have so if you create
+163.2,5.399,the mySQL database it will have multiple
+165.599,5.581,tables each table will have its own name
+168.599,5.28,and inside each table you will have
+171.18,5.1,multiple rows and multiple columns
+173.879,3.601,so each of the columns will have its own
+176.28,4.5,name again
+177.48,6.0,uh so a table you can consider it as
+180.78,4.94,some kind of tabular format dot CSV
+183.48,6.0,format kind of data
+185.72,5.739,now my SQL if you can talk about MySQL
+189.48,5.16,it is an open source
+191.459,5.28,first first of all it is free it has
+194.64,4.76,some positive negatives each of the data
+196.739,6.961,base has its own positive and negatives
+199.4,6.94,and might equal uh you can you can have
+203.7,7.74,null values you can have missing values
+206.34,8.58,where you have got any kind of uh thing
+211.44,6.659,uh but noise people does not support uh
+214.92,5.819,data partitioning and accessible
+218.099,4.621,we we know about the data partitioning
+220.739,4.621,uh when we are partitioning the data in
+222.72,4.799,the database we do it using some kind of
+225.36,4.32,ID
+227.519,5.041,and what does it do it it helps in
+229.68,4.139,making the query faster in the database
+232.56,3.0,tables
+233.819,4.741,okay
+235.56,6.899,okay now if you are coming to Oracle uh
+238.56,7.44,it is not an open source and not a free
+242.459,5.28,software uh it does not support null
+246.0,5.7,values
+247.739,5.521,and data partitioning and XML support is
+251.7,3.72,available in it
+253.26,5.24,so this is a positive point in Oracle
+255.42,7.8,basically Oracle will be used for large
+258.5,7.78,uh data sets when we have a large data
+263.22,5.22,Enterprise kind of data we have then we
+266.28,4.8,need Oracle
+268.44,5.88,now let us uh
+271.08,5.1,move to non-relational database
+274.32,5.22,the basic difference between a
+276.18,6.54,relational and non-relational database
+279.54,5.82,is the that in it is not a traveler
+282.72,6.0,format relational was a developer format
+285.36,6.6,data right now coming to non-relational
+288.72,6.0,it is not a tablet format
+291.96,5.64,and we do not have a well-defined schema
+294.72,6.3,whereas when the relational database uh
+297.6,6.12,we did have a well-defined schema
+301.02,5.58,there we have multiple tables
+303.72,5.759,um in the database in one database here
+306.6,4.02,we have a table and it is called as the
+309.479,5.521,collection
+310.62,6.54,a row is here known as document is one
+315.0,2.699,observation
+317.16,3.62,um
+317.699,6.421,and column is kind of called as field
+320.78,5.08,which columns we are talking of
+324.12,4.079,right
+325.86,5.279,basically non-relational databases will
+328.199,4.801,be used for some kind of text Data audio
+331.139,3.78,video
+333.0,4.62,mostly some of the data which is coming
+334.919,5.161,from social media kind of data
+337.62,5.22,which is in the format of text audio
+340.08,5.179,video kind of data right
+342.84,2.419,so
+345.72,6.539,we do use a relational and
+348.24,6.78,non-relational in combinations and uh if
+352.259,5.22,you have a very specific uh use case
+355.02,6.36,where you have only text you might have
+357.479,7.321,only might be using only one uh one type
+361.38,7.02,of non-relational database and but when
+364.8,6.98,we talk about come Enterprise level data
+368.4,6.54,there you might have different kinds of
+371.78,4.72,databases working together in the whole
+374.94,4.38,system design
+376.5,5.58,I will talk about all those uh in the
+379.32,5.52,future videos the how to uh
+382.08,6.959,how to design a complete system for uh
+384.84,8.1,or maybe uh e-commerce or
+389.039,6.421,traveling website or anything like that
+392.94,4.74,so in that for that purpose you must be
+395.46,4.019,knowing which database is important and
+397.68,4.92,how these are being connected different
+399.479,8.541,services are talking to each other and
+402.6,5.42,which database is kept in which service
+408.6,6.12,okay now let us see some of the
+412.5,5.1,examples uh
+414.72,6.18,so here we will talk about uh types of
+417.6,5.52,non-relational databases so basically
+420.9,5.519,broadly if you categorize non-relational
+423.12,6.56,databases there are many more but these
+426.419,7.861,are the most broadly classified
+429.68,8.079,key value document based and graph paste
+434.28,6.359,white column based when you talk of key
+437.759,6.141,value based here you have a key is from
+440.639,6.301,ID link to the value we want to store
+443.9,5.019,value will be something which is with
+446.94,3.479,the information which we need for a
+448.919,4.4,corresponding ID
+450.419,2.9,foreign
+455.419,5.68,there are other also
+458.46,6.9,it is also used when you want to Cache
+461.099,6.6,the data to make the make the
+465.36,3.6,communication faster in the network in
+467.699,5.521,the data flow
+468.96,7.139,now uh now coming to the document paste
+473.22,7.94,the stored it is stored data similar to
+476.099,8.761,the Json objects okay and it is a
+481.16,6.939,TVs its example is mongodb
+484.86,7.02,it is mostly used when kind of network
+488.099,7.621,data uh like iot data or something like
+491.88,8.52,that now you have graph based data
+495.72,6.479,there's two data in nodes and edges
+500.4,3.919,it has some application in
+502.199,6.18,Telecommunications
+504.319,5.621,uh neo4j is the database which we can
+508.379,7.28,use
+509.94,5.719,here white column based Dynamic columns
+524.72,3.78,one of the examples
+529.08,7.5,now coming to mongodb
+532.92,7.02,where mongodb can be used is the example
+536.58,7.8,of mongodb then iot platform requires 4
+539.94,8.399,for data uh from many devices okay so as
+544.38,5.82,I said that the company which is based
+548.339,4.801,on iot
+550.2,5.16,Internet of Things uh the smart things
+553.14,4.08,which have been connected together it's
+555.36,5.039,a network of smart things which are
+557.22,5.54,connected it could be a home it could be
+560.399,6.901,a office or it could be anything
+562.76,7.54,wherever we have this kind of data uh
+567.3,4.68,this data can be stored in in a database
+570.3,4.08,similar to
+571.98,5.46,um similar to mongodb
+574.38,5.579,and it handles data from different types
+577.44,5.82,of devices
+579.959,7.32,and the database and the data structure
+583.26,8.22,is Json Json based document database
+587.279,6.721,it pulls the data using single index
+591.48,5.16,or multiple index which is device ID
+594.0,5.1,with location ID
+596.64,4.98,a record for a particular device in
+599.1,6.48,different rotations are easily accessed
+601.62,6.48,okay so whenever you have a use case
+605.58,5.16,similar to like you want to find the
+608.1,4.919,rewards for a particular device in in
+610.74,4.44,some in different locations for a
+613.019,5.161,particular device you want to find all
+615.18,5.82,the records and different locations you
+618.18,5.219,can easily access using mongodb if you
+621.0,4.62,use any any other database you might be
+623.399,5.0,able to store the data which you have in
+625.62,5.58,iot but it could be very difficult to
+628.399,4.421,fetch the data or also it would be very
+631.2,3.0,difficult to store the data in that
+632.82,4.5,format
+634.2,5.52,okay basically uh we would prefer a
+637.32,3.959,mongodb because it is using a Json based
+639.72,4.5,document database
+641.279,4.981,okay now let us coming to neo4j when you
+644.22,4.679,will be using this kind of database uh
+646.26,5.46,one example would be wherever you have a
+648.899,6.0,videos and maybe you can consider as a
+651.72,5.28,educational video tutorial but portal uh
+654.899,5.461,the data which you collect uh get it
+657.0,5.64,from these kind of websites the portals
+660.36,5.76,that can be stored in a new code
+662.64,6.84,and why why what is the positive point
+666.12,6.42,in this new approach is that uh whenever
+669.48,6.359,it is serving uh to the clients or to
+672.54,6.419,the users the videos which a website has
+675.839,5.041,so the users can move from one lesson to
+678.959,4.861,the another because then there is one
+680.88,4.62,chapter and it has 10 lessons so user
+683.82,6.9,can move from one lesson to the other
+685.5,7.68,very easily if you have a neo4j database
+690.72,6.359,in the back end
+693.18,6.96,okay now we talk about elasticsearch and
+697.079,4.041,fourth grade equal again it is a no
+700.14,3.18,music
+701.12,4.06,non-relational database
+703.32,5.519,basically these are kind of search
+705.18,6.12,engines and uh it allows the users to
+708.839,5.161,search for menu items and restaurants
+711.3,5.64,this is one of the example so whenever
+714.0,5.1,you see a website which is the which is
+716.94,5.339,allowing the user to search for menu
+719.1,5.16,items different items food items on
+722.279,6.781,different restaurants who are delivering
+724.26,6.9,the pro food items then we can use uh
+729.06,5.04,elasticsearch in the back end for
+731.16,5.94,storing the data for the food items we
+734.1,6.479,have and the restaurant and their uh
+737.1,5.4,each of the food catalogs they have
+740.579,3.721,what is what happens is the user is
+742.5,2.94,searching for something in the website
+744.3,2.4,of that
+745.44,4.86,oh
+746.7,4.68,and a user is putting some text on the
+750.3,3.84,search bar
+751.38,5.22,in the website lookbook
+754.14,5.04,what what it will be delivering is the
+756.6,6.9,we'll be delivering all the results in
+759.18,7.14,the recommended uh format so it will do
+763.5,5.279,recommend based on the text search
+766.32,4.62,uh the thing is why is the elastic
+768.779,3.601,search because when you're putting the
+770.94,4.139,text in the third
+772.38,6.72,it will be delivering the result to the
+775.079,7.2,user in no seconds so it is very fast
+779.1,6.239,if you using some other database it will
+782.279,5.461,take uh some some time to deliver it to
+785.339,5.821,the user because user is looking at some
+787.74,5.64,some and and the database is in some
+791.16,3.66,other place and it is far it is
+793.38,4.86,communicating through wireless
+794.82,7.62,communication so what happens is when
+798.24,7.52,the user is sending uh its query on the
+802.44,6.56,database of elastic research it will be
+805.76,6.94,it will be responding with the results
+809.0,5.94,recommended results very easily in no
+812.7,2.24,time
+815.16,6.6,okay now we will talk about the asset
+818.82,4.139,properties of dbms database management
+821.76,5.04,system
+822.959,6.541,basically uh before talking of asset
+826.8,5.099,properties of dbms we will first talk
+829.5,5.339,about what is the transaction basically
+831.899,5.88,transaction is the group of operations
+834.839,7.101,and operations could be any read and
+837.779,4.161,write for different variables
+849.42,6.359,so what do you mean by
+851.82,6.9,City okay by atomic City means that
+855.779,5.641,whenever there is a transaction some
+858.72,4.32,some may be some variable is red some
+861.42,4.62,other variable is red
+863.04,6.12,uh some transaction is happening
+866.04,6.239,either it will get completed or it will
+869.16,6.419,not complete at all so it it won't be
+872.279,6.3,like that it happens and it stops in the
+875.579,5.461,middle so it is either completed or not
+878.579,5.82,complete it is like that so A is for
+881.04,6.06,like that t for consistency
+884.399,5.221,so so whenever the transaction is
+887.1,5.76,happening before and after the net value
+889.62,6.06,Remains the Same so it won't be changing
+892.86,5.099,if it is changing that means the our
+895.68,4.04,database has become inconsistent there
+897.959,5.341,is something wrong happened
+899.72,7.78,uh maybe something is someone is reading
+903.3,6.539,the data before it is being written so
+907.5,4.98,we need to make sure the database is
+909.839,4.56,such that that it remains consistent at
+912.48,4.859,all the times
+914.399,4.201,what is the uh isolation isolation is
+917.339,2.821,when we have
+918.6,3.299,different transactions which are
+920.16,5.88,happening in parallel
+921.899,6.421,they will happen in parallel without any
+926.04,5.4,interference without any interference
+928.32,6.54,okay that should also happen as a
+931.44,4.98,property in dbms
+934.86,4.38,now
+936.42,6.419,he is for durability what does it mean
+939.24,5.219,after some transaction is successful all
+942.839,5.94,the changes which has happened in that
+944.459,7.56,transition which will remain saved okay
+948.779,8.161,now that these asset properties of dbms
+952.019,7.68,is not present in all the databases some
+956.94,6.54,database do have
+959.699,5.88,asset properties some do not have so we
+963.48,3.0,need to make sure that what kind of data
+965.579,4.081,we have
+966.48,7.32,if it is kind of mostly in the real-time
+969.66,6.72,data uh and in the monetary transactions
+973.8,5.24,it is very important that we should have
+976.38,5.22,asset properties to be fulfilled
+979.04,5.88,otherwise there will be some something
+981.6,6.78,wrong happened and the database and
+984.92,5.859,whatever the analysis you do will not be
+988.38,4.519,good either in the present or in the
+990.779,2.12,future
+993.899,5.421,now we will talk of the cap theorem it
+996.3,6.24,is it is the consistency
+999.32,5.019,availability and what it can now the
+1002.54,4.62,acid properties which we discussed
+1004.339,6.42,earlier it is it was for the transaction
+1007.16,5.099,to focus the focus point is when we
+1010.759,3.721,whenever we are talking of passive
+1012.259,4.44,properties uh please remember that we
+1014.48,4.859,are talking about the transactions so
+1016.699,5.76,for each of the atomicity consistency
+1019.339,4.801,isolation durability it is it is we are
+1022.459,4.081,talking of transaction and transaction
+1024.14,5.039,is actually a group of operations and
+1026.54,5.58,where operations means the read and
+1029.179,4.801,write for different uh variables now
+1032.12,4.74,when whenever we are talking of the cap
+1033.98,5.4,theorem uh we need to make sure that we
+1036.86,5.339,are not talking of the transactions here
+1039.38,6.0,we are talking of the servers or cluster
+1042.199,4.74,we have which are storing the data so
+1045.38,5.76,consistency what does it means
+1046.939,7.201,consistency or not consistency of data
+1051.14,5.539,Remains the Same among the machines
+1054.14,5.46,so if you want to make that consistency
+1056.679,5.981,what we do any data right on the master
+1059.6,5.52,or the primary machine should also
+1062.66,5.04,instantly be replicated on the slave
+1065.12,4.799,over the secondary machine before the
+1067.7,5.82,right is declared successful
+1069.919,6.801,so if we have a cluster in the cluster
+1073.52,3.2,we have multiple muscles
+1083.98,5.26,same thing so we need to make sure
+1087.679,4.581,whenever we are writing on the master
+1089.24,6.0,that should also be replicated
+1092.26,5.279,instantaneously on the screen also
+1095.24,5.4,before the right is declared in Texas
+1097.539,5.921,otherwise the data is not consistent
+1100.64,5.159,among the machines and if the data is
+1103.46,4.68,not consistent among the machines there
+1105.799,4.26,might be some breed is happening from
+1108.14,4.2,some machine where the data is not
+1110.059,5.581,consistent from the other machine then
+1112.34,6.24,there will be an issue so uh we we
+1115.64,6.419,should always make it consistent across
+1118.58,6.719,the machines availability data is
+1122.059,5.821,available to all the clients machine all
+1125.299,6.021,the time that means whenever the client
+1127.88,7.38,is communicating to the database
+1131.32,4.96,uh and the data is in the servers right
+1135.26,4.799,so
+1136.28,7.98,all the cluster whatever we have the
+1140.059,7.5,cluster should be available 24 7.
+1144.26,5.1,and it shouldn't be down so it is not
+1147.559,5.041,like that one of the machine goes down
+1149.36,6.62,there and it is there is some breakdown
+1152.6,3.38,and it is not available
+1162.039,5.981,there are some issues with the server or
+1165.32,6.42,cluster so that that is again a
+1168.02,7.44,liability of the cluster or server
+1171.74,6.059,uh now for detail tolerance uh cluster
+1175.46,4.62,must continue to work despite any
+1177.799,4.681,Communications breakdown
+1180.08,6.06,so again it is the similar kind of thing
+1182.48,5.4,in the Gap theorem we are almost we are
+1186.14,4.32,always talking about the cluster of
+1187.88,6.06,server it uh whatever the machines we
+1190.46,6.3,have in the cluster that should be
+1193.94,5.88,kept in such a way that whenever there
+1196.76,5.52,is a read from the client side there
+1199.82,5.46,shouldn't be any issues also there
+1202.28,5.82,should be a consistency across of the
+1205.28,4.86,data across all the machines and there
+1208.1,4.439,should be a partition tolerance as well
+1210.14,4.919,that means the cluster must continue to
+1212.539,6.061,work despite any any Communications
+1215.059,7.74,breakdown between any of the machines
+1218.6,6.54,so whenever we talk of asset properties
+1222.799,4.561,be careful that we are talking of the
+1225.14,5.7,transactions because here also we have
+1227.36,5.939,consistently and in the capital also we
+1230.84,4.26,have consistency but here in the Gap
+1233.299,4.681,theorem we are talking about the servers
+1235.1,5.04,or the machines clusters
+1237.98,4.38,but in the asset properties we are
+1240.14,5.22,talking of the transactions in the next
+1242.36,5.4,video I will try to create uh more
+1245.36,4.92,videos on
+1247.76,3.48,something related to databases in more
+1250.28,4.34,detail
+1251.24,3.38,thanks for watching this video

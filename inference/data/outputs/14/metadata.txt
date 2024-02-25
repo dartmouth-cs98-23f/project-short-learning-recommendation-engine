@@ -1,0 +1,473 @@
+#####################
+###### METADATA ######
+#####################
+
+Model: mistralai/Mistral-7B-Instruct-v0.1
+Time: 1708631380.9972296
+Videos: [['https://www.youtube.com/watch?v=UiX8K-xBUpE', 'UiX8K-xBUpE', 'mixtral8x7b'], ['https://www.youtube.com/watch?v=Xdhe-meS30A', 'Xdhe-meS30A', 'catan'], ['https://www.youtube.com/watch?v=00AQjBDM46Q', '00AQjBDM46Q', 'mlops_llm_eval'], ['https://www.youtube.com/watch?v=5ChkQKUzDCs', '5ChkQKUzDCs', 'typescript_fireship'], ['https://www.youtube.com/watch?v=J0NuOlA2xDc', 'J0NuOlA2xDc', 'localized_deployment'], ['https://www.youtube.com/watch?v=E5kzAbD8D0w', 'E5kzAbD8D0w', 'dpo'], ['https://www.youtube.com/watch?v=wybjsKtA9hI', 'wybjsKtA9hI', 'sql_backend'], ['https://www.youtube.com/watch?v=CZw57SIwgiE', 'CZw57SIwgiE', 'threads_connections'], ['https://www.youtube.com/watch?v=p6wwj0ozifw', 'p6wwj0ozifw', 'hashing'], ['https://www.youtube.com/watch?v=kxT8-C1 vmd4', 'kxT8-C1vmd4', 'zig'], ['https://www.youtube.com/watch?v=5C_HPTJg5ek', '5C_HPTJg5ek', 'rust'], ['https://www.youtube.com/watch?v=HyWYpM_S-2c', 'HyWYpM_S-2c', 'react'], ['https://www.youtube.com/watch?v=MnpuK0MK4yo', 'MnpuK0MK4yo', 'react_svelte'], ['https://www.youtube.com/watch?v=lauywdXKEXI', 'lauywdXKEXI', 'full-stack']]
+Shots: ['mixtral8x7b', 'full-stack']
+Prompt: General Topics:
+[
+  "Algorithms and Data Structures",
+  "Artificial Intelligence (AI) and Machine Learning",
+  "Computer Architecture",
+  "Data Science and Analytics",
+  "Database Systems and Management",
+  "Human-Computer Interaction (HCI)",
+  "Programming Languages and Software Development",
+  "Software Engineering and System Design",
+  "Web Development and Internet Technologies",
+  "Computer Graphics and Visualization",
+  "Theoretical Computer Science",
+  "Quantum Computing"
+]
+
+Complexity scale:
+[
+  0.00-0.09: Elementary,
+  0.10-0.19: Middle School,
+  0.20-0.29: High School,
+  0.30-0.39: Advanced High School,
+  0.40-0.49: Introductory College,
+  0.50-0.59: Average College Lecture,
+  0.60-0.69: Advanced College,
+  0.70-0.79: Graduate Level,
+  0.80-0.89: Advanced Graduate Level,
+  0.90-1.00: PhD Level Lecture
+]
+
+Generate a JSON summary the computer science or software engineering video. The summary should include:
+
+1. A high-level synopsis labeled as "introduction".
+2. A breakdown into 5 sections, each with:
+   - A title starting with "Section x" where x is the section number from 1 to 5.
+   - A "content" field containing 4 bullet points summarizing the section.
+   - A "topics" field listing the 3 most important topics covered in the section.
+3. A global "topics" array listing 5 key descriptors (1-2 words each) of topics covered in the video.
+4. A global "general topics" array selecting 3 topics from the predefined list, each associated with an exact "complexity" score based on the provided scale. The complexity score should reflect the detailed complexity level with full two-decimal-place precision.
+
+The JSON structure should strictly follow this template:
+{
+  "introduction": "High level synopsis here",
+  "sections": [
+    {
+      "title": "Section 1",
+      "content": [
+        "Bullet point 1",
+        "Bullet point 2",
+        "Bullet point 3",
+        "Bullet point 4"
+      ],
+      "topics": ["Topic1", "Topic2", "Topic3"]
+    },
+    ... (total 5 sections)
+  ],
+  "topics": ["Descriptor1", "Descriptor2", "Descriptor3", "Descriptor4", "Descriptor5"],
+  "general topics": [
+    {
+      "name": "Selected general topic 1",
+      "complexity": "Exact complexity score"
+    },
+    ... (total 3 general topics)
+  ]
+}
+
+Please adhere strictly to the JSON format. Use domain-specific terminology in the "title" and "content" for each section. The "topics" and "general topics" should accurately reflect the video's content based on the predefined lists and complexity scale. The output should conclude with a '}' character to end the json above.
+
+
+
+###################
+###### INFERENCE ######
+###################
+Temperature: 0.5
+Top_k: 35
+Top_p: 0.95
+Processing: hashing
+    Tokens: 8350
+    Decoding took: 67.121 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: localized_deployment
+    Tokens: 7667
+    Decoding took: 56.55 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: dpo
+    Tokens: 8329
+    Decoding took: 63.491 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: mixtral8x7b
+    Tokens: 8380
+    Decoding took: 61.957 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: mlops_llm_eval
+    Tokens: 8500
+    Decoding took: 63.518 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: react_svelte
+    Tokens: 8303
+    Decoding took: 84.149 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: react
+    Tokens: 7552
+    Decoding took: 74.654 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: rust
+    Tokens: 7454
+    Decoding took: 58.15 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: sql_backend
+    Tokens: 8337
+    Decoding took: 62.009 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: threads_connections
+    Tokens: 8325
+    Decoding took: 56.828 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: typescript_fireship
+    Tokens: 7910
+    Decoding took: 67.949 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: zig
+    Tokens: 7555
+    Decoding took: 60.933 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Processing: full-stack
+    Tokens: 8377
+    Decoding took: 66.372 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.37 GB
+Global runtime: 844.339 seconds
+
+#####################
+##### Validating outputs ######
+#####################
+File hashing.json errors: 
+Incorrect number of topics (4) in section, found 5
+Incorrect number of topics (4) in section, found 5
+Incorrect number of final topics (5) found 10
+File localized_deployment.json errors: 
+Incorrect number of final topics (5) found 12
+File dpo.json errors: 
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of final topics (5) found 12
+File mixtral8x7b.json errors: 
+Incorrect number of topics (4) in section, found 6
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 2
+Incorrect number of topics (4) in section, found 3
+Incorrect number of final topics (5) found 11
+File mlops_llm_eval.json errors: 
+
+File react_svelte.json errors: 
+
+File react.json errors: 
+Incorrect number of topics (4) in section, found 5
+Incorrect number of topics (4) in section, found 5
+Incorrect number of topics (4) in section, found 5
+Incorrect number of final topics (5) found 12
+File rust.json errors: 
+
+File sql_backend.json errors: 
+Incorrect number of final topics (5) found 7
+File threads_connections.json errors: 
+
+File typescript_fireship.json errors: 
+Incorrect number of final topics (5) found 11
+File zig.json errors: 
+Incorrect number of final topics (5) found 4
+File full-stack.json errors: 
+Incorrect number of topics (4) in section, found 5
+Incorrect number of topics (4) in section, found 3
+Incorrect number of topics (4) in section, found 5
+Incorrect number of final topics (5) found 10
+
+
+#####################
+##### Validating outputs ######
+#####################
+File hashing.json errors: 
+
+File localized_deployment.json errors: 
+
+File dpo.json errors: 
+
+File mixtral8x7b.json errors: 
+
+File mlops_llm_eval.json errors: 
+
+File react_svelte.json errors: 
+
+File react.json errors: 
+
+File rust.json errors: 
+
+File sql_backend.json errors: 
+
+File threads_connections.json errors: 
+
+File typescript_fireship.json errors: 
+
+File zig.json errors: 
+
+File full-stack.json errors: 
+
+
+
+#####################
+##### Validating outputs ######
+#####################
+File hashing.json errors: 
+
+File localized_deployment.json errors: 
+
+File dpo.json errors: 
+
+File mixtral8x7b.json errors: 
+
+File mlops_llm_eval.json errors: 
+
+File react_svelte.json errors: 
+
+File react.json errors: 
+
+File rust.json errors: 
+
+File sql_backend.json errors: 
+
+File threads_connections.json errors: 
+
+File typescript_fireship.json errors: 
+
+File zig.json errors: 
+
+File full-stack.json errors: 
+
+
+
+#####################
+##### Validating outputs ######
+#####################
+File hashing.json errors: 
+
+File localized_deployment.json errors: 
+
+File dpo.json errors: 
+
+File mixtral8x7b.json errors: 
+
+File mlops_llm_eval.json errors: 
+
+File react_svelte.json errors: 
+
+File react.json errors: 
+
+File rust.json errors: 
+
+File sql_backend.json errors: 
+
+File threads_connections.json errors: 
+
+File typescript_fireship.json errors: 
+
+File zig.json errors: 
+
+File full-stack.json errors: 
+
+
+
+#####################
+##### Validating outputs ######
+#####################
+File hashing.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File localized_deployment.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File dpo.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File mixtral8x7b.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File mlops_llm_eval.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File react_svelte.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File react.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File rust.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File sql_backend.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File threads_connections.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File typescript_fireship.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File zig.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File full-stack.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+
+
+#####################
+##### Validating outputs ######
+#####################
+File hashing.json errors: 
+
+File localized_deployment.json errors: 
+
+File dpo.json errors: 
+
+File mixtral8x7b.json errors: 
+
+File mlops_llm_eval.json errors: 
+
+File react_svelte.json errors: 
+
+File react.json errors: 
+
+File rust.json errors: 
+
+File sql_backend.json errors: 
+
+Error in file threads_connections.json: Type: <class 'ValueError'> Error: invalid literal for int() with base 10: 'Advanced'
+File threads_connections.json errors: 
+
+File typescript_fireship.json errors: 
+
+File zig.json errors: 
+
+File full-stack.json errors: 
+
+
+
+#####################
+##### Validating outputs ######
+#####################
+File hashing.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File localized_deployment.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File dpo.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File mixtral8x7b.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File mlops_llm_eval.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File react_svelte.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File react.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File rust.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File sql_backend.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File threads_connections.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File typescript_fireship.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File zig.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+File full-stack.json errors: 
+Complexity is not an integer
+Complexity is not an integer
+Complexity is not an integer
+Target: hashing, Hidden states took: 0.244 seconds
+    Target: hashing tensor finished. Wrote to file.
+Target: localized_deployment, Hidden states took: 0.219 seconds
+    Target: localized_deployment tensor finished. Wrote to file.
+Target: dpo, Hidden states took: 0.252 seconds
+    Target: dpo tensor finished. Wrote to file.
+Target: mixtral8x7b, Hidden states took: 0.224 seconds
+    Target: mixtral8x7b tensor finished. Wrote to file.
+Target: mlops_llm_eval, Hidden states took: 0.225 seconds
+    Target: mlops_llm_eval tensor finished. Wrote to file.
+Target: react_svelte, Hidden states took: 0.299 seconds
+    Target: react_svelte tensor finished. Wrote to file.
+Target: react, Hidden states took: 0.257 seconds
+    Target: react tensor finished. Wrote to file.
+Target: rust, Hidden states took: 0.229 seconds
+    Target: rust tensor finished. Wrote to file.
+Target: sql_backend, Hidden states took: 0.23 seconds
+    Target: sql_backend tensor finished. Wrote to file.
+Target: threads_connections, Hidden states took: 0.214 seconds
+    Target: threads_connections tensor finished. Wrote to file.
+Target: typescript_fireship, Hidden states took: 0.251 seconds
+    Target: typescript_fireship tensor finished. Wrote to file.
+Target: zig, Hidden states took: 0.235 seconds
+    Target: zig tensor finished. Wrote to file.
+Target: full-stack, Hidden states took: 0.231 seconds
+    Target: full-stack tensor finished. Wrote to file.
+Target: dpo, Hidden states took: 0.247 seconds
+    Target: dpo tensor finished. Wrote to file.
+Target: full-stack, Hidden states took: 0.231 seconds
+    Target: full-stack tensor finished. Wrote to file.
+Target: hashing, Hidden states took: 0.245 seconds
+    Target: hashing tensor finished. Wrote to file.
+Target: localized_deployment, Hidden states took: 0.22 seconds
+    Target: localized_deployment tensor finished. Wrote to file.
+Target: mixtral8x7b, Hidden states took: 0.222 seconds
+    Target: mixtral8x7b tensor finished. Wrote to file.
+Target: mlops_llm_eval, Hidden states took: 0.224 seconds
+    Target: mlops_llm_eval tensor finished. Wrote to file.
+Target: react, Hidden states took: 0.257 seconds
+    Target: react tensor finished. Wrote to file.
+Target: rust, Hidden states took: 0.232 seconds
+    Target: rust tensor finished. Wrote to file.
+Target: sql_backend, Hidden states took: 0.232 seconds
+    Target: sql_backend tensor finished. Wrote to file.
+Target: react_svelte, Hidden states took: 0.299 seconds
+    Target: react_svelte tensor finished. Wrote to file.
+Target: threads_connections, Hidden states took: 0.214 seconds
+    Target: threads_connections tensor finished. Wrote to file.
+Target: typescript_fireship, Hidden states took: 0.246 seconds
+    Target: typescript_fireship tensor finished. Wrote to file.
+Target: zig, Hidden states took: 0.233 seconds
+    Target: zig tensor finished. Wrote to file.

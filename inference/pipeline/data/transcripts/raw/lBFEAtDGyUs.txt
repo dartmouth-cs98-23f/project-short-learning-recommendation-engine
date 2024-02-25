@@ -1,0 +1,1258 @@
+second,duration,transcript
+8.66,5.559,hello everyone and welcome to BrainPOP
+11.639,4.441,webinar brain talk webinar is an online
+14.219,3.961,platform where scientists and
+16.08,4.56,researchers have the opportunity to
+18.18,4.62,share and present the research world
+20.64,4.46,that is related to machine learning and
+22.8,5.04,computational science
+25.1,4.54,student at the University of Oslo and it
+27.84,4.2,gives me great pleasure to culture this
+29.64,5.46,webinar with sajjad Ahmadi from the
+32.04,5.82,University of Oslo and my magnify from a
+35.1,4.74,similar research laboratory
+37.86,4.199,uh today we have an interesting
+39.84,3.78,presentation after the presentation we
+42.059,3.421,will have a question and answer session
+43.62,4.439,and audiences can post their questions
+45.48,4.32,on YouTube live stream
+48.059,5.881,um today's presentation is given by
+49.8,6.36,Walter rutila Walter udella is currently
+53.94,3.959,in his second year of pursuing a PhD in
+56.16,4.14,computer science at University of
+57.899,4.081,Helsinki his research focuses on
+60.3,3.419,exploring the potential of quantum
+61.98,4.74,Computing in data management and
+63.719,5.161,database optimization he is also
+66.72,4.259,interested in applying category Theory
+68.88,4.8,to establish a link between Quantum
+70.979,4.5,Computing and databases to date he has
+73.68,3.66,published several papers including
+75.479,5.221,studies on the application of category
+77.34,5.7,Theory to multi-model databases in one
+80.7,4.62,of his recent papers he identifies
+83.04,3.96,several database issues that can be
+85.32,4.68,resolved using Quantum Computing
+87.0,4.5,techniques hello Walter the floor is
+90.0,3.54,yours we are looking forward to your
+91.5,4.259,presentation
+93.54,4.259,thank you very much and especially
+95.759,4.141,thanks for researchers who kindly
+97.799,4.801,invited me me to give this presentation
+99.9,4.079,uh yeah my name is Walter watila hello
+102.6,3.9,everyone
+103.979,4.14,um I'm supervised by Professor jiangle
+106.5,3.299,who is the professor responsible of
+108.119,4.081,databases at the University of Tennessee
+109.799,5.1,and also supervised by Professor
+112.2,6.959,yukakunur Milan who is responsible of
+114.899,7.201,quantum Computing at our University and
+119.159,4.801,um yeah the title of this this talk is a
+122.1,3.54,sequel query classification with a
+123.96,3.659,Quantum natural language processing
+125.64,4.2,approach and Quantum natural language
+127.619,6.061,processing uses
+129.84,7.44,um Quantum machine learning and actually
+133.68,6.779,I'm I am quite regular very center also
+137.28,3.92,at the Nordic AI meet where where
+140.459,3.481,um
+141.2,5.14,and this this presentation is now the
+143.94,5.1,extended version of of that torque that
+146.34,4.94,I gave at the Nordic AI me 2022 last
+149.04,2.24,fall
+151.56,4.56,um so but I don't assume that you are
+153.84,5.94,really familiar with with Quantum
+156.12,5.64,Computing and I don't um I will not uh
+159.78,4.8,precisely Define what Quantum Computing
+161.76,5.04,is quite a large topic but I want to
+164.58,4.58,give a bit of intuition how how we
+166.8,5.88,approach problems in the in Quantum
+169.16,5.74,Computing so let's let's let's check out
+172.68,4.62,uh let's see this this kind of graph
+174.9,3.9,where we have two points b and a and we
+177.3,5.34,would like to find the shortest path
+178.8,5.64,from point B to the point a a and now in
+182.64,4.08,this graph you all already see that's
+184.44,4.5,the Gray Line there
+186.72,4.86,um and if you approach this this type of
+188.94,5.04,problem classically you you usually use
+191.58,5.4,somehow like Loop over the nodes and
+193.98,5.1,edges and you you do comparisons and and
+196.98,4.44,and and and and this type of like
+199.08,5.82,element by by element
+201.42,5.94,approach but I want to approach this
+204.9,5.339,with first with with ants
+207.36,5.7,and and let's assume that these ants
+210.239,6.36,leave at point B where they have their
+213.06,6.0,their nest and then we allow these ants
+216.599,4.621,to use only the edge keys so they can
+219.06,4.62,work only on on the edges here and then
+221.22,5.159,what we do we put some sugar to The
+223.68,5.94,Point Circle to the point a
+226.379,6.181,and then um what happened is that these
+229.62,6.3,ants start to go around the graph and if
+232.56,5.759,we wait maybe relatively long time we
+235.92,4.5,will find out that these these ants have
+238.319,4.92,found the shortest path
+240.42,5.34,from their from the food to back to
+243.239,4.741,their nest and they will walk on on this
+245.76,5.059,path so we can basically view the
+247.98,5.64,solution by studying the ants and this
+250.819,5.561,this type of algorithms or this end
+253.62,5.22,behavior has inspired this and Colony
+256.38,4.5,optimization algorith thinks that you
+258.84,4.62,must be aware of
+260.88,5.879,so and now I want to connect this to the
+263.46,5.82,to the quantum Computing so we also need
+266.759,5.701,to think a bit differently when we start
+269.28,5.94,to solve problems with quantum computers
+272.46,4.799,so now well we are busy people and we
+275.22,4.44,don't don't have time to wait the ants
+277.259,4.621,Define the best route so what we people
+279.66,3.72,decide to do we we build a quantum
+281.88,4.5,computer and we want to solve the
+283.38,7.02,problem a lot faster
+286.38,6.599,so uh so the the so the key key idea
+290.4,5.1,here is that instead of using ants we
+292.979,6.361,use some quantum mechanical elements
+295.5,5.639,like electrons or photons and we assign
+299.34,4.74,these electrons and for example
+301.139,6.441,electrons we assign this to the to the
+304.08,7.619,nodes and maybe you know like the
+307.58,5.679,electrons can have this kind of
+311.699,3.601,speed value which is going to be
+313.259,4.561,pointing at least to upwards and and
+315.3,5.58,downwards so these electrons will be in
+317.82,4.56,this kind of superposition state in the
+320.88,3.599,beginning
+322.38,5.46,and then besides that we have this
+324.479,6.241,quantum mechanical elements at each node
+327.84,6.84,we also introduce certain interactions
+330.72,5.94,between them so now in this graph these
+334.68,3.72,interactions are described by this black
+336.66,4.02,arrows
+338.4,4.799,um and we can do so that
+340.68,4.739,um when the when the nodes are nearby
+343.199,4.56,then also the interaction between them
+345.419,5.881,is is stronger
+347.759,6.601,and now if we have uh encoded this
+351.3,6.179,program correctly and then we just wait
+354.36,6.059,a few microseconds and then we come back
+357.479,6.361,and see the results we will find out
+360.419,5.521,that approximately for example in this
+363.84,5.88,case these spins will be pointing
+365.94,6.86,upwards on the notes which show us the
+369.72,6.06,the shortest path so so so
+372.8,5.5,this is now very roughly the idea how we
+375.78,6.539,can how we can approach like a quantum
+378.3,5.82,mechanical um problems so as a as a key
+382.319,4.681,points here that I want to deliver you
+384.12,5.639,now in this with this beginning example
+387.0,4.8,is that we have certain elements that
+389.759,4.56,can be in multiple States simultaneously
+391.8,4.08,and this is called superposition then we
+394.319,3.421,have these interactions between the
+395.88,6.0,elements and these interactions have
+397.74,6.899,certain value or rate and this is called
+401.88,6.12,entanglement and then also when we
+404.639,5.101,perform operations uh we need and when
+408.0,3.44,we perform these operations we kind of
+409.74,3.959,perform them do the whole system
+411.44,4.06,simultaneously so we do not really have
+413.699,4.681,this kind of idea that we can pick an
+415.5,5.4,element and do something to that
+418.38,5.46,use it whole at once and then then
+420.9,5.94,finally there is the measurement or the
+423.84,7.02,the when we read the solution
+426.84,5.76,from the from this system
+430.86,3.839,um yeah this this doesn't describe
+432.6,4.68,Quantum Computing very formally but I
+434.699,5.761,think this delivers the the idea that
+437.28,5.1,that we need to think a lot differently
+440.46,4.2,and then uh the question is like could
+442.38,4.56,we utilize this this type of systems as
+444.66,4.259,a machine learning model or as a
+446.94,5.94,subroutine in a machine learning model
+448.919,5.34,and and yes the answer is definitely yes
+452.88,1.92,so
+454.259,2.461,um
+454.8,3.179,and I want to motivate this a bit also
+456.72,3.84,like why should a message learning
+457.979,5.34,researcher be interested in quantum the
+460.56,5.639,Computing so I want to first like show
+463.319,4.021,my first impression that that um I
+466.199,4.741,didn't really know like how machine
+467.34,6.06,learning could help Quantum Computing
+470.94,4.62,um but then usually we have this this
+473.4,4.199,this this idea that Quantum Computing
+475.56,5.1,will provide some almost like a magical
+477.599,4.681,speed ups and computational power to do
+480.66,3.84,massive learning and any kind of
+482.28,4.199,computational tasks but what I actually
+484.5,4.139,blame here and what is also other
+486.479,4.921,researchers are researchers are
+488.639,5.521,proposing is that this this view is a
+491.4,4.32,bit wrong or at least this this will be
+494.16,3.479,very future
+495.72,4.259,so and I want to change this with the
+497.639,4.5,with with this idea that that
+499.979,4.44,machine learning can be really
+502.139,4.261,integrated as a part of quantum
+504.419,4.68,Computing and then on the other hand
+506.4,4.68,Quantum Computing can offer us new ways
+509.099,3.901,to build and design and execute machine
+511.08,4.019,learning models and also maybe they
+513.0,5.459,could use cost functions which are which
+515.099,5.641,are hard to simulate classically
+518.459,4.801,and what is in the heart of this all is
+520.74,5.4,that both machine learning and Quantum
+523.26,5.28,composition are based on linear algebra
+526.14,4.74,and probability Theory so actually this
+528.54,6.54,former formalism that these both are
+530.88,7.079,relying on this it's very similar
+535.08,4.199,and now what can we do with the with the
+537.959,2.82,quantum Computing when we are
+539.279,2.821,considering it from machine learning
+540.779,3.841,pairs
+542.1,4.62,perspective so first of all like Quantum
+544.62,4.98,circuits for more machine learning model
+546.72,5.64,class and this will be also apparent you
+549.6,5.22,will see my work as an as an as an
+552.36,5.76,example where we will develop a machine
+554.82,4.86,learning model where it is circuits form
+558.12,3.719,this model class
+559.68,3.96,and then we can basically drink these
+561.839,4.141,circuits with the gradient based methods
+563.64,3.96,and you will also see an example of of a
+565.98,4.14,method that we can use to drain these
+567.6,4.32,circuits and then then there is this
+570.12,4.74,problem that our data is usually
+571.92,6.0,classical so we cannot just immediately
+574.86,6.3,map it into a quantum computer so we
+577.92,6.24,need to have some kind of data encoding
+581.16,5.1,um that we can we have that we can we
+584.16,4.14,can actually process the data with a
+586.26,4.74,quantum computer and this is very very
+588.3,6.06,key a key Challenge and in in this work
+591.0,5.48,I will I I will introduce a
+594.36,5.099,um basically a bit none
+596.48,4.24,non-conventional encoding method and
+599.459,2.761,then finally there is always this
+600.72,3.48,question about like
+602.22,4.86,um do we actually have a Quantum
+604.2,5.04,advantage in in machine in want to
+607.08,4.56,message learning like will will this
+609.24,5.9,Quantum Computing will will it make
+611.64,7.8,these things faster at or or early at
+615.14,6.16,near-term scale and an answer is is yes
+619.44,5.22,if you just understand this Quantum
+621.3,7.44,advantages at at the right way or or
+624.66,5.64,your access you accept to accept it in a
+628.74,4.38,certain sense but I will not talk about
+630.3,5.4,this and I haven't really I'm not really
+633.12,4.56,familiar about about this this topic but
+635.7,4.259,you should be able to find a lot of
+637.68,3.54,material about this that so let's let's
+639.959,3.121,see the outline of this actual
+641.22,5.4,presentation so first I will talk about
+643.08,6.06,how we encode these SQL queries into
+646.62,5.76,Quantum circuits so this will be the
+649.14,6.84,basically the data encoding part
+652.38,6.42,and then we use this uh we we drain
+655.98,5.099,these parameters in these circuits to
+658.8,4.159,predict metrics about these SQL queries
+661.079,5.341,which is basically this this this
+662.959,5.141,training phase and then finally we I
+666.42,4.56,will assure you the some of the first
+668.1,5.64,initial results and and outcomes of of
+670.98,6.18,this framework
+673.74,6.539,so uh yeah so let me uh first introduce
+677.16,5.4,the actual problem here so so we have
+680.279,5.101,um so I'm a part of database research
+682.56,5.1,group and we deal still very much with
+685.38,4.079,relational databases and this there is
+687.66,3.78,now relational database which has
+689.459,4.081,information about cats and also some
+691.44,4.44,information about customers
+693.54,4.26,and now how this relational database
+695.88,4.139,usually works from the user's
+697.8,5.099,perspective is that users have these
+700.019,5.461,simple queries and then
+702.899,4.62,um they they send them to the database
+705.48,3.78,and they database executes them and then
+707.519,4.44,we get the results which are basically
+709.26,5.28,tables containing tuples
+711.959,5.101,and now the classical problem is how
+714.54,4.5,should we execute these queries how
+717.06,4.68,should we optimize them
+719.04,4.56,and in order that we can optimize these
+721.74,4.14,queries we should be able to estimate
+723.6,5.0,like how many records how many doubles
+725.88,5.579,these results result in tables contain
+728.6,5.32,we would also know some query execution
+731.459,4.581,times and be able to estimate the cost
+733.92,4.56,which is a value defined by the date
+736.04,4.12,database and all of these estimations
+738.48,4.08,affect on the query optimization
+740.16,5.119,resource allocation and transaction
+742.56,2.719,scheduling
+746.1,5.94,so as as as the previous slide suggested
+750.12,4.5,like this this is very in the core of
+752.04,4.919,the database research
+754.62,4.32,um so so and this is one of the most
+756.959,4.261,researched problems in database field
+758.94,3.92,and there is a lot of there are a lot of
+761.22,4.32,um very well working classical
+762.86,5.08,algorithms that basically are able to
+765.54,3.84,solve this problem in many ways uh so
+767.94,3.12,there's the classical machine learning
+769.38,3.24,and then these kind of rule-based
+771.06,4.44,methods and they give usually good
+772.62,5.399,estimates estimates and predictions
+775.5,4.38,and now what we are doing in our work is
+778.019,3.901,that we want to extend this field with a
+779.88,5.459,Quantum Computing based methods
+781.92,6.599,and the in this work we formalize the
+785.339,5.581,problem as a classification properly
+788.519,5.221,so what does this concretely mean is
+790.92,5.88,that when we have this fixed query we
+793.74,4.2,ask like will this query be executed
+796.8,4.5,[Music]
+797.94,6.66,in in interval for example 100 to 200
+801.3,4.32,milliseconds or will this query content
+804.6,4.76,like
+805.62,3.74,um 100 to 200 doubles
+809.579,5.661,so let's let's take a look at how we
+812.399,5.401,encode these uh queries into quantums
+815.24,4.06,circuits so first of all this is based
+817.8,3.659,on the quantum natural language
+819.3,4.38,processing qnlp
+821.459,4.141,and there they have seen that uh well
+823.68,4.74,natural language has this grammatical
+825.6,5.039,representation and then they have
+828.42,4.74,noticed they have defined a mapping from
+830.639,6.361,this grammatical representation to to
+833.16,6.6,Quantum circuits and now what we noticed
+837.0,5.82,that yeah SQL queries also can be
+839.76,5.22,expressed with with grammars very well
+842.82,4.44,defined grammar so why why wouldn't we
+844.98,3.539,use this similar kind of mapping with a
+847.26,4.379,different rule
+848.519,5.94,rules to map these SQL queries to to
+851.639,5.88,again to these circuits and there is
+854.459,6.141,also other application for for music so
+857.519,6.06,so those are the the researchers have
+860.6,5.44,basically found grammar that describes
+863.579,5.041,music Snippets and develops similar kind
+866.04,5.76,of framework for for those and some of
+868.62,5.64,the packages that are concretely use
+871.8,4.92,here are our land back which is a
+874.26,6.019,Quantum MLP packets then I use some
+876.72,3.559,category theoretical package
+882.139,4.781,Quantum Computing software packages and
+884.82,4.86,then this Google's Jax which is
+886.92,4.32,basically just speeds up the learning
+889.68,4.2,process
+891.24,5.58,and now if you go activate to the actual
+893.88,6.0,encoding process it starts so that we
+896.82,4.86,have this fixed equal queries and then
+899.88,3.72,what the database does it basically
+901.68,4.32,produces this context-free grammar
+903.6,3.84,diagram which is which is now visible
+906.0,3.6,here
+907.44,5.28,um it contains a lot of information but
+909.6,5.22,if we focus to this we see that
+912.72,4.2,um we see we can we can we can pick part
+914.82,4.44,of this this this diagram for example
+916.92,4.38,this select clause and what we do do
+919.26,4.4,this select Clause here when we
+921.3,7.62,represent it with the context-free
+923.66,7.9,grammar we can define a mapping uh to to
+928.92,6.12,the outer grammar which simplifies this
+931.56,6.18,a bit so so we see that we have more
+935.04,5.099,boxes on this left hand side than on the
+937.74,4.98,right hand side and also to tie this
+940.139,4.44,naming changes a bit and what is nice
+942.72,4.32,here that this functor that is in the
+944.579,4.32,middle that we use to map this it has
+947.04,4.56,very nice category theoretical precise
+948.899,4.8,definition and and it's actually also
+951.6,5.66,relatively easy to implement with this
+953.699,6.781,uh with this um category theoretical
+957.26,4.54,packages the package that I mentioned
+960.48,4.02,earlier
+961.8,6.839,so we performed this this type of
+964.5,6.72,mapping for for each of these uh these
+968.639,4.56,these diagrams and and then what we
+971.22,5.34,obtain is we obtain a bit of different
+973.199,5.76,type of uh diagram which is called Break
+976.56,5.579,group grammar diagram and now the key
+978.959,5.82,Point here is that that this this uh
+982.139,5.341,this is a display group grammar diagram
+984.779,6.36,is a simpler it contains basically less
+987.48,7.979,boxes and and the type in here is a bit
+991.139,6.781,simpler uh but anyway we still we still
+995.459,5.3,claim that when we use this functor this
+997.92,5.52,certain since this this this grammar
+1000.759,5.32,this diagram here encodes the same
+1003.44,5.519,information about the query
+1006.079,4.981,and now what we can do here like you see
+1008.959,3.661,like this black group grammar diagram
+1011.06,4.44,has these caps
+1012.62,5.1,and what we can do intuitively easily is
+1015.5,4.38,that we can make these caps straight so
+1017.72,4.619,we just raise the boxes up and we
+1019.88,5.1,perform this to the whole diagram and
+1022.339,4.86,then we get basically this group grammar
+1024.98,4.62,diagram without caps
+1027.199,6.12,and this is also a functorial process
+1029.6,6.599,and it's it's it keeps the diagram the
+1033.319,4.921,same and then finally now from this
+1036.199,3.901,record of grammar diagram it doesn't
+1038.24,4.5,have caps we can map it to the quantum
+1040.1,5.579,circuit so that it also the quantum
+1042.74,5.76,circuit has parameters
+1045.679,4.561,and this is also a functor and actually
+1048.5,4.5,it's maybe a class of functors because
+1050.24,4.799,it has a certain para parameters that we
+1053.0,4.679,can modify and produce different kind of
+1055.039,5.581,circuits
+1057.679,6.0,another so so as a summary we we start
+1060.62,4.98,from this SQL queries and with with this
+1063.679,4.701,functorial transformation we get this
+1065.6,6.48,parameterized Quantum uh certain
+1068.38,6.1,circuits and now we want a bit like
+1072.08,6.54,focus on this this circuits so what are
+1074.48,6.42,what are quantum circuits so
+1078.62,4.799,um so this is a lot different from the
+1080.9,5.88,from the classical con
+1083.419,5.101,Computing so first of all in this case
+1086.78,4.38,you can you need to read the circuits
+1088.52,5.519,from from bottom to up so time flows up
+1091.16,5.759,and upwards we start from the initial
+1094.039,5.52,state zero and this one wire that goes
+1096.919,5.061,through here is basically a keep it and
+1099.559,4.98,then we model this Cube it has the state
+1101.98,5.02,usually it starts from zero State and
+1104.539,5.101,then this state gets modified then we
+1107.0,6.059,apply Gates and these gates are like
+1109.64,5.22,functions that modify the the state the
+1113.059,3.541,input State and then the output
+1114.86,3.9,difference state
+1116.6,3.66,and then finally when we have applied
+1118.76,3.48,all the gates that we have wanted to
+1120.26,5.22,apply the the master it and the
+1122.24,4.98,measurement result is is is always well
+1125.48,5.16,in single compute case it's it's always
+1127.22,5.4,zero or one so so
+1130.64,4.08,uh so so that's the whole process
+1132.62,4.14,basically and then what I want to point
+1134.72,4.1,out here are these two type of gates
+1136.76,6.48,where we have actually now
+1138.82,6.52,parameters so and these um uh these the
+1143.24,4.98,key thing here now is that we want to be
+1145.34,5.339,able to optimize these parameters in a
+1148.22,4.98,way that that
+1150.679,5.821,that when we run this circuit on a
+1153.2,4.8,quantum computer it it will the result
+1156.5,5.7,that we get from the quantum computer
+1158.0,6.78,will say uh some prediction about this
+1162.2,7.68,this this query that we use we
+1164.78,5.1,originally used to to create this circle
+1170.24,4.74,um so now we have the circuit
+1172.94,4.979,construction so let's go to the to the
+1174.98,5.939,training phase
+1177.919,5.461,uh so basically this is a work where I
+1180.919,4.921,needed to construct my my own data set
+1183.38,4.679,because because all the classical data
+1185.84,4.14,sets that database researchers use they
+1188.059,5.041,are pretty large and the queries are
+1189.98,6.24,relatively long and they would produce a
+1193.1,7.02,solar circuits that we cannot execute
+1196.22,6.6,them on on any existing Hardware so I
+1200.12,4.98,made a training data test data and
+1202.82,5.88,validation data and
+1205.1,6.12,so that I composed I graded these SQL
+1208.7,6.24,queries random or a postgres database
+1211.22,6.42,with with certain data and then I
+1214.94,5.46,collected basically just 450 training
+1217.64,5.34,points which are like a query ID and
+1220.4,5.22,time how long it took to execute the SQL
+1222.98,5.88,query in a database or then query ID and
+1225.62,5.7,cardinality so the query how many tuples
+1228.86,4.439,we get when we execute and then I did
+1231.32,3.84,the same for the collected the test data
+1233.299,4.921,and validation data
+1235.16,6.66,and then also I performed this encoding
+1238.22,5.94,process for this for this SQL queries so
+1241.82,5.099,I took the same very simple SQL queries
+1244.16,4.879,and produced this training circuits test
+1246.919,4.681,circuits and circuits and validation
+1249.039,6.161,circuits with the previously described
+1251.6,6.18,monitorial in and encoding
+1255.2,5.219,and now we have the whole setup ready so
+1257.78,5.279,we can start the actual training phase
+1260.419,5.701,and this optimization is is done with
+1263.059,6.181,the simultaneous spiritual place and
+1266.12,7.32,stochastic approximation algorithm spsa
+1269.24,6.9,and uh and and this algorithm basically
+1273.44,5.34,approximates the the gradient that these
+1276.14,4.44,circles have so we start so that we take
+1278.78,3.72,these training circuits and validation
+1280.58,5.58,circuits
+1282.5,5.7,then we do a bit of modification to to
+1286.16,4.139,previous research so that we do not pick
+1288.2,5.339,all the training circuits initially but
+1290.299,5.221,just the sub subset of them and we
+1293.539,3.601,notice that when we when we this kind of
+1295.52,3.96,incrementally increase the number of
+1297.14,4.5,circuits we actually obtain a better uh
+1299.48,4.62,results
+1301.64,5.88,so and then we okay we focus the subset
+1304.1,5.4,of these circuits and the image we
+1307.52,5.22,initialize the parameters firstly
+1309.5,8.22,initialize them randomly and then in the
+1312.74,7.439,coming epoxy basically use the or in the
+1317.72,6.839,when we add more circuits we used
+1320.179,8.581,previously found good good parameters
+1324.559,6.36,but initially we use random and then we
+1328.76,4.08,measure the circuits and do a certain
+1330.919,4.561,post selection process
+1332.84,4.62,and then we calculate this basic
+1335.48,4.62,cross-entropy loss between these
+1337.46,5.699,training and validation data and based
+1340.1,5.88,on these losses the spsa algorithm
+1343.159,4.621,basically are just these parameters in
+1345.98,4.439,these circuits and also adjust this
+1347.78,3.96,hyper parameters in the in the in the
+1350.419,5.701,algorithm
+1351.74,6.72,and we now we run this
+1356.12,4.74,certain
+1358.46,5.52,number of times
+1360.86,4.98,and now uh when we have executed this
+1363.98,5.1,this optimization phase and we have
+1365.84,5.64,found a sufficiently good parameter
+1369.08,4.44,values the question is how does this
+1371.48,4.5,optimized circuit work as a classifier
+1373.52,4.74,so let's let's see like that we have now
+1375.98,4.62,we have the SQL query we have translated
+1378.26,5.46,that one into a circuit and then we have
+1380.6,5.64,these parameters we pick parameters and
+1383.72,4.74,substitute them in the circuit and then
+1386.24,4.38,we get something which looks like this
+1388.46,4.64,and now in this case
+1390.62,5.16,um we can run this on a quantum computer
+1393.1,5.439,and we actually need to run it multiple
+1395.78,6.42,times as we do so that when we run it we
+1398.539,5.461,only select those results where
+1402.2,4.08,or basically when you run this type of
+1404.0,5.58,circuit on quantum computer you will get
+1406.28,6.24,a bit string which contains
+1409.58,5.099,uh some some value for this first fire
+1412.52,5.399,and then some values for these other
+1414.679,6.661,wires so basically we get a
+1417.919,6.24,six character long bead string here
+1421.34,6.0,only select we only consider those bits
+1424.159,4.341,strings where all these uh five
+1427.34,6.3,last
+1428.5,7.12,bits are are zero and then then we find
+1433.64,3.539,such bit string when we are running this
+1435.62,5.52,we will
+1437.179,6.421,um we will see the first one and then
+1441.14,4.2,um and then this when we run this
+1443.6,4.02,sufficiently many times this will give
+1445.34,4.62,us a distribution over zeros and ones
+1447.62,4.86,depending on the first first while your
+1449.96,6.599,first qubit here
+1452.48,7.86,and we use this first this this uh this
+1456.559,6.6,result if we get more ones than zeros
+1460.34,5.339,then this this result will get
+1463.159,4.38,classified as a one and other case as a
+1465.679,4.201,zero
+1467.539,3.901,so let's take a look at some initial
+1469.88,5.039,results that we have got
+1471.44,5.88,so basically the the most reasonable
+1474.919,5.161,field where we can compare this is a
+1477.32,4.56,comes from the quantum NLP and the
+1480.08,3.66,quantum NLP they have had two kind of
+1481.88,3.779,cases the meaning classification case
+1483.74,4.5,and relative prediction classification
+1485.659,5.281,case these are a bit different from NLP
+1488.24,5.28,perspective but but the key Point here
+1490.94,5.28,is that in their work the training error
+1493.52,5.399,has been somewhere around 17 and test
+1496.22,5.06,error around 20 and in this second case
+1498.919,7.081,this one has been
+1501.28,7.72,9.4 and then here like around 20 28
+1506.0,5.46,on on test error so so this gives us
+1509.0,3.72,some some some some comparison and this
+1511.46,2.88,has been basically a binary
+1512.72,4.92,classification case
+1514.34,5.16,and and in our work uh I would say that
+1517.64,5.58,these our results are very much in line
+1519.5,5.82,with this results from Quantum MLP so so
+1523.22,4.339,basically it seems that this this this
+1525.32,5.28,type of quantum machine learning model
+1527.559,5.201,is able to also do other other things
+1530.6,5.88,than just classify sentences
+1532.76,6.0,and uh in um so what are these figures
+1536.48,4.679,describing is the is is is that
+1538.76,4.56,incremental training process where we
+1541.159,7.321,start with a small number of circuits
+1543.32,7.08,then we'll add more training data
+1548.48,4.38,um and then when we add more training
+1550.4,7.279,data we see that uh also the the
+1552.86,4.819,accuracy of the model gets gets better
+1558.279,6.941,and finally when when we use
+1562.1,4.8,um all the Training trade data or we do
+1565.22,3.68,not even need to use all the training
+1566.9,4.62,data which is maybe a bit surprising and
+1568.9,4.84,I don't think that we have really good
+1571.52,5.279,answer like why this happens and this is
+1573.74,6.559,very uh interesting to you but anyway we
+1576.799,5.521,will read this this this about uh 80
+1580.299,3.841,accuracy here
+1582.32,6.599,and then it's something about 90
+1584.14,7.899,accuracy on the uh on on this training
+1588.919,5.64,data and and 80 on test data and then
+1592.039,4.981,similarly if we see this cardinality
+1594.559,4.801,classification we obtain really similar
+1597.02,5.039,results
+1599.36,4.919,so so anyway we we read
+1602.059,4.921,um pretty similar level as this Quantum
+1604.279,5.76,NLP has has reached
+1606.98,3.65,uh all those in in our case we have this
+1610.039,2.041,uh
+1610.63,5.77,[Music]
+1612.08,7.32,over 600 queries whereas the quantum NLP
+1616.4,6.06,has used about 100 sentences so so
+1619.4,6.12,there's a so we are a bit scaling this
+1622.46,4.62,this up compared to their their work
+1625.52,4.2,and then there's the question like
+1627.08,5.719,binary classification is is maybe a bit
+1629.72,6.0,like uh still a relatively simple class
+1632.799,5.38,problem so what what if we want to do
+1635.72,4.68,like multi-class classification so so so
+1638.179,4.221,the same framework allows us to do
+1640.4,5.639,multi-class classification very simple
+1642.4,6.519,way but in this case they actually the
+1646.039,5.701,it is it is a lot harder and and and we
+1648.919,4.701,are still working on on on finding a
+1651.74,4.62,good
+1653.62,4.78,to build these circuits and drain them
+1656.36,4.679,but anyway we see that uh that that
+1658.4,4.86,there is probably some some learning
+1661.039,5.161,happening here so that we read
+1663.26,5.519,in four class classification we we read
+1666.2,6.24,an accuracy which is maybe around
+1668.779,5.821,between 40 and 50 and then also uh
+1672.44,5.7,similarly here for this
+1674.6,6.12,uh for the cardinalities
+1678.14,4.98,but uh but I think I I think there is a
+1680.72,4.26,lot of a lot of things to try out in
+1683.12,4.559,this multi-class classification case and
+1684.98,5.0,and this is still a bit of open uh
+1687.679,2.301,problem
+1690.26,4.2,um so and then uh we have this question
+1692.72,6.6,like can we say that the model really
+1694.46,7.02,works and and and can we like um
+1699.32,4.38,uh basically can we
+1701.48,4.74,can we study if there are some problems
+1703.7,5.4,in this Quantum uh company model and can
+1706.22,6.36,we can we be able to make it a bit more
+1709.1,6.179,explainable so so for for this I think
+1712.58,5.219,one of the one of the good things that
+1715.279,4.02,uh Quantum Computing can offer for
+1717.799,3.301,machine learning is that Quantum
+1719.299,5.821,Computing has a lot of this kind of
+1721.1,6.0,tools to actually measure measure uh
+1725.12,4.5,measure like quantum mechanical
+1727.1,5.4,properties of of these models that can
+1729.62,6.659,be used to to explain this this material
+1732.5,5.22,a learning model uh but I but actually I
+1736.279,3.481,think maybe this this year
+1737.72,4.579,expressibility is something that also is
+1739.76,5.039,studied in classical machine
+1742.299,4.441,learning but in Quantum Computing this
+1744.799,5.281,gets a very nice visual interpretation
+1746.74,6.34,so so if if you think that we have a
+1750.08,5.579,single qubit and a single qubit uh the
+1753.08,5.219,single quantum mechanical element it can
+1755.659,6.24,be described with a with a sphere and
+1758.299,6.12,now if we think that we have this single
+1761.899,5.701,qubit and we apply just a single
+1764.419,6.061,operation with a single parameter what
+1767.6,4.76,we obtain in this case is that that we
+1770.48,5.52,actually
+1772.36,5.34,reads we can only reads points that are
+1776.0,5.159,on the circle
+1777.7,6.94,here on the red circle around the sphere
+1781.159,6.181,so so so this describes that if you
+1784.64,5.039,develop the model it has kind of two
+1787.34,4.5,little operations and two two little
+1789.679,5.061,parameters you can actually detect that
+1791.84,6.48,we can never reach
+1794.74,5.679,sufficiently many many points on the
+1798.32,4.26,sphere and then and then on the on the
+1800.419,5.821,opposite end we have this case that if
+1802.58,6.959,we add uh basically three gates three
+1806.24,5.039,operations and three para parameters we
+1809.539,4.5,reach the state where we can actually
+1811.279,4.681,reach any point on the sphere and then
+1814.039,3.421,we have all the combinations between
+1815.96,4.26,these two
+1817.46,5.699,so so this is a one metric that we can
+1820.22,5.1,use to describe this this Quantum
+1823.159,4.081,message learning model and then there is
+1825.32,3.739,the second one which is a lot more
+1827.24,5.76,quantum mechanical
+1829.059,6.281,measurement that that we can use and
+1833.0,5.7,this is entangling capability and this
+1835.34,5.819,can be done explained roughly so that if
+1838.7,4.859,we think that we have two two queue bits
+1841.159,5.061,so we have two quantum mechanical
+1843.559,5.1,elements and then as I described we
+1846.22,4.3,previously we can introduce these
+1848.659,3.181,interactions between these these
+1850.52,4.62,elements
+1851.84,5.88,and and in the one end we have the case
+1855.14,5.22,where there is no interaction uh there's
+1857.72,6.839,no entanglement and these Cupids do not
+1860.36,6.96,interact with each other any any way and
+1864.559,6.181,in this case we can assign a value zero
+1867.32,5.52,to this entangling capability
+1870.74,4.74,and then on the on on the opposite end
+1872.84,4.199,because of quantum mechanical postulates
+1875.48,4.079,and because of quantum mechanics there
+1877.039,4.081,is a fully fully entangled system which
+1879.559,4.74,is called a bell state
+1881.12,6.779,and we cannot entangle these two qubits
+1884.299,6.24,more than than this this much
+1887.899,6.541,and and then we have everything between
+1890.539,5.701,that so so so so this is also a method
+1894.44,4.44,that we can calculate from from each
+1896.24,4.679,circuit that we have and now what I have
+1898.88,4.74,done is that I have calculated this this
+1900.919,6.24,these measurements uh this this Matrix
+1903.62,5.64,for for this uh specific uh SQL
+1907.159,3.301,classification Quantum message learning
+1909.26,4.32,model
+1910.46,5.28,and and in the expressibility case this
+1913.58,5.579,expressibility can be also visualized as
+1915.74,7.26,a as a this this type of histogram
+1919.159,6.301,um and basically this histogram as I as
+1923.0,5.6,I see it is that that it tells us that
+1925.46,5.219,we are able to express
+1928.6,4.84,Express like
+1930.679,5.161,necessarily all the states on the on the
+1933.44,6.18,sphere all although it it seems like
+1935.84,5.699,that we have a bit of like more here in
+1939.62,3.84,in the middle which which would mean
+1941.539,6.421,that the points tend to gather around
+1943.46,6.719,around the equator of the sphere
+1947.96,4.02,uh but but anyway it seems like that
+1950.179,4.38,that at least there isn't any problem
+1951.98,4.74,and and also we can calculate very
+1954.559,4.561,specific uh value
+1956.72,4.38,which is called um
+1959.12,5.939,it's called
+1961.1,6.079,this coolback Library against Val value
+1965.059,4.681,which is also used in classical machine
+1967.179,3.541,learning and in and in this this case
+1969.74,4.439,it's
+1970.72,6.0,0.017 and the previous research in this
+1974.179,4.74,paper found that the favorable
+1976.72,5.92,explicitive value
+1978.919,5.88,would be somewhere below 0.02 so this
+1982.64,4.56,also indicates that that at least there
+1984.799,4.921,shouldn't be any any serious problem
+1987.2,5.459,with expressibility
+1989.72,4.339,and then if you also see this entangling
+1992.659,4.5,capability
+1994.059,5.62,in this case I have calculated for it
+1997.159,4.321,for each circuit
+1999.679,2.521,um so that
+2001.48,3.059,um
+2002.2,4.04,so that yeah all the circuits are are
+2004.539,4.5,here and then the entirely capability
+2006.24,6.159,values are plotted here and we see that
+2009.039,7.98,it goes somewhere uh usually somewhere
+2012.399,7.681,around 0.5 and 0.6
+2017.019,6.361,mostly and the previous research the
+2020.08,5.28,same paper uh pointed out that that the
+2023.38,5.039,favor favorable intangling capability
+2025.36,5.1,value would be somewhere between 0.4 and
+2028.419,6.12,0.7
+2030.46,6.0,so also this suggests that that uh that
+2034.539,4.561,at least it doesn't look like there is
+2036.46,5.64,any any problem with with this
+2039.1,5.579,and also why we would like to know these
+2042.1,5.04,values is that that if these values are
+2044.679,4.621,too high then it indicates that this
+2047.14,7.8,Quantum machine learning model is is
+2049.3,8.039,probably expensive to to train and and
+2054.94,4.52,we don't want that but on and on the
+2057.339,5.34,other end we also want that it is
+2059.46,5.379,capable to express and it it's capable
+2062.679,4.5,to learn so we want to know we want to
+2064.839,5.0,be sure that these values aren't too too
+2067.179,2.66,low either
+2071.679,4.561,um so yeah and then I went to some uh
+2073.48,5.159,summarize a bit about our our quantum
+2076.24,4.56,computer for for databases research so
+2078.639,4.861,so so this is a definitely a small but
+2080.8,5.4,growing uh field in database research
+2083.5,5.76,and this this work is a part of a paper
+2086.2,7.199,which is currently under a review so so
+2089.26,6.3,the paper uh is is here and then just on
+2093.399,5.101,this week uh this Monday I also
+2095.56,6.84,represented other work at the workshop
+2098.5,6.54,at ICD 23 conference which was about
+2102.4,4.88,optimizing a virtual machine and task
+2105.04,5.28,allocations in Cloud infrastructure
+2107.28,5.62,infra structures trans sustainability
+2110.32,4.08,perspective using Quantum annealers and
+2112.9,5.04,Quantum annealers are a bit different
+2114.4,6.42,type of quantum Computing paradigm
+2117.94,4.919,and then we are going to have a Quantum
+2120.82,4.64,we are going to have a tutorial about
+2122.859,5.101,want to machine learning at Sigma
+2125.46,4.3,conference and then also we will
+2127.96,4.02,organize the international workshop on
+2129.76,5.7,Quantum data science and management at
+2131.98,5.94,bldb and also the submission is is open
+2135.46,6.68,for this workshop and you are also
+2137.92,6.96,welcome to to submit your your work here
+2142.14,6.64,and then there is a lot of future work
+2144.88,6.239,that we can we can we can do on on this
+2148.78,4.26,topic so first of all as I mentioned
+2151.119,3.781,already uh we would like to increase
+2153.04,5.22,accuracy for this multi-class
+2154.9,6.959,classification and this necessarily
+2158.26,5.28,contains two aspects so that we then we
+2161.859,4.141,are searching for correct circuits
+2163.54,4.319,because we can modify these circuits we
+2166.0,4.26,have three parameters that produce
+2167.859,4.5,different types of circuits and then
+2170.26,4.68,also we would like to find the correct
+2172.359,4.561,hyper parameter values for this spsa
+2174.94,4.139,algorithm
+2176.92,5.939,and then there is this question like how
+2179.079,4.941,large queries can be predict and and
+2182.859,4.381,um
+2184.02,5.64,because some of the modern queries are
+2187.24,2.42,very long
+2190.3,4.38,and then we think that this
+2192.64,5.699,grammar-based approach must not be the
+2194.68,5.58,only way to encode this circuits so what
+2198.339,4.081,kind of circuits would work the best for
+2200.26,5.4,for example one interesting idea that we
+2202.42,7.02,are we have is the idea that we could
+2205.66,4.62,use the query optimization plan
+2209.44,4.139,um
+2210.28,5.52,and because that is usually also it has
+2213.579,5.401,also tree structure so we would be able
+2215.8,5.46,to map that three structure to a circuit
+2218.98,5.52,and then optimize that and also maybe
+2221.26,5.64,gain gain some interest in results from
+2224.5,7.88,there and then we might be also able to
+2226.9,5.48,to keep these circuits uh shorter
+2232.599,5.341,um and then there are also uh many other
+2235.359,5.701,gradient-based optimization approaches
+2237.94,5.04,beside this yeah spsa and also the
+2241.06,5.1,quantum machine Learning Community is is
+2242.98,6.08,exploring this quite widely
+2246.16,5.52,and then partly really
+2249.06,4.48,related to this this previous point is
+2251.68,4.939,that we can we can use this Penny Lane
+2253.54,6.0,and key skit and use use their
+2256.619,4.96,methods and utilize their noise models
+2259.54,4.2,and then also we would like to run this
+2261.579,4.561,on on actual real Quantum Computing
+2263.74,5.099,Hardware So currently we are just using
+2266.14,6.54,the simulators
+2268.839,6.901,so as a as a conclusion
+2272.68,5.399,so this work develops a Quantum machine
+2275.74,4.26,learning based method to predict a
+2278.079,4.5,matrix for SQL queries in relational
+2280.0,4.8,databases and this method can be
+2282.579,4.381,basically divided into two phases so
+2284.8,4.98,first is this encoding phase where we
+2286.96,4.5,encode the SQL queries into circuits and
+2289.78,4.98,then later we optimize the circuit
+2291.46,5.28,parameters to predict these metrics
+2294.76,3.359,and I think the results are really
+2296.74,4.379,promising and at least the binary
+2298.119,5.101,classification resource restarts are in
+2301.119,5.72,line with the previous results obtained
+2303.22,3.619,in the quantum NLP
+2307.119,4.74,uh so thank you very much
+2310.45,3.149,[Music]
+2311.859,4.5,thank you Walter for the very
+2313.599,4.861,interesting presentation I have wrote
+2316.359,5.461,down so many questions but I will just
+2318.46,6.8,uh yeah go with a few and then if
+2321.82,3.44,someone else has any more questions
+2325.3,5.46,one thing that I didn't really get or
+2328.359,4.321,near when you talked about this training
+2330.76,3.42,phase like the other training where you
+2332.68,3.84,put the data between training and
+2334.18,4.86,validation and test drive
+2336.52,4.26,then you sense that you calculate the
+2339.04,3.66,cross entropy between
+2340.78,3.12,the training data and the validation
+2342.7,3.0,data
+2343.9,4.62,right or at least that's what I
+2345.7,5.1,understood but I didn't get that part
+2348.52,5.059,if you can go to that slide where you
+2350.8,2.779,show the training
+2355.99,3.18,[Music]
+2362.44,4.44,yes this one yes
+2365.02,4.98,yeah
+2366.88,5.4,so yeah so so what the exact thing right
+2370.0,4.74,like how do you calculate the loss
+2372.28,4.14,between the two days data sets because
+2374.74,3.359,usually everybody understand it because
+2376.42,3.98,entryways that usually have some ground
+2378.099,5.101,truth labels and you compare them to the
+2380.4,5.98,probabilities of your model right but
+2383.2,6.06,you only use like one data set but I
+2386.38,4.38,don't understand how do you do data sets
+2389.26,4.56,to calculate the loss
+2390.76,4.92,oh yeah yeah so so yeah so that so uh
+2393.82,5.1,yeah it's maybe a bit unclear here but
+2395.68,6.24,uh but basically the the thing is that
+2398.92,5.939,we measure these circuits and when we
+2401.92,5.1,measure the circuits uh basically maybe
+2404.859,3.901,this slide describes that so we have a
+2407.02,4.559,circuit and we measure it and then we
+2408.76,4.859,get the result from this circuit and
+2411.579,3.721,then we compare this result with the
+2413.619,4.381,training data and with the validation
+2415.3,5.7,data and we come we call it calculate
+2418.0,6.119,that that uh
+2421.0,5.76,posts from those from that
+2424.119,5.341,okay so are you in a sense also using
+2426.76,5.4,like the validation data in some sort in
+2429.46,4.86,the training yeah yeah yeah yeah it
+2432.16,4.08,seems like yeah yeah this yeah this spsa
+2434.32,4.68,algorithm is also using the validation
+2436.24,4.2,data there okay yeah because that's a
+2439.0,4.32,little bit different like today it's
+2440.44,4.56,standard thing you know yeah this is
+2443.32,3.66,probably yeah yeah but this this was
+2445.0,4.26,actually I think this was how the also
+2446.98,5.099,some other work was was was using that
+2449.26,4.319,and also they I think the the algorithm
+2452.079,3.301,where they were
+2453.579,3.721,where they developed this I think they
+2455.38,4.199,actually I think recommended to using
+2457.3,5.7,this validation data that
+2459.579,5.52,is that but anyway like during the in
+2463.0,4.02,during the training phase this
+2465.099,4.921,validation data like
+2467.02,7.14,uh it's it's it's like also evaluated
+2470.02,7.079,also compared with it and I I think and
+2474.16,5.52,that should affect you then yes and then
+2477.099,5.161,you said something about expressibility
+2479.68,5.04,and the this factor that should be less
+2482.26,3.72,than 0.2
+2484.72,4.44,yes
+2485.98,4.74,so uh you said you calculate the KL
+2489.16,4.32,Divergence
+2490.72,5.28,between what distributions exactly is it
+2493.48,3.96,between like the distribution that we
+2496.0,4.32,show and some
+2497.44,5.34,like template distribution or what's the
+2500.32,4.019,other distribution yeah yeah so yeah
+2502.78,4.26,that's a very good question yeah so the
+2504.339,4.621,other distribution that that uh that are
+2507.04,4.319,used to calculate is is called hard
+2508.96,4.379,distribution
+2511.359,4.98,and this and this hard distribution is
+2513.339,6.121,is basically this uh this this
+2516.339,7.02,distribution that uh that this if we
+2519.46,6.42,just basically equally sample points
+2523.359,5.061,from the sphere
+2525.88,2.54,okay
+2528.64,3.6,yes please
+2530.92,3.72,um yeah yeah yeah I mean that's that's
+2532.24,3.72,the that's the other distribution okay
+2534.64,3.719,yeah so I
+2535.96,4.92,roughly like a uniform Distribution on
+2538.359,4.74,this field yes I see yeah yeah exactly
+2540.88,4.199,yeah yeah nice yeah I have some other
+2543.099,5.221,questions but this other mind have any
+2545.079,6.601,other questions yeah can I start with
+2548.32,5.94,the very basic question from a beginning
+2551.68,5.34,slide uh you have when you were
+2554.26,6.72,introducing the quantum the quantum
+2557.02,7.559,models you have mentioned that it was at
+2560.98,6.06,least my understanding uh in Quantum
+2564.579,6.721,models we replace the nodes the neurons
+2567.04,6.24,with superpositions and we know that it
+2571.3,5.64,is up down
+2573.28,7.38,spines in electron Quantum systems like
+2576.94,5.52,electrons and they are very much
+2580.66,5.4,interacting with together they have
+2582.46,7.26,repulsion they have attraction but in
+2586.06,9.24,neurons we have neural interaction in
+2589.72,9.48,some models but how can you please it
+2595.3,6.0,described about this complex system how
+2599.2,3.899,you deal with these interactions how we
+2601.3,4.74,can we are going to cancel it in your
+2603.099,5.121,model or you have some assumptions for
+2606.04,2.18,it
+2608.92,3.659,um yeah yeah that's a that's a good
+2610.599,3.781,question and I think like that it's
+2612.579,3.721,maybe also related to the to the heart
+2614.38,3.9,there at some level like because the
+2616.3,5.88,because the interactions are actually
+2618.28,7.02,realized at the hardware level so at the
+2622.18,5.22,at algorithmic design we just
+2625.3,3.96,we just like decide that there should be
+2627.4,4.14,interaction here with and it should have
+2629.26,4.319,this this strength
+2631.54,6.6,um but
+2633.579,6.901,and then then we we basically map it to
+2638.14,5.04,the quantum computer and then I'm not
+2640.48,5.22,exactly sure like how this how this
+2643.18,5.88,Hardware actually realizes there yeah
+2645.7,6.84,the the interaction or the entanglement
+2649.06,5.16,there but anyway it is it is at at least
+2652.54,4.38,usually these these quantum computers
+2654.22,6.06,they they have a circle like a topology
+2656.92,6.3,or they they have this these Cupids are
+2660.28,5.16,like nodes in a graph and then these
+2663.22,6.119,edges describe
+2665.44,6.06,um those like kind of pads yeah ads that
+2669.339,4.921,we can use to create these interactions
+2671.5,5.04,so so so at the current devices we are
+2674.26,4.26,not able to create interaction between
+2676.54,3.14,the every qubit
+2678.52,4.319,[Music]
+2679.68,5.74,you know yeah usually so usually they
+2682.839,5.821,are a bit isolated and and we can only
+2685.42,5.52,like maybe make an interaction between
+2688.66,5.34,certain Cupids and then the qubits
+2690.94,4.86,nearby that one so great
+2694.0,4.68,um but they but but yeah I think I think
+2695.8,5.88,it's like uh it's more Hardware harder
+2698.68,7.139,base interactions there are a couple of
+2701.68,9.54,questions posted in the channel uh that
+2705.819,8.581,one of them is about uh you can we say
+2711.22,5.82,that the sequence are same as epochs in
+2714.4,4.74,usual machine learning models I remember
+2717.04,4.559,in one of your Styles yeah it's a good
+2719.14,5.16,question you were describing about the
+2721.599,4.441,more sequence the better results in one
+2724.3,4.98,of your slides
+2726.04,7.62,yes this question uh
+2729.28,6.66,uh wanted to know that how the secret or
+2733.66,5.159,sequence work can we say can we replace
+2735.94,5.1,it in machine usual machine models but
+2738.819,5.241,if folks we say the more epoxy better
+2741.04,3.02,results for example
+2744.28,2.579,um
+2745.0,4.26,yeah I think like these circuits are
+2746.859,6.601,maybe more like a like a training
+2749.26,5.76,like it like a data points or
+2753.46,3.96,um so then then there is the the
+2755.02,5.54,actually the the training algorithm has
+2757.42,7.02,uh has epochs and
+2760.56,6.88,we we run it certainly like number of
+2764.44,5.1,those those ebooks and then
+2767.44,4.26,um so I would say that it's more like
+2769.54,5.579,the the circuit
+2771.7,7.02,a circuit is more like a like a data
+2775.119,5.22,point data point yeah and then yeah and
+2778.72,4.2,I think like usually when we like
+2780.339,5.641,increase the training data
+2782.92,4.8,also the results get better so I think
+2785.98,4.56,this I think basically these these
+2787.72,5.28,figures still they'll they'll tell that
+2790.54,4.559,type of story very clear answer yeah
+2793.0,5.359,yeah thank you and also the other
+2795.099,6.121,question is uh uh can you describe about
+2798.359,5.98,uh a bit about the programming language
+2801.22,5.82,and available platforms like platform I
+2804.339,5.901,mean I'm not sure what platform is here
+2807.04,5.16,but maybe he means like tensorflow and
+2810.24,5.2,pythource that we have in machine
+2812.2,5.82,learning models in Quantum models do we
+2815.44,3.6,have any available platforms or any
+2818.02,4.7,special
+2819.04,3.68,programming language yeah
+2822.94,3.96,yeah yeah that's a very interesting
+2824.8,3.319,question yeah so that
+2826.9,5.34,um
+2828.119,7.72,yeah so I basically I use
+2832.24,6.839,um well I use these platforms so so this
+2835.839,7.321,Lambic is the Quantum natural language
+2839.079,6.901,processing platform uh
+2843.16,6.48,that it is especially developed for for
+2845.98,6.18,for for for it it it implements almost
+2849.64,5.04,exactly this this this process that I I
+2852.16,5.04,explained here and
+2854.68,4.919,and it is also a platform that very
+2857.2,5.399,nicely like integrates with this this
+2859.599,4.801,scroll pie so this is a like a category
+2862.599,3.361,theoretical
+2864.4,3.78,um you can model
+2865.96,4.26,a lot of things with with category
+2868.18,5.7,Theory and you can use this this package
+2870.22,6.359,to to to to to basically Implement those
+2873.88,5.459,those models and what is nice that that
+2876.579,4.681,this um this disco pie and the Lambeck
+2879.339,4.081,they are very like tightly integrated so
+2881.26,5.64,that you can it's easy to use them
+2883.42,7.5,together and then also this this ticket
+2886.9,6.54,is is kind of on the background so that
+2890.92,4.8,this Lineback and disco pie can be
+2893.44,6.12,easily connected with with this ticket
+2895.72,5.92,and this this ticket is kind of the
+2899.56,3.36,um like the layer
+2901.64,3.62,[Music]
+2902.92,5.1,that is
+2905.26,5.28,well I I would say that it's kind of the
+2908.02,4.44,layer that the user sees and writes the
+2910.54,5.52,quantum algorithms and then they get
+2912.46,5.399,sent to the quantum uh computer there's
+2916.06,6.18,a well there's a lot of things going on
+2917.859,6.72,also after you submit your circuit the
+2922.24,5.0,ticket but anyway this is kind of the
+2924.579,5.221,the convection to the quantum computer
+2927.24,4.18,and then the other package also it's a
+2929.8,4.38,which I really like is this Penny Lane
+2931.42,4.26,and Penny Lane is especially like for
+2934.18,2.939,Quantum machine
+2935.68,4.679,learning
+2937.119,5.581,and they have been developing in the
+2940.359,5.521,sense that it it is very easy to connect
+2942.7,5.399,with different machine learning with
+2945.88,5.699,different National learning tools like
+2948.099,4.681,pythons and tensorflow and and this Jax
+2951.579,2.221,and
+2952.78,3.839,and
+2953.8,4.559,um yeah probably something else also and
+2956.619,3.601,they also allow you to connect like
+2958.359,5.041,different Quantum Hardware so you can
+2960.22,4.04,use IBM Amazon
+2963.4,5.76,um
+2964.26,7.0,Google search and and all these most
+2969.16,6.24,popular ones
+2971.26,6.18,great thanks for your answers uh I'm
+2975.4,4.38,done with my questions as there are
+2977.44,5.58,other questions I have in my notes but
+2979.78,6.539,if Maureen has had any question again uh
+2983.02,6.839,back to God easy he can continue or not
+2986.319,6.54,yes I have one question uh so can you
+2989.859,6.361,explain uh a little more about the
+2992.859,5.821,classification of execution times and
+2996.22,5.94,classification of cardinalities I did
+2998.68,6.36,not completely understand like what uh
+3002.16,6.02,the difference was uh and what was
+3005.04,3.14,actually being classified
+3009.3,6.059,um yeah sure so um so actually they they
+3012.72,5.28,aren't very different problems now now
+3015.359,5.041,after running all of these they they are
+3018.0,3.24,actually very very similar
+3020.4,3.3,um
+3021.24,4.74,but of course the the queries are a bit
+3023.7,6.06,different but but there isn't very much
+3025.98,6.599,like like a difference in the structure
+3029.76,5.16,um what slide could describe that best
+3032.579,9.081,so basically I think like the
+3034.92,6.74,the the the idea is that the
+3042.839,7.321,um we have the queries and then uh if
+3047.88,4.02,you think like yeah so so so we have the
+3050.16,3.86,query and then
+3051.9,2.12,um
+3054.359,6.0,um before you execute it in a database
+3057.8,5.319,now with this platform you can do so
+3060.359,6.24,that yeah before executing it you can
+3063.119,6.601,turn it into a servoid then you can pick
+3066.599,5.46,the parameters that you have optimized
+3069.72,4.619,and you can put the parameters inside
+3072.059,4.5,the circuit and then you can run this
+3074.339,5.22,circuit multiple times and then finally
+3076.559,5.941,you will get the basically the the
+3079.559,4.741,result from the circuit from in the
+3082.5,4.619,binary classification case you get it
+3084.3,5.4,from this one qubit here and this one
+3087.119,5.581,qubit is basically zero or one and then
+3089.7,5.52,depending on how you have defined how
+3092.7,5.76,you have constructed the the draining
+3095.22,7.8,data there is some like a threshold I
+3098.46,7.44,think in the in a in my my work it is 33
+3103.02,7.079,000 tuples so if the
+3105.9,6.54,SQL query has less than 33 000 tuples it
+3110.099,4.26,will be classified to zero and otherwise
+3112.44,4.919,it will be classified to one
+3114.359,6.301,and then that that tells us that it that
+3117.359,6.0,it has list or or more than that it's
+3120.66,5.58,it's from from database perspective it's
+3123.359,5.401,it's a pretty like toy example
+3126.24,4.619,but but but if you think like that you
+3128.76,5.339,add you bits here
+3130.859,5.46,so the the number of classes grows
+3134.099,5.52,exponentially so your accuracy also
+3136.319,5.641,grows exponentially and then
+3139.619,6.901,um then if you have like two to the
+3141.96,7.08,power of uh five or two to the power 10
+3146.52,5.4,classes you get quite quite good
+3149.04,4.559,accuracy but also maybe this is maybe I
+3151.92,4.04,don't know if it works in those cases
+3153.599,2.361,yet
+3159.359,4.2,all right thank you
+3161.04,3.66,um this answer is my question oh yeah
+3163.559,3.981,great thanks
+3164.7,5.419,I have one last question
+3167.54,5.86,yeah yeah
+3170.119,6.581,in terms of training uh how much
+3173.4,4.98,training time and like compute does it
+3176.7,3.06,take is it easy to train these systems
+3178.38,4.459,or do like
+3179.76,5.94,spend like several days training them or
+3182.839,5.26,years it's a Well I don't know I think
+3185.7,3.96,I'm not very like uh well I'm not really
+3188.099,3.061,like at that type of like machine
+3189.66,3.6,learning specialist so I have my
+3191.16,4.439,background in mathematics so I don't
+3193.26,5.04,know if I do the training like the most
+3195.599,4.74,efficient way but it takes a long time
+3198.3,4.98,and it takes especially it takes a long
+3200.339,5.041,time because it's very slow to simulate
+3203.28,5.52,this circles
+3205.38,6.479,so so so we are sure that at least
+3208.8,5.34,quantum computers are good at good at
+3211.859,4.861,running these circuits so it's it's it's
+3214.14,3.84,very slow to run circuits even even if
+3216.72,3.54,they're smaller
+3217.98,4.98,Circle it's it's still that takes quite
+3220.26,4.74,a long time so yeah yeah it is quite
+3222.96,4.399,long process and and
+3225.0,5.76,um and a big difference
+3227.359,4.24,like it can take days yeah basically yes
+3230.76,4.14,yes
+3231.599,4.861,yeah so it's most likely that it's the
+3234.9,3.54,simulation of the quantum computer
+3236.46,3.42,that's taking time rather than the
+3238.44,3.74,training
+3239.88,2.3,yeah
+3242.22,4.139,uh yes I think so yeah yeah yeah yeah
+3244.26,4.319,yeah yeah yeah yeah yeah I think
+3246.359,4.5,actually the spsa algorithm is pretty
+3248.579,5.0,like efficient on the training and it
+3250.859,2.72,doesn't really like
+3253.74,4.079,um it yeah it doesn't need that it
+3256.02,4.44,doesn't need to evaluate the circle with
+3257.819,5.221,very many times but it's still every
+3260.46,5.04,evaluation of a circle it is a really
+3263.04,4.98,expensive
+3265.5,6.059,yeah uh thank you I think we've had
+3268.02,5.46,enough questions uh thank you again for
+3271.559,5.641,your very interesting presentation and
+3273.48,3.72,thank you for such presentation
+3277.26,6.68,and yeah see you on the next one
+3280.38,3.56,yeah right now bye now

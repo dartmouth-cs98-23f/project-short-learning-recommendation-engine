@@ -1,0 +1,289 @@
+second,duration,transcript
+4.22,1.18,This is a 3.
+6.06,4.709,"It's sloppily written and rendered at an extremely low resolution of 28x28 pixels,"
+10.769,2.951,but your brain has no trouble recognizing it as a 3.
+14.34,2.264,And I want you to take a moment to appreciate how
+16.604,2.356,crazy it is that brains can do this so effortlessly.
+19.7,3.319,"I mean, this, this and this are also recognizable as 3s,"
+23.019,4.252,even though the specific values of each pixel is very different from one
+27.271,1.049,image to the next.
+28.9,3.881,The particular light-sensitive cells in your eye that are firing when
+32.781,4.159,you see this 3 are very different from the ones firing when you see this 3.
+37.52,5.28,But something in that crazy-smart visual cortex of yours resolves these as representing
+42.8,5.1,"the same idea, while at the same time recognizing other images as their own distinct"
+47.9,0.36,ideas.
+49.22,5.479,"But if I told you, hey, sit down and write for me a program that takes in a grid of"
+54.699,4.501,"28x28 pixels like this and outputs a single number between 0 and 10,"
+59.2,5.61,"telling you what it thinks the digit is, well the task goes from comically trivial to"
+64.81,1.37,dauntingly difficult.
+67.16,3.74,"Unless you've been living under a rock, I think I hardly need to motivate the relevance"
+70.9,3.74,and importance of machine learning and neural networks to the present and to the future.
+75.12,3.882,"But what I want to do here is show you what a neural network actually is,"
+79.002,3.306,"assuming no background, and to help visualize what it's doing,"
+82.308,2.152,not as a buzzword but as a piece of math.
+85.02,3.806,"My hope is that you come away feeling like the structure itself is motivated,"
+88.826,2.683,"and to feel like you know what it means when you read,"
+91.509,2.831,or you hear about a neural network quote-unquote learning.
+95.36,2.94,"This video is just going to be devoted to the structure component of that,"
+98.3,1.96,and the following one is going to tackle learning.
+100.96,2.367,What we're going to do is put together a neural
+103.327,2.713,network that can learn to recognize handwritten digits.
+109.36,2.744,"This is a somewhat classic example for introducing the topic,"
+112.104,2.168,"and I'm happy to stick with the status quo here,"
+114.272,3.275,because at the end of the two videos I want to point you to a couple good
+117.547,3.408,"resources where you can learn more, and where you can download the code that"
+120.955,2.125,does this and play with it on your own computer.
+125.04,2.675,"There are many many variants of neural networks,"
+127.715,4.586,"and in recent years there's been sort of a boom in research towards these variants,"
+132.301,4.695,but in these two introductory videos you and I are just going to look at the simplest
+136.996,2.184,plain vanilla form with no added frills.
+139.86,4.078,This is kind of a necessary prerequisite for understanding any of the more powerful
+143.938,4.322,"modern variants, and trust me it still has plenty of complexity for us to wrap our minds"
+148.26,0.34,around.
+149.12,4.128,"But even in this simplest form it can learn to recognize handwritten digits,"
+153.248,3.272,which is a pretty cool thing for a computer to be able to do.
+157.48,2.375,And at the same time you'll see how it does fall
+159.855,2.425,short of a couple hopes that we might have for it.
+163.38,5.12,"As the name suggests neural networks are inspired by the brain, but let's break that down."
+168.52,3.14,"What are the neurons, and in what sense are they linked together?"
+172.5,5.582,"Right now when I say neuron all I want you to think about is a thing that holds a number,"
+178.082,2.358,specifically a number between 0 and 1.
+180.68,1.88,It's really not more than that.
+183.78,5.113,For example the network starts with a bunch of neurons corresponding to
+188.893,5.327,"each of the 28x28 pixels of the input image, which is 784 neurons in total."
+194.7,4.777,Each one of these holds a number that represents the grayscale value of the
+199.477,4.903,"corresponding pixel, ranging from 0 for black pixels up to 1 for white pixels."
+205.3,3.007,"This number inside the neuron is called its activation,"
+208.307,4.349,and the image you might have in mind here is that each neuron is lit up when its
+212.656,1.504,activation is a high number.
+216.72,5.14,So all of these 784 neurons make up the first layer of our network.
+226.5,2.978,"Now jumping over to the last layer, this has 10 neurons,"
+229.478,1.882,each representing one of the digits.
+232.04,4.638,"The activation in these neurons, again some number that's between 0 and 1,"
+236.678,5.442,represents how much the system thinks that a given image corresponds with a given digit.
+243.04,3.433,"There's also a couple layers in between called the hidden layers,"
+246.473,3.433,which for the time being should just be a giant question mark for
+249.906,3.694,how on earth this process of recognizing digits is going to be handled.
+254.26,3.652,"In this network I chose two hidden layers, each one with 16 neurons,"
+257.912,2.648,and admittedly that's kind of an arbitrary choice.
+261.019,3.545,To be honest I chose two layers based on how I want to motivate the structure
+264.564,3.636,"in just a moment, and 16, well that was just a nice number to fit on the screen."
+268.78,3.56,In practice there is a lot of room for experiment with a specific structure here.
+273.02,2.702,"The way the network operates, activations in one"
+275.722,2.758,layer determine the activations of the next layer.
+279.2,4.663,And of course the heart of the network as an information processing mechanism comes down
+283.863,4.717,to exactly how those activations from one layer bring about activations in the next layer.
+289.14,4.552,"It's meant to be loosely analogous to how in biological networks of neurons,"
+293.692,3.488,some groups of neurons firing cause certain others to fire.
+298.12,3.505,"Now the network I'm showing here has already been trained to recognize digits,"
+301.625,1.775,and let me show you what I mean by that.
+303.64,4.711,"It means if you feed in an image, lighting up all 784 neurons of the input layer"
+308.351,3.258,"according to the brightness of each pixel in the image,"
+311.609,4.653,that pattern of activations causes some very specific pattern in the next layer
+316.262,2.734,"which causes some pattern in the one after it,"
+318.996,3.084,which finally gives some pattern in the output layer.
+322.56,4.013,"And the brightest neuron of that output layer is the network's choice,"
+326.573,2.827,"so to speak, for what digit this image represents."
+332.56,3.83,"And before jumping into the math for how one layer influences the next,"
+336.39,3.724,"or how training works, let's just talk about why it's even reasonable"
+340.114,3.406,to expect a layered structure like this to behave intelligently.
+344.06,1.16,What are we expecting here?
+345.4,2.2,What is the best hope for what those middle layers might be doing?
+348.92,4.6,"Well, when you or I recognize digits, we piece together various components."
+354.2,2.62,A 9 has a loop up top and a line on the right.
+357.38,3.8,"An 8 also has a loop up top, but it's paired with another loop down low."
+361.98,4.84,"A 4 basically breaks down into three specific lines, and things like that."
+367.6,4.015,"Now in a perfect world, we might hope that each neuron in the second"
+371.615,3.434,"to last layer corresponds with one of these subcomponents,"
+375.049,3.492,"that anytime you feed in an image with, say, a loop up top,"
+378.541,5.239,"like a 9 or an 8, there's some specific neuron whose activation is going to be close to 1."
+384.5,2.457,"And I don't mean this specific loop of pixels,"
+386.957,4.603,the hope would be that any generally loopy pattern towards the top sets off this neuron.
+392.44,3.663,"That way, going from the third layer to the last one just requires"
+396.103,3.937,learning which combination of subcomponents corresponds to which digits.
+401.0,2.241,"Of course, that just kicks the problem down the road,"
+403.241,2.199,"because how would you recognize these subcomponents,"
+405.44,2.2,or even learn what the right subcomponents should be?
+408.06,3.201,"And I still haven't even talked about how one layer influences the next,"
+411.261,1.799,but run with me on this one for a moment.
+413.68,3.0,Recognizing a loop can also break down into subproblems.
+417.28,2.666,One reasonable way to do this would be to first
+419.946,2.834,recognize the various little edges that make it up.
+423.78,4.677,"Similarly, a long line, like the kind you might see in the digits 1 or 4 or 7,"
+428.457,5.034,"is really just a long edge, or maybe you think of it as a certain pattern of several"
+433.491,0.829,smaller edges.
+435.14,3.728,So maybe our hope is that each neuron in the second layer of
+438.868,3.852,the network corresponds with the various relevant little edges.
+443.54,4.03,"Maybe when an image like this one comes in, it lights up all of the"
+447.57,3.674,"neurons associated with around 8 to 10 specific little edges,"
+451.244,3.971,which in turn lights up the neurons associated with the upper loop
+455.215,4.505,"and a long vertical line, and those light up the neuron associated with a 9."
+460.68,4.053,"Whether or not this is what our final network actually does is another question,"
+464.733,3.253,"one that I'll come back to once we see how to train the network,"
+467.986,4.053,"but this is a hope that we might have, a sort of goal with the layered structure"
+472.039,0.501,like this.
+473.16,3.648,"Moreover, you can imagine how being able to detect edges and patterns"
+476.808,3.492,like this would be really useful for other image recognition tasks.
+480.88,3.177,"And even beyond image recognition, there are all sorts of intelligent"
+484.057,3.223,things you might want to do that break down into layers of abstraction.
+488.04,4.743,"Parsing speech, for example, involves taking raw audio and picking out distinct sounds,"
+492.783,3.773,"which combine to make certain syllables, which combine to form words,"
+496.556,3.504,"which combine to make up phrases and more abstract thoughts, etc."
+501.1,2.958,"But getting back to how any of this actually works,"
+504.058,4.439,picture yourself right now designing how exactly the activations in one layer
+508.497,1.423,might determine the next.
+510.86,5.189,"The goal is to have some mechanism that could conceivably combine pixels into edges,"
+516.049,2.931,"or edges into patterns, or patterns into digits."
+519.44,3.584,"And to zoom in on one very specific example, let's say the"
+523.024,3.768,hope is for one particular neuron in the second layer to pick
+526.792,3.828,up on whether or not the image has an edge in this region here.
+531.44,3.66,The question at hand is what parameters should the network have?
+535.64,4.065,What dials and knobs should you be able to tweak so that it's expressive
+539.705,4.009,"enough to potentially capture this pattern, or any other pixel pattern,"
+543.714,4.066,"or the pattern that several edges can make a loop, and other such things?"
+548.72,3.148,"Well, what we'll do is assign a weight to each one of the"
+551.868,3.692,connections between our neuron and the neurons from the first layer.
+556.32,1.38,These weights are just numbers.
+558.54,3.418,Then take all of those activations from the first layer
+561.958,3.542,and compute their weighted sum according to these weights.
+567.7,3.446,I find it helpful to think of these weights as being organized into a
+571.146,4.43,"little grid of their own, and I'm going to use green pixels to indicate positive weights,"
+575.576,3.397,"and red pixels to indicate negative weights, where the brightness of"
+578.973,2.807,that pixel is some loose depiction of the weight's value.
+582.78,3.799,Now if we made the weights associated with almost all of the pixels zero
+586.579,3.538,"except for some positive weights in this region that we care about,"
+590.117,3.799,then taking the weighted sum of all the pixel values really just amounts
+593.916,3.904,to adding up the values of the pixel just in the region that we care about.
+599.14,3.299,"And if you really wanted to pick up on whether there's an edge here,"
+602.439,4.161,what you might do is have some negative weights associated with the surrounding pixels.
+607.48,2.61,Then the sum is largest when those middle pixels
+610.09,2.61,are bright but the surrounding pixels are darker.
+614.26,4.443,"When you compute a weighted sum like this, you might come out with any number,"
+618.703,4.837,but for this network what we want is for activations to be some value between 0 and 1.
+624.12,4.184,So a common thing to do is to pump this weighted sum into some function
+628.304,3.836,that squishes the real number line into the range between 0 and 1.
+632.46,3.422,"And a common function that does this is called the sigmoid function,"
+635.882,1.538,also known as a logistic curve.
+638.0,3.185,"Basically very negative inputs end up close to 0,"
+641.185,5.415,"positive inputs end up close to 1, and it just steadily increases around the input 0."
+649.12,3.585,So the activation of the neuron here is basically a
+652.705,3.655,measure of how positive the relevant weighted sum is.
+657.54,2.147,But maybe it's not that you want the neuron to
+659.687,2.193,light up when the weighted sum is bigger than 0.
+662.28,4.08,Maybe you only want it to be active when the sum is bigger than say 10.
+666.84,3.42,"That is, you want some bias for it to be inactive."
+671.38,4.14,What we'll do then is just add in some other number like negative 10 to this
+675.52,4.14,weighted sum before plugging it through the sigmoid squishification function.
+680.58,1.86,That additional number is called the bias.
+683.46,3.906,So the weights tell you what pixel pattern this neuron in the second
+687.366,3.907,"layer is picking up on, and the bias tells you how high the weighted"
+691.273,3.907,sum needs to be before the neuron starts getting meaningfully active.
+696.12,1.56,And that is just one neuron.
+698.28,4.266,Every other neuron in this layer is going to be connected to
+702.546,4.197,"all 784 pixel neurons from the first layer, and each one of"
+706.743,4.197,those 784 connections has its own weight associated with it.
+711.6,3.024,"Also, each one has some bias, some other number that you add"
+714.624,2.976,on to the weighted sum before squishing it with the sigmoid.
+718.11,1.43,And that's a lot to think about!
+719.96,6.318,"With this hidden layer of 16 neurons, that's a total of 784 times 16 weights,"
+726.278,1.702,along with 16 biases.
+728.84,3.1,And all of that is just the connections from the first layer to the second.
+732.52,2.41,The connections between the other layers also have
+734.93,2.41,a bunch of weights and biases associated with them.
+738.34,5.46,"All said and done, this network has almost exactly 13,000 total weights and biases."
+743.8,2.895,"13,000 knobs and dials that can be tweaked and"
+746.695,3.265,turned to make this network behave in different ways.
+751.04,3.276,"So when we talk about learning, what that's referring to is"
+754.316,3.385,getting the computer to find a valid setting for all of these
+757.701,3.659,many many numbers so that it'll actually solve the problem at hand.
+762.62,4.618,One thought experiment that is at once fun and kind of horrifying is to imagine sitting
+767.238,3.044,"down and setting all of these weights and biases by hand,"
+770.282,4.093,"purposefully tweaking the numbers so that the second layer picks up on edges,"
+774.375,2.205,"the third layer picks up on patterns, etc."
+776.98,4.114,I personally find this satisfying rather than just treating the network as a total
+781.094,3.767,"black box, because when the network doesn't perform the way you anticipate,"
+784.861,4.213,if you've built up a little bit of a relationship with what those weights and biases
+789.074,4.065,"actually mean, you have a starting place for experimenting with how to change the"
+793.139,1.041,structure to improve.
+794.96,3.522,"Or when the network does work but not for the reasons you might expect,"
+798.482,3.815,digging into what the weights and biases are doing is a good way to challenge
+802.297,3.523,your assumptions and really expose the full space of possible solutions.
+806.84,3.164,"By the way, the actual function here is a little cumbersome to write down,"
+810.004,0.676,don't you think?
+812.5,4.64,So let me show you a more notationally compact way that these connections are represented.
+817.66,2.86,"This is how you'd see it if you choose to read up more about neural networks.
+214
+00:13:41,380 --> 00:13:40,520
+Organize all of the activations from one layer into a column as a vector."
+821.38,8.757,"Then organize all of the weights as a matrix, where each row of that matrix corresponds"
+830.137,7.863,to the connections between one layer and a particular neuron in the next layer.
+838.54,3.726,What that means is that taking the weighted sum of the activations in
+842.266,3.674,the first layer according to these weights corresponds to one of the
+845.94,3.94,terms in the matrix vector product of everything we have on the left here.
+854.0,3.508,"By the way, so much of machine learning just comes down to having a"
+857.508,3.663,"good grasp of linear algebra, so for any of you who want a nice visual"
+861.171,3.714,"understanding for matrices and what matrix vector multiplication means,"
+864.885,3.715,"take a look at the series I did on linear algebra, especially chapter 3."
+869.24,4.408,"Back to our expression, instead of talking about adding the bias to each one of"
+873.648,4.959,"these values independently, we represent it by organizing all those biases into a vector,"
+878.607,3.693,and adding the entire vector to the previous matrix vector product.
+883.28,3.587,"Then as a final step, I'll wrap a sigmoid around the outside here,"
+886.867,3.856,and what that's supposed to represent is that you're going to apply the
+890.723,4.017,sigmoid function to each specific component of the resulting vector inside.
+895.94,4.593,"So once you write down this weight matrix and these vectors as their own symbols,"
+900.533,4.93,you can communicate the full transition of activations from one layer to the next in an
+905.463,4.93,"extremely tight and neat little expression, and this makes the relevant code both a lot"
+910.393,4.426,"simpler and a lot faster, since many libraries optimize the heck out of matrix"
+914.819,0.841,multiplication.
+917.82,3.64,Remember how earlier I said these neurons are simply things that hold numbers?
+922.22,5.17,"Well of course the specific numbers that they hold depends on the image you feed in,"
+927.39,4.258,"so it's actually more accurate to think of each neuron as a function,"
+931.648,5.292,one that takes in the outputs of all the neurons in the previous layer and spits out a
+936.94,1.4,number between 0 and 1.
+939.2,3.992,"Really the entire network is just a function, one that takes in"
+943.192,3.868,784 numbers as an input and spits out 10 numbers as an output.
+947.56,3.954,"It's an absurdly complicated function, one that involves 13,000 parameters"
+951.514,3.955,"in the forms of these weights and biases that pick up on certain patterns,"
+955.469,3.849,and which involves iterating many matrix vector products and the sigmoid
+959.318,3.322,"squishification function, but it's just a function nonetheless."
+963.4,3.26,And in a way it's kind of reassuring that it looks complicated.
+967.34,2.404,"I mean if it were any simpler, what hope would we have"
+969.744,2.536,that it could take on the challenge of recognizing digits?
+973.34,1.36,And how does it take on that challenge?
+975.08,4.28,How does this network learn the appropriate weights and biases just by looking at data?
+980.14,3.096,"Well that's what I'll show in the next video, and I'll also dig a little"
+983.236,2.884,more into what this particular network we're seeing is really doing.
+987.58,3.216,Now is the point I suppose I should say subscribe to stay notified
+990.796,2.399,"about when that video or any new videos come out,"
+993.195,4.225,"but realistically most of you don't actually receive notifications from YouTube, do you?"
+998.02,3.302,Maybe more honestly I should say subscribe so that the neural networks
+1001.322,3.302,that underlie YouTube's recommendation algorithm are primed to believe
+1004.624,3.256,that you want to see content from this channel get recommended to you.
+1008.56,1.38,"Anyway, stay posted for more."
+1010.76,2.74,Thank you very much to everyone supporting these videos on Patreon.
+1014.0,3.485,"I've been a little slow to progress in the probability series this summer,"
+1017.485,2.277,"but I'm jumping back into it after this project,"
+1019.762,2.138,so patrons you can look out for updates there.
+1023.6,3.535,To close things off here I have with me Lisha Li who did her PhD work on the
+1027.135,3.627,theoretical side of deep learning and who currently works at a venture capital
+1030.762,3.857,firm called Amplify Partners who kindly provided some of the funding for this video.
+1035.46,3.659,So Lisha one thing I think we should quickly bring up is this sigmoid function.
+1039.7,3.504,As I understand it early networks use this to squish the relevant weighted
+1043.204,3.365,"sum into that interval between zero and one, you know kind of motivated"
+1046.569,3.271,by this biological analogy of neurons either being inactive or active.
+1050.28,0.02,Exactly.
+1050.56,3.48,But relatively few modern networks actually use sigmoid anymore.
+1054.32,0.0,Yeah.
+1054.44,1.1,It's kind of old school right?
+1055.76,3.22,Yeah or rather ReLU seems to be much easier to train.
+1059.4,2.94,"And ReLU, ReLU stands for rectified linear unit?"
+1062.68,4.789,Yes it's this kind of function where you're just taking a max of zero
+1067.469,4.653,and a where a is given by what you were explaining in the video and
+1072.122,4.516,what this was sort of motivated from I think was a partially by a
+1076.638,4.722,biological analogy with how neurons would either be activated or not.
+1081.36,4.713,And so if it passes a certain threshold it would be the identity function but if it did
+1086.073,4.767,not then it would just not be activated so it'd be zero so it's kind of a simplification.
+1091.16,4.39,Using sigmoids didn't help training or it was very difficult
+1095.55,4.751,to train at some point and people just tried ReLU and it happened
+1100.301,4.319,to work very well for these incredibly deep neural networks.
+1105.1,0.54,All right thank you Lisha.

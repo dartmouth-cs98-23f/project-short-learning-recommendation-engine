@@ -1,0 +1,376 @@
+second,duration,transcript
+0.16,3.44,what's going on everybody welcome back
+1.76,3.44,to another video today we are gonna be
+3.6,5.199,comparing python versus
+5.2,3.599,r we're gonna see which one is better
+9.17,3.14,[Music]
+13.2,3.999,now before i start this presentation yes
+15.36,2.8,i made an entire presentation for this
+17.199,2.321,video
+18.16,3.6,i have to address the elephant in the
+19.52,3.28,room about a month ago i made a somewhat
+21.76,2.4,controversial post
+22.8,3.52,i don't think it's controversial some
+24.16,3.52,people did apparently um and it's right
+26.32,3.199,here hopefully on your screen at this
+27.68,2.48,time all it says is python is better
+29.519,3.2,than r
+30.16,3.76,that's my opinion but it stirred up a
+32.719,4.321,lot of emotions
+33.92,7.28,for a lot of people a lot of people
+37.04,6.72,messaged me commented on it and
+41.2,3.76,apparently a lot of people took offense
+43.76,3.92,to what i said
+44.96,3.279,and they wanted me to explain why i felt
+47.68,2.8,this way
+48.239,3.681,and i did not respond for the pure fact
+50.48,3.12,that it was more fun to watch them argue
+51.92,2.56,and complain rather than answer their
+53.6,2.4,question
+54.48,3.599,but also i knew i was going to be making
+56.0,3.68,this video anyways and so i just figured
+58.079,3.601,they could watch this video whenever i
+59.68,4.0,put it out which uh is right now
+61.68,3.36,and so if you are only on linkedin and
+63.68,2.56,you've never watched my channel before
+65.04,2.079,and you are just seeing for this for the
+66.24,3.52,first time
+67.119,3.121,and you remember that time when i posted
+69.76,2.8,it
+70.24,3.44,i hope this will be clarifying for you
+72.56,3.52,um and so
+73.68,4.079,without further ado let's get into the
+76.08,4.48,presentation
+77.759,4.0,uh and we will start from there all
+80.56,2.8,right so some of the things that we're
+81.759,2.641,going to be discussing today in our
+83.36,3.439,python versus
+84.4,3.84,our presentation is we're going to talk
+86.799,5.041,about descriptions
+88.24,6.0,different libraries the code syntax
+91.84,3.68,pros and cons of both and my final
+94.24,3.839,answer
+95.52,4.639,uh i will say before we get into it i'm
+98.079,5.121,not trying to go super in depth
+100.159,5.92,uh i i tried to make it as user-friendly
+103.2,4.879,as possible if you know you guys are
+106.079,4.241,really wanting a more in-depth
+108.079,4.08,presentation on just one of these i can
+110.32,2.799,absolutely do that i plan on doing that
+112.159,2.24,at some point
+113.119,3.921,but this is going to be kind of high
+114.399,4.4,level and more talking about my thoughts
+117.04,4.079,and my feelings regarding this because
+118.799,3.841,it is a very emotional thing i believe
+121.119,3.201,without further ado let's get into the
+122.64,4.32,description of both again
+124.32,4.32,keeping it more high level and kind of
+126.96,4.48,getting to some specifics
+128.64,5.36,and then my conclusion so let's look at
+131.44,4.32,the description of both python and r
+134.0,3.599,starting with r r is a programming
+135.76,2.64,language developed for statistical
+137.599,2.881,analysis
+138.4,4.08,and the people who mostly used it for a
+140.48,4.0,long long time where statisticians and
+142.48,4.72,just recently within the past you know
+144.48,4.56,five ten years has really been used for
+147.2,3.84,data science and data analysis and
+149.04,4.72,visualizations and all of those things
+151.04,4.559,it was developed in 1993 again like i
+153.76,4.16,just said primarily for statisticians
+155.599,5.041,data miners and analysts
+157.92,4.88,and it's used by a ton of very large
+160.64,5.2,companies some of them are uber
+162.8,4.88,facebook and google but there are tons
+165.84,3.039,of companies and even small companies
+167.68,2.88,that use r and so
+168.879,3.601,if your company does any type of
+170.56,3.36,statistics or statistical analysis
+172.48,3.039,there's a good chance that
+173.92,3.36,your company has either used r in the
+175.519,3.121,past or is currently using r as a
+177.28,3.44,programming language
+178.64,3.84,now onto python python is a general
+180.72,2.08,purpose programming language it's used
+182.48,2.479,for
+182.8,3.519,almost anything you can imagine it may
+184.959,3.841,not be the best thing
+186.319,3.041,for every single thing it can do but it
+188.8,2.96,can do
+189.36,3.599,almost anything and so it's very general
+191.76,2.96,very broad
+192.959,3.601,it is quickly becoming the most popular
+194.72,3.36,programming language in the world
+196.56,3.28,and it is used by companies like google
+198.08,3.68,facebook and netflix now
+199.84,3.039,if you notice in the companies that use
+201.76,2.96,python and are
+202.879,3.36,both facebook and google are on that
+204.72,2.56,list then that wasn't by accident i did
+206.239,2.881,that on purpose
+207.28,3.76,because i wanted to show that these
+209.12,2.24,companies large companies are going to
+211.04,2.08,use
+211.36,3.12,both programming languages for what
+213.12,3.119,they're good for
+214.48,3.36,which obviously we will talk about later
+216.239,3.681,but i wanted to just kind of
+217.84,3.2,put that there for um i guess
+219.92,2.959,foreshadowing
+221.04,3.6,now before we look at libraries and
+222.879,3.92,packages i just want to say
+224.64,4.239,that if i did not highlight your
+226.799,4.561,favorite library or package on here
+228.879,3.041,i am sorry there are so many especially
+231.36,3.12,with r
+231.92,4.319,there's just hundreds and thousands of
+234.48,4.56,different packages and libraries
+236.239,4.801,uh i just can't possibly put them all on
+239.04,4.24,here and so these are just a
+241.04,3.68,highlight of some of the more popular
+243.28,2.239,ones the ones that i have personally
+244.72,2.96,used
+245.519,4.161,and so i hope that you are not offended
+247.68,3.6,by that but let's start with r
+249.68,4.32,for data collection you can use things
+251.28,6.239,like our crawler read excel
+254.0,5.68,read rl and r curl for data wrangling
+257.519,4.56,exploration there's dplyr sql df
+259.68,4.0,data.table read r and tidyr
+262.079,4.481,and for data visualization there's
+263.68,5.519,ggplot2 ggviz plotly squis
+266.56,4.639,and shiny and over to python for a data
+269.199,2.961,collection there's pandas requests and
+271.199,2.401,beautiful soup
+272.16,3.599,for data wrangling and exploration
+273.6,3.44,there's pandas numpy and scipy and for
+275.759,4.88,data visualization
+277.04,5.52,there is matplotlib seaborn and plotly
+280.639,3.761,again this is just a high level overview
+282.56,3.199,of some of the packages in each of these
+284.4,3.44,programming languages
+285.759,3.681,if you have never used r or python i
+287.84,3.359,think these packages are a really good
+289.44,4.0,place to start
+291.199,4.081,now for the code and the syntax on both
+293.44,2.8,of these i tried to stay neutral on this
+295.28,2.16,i tried to just
+296.24,2.8,kind of say what everyone else was
+297.44,3.36,saying because i have my own very strong
+299.04,3.599,thoughts and opinions on this
+300.8,3.52,uh but you know i wanted to stay
+302.639,4.881,somewhat unbiased
+304.32,6.319,at least for this one um but for r
+307.52,4.8,it's easy medium difficulty to pick up
+310.639,3.521,and start working from
+312.32,3.52,from scratch you know if you've never
+314.16,4.879,picked up r it can be
+315.84,4.24,kind of difficult to pick up um a little
+319.039,2.961,bit more advanced
+320.08,4.559,it can be difficult to maintain your
+322.0,5.28,code especially as you start to scale
+324.639,4.4,your code and so that is a big problem
+327.28,2.639,that a lot of people have addressed or
+329.039,4.081,talked about with
+329.919,5.521,r with python again it's easy medium
+333.12,4.72,difficulty to pick up and learn
+335.44,3.36,i i think it can be about the same
+337.84,4.32,difficulty as
+338.8,4.16,r in my opinion and that's what a lot of
+342.16,2.479,people said
+342.96,3.679,and so that's not just my opinion but
+344.639,5.28,it's easier to write and maintain
+346.639,5.521,larger scale code and so as you
+349.919,3.84,start building larger projects or join
+352.16,1.92,larger teams or take on more data it's
+353.759,3.121,just
+354.08,4.959,easier to scale up now into some syntax
+356.88,3.52,examples i 100 cherry pick these
+359.039,3.121,but i do feel like they're pretty
+360.4,4.639,representative of
+362.16,3.44,what the code looks like as a whole and
+365.039,1.761,so
+365.6,3.12,a lot of people are probably gonna get
+366.8,3.44,mad at me saying no r is
+368.72,3.68,much easier than this and you may be
+370.24,3.6,right in some aspects but
+372.4,3.359,for the most part i feel like this is
+373.84,3.6,fairly accurate we're just reading in a
+375.759,2.401,csv file and then trying to find the
+377.44,2.96,mean on
+378.16,3.2,a column or a field and that's about it
+380.4,3.76,and as you can tell
+381.36,4.08,r is just a little bit more difficult a
+384.16,2.72,little bit more complicated
+385.44,3.84,python's a little bit more cleaner it's
+386.88,4.24,a little bit more easy to read
+389.28,3.84,and pick up and that's something that a
+391.12,3.44,lot of people say about python it's very
+393.12,2.72,easily readable
+394.56,2.639,now let's look at some of the pros and
+395.84,2.4,cons of both we're going to be starting
+397.199,2.961,with r
+398.24,3.84,some of the pros are that it is open
+400.16,4.479,source it is fantastic for
+402.08,4.559,statistical analysis has hundreds of
+404.639,3.12,packages and libraries purely for
+406.639,4.0,analytics
+407.759,3.761,and that's what r is it's purely for
+410.639,3.361,statistics
+411.52,5.28,and analyzing data and lastly it is easy
+414.0,5.12,to build visualizations with r
+416.8,3.519,now for the cons it can't be embedded in
+419.12,3.04,web applications and
+420.319,3.28,from what i've read that's purely for
+422.16,4.479,security reasons
+423.599,4.481,and so that is a big downside of using r
+426.639,3.601,you need to know a large amount of
+428.08,4.239,packages and libraries you can't just
+430.24,3.76,know like one or two
+432.319,3.361,kind of like in python you can know
+434.0,2.96,pandas and you can do a lot of different
+435.68,4.0,things with it
+436.96,3.76,r doesn't really have that you have to
+439.68,2.959,know
+440.72,3.759,several things in order to get kind of
+442.639,3.84,one task done
+444.479,3.201,and lastly r can run slow because of how
+446.479,2.961,they store their data
+447.68,4.4,so those are some of the pros and the
+449.44,5.12,cons of r now let's move on to python
+452.08,3.2,some of the pros for python it's open
+454.56,3.44,source
+455.28,3.759,it's easy to read and learn especially
+458.0,2.4,if you're just picking it up for the
+459.039,4.0,first time
+460.4,4.4,it can be embedded into web applications
+463.039,3.041,which can be very important for a lot of
+464.8,2.799,people
+466.08,3.6,and there's a growing number of
+467.599,4.32,libraries for data analysis there
+469.68,5.12,are of course growing number of of
+471.919,5.601,libraries and packages for r as well but
+474.8,3.2,those are quite more well established
+477.52,2.16,while
+478.0,3.599,python is still growing and they're
+479.68,4.4,coming out and they're catching up to r
+481.599,3.761,fairly quickly for the cons the
+484.08,3.519,processing speed
+485.36,4.559,can be slow especially depending on what
+487.599,3.841,library or package you're using
+489.919,3.441,but you know i think that's a con in
+491.44,4.479,both r and python
+493.36,4.559,on some level they're going to run slow
+495.919,3.84,it uses a large amount of memory
+497.919,4.081,kind of part of the why it's running
+499.759,4.801,slow it's simple
+502.0,3.759,to learn um and simple to use and
+504.56,4.24,sometimes that's
+505.759,5.201,an issue actually because it's so simple
+508.8,3.44,when you need to do really complicated
+510.96,3.999,things it can
+512.24,4.239,be kind of hard to do where an r that's
+514.959,2.481,what it's built for it's made for those
+516.479,3.281,complex
+517.44,4.159,calculations and so that's why those
+519.76,2.719,packages and libraries are built the way
+521.599,2.8,they are
+522.479,3.121,and lastly the libraries for all
+524.399,3.601,analytics needs are
+525.6,3.12,still being developed and so yes it is a
+528.0,2.8,pro that
+528.72,3.2,those numbers are growing uh but it's
+530.8,4.88,still a con that they're
+531.92,5.359,you know behind our and so r has more
+535.68,3.12,being developed and more already
+537.279,3.12,developed in terms of
+538.8,4.719,all their libraries and packages being
+540.399,5.041,built out or python it is still growing
+543.519,3.681,now on to my final answer which is
+545.44,4.48,better python or r
+547.2,4.079,it really depends um but going back to
+549.92,2.72,my linkedin post that we talked about
+551.279,4.721,the very beginning
+552.64,5.84,i will say that i still 100 believe that
+556.0,3.44,because to me for my type of work the
+558.48,3.28,stuff that i do
+559.44,3.6,python is 100 times better it's 100
+561.76,4.48,times more useful
+563.04,5.6,and so to me python is better than r but
+566.24,3.36,it really does depend on what you're
+568.64,2.56,using it for
+569.6,3.52,and so if you're doing purely
+571.2,3.04,statistical work r is going to be the
+573.12,2.88,better choice
+574.24,3.92,if you're doing machine learning python
+576.0,5.2,is arguably much better
+578.16,4.64,in my opinion r is harder to learn but
+581.2,4.48,it has more features
+582.8,4.719,while python is easier to learn but
+585.68,3.36,isn't as developed yet
+587.519,3.44,and so what i genuinely think you should
+589.04,3.04,do is i think you should try both i
+590.959,1.761,think you really need to get some
+592.08,2.879,hands-on
+592.72,3.2,experience take a course in both just
+594.959,2.641,see what you think
+595.92,3.359,and and determine for yourself what you
+597.6,3.6,think is better i
+599.279,3.761,really will go back to that linkedin for
+601.2,3.68,a second i believe that for me
+603.04,3.52,personally python is just better i can
+604.88,5.199,use it for so many things it
+606.56,6.399,is in my opinion much better suited
+610.079,3.44,for me and what i do for my job and so
+612.959,3.281,for me
+613.519,5.041,python is way better but for other
+616.24,4.32,positions and other people are maybe
+618.56,3.6,the programming language of choice and
+620.56,2.959,i'm totally okay with that
+622.16,3.44,there were a lot of people in the
+623.519,4.161,comments who were writing
+625.6,3.76,you know it just depends and and you
+627.68,3.04,know why don't you think that
+629.36,3.12,one why do you think that one is better
+630.72,2.559,than the other you know why can't it be
+632.48,2.4,both
+633.279,3.841,and i really wanted to respond and be
+634.88,4.8,like i agree with you uh but i didn't
+637.12,4.0,because again i thought it was more fun
+639.68,2.0,and i knew i was making this video and
+641.12,3.12,so
+641.68,4.32,i i genuinely in the bottom of my heart
+644.24,3.52,to all those people i agree with you
+646.0,4.32,and so i want you to feel some
+647.76,5.199,vindication some sense of
+650.32,3.759,you know you you you were right and so i
+652.959,4.081,hope that
+654.079,4.641,this was um hopefully a good outcome for
+657.04,4.479,what you're hoping for
+658.72,3.28,uh i have nothing against r i have used
+661.519,3.041,it
+662.0,3.279,um and i and i've taken a few courses on
+664.56,2.16,it um
+665.279,3.601,i have not used that much art in my
+666.72,3.6,actual job although the data scientists
+668.88,3.84,that are in my department
+670.32,4.24,use it quite a bit i mostly stick with
+672.72,3.6,python and so again that's why
+674.56,3.519,i like it better but i can honestly say
+676.32,2.24,that i've given both a fair chance and
+678.079,1.841,so
+678.56,2.88,i think that you should do the same i
+679.92,2.88,think you really should test out which
+681.44,3.44,one that you personally think
+682.8,4.159,is better thank you guys so much for
+684.88,3.84,watching i really appreciate it if you
+686.959,3.281,like this video be sure to like and
+688.72,3.2,subscribe i feel like it's worth
+690.24,4.159,subscribing to i got some pretty good
+691.92,3.68,videos i got a lot of videos coming out
+694.399,3.12,soon
+695.6,6.49,thank you for joining me and i will see
+697.519,13.12,you in the next video
+702.09,10.63,[Music]
+710.639,2.081,you

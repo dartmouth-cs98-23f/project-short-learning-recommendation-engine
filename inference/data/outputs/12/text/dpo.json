@@ -1,0 +1,70 @@
+{
+  "introduction": "The video discusses Direct Preference Optimization (DPO), a technique for language model training that improves the probability of good answers compared to bad ones. DPO uses pairs of options and penalizes the model to incentivize the probability of the chosen answer and reduce the probability of the rejected answer.",
+  "sections": [
+    {
+      "title": "Section 1: Standard Language Model Training",
+      "content": [
+        "Language models are statistical models that look at the frequency of information in the training data set.",
+        "The model is trained by penalizing it based on the predicted next token versus the actual next token.",
+        "The relative frequency of the chosen answer can be increased by adding more data.",
+        "Standard training is limited in its ability to bias the model towards better answers."
+      ],
+      "topics": ["Language Models", "Standard Training", "Frequency"]
+    },
+    {
+      "title": "Section 2: Direct Preference Optimization",
+      "content": [
+        "DPO uses pairs of options to penalize the model for bad answers and incentivize the model for good answers.",
+        "The chosen answer's probability is increased relative to the reference model, while the rejected answer's probability is decreased.",
+        "DPO allows for more nuanced biasing compared to standard training.",
+        "DPO uses a training data set with pairs of options."
+      ],
+      "topics": ["DPO", "Pairs of Options", "Chosen Answer", "Rejected Answer"]
+    },
+    {
+      "title": "Section 3: Example of DPO Training",
+      "content": [
+        "A simple example is given where the prompt is the capital of Arland is and the chosen response is Dublin, while the rejected response is Cork.",
+        "The model is penalized to incentivize the probability of Dublin being the chosen answer and decrease the probability of Cork being the chosen answer.",
+        "The model is trained on a data set with pairs of options.",
+        "The chosen answer's probability is increased relative to the reference model."
+      ],
+      "topics": ["Example", "Pairs of Options", "Chosen Answer", "Rejected Answer"]
+    },
+    {
+      "title": "Section 4: Comparison with Standard Training",
+      "content": [
+        "DPO allows for more nuanced biasing compared to standard training.",
+        "DPO uses pairs of options to penalize the model for bad answers and incentivize the model for good answers.",
+        "Standard training is limited in its ability to bias the model towards better answers.",
+        "DPO uses a training data set with pairs of options."
+      ],
+      "topics": ["Comparison", "Pairs of Options", "Chosen Answer", "Rejected Answer"]
+    },
+    {
+      "title": "Section 5: Conclusion",
+      "content": [
+        "DPO is a technique for language model training that improves the probability of good answers compared to bad ones.",
+        "DPO uses pairs of options to penalize the model for bad answers and incentivize the model for good answers.",
+        "DPO allows for more nuanced biasing compared to standard training.",
+        "DPO is useful in a different and complementary way to standard finetuning."
+      ],
+      "topics": ["Conclusion", "Pairs of Options", "Chosen Answer", "Rejected Answer"]
+    }
+  ],
+  "topics": ["Language Models", "Standard Training", "Frequency", "Pairs of Options", "Chosen Answer", "Rejected Answer", "DPO", "Comparison"],
+  "general topics": [
+    {
+      "name": "Language Models",
+      "complexity": 0.65
+    },
+    {
+      "name": "Standard Training",
+      "complexity": 0.55
+    },
+    {
+      "name": "DPO",
+      "complexity": 0.75
+    }
+  ]
+}

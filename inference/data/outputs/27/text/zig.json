@@ -1,0 +1,70 @@
+{
+  "introduction": "This video provides an overview of the Zig programming language, created by Andrew Kelly in 2016. It highlights the language's minimalism, speed, and low-level memory control. The video covers memory management, control flow, and error handling. Zig also has a built-in testing framework and can be easily integrated into a C or C++ codebase. The video concludes with a demonstration of building an executable.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Zig",
+      "content": [
+        "Zig was created by Andrew Kelly in 2016.",
+        "It is a next-generation alternative to C.",
+        "Zig is known for its minimalism and speed.",
+        "It allows for low-level memory control."
+      ],
+      "topics": ["Zig Creation", "Zig Alternative to C", "Zig Minimalism", "Zig Speed"]
+    },
+    {
+      "title": "Section 2: Memory Management in Zig",
+      "content": [
+        "Zig uses allocators for memory management.",
+        "Allocators can be easily swapped out for different architectures.",
+        "Zig does not have hidden memory allocations.",
+        "Code is far more explicit and portable."
+      ],
+      "topics": ["Zig Allocators", "Zig Memory Management", "Zig Portability", "Zig Explicit Code"]
+    },
+    {
+      "title": "Section 3: Control Flow in Zig",
+      "content": [
+        "Zig has no hidden control flow.",
+        "Functions look like functions and quack like functions.",
+        "There is no operator overloading.",
+        "Exceptions are not used."
+      ],
+      "topics": ["Zig Control Flow", "Zig Function Quacking", "Zig Operator Overloading", "Zig Exceptions"]
+    },
+    {
+      "title": "Section 4: Error Handling in Zig",
+      "content": [
+        "Zig provides explicit error handling.",
+        "Try keyword is used for error handling.",
+        "Errors can be caught and returned.",
+        "Code becomes more reliable."
+      ],
+      "topics": ["Zig Explicit Error Handling", "Zig Try Keyword", "Zig Error Return", "Zig Reliable Code"]
+    },
+    {
+      "title": "Section 5: Building Executables in Zig",
+      "content": [
+        "Zig has a built-in testing framework.",
+        "Test keyword is used to evaluate code outside the main program.",
+        "Zig test command is used to run tests.",
+        "Zig build command is used to build executables."
+      ],
+      "topics": ["Zig Testing Framework", "Zig Test Keyword", "Zig Test Command", "Zig Build Command"]
+    }
+  ],
+  "topics": ["Zig Memory Management", "Zig Control Flow", "Zig Error Handling", "Zig Testing Framework"],
+  "generalTopics": [
+    {
+      "name": "Programming Languages and Software Development",
+      "complexity": 0.59
+    },
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.59
+    },
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.40
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+second,duration,transcript
+7.914,4.506,"Software architecture is to applications 
+what foundations are to buildings."
+12.42,4.5,"Build it wrong, and no matter how 
+beautiful it looks, it'll crumble."
+17.46,3.9,"In today’s discussion, we’ll unpack 
+some prevalent software architecture  "
+21.36,5.88,"patterns that form the backbone of countless 
+applications and platforms we interact with daily."
+27.9,5.16,"Over the next few minutes, we'll explore five 
+key patterns that have shaped the industry."
+34.02,2.1,Let's start with layered architecture.
+36.12,4.86,"This pattern separates the components 
+of a system into distinct layers,  "
+40.98,6.12,"typically the presentation layer, business 
+logic layer, and data access layer."
+47.1,5.64,"For instance, in user interface design, we often 
+see the Model-View-Presenter (MVP) pattern."
+52.74,3.12,It is a specialized form of layered architecture.
+56.46,5.46,"Here, the Model represents data and 
+business logic, the View displays this data,  "
+61.92,5.64,"and the Presenter serves as a bridge to 
+ensure a clean separation of concerns."
+68.22,3.48,The primary goal of layered architectures is to  
+71.7,5.52,"promote separation so changes in one 
+layer don't negatively impact others."
+77.22,3.48,"This structure provides 
+abstraction and encapsulation,  "
+80.7,3.24,with each layer having a distinct responsibility.
+85.14,2.64,Next is event-driven architecture.
+87.78,3.24,"This pattern promotes the 
+production and consumption  "
+91.02,4.38,"of events between loosely coupled 
+software components and services."
+96.36,3.78,"Components broadcast events 
+when something notable happens,  "
+100.14,5.04,"and other components subscribe to 
+specific events they are interested in."
+105.84,2.94,This allows for highly decoupled architectures.
+109.32,4.32,"One prominent example in this domain is Command 
+Query Responsibility Segregation (CQRS)."
+113.64,7.56,"With CQRS, the data write operations (commands) 
+are separated from read operations (queries),  "
+121.2,3.3,and changes are often communicated through events.
+125.04,2.94,This makes the system inherently event-driven.
+127.98,5.46,"The pub/sub model, where components 
+publish and subscribe to events,  "
+133.44,2.52,is commonly used in such architectures.
+135.96,6.3,"Here, components don't call each other 
+directly; they merely react to published events."
+143.76,2.4,Moving on to microkernel architecture.
+146.16,5.22,"This pattern emphasizes separating 
+core system functionality into  "
+151.38,5.22,"a small microkernel and extended 
+functionality into add-ons or plugins."
+157.26,6.18,"In operating systems, for example, a 
+microkernel might oversee vital tasks  "
+163.44,6.42,"like inter-process communication while offloading 
+other system functions to external components."
+170.94,6.66,"An application example is the Eclipse IDE: its 
+core runtime handles the plugin architecture,  "
+177.6,5.52,"and features from Java tools to Git 
+integration are delivered as plugins."
+183.12,6.3,"This design prioritizes extensibility, 
+ease of maintenance, and fault isolation."
+189.42,4.8,"Whether it's an OS component or an 
+Eclipse plugin that encounters an issue,  "
+194.22,3.54,the core system remains stable and unaffected.
+198.6,2.34,Then we have microservices architecture.
+200.94,5.7,"This decomposes an application into a 
+collection of small, loosely coupled services."
+206.64,3.78,"Each service implements 
+specific business capabilities,  "
+210.42,4.92,"contains its own data model, 
+and communicates via APIs."
+216.12,1.44,"Netflix, for instance,  "
+217.56,5.16,"uses microservices to handle everything 
+from movie recommendations to billing."
+223.32,5.76,"This architecture promotes modularization of 
+functionality so services can be developed,  "
+229.08,2.4,"deployed, and scaled independently."
+232.02,5.76,"It increases agility, and allows companies 
+like Netflix to rapidly innovate."
+237.78,5.04,"The trade-off, however, is the added 
+complexity in managing inter-service  "
+242.82,3.12,communication and maintaining data consistency.
+247.5,3.54,"Last but certainly not least, 
+we have monolithic architecture."
+251.04,6.6,"At its core, a monolithic design sees all 
+components of the application — from data  "
+257.64,4.44,"access and business logic to the 
+user interface — bundled together  "
+262.08,3.24,into a single codebase and run as a single unit.
+266.28,2.94,"This approach simplifies 
+development and deployment,  "
+269.22,4.38,"making it a go-to for many 
+startups and smaller applications."
+274.32,3.9,"However, it's worth noting the 
+rise of the 'modular monolith'."
+278.22,6.18,"This approach retains the benefits of 
+a single deployable unit but emphasizes  "
+284.4,2.76,clear modular boundaries within the codebase.
+287.16,3.24,"This allows for easier 
+maintenance and scalability."
+290.4,5.7,"It's a middle ground which offers the 
+simplicity of a monolith while paving  "
+296.1,4.74,"the way for potential future transitions 
+to architectures like microservices."
+301.74,6.12,"Regardless of the approach, many successful 
+platforms start with a monolithic or modular  "
+307.86,4.68,"monolithic structure before considering 
+more distributed architectures."
+313.62,5.88,"And there you have it, a quick tour of five 
+foundational software architecture patterns."
+319.5,6.3,"The right choice always depends on our specific 
+challenges, requirements, and contexts."
+325.8,2.94,"So, which pattern resonates with you?  "
+328.74,4.8,"Drop a comment below and let us know which 
+architecture pattern intrigues you the most."
+334.92,4.26,"If you like our videos, you may like 
+our system design newsletter as well."
+339.18,3.96,"It covers topics and trends 
+in large-scale system design."
+343.14,6.78,"Trusted by 500,000 readers. 
+Subscribe at blog.bytebytego.com"

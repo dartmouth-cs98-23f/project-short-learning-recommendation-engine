@@ -1,0 +1,661 @@
+second,duration,transcript
+0.829,4.631,hello dr. Ron Eaglin I want to talk to
+3.389,5.521,you about today is programming for the
+5.46,5.28,internet so we'll get started okay first
+8.91,3.39,slide is looking at what we're going to
+10.74,2.91,cover here so we're going to you know
+12.3,3.899,what we're going to talk about is oh you
+13.65,3.57,know how the internet works and why but
+16.199,2.761,it's important to know how the internet
+17.22,3.719,works and really the basics of the
+18.96,5.909,internet how your change to programming
+20.939,6.031,because it really shapes the way that we
+24.869,4.021,have to program when we're using the
+26.97,4.709,internet so we're looking a little bit
+28.89,5.73,at client-side server-side and then some
+31.679,5.31,kind of neat things like Ajax and Java
+34.62,5.88,and mobile devices and utility computing
+36.989,5.281,in the cloud a lot more to Internet
+40.5,3.36,programming I'm not going to cover
+42.27,3.719,everything but I'm going to give you big
+43.86,3.539,over big basic overview of some of the
+45.989,4.111,stuff with a little bit of detail so you
+47.399,4.8,can understand kind of how it looks when
+50.1,3.029,you get down into the works of it so
+52.199,2.851,first we got to understand a little
+53.129,3.391,about the internet when you're
+55.05,3.09,programming for the internet you're
+56.52,4.62,really looking at this thing that stands
+58.14,4.469,between the client and the server and
+61.14,3.989,what we mean you guys kind understand
+62.609,5.281,what client and server is okay client is
+65.129,4.621,most the time you you go the Internet
+67.89,5.31,through a browser through something and
+69.75,5.549,you want information now you don't stand
+73.2,3.809,around and listen for somebody to ask
+75.299,3.421,you for information from the internet
+77.009,3.301,that's not what you're doing as a client
+78.72,3.21,but there are those things out there
+80.31,3.629,that do that they just sit there and
+81.93,5.189,wait for requests and those are called
+83.939,4.5,servers client through the internet
+87.119,3.901,makes a request to the server and a
+88.439,5.22,server responds so what we're talking
+91.02,4.139,about is concept of a synchronous not
+93.659,3.871,synchronous if I'm having a discussion
+95.159,5.28,with you it's synchronous we're talking
+97.53,6.119,back and forth asynchronous means I send
+100.439,6.091,something up there and then I wait ok
+103.649,5.161,well what's happening here is you've got
+106.53,3.93,this server there that's just listening
+108.81,2.79,for requests ok it's got something
+110.46,3.869,actually called a listener
+111.6,4.92,hey is a request coming in I got a
+114.329,6.301,request and then it figures out what to
+116.52,6.3,do and it responds to that so it
+120.63,4.349,responds to the request and it sends
+122.82,4.5,something back but you know what when
+124.979,4.381,you have this kind of thing going on it
+127.32,3.719,creates challenges for the way that you
+129.36,3.08,program because if you're writing a
+131.039,3.201,computer program and
+132.44,3.63,sitting on top of a computer and you
+134.24,3.03,call a function this function is going
+136.07,2.25,to come back you don't worry about
+137.27,3.06,whether it's going to come back you know
+138.32,3.39,if the computer crashes in the middle of
+140.33,2.67,the function well maybe you're gonna
+141.71,3.96,have a problem there and you have some
+143.0,4.38,error handling to deal with it but in
+145.67,3.36,the world of the Internet you can send
+147.38,3.69,requests up there to some server and
+149.03,3.3,nothing happens the server just ignores
+151.07,3.9,you and says I'm not going to give
+152.33,3.84,anything back so we got ways that we got
+154.97,3.0,to deal with that so you have to have
+156.17,3.84,some level of fault tolerance and it
+157.97,5.22,creates strategies for dealing with
+160.01,5.52,these so let's look at some of this so
+163.19,4.2,let's first look at the send everything
+165.53,3.15,approach and I know some people are
+167.39,3.06,going to take exception the fact that I
+168.68,3.21,said that Java is a compiled language
+170.45,3.75,because you say it's an interpreted
+171.89,4.26,language well you know what in some
+174.2,3.33,cases it is in some cases it isn't but
+176.15,3.66,if you're actually having a pre compiled
+177.53,3.66,language I still consider it a compiled
+179.81,3.93,language but you have these things
+181.19,4.14,called interpreted languages JavaScript
+183.74,2.94,being probably the biggest example of an
+185.33,3.09,interpreted language and there's other
+186.68,4.14,ones but you know that's kind of deal
+188.42,5.46,with the biggies here so in JavaScript
+190.82,6.18,I send the code to the client okay
+193.88,4.68,server says give me this page and the
+197.0,3.29,page has a lot of cool things that it
+198.56,5.16,wants to do and it has it done in code
+200.29,5.05,well you can write JavaScript code that
+203.72,3.63,sends it right back over to the client
+205.34,3.869,and in this case that the client is a
+207.35,3.96,web browser it's going to look at that
+209.209,5.311,JavaScript and it's going to say oh I
+211.31,5.85,have code I need to execute it's written
+214.52,4.74,as text I have to interpret it and do
+217.16,3.81,what it says and that's good old
+219.26,4.229,JavaScript and learning JavaScript has
+220.97,3.87,lots of capabilities and if you want to
+223.489,2.97,learn about JavaScript yes we teach
+224.84,4.38,classes in JavaScript to teach you to do
+226.459,4.261,a lot of things but this is the approach
+229.22,3.6,where you send everything over to the
+230.72,3.36,client the JavaScript goes to the client
+232.82,3.57,if I want to look at your JavaScript I
+234.08,5.1,can look at your JavaScript okay it's
+236.39,4.349,that's it that's how it works now I have
+239.18,4.32,other things that can be either compiled
+240.739,4.861,or precompiled things like flash and
+243.5,4.29,Java and Silverlight and other things
+245.6,3.72,that have now in the case of many things
+247.79,3.63,like flash let's talk about flash a
+249.32,4.65,little bit you know much browsers just
+251.42,3.87,don't automatically handle flash being
+253.97,3.09,sent to them they have something that
+255.29,4.29,sits inside the browser that says oh
+257.06,5.04,it's flash code I know what to do with
+259.58,5.97,flash code and it does all the stuff
+262.1,5.67,that the flash tells it to do
+265.55,4.109,okay it's still setting the stuff over
+267.77,3.57,to the browser in most cases in case the
+269.659,2.94,bras are still receiving the information
+271.34,3.329,and having to do something with it
+272.599,6.69,that's the good old send everything
+274.669,8.101,approach now what's the downside of this
+279.289,4.651,well first thing is you're sending
+282.77,3.149,everything over to the browser
+283.94,4.86,I mean browser doesn't necessarily need
+285.919,5.34,everything so this can really slow stuff
+288.8,3.69,down okay you really want to send to the
+291.259,3.361,browser because it's coming through an
+292.49,5.399,internet connection uh you wanna send
+294.62,6.63,just what the browser needs okay well
+297.889,6.301,what about some sort of interaction well
+301.25,4.65,suppose I have I something I want to do
+304.19,4.17,on my browser that requires a tremendous
+305.9,5.25,amount of data to be looked at and
+308.36,4.95,compiled okay well am I just going to
+311.15,3.78,send all the data to the browser and
+313.31,3.06,then work from it from there am I going
+314.93,5.22,to actually try to send it just the data
+316.37,5.699,that I need so what about the data if
+320.15,3.359,you try to do with you know especially
+322.069,2.85,when you have to wrangle down and do it
+323.509,4.5,lots of data you know you want to get
+324.919,4.86,that data and it that you need and you
+328.009,3.541,really want to have the server deal with
+329.779,4.051,a lot of that details of figuring out
+331.55,4.83,this needs to go to you this needs to go
+333.83,6.869,to the browser so what will we do about
+336.38,5.64,this well let's get a way to to
+340.699,5.25,communicate back and forth with the
+342.02,6.03,server so anytime you request a pet a
+345.949,3.451,webpage you send a request up to the
+348.05,2.85,server and the server comes back and
+349.4,2.79,says hey I got that file I'll send it to
+350.9,3.629,you and it sends it to you and there it
+352.19,4.02,goes but now you want to ask for more
+354.529,4.531,detailed information you're actually an
+356.21,4.829,ask for not just a page a file that's
+359.06,4.05,sitting on the server but the server's
+361.039,3.481,got to do something a little bit more
+363.11,3.48,complex to put everything together
+364.52,5.429,before it sends it to you and it's got
+366.59,6.6,ways to do this I'm going to go with the
+369.949,4.83,two Biggie's HTTP GET HTTP POST and
+373.19,2.879,you've used both of them if you've ever
+374.779,3.211,used the internet you've used them both
+376.069,3.96,and really the difference between the
+377.99,3.329,two is where's the information that
+380.029,2.521,you're sending to the server not the
+381.319,3.391,information coming back from the server
+382.55,3.839,but the request that you're sending this
+384.71,4.739,server where is that information that
+386.389,5.221,really specifies what you want an HTTP
+389.449,4.14,GET you use the URL of the request an
+391.61,2.539,HTTP POST you use the body of the
+393.589,3.42,request
+394.149,4.671,the big difference being if you know
+397.009,3.191,what to look for you can
+398.82,4.29,read all the information you're asking
+400.2,5.04,for in the HTTP GET in an HTTP POST it's
+403.11,5.31,hidden from you so let's look at an HTTP
+405.24,5.94,GET this is an actual web URL I can send
+408.42,4.44,you this web URL and if you bring this
+411.18,3.96,web URL upon your browser you're going
+412.86,5.88,to get exactly the same thing that I get
+415.14,5.58,if I do it here okay it's not that
+418.74,3.75,there's some file that's got this big
+420.72,4.08,massively long name with all this
+422.49,5.07,gobbledygook in it what you're actually
+424.8,7.68,doing is you're saying I'm going to send
+427.56,8.55,some information to do google.com slash
+432.48,6.12,search ok now if you look at this
+436.11,4.59,there's a question mark right there that
+438.6,3.93,question mark delineates everything on
+440.7,3.96,this side is where I'm sending it and
+442.53,4.26,everything on this side is what I'm
+444.66,5.52,sending it so that the server can look
+446.79,6.0,at all this stuff and it can say oh I
+450.18,3.93,know what to do with this and really
+452.79,8.64,what's happening here is it's saying you
+454.11,9.09,know what site equals IMG HP ok the
+461.43,3.96,server is going to go I got a key value
+463.2,6.75,pair I've got a key site and I've got
+465.39,6.36,some sort of value that's IMG HP so when
+469.95,4.5,I'm looking for what I want to send back
+471.75,4.23,I'm going to look for that key site and
+474.45,3.54,the value and I'm going to figure out
+475.98,5.55,what to do with it so you have a where
+477.99,5.49,and you have a lot that you're sending
+481.53,4.56,over and the what can get really long
+483.48,4.98,can't be infinitely long okay because
+486.09,5.04,get requests have some things about them
+488.46,5.79,that are important like length
+491.13,6.45,restrictions okay other thing is if
+494.25,6.15,you're sending sensitive data okay to a
+497.58,4.59,server probably not a good idea to pop
+500.4,3.33,it into the get pop it into a get
+502.17,3.84,request and do it that way because guess
+503.73,4.38,what anybody can see the URL so sitting
+506.01,4.17,up there at the top of the browser up in
+508.11,3.84,the URL bar okay but there's some nice
+510.18,4.799,things about it like you know it sits in
+511.95,5.25,the browser history you can cache it it
+514.979,4.081,gets bookmarked you can bookmark get
+517.2,3.089,requests I can take that big old loan
+519.06,3.57,request I have write that back there
+520.289,4.191,that I just shows you I can bookmark it
+522.63,5.61,and I can bring it up whenever I want to
+524.48,5.17,okay so pretty much the guidelines the
+528.24,3.85,other set of guidelines for using get
+529.65,4.12,and casada guidelines for using post and
+532.09,4.89,we like to follow those but let's talk a
+533.77,5.25,little bit about post so he can't see
+536.98,4.47,the dad in post what you see in the URL
+539.02,4.05,bar just looks like the webpage but it's
+541.45,5.19,still asking for stuff what happens is
+543.07,5.82,the data from the post is sitting inside
+546.64,3.69,of the actual document that you're
+548.89,2.61,sending over so there's actually more
+550.33,2.91,than your setting than just a URL
+551.5,4.65,there's actually more stuff in that
+553.24,5.37,packet that you send to the server than
+556.15,3.96,just what's in that URL bar okay but
+558.61,3.12,that gives you some limitations that go
+560.11,4.32,with it too like you can't you can't
+561.73,4.92,bookmark a post because there's nothing
+564.43,5.22,in that URL when you save a bookmark
+566.65,5.01,you're just saving the URL okay
+569.65,4.17,well the information that you want to
+571.66,3.96,send to the server is it in the URL so
+573.82,3.45,therefore guess what you're not going to
+575.62,3.45,be able to bookmark it if you do that
+577.27,3.15,and yes and you send you know you click
+579.07,2.73,on the bookmark it's just going to go
+580.42,3.63,there and go I don't have the
+581.8,4.38,information you actually need okay but
+584.05,4.11,it says one nice thing about it no
+586.18,3.18,restrictions on the data length and
+588.16,3.75,actually not a lot of restrictions on
+589.36,3.72,that type either so you know you've got
+591.91,3.15,some pretty neat things that you can do
+593.08,4.05,there okay you know it's security I can
+595.06,3.15,take the post data and I can actually
+597.13,2.79,encrypt it and send it over to the
+598.21,2.879,server now of course that doesn't mean
+599.92,4.56,that the server is going to have to be
+601.089,4.171,able to decrypt that so not you know
+604.48,2.73,can't be
+605.26,3.57,if you can't decrypt it and don't send
+607.21,3.51,an encrypted but if you need security
+608.83,3.15,just but that encryption algorithm on
+610.72,4.29,both sides and you're good to go
+611.98,4.59,so let's look at this what actually is
+615.01,3.72,happening now we've got we got some
+616.57,4.95,background here what happens when you go
+618.73,4.77,through this client that's you write web
+621.52,3.51,browser whatever doesn't matter whether
+623.5,3.33,you're on a mobile phone whether you
+625.03,4.83,know it's the same thing you request to
+626.83,4.35,pay age okay server sees that request
+629.86,3.06,and says you know what I got to come up
+631.18,3.24,with the response I send the response
+632.92,4.11,back to the client client receives a
+634.42,4.41,response okay client now says you know
+637.03,3.21,what I looked at this this is a person
+638.83,3.0,or it can actually be a piece of suffer
+640.24,4.26,on the client that does that says ah
+641.83,4.17,thank you I am going to give you a new
+644.5,3.6,request it sends a request over to the
+646.0,3.36,server and then it goes through the
+648.1,3.33,server and the server receives in
+649.36,4.65,response okay if you notice what's going
+651.43,4.74,on here okay the big difference between
+654.01,4.11,the client and the server servers up
+656.17,5.55,here listening notice the communication
+658.12,5.13,really goes to that server client
+661.72,3.66,doesn't do anything unless the server's
+663.25,2.399,received a request from that client okay
+665.38,2.399,so
+665.649,3.961,isn't pushing stuff to your browser okay
+667.779,2.821,an action can push stuff your through
+669.61,2.759,your browser if you're on a specific
+670.6,3.33,page that allows for you to do that but
+672.369,3.69,that's code that's sitting there that
+673.93,3.599,makes that that makes that possible okay
+676.059,4.71,you're not just going to open up your
+677.529,5.071,browser and all sudden all the servers
+680.769,3.93,go oh look he's got his browser up let's
+682.6,4.649,start throwing stuff atom in how it
+684.699,3.961,works okay your client isn't listening
+687.249,4.95,for that type of thing unless you
+688.66,6.0,actually send a request out so let's
+692.199,4.95,talk about the Refresh Yuval use
+694.66,7.32,browsers you do something you click and
+697.149,6.72,the page refreshes okay now what about
+701.98,4.199,that refresh every time you refresh a
+703.869,4.2,page you send everything again it's all
+706.179,4.26,going you can put requests up there and
+708.069,3.96,the whole page refreshes you know a lot
+710.439,3.87,of the times you don't need to refresh
+712.029,4.53,the whole page you may need to refresh a
+714.309,3.9,little piece of that page okay that
+716.559,3.661,brings out a whole new paradigm and
+718.209,5.011,actually dealing with web programming
+720.22,4.95,okay suppose you send a request up and
+723.22,4.289,you only need to refresh a small part of
+725.17,5.279,the page let's just do that
+727.509,4.44,let's not refresh the whole page let's
+730.449,3.87,just refresh the little piece that you
+731.949,3.99,need okay well how do you do that well
+734.319,4.56,you got a technology for you to do that
+735.939,4.471,called Ajax we have a nice pretty name
+738.879,3.63,for it called asynchronous JavaScript
+740.41,3.239,and XML okay well why because the
+742.509,4.26,background technologies that make it
+743.649,4.971,possible are JavaScript and XML okay so
+746.769,3.99,it only refreshes a little piece now
+748.62,4.329,let's take a little look at why this
+750.759,3.961,might be important to you because if
+752.949,3.091,you're a web programmer you don't want
+754.72,2.789,to be clogging up the bandwidth here you
+756.04,2.849,want to only send information through
+757.509,2.911,the pipes that you need to send through
+758.889,3.961,the pipes so let's take an example of
+760.42,4.349,this okay this is a cascading drop-down
+762.85,4.109,this is one of the Ajax examples from
+764.769,4.44,the Microsoft web page and a cascading
+766.959,6.151,drop-down let's say you know what you
+769.209,7.531,could send all the mix of all the cars
+773.11,5.76,to the client and all the models of all
+776.74,4.62,the mix of all the cars to the clients
+778.87,4.679,and then all the colors of all the
+781.36,3.99,models of all the makes to the client so
+783.549,4.53,you know what that's a lot of data I
+785.35,5.279,don't want to do that what I want to do
+788.079,5.31,is I want the user to select to make
+790.629,5.341,okay and based on the make that he
+793.389,4.981,selected I want the server send back and
+795.97,3.19,put into a drop-down just the models
+798.37,3.85,that go with that
+799.16,5.19,specific make well Ajax lets me do that
+802.22,3.059,but what am i doing when I do that this
+804.35,3.45,is on a web page
+805.279,5.161,I'm not refreshing the entire page I'm
+807.8,4.5,only going to refresh that drop-down
+810.44,3.689,that's it that's all I want I'm done
+812.3,4.529,good finished okay
+814.129,5.88,and once you select that model all I
+816.829,6.81,want to see is what colors are available
+820.009,8.461,for that make and model like C green so
+823.639,7.2,that's that's Ajax in a nutshell now of
+828.47,4.02,course it's not just dropdowns it's all
+830.839,4.17,sorts of different things you can have a
+832.49,6.57,web page but that's the guts and
+835.009,6.151,understanding how it works so next
+839.06,4.319,language Java not going spend a lot of
+841.16,4.529,time with Java because Java is a lot of
+843.379,3.781,things to a lot of people but what Java
+845.689,3.871,allows you to do is have a full
+847.16,5.88,programming capability embedded inside
+849.56,7.259,of webpages and all other types of
+853.04,4.589,devices its multi-platform it can work
+856.819,2.671,on all over the place
+857.629,3.33,well doesn't mean that a Java Java
+859.49,3.48,program that you write for a browser is
+860.959,3.99,going to work on a phone unless it maybe
+862.97,3.57,it's on the phone browser but what means
+864.949,4.021,it's one language you can do all those
+866.54,3.599,types of things so job is that great
+868.97,3.69,thing to try to be everything to
+870.139,4.531,everybody well it kind of meets a lot of
+872.66,3.599,that but in some places it doesn't do
+874.67,3.0,all that it does have one thing that's
+876.259,5.01,really nice about it which is the good
+877.67,5.219,old just-in-time compilation hey you
+881.269,3.151,read about Java you're going to hear
+882.889,2.851,about just-in-time compilation which
+884.42,3.06,gets me back to that first slide where
+885.74,4.529,they say or some people say well no
+887.48,5.31,child is an interpreted language no it's
+890.269,4.92,not it is compiled it's just that it's
+892.79,4.799,just in time compilation okay it does go
+895.189,4.26,to a machine level code if you do that
+897.589,4.201,you know machine level code is you can
+899.449,3.901,send stuff over it's not the raw text of
+901.79,5.46,the code and you can do stuff with it
+903.35,5.789,and it can be very fast that way now
+907.25,2.399,let's talk a little bit about mobile
+909.139,1.62,devices
+909.649,3.271,okay so anybody who's been doing
+910.759,3.901,programming has got to deal with all the
+912.92,3.63,different kinds of devices that you
+914.66,3.63,might be dealing with well when you get
+916.55,4.68,down into the guts of it mobile device
+918.29,5.01,programming browser programming not
+921.23,4.979,really different it's got clients it's
+923.3,4.589,got servers it's got listeners okay that
+926.209,2.73,part of the programming model doesn't
+927.889,1.411,change so if you understand how that
+928.939,2.611,works
+929.3,3.65,guess what it still works okay however
+931.55,3.29,the paradigm
+932.95,3.81,turn on the way you use mobile
+934.84,3.09,programming is totally different from
+936.76,3.54,the way somebody who's stuck behind
+937.93,4.77,machine gate behind a keyboard looking
+940.3,5.34,at a screen you got thing held in your
+942.7,6.6,hand it's small it moves around okay
+945.64,6.0,got to do that so first if you're
+949.3,3.24,thinking hey I have an app programmer
+951.64,3.03,well that doesn't mean you're an
+952.54,3.63,Internet programmer and that programmer
+954.67,4.02,can be very simple I can have an app
+956.17,5.43,that I download onto my mind to my phone
+958.69,5.27,and it's a game and itself itself all
+961.6,4.56,together everything is in that app
+963.96,3.49,that's not an Internet program it was
+966.16,2.43,just downloaded over the Internet
+967.45,2.67,that doesn't make it an Internet program
+968.59,2.85,internet programs communicate back and
+970.12,2.97,forth with other machines over the
+971.44,4.02,Internet a lot of apps are internet
+973.09,3.39,programs and the big expectation for
+975.46,3.69,most apps is that they do have that
+976.48,4.32,ability to interact with the Internet so
+979.15,3.6,what you're doing is you're taking
+980.8,4.56,things that you did do it once in a
+982.75,5.34,browser okay like interpreting code and
+985.36,4.65,doing stuff with it and you're now doing
+988.09,3.51,this on a very small very small device
+990.01,4.38,so like my little very small device
+991.6,4.62,right here my Galaxy s3 which you know
+994.39,3.75,is a pretty awesome phone it's got a
+996.22,3.87,really big screen but guess what that
+998.14,3.72,big screen is still a lot tinier than
+1000.09,3.87,one of the other devices that I can show
+1001.86,4.29,you right here which is an iPad this is
+1003.96,3.93,my iPad wait turn around this way so you
+1006.15,3.99,can see it okay and I'm actually
+1007.89,4.35,delivering to you this lecture on a
+1010.14,3.96,computer so I've got all three of the
+1012.24,4.71,primary devices sitting right in front
+1014.1,5.19,of me different to the paradigm well
+1016.95,5.22,yeah now are delivering to something
+1019.29,4.95,small and you're delivering it typically
+1022.17,3.75,not necessarily as a browser thing
+1024.24,4.05,designed for a small mobile device but
+1025.92,4.65,yet you can't have specific web pages
+1028.29,3.6,designed for mobile devices but one
+1030.57,4.62,likely you're probably programming apps
+1031.89,5.76,and apps are specific they do specific
+1035.19,4.98,tasks and that's their actual the nice
+1037.65,3.929,utility of the concept of the app but
+1040.17,3.36,the biggie and the paradigm is the fact
+1041.579,4.051,that it's something that moves around
+1043.53,4.26,you have mobility of user so you have a
+1045.63,4.11,lot of freedom of what you can do also
+1047.79,3.66,you have a lot of things that sit on top
+1049.74,2.94,of this I'm going to go right here and
+1051.45,4.05,I'm going to go ahead and pull this baby
+1052.68,5.19,down here I have okay and you can see
+1055.5,4.89,this I have Wi-Fi connection it's going
+1057.87,6.45,to be all blurry but yeah I have Wi-Fi I
+1060.39,5.58,have GPS I have all these Bluetooth I
+1064.32,2.18,have all these other toys that I can
+1065.97,3.11,play with
+1066.5,4.35,that are part of this phone that a
+1069.08,4.76,totally different operating system in
+1070.85,5.82,this case Android that I'm working with
+1073.84,4.51,the cloud well I understand the cloud
+1076.67,3.72,you got to understand the concept of a
+1078.35,5.01,web service and it's actually not that
+1080.39,5.07,hard ok if you're a typical programmer
+1083.36,3.81,you've wrote classes and classes may
+1085.46,3.99,have methods but the basics of
+1087.17,4.29,programming boils down to you know
+1089.45,5.25,object-oriented program is a way to
+1091.46,5.43,organize functions but we have object or
+1094.7,4.17,ePro grams so we call the methods okay
+1096.89,6.15,basically a piece of code does something
+1098.87,6.48,ok and it sits on the machine and it's
+1103.04,4.44,compiled and it works there and the
+1105.35,4.89,machine calls the functions and you have
+1107.48,5.4,function libraries and all this well the
+1110.24,5.46,cloud takes all of that and exposes it
+1112.88,5.88,to the web that's the basis of the cloud
+1115.7,6.66,all those things that you can do right
+1118.76,6.12,now with a machine become exposed to the
+1122.36,3.39,entire world at large now of course that
+1124.88,1.97,doesn't mean you're just going to go
+1125.75,3.78,ahead and expose all your functions
+1126.85,4.75,you're going to have some level security
+1129.53,4.38,goes there but now here you've got these
+1131.6,3.87,clients or servers because servers call
+1133.91,3.06,the functions on other servers all the
+1135.47,2.82,time and you've got some sort of
+1136.97,2.49,interface that makes them which we call
+1138.29,2.31,the server interface that makes them
+1139.46,3.6,available to the rest of the world and
+1140.6,4.05,we call that stuff web services and we
+1143.06,3.69,put all those web services together and
+1144.65,3.81,we have the cloud and the cloud allows
+1146.75,3.48,us to have something new called utility
+1148.46,4.2,computing I can pay for just the
+1150.23,3.69,services I want I don't have to buy a
+1152.66,4.08,whole bunch of stuff that I'm not going
+1153.92,4.59,to use I can have a lot this so here's
+1156.74,3.36,how this looks to the real world as
+1158.51,3.99,you're doing this here's you the client
+1160.1,4.98,kr maybe over here you're the programmer
+1162.5,5.76,but say to the client and you go to the
+1165.08,4.59,cloud to get stuff and what you know
+1168.26,3.66,about what most people know about it is
+1169.67,3.84,a lot of stuff happens here well that's
+1171.92,3.78,all that stuff that happens in the cloud
+1173.51,3.66,it's all happening right out there in
+1175.7,4.32,the cloud and you don't really worry
+1177.17,4.77,about what it is happening except if
+1180.02,3.93,you're a cloud programmer and then you
+1181.94,3.18,do ok but if we're going to be a cloud
+1183.95,2.31,programmer you're going to take a cloud
+1185.12,2.46,programming classes you're going to
+1186.26,3.41,learn all about cloud programming and
+1187.58,5.52,you're going to deal with a lot of stuff
+1189.67,4.99,so what kind of cloud services do you
+1193.1,3.72,have here well one of the things can
+1194.66,3.63,happen is hosting the software d2l which
+1196.82,3.239,is used at Daytona State College it's
+1198.29,6.479,actually a hosted software the server
+1200.059,6.42,managed d2l okay they're not actually on
+1204.769,4.47,the campus they're actually I think
+1206.479,4.65,they're in Canada so you know that's an
+1209.239,3.99,external hosting but it's a piece of
+1211.129,4.321,software that we use you can store files
+1213.229,4.02,that it documents host meetings you can
+1215.45,4.25,actually beautiful operating system you
+1217.249,4.56,can manage businesses accounting okay
+1219.7,5.589,essentially anything that you could do
+1221.809,5.46,on a computer or anything you can do on
+1225.289,5.13,a mobile device or anything you do on a
+1227.269,6.03,tablet can all be cloud services okay
+1230.419,4.38,can be done the cloud okay you still
+1233.299,2.43,need some sort of device to get the
+1234.799,2.25,stuff back on
+1235.729,3.03,well list right now you do and we don't
+1237.049,3.81,going directly to people's brains but
+1238.759,4.77,who knows what's coming up later but
+1240.859,4.68,it's all right there I mean it's all
+1243.529,4.681,available and actually right now you'll
+1245.539,4.62,see most of stuff is now moving to the
+1248.21,5.959,cloud and you could hear about migrating
+1250.159,6.48,new cloud but cloud is a great thing so
+1254.169,5.08,some of the languages of technology this
+1256.639,4.23,is just okay I was going to do one slide
+1259.249,2.821,I can do 10 slides but I'm just going to
+1260.869,2.73,say what are the technologies that you
+1262.07,3.87,will probably learn if you're dealing
+1263.599,4.231,with this I'm going to learn some
+1265.94,3.0,databases I just listed a few of them
+1267.83,2.909,you're going to probably learn some
+1268.94,3.719,languages these are all languages that
+1270.739,3.36,are very much tied specifically to
+1272.659,3.45,things that we do over the net
+1274.099,5.101,the internet and Internet programming um
+1276.109,6.42,no I listed PHP don't say what about
+1279.2,5.639,Python what about Ruby on Rails ah yeah
+1282.529,4.5,I know they're there great awesome good
+1284.839,5.16,okay just listing some of them
+1287.029,5.19,JavaScript okay there's no one java.net
+1289.999,3.78,entire platform that's you know really
+1292.219,3.241,built for how to do so for the net I
+1293.779,3.03,octave program and c-sharp I got a whole
+1295.46,2.61,bunch of stuff written in VB okay
+1296.809,2.7,there's languages that go behind that
+1298.07,3.359,you can write that stuff in multiple
+1299.509,4.29,languages okay working with databases
+1301.429,3.24,you have T sequel PL sequel two examples
+1303.799,2.67,of that if you want to actually
+1304.669,3.651,interface with databases that's some of
+1306.469,5.93,the stuff that you would learn okay
+1308.32,7.569,there's a lot really there really yes
+1312.399,5.291,put it all together how this all goes
+1315.889,3.54,together well we looked at how the
+1317.69,4.289,internet works and why we care well if
+1319.429,4.47,you're dealing with this kind of concept
+1321.979,4.29,of clients and servers and listeners and
+1323.899,4.47,requests and responses it's a totally
+1326.269,3.99,different architecture really than what
+1328.369,3.951,you have in programming and the fact
+1330.259,3.92,that it's now can be asynchronous
+1332.32,3.63,and you may not get a request not that
+1334.179,4.441,tremendously different though than how
+1335.95,4.5,regular old programming works we looked
+1338.62,3.659,at client and server based programming
+1340.45,3.089,stuff that client pace and everything go
+1342.279,3.15,to the client let them worry about it
+1343.539,3.541,server based program let's talk let's go
+1345.429,3.271,back and forth Ajax
+1347.08,3.959,let's talk only about the things we want
+1348.7,3.839,to talk about Java hey we're going to
+1351.039,3.661,solve all the problems of the entire
+1352.539,3.6,world with one language mobile devices
+1354.7,2.88,oh gosh now they're actually walking
+1356.139,3.721,around with computers in their hands and
+1357.58,6.679,the cloud hey everything is no longer on
+1359.86,7.14,a computer this is state right now okay
+1364.259,6.64,2013 this is all going to change in five
+1367.0,5.7,years okay if you want to be a internet
+1370.899,3.721,developer web programmer that type of
+1372.7,4.01,thing first thing you got to do is you
+1374.62,3.99,go like learning because guess what
+1376.71,4.329,everything that you learn now is going
+1378.61,3.99,to migrate it to the new stuff okay most
+1381.039,3.0,of the time it's awesome because you get
+1382.6,3.09,all these new capabilities and new
+1384.039,4.711,markets and new things that you can do
+1385.69,6.569,it's a very rewarding type of field to
+1388.75,5.759,work into but it also changes a lot and
+1392.259,4.62,you got me when those guys that likes
+1394.509,4.441,programming likes learning likes new
+1396.879,5.9,paradigms if every time something
+1398.95,6.87,changes you don't start grumbling okay
+1402.779,4.36,go into some other field if you do like
+1405.82,4.469,learning you like programming you like
+1407.139,5.701,the new stuff this is it you will never
+1410.289,4.35,get bored about having to learn new
+1412.84,3.9,stuff in this field thank you very much
+1414.639,4.051,hope you enjoyed this lecture on the
+1416.74,3.96,internet and web programming in internet
+1418.69,5.06,programming and all the stuff good
+1420.7,3.05,programming see you later

@@ -1,0 +1,673 @@
+second,duration,transcript
+14.4,8.32,"Welcome to Module 36, Week 8 of 
+Database Management Systems course  "
+24.32,14.48,"in IIT Madras online B.Sc. program.
+ 
+In the last week, we took a wide look into how to  "
+38.8,8.08,"develop applications based on databases. Using 
+various programming languages, tools, frameworks  "
+46.88,5.36,"we tried to give you an overview 
+of the rapid development process,  "
+52.24,5.6,"what it needs to do applications on 
+the web as well as on the mobile.
+ "
+58.8,6.4,"As I told earlier, we would now again 
+step back into the core of database design  "
+66.32,5.84,"and if you recollect what we have 
+primarily done in the earlier weeks,  "
+72.16,7.04,"we have started by focusing on the logical design. 
+We talked about two primary design aspects. One is  "
+79.2,6.64,"the logical design, which is conceptual, 
+which deals with entities relationships,  "
+86.72,4.56,"different constraints, their representation, 
+the algebra, calculus, everything.  "
+92.32,4.16,"And the other aspect is a physical 
+design, as to how will the bits and  "
+96.48,5.6,"bytes be organized so that you can have an 
+efficient storage and an efficient access.  "
+103.2,10.64,"So, it is now time to start discussing that.
+ 
+For that we will have to study some of the storage  "
+114.4,6.32,"options, or not some maybe a wide range of 
+storage options, that have evolved over time  "
+120.72,7.68,"and what is available today. We have to study how 
+in this typical storage you can organize the data,  "
+128.4,6.96,"how you can make the accesses and storage 
+efficient by things like indexing and so on.
+ "
+136.16,8.64,"So, keeping that target in mind I just thought 
+that it will be good to give a little bit of recap  "
+144.8,6.8,"to you on what is efficiency, what we mean by 
+efficiency of access, what we mean by efficiency  "
+151.6,6.24,"of storage, how can we compare different ways of 
+doing accesses, different ways of organizing data  "
+158.64,4.72,"in terms of its access time, in 
+terms of its storage requirement.
+ "
+164.4,5.44,"This, truly this is, these are 
+topics in the algorithms course which  "
+170.4,6.88,"you may have already studied. So, I have kept it 
+very brief over the first 3 modules of this week,  "
+178.08,7.04,"and I will start today by defining just, I mean, 
+most of it will be recapitulation for you but  "
+185.68,4.4,"just putting in context from the algorithms 
+course as to, and the data structure course  "
+190.08,7.76,"as to what we will frequently need in the design 
+of the physical databases. So, we will start by  "
+199.04,5.84,"looking at algorithms and programs and 
+then the different issues of analysis and  "
+204.88,5.84,"particularly coming to the asymptotic notation 
+and some complexity of common algorithms.
+ 
+ "
+211.6,3.52,"So, this is uh the module outline, 
+the points on the left.
+ 
+ "
+216.08,6.48,"So, as you know, formally an algorithm is 
+a finite sequence of well-defined steps.  "
+223.52,3.92,"The sequence has to be finite 
+and every step has to be  "
+228.0,5.76,"well defined, unambiguous to solve 
+a class of specific problems,  "
+234.72,7.92,"or to perform a computation. You want to achieve 
+a task, so you define a sequence of instructions  "
+243.2,6.64,"which are already known to you and those 
+which are unambiguous and well defined,  "
+250.48,7.76,"and by doing those steps one by one, maybe in 
+just a sequential order or maybe repeating them,  "
+258.24,6.4,"you will be able to achieve that task.
+Now, more often the instructions are computer  "
+264.64,6.48,"implementable but we also write algorithms which 
+are more like for human understanding and you can  "
+271.12,6.24,"find an equivalent representation algorithm 
+which is computer implementable. But the key  "
+277.36,4.8,"point about an algorithm is, and this question 
+is often asked in the interview as to what is the  "
+282.16,5.04,"difference between an algorithm and a program, the 
+key point of an algorithm is it must terminate.
+ "
+288.0,7.04,"An algorithm given an input must give me the 
+output in finite time. That time may be very long,  "
+295.04,5.12,"that time may be milliseconds, it could 
+be seconds, could be hours, months or even  "
+300.72,5.2,"years, millenniums, but it provably 
+must terminate. That is a key point.
+ "
+306.88,5.52,"In contrast, a program is a collection of 
+instructions very similar to algorithms which  "
+312.4,6.32,"are necessarily to be executed by a computer. 
+That is the reason the computer programmers  "
+318.72,5.6,"write programs in a certain computer language, 
+so we say that programs implement algorithms.  "
+325.04,6.4,"And the characteristics of a program which would 
+often distinguish it from an algorithm is the fact  "
+331.44,7.36,"that a program may or may not terminate.
+Now, for example you will ask, I mean,  "
+339.6,4.64,"how is it that a program may not terminate. 
+It is quite possible, for example think about  "
+344.24,6.48,"the operating system working in your desktop 
+or in your mobile phone. They never end.  "
+350.72,6.4,"If the operating system ends, the system is dead. 
+So, they, as long as you have the computer system,  "
+357.12,4.48,"you have an operating system running. 
+Your database system does not stop.  "
+361.6,5.84,"It will have to keep running. So, these are 
+programs which do not terminate, but they embody  "
+367.44,4.8,"algorithms which must terminate.
+ 
+That is the reason, mostly we talk  "
+372.24,7.6,"of algorithms only and programs come in terms of 
+realizing what the algorithm is trying to do.
+ 
+ "
+379.84,5.36,"Now, the question is, we often know about 
+analysis of algorithms, we often talk about  "
+385.2,6.8,"analysis of algorithms. So, there are a couple 
+of w questions on this which is very typical as  "
+392.0,5.76,"to why should you analyze, what is the motivation, 
+why do you actually analyze an algorithm. Then the  "
+397.76,5.44,"question is what do you analyze, what identify, 
+what all factors that need to be analyzed.
+ "
+404.0,5.44,"Once you have done that, then you need 
+certain techniques, tools to analyze. So,  "
+409.44,6.72,"you try to answer how to analyze. Then you ask the 
+question where to analyze, what are the scenarios,  "
+416.16,7.12,"would you analyze it for all possible inputs or 
+for some sample inputs, what are the scenarios,  "
+423.28,6.88,"where do you identify the scenarios to analyze, 
+that is, where to analyze. And the last question  "
+430.16,4.4,"is, would you keep on analyzing an algorithm 
+all the time or there is a point when you  "
+434.56,8.0,"stop analyzing algorithms and finding newer 
+algorithms because you may be able to realize  "
+442.56,4.08,"whatever best is even theoretically 
+possible, that is when to analyze.
+ "
+446.64,5.04,"Now, leaving aside when to analyze because 
+it involves quite a lot of theory in terms  "
+451.68,7.12,"of lower bounds and you know NP completeness, 
+and all that, so which is not relevant for our  "
+458.8,5.04,"database discussion. You must have studied them 
+in the algorithm course. I would try to take you  "
+463.84,5.92,"quickly through these four points which you, I 
+am sure know in some way or other already.
+ 
+ "
+470.64,7.04,"So, why you analyze? Because resources are scarce. 
+I mean, because we always want to do more with  "
+477.68,5.92,"less. We greed for, do more with less. We want to 
+avoid performance bugs. So, these are the reason  "
+483.6,7.28,"we will try to analyze. So, the core issues is 
+to predict performance, as to how much time does  "
+490.88,6.8,"binary search tree take, or binary search take 
+if I have two algorithms for the same task. Like,  "
+497.68,6.48,"for sorting an a set of data in an array, 
+you have innumerable algorithm, Quicksort, 
+ "
+504.16,4.56,"Mergesort, (Buck) Bucket Sort, Insertion 
+Sort, Selection Sort, Heap Sort,  "
+509.44,7.44,"you, you name it. So, you need to compare the 
+algorithms and decide which one should we use.
+ "
+518.4,5.68,"Then you want to prove, provide guarantees, that 
+okay, if I do it in this way, if I use a Red-Black  "
+524.08,9.2,"tree then I would always be able to insert a key, 
+insert a record in my database in order n log n  "
+533.28,5.12,"type, whatever that means. We want to understand 
+the theoretical basis. That is what I was saying,  "
+538.4,3.6,"lower bounds and all that. So, there are these 
+are the primary reasons why you analyze.
+ 
+ "
+542.64,6.0,"Now, the question is what you analyze? You analyze 
+for resources taken, given an input size. So, your  "
+550.16,4.8,"parameter is the input size, which could be the 
+number of elements in the input, which could be  "
+554.96,5.52,"the size of the input, which could be the value 
+of the input, which could be multiple inputs,  "
+560.48,4.88,"but that is your parameter. And what do 
+you measure? What do you want to measure,  "
+566.48,6.32,"is the resource which is important for you.
+So, the whole history of computing analysis  "
+572.8,5.52,"started with analysis of time. It started with 
+the analytical engine of which I have just  "
+579.2,6.56,"put the picture here, is fun, so the most 
+common analysis factor is the time, but there  "
+585.76,7.04,"could be several others. For example, storage. 
+Space is also very critical in many places,  "
+592.8,5.04,"for example, in handheld devices, in databases 
+because databases are very, very large. 
+ "
+597.84,5.6,"So, if you can save some even 10 percent space, 
+you save a lot of money. But there could be  "
+603.44,4.56,"other factors to analyze also. For example, 
+power I think I mentioned it earlier as well,  "
+608.56,7.12,"that handheld devices are power, I mean, 
+power constrained, so you need to possibly  "
+615.68,6.56,"trade off other resources in favor of power. 
+You may want to optimize for bandwidth because  "
+623.12,4.8,"you may not have enough bandwidth, a 4G 
+bandwidth to connect to your server. You  "
+627.92,4.24,"may have a 2G bandwidth.
+So, you may want to  "
+633.84,8.56,"minimize on processor resources in a extremely 
+multi-threaded distributed application and so on.  "
+642.4,5.2,"So, there are various different things to analyze. 
+In this context, for the context of database  "
+648.32,3.76,"that we are targeting we will only focus 
+on the time and space for now.
+   
+ "
+652.96,8.64,"So, what you analyze, this is just taking an 
+example. This is a very standard algorithm for,  "
+661.6,4.4,"written in terms of a C program, 
+for making the sum of n numbers.  "
+667.28,6.56,"So, this n is your input size. So, that 
+is the parameter. And what do you measure?  "
+674.4,4.08,"You want to measure how much time it will take.
+Now, you cannot measure each and everything  "
+679.36,7.04,"in an algorithm because there is a time to create 
+the stack for this particular function, there is  "
+687.04,3.76,"time for making this assignment, there 
+is time for taking the comparison,  "
+692.56,7.04,"doing this decrement and so on. But what you try 
+to identify are the key tasks, key operations  "
+699.6,5.2,"that you must do in doing this algorithm.
+And that key here, since you are trying to find  "
+704.8,8.56,"out sum, is the addition operation. And you can 
+also kind of reason that the number of times you  "
+713.36,7.68,"need to add, your number of comparisons and 
+number of decrements, here will be related to that  "
+722.16,4.16,"because every time you go through the for 
+loop you do a comparison, you do a decrement.  "
+726.96,4.64,"And if it succeeds you do an addition.
+So, these are very closely related. So,  "
+731.6,4.32,"approximately, I can say that if I know the 
+number of additions being done, I know how much  "
+736.64,5.68,"time will it take the number of additions 
+times the typical time of doing an addition  "
+742.32,6.0,"multiplied by a maybe a scale factor. So, if 
+I just count that this loop will go over n  "
+748.32,9.92,"times so the time is Tn, which is n additions. 
+And what is the space? Space is simply the n where  "
+758.24,5.36,"you keep the number and the storage s. Of course, 
+there is additional space in terms of temporaries  "
+763.6,6.08,"and all that, which we grossly ignore in terms 
+of doing this analysis because it turns out  "
+769.68,6.16,"to be comparable to the user variables that you 
+have. So, you have two variables so space is two.  "
+777.04,6.32,"So, this is, this is what you analyze.
+  
+So, if we take another example quickly,  "
+784.4,4.0,"this is finding a character in the string. 
+So, what you are doing is, you are writing a,  "
+788.4,7.68,"this is, the pointer to the string, this is the 
+character that you want to find, and you go over  "
+796.64,6.32,"that string starting with the index 0, so you 
+are trying to check str 0, str1, like this,  "
+803.68,5.6,"and how far do you go? You go up to strlen(str), 
+which gives you the length of the string.
+ "
+809.28,3.28,"So, those many characters are there, 
+those many times you have to do. So,  "
+812.56,7.28,"those many times this loop will have to execute, 
+and for each c, if it, if the character is c,  "
+819.84,7.2,"equal to c or not. If it is equal, you return, 
+you are done. If it is, not then you return a 0,  "
+827.04,6.24,"saying that you did not get it.
+Now, given this, so your, what is the  "
+833.28,6.16,"input complexity? Input complexity is the 
+size of the string. The longer the string,  "
+839.44,8.16,"you need more time. So, your complexity parameter 
+is n. Now, what is that you get to do? Naturally,  "
+847.6,5.28,"again the key, you are trying to see for match, 
+so the key operation is compare. So, you have,  "
+853.44,5.6,"and this loop can go on variable number of times 
+depending on where you find the character.
+ "
+859.04,5.04,"So, what you try to say? You try to say, okay, 
+what is the maximum possible, what is the worst  "
+864.08,6.24,"possible scenario I can get into, which we 
+will discuss in subsequent slides also, and  "
+870.32,3.76,"for that, you know that if the character 
+does not exist at all, then you will have  "
+874.08,3.92,"to go through the entire string. So, 
+you said that it could be at the worst,  "
+878.0,6.4,"it could be n comparisons, n comparisons.
+Now, every time you go over this loop, you do  "
+885.6,10.8,"strlen(str). So, it also has the, n times it has 
+to do strlen(str), so whatever time that takes,  "
+897.44,5.84,"you will also have to take that. Now, 
+what is strlen(str)? It has to count,  "
+905.2,5.04,"going one after the other. There is no other 
+way. You have to count or keep on seeing,  "
+910.24,4.8,"keep on incrementing an index till you get a 
+null character which is a c string terminator.
+ "
+916.24,6.32,"So, every time you do this you have n. So, 
+what you get, n comparisons plus n times  "
+925.6,5.36,"n increments because you have to go through that 
+index, and every time you go through the loop you  "
+930.96,7.44,"have to do this. So, it turns out to be n plus 
+n square. And if n square starts going large  "
+939.36,5.28,"then I can say this is approximately n square. 
+So, we will say this is a quadratic algorithm.
+ "
+948.56,9.44,"What is your space? Your space requirement 
+is the, input is str and i, c and you have  "
+958.0,5.12,"just the i. So, space requirement is still 
+very negligible. Now, that is where you can  "
+963.12,6.48,"see the benefit of doing the analysis. For 
+example, you are just checking in the string.  "
+971.76,7.68,"So, the string does not change as you go over the 
+loop. So, strlen(str), value that you will get,  "
+980.64,4.56,"the first time, the second time, the third 
+time, the nth time, will all be the same.
+ "
+986.64,5.76,"Then you are basically losing efficiency but, 
+by computing it several times unnecessarily.  "
+993.2,7.68,"So, what you could do? You could remove this 
+and before that loop you could say len assigned  "
+1006.16,9.04,"strlen(str). And make this length. Then what 
+will happen? This will get computed in n,  "
+1018.0,8.08,"and you will not need this strlen time after that. 
+So, this will turn out to be n plus n, which is,  "
+1026.08,7.92,"which will be n. So, from quadratic it will become 
+linear. A very simple one statement change can  "
+1034.0,5.12,"drastically improve your algorithm and that is 
+what you analyze for the time and the space.
+ 
+ "
+1040.48,3.36,"So, there are a couple of more examples,  "
+1044.4,4.48,"that I have provided here, like finding 
+the minimum of a sequence of numbers  "
+1049.76,6.08,"like in, in different ways so that you can see 
+how you are actually getting the improvement,  "
+1056.48,4.4,"and you can go through them and practice. So, 
+this is what, this is what you look for.
+ 
+ "
+1061.44,4.56,"Now, the question, question is how 
+do you do it? How do you given a,  "
+1067.04,6.24,"given an algorithm or a program source, how would 
+you do the analysis? It is not a trivial question.  "
+1074.0,5.44,"Now, there are different models. One is counting 
+model. Like, whatever we were doing is a counting  "
+1079.44,4.48,"model. We are just observing and seeing, okay this 
+is, this is, what likely, likely to be you know  "
+1083.92,4.24,"more dominant, let us count how many times it 
+can happen. It is not always easy to do that.
+ "
+1088.96,8.16,"Also, given the, given the, all different 
+kinds of instruction you could have,  "
+1097.12,7.84,"the counting could turn out to be a very complex 
+formula. So, we do something of an approximation  "
+1104.96,6.08,"which we say is an asymptotic analysis. 
+So, these are some of the basic methods.  "
+1111.04,6.0,"And then you have, particularly since several 
+algorithms are recursive, it is very difficult  "
+1117.04,4.48,"to do accounting reasoning on them. 
+So, what you do, you write corresponding  "
+1121.52,6.64,"recurrence relations, use generating functions to 
+solve them and get an idea about the complexity  "
+1128.16,6.88,"number, or there is, for a large class of 
+problems, large class of recursive decomposition,  "
+1135.6,7.04,"you have a basic theorem known as the masters 
+theorem. So, this is dominantly useful for  "
+1145.84,7.04,"recursive algorithms and, and since we are not 
+doing an algorithms course I am keeping this  "
+1152.88,2.72,"aside because we just need the 
+basic results to go forward.
+ 
+ "
+1156.96,5.6,"So, we have already seen some part of the 
+counting model where we try to find out the  "
+1162.56,6.8,"frequency of different operations, get an estimate 
+about the cost and then your total running time,  "
+1169.36,7.12,"or total space, total running time is a sum of 
+cost times frequency for all operations. And for  "
+1176.48,5.92,"this, we use a simple random-access machine 
+model where we know the input data and size,  "
+1182.4,5.04,"we can identify the operations which are known 
+a priori, and we can identify the intermediate  "
+1187.44,6.0,"stages, and we look at output data and size.
+And the maximum of these, that is certainly you  "
+1193.44,5.52,"will need to read the input. Not certainly, in 
+most cases. There are problems where you do not  "
+1198.96,4.96,"need the need to read the entire input. 
+And you will need to write the output,  "
+1204.48,4.24,"and you will need to do the operations. 
+So, the maximum of these three  "
+1209.28,5.6,"will give you the complexity, and that is 
+the basic approach to analysis because if  "
+1214.88,5.04,"you have to read the input then you cannot have 
+a complexity less than the input size. If you  "
+1219.92,6.0,"have to write the output then you cannot have an 
+complexity which is less than the output size.
+ "
+1225.92,4.64,"So, the first one we call input 
+complexity, based on this, I am sorry,  "
+1232.72,6.88,"this is called input complexity, this is called, 
+because you will have to write the output,  "
+1239.6,12.8,"in any case, complexity, and whatever operations 
+complexity. So, the max of these, or basically  "
+1252.4,7.84,"the sum of these, I am saying max because 
+something will dominate anyway, so, is the total  "
+1260.24,9.68,"complexity. And that is how you, you analyze.
+ 
+So, this is just a factorial example. This is  "
+1269.92,4.8,"written recursively. I am not using generating 
+function, but it is very easy to see that you have  "
+1274.72,5.76,"to find factorial n, it is n times factorial 
+n minus 1 so this will go down to factorial  "
+1280.48,5.68,"0 or factorial 1, factorial 0, 
+which I know explicitly as 1.
+ "
+1287.12,5.92,"So, n times this call will be made. It is very 
+clear. So, n times a call will be made means  "
+1295.36,4.56,"this multiplication will be done n minus 1 times 
+because the first call with n does not have a  "
+1299.92,7.28,"multiplication. So, it is n minus 1 multiplication 
+but it needs a lot of space because as you keep on  "
+1307.2,5.84,"calling none of these functions are returning.
+So, the call stacks, it is called I mean,  "
+1313.04,5.76,"I am sorry, activation records or stack frames 
+keep on staying on the stack so there are,  "
+1319.44,8.32,"n plus one stacks the, the, the caller, the n 
+invocations of the factorial will be there. So,  "
+1327.76,6.56,"there will be, the space will be of the order 
+of n plus 1 times a constant because every stack  "
+1334.32,6.32,"frame will take a size. n minus 1 is the number of 
+multiplications, times a constant is your time.
+ "
+1341.68,7.12,"But if you write this simply in an alternate 
+iterative form where you start not from  "
+1348.8,6.72,"n down to 1 but you just keep on multiplying from 
+1 up to n, if you just do that, as in here, then  "
+1355.52,7.76,"obviously again you will have n multiplications 
+but you will just need one function call, in this  "
+1363.28,6.48,"function itself. So, all that you need is n and t. 
+So, you can see that just moving from this to this  "
+1370.48,9.76,"you make a great advantage by reducing your space 
+significantly. So, this is, earlier we showed an  "
+1380.24,4.56,"example where you were able to reduce your time, 
+here is an example where you can show that you can  "
+1384.8,6.88,"reduce your space. So, this is how you analyze 
+typically in terms of a counting model.
+ 
+ "
+1393.04,7.52,"Now, the core idea is that we cannot 
+often just do comparison in terms of  "
+1400.56,5.44,"whether it is n or n plus five and things 
+like that. The comparing actual times  "
+1406.8,5.52,"is not a good idea, it is not possible. The actual 
+time will depend on the processor resource, I  "
+1412.32,7.2,"mean, processor clock speed, it will depend on the 
+particular processor architecture, it will depend,  "
+1419.52,5.12,"depend on the bus speed, and so on so forth.
+So, comparing actual, I am sorry,  "
+1427.04,7.04,"comparing actual time is not an option. So, what 
+you compare is growth. That is what hurts you,  "
+1435.04,6.24,"because you do not, if n is small, if your input 
+size is small you really do not care how much time  "
+1441.84,6.32,"a database table will take to look it up because 
+it will be less anyway, whatever way you do it.
+ "
+1448.16,5.6,"If n is large, you really care. So, you want 
+to know that if you keep on increasing n from  "
+1453.76,6.88,"a small value to a large value, how is your 
+time and space going to grow. It is the growth,  "
+1462.88,6.24,"that is what you are interested in. And you are 
+not interested in a specific number or a specific  "
+1469.12,4.72,"function because you cannot compare them. 
+So, you want a approximation of that,  "
+1473.84,4.4,"and that is what is known as the 
+function approximation, which we  "
+1479.84,6.96,"call, which we denote by a Big-Oh notation. There 
+are other complexity notation, like Big-Omega,  "
+1486.8,5.92,"Big-Theta, which relates to the theory 
+of lower bounds, so we are not getting  "
+1492.72,7.44,"into those. Often you solve a recurrence in the 
+growth function to, to get the growth function.  "
+1500.16,5.36,"But we will just show you simple examples.
+ 
+Let us say, this is an example of,  "
+1507.6,9.04,"there is, there is, what is this trying to do is, 
+is going from 1 to n, you have an array a, and  "
+1518.4,5.28,"then for every i it is going from i 
+plus 1 to n and it is checking. So,  "
+1523.68,5.92,"it is basically checking on combinations to 
+check if the sum of any two elements is 0 or not,  "
+1530.96,6.48,"or how many times it is it is 0, how many 
+such sums are 0. So, that functionality  "
+1537.44,4.4,"you do not really bother about.
+Now, the question is, if we do a  "
+1542.48,9.12,"counting model on this, then you will see 
+that, how many, what is the frequency of that?  "
+1552.24,6.08,"You have it one, so I am just trying to look 
+at the variable declarations, the number of  "
+1558.32,7.28,"times you will have to hit at the declaration. 
+One is here, one is here, which will happen  "
+1567.76,6.08,"once, and this will happen multiple times, 
+every time you go, do the outer for loop  "
+1575.68,4.96,"you will start the inner for loop. 
+So, you have a declaration to process. So,  "
+1580.64,7.36,"the outer for loop will happen n times, so the 
+inner for loops int j declaration has to be  "
+1588.0,10.24,"processed n times. So, this is one, this is one, 
+and this is n, which makes the total as n plus 2.  "
+1601.36,2.16,"The same thing can be said 
+about the assignments. 
+ "
+1603.52,5.28,"So, these are the assignments. Actually, 
+we call it initialization, but in here,  "
+1608.8,6.0,"it will act as an assignment, which is n plus 
+2. How many times you do less than comparison?  "
+1616.8,8.48,"This is this because you do it, for every time you 
+do it for the outer, you do for the i times for  "
+1625.28,9.44,"the inner. So, it is, it is 1 plus 2 plus like, 3, 
+sum of natural numbers. So, it is what it is.
+ "
+1634.72,5.6,"Equal to comparison will happen as 
+many times the inner loop can happen,  "
+1641.6,5.04,"inner loop iteration can happen. 
+This is, this will be the array axis,  "
+1646.64,4.0,"double of that, two times of that 
+because you have two axes here,  "
+1652.96,9.04,"and increment will depend on what are your data. 
+It will not happen always. These increments are  "
+1662.88,8.0,"fixed but the increment here would vary depending 
+on the data. So, this is, this is what you get.  "
+1670.88,5.28,"So, this is your total set of analysis. 
+So, if you put, sum all of them together  "
+1677.28,4.48,"you will get a complex quadratic, you can 
+see that n square is a maximum, so you will  "
+1681.76,4.88,"get a quadratic expression. That is fine. 
+But what we do? We do we do an approximation.  "
+1686.64,4.08,"We say that the growth of n plus 
+2 and the growth of n are similar.  "
+1691.84,5.2,"They do not significantly differ in the growth. 
+They will grow in a similar way. Similarly, the  "
+1697.04,7.28,"growth of this expression and the growth of half 
+n square, or for that matter n square is similar.  "
+1705.12,4.72,"They will just differ by a small factor 
+but the growth will be the similar.
+ "
+1710.72,5.36,"So, in this way, we, what we do 
+is in simple terms, if it is a,  "
+1716.08,4.16,"these, these all happen to be polynomials, so 
+what we are doing is in simple terms, we just take  "
+1720.8,6.56,"the dominant term, the highest degree term 
+and say that is my tilde approximation,  "
+1728.0,5.52,"or asymptotic approximation. So, all that 
+you get, all are these approximations. So,  "
+1733.52,8.48,"what I do, I add up all of them. So, I 
+end up having alpha n times beta n square,  "
+1743.52,3.6,"where alpha beta will get values. 
+So, this is the approximation.
+ "
+1748.08,8.0,"And then we say that well n square will 
+grow much faster than n. n is linear,  "
+1756.72,3.76,"n square goes like this. So, I can ignore,  "
+1762.32,5.12,"for large n, I can ignore alpha n because 
+if n is small they are comparable, and I  "
+1767.44,3.68,"do not care what happens, with the small input 
+size I do not care what is the complexity.
+ "
+1771.92,6.88,"If it grows large, then this, this gap keeps on 
+increasing. This gap keeps on increasing. So,  "
+1778.8,5.2,"what matters is the quadratic term, 
+beta n square. So, I can say that  "
+1784.88,8.96,"alpha n plus beta n square, what is the 
+tilde here is actually beta n square,  "
+1796.56,6.56,"ignoring the linear term. If I say that, then 
+I can say that, that is actually n square  "
+1803.84,1.92,"because beta is just a constant factor.
+ "
+1807.76,6.96,"So, that is the whole idea of saying 
+that it is asymptotically n square.  "
+1814.72,7.28,"We will write this as order n square. What this 
+tilde function really means is f is approximation  "
+1822.0,7.36,"to, g is an approximation to n if the 
+limit of f by n, n tending to infinity,  "
+1829.36,4.64,"is 1. And you can check in every case here 
+that that limit actually is what holds.
+ 
+ "
+1836.4,7.6,"So, this is just a chart to show you how does 
+the typical known complexities of 1, which is  "
+1844.0,10.32,"constant, log n, which is here, logarithmic 
+linear, linear logarithmic, that is, n log n,  "
+1855.04,5.76,"quadratic, cubic, you may not be familiar to see 
+these curves in this form because it has been  "
+1860.8,7.36,"plotted in a log log curve. Your x axis is log, 
+as well as right axis is log. So, that as you  "
+1868.16,6.32,"grow in the polynomial basically your line always 
+remains same, you are just changing the gradient.  "
+1876.32,4.88,"It is just rotating like this and that 
+tells you how the cost is increasing.
+ 
+ "
+1881.76,6.08,"If you would like to look at it in your familiar 
+graph plotting, then this is how it will look  "
+1887.84,8.4,"like. So, you can see that if something is order n 
+it goes like a straight line, if something is log  "
+1896.24,6.8,"n it is much less, almost like constant. n log 
+n goes like this, but powers of n go very far,  "
+1904.24,7.76,"fast. Exponential of n are almost vertical, 
+that with a very small n, it explodes. So,  "
+1912.0,6.32,"you cannot, these are what you cannot 
+afford. This is, maybe c greater than two  "
+1918.32,5.6,"should be avoidable. This is preferred, 
+this will be good, and this is excellent.  "
+1926.16,3.92,"So, that is what, along this axis, 
+that is what we will thrive for.  "
+1930.08,7.28,"And that is the basic take back from this.
+  
+Here, I have given a list of these complexities  "
+1937.36,7.44,"and typically a description. Just focus on this 
+description when you study to know as to where  "
+1944.8,7.12,"you can typically find this complexity.
+ 
+So, this is the formal definition. I am not  "
+1951.92,3.28,"very concerned about the formal definition. 
+You have done it in the algorithms course.  "
+1955.2,7.44,"This is just for your reference.
+ 
+And finally, what do we, where do we do the  "
+1962.64,5.6,"analysis? There could be different situations, but 
+we will focus primarily on these two. The worst  "
+1968.24,4.88,"case, that is, if I take all possible cases what 
+is the input? That gives me the worst complexity.  "
+1974.16,7.6,"And also, if I take a any random input, assuming 
+inputs are distributed in a certain distribution,  "
+1981.76,5.52,"then what is the expected running time we will 
+get. We will typically talk of these two. These  "
+1987.28,7.84,"are other forms of complexity analysis that 
+exist but primarily databases or things used  "
+1995.12,4.08,"in databases, we will primarily focus in 
+the worst case and the average case.
+ 
+ "
+2001.12,8.56,"So, I will end with a complexity chart, this is 
+not for you to remember but to refer, where for  "
+2009.68,5.6,"the common data structure, some of these I am 
+going to discuss in the next two modules. What  "
+2015.28,4.08,"are their different access times? So, if you, this 
+is just a quick reference that you can make.
+ 
+ "
+2020.0,5.52,"And another is for the sorting algorithms. What 
+are the different complexities you get in the  "
+2025.52,4.4,"different scenarios, both in terms of 
+time as well as in terms of space?
+ 
+ "
+2030.96,5.52,"So, with that quick introduction, or 
+the, I mean, I should say the revision of  "
+2036.48,6.16,"algorithms and complexity, we conclude this 
+module. Thank you very much for your attention  "
+2042.64,8.72,"and we will meet in the next module and 
+talk about some of the data structures."

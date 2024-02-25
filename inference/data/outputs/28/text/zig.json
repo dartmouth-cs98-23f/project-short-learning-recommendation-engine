@@ -1,0 +1,70 @@
+{
+  "introduction": "This video provides a brief overview of the Zig programming language, created by Andrew Kelly in 2016. It is a high-performance system programming language often labeled as a next-generation alternative to C. Zig is minimal, extremely fast, and allows for low-level memory control. It has a unique comp time keyword that makes it trivial to run code at kodak compile time instead of runtime. Zig also integrates well into a C or C++ code base and supports cross compilation out of the box with LLVM. This video covers memory management, error handling, testing, and building executables in Zig.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Zig",
+      "content": [
+        "Zig was created by Andrew Kelly in 2016 as a high-performance system programming language.",
+        "It is often labeled as a next-generation alternative to C.",
+        "Zig is minimal, extremely fast, and allows for low-level memory control.",
+        "It has a unique comp time keyword that makes it trivial to run code at kodak compile time."
+      ],
+      "topics": ["Zig Overview", "Zig's Memory Management", "Zig's Compile Time Keyword"]
+    },
+    {
+      "title": "Section 2: Memory Management in Zig",
+      "content": [
+        "Zig has a built-in page allocator from the standard library for memory management.",
+        "It allows for easy swapping out of allocators for different architectures like x86, ARM, WebAssembly, and bare metal.",
+        "The defer keyword automatically deinitializes the list when it goes out of scope.",
+        "Explicit error handling is provided using the try keyword."
+      ],
+      "topics": ["Zig's Page Allocator", "Memory Management Strategies", "Explicit Error Handling"]
+    },
+    {
+      "title": "Section 3: Testing in Zig",
+      "content": [
+        "Zig has a built-in testing framework.",
+        "Use the test keyword to evaluate code outside of the main program.",
+        "The zig test command is used to run the tests.",
+        "Zig's testing framework is designed to be efficient and easy to use."
+      ],
+      "topics": ["Zig's Testing Framework", "Testing Code Outside Main Program", "Efficient and Easy-to-Use Testing"]
+    },
+    {
+      "title": "Section 4: Building Executables in Zig",
+      "content": [
+        "Zig can be integrated well into a C or C++ code base.",
+        "Cross compilation is supported out of the box with LLVM.",
+        "Three build modes are available: speed, size, and safety.",
+        "Zig's build system is designed to be efficient and easy to use."
+      ],
+      "topics": ["Integration with C and C++", "Cross Compilation with LLVM", "Build Modes", "Efficient and Easy-to-Use Build System"]
+    },
+    {
+      "title": "Section 5: Advanced Topics in Zig",
+      "content": [
+        "Zig supports multiple variables together into a struct and access them on that namespace with dot notation.",
+        "Zig has a unique comp time keyword that makes it trivial to run code at kodak compile time.",
+        "Zig integrates well with other programming languages like C and C++.",
+        "Zig's memory management strategies are designed to be efficient and flexible."
+      ],
+      "topics": ["Structs and Namespace Access", "Comp Time Keyword", "Integration with C and C++", "Efficient and Flexible Memory Management"]
+    }
+  ],
+  "topics": ["Zig Overview", "Memory Management Strategies", "Testing Code Outside Main Program", "Efficient and Easy-to-Use Build System", "Structs and Namespace Access", "Comp Time Keyword", "Integration with C and C++", "Efficient and Flexible Memory Management"],
+  "generalTopics": [
+    {
+      "name": "Programming Languages and Software Development",
+      "complexity": 0.61
+    },
+    {
+      "name": "Memory Management",
+      "complexity": 0.59
+    },
+    {
+      "name": "Testing and Debugging",
+      "complexity": 0.49
+    }
+  ]
+}

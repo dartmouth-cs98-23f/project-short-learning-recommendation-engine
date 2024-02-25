@@ -1,0 +1,70 @@
+{
+  "introduction": "In this video, we explore the architectural differences between the vanilla transformer and the architecture of mistral, a new language model from mistral ai. We discuss the sliding window attention, the kv cache, model sharding, and the code of the mistral model. We also touch on the concept of rolling buffer cache and prefilling.",
+  "sections": [
+    {
+      "title": "Section 1: Architectural Differences",
+      "content": [
+        "Comparison between vanilla transformer and mistral architecture.",
+        "Explanation of self attention mechanism in vanilla transformer.",
+        "Importance of mask in self attention.",
+        "Prefilling the kv cache using tokens of the prompt."
+      ],
+      "topics": ["Vanilla Transformer", "Mistral Architecture", "Self Attention", "KV Cache", "Prompt Prefilling"]
+    },
+    {
+      "title": "Section 2: Sliding Window Attention",
+      "content": [
+        "Explanation of sliding window attention.",
+        "Relation to receptive field concept in convolutional neural networks.",
+        "Example of applying sliding window attention to input sequence.",
+        "Understanding next token for each prompt."
+      ],
+      "topics": ["Sliding Window Attention", "Receptive Field", "Input Sequence", "Next Token Determination"]
+    },
+    {
+      "title": "Section 3: Model Sharding",
+      "content": [
+        "Explanation of model sharding.",
+        "Division of the model into groups of layers for GPU placement.",
+        "Example of mistral model with 32 encoder layers.",
+        "Checking embeddings for next token determination."
+      ],
+      "topics": ["Model Sharding", "GPU Placement", "Mistral Model", "Embedding Checking", "Next Token Determination"]
+    },
+    {
+      "title": "Section 4: Code Analysis",
+      "content": [
+        "Comments on the code of the mistral model.",
+        "Study of the shapes and information passing in the tensor.",
+        "Learning about the inner workings of the model.",
+        "Enjoyment of studying the code and learned stuff."
+      ],
+      "topics": ["Mistral Model Code", "Tensor Shapes and Information Passing", "Inner Workings of the Model", "Learned Topics"]
+    },
+    {
+      "title": "Section 5: Conclusion",
+      "content": [
+        "Summary of the main topics covered in the video.",
+        "Discussion on the complexity of the content.",
+        "Call to action for sharing the video.",
+        "Contact information for the speaker."
+      ],
+      "topics": ["Main Topics", "Content Complexity", "Sharing the Video", "Contact Information"]
+    }
+  ],
+  "topics": ["Architectural Differences", "Sliding Window Attention", "Model Sharding", "Code Analysis", "Conclusion"],
+  "generalTopics": [
+    {
+      "name": "Artificial Intelligence (AI) and Machine Learning",
+      "complexity": 0.61
+    },
+    {
+      "name": "Computer Architecture",
+      "complexity": 0.53
+    },
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.59
+    }
+  ]
+}

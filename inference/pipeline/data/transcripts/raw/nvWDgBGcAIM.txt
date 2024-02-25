@@ -1,0 +1,190 @@
+second,duration,transcript
+0.12,4.5,in this video I'm going to show you how
+2.22,4.2,to make a simple 3D blender step by step
+4.62,4.559,the renderer will be capable of
+6.42,5.759,rendering any 3D vertex and rotating it
+9.179,5.161,along X and Y axis this video will not
+12.179,4.141,be very technical I will try my best to
+14.34,4.32,make this topic as simple as possible
+16.32,4.5,I'll be using C plus plus and sdl
+18.66,4.08,library to handle window and drawing 2D
+20.82,3.84,lines but you can follow along in any
+22.74,4.14,language you want I actually made the
+24.66,4.859,same 3D renderer in scratch back when we
+26.88,4.799,had online school and I had really too
+29.519,4.621,much free time so it's really pretty
+31.679,4.801,simple the first problem that we have to
+34.14,4.98,tackle is how do we take a 3D object and
+36.48,4.68,smash it onto a 2d screen the way we do
+39.12,4.619,that is via weak perspective projection
+41.16,4.919,now this perspective despite its name is
+43.739,5.34,pretty powerful basically we can take a
+46.079,5.64,number called vocal length or fov and
+49.079,5.341,use this formula to get projected X when
+51.719,5.401,given x and z we can do the same for y
+54.42,4.86,but how does this formula work alright
+57.12,4.619,so to explain how this equation works we
+59.28,5.16,have our camera we have this some
+61.739,7.441,distance from this camera to the screen
+64.44,7.56,which is called fov in my code or it can
+69.18,6.119,just be called focal length most people
+72.0,5.7,call it that and we have this point that
+75.299,4.5,we want to render so we want to render
+77.7,5.22,it over here
+79.799,6.121,as the projections work
+82.92,7.739,so what we do is we
+85.92,8.28,can draw a cool triangle like that
+90.659,7.081,and this is X this is X this is the
+94.2,5.099,distance from our point to the camera in
+97.74,5.54,the x-axis
+99.299,7.341,this is z this is our fov
+103.28,7.479,this combined is of course
+106.64,6.939,fov plus Z this is our project attacks
+110.759,5.4,so the thing that we're looking for
+113.579,5.58,and with that we have basically two
+116.159,5.221,triangles and these triangles are
+119.159,4.081,basically similar which means that
+121.38,4.68,they're just scaled versions of each
+123.24,7.56,other and the ratios of their sides are
+126.06,6.6,the same so we can write this as a
+130.8,8.9,equation
+132.66,11.579,so this equals x divided by fov plus Z
+139.7,11.32,we can multiply both sides by fov
+144.239,11.701,who got p x equals x times f o v divided
+151.02,7.32,by f o v plus Z which is exactly what
+155.94,3.9,we're looking for now this is cool but
+158.34,3.66,there is no way to get that rotating
+159.84,4.5,effect with this fortunately there's
+162.0,4.2,such thing called rotation Matrix now
+164.34,4.5,this is some fancy map you basically
+166.2,6.06,give it numbers x y z and multiply the
+168.84,5.28,matrices to get the rotated chords now I
+172.26,3.9,would do a video about how to multiply
+174.12,3.899,matrices but I think it's beyond the
+176.16,3.78,scope of this video if you want to learn
+178.019,4.86,that I'm going to link some resources
+179.94,5.46,down below but basically we can just
+182.879,7.021,simplify this form to something a lot
+185.4,6.36,more codable uh let's say so this will
+189.9,4.52,be actually X
+191.76,6.66,y cosine of theta
+194.42,6.42,minus Z sine
+198.42,4.679,of theta
+200.84,3.899,and z
+203.099,4.021,sign
+204.739,5.28,of theta
+207.12,6.24,ma Plus
+210.019,5.08,cosine of theta and this is our final
+213.36,3.9,Matrix
+215.099,5.461,now this can be done for every single of
+217.26,5.039,these rotation matrices and we'll just
+220.56,4.56,get the simplified form that we could
+222.299,5.401,put into our code and have that
+225.12,5.46,basically done all right so we are in
+227.7,6.3,our code base and we first think you see
+230.58,7.019,is we are using sdl which is the library
+234.0,6.659,that will help me basically draw to the
+237.599,5.521,window it's not a 3D Library so there's
+240.659,5.401,nothing helpful in that we just drop to
+243.12,5.94,the window which is cool and we have our
+246.06,5.22,included our renderer
+249.06,4.739,so first thing we do is Define some
+251.28,5.76,points and vertices now basically what
+253.799,6.0,this means is we have a point at this
+257.04,6.06,coordinate at this coordinate and so on
+259.799,8.301,and we have a Vertex between those so we
+263.1,8.3,have between point zero and 0.1 between
+268.1,6.84,0.2 and 0.5
+271.4,7.239,0.5 is here by the way but okay
+274.94,8.319,so this is very cool because it allows
+278.639,7.261,us to get this done we can Define some
+283.259,5.22,other things like thingy which is a
+285.9,5.82,terrible comment by the way uh and
+288.479,6.361,pyramid but I decided to go with Cube
+291.72,6.419,for this presentation uh so first things
+294.84,6.78,first we Define some window by using sdl
+298.139,7.321,we call it 3D renderer and we basically
+301.62,6.24,have the size and it's pretty simple you
+305.46,5.94,don't got to understand that it's just
+307.86,7.08,creating a window and renderer then we
+311.4,7.26,set running to true and we have a loop
+314.94,5.759,while running we also have this renderer
+318.66,7.5,where we pass our points and our
+320.699,9.601,vertices and we have that all set here
+326.16,8.099,and if we request quit so we basically
+330.3,6.6,click this we break the loop and say
+334.259,5.88,running is false and then we just render
+336.9,7.019,so let's actually go to our dot h file
+340.139,5.701,of render 3D here we Define subtracts
+343.919,3.84,that you might be might have been
+345.84,6.6,confused because I didn't explain them
+347.759,6.841,here but we have uh Point 3D which is
+352.44,5.699,basically just a point
+354.6,6.599,there is point 2D which is used to
+358.139,6.12,exploit the screen space and vertex
+361.199,5.461,switch has a start at the end which
+364.259,6.72,basically uses these points
+366.66,8.22,as indexes to we have some private
+370.979,7.94,variables like rotation which is how
+374.88,7.08,rotated we are we have fov which is
+378.919,6.601,explained it Delta time which is just
+381.96,7.38,used to have the frame independent
+385.52,7.72,timing and some window size because we
+389.34,6.84,want this to be centered and renderer
+393.24,4.019,uh the actual brother that we passed
+396.18,2.639,through
+397.259,5.821,and
+398.819,7.081,points and vertices let's go in here we
+403.08,5.64,first of all construct our class
+405.9,5.16,and then we measure time which is useful
+408.72,4.46,because we want basically frame
+411.06,6.66,independent timing
+413.18,7.299,uh which basically means that we want to
+417.72,5.819,rotate once per second for example not
+420.479,5.28,once per 60 frames because 60 frames may
+423.539,5.72,go in one second may go in
+425.759,7.44,uh point zero second point zero yeah
+429.259,7.361,point zero zero one second so we don't
+433.199,6.241,want that uh we uh
+436.62,5.16,set the render color to zero and clear
+439.44,5.039,the window so basically
+441.78,7.139,uh set the Widow to Black
+444.479,7.021,we then switch to White and rotate our
+448.919,4.68,cube a little bit but that's beside the
+451.5,6.5,point then we go through every vertex
+453.599,9.201,using this Auto for Loop and uh
+458.0,9.46,we take a starting point uh from points
+462.8,8.14,rotated rotated y rotated X
+467.46,5.639,and save the rotated Point into a point
+470.94,4.5,3D type
+473.099,4.561,we do the same for endpoint
+475.44,6.42,and then we convert them using
+477.66,6.72,projection function into Point 2D and do
+481.86,4.08,the same for the end point and then we
+484.38,3.36,just drop the line
+485.94,3.9,so let's actually go into protection
+487.74,5.28,function now this should look familiar
+489.84,6.479,if we actually delete these
+493.02,6.84,times 100 it's pretty familiar
+496.319,5.461,this is just used so we can have this in
+499.86,4.38,the middle of the screen and this is
+501.78,5.639,used because we actually have negative
+504.24,6.06,one and we don't want this to be across
+507.419,6.86,one pixel we want it to be 100 pixels
+510.3,3.979,wide yeah 200 actually
+515.459,6.481,uh this is basically this function it's
+517.919,7.261,all what I've shown really rotate X is
+521.94,7.019,exactly what I've shown uh in the last
+525.18,5.219,paint explanation kind of thing it's
+528.959,6.361,exactly the same
+530.399,6.961,and uh we do brought it y also
+535.32,4.639,which is you're just gonna have to trust
+537.36,6.24,me that it works because well it does
+539.959,5.741,and and yeah that's the code so we can
+543.6,5.1,run it
+545.7,6.6,and it works flawlessly it's very nice
+548.7,5.34,Cube that rotates it's very cool so yeah
+552.3,3.78,I would really appreciate if you could
+554.04,5.4,subscribe because this is my first video
+556.08,6.5,and uh yeah thanks for watching
+559.44,3.14,basically bye

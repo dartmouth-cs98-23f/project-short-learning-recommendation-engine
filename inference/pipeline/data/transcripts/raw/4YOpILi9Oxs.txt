@@ -1,0 +1,284 @@
+second,duration,transcript
+0.0,1.86,[Music]
+0.21,3.54,if debugging is the process of removing
+1.86,3.899,software bugs then programming must be
+3.75,4.08,the process of putting them in in most
+5.759,3.991,cases the bugs we introduce are harmless
+7.83,3.57,but sometimes they can cause us to lose
+9.75,3.09,hundreds of millions of dollars in a few
+11.4,2.79,minutes crash airplanes and spaceships
+12.84,2.73,and kill people
+14.19,3.27,today I want to tell you some stories
+15.57,3.66,about the most damaging hacks and bugs
+17.46,3.6,throughout history and explain seven
+19.23,3.389,software security concepts that every
+21.06,3.09,developer should know if you're new here
+22.619,4.17,like and subscribe and check out the
+24.15,4.32,full write-up on bioship i/o there are
+26.789,3.57,billions upon billions of lines of code
+28.47,4.199,in production today around 50 million
+30.359,3.931,lines for Microsoft Windows and over 2
+32.669,3.57,billion lines across all Google services
+34.29,3.51,and within all this code we have
+36.239,3.511,vulnerabilities that have either not yet
+37.8,3.45,been discovered or not yet been fixed
+39.75,3.3,these are known as zero-day
+41.25,4.289,vulnerabilities because as a developer
+43.05,3.75,you have zero days to get it fixed when
+45.539,2.631,a hacker decides to attack this
+46.8,3.779,vulnerability it's known as a zero-day
+48.17,4.27,exploit remember that one time Equifax
+50.579,3.541,had exposed the credit reports of a
+52.44,3.389,hundred and fifty million people that
+54.12,3.3,wasn't the result of a zero-day exploit
+55.829,2.941,it was the result of a known bug and
+57.42,5.729,Apache struts that had already been
+58.77,6.12,fixed weeks ago what sorry guys hackers
+63.149,3.15,apparently from China had been scanning
+64.89,2.85,the web for servers with this
+66.299,3.39,vulnerability they hit the mother lode
+67.74,4.5,with Equifax and extracted sensitive
+69.689,4.11,information over the next 76 days this
+72.24,2.79,breach has cost the company over a
+73.799,2.761,billion dollars and could have been
+75.03,3.51,prevented by installing a simple
+76.56,4.02,security patch being hacked by a known
+78.54,3.869,vulnerability is not uncommon at all in
+80.58,3.45,fact you're likely shipping code with a
+82.409,3.661,lot of known vulnerabilities right now
+84.03,4.26,if you're a j/s developer go into your
+86.07,3.509,project and hit NPM audit it will give
+88.29,2.85,you a breakdown of all the different
+89.579,3.301,ways you can be hacked via your open
+91.14,3.42,source dependencies now there's no
+92.88,3.33,reason to panic if you have hundreds of
+94.56,3.809,high severity alerts the best way to
+96.21,4.019,avoid being hacked is to simply update
+98.369,3.18,your packages but if you truly want to
+100.229,3.091,understand the flaws that are
+101.549,3.301,compromising these packages you should
+103.32,3.39,enroll in the enterprise security course
+104.85,3.39,from angular Academy it's a ten week
+106.71,3.089,long program that will teach you how to
+108.24,3.33,confidently build secure web
+109.799,3.331,applications you'll find the link in the
+111.57,4.2,description and you can use this code to
+113.13,4.32,take $50 off the enrollment price using
+115.77,3.33,components with known vulnerabilities is
+117.45,3.39,one of the most common ways that web
+119.1,3.42,applications get hacked but it's also
+120.84,3.33,very preventable because as you can see
+122.52,3.57,here most of the issues have already
+124.17,4.229,been patched and keep in mind this issue
+126.09,3.899,isn't unique to JavaScript or NPM all
+128.399,3.731,package managers that rely on open
+129.989,4.031,source code face similar issues
+132.13,4.38,so trust nobody and keep your packages
+134.02,5.25,updated but most of all Sammy is my peer
+136.51,4.62,oh wait a second I didn't mean to say
+139.27,4.47,that last part it was somehow injected
+141.13,4.2,into this video back in 2005 a guy named
+143.74,3.57,Sammy used an exploit known as
+145.33,4.23,cross-site scripting to updated users
+147.31,3.81,myspace profile with this text within a
+149.56,2.16,day it had spread to over a million
+151.12,2.22,users
+151.72,3.27,it was mostly harmless but they did a
+153.34,3.78,rest Sammy can victim of a felony and
+154.99,4.29,worst of all took away his internet for
+157.12,4.2,a year a cross-site scripting exploit
+159.28,3.72,occurs when the attacker manages to run
+161.32,3.81,some JavaScript code on a different
+163.0,3.84,users browser there are a few different
+165.13,3.6,ways to achieve this but the most common
+166.84,3.81,way is for the attacker to save the
+168.73,3.66,script in a web applications database
+170.65,3.48,the malicious script will then be
+172.39,3.42,accessed by a different user that will
+174.13,3.57,execute the JavaScript on the client
+175.81,3.69,side device and at that point the
+177.7,3.72,JavaScript code can submit forms click
+179.5,3.99,on buttons on behalf of the logged in
+181.42,3.69,user so how do you avoid cross-site
+183.49,3.54,scripting attacks as a developer
+185.11,3.99,well the attacker first needs to save
+187.03,3.81,some malicious code on your server so
+189.1,4.05,step one is to do some server-side
+190.84,4.05,validation of incoming data if it's
+193.15,3.3,surrounded by script tags you might not
+194.89,4.02,want to save it but let's imagine you
+196.45,4.17,fail to sanitize the incoming data the
+198.91,3.72,attacker still needs a way to run that
+200.62,3.87,script on the client-side device so the
+202.63,3.84,attacker is counting on you to render
+204.49,3.75,out the raw HTML of the script
+206.47,3.3,fortunately modern front-end frameworks
+208.24,3.21,make it really difficult to shoot
+209.77,3.72,yourself in the foot in react for
+211.45,3.93,example if you want to write unsafe code
+213.49,4.05,you have to use this dangerously set
+215.38,4.08,inner HTML prop just to do so
+217.54,3.24,so with cross-site scripting we have
+219.46,3.749,malicious code running on the browser
+220.78,5.01,but it's also possible to run bad code
+223.209,4.351,directly on a database let's go back to
+225.79,3.84,2008 and look at a company named
+227.56,3.54,Heartland Payment Systems a company with
+229.63,3.93,the highest standards and the most
+231.1,3.75,trusted transactions and also a company
+233.56,3.12,if that was the target of one of the
+234.85,3.87,most elaborate and interesting hacks of
+236.68,4.14,all time the attackers first gained
+238.72,4.65,access to the company's databases by
+240.82,4.41,using a technique known as SQL injection
+243.37,2.49,instead of sending the expected data to
+245.23,3.24,the database
+245.86,4.41,they sent raw SQL statements and because
+248.47,3.39,the data was not validated the database
+250.27,3.36,would run this code as if it came from
+251.86,3.599,the developers now this particular
+253.63,3.24,database contain the information that
+255.459,3.391,you would find on the back of a magnetic
+256.87,3.69,strip on a credit card and they use this
+258.85,3.48,stolen data to create counterfeit credit
+260.56,3.27,cards that actually worked it's
+262.33,2.94,estimated that over a hundred million
+263.83,3.809,cards were compromised and
+265.27,3.51,hacker Albert Gonzalez was sentenced to
+267.639,3.361,20 years in prison
+268.78,4.41,injection attacks similar to this effect
+271.0,4.169,many different types of databases if you
+273.19,3.81,use an ORM or object relational mapping
+275.169,3.391,tool for your database you should be
+277.0,2.819,safe from attacks like this but of
+278.56,3.09,course it's always a good idea to
+279.819,4.111,validate your input before it's sent to
+281.65,4.199,your database another very easy way to
+283.93,4.65,create a big problem as a developer is
+285.849,5.07,to expose or leak a sensitive API key
+288.58,4.17,you can think of a private API key as a
+290.919,3.84,username and password and all bundled up
+292.75,3.75,into a single string and it allows your
+294.759,4.38,servers to securely communicate with
+296.5,5.099,paid services like AWS Google cloud and
+299.139,5.131,so on a few years ago I accidentally
+301.599,5.371,leaked my AWS API key and it was almost
+304.27,4.739,really bad I was using the node SDK for
+306.97,4.05,a service that required the API key I
+309.009,3.72,hard-coded the API key directly in a
+311.02,3.84,source code instead of setting it as an
+312.729,4.261,environment variable I then proceeded to
+314.86,7.23,push the source code to a public github
+316.99,6.87,repo a few weeks went by and then all of
+322.09,4.049,a sudden I get a notification from AWS
+323.86,4.38,that I've maxed out my budget when I
+326.139,4.68,logged into my AWS account I had racked
+328.24,4.26,"up charges around $5,000 for ec2"
+330.819,3.69,instances running all over the world
+332.5,3.63,luckily Amazon was nice enough to refund
+334.509,2.371,those charges but it definitely made me
+336.13,3.089,feel like an idiot
+336.88,4.259,nowadays automatic scanners can often
+339.219,4.711,detect if you have an exposed API key
+341.139,4.291,and email you a notification but github
+343.93,3.329,isn't the only place that you might leak
+345.43,3.84,an API key when you include a private
+347.259,4.02,key in a client-side web or mobile app a
+349.27,4.049,hacker might be able to find it directly
+351.279,3.991,in your source code now if you do end up
+353.319,3.811,with an exposed API key you can fix the
+355.27,3.929,problem by simply rolling it to a new
+357.13,4.649,value and of course we're moving it from
+359.199,4.321,any public repos or source code many
+361.779,3.241,good API s will help you minimize the
+363.52,4.019,damage by allowing you to assign
+365.02,4.139,privileges to a specific API key this
+367.539,3.66,allows you to follow the principle of
+369.159,3.69,least privilege and only give API keys
+371.199,3.181,access to the resources that they
+372.849,2.88,actually need that will mitigate the
+374.38,3.569,amount of damage that can be done if
+375.729,4.081,that key does end up being leaked if we
+377.949,3.571,look at a major cloud provider like AWS
+379.81,3.3,will see that they offer hundreds of
+381.52,3.119,different services and they might be
+383.11,3.45,used by a company with thousands of
+384.639,4.471,employees working on different projects
+386.56,4.38,sharing a single API key that has access
+389.11,4.049,to everything would be a very bad idea
+390.94,4.259,instead the major cloud providers have a
+393.159,3.54,system called i.m which allows you to
+395.199,3.871,create groups or roles for your
+396.699,4.201,organization once you've created a role
+399.07,3.89,can attach a policy to that role to give
+400.9,4.32,it access to a service that it needs
+402.96,3.82,implementing fine-grained access control
+405.22,4.32,over your data is more important than
+406.78,5.16,ever in 2016 an employee of Morrison's
+409.54,4.8,supermarkets in the UK stole the private
+411.94,4.35,"data of over 100,000 employees this"
+414.34,4.77,rogue employee did it by simply copying
+416.29,4.71,the data onto a USB stick now this is
+419.11,4.05,obviously unethical and illegal on the
+421.0,4.35,employees part but the company itself is
+423.16,3.84,facing a huge lawsuit and the penalties
+425.35,4.38,for data breaches are becoming larger
+427.0,4.44,with laws like GDP are in the EU so the
+429.73,2.91,bottom line here is to always follow the
+431.44,3.03,principle of least privilege when it
+432.64,4.08,comes to accessing your customer or
+434.47,3.48,employee data in speaking of data you
+436.72,4.02,might come across something called the
+437.95,4.05,CIA triad it's a model for data security
+440.74,3.36,that stands for confidentiality
+442.0,3.84,integrity and availability
+444.1,3.36,generally speaking you make data
+445.84,3.78,confidential by implementing user
+447.46,4.65,authentication so only authorized users
+449.62,4.2,can access the data integrity it means
+452.11,3.24,the data can't be accidentally modified
+453.82,3.12,or deleted without the users
+455.35,3.27,authorization but I think the most
+456.94,4.14,interesting question is how do you make
+458.62,4.98,your data highly available in 2018
+461.08,4.2,github survive the biggest DDoS attack
+463.6,2.61,or a distributed denial of service
+465.28,3.12,attack in history
+466.21,3.66,it took github down for less than 10
+468.4,2.91,minutes but that's still a pretty big
+469.87,3.3,deal considering how many people around
+471.31,4.44,the world depend on github at any given
+473.17,4.29,moment a DDoS attack works by flooding a
+475.75,3.75,service with so much traffic that it
+477.46,3.93,just fails to scale and completely stops
+479.5,3.96,working you can see in this chart how
+481.39,3.63,the inbound traffic suddenly spiked but
+483.46,3.39,the server's treated these as legitimate
+485.02,4.17,requests and responded with a normal
+486.85,4.02,response github is big enough to handle
+489.19,4.41,attacks like this but smaller sites
+490.87,4.08,might not be so lucky in some cases DDoS
+493.6,3.3,attacks have been used to shut down a
+494.95,3.6,service and then request a ransom from
+496.9,4.17,the owner so how do you protect yourself
+498.55,4.5,well the simple answer is to be ready to
+501.07,4.02,scale and that likely means using a big
+503.05,3.48,cloud provider a service like Google
+505.09,3.12,cloud armor has the bandwidth to handle
+506.53,3.06,attacks like this and it can also
+508.21,3.18,prevent many other attacks that we
+509.59,3.36,talked about earlier in the video but at
+511.39,3.87,the end of the day nobody's application
+512.95,3.81,is 100% safe there are likely hackers
+515.26,3.089,out there right now using zero-day
+516.76,3.18,exploits that we don't know about yet
+518.349,3.151,and it's only a matter of time before
+519.94,3.18,the next major data breach is in the
+521.5,3.27,headlines if this video helped you
+523.12,2.88,please like and subscribe and make sure
+524.77,3.06,to check out the enterprise security
+526.0,3.99,course if you really want to master
+527.83,2.56,these concepts thanks for watching and I
+529.99,2.88,will
+530.39,2.48,talk to you soon
+533.04,8.17,[Music]

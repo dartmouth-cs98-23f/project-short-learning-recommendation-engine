@@ -1,0 +1,963 @@
+second,duration,transcript
+10.26,2.878,"You might not realize it,
+but we are surrounded by CPUs,"
+13.138,2.794,"or processors, and the
+computing they do for us."
+15.932,2.544,"They touch every aspect
+of our lives."
+18.476,3.212,"CPUs are in your laptop, in the
+machines you use to check out"
+21.688,2.586,"at the grocery store, in the
+electronics that power the"
+24.274,2.002,"instruments in your
+car more efficiently."
+26.276,2.502,"They enable our artists and
+scientists to create things"
+28.778,3.045,"that were
+unimaginable only yesterday."
+31.823,4.421,"CPUs are everywhere, and shape
+just about everything we do."
+36.244,2.836,"Welcome to Architecture All
+Access CPU"
+39.08,1.46,Architecture Part Two.
+51.342,3.671,"Hi, my name is Boyd Phelps,
+and over the last 23 years I've"
+55.013,2.044,"had the privilege of working on
+some of the most well known"
+57.057,1.918,"chip designs
+in Intel's history."
+58.975,1.96,"From the architectural
+definition and design of"
+60.935,3.587,"the Pentium 4, to designing
+the Nehalem, Westmere, Haswell,"
+64.522,2.711,"Broadwell and Tiger Lake
+processors and many more."
+67.233,2.253,"Today, I help lead the
+development of Intel's Client"
+69.486,2.252,"Engineering Teams, where I
+oversee the development of"
+71.738,2.586,current and future products.
+74.324,3.003,"In Part One of the CPU
+Architecture series, we talked"
+77.327,2.961,"about what CPUs are,
+the history of the CPU,"
+80.288,3.003,"the concept of computing
+abstraction layers, as well as"
+83.291,1.877,"the
+instruction Set Architecture."
+85.168,1.668,"The instruction set
+architecture is what we"
+86.836,3.754,"normally refer to as the
+architecture of a CPU."
+90.59,2.711,"Today we want to delve into
+what the microarchitecture of a"
+93.301,3.212,"CPU looks like, or in
+other words, once an ISA"
+96.513,2.961,"is defined, how you might go
+about implementing that ISA"
+99.474,3.378,"into a microarchitecture,
+and what the main building"
+102.852,3.254,"blocks of the functions of that
+microarchitecture would be."
+106.106,0.875,So let's dive in.
+112.529,3.086,"A microarchitecture is an
+implementation or specific"
+115.615,2.377,"design of an
+instruction set architecture."
+117.992,3.045,"The first step is to fetch or
+retrieve the instructions from"
+121.037,2.711,"memory so that the
+CPU knows what the program"
+123.748,1.502,wants executed.
+125.25,2.419,"This is called the
+Fetch stage."
+127.669,2.836,"The next step is to decode the
+fetched instructions"
+130.505,1.877,into native operations.
+132.382,2.377,"This is called the
+Decode stage."
+134.759,3.003,"Sometimes this means taking the
+instructions and breaking them"
+137.762,2.503,"down into
+multiple internal operations."
+141.599,2.962,"Once the instructions have
+been decoded, the CPU needs"
+144.561,1.668,to execute them.
+146.229,2.92,"There are many different
+types of operations."
+149.149,3.336,"The CPU can perform
+math such as add, subtract,"
+152.485,3.212,"multiply, divide, or perform
+boolean operations"
+155.697,3.253,"such as AND, OR, XOR, NOT."
+158.95,3.503,"The CPU also compares data,
+makes decisions about where to"
+162.453,1.502,go next in the code.
+163.955,3.212,"We call these decision
+instructions ""branches"" as they"
+167.167,2.502,"can steer code
+to different places."
+169.669,2.836,"There are many other
+operations CPUs perform,"
+172.505,3.295,"depending on the ISA and what
+we call the Execute stage."
+176.968,2.669,"Finally, the CPU will
+store those results."
+179.637,2.962,"Sometimes those are saved
+locally in a register,"
+182.599,2.127,"and sometimes they're
+stored in memory."
+184.726,2.252,"This is called the
+Write Back stage."
+186.978,3.253,"These operations make up the
+basic building blocks of"
+190.231,1.585,every modern CPU.
+191.816,2.669,"When put together, they are
+referred to as"
+194.485,1.544,the CPU's pipeline.
+201.534,3.754,"Now that we have described a
+basic pipeline, what do modern"
+205.288,1.793,microprocessors look like?
+207.081,3.254,"Over time, the average number
+of pipeline stages has grown."
+210.335,2.711,"A pipeline is very
+similar to an assembly line."
+213.046,2.586,"The more stages are added,
+the less is done in"
+215.632,1.585,each individual stage.
+217.217,2.335,"Now when Henry Ford wanted to
+drive down the cost of the"
+219.552,3.295,"Model T, he built an assembly
+line with many stages."
+222.847,3.337,"This made each stage simpler,
+allowing workers to specialize"
+226.184,2.169,in one specific task.
+228.353,2.586,"This, in turn, allowed workers
+to do their tasks at"
+230.939,3.086,"the same time,
+in a pipeline fashion."
+234.025,3.462,"The result was an automotive
+revolution that put cars into"
+237.487,2.711,"the hands of more
+people at a lower price."
+241.241,1.918,CPUs are very similar.
+243.159,2.92,"In general, the more pipeline
+stages you have, the faster"
+246.079,3.044,"each stage can run, and the
+more stages are being"
+249.123,1.961,done in parallel.
+251.084,3.795,"A modern microprocessor has
+around 15 to 20 stages."
+254.879,2.586,"The Fetch and Decode stages
+typically have six to"
+257.465,1.418,10 stages.
+258.883,2.586,"Collectively, these are called
+the ""Front End"
+261.469,1.794,of the microprocessor.
+263.263,3.753,"Execute and Write Back have
+also grown into roughly six"
+267.016,1.335,to 10 stages.
+268.351,3.67,"These are called the ""Back End""
+of the microprocessor."
+272.021,2.169,"A CPU's
+pipeline is synchronous,"
+274.19,2.461,"and what we mean by that is
+each pipeline is controlled"
+276.651,4.046,"by a clock, and each data goes
+from one pipeline stage to the"
+280.697,3.42,"next as a CPU clock
+completes a cycle."
+284.117,2.669,"The number of stages partially
+determines what the peak"
+286.786,2.669,frequency of a CPU is.
+289.455,3.295,"Now modern day CPUs
+can run over five gigahertz."
+292.75,2.586,"The amount of logic in each of
+these stages determines how"
+295.336,2.753,"fast the stages or
+clock can operate."
+298.089,2.628,"If a CPU runs
+at five gigahertz, this means"
+300.717,3.628,"that the stages each need to
+complete in five-billionths"
+304.345,1.126,of a second.
+305.471,3.754,"Remember, a hertz is one
+cycle per second."
+309.225,3.045,"Now, Henry Ford would be pretty
+impressed with the assembly"
+312.27,2.669,"line speed of
+today's modern CPUs."
+320.278,2.252,"If you recall
+our basic pipeline, at the"
+322.53,1.919,"beginning we
+fetch an instruction,"
+324.449,3.128,"and towards the end we
+execute the instructions."
+327.577,3.795,"Some of these instructions
+are called branches."
+331.372,2.878,"These represent a decision
+point or ""fork in the road"
+334.25,1.71,like an exit on a highway.
+335.96,3.212,"Do we want to keep going or do
+we need to exit now to take a"
+339.172,1.626,different path?
+340.798,4.296,"When you execute a branch,
+you are making that decision."
+345.094,3.337,"As the pipeline depth grows,
+you get farther and farther"
+348.431,3.211,"away from the answer
+of which path to take."
+351.642,3.254,"When the branch says to take a
+different path, we need to tell"
+354.896,2.294,"the beginning of the pipeline
+to redirect to"
+357.19,1.835,a different instruction.
+359.025,4.004,"The work that was in progress
+needs to be thrown away."
+363.029,2.377,"This is both bad for
+performance as well"
+365.406,3.003,"as for power, since we have
+been spending time executing"
+368.409,1.961,"instructions that were not
+needed for"
+370.37,2.002,the program's execution.
+372.372,4.379,"We could avoid speculation
+simply by stopping every time"
+376.751,4.046,"we saw a branch, and just wait
+for it to execute and tell us"
+380.797,2.043,"the correct direction in the
+code to go."
+382.84,1.252,This would be safe.
+384.092,1.167,It would also be slow.
+386.844,2.962,"However, there are a lot of
+branches in most code, and that"
+389.806,2.836,"means a lot of
+time spent waiting."
+392.642,3.003,"So we guess where to go next,
+and when we see a branch and if"
+395.645,2.335,"we're wrong, we'll simply throw
+away all the work after the"
+397.98,2.002,"branch once we know
+we were wrong."
+399.982,3.462,"If we were right,
+we celebrate and keep going."
+403.444,2.795,"As pipelines get longer,
+the penalty for guessing"
+406.239,2.544,wrong gets worse.
+408.783,3.67,"Fetch becomes further away
+from Execute, which means it"
+412.453,3.295,"takes us more stages to realize
+that we are executing on"
+415.748,1.251,the wrong path.
+416.999,3.17,"To solve this,
+microprocessors invest heavily"
+420.169,2.419,"in design to
+make accurate predictions,"
+422.588,2.67,"or guesses, at the beginning
+of the pipeline."
+425.258,3.545,"We call this the art
+of branch prediction."
+428.803,2.586,"When we see that we have gone
+down the wrong path, we can"
+431.389,3.837,"update or refine the prediction
+with what the right path was."
+435.226,2.753,"Then the next time we see
+that address, the branch"
+437.979,2.627,"predictor can tell us to
+go to a different address."
+440.606,3.254,"Modern CPU architectures can
+often predict branches with a"
+443.86,1.71,"near perfect accuracy that
+makes them"
+445.57,2.335,seem almost clairvoyant.
+447.905,2.753,"When a microprocessor executes
+newer instructions than a"
+450.658,3.253,"branch without knowing if that
+branch is taken or not, it is"
+453.911,3.17,"referred to
+as ""speculative execution."
+457.081,3.796,"This is a fundamental component
+in modern microprocessors for"
+460.877,2.544,achieving great performance.
+463.421,2.127,"OK, so let's look at some
+simple code to explain"
+465.548,2.002,how speculation works.
+467.55,4.004,"Here we have a
+very small, simple C program."
+471.554,2.544,"All we're doing is counting
+to four hundred."
+474.098,2.252,"And the way we do
+this is we have two loops."
+476.35,2.962,"We have an outer loop that
+loops one hundred times, and we"
+479.312,3.003,"have an inner loop that
+loops four times."
+482.315,2.377,"And every time we get into the
+inner loop, we increment"
+484.692,1.502,this c variable.
+486.194,3.378,"And so since we loop 100 times
+on the outer, times four on"
+489.572,3.128,"the inner,
+we increment 400 times."
+492.7,2.961,"So here we have the
+instructions run by the CPU."
+495.661,2.628,"This is the native language
+of the CPU, where we've taken"
+498.289,2.336,"that C program, and we've
+compiled it down into the"
+500.625,1.459,language that it understands.
+502.084,2.169,"And we'll just highlight each
+of these instructions and tell"
+504.253,1.46,you kind of what they do.
+505.713,2.336,"At the top you
+have a ""mov"" instruction,"
+508.049,3.086,"for example, that moves
+0 into this i variable."
+511.135,2.378,"Remember, if you look at the
+C program, this i variable is"
+513.513,1.96,"the counter for our
+outer loop."
+515.473,1.418,"We have a ""cmp"" instruction."
+516.891,1.376,This is a compare instruction.
+518.267,2.628,"It compares that i
+variable to 99."
+520.895,3.42,"And right after that we
+have ""jg"", a jump"
+524.315,1.376,greater than instruction.
+525.691,2.461,"So if that is true, if the
+compare of i is greater"
+528.152,2.92,"than 99, then we're going to
+jump or we're going to branch"
+531.072,1.042,to Label2.
+532.114,3.17,"If that's not true then we
+ignore and we just move down"
+535.284,1.377,"and look at
+the mov instruction."
+536.661,1.585,"Again, we see
+for the inner loop"
+538.246,1.376,another compare instruction.
+539.622,4.004,"We're comparing j, the counter
+for the inner loop, to 3,"
+543.626,2.127,"and we have a branch
+instruction right after that"
+545.753,4.171,"compare that says we jump
+if j is greater than 3."
+549.924,2.711,"And when we do that we
+increment the outer loop by 1."
+552.635,3.67,"That's that ""add i,
+1"" instruction, and then we"
+556.305,2.586,"jump back up to
+the top of .Label5."
+558.891,2.711,"Now, on the inside of
+the inner loop, where we move c"
+561.602,5.297,"into eax, we add 1 to eax,
+we move eax into c, and then we"
+566.899,1.168,increment that outer variable.
+568.067,4.129,"So the c to eax, 1 to a eax,
+and eax to c, those are the"
+572.196,2.086,"move instructions where we're
+moving from memory to"
+574.282,2.544,"an internal register, but you
+see the add instruction;"
+576.826,1.793,there we're adding 1 to eax.
+578.619,2.836,"There's where we're actually
+incrementing that inner"
+581.455,1.377,variable of c.
+582.832,2.294,"When we get to these jump
+greater than instructions,"
+585.126,2.002,"this is the first
+time it's seen its branch."
+587.128,3.128,"And so we can either stop
+the execution, we can allow the"
+590.256,3.211,"compare in the branch to
+actually go through, and we can"
+593.467,3.087,"wait until they execute,
+they resolve and then we know"
+596.554,3.378,"where to go to next, or we can
+actually make a prediction"
+599.932,1.418,and keep fetching.
+601.35,3.295,"Now, let's assume that we had
+decided to start our prediction"
+604.645,3.379,"by assuming all branches
+are taken, meaning that they're"
+608.024,2.544,"true and that we're going
+to go to their label."
+610.568,2.377,"If we had done that the very
+first time that we go through"
+612.945,3.504,"this code, when we see the jump
+greater than go to .Label2,"
+616.449,3.336,"if we assume that was true,
+we would jump to .Label2."
+619.785,3.671,"In the code we would figure out
+that was wrong in the execution"
+623.456,2.627,"of the pipeline, and then we
+would flush all of"
+626.083,1.585,"the pipeline, all of the work
+that we've done in"
+627.668,2.461,"the pipeline, we would resteer
+the front end, and then we go"
+630.129,1.835,"tell our
+branch prediction algorithm,"
+631.964,2.294,"Hey, you predicted wrong."
+634.258,2.836,"That branch was actually not
+taken."" And then we would"
+637.094,1.085,update our algorithm.
+638.179,1.96,"And then the next time we
+came through, we would see that"
+640.139,2.544,"branch and it would say, ""Hey,
+jump greater than."" And"
+642.683,2.419,"we would say, ""Nope, not taken
+."" That's our prediction,"
+645.102,1.71,"and we would move
+fast, and we would fetch"
+646.812,3.128,"the mov instruction, and we
+would come down and execute the"
+649.94,2.336,"inner loop and we would go
+through the same thing with the"
+652.276,2.669,"the branch, the compare on the
+branch on the inner loop."
+654.945,3.546,"Now, what's interesting here on
+this inner loop, we go through"
+658.491,1.543,that loop four times.
+660.034,2.502,"The first three times
+through the loop, that branch"
+662.536,1.001,is not taken.
+663.537,4.213,"On the fourth, it's true,
+because j is greater than 3."
+667.75,3.879,"And so therefore, we do want to
+jump out of that inner loop."
+671.629,3.712,"So our prediction algorithm,
+it would actually learn."
+675.341,2.294,"It would actually learn that
+the first three times for that"
+677.635,3.17,"inner loop, it's not taken,
+and on the fourth time that"
+680.805,1.209,it is taken.
+682.014,2.378,"So in our
+speculation algorithm, we may"
+684.392,2.544,"stumble through this the
+first time, but we execute this"
+686.936,1.418,loop a hundred times.
+688.354,2.461,"By the second iteration of
+this loop, we've learned how"
+690.815,1.418,this branch behaves.
+692.233,3.587,"So again, this is a simple code
+example from C that we compiled"
+695.82,2.21,"into instructions that the
+machine can understand, so you"
+698.03,3.128,"can kind of highlight and see
+how these branches control the"
+701.158,3.17,"flow of the code, and how it is
+that the machine has to make"
+704.328,1.877,"different decisions at
+different points of time"
+706.205,1.001,in the code.
+707.206,3.128,"Think of speculation,
+and speculative execution,"
+710.334,2.711,"as when I visit
+my aunt in the countryside."
+713.045,2.461,"As I'm driving on a country
+road and I get to a fork where"
+715.506,2.711,"I need to decide if
+I turn left or right."
+718.217,2.753,"And I really haven't
+been there before, and I can"
+720.97,2.961,"call my aunt, but I know she
+normally takes up a while to"
+723.931,2.377,"pick up, and even when
+she does, she'll get talking"
+726.308,2.711,"about a few topics before I can
+ask her the question, ""Should I"
+729.019,3.337,"go left or should I go right?""
+So I look around and I see some"
+732.356,2.252,"houses on the right at a
+distance, so I decide to"
+734.608,0.96,go in that direction.
+735.568,2.711,"And on the way there, I call my
+aunt and sure enough, it takes"
+738.279,2.252,"me a few minutes before I can
+get my question in, and it"
+740.531,3.128,"looks like I choose correctly,
+so by the time she confirms I"
+743.659,3.003,"went the right direction,
+I'm almost by her house."
+746.662,2.211,"And obviously, if I had
+guessed wrong, I would have to"
+748.873,2.878,"go back to the fork
+and go in the other direction."
+751.751,2.752,"This is what speculation
+on a CPU is like."
+754.503,2.92,"The CPU makes a prediction on
+what direction the branch might"
+757.423,2.252,"take and begins executing
+instructions based"
+759.675,1.001,on that direction.
+760.676,3.837,"And as I said, modern CPUs can
+often predict branches with a"
+764.513,1.669,"near perfect accuracy that
+makes them"
+766.182,1.501,seem almost clairvoyant.
+773.606,2.252,"Now that we have a good
+understanding of pipelines"
+775.858,2.628,"and speculation, let's talk
+about what functions go into"
+778.486,3.753,"the first half of the
+front end of a microprocessor."
+782.239,2.92,"Now, branch predictors have
+become incredibly complex in"
+785.159,2.628,"order to improve their accuracy
+while still being able to steer"
+787.787,3.128,"fetching of instructions at
+a high frequency."
+790.915,3.42,"Branch predictors today can
+oftentimes record and"
+794.335,2.461,"understand and learn the past
+history of hundreds,"
+796.796,2.46,"sometimes even more than that,
+thousands of branches before"
+799.256,3.087,"them in order to make a single
+prediction of the next branch"
+802.343,1.585,and where it is going.
+803.928,3.295,"The sophistication of modern
+day branch predictors is really"
+807.223,2.46,"kind of a precursor, if one
+might think in terms of"
+809.683,2.336,"artificial intelligence,
+in terms of learning from"
+812.019,2.836,"past behavior, how the
+future will behave."
+814.855,2.378,"They've become so accurate that
+they are now in charge of"
+817.233,3.128,"deciding which address to
+fetch next, even if the"
+820.361,2.711,"prediction ends up being ""Keep
+calm and carry on."
+824.24,2.586,"Now, CPU frequencies have
+increased much faster"
+826.826,1.209,than memory speeds.
+828.035,3.587,"This means it takes longer to
+fetch data from memory."
+831.622,3.003,"And to help offset the long
+round trip time to main"
+834.625,3.337,"memory and back, we keep local
+copies of main memory"
+837.962,3.295,"internally in
+structures called Caches."
+841.257,2.043,"The front end has an
+Instruction Cache so that it"
+843.3,2.878,"can read instructions in just
+one to two cycles instead of"
+846.178,1.919,"the hundreds it may take
+to go to main memory."
+849.557,2.752,"To optimize both
+power and performance,"
+852.309,3.17,"many adjacent instructions are
+fetched at the same time,"
+855.479,2.753,"which are then handed off
+to the decoders."
+858.232,2.836,"If the instruction cache does
+not have the data, then the"
+861.068,2.669,"data is requested from
+the memory subsystem, and we'll"
+863.737,1.001,talk more about this later.
+865.781,3.629,"The main goal of the front end
+of a CPU pipeline is to ensure"
+869.41,2.961,"that there are always enough
+instructions available for the"
+872.371,3.504,"back end to execute, and to
+avoid the idle time spent"
+875.875,3.169,"waiting for instruction
+bytes from memory, or time"
+879.044,2.253,"spent fetching instructions
+that will end up being thrown"
+881.297,2.294,"away due to a
+bad branch prediction."
+889.305,2.419,"The second half of the front
+end is where the program's"
+891.724,2.794,"instructions are decoded into
+the microarchitecture's"
+894.518,5.547,"internal operations, which are
+called micro-operations, or uOps for short."
+900.065,2.044,"This is the strongest
+connection between the"
+902.109,3.504,"instruction set architecture
+and the microarchitecture."
+905.613,3.169,"As we explained in part one
+of the series, in general"
+908.782,2.92,"instructions consist of an
+opcode, the operation"
+911.702,4.213,"to be performed, like ADD,
+and a number of operands,"
+915.915,4.921,"the data to be operated on,
+like add A in register X to B"
+920.836,1.335,in memory location Y.
+923.297,3.503,"ISA instructions often also
+include additional bits of data"
+926.8,2.837,"that give the CPU more
+information relevant to"
+929.637,3.628,"the operation, which the CPU
+uses to decode and execute the"
+933.265,2.419,"instruction in an efficient
+way, according to"
+935.684,1.919,its microarchitecture.
+937.603,2.961,"Microarchitectures are
+typically built so that most"
+940.564,4.505,"instructions map directly into
+a single uOp, but not all."
+945.069,3.295,"This helps us to simplify the
+back end of the pipeline."
+949.74,1.877,"However, there are
+often some instructions which"
+951.617,2.669,"are more complex, and
+may need to generate multiple"
+954.286,1.585,uOps for instruction.
+955.871,2.336,"Instructions like these helped
+reduce the number of"
+958.207,2.586,"instructions required for
+the program, which in turn"
+960.793,3.712,"makes the program code smaller
+and easier to store in memory."
+964.505,5.213,"We simply expand them into the
+uOps needed inside the CPU."
+969.718,3.295,"Conversely, decoders can also
+fuse multiple adjacent"
+973.013,1.877,"instructions into
+a single uOp."
+974.89,3.796,"This fusion can allow a micro
+architecture to do more work at"
+978.686,2.335,"the same time,
+leading to improved"
+981.021,2.002,performance and efficiency.
+983.023,3.045,"For example, most branches are
+usually preceded by a compare"
+986.068,3.754,"instruction just before the
+actual jump is executed."
+989.822,2.878,"Whenever we see these two
+instructions together, we can"
+992.7,3.128,"simply fuse them together into
+one instruction for the back"
+995.828,2.878,"end of the machine for more
+efficient execution since the"
+998.706,3.211,"compare and jump
+use separate resources."
+1001.917,1.919,"So don't worry if you don't
+understand all of this"
+1003.836,3.128,"right now, but just know that
+the instructions and the ISA"
+1006.964,2.753,"can get broken down
+into multiple uOps,"
+1009.717,3.795,"or combined, or they
+get simply decoded as simple"
+1013.512,2.085,single instruction uOps.
+1015.597,3.129,"The front end is always looking
+at how to decode and prepare"
+1018.726,2.627,"those instructions to
+be executed efficiently."
+1021.353,3.212,"Some microarchitectures create
+a Decode Cache and save these"
+1024.565,2.252,"uOps for the next time they
+need to be decoded."
+1026.817,2.461,"This can save the energy
+required to decode them and"
+1029.278,2.502,"improve performance when
+one-to-many expansion"
+1031.78,1.001,is common.
+1032.781,1.752,"After the
+instructions are decoded,"
+1034.533,2.669,"or read from the decode cache,
+they are then passed to the"
+1037.202,1.168,back end of the pipeline.
+1044.209,3.379,"Before we dive into how the
+back end of a microprocessor"
+1047.588,2.377,"is built, let's take
+a moment to understand"
+1049.965,1.919,two important topics.
+1051.884,3.42,"The first is
+superscalar execution."
+1055.304,3.336,"The simplest form of execution
+is an arithmetic logic unit,"
+1058.64,1.794,or ALU for short.
+1060.434,2.461,"A basic ALU
+can perform operations like"
+1062.895,2.085,adds and subtracts.
+1064.98,4.546,"If we have a single ALU this
+means we can do one add at"
+1069.526,4.463,"a time, which is referred to
+as scalar execution."
+1073.989,3.921,"Modern microprocessors now
+implement many ALUs, and when"
+1077.91,3.044,"those ALUs can operate
+in parallel, this is called"
+1080.954,2.336,superscalar execution.
+1083.29,2.961,"The number of operations that
+can be executed in parallel is"
+1086.251,4.755,"one way to measure what we call
+the width of a microprocessor."
+1091.006,3.462,"All modern microprocessors
+are superscalar."
+1094.468,3.086,"This increases the demand on
+the front end, which is why"
+1097.554,2.836,"it's important to design a
+front end that can feed"
+1100.39,2.67,"instructions quickly to
+the back end."
+1103.06,2.502,"Now, depending on the
+target usage, designers can"
+1105.562,3.796,"always decide to increase the
+superscalar ability of the SoC"
+1109.358,4.546,"by also adding more CPU cores
+in addition to more functional"
+1113.904,2.002,"execution blocks
+within those cores."
+1121.537,3.795,"In a basic microarchitecture,
+the uOps are executed in"
+1125.332,4.505,"program order, which is called
+""in order execution."
+1129.837,3.044,"However, in order to provide
+the best performance and"
+1132.881,3.087,"energy efficiency,
+executing them ""out of order"
+1135.968,3.336,"is actually better,
+allowing code to execute faster"
+1139.304,3.128,"as we remove
+unnecessary wait times."
+1142.432,2.378,"Imagine you're
+running a restaurant."
+1144.81,2.711,"You have tables full of
+customers and you have many"
+1147.521,2.044,"cooks in the kitchen and you
+want all your customers"
+1149.565,1.126,to be happy.
+1150.691,2.961,"You could let the first table
+seated order and eat first,"
+1153.652,2.252,"and then move to
+the second table, but you would"
+1155.904,2.92,"likely go out of business
+quickly as everyone watched the"
+1158.824,0.751,first table eat.
+1160.659,3.545,"Instead, you hire a wait staff
+who take each order from each"
+1164.204,2.252,"table as the table is
+ready to order."
+1166.456,2.503,"These are passed off
+to the kitchen, where the order"
+1168.959,1.126,of the dishes are planned...
+1170.085,1.71,"Appetizer,
+main course,"
+1171.795,3.003,"dessert, and they're handed out
+to the different cooks."
+1174.798,2.711,"The food is brought out to the
+tables as it is ready,"
+1177.509,3.42,"allowing your wait staff to
+execute in parallel."
+1180.929,2.211,"This is out of
+order execution."
+1183.14,2.627,"You take the order from
+the front end, you look at the"
+1185.767,3.337,"individual dishes, the uOps,
+and you decide how and when to"
+1189.104,3.796,"make and serve the food or
+execute those instructions."
+1192.9,2.252,"You have happy
+customers and a fast,"
+1195.152,2.002,efficient microprocessor.
+1202.534,3.837,"This is what it would look like
+with actual CPU instructions."
+1206.371,3.379,"The first step in an out of
+order back end is to take the"
+1209.75,1.835,"uOps provided by
+the front end and"
+1211.585,1.627,determine their dependencies.
+1213.212,4.045,"A uOp is said to be dependent
+on an older uOp when it needs"
+1217.257,3.295,"the result of that uOp in order
+to do its own operation."
+1220.552,2.795,"This dependency is
+tracked by a process"
+1223.347,1.501,called Register Renaming.
+1224.848,3.337,"This is the first step
+in out of order execution."
+1228.185,3.086,"This step takes up to somewhere
+between two and four stages in"
+1231.271,1.46,a modern microprocessor.
+1232.731,3.003,"The uOp information is also
+written in a structure called"
+1235.734,2.127,"a reorder buffer, or a ROB."
+1237.861,2.294,"Even though we execute
+instructions out of order,"
+1240.155,2.836,"we still need to have a
+way to put them back in order."
+1242.991,3.212,"The reorder buffer gives us the
+ability to understand the"
+1246.203,2.044,original program order.
+1248.247,2.669,"This process is called
+Allocation, and is"
+1250.916,3.211,"another way in which the width
+of a microarchitecture"
+1254.127,1.043,can be determined.
+1255.17,1.919,"This is the
+most common definition."
+1257.089,2.836,"Since there are ALUs in
+an out of order microprocessor,"
+1259.925,4.046,"we must determine which
+ALU can execute a uOp."
+1263.971,2.877,"There could be multiple
+instances of the same ALU,"
+1266.848,3.212,"and there can also be different
+types of ALUs that can perform"
+1270.06,2.002,different types of operations.
+1272.062,2.377,"Some can do integer
+operations, or whole"
+1274.439,3.128,"number math, while others may
+do floating point operations,"
+1277.567,2.211,"or decimal or
+fractional based math."
+1279.778,2.628,"Some ALUs can operate on
+multiple elements at the"
+1282.406,2.711,"same time,
+referred to as vectors."
+1285.117,3.42,"Branch operations may also have
+their own execution unit."
+1288.537,3.253,"The uOps must be assigned
+to an ALU that can execute"
+1291.79,1.502,their particular operation.
+1294.501,2.836,"They are then sent to the uOp
+scheduler for delivery to"
+1297.337,1.877,the required ALU.
+1299.214,3.462,"A scheduler is a place where
+uOps wait until their dependent"
+1302.676,2.002,operations have executed.
+1304.678,2.085,"And once these dependencies
+have been resolved,"
+1306.763,3.254,"and they're cleared, the uOps
+are then free to go, and could"
+1310.017,2.961,"be sent to an available
+ALU and execute."
+1314.062,3.254,"When a uOp has executed and
+becomes the oldest uOp in"
+1317.316,2.669,"the back end, the ROB decides
+that the uOp can be"
+1319.985,1.501,written back safely.
+1321.486,3.17,"This process
+is called Retirement."
+1324.656,2.753,"Let me illustrate that
+with an example."
+1327.409,3.045,"Here we see six instructions
+that are being fed to the back"
+1330.454,0.834,end of our CPU.
+1332.372,2.336,"The first three
+are integer operations."
+1334.708,2.002,"The others are some
+vector operation,"
+1336.71,2.669,some divides and multiplies.
+1339.379,2.461,"You can see that the second
+instruction depends on the"
+1341.84,3.754,"result of the first one,
+since both of these use the"
+1345.594,2.252,same operand G1.
+1347.846,2.711,"So we can schedule the
+first instruction, have the"
+1350.557,2.795,"second operation wait in the
+scheduler, but since the"
+1353.352,3.586,"third operation isn't dependent
+on the first two, we can assign"
+1356.938,2.002,"that to an ALU
+already and let it go."
+1358.94,2.253,"Similarly, the fourth
+instruction can be sent to a"
+1361.193,1.835,vector ALU right away.
+1363.028,2.961,"The fifth Instruction will need
+to wait for the fourth one"
+1365.989,3.837,"to execute, but the sixth one
+is not dependent on anything,"
+1369.826,2.127,"so it also can be
+sent right away."
+1371.953,2.753,"And so you would see
+something like this, where the"
+1374.706,3.003,"four instructions that are not
+dependent on anything can be"
+1377.709,4.213,"sent all at once to different
+integer and vector ALUs,"
+1381.922,2.502,"while on the next cycle,
+we can have the next set"
+1384.424,1.377,of instructions execute.
+1385.801,3.044,"We were able to execute many of
+these instructions in parallel"
+1388.845,2.711,"and out of order,
+thereby increasing the"
+1391.556,2.878,"performance of the CPU while
+still making sure that the"
+1394.434,3.629,"dependencies were kept, so we
+get the correct answer and the"
+1398.063,1.626,correct results at the end.
+1399.689,3.17,"Obviously, this is a simple
+example with six instructions,"
+1402.859,2.92,"but you can probably imagine
+how useful it is to have these"
+1405.779,3.42,"out of order and superscalar
+capabilities in real code that"
+1409.199,3.337,"runs millions of instructions,
+operating at billions of cycles"
+1412.536,2.21,"per second, looking at
+thousands of instructions."
+1420.794,2.878,"So let's recap what we
+discussed in the second part of"
+1423.672,2.127,our CPU architecture module.
+1425.799,3.086,"We covered some of the basic
+building blocks of CPU design,"
+1428.885,2.67,"such as the von
+Neumann cycle of Fetch, Decode,"
+1431.555,3.42,"Execute, and Write Back, how a
+pipeline's depth is determined"
+1434.975,2.252,"by the number of
+stages those basic functions"
+1437.227,3.17,"are broken into, and how
+speculation is used to"
+1440.397,3.086,"increase CPU performance,
+trying to always guess where"
+1443.483,3.128,"code is going in
+order to avoid wait times."
+1446.611,3.337,"We then dove into the
+CPU front end, where the CPU"
+1449.948,3.42,"predicts what instructions are
+needed next, fetches them,"
+1453.368,4.338,"and decodes them
+into micro-operations, or uOps."
+1457.706,2.836,"From the front end, we move to
+the back end, which takes the"
+1460.542,4.379,"decoded uOps and uses super
+scalar execution and out of"
+1464.921,2.461,"order execution to efficiently
+assign uOps to"
+1467.382,1.668,execution units.
+1469.05,2.586,"I want to thank you
+for your time, and I hope we've"
+1471.636,2.378,"not only been able to give you
+an appreciation for both"
+1474.014,3.587,"the science, but also
+the art of CPU design."
+1477.601,2.794,"It's truly a
+creative endeavor."
+1480.395,3.003,"We've come a long way since the
+days of the ENIAC and"
+1483.398,3.504,"vacuum tubes, but perhaps what
+excites me the most is the rate"
+1486.902,3.295,"at which innovation continues
+to progress in both CPU and"
+1490.197,1.459,system-on-chip design.
+1491.656,3.128,"Engineers across the various
+disciplines of architecture,"
+1494.784,4.255,"design, process technology,
+memory, packaging, and software"
+1499.039,2.544,"development are collaborating
+in new ways that will drive"
+1501.583,3.211,"performance and solutions to
+problems of the future that we"
+1504.794,2.044,can barely imagine today.
+1506.838,3.587,"If the last few decades have
+been a marvel, I think it's"
+1510.425,3.462,"fair to say to you,
+you haven't seen anything yet."
+1513.887,2.794,"This has been
+Architecture All Access CPU"
+1516.681,1.377,Architecture Part Two.

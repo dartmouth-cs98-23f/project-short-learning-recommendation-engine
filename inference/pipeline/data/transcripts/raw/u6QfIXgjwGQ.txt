@@ -1,0 +1,82 @@
+second,duration,transcript
+0.24,3.52,software it's not like engineering
+2.0,2.799,something easy like a bridge where you
+3.76,2.96,start with a blueprint
+4.799,4.001,build it to spec then forget about it
+6.72,3.999,software is dynamic with a lot of moving
+8.8,2.32,parts and requirements that evolve over
+10.719,2.161,time
+11.12,3.679,developers build apps on top of a
+12.88,4.0,mountain of abstractions and nobody
+14.799,3.761,fully understands how every layer works
+16.88,3.04,that's okay because we just need to make
+18.56,3.12,sure that our code matches the
+19.92,3.68,requirements of the product test driven
+21.68,3.359,development is scientifically proven to
+23.6,3.36,reduce defects and improve the
+25.039,3.761,maintainability of a code base but it
+26.96,4.0,does require some additional effort
+28.8,4.0,one option is manual testing where a
+30.96,3.439,human being clicks on every button and
+32.8,3.12,fills out every form then assigns a
+34.399,3.041,bunch of jira tickets so they can be
+35.92,3.04,backlogged by the developers
+37.44,3.6,but that's not very efficient for a
+38.96,3.759,large scale product a better approach is
+41.04,3.519,to use automated testing tools that
+42.719,3.601,allow developers to write code for the
+44.559,3.68,sole purpose of testing the main
+46.32,3.6,application code in a code base you'll
+48.239,4.081,often find files that end in
+49.92,4.24,test or dot spec inside you'll first
+52.32,3.759,find a line of code that describes the
+54.16,3.68,feature or thing that's being tested
+56.079,4.081,that's known as a test suite and it
+57.84,4.32,contains one or more individual tests
+60.16,3.76,an individual test usually starts with
+62.16,3.999,it followed by a description
+63.92,3.92,of what is being tested the idea is to
+66.159,3.041,describe the behavior of the code in
+67.84,2.88,human readable terms
+69.2,3.2,inside the test the code will be
+70.72,4.0,executed then one or more
+72.4,3.84,expectations or assertions are used to
+74.72,3.36,check that the code produces the
+76.24,3.76,expected result if the expectation
+78.08,4.48,returns false then the test fails
+80.0,3.6,if it's true it passes test runners like
+82.56,2.72,jest or karma
+83.6,3.28,can run all your tests automatically in
+85.28,3.6,the background or on a continuous
+86.88,3.76,integration server before you deploy
+88.88,3.12,now there are many different automated
+90.64,2.0,testing strategies that you should be
+92.0,2.479,aware of
+92.64,3.519,at the most granular level we have unit
+94.479,3.28,testing which is designed to test
+96.159,2.96,individual functions or methods
+97.759,3.36,like does this function return the
+99.119,2.241,proper value when given the arguments of
+101.119,2.32,a
+101.36,3.36,and b then we have integration testing
+103.439,3.441,to determine how well different
+104.72,3.039,components or modules work together like
+106.88,2.64,is the component
+107.759,3.441,able to use the database service to get
+109.52,3.52,data from the server at the highest
+111.2,3.68,level we have end-to-end testing which
+113.04,2.399,usually happens in a mock browser or
+114.88,2.8,device
+115.439,3.761,and simulates actual user behaviors like
+117.68,2.0,clicking on buttons and filling out
+119.2,2.32,forms
+119.68,3.119,it's like having a robot to do all your
+121.52,2.959,manual testing for you
+122.799,3.841,and that's not all there are many other
+124.479,3.121,types like performance and smoke testing
+126.64,2.88,which i'll explain
+127.6,3.2,in my upcoming test driven development
+129.52,2.88,breakdown hit the like button if you
+130.8,3.519,want to see more short videos like this
+132.4,5.04,thanks for watching and i will see you
+134.319,3.121,in the next one

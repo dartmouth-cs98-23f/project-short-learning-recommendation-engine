@@ -1,0 +1,313 @@
+second,duration,transcript
+0.08,4.32,ever wondered how large enterprise scale
+2.48,4.48,systems are designed
+4.4,4.159,before major software development starts
+6.96,3.44,we have to choose a suitable
+8.559,4.08,architecture that will provide us
+10.4,4.399,with the desired functionality and
+12.639,4.72,quality attributes
+14.799,4.081,according to wikipedia an architectural
+17.359,3.68,pattern is a general
+18.88,3.36,reusable solution to a commonly
+21.039,3.281,occurring problem in
+22.24,3.52,software architecture within a given
+24.32,4.0,context
+25.76,4.24,in this video i will briefly explain the
+28.32,3.919,most important architectural
+30.0,3.76,patterns used in the enterprise app
+32.239,4.721,development today
+33.76,5.68,pattern one layered pattern this is the
+36.96,3.599,most common architecture pattern that is
+39.44,4.56,also known as the
+40.559,6.881,entire architecture here the software
+44.0,6.32,is divided into units called layers
+47.44,4.4,there are usually four tiers of layers
+50.32,4.48,presentation layer
+51.84,3.28,application layer business logic layer
+54.8,3.599,and
+55.12,4.56,data access layer each of the layers has
+58.399,4.32,a specific role
+59.68,4.96,and responsibility for example the
+62.719,5.44,presentation layer is usually
+64.64,5.44,responsible for handling user interface
+68.159,4.32,among the advantages of the layered
+70.08,5.12,pattern is that a lower layer can be
+72.479,5.441,used by different higher layers
+75.2,4.72,however this pattern performs poorly in
+77.92,4.0,the high performance applications
+79.92,4.0,because it is not efficient to go
+81.92,3.76,through multiple layers to fulfill a
+83.92,4.16,business request
+85.68,4.88,the layered pattern is usually used in
+88.08,5.6,building general desktop applications
+90.56,5.199,as well as relatively simple web apps it
+93.68,3.28,is a good choice for situations with a
+95.759,4.241,very tight budget
+96.96,6.24,and time constraints pattern 2
+100.0,3.84,pipe filter pattern in many enterprise
+103.2,2.959,apps
+103.84,3.68,a single event triggers a sequence of
+106.159,4.401,processing steps
+107.52,3.919,each performing a specific function for
+110.56,2.96,example
+111.439,3.441,let's assume a new customer order
+113.52,3.599,arrives
+114.88,4.64,one requirement may be that the message
+117.119,5.121,is encrypted to prevent eavesdroppers
+119.52,4.48,from spying on a customer's order
+122.24,3.04,a second requirement is that the
+124.0,3.759,messages contain
+125.28,4.319,authentication information in the form
+127.759,4.241,of a digital certificate
+129.599,4.401,to ensure that orders are placed only by
+132.0,4.319,trusted customers
+134.0,5.12,to meet these requirements we need to
+136.319,5.28,transform a stream of complex messages
+139.12,3.839,into a stream of unique simple plain
+141.599,4.72,text order messages
+142.959,5.441,without additional data fields the pipes
+146.319,3.841,and filters architecture divides a
+148.4,4.32,larger processing task
+150.16,3.68,into a sequence of smaller independent
+152.72,3.36,processing steps
+153.84,3.039,or filters that are connected by
+156.08,3.6,channels or
+156.879,3.761,pipes the pattern is often used in
+159.68,3.04,compilers
+160.64,3.599,where the consecutive filters perform
+162.72,4.32,lexical analysis
+164.239,4.08,parsing semantic analysis and code
+167.04,4.64,generation
+168.319,5.521,pattern three client server pattern
+171.68,4.48,in the client server architecture there
+173.84,4.0,are two main components
+176.16,3.52,the client which is the service
+177.84,4.56,requester and the server
+179.68,4.32,which is the service provider although
+182.4,4.24,both client and server
+184.0,5.04,may be located within the same system
+186.64,4.08,they often communicate over a network on
+189.04,3.919,separate hardware
+190.72,4.159,the advantage of using the client server
+192.959,3.92,pattern is an ease of modeling
+194.879,3.601,a set of services where clients can
+196.879,3.841,request them
+198.48,4.399,among the disadvantages of this pattern
+200.72,2.879,is that the server can be a performance
+202.879,3.681,bottleneck
+203.599,3.441,and a single point of failure on top of
+206.56,2.239,that
+207.04,4.24,decisions about where to locate
+208.799,3.201,functionality in the client or in the
+211.28,3.519,server
+212.0,5.12,are often complex and costly to change
+214.799,4.641,after a system has been built
+217.12,4.0,typical real-world use cases of the
+219.44,4.079,client server pattern include
+221.12,6.08,online applications such as email
+223.519,6.8,document sharing and banking pattern 4
+227.2,5.039,model view controller pattern the user
+230.319,3.84,interface is typically the most
+232.239,4.08,frequently modified portion of an
+234.159,4.64,interactive application
+236.319,4.161,how can user interface functionality be
+238.799,2.8,kept separate from application
+240.48,3.36,functionality
+241.599,4.881,and yet still be responsive to user
+243.84,4.399,input or to changes in the underlying
+246.48,4.08,applications data
+248.239,4.0,and how can multiple views of the user
+250.56,4.0,interface be created
+252.239,5.441,maintained and coordinated when the
+254.56,5.44,underlying application data changes
+257.68,3.6,the solution is to use the model view
+260.0,2.96,controller pattern
+261.28,3.919,which separates application
+262.96,3.6,functionality into three kinds of
+265.199,3.361,components
+266.56,4.079,model which contains the core
+268.56,4.4,functionality and data
+270.639,3.041,view which displays the information to
+272.96,3.36,the user
+273.68,3.84,where more than one view may be defined
+276.32,4.24,and controller
+277.52,5.36,which handles the input from the user
+280.56,4.56,the model view controller pattern is
+282.88,5.92,commonly used in the web frameworks
+285.12,7.12,such as django and rails pattern five
+288.8,4.08,event bus pattern the modern enterprise
+292.24,3.2,software
+292.88,4.96,is often built as a distributed system
+295.44,3.12,that can service asynchronously arriving
+297.84,3.76,messages
+298.56,5.359,associated with high volume of events
+301.6,3.28,the event bus pattern has four major
+303.919,3.601,components
+304.88,4.159,event source event listener channel and
+307.52,4.08,event bus
+309.039,5.041,sources publish messages to particular
+311.6,4.4,channels on an event bus
+314.08,3.119,listeners subscribe to particular
+316.0,3.36,channels
+317.199,4.081,listeners are notified of messages that
+319.36,4.16,are published to a channel to which they
+321.28,4.72,have subscribed before
+323.52,4.0,the advantage of using this pattern is
+326.0,4.0,that new publishers
+327.52,3.679,subscribers and connections can be added
+330.0,3.44,easily
+331.199,3.681,however the scalability might be a
+333.44,3.599,problem for this pattern
+334.88,3.28,as all messages travel through the same
+337.039,3.761,bus
+338.16,4.0,the event bus pattern is often used in
+340.8,4.0,android development
+342.16,3.84,e-commerce applications and notification
+344.8,5.119,services
+346.0,6.24,pattern six micro services architecture
+349.919,4.481,the modern enterprise apps are required
+352.24,5.36,to support a variety of browsers
+354.4,4.079,and native mobile clients these days the
+357.6,3.28,applications
+358.479,4.16,usually handle client requests by
+360.88,4.319,executing business logic
+362.639,4.0,accessing a database exchanging messages
+365.199,4.72,with other systems
+366.639,5.84,and returning responses in this regard
+369.919,5.12,monolithic applications can become too
+372.479,4.241,large and complex for efficient support
+375.039,4.401,and deployment
+376.72,4.56,the solution is to build applications as
+379.44,4.56,micro services
+381.28,3.68,each service is independently deployable
+384.0,4.319,and scalable
+384.96,4.799,and has its own api boundary different
+388.319,3.521,services can be written
+389.759,3.601,in different programming languages
+391.84,4.639,manage their own database
+393.36,4.959,and developed by different teams many
+396.479,3.761,use cases are applicable for a
+398.319,3.761,microservices architecture
+400.24,4.0,especially those that involve an
+402.08,5.28,extensive data pipeline
+404.24,5.2,pattern 7 broker pattern
+407.36,4.239,this pattern is used to structure
+409.44,3.759,distributed systems with decoupled
+411.599,3.681,components
+413.199,4.881,these components can interact with each
+415.28,5.199,other by remote service invocations
+418.08,4.88,a broker component is responsible for
+420.479,4.961,the coordination of communication among
+422.96,4.799,components servers publish their
+425.44,4.159,capabilities to a broker
+427.759,4.481,clients request a service from the
+429.599,4.641,broker and the broker then redirects the
+432.24,3.28,client to a suitable service from its
+434.24,3.519,registry
+435.52,3.6,the broker pattern allows for dynamic
+437.759,4.081,change addition
+439.12,4.0,deletion and relocation of objects and
+441.84,4.479,it makes distribution
+443.12,5.28,transparent to the developer however
+446.319,4.081,among the disadvantages of the broker
+448.4,5.199,pattern is that it requires
+450.4,5.199,standardization of service descriptions
+453.599,3.681,this pattern is often used in the
+455.599,5.361,message broker software
+457.28,7.359,such as apache activenq apache kafka
+460.96,6.72,rabbit and q and jboss messaging
+464.639,5.521,pattern 8 peer-to-peer pattern
+467.68,4.48,in this pattern individual components
+470.16,4.479,are known as peers
+472.16,4.8,peers may function both as a client
+474.639,4.881,requesting services from other peers
+476.96,4.079,and as a server providing services to
+479.52,4.0,other peers
+481.039,3.041,a peer may act as a client or as a
+483.52,3.28,server
+484.08,4.799,or as both and it can change its role
+486.8,4.079,dynamically with time
+488.879,3.76,the peer-to-peer pattern supports
+490.879,4.16,decentralized computing
+492.639,4.0,and is highly robust in the failure of
+495.039,4.321,any given node
+496.639,4.0,besides it is highly scalable in terms
+499.36,4.48,of resources and
+500.639,4.24,computing power however there is no
+503.84,3.52,guarantee about
+504.879,3.921,quality of service as nodes cooperate
+507.36,4.239,voluntarily
+508.8,3.44,on top of that security is difficult to
+511.599,3.281,ensure
+512.24,4.719,and the system performance often depends
+514.88,4.48,on the number of nodes
+516.959,3.121,this pattern is used in the file sharing
+519.36,3.84,networks
+520.08,3.92,such as ganutella and g2 multimedia
+523.2,4.319,protocols
+524.0,5.519,such as p2ptv and pdtp
+527.519,4.561,as well as in cryptocurrency based
+529.519,5.601,products such as bitcoin
+532.08,5.36,pattern 9 blackboard pattern
+535.12,4.32,this pattern is useful for problems for
+537.44,3.92,which no deterministic solution
+539.44,4.399,strategies are known
+541.36,4.0,the blackboard pattern consists of three
+543.839,4.0,main components
+545.36,3.039,blackboard which is a structured global
+547.839,2.641,memory
+548.399,3.041,containing objects from the solution
+550.48,3.039,space
+551.44,4.64,knowledge source which is specialized
+553.519,4.961,modules with their own representation
+556.08,3.199,control component which selects
+558.48,4.16,configures
+559.279,3.68,and executes modules all the components
+562.64,3.36,have
+562.959,3.601,access to the blackboard components may
+566.0,2.64,produce
+566.56,3.68,new data objects that are added to the
+568.64,3.84,blackboard
+570.24,3.76,components look for particular kinds of
+572.48,3.68,data on the blackboard
+574.0,4.72,and may find these by pattern matching
+576.16,4.96,with the existing knowledge source
+578.72,4.48,the advantage of using this pattern is
+581.12,2.56,that extending the structure of the data
+583.2,4.0,space
+583.68,4.64,is easy however modifying the structure
+587.2,4.72,of the data space
+588.32,5.84,is hard as all applications are affected
+591.92,3.28,this pattern is often used in speech
+594.16,3.359,recognition
+595.2,4.639,protein structure identification and
+597.519,5.601,summer signals interpretation
+599.839,6.0,pattern 10 master slave pattern
+603.12,3.279,this pattern consists of two parties
+605.839,3.201,master
+606.399,4.241,and slaves the master component
+609.04,4.56,distributes the work among
+610.64,5.12,identical slave components and computes
+613.6,4.0,a final result from the results which
+615.76,4.24,the slaves return
+617.6,3.04,the advantage of using the master slave
+620.0,3.2,pattern
+620.64,3.36,is the accuracy in which the execution
+623.2,3.12,of a service
+624.0,4.32,is delegated to different slaves with
+626.32,4.72,different implementations
+628.32,5.759,however this pattern can only be applied
+631.04,5.6,to a problem that can be decomposed
+634.079,4.241,the master slave pattern is usually used
+636.64,4.0,in database replications
+638.32,3.92,where the master database is regarded as
+640.64,4.0,the authoritative source
+642.24,3.52,and the slave databases are synchronized
+644.64,3.36,to it
+645.76,4.079,if you found this video useful i would
+648.0,2.8,appreciate it if you smash the like
+649.839,2.721,button
+650.8,3.52,also make sure to subscribe to the
+652.56,4.399,coding tech channel and click
+654.32,7.44,on the notification bell enjoy the rest
+656.959,4.801,of your day

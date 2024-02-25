@@ -1,0 +1,171 @@
+second,duration,transcript
+1.199,5.35,speaking of markets a lot of fascinating
+4.029,5.341,aspects of this world arise not from
+6.549,5.731,individual humans but from the
+9.37,5.37,interaction of human beings you've done
+12.28,5.37,a lot of work in game theory first can
+14.74,5.64,you say what is game theory and how does
+17.65,5.28,help us model and study yeah game theory
+20.38,4.98,of course let us give credit where it's
+22.93,4.98,due they don't comes from the economist
+25.36,4.77,first and foremost but as I'd mentioned
+27.91,5.219,before like you know computer scientists
+30.13,4.79,never hesitate to wander into other
+33.129,4.5,people's turf and so there is now this
+34.92,4.72,20 year old field called algorithmic
+37.629,5.601,game theory but you know game game
+39.64,5.91,theory first and foremost is a
+43.23,6.19,mathematical framework for reasoning
+45.55,7.169,about collective outcomes in systems of
+49.42,6.18,interacting individuals you know so you
+52.719,5.64,need at least two people to get started
+55.6,4.11,in game theory and many people are
+58.359,3.87,probably familiar with prisoner's
+59.71,4.67,dilemma as kind of a classic example of
+62.229,5.251,game theory and a classic example where
+64.38,5.08,everybody looking out for their own
+67.48,4.02,individual interests leads to a
+69.46,4.86,collective outcome that's kind of worse
+71.5,4.74,for everybody then what might be
+74.32,4.68,possible if they cooperate it for
+76.24,6.26,example but cooperation is not an
+79.0,6.09,equilibrium in prisoner's dilemma and so
+82.5,4.66,my work and the field of algorithmic
+85.09,6.54,game theory more generally in these
+87.16,7.71,areas kind of looks at settings in which
+91.63,6.09,the number of actors is potentially
+94.87,5.13,extraordinarily large and their
+97.72,5.58,incentives might be quite complicated
+100.0,5.25,and kind of hard to model directly but
+103.3,4.26,you still want kind of algorithmic ways
+105.25,4.08,of kind of predicting what will happen
+107.56,6.06,or influencing what will happen in the
+109.33,7.08,design of platforms so what to you is
+113.62,6.12,the most beautiful idea that you've
+116.41,5.6,encountered in game theory there's a lot
+119.74,5.43,of them I'm a big fan of the field I
+122.01,5.98,mean you know I mean technical answers
+125.17,5.549,to that of course would include Nash's
+127.99,4.38,work just establishing that you know
+130.719,4.1,there there's a competitive equilibrium
+132.37,5.36,under very very general circumstance
+134.819,6.9,which in many ways kind of put the field
+137.73,5.489,on a firm conceptual footing because if
+141.719,3.42,you don't have equilibria it's kind of
+143.219,3.75,hard to ever reason about what might
+145.139,4.11,happen since you know there's just no
+146.969,4.38,stability so just the idea that
+149.249,3.841,stability can emerge when there's
+151.349,3.301,multiple who or that it means not that
+153.09,3.149,it will necessarily emerge just that
+154.65,3.33,it's possible right it's like the
+156.239,4.62,existence of equilibrium doesn't mean
+157.98,5.189,that sort of natural iterative behavior
+160.859,4.71,will necessarily lead to it in the real
+163.169,3.811,world yeah maybe answering a slightly
+165.569,3.12,less personally than you asked the
+166.98,4.229,question I think within the field of
+168.689,7.101,algorithmic game theory perhaps the
+171.209,6.45,single most important kind of technical
+175.79,4.0,contribution that's been made is the
+177.659,4.771,real the the realization between close
+179.79,4.05,connections between machine learning and
+182.43,3.66,game theory and in particular between
+183.84,3.69,game theory and the branch of machine
+186.09,4.259,learning that's known as no regret
+187.53,5.459,learning and and this sort of provides a
+190.349,6.03,freight a very general framework in
+192.989,6.42,which a bunch of players interacting in
+196.379,4.591,a game or a system each one kind of
+199.409,3.51,doing something that's in their
+200.97,4.229,self-interest will actually kind of
+202.919,4.88,reach an equilibrium and actually reach
+205.199,6.271,an equilibrium in a you know a pretty
+207.799,7.631,you know a rather you know short amount
+211.47,8.489,of steps so you kind of mentioned acting
+215.43,8.459,greedily can somehow end up pretty good
+219.959,7.77,for everybody or pretty bad or pretty
+223.889,6.69,bad it will end up stable yeah right and
+227.729,5.641,you know stability or equilibrium by
+230.579,4.891,itself is not that is not necessarily
+233.37,3.42,either a good thing or a bad thing so
+235.47,3.299,what's the connection between machine
+236.79,4.02,learning and the ideas well if we kind
+238.769,4.8,of talked about these ideas already in
+240.81,5.159,in kind of a non-technical way which is
+243.569,4.771,maybe the more interesting way of
+245.969,6.961,understanding them first which is you
+248.34,7.53,know we have many systems platforms and
+252.93,5.19,apps these days that work really hard to
+255.87,5.76,use our data and the data of everybody
+258.12,6.9,else on the platform to selfishly
+261.63,5.64,optimize on behalf of each user okay so
+265.02,3.51,you know let me let me give what the
+267.27,3.57,cleanest example
+268.53,4.58,which is just driving apps navigation
+270.84,5.58,apps like you know Google Maps and ways
+273.11,5.95,where you know miraculously compared to
+276.42,4.26,when I was growing up at least you know
+279.06,3.3,the objective would be the same when you
+280.68,3.93,wanted to drive from point A to point B
+282.36,4.53,spend the least time driving not
+284.61,4.5,necessarily minimize the distance but
+286.89,4.44,minimize the time right and when I was
+289.11,4.23,growing up like the only resources you
+291.33,3.9,had to do that were like maps in the car
+293.34,4.77,which literally just told you what roads
+295.23,6.24,were available and then you might have
+298.11,5.13,like half hourly traffic reports just
+301.47,3.42,about the major freeways but not about
+303.24,4.65,side roads so you were pretty much on
+304.89,4.44,your own and now we've got these apps
+307.89,3.9,you pull it out and you say I want to go
+309.33,4.83,from point A to point B and in response
+311.79,4.29,kind of to what everybody else is doing
+314.16,4.71,if you like what all the other players
+316.08,4.77,in this game are doing right now here's
+318.87,4.23,the the you know the the route that
+320.85,5.19,minimizes your driving time so it is
+323.1,5.79,really kind of computing a selfish best
+326.04,4.83,response for each of us in response to
+328.89,4.92,what all of the rest of us are doing at
+330.87,5.1,any given moment and so you know I think
+333.81,6.54,it's quite fair to think of these apps
+335.97,7.11,as driving or nudging us all towards the
+340.35,5.97,competitive or Nash equilibrium of that
+343.08,4.589,game now you might ask like well that
+346.32,5.28,sounds great why is that a bad thing
+347.669,7.861,well you know it's it's known both in
+351.6,9.81,theory and with some limited studies
+355.53,7.5,from actual like traffic data that all
+361.41,3.54,of us being in this competitive
+363.03,4.32,equilibrium might cause our collective
+364.95,4.77,driving time to be higher may be
+367.35,4.92,significantly higher than it would be
+369.72,4.17,under other solutions and then you have
+372.27,4.47,to talk about what those other solutions
+373.89,4.38,might be and what what the algorithms to
+376.74,3.179,implement them are which we do discuss
+378.27,5.16,in the kind of game theory chapter of
+379.919,7.171,the book but but similarly you know on
+383.43,6.12,social media platforms or on Amazon you
+387.09,4.26,know all these algorithms that are
+389.55,4.17,essentially trying to optimize our
+391.35,4.2,behalf they're driving us in a
+393.72,4.17,colloquial sense towards some kind of
+395.55,3.96,competitive equilibrium and you know one
+397.89,3.12,of the most important lessons of game
+399.51,2.79,theory is that just because we're at
+401.01,3.689,equilibrium doesn't mean that
+402.3,4.64,there's not a solution in which some or
+404.699,4.261,maybe even all of us might be better off
+406.94,3.789,and then the connection to machine
+408.96,3.739,learning of course is that in all these
+410.729,3.87,platforms I've mentioned the
+412.699,3.97,optimization that they're doing on our
+414.599,3.63,behalf is driven by machine learning you
+416.669,3.541,know like predicting where the traffic
+418.229,3.601,will be predicting what products I'm
+420.21,4.4,gonna like predicting what would make me
+421.83,2.78,happy in my newsfeed
+430.74,2.06,you

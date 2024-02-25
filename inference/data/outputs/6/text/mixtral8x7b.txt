@@ -1,0 +1,100 @@
+{
+  "introduction": {
+    "content": [
+      "Introduction to the new language model Mistral from Mistral AI.",
+      "Explanation of the differences between the vanilla transformer and the Mistral architecture.",
+      "Discussion of the sliding window attention and its relation to the concept of receptive field.",
+      "Introduction to the kv cache and its role in inferencing."
+    ],
+    "topics": [
+      "Mistral AI",
+      "Vanilla Transformer",
+      "Sliding Window Attention",
+      "Kv Cache"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Section 1: Architectural Differences between Vanilla Transformer and Mistral",
+      "content": [
+        "Explanation of the differences between the vanilla transformer and the Mistral architecture.",
+        "Discussion of the sliding window attention and its relation to the concept of receptive field.",
+        "Introduction to the kv cache and its role in inferencing."
+      ],
+      "topics": [
+        "Vanilla Transformer",
+        "Mistral Architecture",
+        "Sliding Window Attention",
+        "Kv Cache"
+      ]
+    },
+    {
+      "title": "Section 2: Understanding the Sliding Window Attention",
+      "content": [
+        "Explanation of the sliding window attention.",
+        "Discussion of its relation to the concept of receptive field.",
+        "Introduction to the kv cache and its role in inferencing."
+      ],
+      "topics": [
+        "Sliding Window Attention",
+        "Receptive Field",
+        "Kv Cache"
+      ]
+    },
+    {
+      "title": "Section 3: Introduction to the Kv Cache and Its Role in Inferencing",
+      "content": [
+        "Introduction to the kv cache and its role in inferencing.",
+        "Discussion of its use in the Mistral architecture.",
+        "Explanation of how the kv cache is related to the sliding window attention."
+      ],
+      "topics": [
+        "Kv Cache",
+        "Inferencing",
+        "Mistral Architecture",
+        "Sliding Window Attention"
+      ]
+    },
+    {
+      "title": "Section 4: Understanding the Feed Forward Layer in Mistral",
+      "content": [
+        "Explanation of the feed forward layer in the Mistral architecture.",
+        "Discussion of how it differs from the vanilla transformer's feed forward layer.",
+        "Introduction to the ceu function and its role in the feed forward layer."
+      ],
+      "topics": [
+        "Feed Forward Layer",
+        "Mistral Architecture",
+        "Vanilla Transformer",
+        "ceu Function"
+      ]
+    },
+    {
+      "title": "Section 5: Comparing Mistral 7b and Mistral 8x 7b",
+      "content": [
+        "Comparison of the two models: Mistral 7b and Mistral 8x 7b.",
+        "Discussion of their differences in terms of parameter dim, head dimension, and number of heads.",
+        "Explanation of how the group query attention works in the Mistral architecture."
+      ],
+      "topics": [
+        "Mistral 7b",
+        "Mistral 8x 7b",
+        "Parameter Dim",
+        "Head Dimension",
+        "Number of Heads",
+        "Group Query Attention"
+      ]
+    }
+  ],
+  "topics": [
+    "Mistral AI",
+    "Vanilla Transformer",
+    "Sliding Window Attention",
+    "Kv Cache"
+  ],
+  "general topics": [
+    {"topic": "Artificial Intelligence (AI) and Machine Learning", "complexity": 0.75},
+    {"topic": "Computer Architecture", "complexity": 0.85},
+    {"topic": "Data Science and Analytics", "complexity": 0.95}
+  ]
+}

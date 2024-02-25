@@ -1,0 +1,41 @@
+{
+    "highLevelSummary": "The article explores the reasons why the 'select \*' SQL syntax can be slower in a relational database system. Discussed reasons include the impact of return times, network aspects, programming logic, memory management, and data size. Each section is further divided into sub-sections. Section 1 provides an overview of the subject, Section 2 discusses the basics of database pages and their fixed size, and Section 3 elaborates on the performance factors of reading rows from a page in a relational database.",
+    "sections": [
+        {
+            "title": "Section 1: Introduction",
+            "content": [
+                "The article explores why the 'select \*' SQL syntax can be slow in a relational database."
+            ]
+        },
+        {
+            "title": "Section 2: Basics of Database Pages",
+            "content": [
+                "Database pages are fixed size, and their size varies depending on the database implementation. Postgres and MySQL are examples of databases using fixed-size pages."
+            ]
+        },
+        {
+            "title": "Section 3: Performance of Reading Rows",
+            "content": [
+                "The database will perform a full table scan if there is no index. This means reading page by page in the file and can increase the query processing time."
+            ]
+        },
+        {
+            "title": "Section 4: Network Aspects",
+            "content": [
+                "Network transfer can affect query performance when accessing remote data."
+            ]
+        },
+        {
+            "title": "Section 5: Programming Logic",
+            "content": [
+                "The use of indexes can impact performance. Indexes require additional storage, and their creation and maintenance can be expensive."
+            ]
+        },
+        {
+            "title": "Section 6: Memory Management",
+            "content": [
+                "In memory storage of data can improve query performance, but it requires more memory."
+            ]
+        }
+    ]
+}

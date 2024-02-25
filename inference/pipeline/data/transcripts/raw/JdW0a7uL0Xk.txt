@@ -1,0 +1,780 @@
+second,duration,transcript
+5.6,2.96,good morning everyone
+9.04,4.639,welcome to the quantum dev room happy to
+12.4,4.08,see that many people
+13.679,5.36,found a room i want to introduce the
+16.48,4.719,first speaker of the day which is tomasz
+19.039,4.16,thomas holds two master degrees one in
+21.199,3.281,theoretical computer science and one in
+23.199,3.281,cyber security
+24.48,4.0,and he's one of the co-founders of the
+26.48,5.039,quantum open source foundation
+28.48,4.239,and the biotech startup protein cure
+31.519,3.681,and he has worked with most of the
+32.719,4.0,different quantum hardware architectures
+35.2,3.12,and deeply believes in the value of
+36.719,4.16,combining quantum computing
+38.32,7.52,and open source so please welcome the
+40.879,4.961,speaker with me
+49.52,3.679,all right guys can you can you hear me
+51.28,3.84,okay it seems like uh
+53.199,3.281,the volume is okay maybe a little bit
+55.12,4.32,too loud
+56.48,3.36,um all right first of all welcome to the
+59.44,3.84,room
+59.84,6.639,we ended up having a little bit
+63.28,4.64,um of an emergency reshuffling our
+66.479,4.561,original room
+67.92,6.32,got flooded by here so that's why we're
+71.04,6.56,in this bigger space
+74.24,6.08,so this is this room is organized by
+77.6,5.12,the quantum open source foundation and
+80.32,5.36,we are happy to be at fosdem again
+82.72,3.36,um last year was our first year being
+85.68,3.92,here
+86.08,5.999,and we really enjoyed it so
+89.6,5.12,we're really happy to be here again this
+92.079,5.841,time in uh in a bigger space
+94.72,6.88,um we're gonna have 14 speakers today
+97.92,6.479,um and we're trying to change the
+101.6,3.92,actual kind of theme of the of the room
+104.399,3.121,a little bit this year
+105.52,3.919,last year we had a lot of speakers from
+107.52,3.76,the quattrocoptic industry and
+109.439,4.0,we're talking about many different uh
+111.28,5.28,quantum computing libraries
+113.439,5.04,this year we want to be more dynamic so
+116.56,4.8,we're going to have shorter talks
+118.479,3.521,the length of talks ranges from 35
+121.36,4.0,minutes to
+122.0,4.799,25 minutes and we'll also be more
+125.36,3.28,project focused so we're going to be
+126.799,3.281,speaking more about the
+128.64,3.12,projects in the quantum public space
+130.08,4.48,that some
+131.76,4.8,you know academic groups or individuals
+134.56,5.44,work on their
+136.56,6.08,free time on or as part of their job
+140.0,4.4,and last year we had a little bit of a
+142.64,3.679,problem we had capacity of
+144.4,3.12,roughly 90 people left i think in in the
+146.319,4.801,room and
+147.52,5.6,uh durham got really really packed uh we
+151.12,3.119,actually nobody could even like leave
+153.12,3.119,the room and
+154.239,3.201,have any hope of getting back uh
+156.239,2.64,throughout the day
+157.44,3.76,this year it seems like the situation is
+158.879,2.801,going to be a little bit little bit
+161.2,3.52,better
+161.68,4.48,um but since we since we moved and since
+164.72,3.44,many people are still probably coming in
+166.16,5.04,because they just just noticed that
+168.16,5.12,the room has changed locations uh
+171.2,3.52,if you see that people are coming in and
+173.28,3.92,they're kind of like waiting on the
+174.72,4.08,sidelines and you have seats on on the
+177.2,3.119,sides and there's still space in them
+178.8,3.359,in the middle you know feel free to kind
+180.319,5.041,of compress and go into the
+182.159,6.08,middle rows such that people have
+185.36,2.879,no space to sit
+188.56,4.88,okay and now coming
+191.92,4.239,down to actually what i wanted to speak
+193.44,5.84,about which is
+196.159,4.16,introduction to quantum software
+199.28,3.28,development
+200.319,3.2,so i'm gonna gonna divide my talk into
+202.56,3.039,three parts
+203.519,4.0,in the first part i'm gonna talk about
+205.599,5.36,some parallels that we can find
+207.519,5.761,in quantum computing space right now um
+210.959,3.84,with the development of machine learning
+213.28,3.2,and how the field of machine learning
+214.799,3.681,has developed
+216.48,3.2,in a second part um i'm going to give
+218.48,3.36,you guys a little
+219.68,3.839,primer to quantum computing just a very
+221.84,2.479,quick rundown of different architectures
+223.519,3.041,and
+224.319,3.92,things you need to know about quantum
+226.56,5.2,computing to understand
+228.239,5.041,um the rest of the day and in the last
+231.76,4.24,part
+233.28,4.0,okay uh in the last part we're going to
+236.0,3.519,speak about a little bit
+237.28,3.44,how you guys can help and how you know
+239.519,4.0,software engineers and
+240.72,3.519,computer scientists fit into the picture
+243.519,4.241,and
+244.239,6.401,you know how you can you know
+247.76,3.92,lead i guess hand out your hand and
+250.64,5.2,offer some help to do
+251.68,4.16,these projects
+255.92,3.68,so success of machine learning really
+258.56,4.079,falls down
+259.6,4.72,not only to machine learning scientists
+262.639,5.201,but also a lot of work that has been
+264.32,4.56,done around machine learning to kind of
+267.84,4.16,help
+268.88,3.92,foster the ease of adoption of of the
+272.0,3.199,tools and
+272.8,4.88,uh developments that are that are being
+275.199,4.241,produced uh one of the big things that
+277.68,3.44,helped people develop their own machine
+279.44,3.199,learning solutions are machine learning
+281.12,3.68,frameworks
+282.639,3.12,and here on this slide i list a couple
+284.8,3.2,of most
+285.759,4.16,popular ones i'm pretty sure that you're
+288.0,4.4,familiar with socket learn or
+289.919,3.761,tensorflow or at least heard about these
+292.4,3.519,libraries and
+293.68,3.28,really what these projects do well is
+295.919,5.201,that they
+296.96,7.92,have really nice well-documented apis
+301.12,7.2,tutorials they have a really good
+304.88,4.72,basically foundation that they offer to
+308.32,3.84,anybody who wants to
+309.6,3.76,jump in into the field so if you want to
+312.16,3.92,start machine learning you don't
+313.36,4.08,need to you know implement your own
+316.08,2.0,machine learning algorithms from from
+317.44,2.0,scratch
+318.08,3.679,in c plus you can rely on all these
+319.44,5.36,libraries and existing frameworks to
+321.759,4.961,help you build your models and
+324.8,5.28,that's something that really helps
+326.72,5.52,people to jump into the field
+330.08,4.88,then there's a lot of tooling that has
+332.24,5.679,been developed that
+334.96,4.64,helps people to not only develop their
+337.919,2.72,models for example in the case of
+339.6,3.439,jupiter notebooks
+340.639,3.601,it's a really great collaboration tool
+343.039,4.081,but also to
+344.24,3.2,you know share their models and deploy
+347.12,3.359,them
+347.44,6.479,into production so for example the aux
+350.479,4.401,framework over here is a tool that helps
+353.919,4.161,you
+354.88,4.319,you know share your model and provide an
+358.08,2.72,inference pipeline
+359.199,3.761,no matter what kind of framework you use
+360.8,6.72,to actually train
+362.96,7.44,the model itself so you can see that
+367.52,4.48,once again the theme repeats um you not
+370.4,4.799,only need the
+372.0,6.4,underlying algorithms but you also
+375.199,5.921,need to build a lot of tooling to bring
+378.4,5.12,this technology machine learning into
+381.12,2.4,the market
+383.68,5.519,and last but not least a lot of progress
+387.28,5.199,in machine learning has been really
+389.199,4.321,fueled by just going for bigger and
+392.479,3.44,bigger architectures
+393.52,3.28,there's this joke in the community that
+395.919,3.761,the bigger
+396.8,3.679,is is better and the bigger network
+399.68,3.84,solves everything
+400.479,3.921,and on this graph on the on the left you
+403.52,3.36,can you can see
+404.4,4.4,that's a logarithmic plot you can see
+406.88,4.319,how the different architectures that uh
+408.8,4.08,you know became really successful how
+411.199,4.801,much training they
+412.88,4.24,um actually need um per day and you can
+416.0,4.8,see that for off ago
+417.12,8.72,zero reaching like a thousand
+420.8,5.04,petaflops seconds per per day so
+425.919,4.321,once again basically this development is
+428.8,4.56,largely fueled
+430.24,4.16,by engineers working on large scale
+433.36,2.64,systems
+434.4,3.68,on the on the right you can see the
+436.0,2.96,pictures of the google tpu tensor
+438.08,3.36,processor
+438.96,3.84,processing unit um which kind of brings
+441.44,2.08,in the hardware engineers into the
+442.8,4.08,picture
+443.52,5.84,so you can really see that it is a
+446.88,3.439,effort of a whole range of diverse
+449.36,3.119,backgrounds that is
+450.319,5.361,kind of being combined here to produce
+452.479,3.201,the successes that we see today
+455.84,4.799,all right so now let's kind of
+458.88,4.719,you know just keep that in the back of
+460.639,7.521,our minds and let's jump into the
+463.599,4.561,part of the quantum computing primer
+468.56,3.68,um so i guess you guys are here because
+471.36,4.0,you have been
+472.24,4.48,hearing a lot about quantum computing
+475.36,3.679,and
+476.72,3.199,yeah there's like all these very um
+479.039,2.801,hyped up
+479.919,3.361,articles um you know if you scroll
+481.84,4.479,through your linkedin feeds
+483.28,5.039,um you're gonna see very various um
+486.319,3.6,sensational things being written about
+488.319,3.121,concocting so
+489.919,3.84,yeah the question is how is it going to
+491.44,4.72,actually change our lives
+493.759,3.761,and even more recently a couple of
+496.16,2.56,months ago quantum has
+497.52,3.84,sorry google has announced that they
+498.72,5.68,have reached this thing called quantum
+501.36,4.32,supremacy and uh yeah what does that
+504.4,3.519,even mean
+505.68,3.199,for us are we going to throw away our
+507.919,2.081,regular computers and
+508.879,3.52,everybody's going to just have a quantum
+510.0,6.0,computer now
+512.399,5.76,it's it's unclear so the hype
+516.0,3.279,is really really getting higher and
+518.159,3.36,higher
+519.279,3.44,this is the article that actually
+521.519,4.081,announced the
+522.719,4.081,quantum supremacy and you can see that
+525.6,4.16,they used a
+526.8,4.479,qpu with 53 qubits that can occupy a
+529.76,5.12,state space of
+531.279,6.881,two to the 53 because every qubit can
+534.88,4.959,occupy two basis states
+538.16,4.56,and you can see that if you were to
+539.839,4.801,simulate this uh this
+542.72,3.2,problem it would take you according to
+544.64,3.6,this estimate
+545.92,4.08,10 000 years on a state-of-the-art
+548.24,4.96,supercomputer
+550.0,6.399,so this this particular transition
+553.2,4.8,having demonstrated that we
+556.399,3.041,have solved the problem which is not
+558.0,4.0,necessarily of
+559.44,3.2,practical value right now this will be
+562.0,2.0,called
+562.64,3.04,but it's it's basically solved on a
+564.0,3.6,quantum computer whereas we can't
+565.68,3.44,efficiently do it on a classical
+567.6,4.56,computer that's what we call
+569.12,4.0,um quantum supremacy so it doesn't
+572.16,3.84,actually
+573.12,3.68,yet mean um that you know quantum
+576.0,2.72,computer has
+576.8,3.44,surpassed classical computers on a
+578.72,4.16,practical problem um
+580.24,3.279,and that terminology is uh something
+582.88,1.76,that uh
+583.519,2.801,you know is being fleshed out in the
+584.64,2.4,field actually will zang here in the
+586.32,3.44,audience is a
+587.04,3.76,nice blog post about uh um you know
+589.76,2.96,different
+590.8,3.84,terms we should use for achieving
+592.72,3.52,advantage and the quantum computing
+594.64,5.52,world with quantum computing
+596.24,7.52,architectures so yeah
+600.16,5.44,right now we are probably i would say
+603.76,3.6,somewhere around the peak i don't know
+605.6,3.2,how many people in the audience who are
+607.36,5.12,familiar with the field to
+608.8,5.92,agree with me and we're going to see how
+612.48,3.84,the hype cycle evolves and what it's
+614.72,4.88,going to do
+616.32,4.72,to the field but the impact of quantum
+619.6,4.72,computing
+621.04,4.479,um really shouldn't be that you know we
+624.32,3.84,shouldn't be thinking that it's going to
+625.519,5.041,come here and it's going to like
+628.16,4.64,replace all the methods that we already
+630.56,4.32,have to solve solve problems
+632.8,3.12,um rather what we should think about we
+634.88,2.88,should think about
+635.92,3.039,quantum computing helping us solve more
+637.76,3.36,problems
+638.959,3.44,so what are the things that quantum
+641.12,4.56,computers would be
+642.399,4.641,good at well these are problems like
+645.68,3.839,optimization problems
+647.04,3.84,you know classic example is this
+649.519,3.44,traveling salesman
+650.88,3.519,problem where you try to find a path
+652.959,3.12,through a city
+654.399,4.961,that is most efficient and visits all
+656.079,5.041,the nodes that you specified for example
+659.36,3.28,um you know encryption and cyber
+661.12,4.24,security we can
+662.64,4.0,hear a lot about quantum computers being
+665.36,2.64,thread to our
+666.64,3.199,cyber security systems because they're
+668.0,3.76,going to break our
+669.839,3.281,encryption but we can also use quantum
+671.76,4.079,computers to develop better
+673.12,4.88,cyber security so um it's it's a
+675.839,5.921,two-sided coin
+678.0,5.279,and then there's a big subfield of
+681.76,2.8,quantum computing called quantum machine
+683.279,2.56,learning where people are trying to
+684.56,3.519,figure out whether
+685.839,3.12,quantum computing can help us solve some
+688.079,3.921,of the
+688.959,5.44,bottlenecks of you know
+692.0,4.959,scaling machine learning that we kind of
+694.399,6.88,have have today
+696.959,7.041,um then one more i guess
+701.279,4.481,near term side um we can use quantum
+704.0,4.0,computers to do things that
+705.76,3.199,are much closer to what physical systems
+708.0,3.92,do so
+708.959,3.601,molecular drug design and kind of the
+711.92,3.68,design
+712.56,4.88,of um of different materials
+715.6,3.12,for example using organic batteries or
+717.44,4.079,solar cells
+718.72,4.32,um are fields where we expect that
+721.519,4.721,quantum computing is going to be
+723.04,4.32,you know probably providing some kind of
+726.24,5.12,advantage sooner than
+727.36,7.039,in some in some other domains
+731.36,4.159,now that was like a very brief
+734.399,3.041,introduction
+735.519,3.361,um i'm going to jump in this part of the
+737.44,3.92,talk a little bit into different
+738.88,5.519,paradigms of quantum computing and
+741.36,5.76,how does the kind of feel
+744.399,3.521,divide a little bit so there's three
+747.12,3.2,major
+747.92,3.52,kind of kind of areas there's quantum
+750.32,2.639,annealing
+751.44,3.04,discrete gate based quantum computing
+752.959,2.641,and continuous get based on computing
+754.48,4.479,and i'm going to jump into
+755.6,4.88,each of these individually
+758.959,3.44,all right so in quantum annealing we're
+760.48,4.72,trying to find
+762.399,4.0,solutions to optimization problems and
+765.2,5.12,basically what we do
+766.399,6.24,we specify some sort of energy landscape
+770.32,4.24,so we define hyper parameters that
+772.639,5.041,define the energy landscape
+774.56,4.959,and quantum annealing is a process that
+777.68,4.88,in the hardware tries to find the
+779.519,4.481,minimum energy state of of the system so
+782.56,4.0,the system models this
+784.0,3.839,landscape that you can see on the left
+786.56,4.0,and the minimum energy
+787.839,4.24,state would be the deepest valley of of
+790.56,3.839,this diagram so
+792.079,4.961,um that corresponds to the conformation
+794.399,6.321,of these little proteins that has the
+797.04,4.64,lowest energy um and the biggest player
+800.72,3.919,in the field
+801.68,4.48,is the company called d-wave they're a
+804.639,2.401,canadian company and have been around
+806.16,4.0,for
+807.04,4.16,a while now more than decades trying to
+810.16,4.08,tackle this uh
+811.2,6.319,this problem if you look um
+814.24,4.56,at the hardware of quantum annealing um
+817.519,1.68,you might have seen the picture on the
+818.8,3.279,right
+819.199,3.841,that's uh how the d-wave machine looks
+822.079,3.76,when it's all
+823.04,4.88,uh closed up but in the middle um that's
+825.839,4.56,the actual
+827.92,3.44,i guess the chandelier of dilution
+830.399,2.8,refrigerators
+831.36,4.08,and you can see how the temperature is
+833.199,5.361,dropping all the way to
+835.44,4.88,um the processor on the bottom so the
+838.56,3.68,processor itself runs
+840.32,3.44,on a temperature that is colder than the
+842.24,4.399,temperature in the outer space
+843.76,5.92,to minimize all the all the noise and
+846.639,3.041,thermal fluctuations
+849.839,3.041,here you can see how you know the
+852.0,2.32,scaling of
+852.88,4.16,the of the size of the chips and the
+854.32,4.639,quantum mechanics kind of evolved um
+857.04,3.44,it's kind of a self-fulfilling prophecy
+858.959,3.041,the company is trying to
+860.48,3.52,achieve this uh this exponential
+862.0,4.24,leveling um
+864.0,3.68,pace that kind of reflects the moore's
+866.24,4.32,law
+867.68,3.279,and right now actually even bigger chip
+870.56,2.8,is
+870.959,4.081,in development so the highest chip on
+873.36,5.36,this graph is 2000
+875.04,5.68,qubit and i want to keep in mind that
+878.72,4.0,between the paradigms the number of
+880.72,3.919,qubits or other metrics don't really
+882.72,4.0,port so if i say this has 2 thousand
+884.639,2.401,qubits and in some other architecture we
+886.72,2.64,have
+887.04,5.44,on a different number of qubits that's
+889.36,5.839,not directly comparable
+892.48,4.24,here we can see that basically this is
+895.199,3.44,the architecture of the new generation
+896.72,4.16,v-wave chip
+898.639,3.76,on the left we have this 2000 q called
+900.88,3.199,the chimera graph
+902.399,3.921,and on the right we have this new
+904.079,5.521,topology called pegasus
+906.32,6.319,and the lines here really depict the
+909.6,4.0,connections between qubits so this kind
+912.639,3.921,of kind of
+913.6,3.919,deter i guess yeah determines which
+916.56,3.279,qubits can actually
+917.519,3.521,interact in the equation that specifies
+919.839,3.281,the energy landscape
+921.04,4.72,so the more connected the better but
+923.12,6.399,making more connected graphs is
+925.76,6.4,more difficult in hardware
+929.519,3.281,so this is how you specify the energy
+932.16,3.44,landscape
+932.8,4.08,it's a what we call quadratic
+935.6,3.44,unconstrained binary optimization
+936.88,4.639,problem because the
+939.04,4.0,variables here are quadratic oh sorry
+941.519,5.041,binary and the terms are
+943.04,5.76,at most quadratic um that's all you
+946.56,5.12,really need to know um
+948.8,4.08,i don't need to like deep dive deep into
+951.68,3.599,the details how we specify
+952.88,3.759,that equation but it's actually not that
+955.279,2.881,difficult it's basically we need to
+956.639,3.521,encode the constraints
+958.16,3.119,of your problem into some sort of energy
+960.16,4.64,penalties
+961.279,5.041,that if um are violated
+964.8,3.279,they no longer correspond to the lowest
+966.32,4.4,energy solution of
+968.079,3.921,that equation um you can see that the
+970.72,2.799,things aren't perfect here
+972.0,4.0,on this graph you can see that some
+973.519,4.56,qubits are missing or some links
+976.0,3.68,are missing and there's a bunch of like
+978.079,2.961,more lower level problems
+979.68,3.04,connected with you know programming
+981.04,3.84,these devices because
+982.72,3.919,um we have to deal with things like
+984.88,4.8,finite resolutions we're going from
+986.639,4.64,digital to to analog and
+989.68,3.04,we might not be able to represent you
+991.279,3.281,know for example floating point numbers
+992.72,4.88,with the precision we would like
+994.56,4.719,to have so there are things that
+997.6,3.2,you know kind of coming to the picture
+999.279,2.8,that you might not be used to because
+1000.8,3.92,you're simply dealing with a
+1002.079,4.0,technology that is more lower level than
+1004.72,4.119,you know your regular
+1006.079,4.88,um classical programming language these
+1008.839,3.641,days
+1010.959,3.041,here is an example of how you for
+1012.48,5.359,example would
+1014.0,5.759,um specify a problem so this encodes the
+1017.839,5.68,energy landscape of a checkerboard
+1019.759,7.2,and its lowest energy state is basically
+1023.519,6.481,a state where the neighboring qubits are
+1026.959,6.96,alternating in value so there you go 0 1
+1030.0,7.039,0 1 or 1 0 1 0 and you do that by
+1033.919,4.081,imposing a very simple simple matrix of
+1037.039,3.52,penalties here
+1038.0,3.439,that is defined there over with the j
+1040.559,2.4,matrix
+1041.439,3.76,and it's really only like a couple of
+1042.959,5.36,lines of code using the d-wave uh
+1045.199,3.12,standard development libraries
+1048.72,3.68,so the workflow in a quantum annealing
+1050.16,4.08,world is really you define a problem
+1052.4,4.0,you figure out how to you know encode
+1054.24,4.64,that problem as this equation
+1056.4,3.12,and as i mentioned you basically do that
+1058.88,2.24,via
+1059.52,3.279,imposing different penalties for
+1061.12,3.12,situations that you don't like so for
+1062.799,3.76,example in the previous case
+1064.24,4.0,i would impose penalties for two qubits
+1066.559,3.201,being the same value
+1068.24,3.12,once you have the equation you try to in
+1069.76,2.72,what we call embedded on the graph so
+1071.36,2.48,you're going to make sure that the
+1072.48,3.6,qubits that are
+1073.84,3.36,talking to each other in your equation
+1076.08,4.24,can talk
+1077.2,3.839,to each other on a hardware and then you
+1080.32,2.239,just solve
+1081.039,3.361,the problem on the hardware and you read
+1082.559,3.601,out your solution
+1084.4,3.04,and if you want to guys play with it
+1086.16,3.28,there's d-wave leap
+1087.44,3.52,it's a platformer out of d-wave that you
+1089.44,4.96,can have one minute
+1090.96,6.32,of free qp time to play with
+1094.4,4.56,and some further resources um for you
+1097.28,4.639,guys to look at
+1098.96,3.36,okay the universal computing um i'm
+1101.919,3.681,gonna
+1102.32,4.08,speed up things a little bit um here we
+1105.6,3.36,are constructing
+1106.4,3.12,so-called quantum circuits so the big
+1108.96,4.32,players
+1109.52,4.88,are ibm google righty
+1113.28,3.84,and they're each are developing their
+1114.4,5.519,own respective libraries
+1117.12,4.96,that you know you can use to specify
+1119.919,4.961,quantum circuits and
+1122.08,3.68,run down the results uh fundamental
+1124.88,3.28,building block of
+1125.76,3.36,quantum computing in this paradigm is
+1128.16,3.04,qubit
+1129.12,3.52,and this is something that you might
+1131.2,3.68,have seen previously
+1132.64,4.0,um if not it's completely fine qubit is
+1134.88,4.4,basically specified by
+1136.64,3.36,two amplitudes that's alpha and beta in
+1139.28,3.759,this
+1140.0,5.84,equation and
+1143.039,3.601,those squared specify the probabilities
+1145.84,3.92,of sampling
+1146.64,7.039,each of these basis states either 0
+1149.76,5.6,or 1. and
+1153.679,3.841,basically in order to program the device
+1155.36,4.559,you construct a circuit so very
+1157.52,3.92,much similar to you know classical
+1159.919,4.321,circuit logic you
+1161.44,4.4,specify quantum circuits uh you you
+1164.24,4.799,basically have either
+1165.84,6.32,operations that touch one two or
+1169.039,5.041,multiple qubits and
+1172.16,3.759,by imposing those operations you alter
+1174.08,3.44,the state of the system we alter what we
+1175.919,3.441,call the wave function
+1177.52,3.2,and at the end of the computation you
+1179.36,5.04,just read out the
+1180.72,4.959,the result so for example one of the
+1184.4,1.76,things that you can do you can basically
+1185.679,2.801,introduce
+1186.16,4.48,entanglement it's one of the usual
+1188.48,4.88,building blocks of
+1190.64,4.159,quantum algorithms and you do that using
+1193.36,3.84,a hadamard gate
+1194.799,3.041,hadamard gate is nothing else a certain
+1197.2,3.28,rotation
+1197.84,3.76,of uh of the qubit because we can see
+1200.48,4.4,the result of the rotation
+1201.6,5.199,um here for two basis states another
+1204.88,4.08,gate that you can use is a c not gate
+1206.799,3.76,and if you were to combine the two you
+1208.96,4.4,can actually
+1210.559,4.161,reach this combination of states which
+1213.36,3.92,kind of
+1214.72,4.4,imposes that we can only get zero zero
+1217.28,4.399,or one one out of the system
+1219.12,3.12,which we call um entangled state or
+1221.679,4.24,maximum
+1222.24,7.52,integral state um so we would do this
+1225.919,5.601,in uh um using the we get this library
+1229.76,4.64,as described over here so you can again
+1231.52,5.92,see that you know it's a fairly simple
+1234.4,3.759,way to specify the circuit actually it
+1237.44,2.88,generates
+1238.159,3.441,a circuit in a language called quill
+1240.32,3.68,which is uh on the
+1241.6,3.68,on the right um so it's very much like
+1244.0,4.96,assembler like
+1245.28,6.08,in this particular sense
+1248.96,3.52,and here the mo the workflow is again
+1251.36,2.88,very similar
+1252.48,3.52,um you go from your professional problem
+1254.24,2.799,then you you know figure out the quantum
+1256.0,3.44,algorithm
+1257.039,3.601,you generate a quantum circuit for that
+1259.44,2.479,algorithm and
+1260.64,3.279,you compile it to the hardware so the
+1261.919,3.921,hardware can only use certain
+1263.919,3.361,operations so there's a step called
+1265.84,3.92,compilation where you
+1267.28,4.72,make sure that the gates that you're
+1269.76,3.76,using are actually implemented on the
+1272.0,3.12,on the hardware and then you run your
+1273.52,3.68,thing on the quantum processor and read
+1275.12,4.64,out the result
+1277.2,4.08,okay another paradigm and the last one
+1279.76,3.84,that i want to talk about this
+1281.28,3.2,continuous variable quantum computing
+1283.6,3.36,and here
+1284.48,3.92,instead of having these you know two
+1286.96,4.16,basis states you have a
+1288.4,4.159,continuum of basis states so instead of
+1291.12,2.799,qubit we call the
+1292.559,3.041,computational building block the queue
+1293.919,3.441,mode
+1295.6,3.04,and uh for example one of the
+1297.36,4.48,applications or one of the
+1298.64,6.0,kind of building blocks of these systems
+1301.84,4.24,is quantum boson sampling that you can
+1304.64,3.12,use to
+1306.08,3.2,you know sample from complex pros or
+1307.76,3.279,distributions um
+1309.28,4.96,it's well suited for graph hormones for
+1311.039,6.321,example um we wrote a paper on using
+1314.24,4.96,gaussian blossom sampling for certain
+1317.36,3.679,molecule docking problems so that was
+1319.2,2.56,basically trying to find maximum clicks
+1321.039,2.88,and
+1321.76,3.84,certain certain graphs that we generated
+1323.919,3.681,so it's it's really
+1325.6,3.6,you can see that you can have to combine
+1327.6,3.28,you know knowledge from
+1329.2,3.599,quantum computing with knowledge from
+1330.88,4.799,computer science in order to
+1332.799,3.521,achieve useful results and the biggest
+1335.679,3.281,player
+1336.32,4.16,um in this field is xanadu and actually
+1338.96,4.16,we have a speaker from xander here
+1340.48,4.24,today so he's going to tell you more
+1343.12,4.08,about
+1344.72,3.12,this domain more resources if you guys
+1347.2,4.56,are interested
+1347.84,6.079,you can find us in a slide deck so
+1351.76,3.84,at the end of the talk i want to kind of
+1353.919,4.481,talk about a little bit about
+1355.6,3.76,how can you become part of this and uh
+1358.4,3.279,you know what are
+1359.36,3.04,the things that you can actually do to
+1361.679,3.761,um
+1362.4,4.399,you know help the field out
+1365.44,4.64,the nice thing about quantum computing
+1366.799,6.401,is that um there's a big push
+1370.08,4.959,um in the community for the things to
+1373.2,3.359,happen in the open source way
+1375.039,4.081,not only the research itself but also
+1376.559,4.721,like all the underlying building blocks
+1379.12,3.039,um the libraries are available open
+1381.28,3.68,source
+1382.159,4.321,and uh you know it really helps
+1384.96,6.32,reproducibility but also
+1386.48,4.8,it helps more people join the field
+1391.44,4.16,so like all of these not all these many
+1393.52,5.6,of these quantum hardware providers
+1395.6,6.8,are also providing open source
+1399.12,6.0,libraries to program their devices
+1402.4,5.68,or play with their quantum virtual
+1405.12,4.799,machines quantum simulators
+1408.08,3.599,and that is that is really nice for us
+1409.919,4.921,to be able to
+1411.679,5.601,you know spread the knowledge
+1414.84,5.079,the kind of implicit thing about the
+1417.28,4.56,field is that it it comes from
+1419.919,3.841,you know academia to to a degree and
+1421.84,3.68,many people working on these open source
+1423.76,4.48,projects are scientists
+1425.52,5.2,um and they're doing a great job but
+1428.24,3.679,many of them are not software engineers
+1430.72,4.079,by training
+1431.919,3.281,and there's a huge potential in um you
+1434.799,2.801,know
+1435.2,4.0,more of software engineers being
+1437.6,4.8,involved in helping
+1439.2,5.359,you know scale and design apis and and
+1442.4,4.32,just build this system in a way that
+1444.559,5.041,follow the best practices of
+1446.72,2.88,software engineering
+1450.0,6.32,so there's a huge list
+1453.279,4.0,of projects on our website the links are
+1456.32,4.32,on the right
+1457.279,5.76,that you can use to see a um
+1460.64,3.039,you know quite exhausting list of
+1463.039,1.921,different
+1463.679,3.761,projects in different different areas
+1464.96,5.12,and i want to mention some of those here
+1467.44,3.839,so these are things like quantum
+1470.08,2.24,compilers or quantum circuit
+1471.279,3.841,optimization
+1472.32,4.64,where you try to make sure that you
+1475.12,3.28,modify the circuit in such a way that
+1476.96,3.76,you let's say optimize the number of
+1478.4,4.639,gates and at the same time you produce
+1480.72,4.959,the same kind of a result
+1483.039,4.24,at the end there are things like
+1485.679,2.641,development of control systems so we're
+1487.279,4.481,actually going to have a speaker
+1488.32,5.12,today speaking speaking about um a open
+1491.76,3.36,source project for control systems and
+1493.44,5.119,and quantum computing
+1495.12,6.0,um we have things like quantum games or
+1498.559,3.681,ide tools visualization tools so a lot
+1501.12,2.96,of these things that need to be
+1502.24,4.08,developed now we can draw the parallels
+1504.08,5.04,that i was speaking about
+1506.32,4.719,in the case of machine learning um a lot
+1509.12,4.88,of work needs to be done
+1511.039,3.52,for us to be able to like do research
+1514.0,2.64,and
+1514.559,3.441,really develop this field further and
+1516.64,4.159,also that work
+1518.0,3.76,is um you know fundamental software
+1520.799,4.801,engineering
+1521.76,5.84,uh basically waiting to be fulfilled
+1525.6,4.559,so feel free to jump into any of those
+1527.6,5.6,things um commute is very very open
+1530.159,5.12,and uh i'm certain that they would love
+1533.2,3.2,you know a helping hand from people that
+1535.279,3.201,can you know
+1536.4,4.24,tell them how to structure or package
+1538.48,3.6,their python library better and put them
+1540.64,2.159,put it on pipe because maybe right now
+1542.08,2.56,it's on
+1542.799,3.681,github and it's not even installable for
+1544.64,3.039,wi-fi so
+1546.48,2.799,there are a lot of opportunities like
+1547.679,2.161,that if you guys want to jump into space
+1549.279,3.601,and and
+1549.84,5.12,learn more about the area
+1552.88,3.36,and if you guys feel even more
+1554.96,5.12,adventurous
+1556.24,4.64,there's a incubator that is dedicated to
+1560.08,2.4,quantum
+1560.88,3.84,computing slash quantum machine learning
+1562.48,2.88,actually sean is in the room sean is one
+1564.72,2.48,of the
+1565.36,3.84,people organizing it sean if you could
+1567.2,3.76,wave your hand so that people know
+1569.2,3.2,they could talk to you in in a break if
+1570.96,3.599,they're if they're interested
+1572.4,3.279,and uh that's actually where my company
+1574.559,4.401,started so
+1575.679,5.12,uh shout out to these guys and uh
+1578.96,4.16,if you want to help with uh you know
+1580.799,3.281,education and outreach you can speak to
+1583.12,2.32,me and mark
+1584.08,3.839,we're running the quantum open source
+1585.44,4.16,foundation you can join our slack
+1587.919,2.961,channel
+1589.6,3.679,if you want to become part of the
+1590.88,4.56,community and to know more about
+1593.279,3.76,the events and things that we're
+1595.44,3.2,organizing and
+1597.039,3.201,yeah for that purpose you can also
+1598.64,4.0,follow us on twitter or
+1600.24,5.12,other social media accounts or just
+1602.64,4.159,github or gitlab if you guys fancy that
+1605.36,5.36,and with that i thank you for your
+1606.799,3.921,attention also
+1610.84,4.28,um
+1612.08,3.44,oh yeah um and there's also a micro
+1615.12,2.159,grand
+1615.52,4.0,program from uh from will called dry
+1617.279,4.0,funds so that's unitary.fund
+1619.52,3.84,you can check out if you are interested
+1621.279,3.921,in doing a project but you
+1623.36,3.84,not sure if you could you know support
+1625.2,4.079,yourself there's a way to get funding
+1627.2,4.079,for that as well
+1629.279,4.161,all right so that thanks thank you for
+1631.279,10.561,the attention and
+1633.44,8.4,let's uh wait for the next
+1643.58,3.21,[Applause]
+1648.6,3.0,um

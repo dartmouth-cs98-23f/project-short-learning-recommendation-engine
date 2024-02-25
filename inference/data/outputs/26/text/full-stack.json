@@ -1,0 +1,70 @@
+{
+  "introduction": "In this video, we'll explore how to build a job board app that can be used as a real startup. We'll start with a minimum viable product (MVP) that pulls data from a single job board API and displays it in a simple front end. We'll use React and Material UI for the front end, an Express server for the backend, Redis for data storage, and a node cron job to fetch and refresh job data at regular intervals.",
+  "sections": [
+    {
+      "title": "Section 1: Setting Up the Project",
+      "content": [
+        "Creating a package.json file with necessary dependencies",
+        "Installing Cron as a dependency",
+        "Configuring the domain name and API routes",
+        "Deploying the app to a server"
+      ],
+      "topics": ["Project Setup", "Domain Name Configuration", "API Routes", "Deployment"]
+    },
+    {
+      "title": "Section 2: Data Fetching and Storage",
+      "content": [
+        "Pulling job data from the API using Express",
+        "Storing job data in Redis",
+        "Fetching and displaying job data in the front end",
+        "Implementing a node cron job to refresh job data"
+      ],
+      "topics": ["API Integration", "Data Storage", "Job Data Fetching", "Cron Job"]
+    },
+    {
+      "title": "Section 3: Front End Development",
+      "content": [
+        "Designing a simple front end with React and Material UI",
+        "Displaying job listings and job details",
+        "Implementing filtering and sorting functionality",
+        "Integrating job board APIs"
+      ],
+      "topics": ["Front End Design", "Job Listings", "Job Details", "Filtering and Sorting"]
+    },
+    {
+      "title": "Section 4: Algorithm Development",
+      "content": [
+        "Developing an algorithm to filter job listings based on experience level",
+        "Implementing error handling and robustness",
+        "Improving filtering and sorting functionality",
+        "Adding monitoring and logging features"
+      ],
+      "topics": ["Algorithm Development", "Error Handling", "Filtering and Sorting Improvements", "Monitoring and Logging"]
+    },
+    {
+      "title": "Section 5: Final Touches and Deployment",
+      "content": [
+        "Testing and debugging the app",
+        "Deploying the app to a production server",
+        "Configuring SSL/TLS certificates",
+        "Monitoring and maintaining the app"
+      ],
+      "topics": ["Testing and Debugging", "Production Deployment", "SSL/TLS Certificates", "Monitoring and Maintenance"]
+    }
+  ],
+  "topics": ["API Integration", "Data Storage", "Front End Design", "Algorithm Development", "Testing and Debugging"],
+  "general topics": [
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.61
+    },
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": 0.60
+    },
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.53
+    }
+  ]
+}

@@ -1,0 +1,1518 @@
+second,duration,transcript
+0.79,2.4,"The following content is
+provided under a Creative"
+3.19,1.54,Commons license.
+4.73,2.3,"Your support will help
+MIT OpenCourseWare"
+7.03,4.36,"continue to offer high-quality,
+educational resources for free."
+11.39,2.6,"To make a donation, or
+view additional materials"
+13.99,3.89,"from hundreds of MIT courses,
+visit MIT OpenCourseWare"
+17.88,0.97,at ocw.mit.edu.
+29.957,0.833,ANA BELL: All right.
+30.79,2.31,Let's begin.
+33.1,2.73,"As I mentioned
+before, this lecture"
+35.83,1.86,will be recorded for OCW.
+37.69,1.619,"Again, in future
+lectures, if you"
+39.309,2.041,"don't want to have the
+back of your head show up,"
+41.35,3.53,"just don't sit in
+this front area here."
+44.88,1.75,"First of all, wow,
+what a crowd, you guys."
+46.63,1.86,We're finally in 26-100.
+48.49,3.75,"6.0001 made it big, huh?"
+52.24,3.72,"Good afternoon and welcome to
+the very first class of 6.0001,"
+55.96,3.0,"and also 600, this semester."
+58.96,1.65,My name is Ana Bell.
+60.61,1.23,"First name, Ana."
+61.84,1.41,"Last name, Bell."
+63.25,3.21,"I'm a lecturer in
+the EECS Department."
+66.46,2.22,"And I'll be giving some
+of the lectures for today,"
+68.68,4.35,"along with later on in the term,
+Professor Eric Grimson, who's"
+73.03,2.79,"sitting right down there, will
+be giving some of the lectures,"
+75.82,1.8,as well.
+77.62,3.93,"Today we're going to go over
+some basic administrivia,"
+81.55,1.551,"a little bit of
+course information."
+83.101,1.749,"And then, we're going
+to talk a little bit"
+84.85,1.314,about what is computation?
+86.164,1.416,"We'll discuss at
+a very high level"
+87.58,2.28,"what computers do just
+to make sure we're all"
+89.86,1.75,on the same page.
+91.61,2.57,"And then, we're going to dive
+right into Python basics."
+94.18,2.583,"We're going to talk a little bit
+about mathematical operations"
+96.763,1.371,you can do with Python.
+98.134,2.166,"And then, we're going to
+talk about Python variables"
+100.3,1.71,and types.
+102.01,1.897,"As I mentioned in my
+introductory email, all"
+103.907,2.333,"the slides and code that I'll
+talk about during lectures"
+106.24,2.01,"will be up before
+lecture, so I highly"
+108.25,4.29,"encourage you to download
+them and to have them open."
+112.54,3.48,"We're going to go through some
+in-class exercises which will"
+116.02,1.8,be available on those slides.
+117.82,2.01,And it's fun to do.
+119.83,7.59,"And it's also great if could
+take notes about the code just"
+127.42,1.79,for future reference.
+129.21,1.0,It's true.
+130.21,2.01,"This is a really
+fast-paced course,"
+132.22,1.89,and we ramp up really quickly.
+134.11,3.732,"We do want to position you
+to succeed in this course."
+137.842,1.458,"As I was writing
+this, I was trying"
+139.3,1.86,"to think about when
+I was first starting"
+141.16,3.42,"to program what helped
+me get through my very"
+144.58,1.53,first programming course.
+146.11,3.36,And this is really a good list.
+149.47,2.37,"The first thing was I just
+read the psets as soon"
+151.84,5.76,"as they came out, made sure that
+the terminology just sunk in."
+157.6,2.16,"And then, during
+lectures, if the lecturer"
+159.76,3.207,"was talking about something
+that suddenly I remembered,"
+162.967,2.583,"oh, I saw that word in the pset
+and I didn't know what it was."
+165.55,1.17,"Well, hey, now I
+know what it is."
+166.72,0.48,Right?
+167.2,0.958,So just give it a read.
+168.158,3.362,You don't need to start it.
+171.52,3.87,"If you're new to programming, I
+think the key word is practice."
+175.39,2.49,It's like math or reading.
+177.88,2.38,"The more you practice,
+the better you get at it."
+180.26,1.617,"You're not going to
+absorb programming"
+181.877,2.333,"by watching me write programs
+because I already know how"
+184.21,0.96,to program.
+185.17,2.796,You guys need to practice.
+187.966,1.374,"Download the code
+before lecture."
+189.34,0.75,Follow along.
+190.09,2.34,"Whatever I type,
+you guys can type."
+192.43,2.006,"And I think, also,
+one of the big things"
+194.436,1.624,"is if you're new to
+programming, you're"
+196.06,3.3,"kind of afraid that you're
+going to break your computer."
+199.36,5.04,"And you can't really do that
+just by running Anaconda"
+204.4,2.085,and typing in some commands.
+206.485,1.875,"So don't be afraid to
+just type some stuff in"
+208.36,1.12,and see what it does.
+209.48,1.75,"Worst case, you just
+restart the computer."
+215.39,1.021,Yeah.
+216.411,1.749,"That's probably the
+big thing right there."
+218.16,1.583,"I should have probably
+highlighted it,"
+219.743,1.138,but don't be afraid.
+220.881,0.499,Great.
+221.38,5.4,"So this is pretty much a
+roadmap of all of 6.0001 or 600"
+226.78,1.11,as I've just explained it.
+227.89,3.99,"There's three big things we
+want to get out of this course."
+231.88,2.25,"The first thing is the
+knowledge of concepts,"
+234.13,2.52,"which is pretty much true of
+any class that you'll take."
+236.65,3.09,"The class will teach you
+something through lectures."
+239.74,2.76,"Exams will test
+how much you know."
+242.5,3.33,This is a class in programming.
+245.83,3.12,"The other thing we want
+you to get out of it"
+248.95,1.891,is programming skills.
+250.841,1.499,"And the last thing,
+and I think this"
+252.34,1.583,"is what makes this
+class really great,"
+253.923,2.317,"is we teach you how
+to solve problems."
+256.24,2.49,"And we do that
+through the psets."
+258.73,2.28,"That's really how I feel
+the roadmap of this course"
+261.01,1.59,looks like.
+262.6,2.7,"And underlying all of
+these is just practice."
+265.3,4.5,"You have to just type some
+stuff away and code a lot."
+269.8,3.69,"And you'll succeed in
+this course, I think."
+273.49,2.1,OK.
+275.59,3.21,"So what are the things we're
+going to learn in this class?"
+278.8,2.85,"I feel like the things we're
+going learn in this class"
+281.65,2.82,"can be divided into basically
+three different sections."
+284.47,5.82,"The first one is related to
+these first two items here."
+290.29,3.09,"It's really about
+learning how to program."
+293.38,1.95,"Learning how to
+program, part of it"
+295.33,3.66,"is figuring out what
+objects to create."
+298.99,1.404,You'll learn about these later.
+300.394,2.166,"How do you represent knowledge
+with data structures?"
+302.56,1.969,"That's sort of the
+broad term for that."
+304.529,1.541,"And then, as you're
+writing programs,"
+306.07,2.76,"you need to-- programs
+aren't just linear."
+308.83,1.47,Sometimes programs jump around.
+310.3,0.96,They make decisions.
+311.26,2.43,"There's some control
+flow to programs."
+313.69,4.93,"That's what the second
+line is going to be about."
+318.62,2.28,"The second big
+part of this course"
+320.9,3.69,"is a little bit more
+abstract, and it"
+324.59,4.41,"deals with how do you write
+good code, good style,"
+329.0,1.53,code that's readable.
+330.53,2.49,"When you write code, you
+want to write it such"
+333.02,2.46,"that-- you're in big company,
+other people will read it,"
+335.48,2.49,"other people will
+use it, so it has"
+337.97,2.25,"to be readable and
+understandable by others."
+340.22,1.68,"To that end, you
+need to write code"
+341.9,6.92,"that's well organized,
+modular, easy to understand."
+348.82,1.75,"And not only that, not
+only will your code"
+350.57,3.007,"be read by other people,
+but next year, maybe,"
+353.577,1.583,"you'll take another
+course, and you'll"
+355.16,1.708,"want to look back at
+some of the problems"
+356.868,1.452,that you wrote in this class.
+358.32,2.42,"You want to be able
+to reread your code."
+360.74,3.21,"If it's a big mess, you might
+not be able to understand--"
+363.95,2.58,"or reunderstand--
+what you were doing."
+366.53,2.1,"So writing readable
+code and organizing code"
+368.63,1.73,is also a big part.
+370.36,5.32,"And the last section is going
+to deal with-- the first two"
+375.68,3.42,"are actually part of the
+programming in Introduction"
+379.1,2.34,"to Programming and
+Computer Science in Python."
+381.44,4.56,"And the last one deals mostly
+with the computer science part"
+386.0,3.54,"in Introduction to Programming
+and Computer Science in Python."
+389.54,2.43,"We're going to talk about,
+once you have learned"
+391.97,1.68,"how to write programs
+in Python, how do"
+393.65,1.89,you compare programs in Python?
+395.54,2.622,"How do you know that one program
+is better than the other?"
+398.162,1.458,"How do you know
+that one program is"
+399.62,1.464,more efficient than the other?
+401.084,1.416,"How do you know
+that one algorithm"
+402.5,2.73,is better than the other?
+405.23,2.25,"That's what we're going to
+talk about in the last part"
+407.48,1.37,of the course.
+408.85,1.4,OK.
+410.25,2.67,"That's all for the
+administrative part"
+412.92,1.31,of the course.
+414.23,5.41,"Let's start by talking at a high
+level what does a computer do."
+419.64,3.49,"Fundamentally, it
+does two things."
+423.13,2.83,"One, performs calculations."
+425.96,1.81,"It performs a lot
+of calculations."
+427.77,1.91,"Computers these days
+are really, really fast,"
+429.68,5.56,"a billion calculations per
+second is probably not far off."
+435.24,1.68,"It performs these
+calculations and it"
+436.92,1.63,has to store them somewhere.
+438.55,0.5,Right?
+439.05,1.98,Stores them in computer memory.
+441.03,3.04,"So a computer also has
+to remember results."
+444.07,2.21,"And these days, it's not
+uncommon to find computers"
+446.28,4.11,"with hundreds of
+gigabytes of storage."
+450.39,4.067,"The kinds of calculations
+that computers do,"
+454.457,0.833,there are two kinds.
+455.29,2.3,"One are calculations that
+are built into the language."
+457.59,1.86,"These are the very
+low level types"
+459.45,2.44,"of calculations,
+things like addition,"
+461.89,3.72,"subtraction,
+multiplication, and so on."
+465.61,2.18,"And once you have
+a language that"
+467.79,5.28,"has these primitive calculation
+types, you, as a programmer,"
+473.07,2.82,"can put these types
+together and then define"
+475.89,1.79,your own calculations.
+477.68,2.53,"You can create new
+types of calculations."
+480.21,4.36,"And the computer will be able
+to perform those, as well."
+484.57,3.24,"I think, one thing
+I want to stress--"
+487.81,2.12,"and we're going to
+come back to this"
+489.93,2.37,"again during this entire
+lecture, actually--"
+492.3,3.39,"is computers only know
+what you tell them."
+495.69,2.53,"Computers only do what
+you tell them to do."
+498.22,1.64,They're not magical.
+499.86,2.807,They don't have a mind.
+502.667,2.083,"They just know how to
+perform calculations really,"
+504.75,1.59,really quickly.
+506.34,3.596,"But you have to tell them
+what calculations to do."
+512.94,1.56,Computers don't know anything.
+514.5,0.72,All right.
+515.22,0.83,We've come to that.
+520.059,4.261,"Let's go into the
+types of knowledge."
+524.32,3.9,"The first type of knowledge
+is declarative knowledge."
+528.22,2.51,"And those are things
+like statements of fact."
+530.73,2.35,"And this is where my
+email came into play."
+533.08,2.42,"If you read it all
+the way to the bottom,"
+535.5,2.46,you would have entered a raffle.
+537.96,1.93,"So a statement of fact
+for today's lecture"
+539.89,3.39,"is, someone will win a
+prize before class ends."
+543.28,3.54,"And the prize was
+a Google Cardboard."
+546.82,3.07,"Google state-of-the-art
+virtual reality glasses."
+549.89,1.584,And I have them right here.
+554.4,1.55,Yea.
+555.95,2.7,I delivered on my promise.
+558.65,2.12,That's a statement of fact.
+560.77,1.83,So pretend I'm a machine.
+562.6,0.88,OK?
+563.48,3.51,"I don't know anything
+except what you tell me."
+566.99,1.11,I don't know.
+568.1,2.22,"I know that you tell
+me this statement."
+570.32,1.527,"I'm like, OK."
+571.847,2.083,"But how is someone going
+to win a Google Cardboard"
+573.93,1.529,"before class ends, right?"
+575.459,1.791,"That's where imperative
+knowledge comes in."
+577.25,2.28,"Imperative knowledge is
+the recipe, or the how-to,"
+579.53,2.7,or the sequence of steps.
+582.23,1.55,Sorry.
+583.78,3.43,"That's just my
+funny for that one."
+587.21,6.32,"So the sequence of steps
+is imperative knowledge."
+593.53,4.4,"If I'm a machine,
+you need to tell me"
+597.93,2.98,"how someone will win a Google
+Cardboard before class."
+600.91,1.77,"If I follow these
+steps, then technically,"
+602.68,3.78,I should reach a conclusion.
+606.46,2.49,"Step one, I think we've
+already done that."
+608.95,2.64,"Whoever wanted to
+sign up has signed up."
+611.59,1.59,Now I'm going to open my IDE.
+613.18,1.5,"I'm just basically
+being a machine"
+614.68,3.06,"and following the steps
+that you've told me."
+617.74,3.891,"The IDE that we're using in
+this class is called Anaconda."
+621.631,3.699,"I'm just scrolling
+down to the bottom."
+625.33,3.33,"Hopefully, you've installed
+it in problem set zero."
+628.66,1.95,I've opened my IDE.
+630.61,3.402,"I'm going to follow the
+next set of instructions."
+634.012,2.208,"I'm going to choose a random
+number between the first"
+636.22,3.24,and the nth responder.
+639.46,2.88,"Now, I'm going to actually
+use Python to do this ."
+642.34,2.28,"And this is also an
+example of how just"
+644.62,1.69,"a really simple
+task in your life,"
+646.31,2.432,"you can use computers or
+programming to do that."
+648.742,1.458,"Because if I chose
+a random number,"
+650.2,1.624,"I might be biased
+because, for example,"
+651.824,2.036,I might like the number 8.
+653.86,3.539,"To choose a random number,
+I'm going to go and say, OK,"
+657.399,1.291,where's the list of responders?
+658.69,1.11,It starts at 15.
+659.8,3.27,"Actually, it starts at
+16 because that's me."
+663.07,2.37,"We're going to choose a
+random number between 16"
+665.44,3.77,and the end person 266.
+669.21,1.98,"Oh, we just got-- oh."
+671.19,1.88,OK.
+673.07,0.5,OK.
+673.57,1.458,"I'm going to cut
+it off right here."
+675.028,0.513,271.
+675.541,0.499,OK.
+676.04,2.45,16 and 271.
+678.49,0.84,Perfect.
+679.33,1.05,OK.
+680.38,1.5,"I'm going to choose
+a random number."
+681.88,1.02,I'm going to go to my IDE.
+682.9,1.59,"And you don't need to
+know how to do this yet,"
+684.49,1.625,"but by the end of
+this class, you will."
+686.115,3.076,I'm just going to use Python.
+689.191,2.499,"I'm just going to get the random
+number package that's going"
+691.69,1.26,to give me a random number.
+692.95,2.87,I'm going to say random.randint.
+695.82,4.69,"And I'm going to choose a random
+number between 16 and 272,"
+700.51,0.87,OK.
+701.38,1.06,75.
+702.44,1.25,OK.
+703.69,1.11,Great.
+704.8,1.08,I chose a random number.
+705.88,2.677,"And I'm going to find the
+number in the responder's sheet."
+708.557,1.083,What was the number again?
+709.64,1.4,Sorry.
+711.04,0.96,75.
+712.0,2.02,OK.
+714.02,2.06,Up we go.
+716.08,1.63,There we go.
+717.71,3.59,Lauren Z-O-V. Yeah.
+721.3,0.76,Nice.
+722.06,0.65,You're here.
+734.18,1.93,Awesome.
+736.11,1.7,All right.
+737.81,3.39,"That's an example of me
+being a machine and also,"
+741.2,2.67,"at the same time, using
+Python in my everyday life,"
+743.87,4.78,"just lecturing, to
+find a random number."
+748.65,1.7,"Try to use Python
+wherever you can."
+750.35,1.375,"And that just
+gives you practice."
+754.58,1.19,That was fun.
+755.77,1.42,But we're at MIT.
+757.19,1.92,We're MIT students.
+759.11,2.79,And we love numbers here at MIT.
+761.9,2.849,"Here's a numerical
+example that shows"
+764.749,2.041,"the difference between
+declarative and imperative"
+766.79,3.21,knowledge.
+770.0,1.47,"An example of
+declarative knowledge"
+771.47,3.06,"is the square root of a number
+x is y such that y times y"
+774.53,2.49,is equal to x.
+777.02,1.99,"That's just a statement
+of fact It's true."
+782.3,3.572,"Computers don't know
+what to do with that."
+785.872,1.958,"They don't know what to
+do with that statement."
+787.83,3.44,"But computers do know
+how to follow a recipe."
+791.27,1.98,Here's a well-known algorithm.
+793.25,3.3,"To find the square
+root of a number x,"
+796.55,6.52,"let's say x is originally
+16, if a computer follows"
+803.07,3.57,"this algorithm, it's going
+to start with a guess, g,"
+806.64,1.98,"let's say, 3."
+808.62,2.32,"We're trying to find
+the square root of 16."
+810.94,3.38,"We're going to calculate
+g times g is 9."
+814.32,1.8,"And we're going to
+ask is if g times g"
+816.12,3.55,"is close enough to x, then
+stop and say, g is the answer."
+819.67,3.029,"I'm not really happy with
+9 being really close to 16."
+822.699,1.791,"So I'm going to say,
+I'm not stopping here."
+824.49,2.64,I'm going to keep going.
+827.13,1.56,"If it's not close
+enough, then I'm"
+828.69,4.23,"going to make a new guess
+by averaging g and x over g."
+832.92,1.56,That's x over g here.
+834.48,2.67,"And that's the
+average over there."
+837.15,2.97,"And the new average is
+going to be my new guess."
+844.32,1.11,And that's what it says.
+845.43,2.25,"And then, the last step
+is using the new guess,"
+847.68,1.11,repeat the process.
+848.79,2.82,"Then we go back to the beginning
+and repeat the whole process"
+851.61,1.874,over and over again.
+853.484,1.666,"And that's what the
+rest of the rows do."
+855.15,1.44,"And you keep doing
+this until you decide"
+856.59,1.041,that you're close enough.
+863.34,1.8,"What we saw for the
+imperative knowledge"
+865.14,1.47,"in the previous
+numerical example"
+866.61,4.994,"was the recipe for how to
+find the square root of x."
+871.604,1.666,"What were the three
+parts of the recipe?"
+873.27,2.82,"One was a simple
+sequence of steps."
+876.09,3.18,There were four steps.
+879.27,3.39,"The other was a flow of
+control, so there were"
+882.66,2.7,parts where we made decisions.
+885.36,1.62,Are we close enough?
+886.98,2.34,"There were parts where
+we repeated some steps."
+889.32,3.57,"At the end, we said,
+repeat steps 1, 2, 3."
+892.89,2.43,That's the flow of control.
+895.32,3.02,"And the last part of the
+recipe was a way to stop."
+898.34,2.32,"You don't want a program
+that keeps going and going."
+900.66,3.209,"Or for a recipe, you don't want
+to keep baking bread forever."
+903.869,1.291,You want to stop at some point.
+905.16,2.64,"Like 10 breads is enough, right?"
+907.8,2.43,"So you have to have
+a way of stopping."
+910.23,2.55,"In the previous example,
+the way of stopping"
+912.78,2.46,"was that we decided
+we were close enough."
+915.24,5.021,"Close enough was maybe
+being within .01, .001,"
+920.261,0.749,whatever you pick.
+923.83,2.72,"This recipe is there
+for an algorithm."
+926.55,2.698,"In computer science speak,
+it's going to be an algorithm."
+929.248,2.374,"And that's what we're going
+to learn about in this class."
+934.532,1.208,We're dealing with computers.
+935.74,2.25,"And we actually want
+to capture a recipe"
+937.99,3.105,"inside a computer, a computer
+being a mechanical process."
+949.64,3.312,"Historically, there were two
+different types of computers."
+955.54,2.19,"Originally, there
+were these things"
+957.73,2.07,called fixed-program computers.
+959.8,2.31,"And I'm old enough to
+have used something"
+962.11,4.6,"like this, where there's
+just numbers and plus, minus,"
+966.71,2.21,"multiplication,
+divide, and equal."
+968.92,2.43,"But calculators these days
+are a lot more complicated."
+971.35,3.93,"But way back then, an example
+of a fixed-program computer"
+975.28,0.93,is this calculator.
+976.21,2.98,"It only knows how to do
+addition, multiplication,"
+979.19,1.55,"subtraction, division."
+980.74,1.74,"If you want to plot
+something, you can't."
+982.48,4.56,"If you want to go on the
+internet, send email with it,"
+987.04,0.74,you can't.
+987.78,3.26,It can only do this one thing.
+991.04,2.57,"And if you wanted to create a
+machine that did another thing,"
+993.61,3.75,"then you'd have to create
+another fixed-program computer"
+997.36,2.61,"that did a completely
+separate test."
+999.97,1.92,That's not very great.
+1001.89,4.02,"That's when stored-program
+computers came into play."
+1005.91,1.8,"And these were machines
+that could store"
+1007.71,2.82,a sequence of instructions.
+1010.53,4.199,"And these machines could execute
+the sequence of instructions."
+1014.729,2.041,"And you could change the
+sequence of instructions"
+1016.77,3.45,"and execute this different
+sequence of instructions."
+1020.22,3.27,"You could do different
+tasks in the same machine."
+1023.49,4.44,"And that's the computer
+as we know it these days."
+1027.93,3.189,"The central processing unit is
+where all of these decisions"
+1031.119,0.5,get made.
+1031.619,4.72,"And these are all
+the peripherals."
+1036.339,3.691,"The basic machine architecture--
+at the heart of every computer"
+1040.03,5.25,"there's just this
+basic architecture--"
+1045.28,3.48,"and it contains, I
+guess, four main parts."
+1048.76,2.79,The first is the memory.
+1051.55,3.15,"Input and output
+is the other one."
+1054.7,5.28,"The ALU is where all of
+the operations are done."
+1059.98,1.59,"And the operations
+that the ALU can do"
+1061.57,3.0,"are really primitive operations,
+addition, subtraction,"
+1064.57,1.89,and so on.
+1066.46,6.15,"What the memory contains
+is a bunch of data"
+1072.61,2.244,"and your sequence
+of instructions."
+1080.54,3.33,"Interacting with the Arithmetic
+Logic Unit is the Control Unit."
+1083.87,3.24,"And the Control Unit
+contains one program counter."
+1087.11,2.79,"When you load a sequence
+of instructions,"
+1089.9,2.73,"the program counter starts
+at the first sequence."
+1095.54,2.97,"It starts at the sequence,
+at the first instruction."
+1098.51,3.69,"It gets what the instruction
+is, and it sends it to the ALU."
+1102.2,3.79,"The ALU asks, what are we
+doing operations on here?"
+1105.99,1.34,What's happening?
+1107.33,1.82,It might get some data.
+1109.15,2.25,"If you're adding two numbers,
+it might get two numbers"
+1111.4,1.9,from memory.
+1113.3,1.38,It might do some operations.
+1114.68,2.97,"And it might store
+data back into memory."
+1117.65,3.867,"And after it's done, the
+ALU is going to go back,"
+1121.517,1.833,"and the program counter
+is going to increase"
+1123.35,2.01,"by 1, which means
+that we're going"
+1125.36,4.84,"to go to the next sequence
+in the instruction set."
+1130.2,3.64,"And it just goes linearly,
+instruction by instruction."
+1133.84,2.49,"There might be one
+particular instruction"
+1136.33,1.77,that does some sort of test.
+1138.1,8.94,"It's going to say, is
+this particular value"
+1147.04,4.29,"greater or equal to or the same
+as this other particular value?"
+1151.33,1.87,"That's a test, an
+example of a test."
+1153.2,4.43,"And the test is going to
+either return true or false."
+1157.63,3.18,"And depending on the
+result of that test,"
+1160.81,3.72,"you might either go to
+the next instruction,"
+1164.53,1.62,"or you might set
+the program counter"
+1166.15,3.66,"to go all the way back to
+the beginning, and so on."
+1169.81,2.452,"You're not just
+linearly stepping"
+1172.262,1.208,through all the instructions.
+1173.47,1.83,"There might be some
+control flow involved,"
+1175.3,1.5,"where you might
+skip an instruction,"
+1176.8,2.93,"or start from the
+beginning, or so on."
+1179.73,2.68,"And after you're done,
+when you finished"
+1182.41,2.13,"executing the last
+instruction, then you"
+1184.54,2.64,might output something.
+1187.18,6.24,"That's really the basic
+way that a computer works."
+1193.42,2.37,"Just to recap, you have
+the stored program computer"
+1195.79,3.35,"that contains these
+sequences of instructions."
+1199.14,1.81,"The primitive operations
+that it can do"
+1200.95,5.1,"are addition, subtraction,
+logic operations, tests--"
+1206.05,2.79,"which are something equal
+to something else, something"
+1208.84,1.95,"less than, and so
+on-- and moving data,"
+1210.79,3.6,"so storing data, moving data
+around, and things like that."
+1214.39,5.446,"And the interpreter goes
+through every instruction"
+1219.836,2.624,"and decides whether you're going
+to go to the next instruction,"
+1222.46,6.37,"skip instructions, or repeat
+instructions, and so on."
+1228.83,1.74,"So we've talked
+about primitives."
+1230.57,4.697,"And in fact, Alan Turing, who
+was a really great computer"
+1235.267,2.083,"scientist, he showed that
+you can compute anything"
+1237.35,1.53,using the six primitives.
+1238.88,7.71,"And the six primitives are move
+left, move right, read, write,"
+1246.59,2.46,"scan, and do nothing."
+1249.05,5.34,"Using those six instructions
+and the piece of tape,"
+1254.39,2.94,"he showed that you
+can compute anything."
+1257.33,3.06,"And using those
+six instructions,"
+1260.39,2.7,"programming languages
+came about that"
+1263.09,2.01,"created a more convenient
+set of primitives."
+1265.1,3.42,"You don't have to program
+in only these six commands."
+1271.49,4.59,"And one interesting thing, or
+one really important thing,"
+1276.08,3.15,"that came about from
+these six primitives"
+1279.23,3.06,"is that if you can compute
+something in Python,"
+1282.29,3.48,"let's say-- if you write a
+program that computes something"
+1285.77,3.18,"in Python, then,
+in theory, you can"
+1288.95,2.31,"write a program that
+computes the exact same thing"
+1291.26,1.35,in any other language.
+1292.61,4.11,"And that's a really
+powerful statement."
+1296.72,2.94,"Think about that today when
+you review your slides."
+1299.66,1.2,Think about that again.
+1300.86,1.05,That's really powerful.
+1305.24,4.74,"Once you have your
+set of primitives"
+1309.98,3.859,"for a particular language, you
+can start creating expressions."
+1313.839,1.541,"And these expressions
+are going to be"
+1315.38,5.13,"combinations of the primitives
+in the programming language."
+1320.51,2.28,"And the expressions are
+going to have some value."
+1322.79,2.95,"And they're going up some
+meaning in the programming"
+1325.74,2.7,language.
+1328.44,2.19,"Let's do a little bit of
+a parallel with English"
+1330.63,3.39,just so you see what I mean.
+1334.02,1.5,"In English, the
+primitive constructs"
+1335.52,1.71,are going to be words.
+1337.23,1.96,"There's a lot of words
+in the English language."
+1339.19,4.04,"Programming languages-- in
+Python, there are primitives,"
+1343.23,1.88,"but there aren't
+as many of them."
+1345.11,3.79,"There are floats,
+Booleans, these"
+1348.9,2.76,"are numbers, strings,
+and simple operators,"
+1351.66,3.51,"like addition,
+subtraction, and so on."
+1355.17,3.06,So we have primitive constructs.
+1358.23,1.59,"Using these
+primitive constructs,"
+1359.82,8.347,"we can start creating, in
+English, phrases, sentences,"
+1368.167,1.583,"and the same in
+programming languages."
+1369.75,4.62,"In English, we can say
+something like, ""cat, dog, boy."
+1374.37,3.99,"That, we say, is not
+syntactically valid."
+1378.36,1.81,That's bad syntax.
+1380.17,1.75,"That's noun, noun, noun."
+1381.92,3.24,That doesn't make sense.
+1385.16,3.78,"What does have good syntax in
+English is noun, verb, noun."
+1388.94,3.85,"So, ""cat, hugs boy"" is
+syntactically valid."
+1392.79,1.89,"Similarly, in a
+programming language,"
+1394.68,3.515,"something like this-- in
+Python, in this case-- a word"
+1398.195,2.125,"and then the number five
+doesn't really make sense."
+1400.32,1.68,It's not syntactically valid.
+1402.0,6.03,"But something like operator,
+operand, operator is OK."
+1408.03,6.45,"So once you've created these
+phrases, or these expressions,"
+1414.48,2.76,"that are syntactically
+valid, you"
+1417.24,4.49,"have to think about the static
+semantics of your phrase,"
+1421.73,3.4,or of your expression.
+1425.13,6.15,"For example, in English, ""I
+are hungry"" is good syntax."
+1431.28,4.05,But it's weird to say.
+1435.33,2.94,"We have a pronoun, a verb,
+and an adjective, which"
+1438.27,1.5,doesn't really make sense.
+1439.77,3.72,"I am hungry"" is better."
+1443.49,3.78,"This does not have
+good static semantics."
+1447.27,1.74,"Similarly, in
+programming languages--"
+1449.01,2.43,"and you'll get the
+hang of this the more"
+1451.44,4.51,"you do it-- something like
+this, ""3.2 times 5, is OK."
+1455.95,1.44,But what does it mean?
+1457.39,4.94,"What's the meaning to have
+a word added to a number?"
+1462.33,3.33,There's no meaning behind that.
+1465.66,2.37,"Its syntax is OK,
+because you have"
+1468.03,2.09,"operator, operand, operator."
+1470.12,2.65,"But it doesn't really make
+sense to add a number to a word,"
+1472.77,0.53,for example.
+1476.64,3.33,"Once you have created
+these expressions that"
+1479.97,4.97,"are syntactically correct and
+static, semantically correct,"
+1484.94,4.0,"in English, for example, you
+think about the semantics."
+1488.94,1.82,"What's the meaning
+of the phrase?"
+1490.76,2.02,"In English, you can
+actually have more than one"
+1492.78,3.36,meaning to an entire phrase.
+1496.14,5.144,"In this case, ""flying
+planes can be dangerous"
+1501.284,0.916,can have two meanings.
+1502.2,2.79,"It's the act of flying
+a plane is dangerous,"
+1504.99,3.87,"or the plane that is in
+the air is dangerous."
+1508.86,1.79,"And this might be
+a cuter example."
+1510.65,1.84,"This reading lamp
+hasn't uttered a word"
+1512.49,1.2,since I bought it.
+1513.69,1.47,What's going on?
+1515.16,1.22,So that has two meanings.
+1516.38,4.75,"It's playing on the
+word ""reading lamp."
+1521.13,0.75,That's in English.
+1521.88,1.458,"In English, you
+can have a sentence"
+1523.338,1.802,"that has more than
+one meaning, that's"
+1525.14,3.01,"syntactically correct and
+static, semantically correct."
+1528.15,3.03,"But in programming languages,
+the program that you write,"
+1531.18,2.905,"the set of instructions that
+you write, only has one meaning."
+1534.085,1.625,"Remember, we're coming
+back to the fact"
+1535.71,4.41,"that the computer only does
+what you tell it to do."
+1540.12,2.13,"It's not going to
+suddenly decide"
+1542.25,4.14,"to add another variable
+for some reason."
+1546.39,2.67,"It's just going to execute
+whatever statements you've"
+1549.06,1.655,put up.
+1550.715,2.125,"In programming languages,
+there's only one meaning."
+1552.84,5.259,"But the problem that comes into
+play in programming languages"
+1558.099,1.791,"is it's not the meaning
+that you might have"
+1559.89,3.24,"intended, as the programmer."
+1563.13,2.796,"That's where things
+can go wrong."
+1565.926,1.374,"And there's going
+to be a lecture"
+1567.3,2.71,"on debugging a little
+bit later in the course."
+1570.01,2.87,"But this is here
+just to tell you"
+1572.88,3.21,"that if you see an error
+pop up in your program,"
+1576.09,2.32,"it's just some text
+that says, error."
+1581.16,7.17,"For example, if we do
+something like this,"
+1588.33,2.57,this is syntactically correct.
+1590.9,0.5,Incorrect.
+1591.4,0.83,Syntactically incorrect.
+1592.23,0.5,See?
+1592.73,3.32,"There's some angry
+text right here."
+1596.05,1.669,What is going on?
+1597.719,1.541,"The more you program,
+the more you'll"
+1599.26,1.95,"get the hang of
+reading these errors."
+1601.21,2.34,"But this is basically
+telling me the line"
+1603.55,2.34,"that I wrote is
+syntactically incorrect."
+1605.89,3.3,"And it's pointing to the exact
+line and says, this is wrong,"
+1609.19,3.26,"so I can go back and
+fix it as a programmer."
+1615.48,2.425,"Syntax errors are actually
+really easily caught by Python."
+1620.8,2.07,"That was an example
+of a syntax error."
+1622.87,1.77,"Static semantic
+errors can also be"
+1624.64,5.19,"caught by Python as long as, if
+your program has some decisions"
+1629.83,4.14,"to make, as long as you've
+gone down the branch where"
+1633.97,4.11,"the static semantic
+error happens."
+1638.08,4.08,"And this is probably going to
+be the most frustrating one,"
+1642.16,1.607,"especially as
+you're starting out."
+1643.767,2.083,"The program might do
+something different than what"
+1645.85,1.89,you expected it to do.
+1647.74,4.56,"And that's not because the
+program suddenly-- for example,"
+1652.3,2.16,"you expected the program
+to give you an output of 0"
+1654.46,3.366,"for a certain test case, and
+the output that you got was 10."
+1657.826,1.374,"Well, the program
+didn't suddenly"
+1659.2,3.15,"decide to change
+its answer to 10."
+1662.35,3.06,"It just executed the
+program that you wrote."
+1668.71,1.95,"That's the case where
+the program gave you"
+1670.66,2.55,"a different answer
+than expected."
+1673.21,2.37,"Programs might crash, which
+means they stop running."
+1675.58,2.22,That's OK.
+1677.8,2.64,"Just go back to your code and
+figure out what was wrong."
+1680.44,3.21,"And another example
+of a different meaning"
+1683.65,3.14,"than what you intended was
+maybe the program won't stop."
+1686.79,0.79,It's also OK.
+1687.58,2.49,"There are ways to stop
+it besides restarting"
+1690.07,2.88,the computer.
+1692.95,4.82,"So then Python
+programs are going"
+1697.77,2.49,"to be sequences of
+definitions and commands."
+1700.26,4.83,"We're going to have expressions
+that are going to be evaluated"
+1705.09,8.73,"and commands that tell the
+interpreter to do something."
+1713.82,1.59,"If you've done
+problem set 0, you'll"
+1715.41,2.52,"see that you can type
+commands directly"
+1717.93,2.79,"in the shell here, which is
+the part on the right where"
+1720.72,3.78,"I did some really
+simple things, 2 plus 4."
+1724.5,4.98,"Or you can type commands up in
+here, on the left-hand side,"
+1729.48,2.62,and then run your program.
+1732.1,2.807,"Notice that, well, we'll
+talk about this-- I"
+1734.907,1.083,won't talk about this now.
+1735.99,3.93,"But these are-- on the
+right-hand side, typically,"
+1739.92,1.95,"you write very simple
+commands just if you're"
+1741.87,1.206,testing something out.
+1743.076,1.874,"And on the left-hand
+side here in the editor,"
+1744.95,5.155,"you write more lines and
+more complicated programs."
+1755.13,3.57,"Now we're going to start
+talking about Python."
+1758.7,2.01,"And in Python, we're going
+to come back to this,"
+1760.71,2.82,everything is an object.
+1763.53,4.38,"And Python programs
+manipulate these data objects."
+1767.91,2.97,"All objects in Python
+are going to have a type."
+1770.88,3.12,"And the type is going to tell
+Python the kinds of operations"
+1774.0,3.63,"that you can do
+on these objects."
+1777.63,2.32,"If an object is the
+number five, for example,"
+1779.95,2.799,"you can add the number
+to another number,"
+1782.749,2.291,"subtract the number, take it
+to the power of something,"
+1785.04,2.22,and so on.
+1787.26,4.26,"As a more general example,
+for example, I am a human."
+1791.52,1.41,So that's my type.
+1792.93,2.77,"And I can walk, speak
+English, et cetera."
+1795.7,4.16,"Chewbacca is going
+to be a type Wookie."
+1799.86,2.974,"He can walk, do that
+sound that I can't do."
+1802.834,1.166,"He can do that, but I can't."
+1804.0,2.683,"I'm not even going
+to try, and so on."
+1809.64,1.56,"Once you have these
+Python objects,"
+1811.2,3.734,"everything is an
+object in Python."
+1814.934,1.666,"There are actually
+two types of objects."
+1816.6,1.5,One are scalar objects.
+1818.1,3.27,"That means these are very basic
+objects in Python from which"
+1821.37,3.39,everything can be made.
+1824.76,1.29,These are scalar objects.
+1826.05,2.43,That can't be subdivided.
+1828.48,2.73,"The other type of object
+is a non-scalar object."
+1831.21,2.49,"And these are objects that
+have some internal structure."
+1833.7,3.03,"For example, the
+number five is a scalar"
+1836.73,2.34,"object because it
+can't be subdivided."
+1839.07,2.64,"But a list of numbers,
+for example, 5, 6,"
+1841.71,3.66,"7,8, is going to be
+a non-scalar object"
+1845.37,1.23,because you can subdivide it.
+1846.6,6.52,"You can subdivide it into--
+you can find parts to it."
+1853.12,2.01,"It's made up of a
+sequence of numbers."
+1858.7,2.52,"Here's the list of all of
+the scalar objects in Python."
+1861.22,4.65,"We have integers, for example,
+all of the whole numbers."
+1865.87,4.26,"Floats, which are all of
+the real numbers, anything"
+1870.13,1.38,with a decimal.
+1871.51,2.25,Bools are Booleans.
+1873.76,2.34,"There's only two
+values to Booleans."
+1876.1,2.4,That's True and False.
+1878.5,4.56,"Note the capitalization,
+capital T and capital F."
+1883.06,1.745,"And this other thing
+called NoneType."
+1884.805,1.705,It's special.
+1886.51,2.08,"It has only one
+value called None."
+1888.59,1.91,"And it represents the
+absence of a type."
+1890.5,4.14,"And it sometimes comes in
+handy for some programs."
+1894.64,1.75,"If you want to find
+the type of an object,"
+1896.39,3.142,"you can use this special
+command called type."
+1899.532,1.708,"And then in the
+parentheses, you put down"
+1901.24,3.6,"what you want to
+find the type of."
+1904.84,2.64,"You can write into
+the shell ""type of 5,"
+1907.48,2.086,"and the shell will tell
+you, that's an integer."
+1912.99,3.3,"If you happen to want to convert
+between two different types,"
+1916.29,1.89,Python allows you to do that.
+1918.18,3.27,"And to do that, you
+put the type that you"
+1921.45,2.37,"want to convert to
+right before the object"
+1923.82,1.45,that you want to convert to.
+1925.27,7.43,"So float(3) will convert the
+integer 3 to the float 3.0."
+1932.7,4.17,"And similarly, you can convert
+any float into an integer."
+1936.87,3.3,"And converting to an
+integer just truncates."
+1940.17,2.01,"It just takes away the
+decimal and whatever's"
+1942.18,3.97,"after it-- it does not round--
+and keeps just the integer"
+1946.15,0.5,part.
+1950.119,1.791,"For this slide, I'm
+going to talk about it."
+1951.91,3.15,"But if you'd like if
+you have the slides up,"
+1955.06,2.14,go to go to this exercise.
+1957.2,3.8,"And after I'm done
+talking about the slide,"
+1961.0,4.532,"we'll see what people
+think for that exercise."
+1965.532,1.708,"One of the most
+important things that you"
+1967.24,4.04,"can do in basically
+any programming,"
+1971.28,4.24,"in Python also, is
+to print things out."
+1975.52,4.772,"Printing out is how you
+interact with the user."
+1980.292,1.958,"To print things out, you
+use the print command."
+1984.85,2.71,"If you're in the shell, if
+you simply type ""3 plus 2,"
+1987.56,2.14,you do see a value here.
+1989.7,2.02,"Five, right?"
+1991.72,2.13,"But that's not actually
+printing something out."
+1993.85,4.53,"And that becomes apparent
+when you actually"
+1998.38,1.26,type things into the editor.
+1999.64,3.52,"If you just do ""3 plus 2,"" and
+you run the program-- that's"
+2003.16,3.11,"the green button here-- you see
+on the right-hand side here,"
+2006.27,0.81,it ran my program.
+2007.08,3.12,"But it didn't actually
+print anything."
+2010.2,1.95,"If you type this
+into the console,"
+2012.15,1.77,"it does show you this
+value, but that's"
+2013.92,5.55,"just like peeking into the
+value for you as a programmer."
+2019.47,1.942,"It's not actually
+printing it out to anyone."
+2021.412,1.458,"If you want to
+print something out,"
+2022.87,5.12,"you have to use the print
+statement like that."
+2027.99,2.64,"In this case, this is actually
+going to print this number"
+2030.63,1.66,five to the console.
+2038.296,1.249,That's basically what it says.
+2039.545,2.249,"It just tells you it's an
+interaction within the shell"
+2041.794,0.616,only.
+2042.41,2.119,"It's not interacting
+with anyone else."
+2044.529,1.541,"And if you don't
+have any ""Out,"" that"
+2046.07,3.419,"means it got printed
+out to the console."
+2049.489,0.5,All right.
+2049.989,3.331,"We talked a little
+bit about objects."
+2053.32,2.73,"Once you have objects, you can
+combine objects and operators"
+2056.05,1.12,to form these expressions.
+2057.17,2.27,"And each expression is
+going to have a value."
+2059.44,3.509,"So an expression
+evaluates to a value."
+2062.949,1.651,"The syntax for an
+expression is going"
+2064.6,5.849,"to be object, operator,
+object, like that."
+2070.449,3.96,"And these are some operators
+you can do on ints and floats."
+2074.409,2.171,"There's the typical ones,
+addition, subtraction,"
+2076.58,2.13,"multiplication, and division."
+2078.71,4.394,"If, for the first
+three, the answer"
+2083.104,2.166,"that you get-- the type of
+the answer that you get--"
+2085.27,3.21,"is going to depend on the
+type of your variables."
+2088.48,4.289,"If both of the variables of
+the operands are integers,"
+2092.769,2.291,"then the result you're going
+to get is of type integer."
+2095.06,1.833,"But if at least one of
+them is a float, then"
+2096.893,2.047,"the result you're going
+to get is a float."
+2098.94,3.4,"Division is a little
+bit special in that"
+2102.34,2.35,"no matter what the
+operands are, the result"
+2104.69,1.25,is always going to be a float.
+2109.76,4.72,"The other operations you can
+do, and these are also useful,"
+2114.48,4.66,"are the remainder,
+so the percent sign."
+2119.14,3.82,"If you use the percent
+sign between two operands,"
+2122.96,2.58,"that's going to give you the
+remainder when you divide i"
+2125.54,2.484,by j.
+2128.024,2.166,"And raising something to
+the power of something else"
+2130.19,2.58,is using the star star operator.
+2132.77,3.28,"And i star stars j is going
+to take i to the power of j."
+2141.39,2.55,"These operations have
+the typical precedence"
+2143.94,3.12,"that you might expect
+in math, for example."
+2147.06,2.015,"And if you'd like
+to put precedence"
+2149.075,1.375,"toward some other
+operations, you"
+2150.45,1.82,can use parentheses to do that.
+2161.49,2.5,All right.
+2163.99,3.06,"So we have ways of
+creating expressions."
+2167.05,6.45,"And we have operations
+we can do on objects."
+2173.5,5.64,"But what's going to be useful
+is to be able to save values"
+2179.14,2.25,to some name.
+2181.39,3.39,"And the name is going to
+be something that you pick."
+2184.78,3.06,"And it should be a
+descriptive name."
+2187.84,4.47,"And when you save
+the value to a name,"
+2192.31,3.72,"you're going to be able
+to access that value later"
+2196.03,1.92,on in your program.
+2197.95,2.49,And that's very useful.
+2200.44,4.83,"To save a value to a variable
+name, you use the equal sign."
+2209.18,2.34,"And the equal sign
+is an assignment."
+2211.52,1.56,"It assigns the
+right-hand side, which"
+2213.08,2.46,"is a value, to the
+left-hand side, which"
+2215.54,1.358,is going to be a variable name.
+2219.5,3.5,"In this case, I assigned
+the float 3.14159"
+2223.0,2.59,to the variable pi.
+2225.59,2.61,"And in the second
+line, I'm going"
+2228.2,2.55,"to take this expression,
+22 divided by 7,"
+2230.75,2.34,I'm going to evaluate it.
+2233.09,2.97,"It's going to come up
+with some decimal number."
+2236.06,3.9,"And I'm going to save it
+into the variable pi_approx."
+2239.96,1.56,values are stored in memory.
+2241.52,1.44,"And this assignment
+in Python, we"
+2242.96,3.99,"say the assignment binds
+the name to the value."
+2246.95,3.9,"When you use that name
+later on in your program,"
+2250.85,4.8,"you're going to be referring
+to the value in memory."
+2255.65,2.229,"And if you ever want
+to refer to the value"
+2257.879,1.791,"later on in your code,
+you just simply type"
+2259.67,4.8,"the name of the variable
+that you've assigned it to."
+2264.47,3.78,"So why do we want to give
+names to expressions?"
+2268.25,3.42,"Well, you want to reuse the
+names instead of the values."
+2271.67,2.67,"And it makes your
+code look a lot nicer."
+2274.34,2.49,"This is a piece of
+code that calculates"
+2276.83,2.56,the area of a circle.
+2279.39,3.72,"And notice, I've assigned
+a variable pi to 3.14159."
+2283.11,4.25,"I've assigned another variable
+called radius to be 2.2."
+2287.36,2.34,"And then, later on in my
+code, I have another line"
+2289.7,3.24,"that says area-- this
+is another variable-- is"
+2292.94,2.46,"equal to-- this
+is an assignment--"
+2295.4,1.89,to this expression.
+2297.29,5.79,"And this expression is referring
+to these variable names, pi"
+2303.08,1.41,and radius.
+2304.49,1.92,"And it's going look up
+their values in memory."
+2306.41,2.67,"And it's going to replace
+these variable names"
+2309.08,1.02,with those values.
+2310.1,2.75,"And it's going to do
+the calculation for me."
+2312.85,1.6,"And in the end, this
+whole expression"
+2314.45,1.952,"is going to be
+replaced by one number."
+2316.402,1.291,And it's going to be the float.
+2320.42,4.86,"Here's another exercise, while
+I'm talking about the slide."
+2325.28,3.81,"I do want to make a note
+about programming versus math."
+2329.09,6.23,"In math, you're often
+presented with a problem"
+2335.32,2.26,"that says, solve for x."
+2337.58,2.68,"x plus y is equal to
+something something."
+2340.26,3.5,"Solve for x, for example."
+2343.76,5.79,"That's coming back to the
+fact that computers don't"
+2349.55,1.17,know what to do with that.
+2350.72,1.939,"Computers need to
+be told what to do."
+2352.659,1.791,"In programming, if you
+want to solve for x,"
+2354.45,4.08,"you need to tell the computer
+exactly how to solve for x."
+2358.53,1.82,"You need to figure
+out what formula"
+2360.35,2.55,"you need to give the
+computer in order to be"
+2362.9,2.79,able to solve for x.
+2365.69,3.84,"That means always in programming
+the right-hand side is"
+2369.53,3.51,going to be an expression.
+2373.04,2.94,"It's something that's going
+to be evaluated to a value."
+2375.98,3.119,"And the left-hand side
+is always a variable."
+2379.099,1.291,It's going to be an assignment.
+2380.39,3.51,"The equal sign is
+not like in math"
+2383.9,1.92,"where you can have a lot
+of things to the left"
+2385.82,1.56,"and a lot of things to the
+right of the equal sign."
+2387.38,1.68,"There's only one thing to
+the left of the equal sign."
+2389.06,1.71,"And that's going
+to be a variable."
+2390.77,2.94,"An equal sign stands
+for an assignment."
+2393.71,3.42,"Once we've created expressions,
+and we have these assignments,"
+2397.13,2.34,"you can rebind variable
+names using new assignment"
+2399.47,0.78,statements.
+2403.16,1.86,"Let's look at an
+example for that."
+2405.02,2.82,Let's say this is our memory.
+2407.84,5.58,"Let's type back in the example
+with finding the radius."
+2413.42,5.61,"Let's say, pi is equal to 3.14."
+2419.03,3.18,"In memory, we're going to
+create this value 3.14."
+2422.21,5.97,"We're going to bind it
+to the variable named pi."
+2428.18,3.0,"Next line, radius
+is equal to 2.2."
+2431.18,4.02,"In memory, we're
+creating this value 2.2."
+2435.2,5.43,"And we're going to bind it
+to the variable named radius."
+2440.63,3.96,"Then we have this
+expression here."
+2444.59,2.04,"It's going to substitute
+the values for pi"
+2446.63,3.32,"from memory and the value
+for radius from memory."
+2449.95,4.78,"It's going to calculate the
+value that this expression"
+2454.73,1.58,evaluates to.
+2456.31,1.63,"It's going to pop
+that into the memory."
+2457.94,1.985,"And it's going to
+assign-- because we're"
+2459.925,1.375,"using the equal
+sign-- it's going"
+2461.3,4.33,"to assign that value
+to that variable area."
+2468.31,6.63,"Now, let's say we rebind
+radius to be something else."
+2474.94,6.6,"Radius i is bound
+to the value 2.2."
+2481.54,3.0,"But when we do this line, radius
+is equal to radius plus 1,"
+2484.54,3.06,"we're going to take
+away the binding to 2.2."
+2487.6,2.37,"We're going to do
+this calculation."
+2489.97,1.35,The new value is 3.2.
+2491.32,6.75,"And we're going to rebind that
+value to that same variable."
+2498.07,2.04,"In memory, notice
+we're still going"
+2500.11,3.75,"to have this value,
+2.2, floating around."
+2503.86,2.91,"But we've lost
+the handle for it."
+2506.77,1.29,There's no way to get it back.
+2508.06,3.99,"It's just in memory
+sitting there."
+2512.05,3.03,"At some point, it might
+get collected by what"
+2515.08,1.47,we call the garbage collector.
+2516.55,4.41,"In Python, And it'll
+retrieve these lost values,"
+2520.96,4.95,"and it'll reuse them for new
+values, and things like that."
+2525.91,2.61,"But radius now points
+to the new value."
+2528.52,5.28,We can never get back 2.2.
+2533.8,2.54,And that's it.
+2536.34,2.64,"The value of area-- notice,
+this is very important."
+2538.98,1.47,"The value of area
+did not change."
+2543.15,2.85,"And it did not change because
+these are all the instructions"
+2546.0,2.46,we told the computer to do.
+2548.46,4.83,"We just told it to change
+radius to be radius plus 1."
+2553.29,4.2,"We never told it to
+recalculate the value of area."
+2557.49,4.11,"If I copied that line down
+here, then the value of area"
+2561.6,1.23,would change.
+2562.83,1.6,But we never told it to do that.
+2564.43,2.524,"The computer only does
+what we tell it to do."
+2566.954,0.916,That's the last thing.
+2567.87,3.28,"Next lecture, we're going
+to talk about adding control"
+2571.15,2.42,"flow to our programs, so
+how do you tell the computer"
+2573.57,1.98,to do one thing or another?
+2575.55,1.61,All right.

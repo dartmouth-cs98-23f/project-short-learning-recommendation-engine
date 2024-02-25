@@ -1,0 +1,338 @@
+second,duration,transcript
+2.96,2.94,"Hi, I’m Carrie Anne, and welcome to Crash
+Course Computer Science!"
+5.9,5.18,"As we’ve touched on many times in this series,
+computers are incredible at storing, organizing,"
+11.08,2.429,fetching and processing huge volumes of data.
+13.509,4.131,"That’s perfect for things like e-commerce
+websites with millions of items for sale,"
+17.64,3.12,"and for storing billions of health records
+for quick access by doctors."
+20.76,4.0,"But what if we want to use computers not just
+to fetch and display data, but to actually"
+24.76,2.03,make decisions about data?
+26.79,4.48,"This is the essence of machine learning – algorithms
+that give computers the ability to learn from"
+31.27,2.86,"data, and then make predictions and decisions."
+34.13,4.61,"Computer programs with this ability are extremely
+useful in answering questions like Is an email"
+38.74,0.5,spam?
+39.24,1.84,Does a person’s heart have arrhythmia?
+41.09,2.25,"What video should youtube recommend after
+this one?"
+43.35,3.24,"While useful, we probably wouldn’t describe
+these programs as “intelligent” in the"
+46.59,2.0,same way we think of human intelligence.
+48.59,4.33,"So, even though the terms are often interchanged,
+most computer scientists would say that machine"
+52.92,4.451,"learning is a set of techniques that sits
+inside the even more ambitious goal of Artificial"
+57.38,1.96,"Intelligence, or AI for short."
+59.34,8.98,INTRO
+68.32,3.8,"Machine Learning and AI algorithms tend to
+be pretty sophisticated."
+72.12,3.98,"So rather than wading into the mechanics of
+how they work, we're going to focus on what"
+76.1,1.84,the algorithms do conceptually.
+77.94,5.06,"Let’s start with a simple example: deciding
+if a moth is a Luna Moth or an Emperor Moth."
+83.009,4.03,"This decision process is called classification,
+and an algorithm that does it is called a"
+87.039,1.0,classifier.
+88.039,3.19,"Although there are techniques that can use
+raw data for training – like photos and"
+91.229,4.771,"sounds – many algorithms reduce the complexity
+of real world objects and phenomena into what"
+96.0,1.38,are called features.
+97.38,3.88,"Features are values that usefully characterize
+the things we wish to classify."
+101.26,3.98,"For our moth example, we’re going to use
+two features: “wingspan” and “mass”."
+105.24,3.809,"In order to train our machine learning classifier
+to make good predictions, we’re going to"
+109.049,1.39,need training data.
+110.439,4.47,"To get that, we’d send an entomologist out
+into a forest to collect data for both luna"
+114.909,1.39,and emperor moths.
+116.299,4.35,"These experts can recognize different moths,
+so they not only record the feature values,"
+120.649,2.83,"but also label that data with the actual moth
+species."
+123.479,1.771,This is called labeled data.
+125.25,4.31,"Because we only have two features, it’s
+easy to visualize this data in a scatterplot."
+129.56,4.78,"Here, I’ve plotted data for 100 Emperor
+Moths in red and 100 Luna Moths in blue."
+134.34,3.05,"We can see that the species make two groupings,
+but…."
+137.39,4.14,"there’s some overlap in the middle… so
+it’s not entirely obvious how to best separate"
+141.53,1.0,the two.
+142.53,3.59,"That’s what machine learning algorithms
+do – find optimal separations!"
+146.12,4.649,"I’m just going to eyeball it and say anything
+less than 45 millimeters in wingspan is likely"
+150.769,1.131,to be an Emperor Moth.
+151.9,5.4,"We can add another division that says additionally
+mass must be less than .75 in order for our"
+157.3,1.18,guess to be Emperor Moth.
+158.48,3.54,"These lines that chop up the decision space
+are called decision boundaries."
+162.02,4.72,"If we look closely at our data, we can see
+that 86 emperor moths would correctly end"
+166.74,5.609,"up inside the emperor decision region, but
+14 would end up incorrectly in luna moth territory."
+172.349,4.961,"On the other hand, 82 luna moths would be
+correct, with 18 falling onto the wrong side."
+177.31,4.769,"A table, like this, showing where a classifier
+gets things right and wrong is called a confusion"
+182.079,3.041,"matrix... which probably should have also
+been the title of the last two movies in the"
+185.12,1.22,Matrix Trilogy!
+186.34,3.879,"Notice that there’s no way for us to draw
+lines that give us 100% accuracy."
+190.219,4.8,"If we lower our wingspan decision boundary,
+we misclassify more Emperor moths as Lunas."
+195.02,2.51,"If we raise it, we misclassify more Luna moths."
+197.53,4.47,"The job of machine learning algorithms, at
+a high level, is to maximize correct classifications"
+202.02,1.77,while minimizing errors
+203.79,6.07,"On our training data, we get 168 moths correct,
+and 32 moths wrong, for an average classification"
+209.86,1.68,accuracy of 84%.
+211.54,4.02,"Now, using these decision boundaries, if we
+go out into the forest and encounter an unknown"
+215.569,3.601,"moth, we can measure its features and plot
+it onto our decision space."
+219.17,1.56,This is unlabeled data.
+220.73,3.66,"Our decision boundaries offer a guess as to
+what species the moth is."
+224.39,2.4,"In this case, we’d predict it’s a Luna Moth."
+226.79,4.05,"This simple approach, of dividing the decision
+space up into boxes, can be represented by"
+230.84,3.819,"what’s called a decision tree, which would
+look like this pictorially or could be written"
+234.659,2.09,"in code using If-Statements, like this."
+236.749,4.261,"A machine learning algorithm that produces
+decision trees needs to choose what features"
+241.01,4.839,"to divide on…and then for each of those
+features, what values to use for the division."
+245.849,3.48,"Decision Trees are just one basic example
+of a machine learning technique."
+249.329,2.72,"There are hundreds of algorithms in computer
+science literature today."
+252.049,2.121,And more are being published all the time.
+254.17,4.87,"A few algorithms even use many decision trees
+working together to make a prediction."
+259.04,3.85,"Computer scientists smugly call those Forests…
+because they contain lots of trees."
+262.89,4.35,"There are also non-tree-based approaches,
+like Support Vector Machines, which essentially"
+267.24,2.89,"slice up the decision space using arbitrary
+lines."
+270.13,3.53,"And these don’t have to be straight lines;
+they can be polynomials or some other fancy"
+273.66,1.47,mathematical function.
+275.13,3.86,"Like before, it’s the machine learning algorithm's
+job to figure out the best lines to provide"
+278.99,1.58,the most accurate decision boundaries.
+280.57,4.75,"So far, my examples have only had two features,
+which is easy enough for a human to figure"
+285.32,0.68,out.
+286.0,5.12,"If we add a third feature, let’s say, length
+of antennae, then our 2D lines become 3D planes,"
+291.12,2.56,creating decision boundaries in three dimensions.
+293.68,2.38,These planes don’t have to be straight either.
+296.06,3.94,"Plus, a truly useful classifier would contend
+with many different moth species."
+300.0,3.67,"Now I think you’d agree this is getting
+too complicated to figure out by hand…"
+303.67,3.45,But even this is a very basic example – just three features
+307.13,1.51,and five moth species.
+308.65,2.16,We can still show it in this 3D scatter plot.
+310.81,4.33,"Unfortunately, there’s no good way to visualize
+four features at once, or twenty features,"
+315.14,2.74,let alone hundreds or even thousands of features.
+317.88,3.15,"But that’s what many real-world machine
+learning problems face."
+321.03,4.38,Can YOU imagine trying to figure out the equation for a hyperplane rippling through a thousand-dimensional
+325.41,1.25,decision space?
+326.66,4.28,"Probably not, but computers, with clever machine
+learning algorithms can… and they do, all"
+330.94,4.28,"day long, on computers at places like Google,
+Facebook, Microsoft and Amazon."
+335.22,3.56,"Techniques like Decision Trees and Support
+Vector Machines are strongly rooted in the"
+338.79,4.25,"field of statistics, which has dealt with
+making confident decisions, using data, long"
+343.04,1.91,before computers ever existed.
+344.95,4.16,"There’s a very large class of widely used
+statistical machine learning techniques, but"
+349.11,3.84,"there are also some approaches with no origins
+in statistics."
+352.95,4.84,"Most notable are artificial neural networks,
+which were inspired by neurons in our brains!"
+357.79,4.71,"For a primer of biological neurons, check
+out our three-part overview here, but basically"
+362.5,4.83,"neurons are cells that process and transmit
+messages using electrical and chemical signals."
+367.33,4.3,"They take one or more inputs from other cells,
+process those signals, and then emit their"
+371.63,1.13,own signal.
+372.76,4.88,"These form into huge interconnected networks
+that are able to process complex information."
+377.64,2.36,"Just like your brain watching this youtube
+video."
+380.0,1.94,Artificial Neurons are very similar.
+381.94,3.28,"Each takes a series of inputs, combines them,
+and emits a signal."
+385.22,4.52,"Rather than being electrical or chemical signals,
+artificial neurons take numbers in, and spit"
+389.75,1.0,numbers out.
+390.75,4.16,"They are organized into layers that are connected
+by links, forming a network of neurons, hence"
+394.91,0.59,the name.
+395.5,4.8,"Let’s return to our moth example to see
+how neural nets can be used for classification."
+400.3,4.66,"Our first layer – the input layer – provides
+data from a single moth needing classification."
+404.96,2.12,"Again, we’ll use mass and wingspan."
+407.08,4.51,"At the other end, we have an output layer,
+with two neurons: one for Emperor Moth and"
+411.59,1.31,another for Luna Moth.
+412.9,3.03,"The most excited neuron will be our classification
+decision."
+415.93,4.76,"In between, we have a hidden layer, that transforms
+our inputs into outputs, and does the hard"
+420.69,1.0,work of classification.
+421.69,3.75,"To see how this is done, let’s zoom into
+one neuron in the hidden layer."
+425.44,4.12,"The first thing a neuron does is multiply
+each of its inputs by a specific weight, let’s"
+429.56,3.43,"say 2.8 for its first input, and .1 for it’s
+second input."
+432.99,4.63,"Then, it sums these weighted inputs together,
+which is in this case, is a grand total of"
+437.62,0.5,9.74.
+438.2,4.94,"The neuron then applies a bias to this result
+- in other words, it adds or subtracts a fixed"
+443.15,3.87,"value, for example, minus six, for a new value
+of 3.74."
+447.03,4.1,"These bias and inputs weights are initially
+set to random values when a neural network"
+451.13,1.0,is created.
+452.13,4.48,"Then, an algorithm goes in, and starts tweaking
+all those values to train the neural network,"
+456.61,2.55,using labeled data for training and testing.
+459.16,4.55,"This happens over many interactions, gradually
+improving accuracy – a process very much"
+463.71,1.21,like human learning.
+464.92,4.58,"Finally, neurons have an activation function,
+also called a transfer function, that gets"
+469.51,4.42,"applied to the output, performing a final
+mathematical modification to the result."
+473.93,4.63,"For example, limiting the value to a range
+from negative one and positive one, or setting"
+478.56,1.79,any negative values to 0.
+480.35,5.39,"We’ll use a linear transfer function that
+passes the value through unchanged, so 3.74"
+485.74,1.77,stays as 3.74.
+487.51,6.13,"So for our example neuron, given the inputs
+.55 and 82, the output would be 3.74."
+493.64,4.31,"This is just one neuron, but this process
+of weighting, summing, biasing and applying"
+497.95,4.76,"an activation function is computed for all
+neurons in a layer, and the values propagate"
+502.71,2.24,"forward in the network, one layer at a time."
+504.95,4.64,"In this example, the output neuron with the
+highest value is our decision: Luna Moth."
+509.59,3.93,"Importantly, the hidden layer doesn’t have
+to be just one layer… it can be many layers"
+513.52,0.66,deep.
+514.18,2.4,"This is where the term deep learning comes
+from."
+516.59,4.23,"Training these more complicated networks takes
+a lot more computation and data."
+520.82,3.95,"Despite the fact that neural networks were
+invented over fifty years ago, deep neural"
+524.77,5.05,"nets have only been practical very recently,
+thanks to powerful processors, but even more"
+529.82,1.59,"so, wicked fast GPUs."
+531.41,3.8,"So, thank you gamers for being so demanding
+about silky smooth framerates!"
+535.21,4.25,"A couple of years ago, Google and Facebook
+demonstrated deep neural nets that could find"
+539.46,4.06,"faces in photos as well as humans – and
+humans are really good at this!"
+543.52,1.85,It was a huge milestone.
+545.37,5.03,"Now deep neural nets are driving cars, translating
+human speech, diagnosing medical conditions"
+550.4,1.02,and much more.
+551.42,3.47,"These algorithms are very sophisticated, but
+it’s less clear if they should be described"
+554.89,1.0,as “intelligent”.
+555.89,5.13,"They can really only do one thing like classify
+moths, find faces, or translate languages."
+561.02,2.79,"This type of AI is called Weak AI or Narrow
+AI."
+563.81,2.02,It’s only intelligent at specific tasks.
+565.83,4.53,"But that doesn’t mean it’s not useful;
+I mean medical devices that can make diagnoses,"
+570.36,2.13,and cars that can drive themselves are amazing!
+572.49,3.9,"But do we need those computers to compose
+music and look up delicious recipes in their"
+576.39,1.22,free time?
+577.61,1.0,Probably not.
+578.61,1.28,Although that would be kinda cool.
+579.89,4.18,"Truly general-purpose AI, one as smart and
+well-rounded as a human, is called Strong"
+584.07,1.02,AI.
+585.09,4.16,"No one has demonstrated anything close to
+human-level artificial intelligence yet."
+589.25,3.9,"Some argue it’s impossible, but many people
+point to the explosion of digitized knowledge"
+593.15,4.37,"– like Wikipedia articles, web pages, and
+Youtube videos – as the perfect kindling"
+597.52,1.1,for Strong AI.
+598.62,4.13,"Although you can only watch a maximum of 24
+hours of youtube a day, a computer can watch"
+602.75,1.5,millions of hours.
+604.25,5.88,"For example, IBM’s Watson consults and synthesizes
+information from 200 million pages of content,"
+610.13,1.67,including the full text of Wikipedia.
+611.8,5.32,"While not a Strong AI, Watson is pretty smart,
+and it crushed its human competition in Jeopardy"
+617.12,1.61,way back in 2011.
+618.73,4.24,"Not only can AIs gobble up huge volumes of
+information, but they can also learn over"
+622.97,2.09,"time, often much faster than humans."
+625.06,5.2,"In 2016, Google debuted AlphaGo, a Narrow
+AI that plays the fiendishly complicated board"
+630.26,1.0,game Go.
+631.26,3.82,"One of the ways it got so good and able to
+beat the very best human players, was by playing"
+635.08,2.32,"clones of itself millions and millions of
+times."
+637.4,4.22,"It learned what worked and what didn’t,
+and along the way, discovered successful strategies"
+641.62,1.18,all by itself.
+642.8,3.14,"This is called Reinforcement Learning, and
+it’s a super powerful approach."
+645.94,2.77,"In fact, it’s very similar to how humans
+learn."
+648.71,3.62,"People don’t just magically acquire the
+ability to walk... it takes thousands of hours"
+652.33,2.01,of trial and error to figure it out.
+654.34,4.36,"Computers are now on the cusp of learning
+by trial and error, and for many narrow problems,"
+658.7,1.92,reinforcement learning is already widely used.
+660.62,3.59,"What will be interesting to see, is if these
+types of learning techniques can be applied"
+664.21,4.851,"more broadly, to create human-like, Strong
+AIs that learn much like how kids learn, but"
+669.061,1.699,at super accelerated rates.
+670.76,4.59,"If that happens, there are some pretty big
+changes in store for humanity – a topic"
+675.35,1.5,we’ll revisit later.
+676.85,1.0,Thanks for watching.
+677.85,1.01,See you next week.

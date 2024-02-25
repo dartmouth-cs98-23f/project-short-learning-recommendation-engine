@@ -1,0 +1,92 @@
+second,duration,transcript
+0.12,1.846,"Another thing you guys have asked about a lot is,"
+1.966,1.874,is how you choose between web frameworks.
+3.84,3.7,"Now, remember the framework is generally the key step that sits between your"
+7.54,1.03,program and the internet.
+8.57,2.72,"Now, in this class we've been using the Google App engine frame work,"
+11.29,3.03,"which is basically called Web App 2, which I found really nice."
+14.32,3.63,"This handles, basically, basic HTTP, kind of the scheduling,"
+17.95,3.09,"like the threading issues, you know, handling multiple requests at once."
+21.04,3.42,"Parsing basic headers, basically looking for things out of the GET request or"
+24.46,3.4,"the POST request and putting them into these, like, request objects."
+27.86,3.46,Turning your response object into the appropriate HTTP to send to the browser.
+31.32,2.59,The URL mapping and all of that stuff is really helpful.
+33.91,2.21,Various degrees of web framework that give you more or
+36.12,2.12,less control and require you to do more or less work.
+38.24,3.31,"The level that we've been working on in webapp2 is the level where I,"
+41.55,1.06,I really like to be.
+42.61,1.01,"The things that I,"
+43.62,3.17,I really like about it are that we have direct access to GET and POST.
+46.79,2.916,"Some frameworks kind of hide this from you, and I think it's really important"
+49.706,2.754,that you are explicit about which method you're handling a GET or a POST.
+52.46,2.12,"If you're thinking about the web in that way,"
+54.58,2.09,your websites will generally make more sense.
+56.67,2.92,"You won't make the mistakes of having, or you won't as easily make mistakes as"
+59.59,2.28,"having your, you know, your GETs modify the database and"
+61.87,2.339,"then getting cached weird and, you know, your forms not submitting properly."
+64.209,1.521,Understanding webs and
+65.73,4.54,"web applications at the kind of method level, I think, is very, very important."
+70.27,1.67,We've got direct access to the request.
+71.94,1.55,"You know, this means things like headers."
+73.49,2.16,"Yes, there are convenience functions for setting cookies and"
+75.65,2.18,"getting cookies, but you can also manipulate the headers directly."
+77.83,3.36,Sometimes you'll want to do something funky with content type or content length.
+81.19,2.52,"Then if the web framework don't let you do that, it can be really frustrating."
+83.71,1.68,You can't build the site the way you want to.
+85.39,2.46,So I find this kind of low level stuff is really helpful.
+87.85,1.42,"But it's not so low that you're dealing with,"
+89.27,3.03,"like, HTTP versions and host headers unless you really want to."
+92.3,2.32,There are kind of features that a lot of frameworks do that I
+94.62,1.15,think that are non-important.
+95.77,1.4,This is strictly in my opinion.
+97.17,5.69,"Things like sessions, caching, some have automatic forums, database ORM stuff."
+102.86,3.21,I don't like working with these because I find every time I
+106.07,3.42,"use something like this, it's very soon after that I need a custom behavior."
+109.49,3.43,"I want to handle sessions differently, or I want to cache things differently, or"
+112.92,3.36,my forms don't fit the way the author thinks forms should work.
+116.28,2.97,"Or, you know, the ORM can't express queries that I want to express,"
+119.25,3.14,or won't let me cache the way I want to cache certain queries.
+122.39,3.14,So I find this sort of stuff is a little too high level for me and
+125.53,1.94,I always end up rewriting it anyway.
+127.47,3.437,"To me, the important things are basic HTTP, having access to headers, and"
+130.907,0.673,GET and POST.
+131.58,3.77,"I almost never use pre-built session things, and caching, forms, and"
+135.35,0.63,database stuff.
+135.98,2.08,"In every experience I've had, in the long run,"
+138.06,2.628,I end up getting frustrated and I have to rewrite something that would have just
+140.688,1.302,been simpler to do in the first place.
+141.99,1.94,I generally don't like magic.
+143.93,2.63,"When you look at some code and it just seems too magical, like it"
+146.56,2.78,did all of this stuff for you and you're so far away from the request that you
+149.34,2.39,"don't actually know what happened, that's a terrible way to write web software."
+151.73,1.4,You're not going to be able to scale it properly.
+153.13,2.29,You're not going to know why something breaks when it inevitably does.
+155.42,0.96,"And it's going to take you,"
+156.38,2.61,I think ultimately it will cost you more work than just thinking through each of
+158.99,0.73,these problems on your own.
+159.72,1.32,"Sometimes, it's a good way to get started."
+161.04,2.54,Something I didn't discuss here are the notion of templates.
+163.58,1.9,Template languages come in all varieties.
+165.48,2.49,I am partial to one on Python called Mako.
+167.97,3.49,"What we've been using in this class is Ginja 2, and Ginja's also been great."
+171.46,3.4,I think that the discipline here when you're using templates is making sure you
+174.86,2.01,separate code from templates.
+176.87,3.834,A lot of these template systems allow you to put arbitrary code in them or
+180.704,2.856,"complicated logical structures, if and for and while."
+183.56,3.29,"Try to keep it to the, the amount of code in templates to a minimum."
+186.85,2.23,"You've got this whole language you know, in our case, Python."
+189.08,2.46,"That's a very, very powerful langauge, you can do all sorts of things."
+191.54,2.5,Why would you use a broken subset of that in your templates?
+194.04,2.88,Any complexities should be actually in your Python code and
+196.92,0.96,not in your template code.
+197.88,0.71,Didn't come up much in
+198.59,2.81,this class because most of the rendering code we're using was fairly simple.
+201.4,4.43,It's really easy to just throw complete objects and big data structures and
+205.83,2.36,"unwind them and, and navigate them in your template code."
+208.19,2.24,And that's something that's just really difficult to maintain.
+210.43,1.02,I wouldn't recommend doing that.
+211.45,1.71,"Templates are great, but use them with care."
+213.16,1.85,Use them for just generating your HTML.
+215.01,1.34,Or just generating your CSS.
+216.35,1.08,Or whatever you're using it for.
+217.43,2.57,And try to keep the code in the actual programming language.

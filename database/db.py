@@ -88,7 +88,7 @@ class DbClient:
             Get the values for a video.
         """
         index = self.get_index("recommendations")
-        result = index.query( id=video_id, top_k=1, namespace="video-transcripts", include_values=True)
+        result = index.query(id=video_id, top_k=1, namespace="video-transcripts", include_values=True)
         result = result.to_dict()
         if self.debug:
             print(f"RESULT: {result}")

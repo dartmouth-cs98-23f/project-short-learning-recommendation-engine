@@ -1,0 +1,717 @@
+second,duration,transcript
+0.48,3.28,"Video is sponsored by Qiskit, 
+more details later in the video.  "
+5.04,5.92,"From the first idea of a quantum computer in 1980 
+to today there has been huge growth in the quantum  "
+10.96,4.8,"computing industry, especially in the last 10 
+years. With dozens of companies and startups  "
+15.76,5.12,"spending hundreds of millions of dollars in a 
+race to build the world’s best quantum computers.  "
+21.76,3.92,"For most of us it’s quite hard to get our 
+heads around the world of quantum computing,  "
+25.68,5.36,"and a lot of information about it glosses over 
+important details. This video aims to clear all  "
+31.04,3.28,"this up and if you watch the whole thing you’ll 
+have a very good overview of all the different  "
+34.32,5.44,"kinds of quantum computing, how they work, and 
+why so many people are investing in the quantum  "
+39.76,6.8,"computing industry. This is the map of quantum 
+computing. Quantum computers solve problems in  "
+46.56,4.64,"a different way to the computers we are familiar 
+with, which, from now on I’ll be referring to as  "
+51.2,5.44,"classical computers. Quantum computers have 
+certain advantages over normal computers for  "
+56.64,4.96,"certain problems which comes from their ability 
+to be in a huge number of states at the same time  "
+61.6,5.2,"whereas classical computers can only be in 
+one state at a time. To understand this,  "
+66.8,6.08,"and to understand how quantum computers work you 
+need to understand three things: superposition,  "
+72.88,6.56,"entanglement and interference. The building 
+blocks of a classical computer are called bits,  "
+79.44,5.52,"and the building blocks of a quantum computer are 
+called quantum bits, or qubits for short, and they  "
+84.96,6.96,"work in fundamentally different ways. A classical 
+bit is kind of like a switch that can either be  "
+91.92,5.44,"a 0 or a 1 which you are probably already 
+familiar with as binary or binary information.  "
+98.16,5.76,"When we measure a bit we just get back the state 
+that it’s currently in, but we’ll see this isn’t  "
+103.92,6.0,"true of qubits. A qubit is more complicated. For 
+a useful visualisation you can think of them as  "
+109.92,5.68,"an arrow pointing in 3D space. If they point 
+up they are in the 0 state and if they point  "
+115.6,5.04,"down they are in the 1 state, just like a 
+classical bit, but they also have the option to  "
+120.64,4.64,"be in a thing called a superposition state which 
+is when the arrow points in any other direction.  "
+126.16,7.52,"This superposition state is a combination state of 
+0 and 1. Now, when you measure a qubit the output  "
+133.68,6.8,"it gives will still end up being either a 0 or a 
+1, but which one you get depends on a probability  "
+140.48,5.76,"which is set by the direction of the arrow. If the 
+arrow is pointing more upwards you are more likely  "
+146.24,6.56,"to get back a 0 than a 1, and if it is pointing 
+downwards you are more likely to get a 1 than a 0,  "
+153.68,4.24,"and if it is exactly on the equator 
+you’ll get either state with a 50%  "
+157.92,6.24,"probability. So that’s the effect of superposition 
+explained, now we’ll move on to entanglement.  "
+165.68,3.36,"In a classical computer the bits 
+are independent from each other.  "
+169.04,4.0,"The state of one bit is not influenced 
+by the state of any of the other bits.  "
+173.68,3.84,"But in quantum computers the qubits can be 
+entangled with each other which means they  "
+177.52,6.56,"become part of one large quantum state together. 
+For an example let’s look at two qubits which are  "
+184.08,6.24,"each in different superposition states, but aren’t 
+entangled yet. You can see the probabilities next  "
+190.32,3.92,"to them, and these probabilities are 
+currently independent of each other.  "
+194.96,6.16,"But when we entangle them, we have to throw away 
+those independent probabilities and calculate a  "
+201.12,8.24,"probability distribution of all of the possible 
+states we can get out. Either 00, 01, 10, or 11.  "
+210.24,4.72,"The important point here is because the qubits 
+are entangled, if you change the direction of  "
+214.96,8.24,"the arrow on one qubit, it changes the probability 
+distribution for the whole system, so the qubits  "
+223.2,7.28,"are no longer independent of each other, they are 
+all part of the same large state. And this is true  "
+230.48,6.4,"no matter how many qubits you have. You’ll also 
+note that for one qubit you have a probability  "
+236.88,6.16,"distribution over 2 states. For two qubits you 
+have a probability distribution over 4 states.  "
+243.04,5.76,"For three qubits you have a distribution over 
+8 states, and this keeps on doubling each time  "
+248.8,6.56,"you add another qubit. In general, a quantum 
+computer of n qubits can be in a combination of  "
+256.64,6.48,"2^n states. So I’d say this is the core difference 
+between classical computers and quantum computers.  "
+263.68,5.68,"Classical computers can be in any state you want, 
+but can only be in one state at a time, whereas  "
+269.36,5.44,"quantum computers can be in a superposition 
+of all of those states at the same time. But  "
+274.8,5.52,"you may wonder how being in this superposition 
+state can be useful in a computer. Well for that  "
+280.32,5.44,"we need the final component: interference. 
+To explain the effect of interference we  "
+285.76,4.8,"need to go back and look at my picture of 
+a qubit technically called a Bloch sphere.  "
+291.76,4.4,"A qubit doesn’t actually look like this, 
+this is just a really nice way of visualising  "
+296.16,5.6,"the state of a qubit. In reality the state of 
+a qubit is described by a more abstract entity  "
+301.76,5.76,"known as a quantum wavefuncion. Wavefunctions 
+are the fundamental mathematical description  "
+307.52,4.16,"of everything in quantum mechanics which I’ve 
+described in more detail in a previous video.  "
+312.48,5.04,"When you have many qubits entangled together all 
+of their wavefunctions are added together into an  "
+317.52,5.12,"overall wavefunction describing the state 
+of the quantum computer. This adding  "
+322.64,5.44,"together of wavefunctions is the interference 
+because, just like with say ripples of water,  "
+328.08,5.2,"when we add waves together they can constructively 
+interfere and add together to make a bigger wave,  "
+333.28,5.68,"or destructively interfere to cancel each 
+other out. The overall wavefunction of the  "
+338.96,4.32,"quantum computer is what sets the different 
+probabilities of the different states,  "
+343.28,4.88,"and by changing the states of different qubits 
+we can change the probabilities that different  "
+348.16,5.44,"states will come out when we measure the quantum 
+computer. Remember that even though the quantum  "
+353.6,5.04,"computer can be in a superposition of millions 
+of states at the same time, when we measure it,  "
+358.64,6.32,"we only get a single state out. So when you are 
+using a quantum computer to solve a computation  "
+364.96,4.8,"problem you need to use constructive interference 
+to increase the probability of the correct answer,  "
+369.76,4.96,"and use destructive interference to decrease 
+the probabilities of the incorrect answers  "
+374.72,6.16,"so that when you measure it the correct answer 
+will come out. Now how you do this is the realm  "
+380.88,5.12,"of quantum algorithms, and the whole motivation 
+behind quantum computing is that, theoretically,  "
+386.0,4.4,"there are a bunch of problems that you can solve 
+on a quantum computer that are thought to be  "
+390.4,5.6,"intractable on classical computers. Let’s take a 
+look at them. There are many quantum algorithms,  "
+396.0,4.72,"too many to describe in this video, so we’ll 
+just focus on the most famous and historically  "
+400.72,6.48,"important: Shor’s algorithm. If you have two large 
+numbers and you multiply them together there is  "
+407.2,5.68,"a very fast, efficient, classical algorithm for 
+finding the answer. However, if you start with the  "
+412.88,5.52,"answer and ask, what are the original numbers that 
+multiply together to make this number? It is a lot  "
+418.4,5.12,"more difficult. This is known as factorization, 
+and these numbers are called factors,  "
+423.52,6.08,"and the reason finding them is so hard is because 
+the search space of possible factors is so large.  "
+429.6,4.48,"And there is no efficient classical algorithm 
+for finding the factors of large numbers.  "
+435.28,5.2,"For this reason we use this mathematical property 
+for internet encryption: secure websites,  "
+440.48,5.84,"emails and bank accounts. If you know these 
+factors you can easily decrypt the information,  "
+446.32,5.28,"but if you don’t you’d need to find them first 
+which is intractable on the world’s most powerful  "
+451.6,6.16,"computers. Which is why in 1994, when Peter 
+Shor published a fast quantum algorithm that can  "
+457.76,5.6,"efficiently find the factors of large integers, 
+it caused quite the stir. This is the moment  "
+463.36,4.48,"that a lot of people started to take the idea 
+of quantum computing seriously because it was  "
+467.84,6.32,"the first application to a real world problem with 
+potentially huge real world security implications.  "
+475.36,5.2,"But when I say a ‘fast’ quantum algorithm, 
+how fast, and how much faster than a classical  "
+480.56,4.56,"computer would it be? To answer these questions 
+we need to take a little detour into the world  "
+485.12,5.04,"of quantum complexity theory. Quantum 
+complexity theory is a subfield of the  "
+490.16,5.84,"world of computational complexity theory which 
+deals with the categorisation of algorithms,  "
+496.0,6.0,"sorting them into bins according to how well they 
+run on computers. The categorisation is based on  "
+502.0,6.48,"how much harder it is to solve the problem as the 
+problem gets larger. Here any problem inside the P  "
+508.48,5.68,"box is easy to solve with a classical computer, 
+but anything outside it means we don’t have  "
+514.16,7.0,"efficient classical algorithms to solve them and 
+factoring large numbers is one of these. But there  "
+521.16,6.2,"is a box, BQP which is efficient for a quantum 
+computer, but not a classical computer. And these  "
+527.36,6.08,"are the problems that quantum computers will be 
+better than classical computers at solving. As I  "
+533.44,5.2,"said, complexity theory looks at how difficult it 
+is to solve a problem as the problem gets larger.  "
+539.2,5.44,"So if you factorize a number with 8 digits, then 
+you add another digit on, how much harder is  "
+544.64,5.76,"it to factor the new number compared to the old 
+one? Is it twice as hard? Exponentially harder?  "
+551.04,6.88,"And what is the trend as you add more and more 
+digits? This is called its complexity or scaling,  "
+557.92,2.72,"and for factorisation it is exponential. Anything 
+with the N in the exponent is exponentially hard.  "
+560.64,4.96,"These exponential problems are the problems that 
+really screw you over as the problems get bigger,  "
+565.6,4.64,"and in the world of computer science you can win 
+respect and renown if you find a better algorithm  "
+570.24,5.84,"to solve these hardest problems. One example of 
+this was Shor’s algorithm which took advantage  "
+576.08,4.24,"of the special features of quantum computers 
+to create an algorithm that could solve  "
+580.32,4.64,"integer factorisation with a scaling much 
+better than the best classical algorithm.  "
+585.76,5.12,"The best classical algorithm is exponential, 
+whereas Shor’s algorithm is polynomial which  "
+590.88,4.88,"is a huge deal in the world of complexity theory 
+and computer science in general because it turns  "
+595.76,6.56,"an intractable problem into a problem that can 
+be solved. Solved, that is, if you have a working  "
+602.32,6.16,"quantum computer, which is what people are working 
+on building. But you don’t need to worry about the  "
+608.48,5.2,"security of your bank account yet because today’s 
+quantum computers are not able to run Shor’s  "
+613.68,6.16,"algorithm on large numbers yet. I’ve estimated 
+they would need about a million qubits to do so,  "
+619.84,6.0,"but so far the most advanced universal quantum 
+computers have around 100. Also, people are  "
+625.84,5.28,"working on what’s known as post-quantum encryption 
+schemes which don’t use integer factorization,  "
+631.68,5.2,"and another technology from the world of quantum 
+physics can help here too, a cryptographic scheme  "
+636.88,5.28,"known as quantum cryptography. So that 
+was a look at just one quantum algorithm,  "
+642.16,5.12,"but there are many more each with different levels 
+of speedup. Another notable example is Grover’s  "
+647.28,5.2,"algorithm which can search unstructured lists of 
+data faster than the best classical algorithm.  "
+653.44,4.56,"But I should be careful here to make sure I 
+don’t mischaracterize classical computers.  "
+658.0,4.8,"They are very versatile devices, and there 
+is nothing to say that someone may find a  "
+662.8,5.44,"very clever classical algorithm that could solve 
+the hardest problems like integer factorization  "
+668.24,4.72,"more efficiently. People think it is 
+very unlikely, but it is not ruled out.  "
+673.76,4.48,"Also, there are problems that we can prove are 
+impossible to solve on classical computers,  "
+678.24,5.6,"called non-computable problems, like the halting 
+problem, but these are also impossible to solve  "
+683.84,4.64,"on a quantum computer. So computationally 
+classical computers and quantum computers  "
+688.48,4.72,"are equivalent to each other, the differences 
+all come from the algorithms that they can run.  "
+694.24,5.52,"You can even simulate a quantum computer on a 
+classical computer and vice versa. But simulating  "
+699.76,4.736,"a quantum computer on a classical computer gets 
+exponentially harder to do the more qubits you  "
+704.496,5.424,"are trying to simulate. This is because classical 
+computers struggle to simulate quantum systems,  "
+710.48,5.36,"but because quantum computers are already quantum 
+systems, they don’t have this problem which  "
+715.84,6.72,"brings me to my favourite application of quantum 
+computers: quantum simulation. Quantum simulation  "
+722.56,4.4,"is simulating things like chemical reactions 
+or how electrons behave in different materials  "
+726.96,6.08,"with a computer. Here quantum computers also have 
+an exponential speedup over classical computers  "
+733.04,5.44,"because classical computers really struggle to 
+simulate quantum systems. Now I’ve made a whole  "
+738.48,4.8,"other video about quantum simulation which you 
+can watch here, but basically simulating quantum  "
+743.28,6.0,"systems with as few as 30 particles is difficult 
+even on the world’s most powerful supercomputers.  "
+750.32,5.68,"We also can’t do this on quantum computers yet, 
+but as they mature a main goal is to simulate  "
+756.0,6.16,"larger and larger quantum systems. These include 
+areas like the behaviour of exotic materials at  "
+762.16,5.76,"low temperatures like understanding what makes 
+some materials superconduct, or study important  "
+767.92,5.28,"chemical reactions to improve their efficiency, 
+one example aims to produce fertiliser in a way  "
+773.2,6.24,"that emits way less carbon dioxide as fertiliser 
+production contributes to around 2% of global  "
+779.44,5.84,"carbon emissions. Other potential applications 
+of quantum simulation include, improving solar  "
+785.28,6.24,"panels, improving batteries, developing new 
+drugs, chemicals or materials for aerospace.  "
+792.4,4.24,"In general quantum simulation would mean that we 
+would be able to rapidly prototype many different  "
+796.64,5.84,"materials inside a quantum computer and test all 
+their physical parameters, instead of having to  "
+802.48,5.68,"physically make them and test them in a lab which 
+is a much more laborious and expensive process.  "
+808.88,6.08,"This could be a lot faster and save a huge amount 
+of time and money. It is worth reiterating that  "
+814.96,4.0,"these are all potential applications of quantum 
+computers, because we don’t have any quantum  "
+818.96,5.04,"computers that can solve real world problems 
+better than our normal computers yet. But these  "
+824.0,5.84,"are the kinds of problems quantum computers would 
+be well suited to. Other applications outside of  "
+829.84,6.16,"quantum simulation are optimization problems, 
+machine learning and A.I. Financial modelling,  "
+836.0,4.08,"weather forecasting and climate change, which 
+I’ll be honest I don’t really understand how  "
+840.08,5.6,"this would work, and finally cybersecurity, which 
+I think just boils down to shor’s algorithm, which  "
+845.68,6.96,"I already described. Now we need to be a little 
+careful about the potential of hype here, as a lot  "
+852.64,5.52,"of the claims of what quantum computers will be 
+good for come from people who are actively raising  "
+858.16,6.32,"money to build them and so it makes sense for them 
+to piggyback on topical subjects in their pitches.  "
+865.36,4.4,"But my take on it is that historically, when a new 
+technology has come along, the people of the time  "
+869.76,6.24,"aren’t the best at being able to tell what it’s 
+going to be used for. For example the people who  "
+876.0,7.76,"invented the first computers never dreamed of the 
+internet, and all of the things on it. And this is  "
+883.76,5.04,"likely to be the same for quantum computers. 
+But for me the application that I can really  "
+888.8,5.04,"understand the value of is quantum simulation 
+which is why I've focused on it in this video.  "
+895.04,4.56,"Anyway, so far I’ve described how quantum 
+computers work and what problems they can solve.  "
+900.24,4.8,"But most of what I’ve talked about so far is 
+theoretical. For the rest of the video I want  "
+905.04,4.88,"to focus on reality. How are people actually 
+building quantum computers, and what can they  "
+909.92,5.6,"actually do? Now it’s worth mentioning here 
+that some physicists are sceptical that it will  "
+915.52,5.52,"ever be possible to build quantum computers at 
+the scale needed to solve real world problems,  "
+921.04,6.16,"but people working on all of the following 
+certainly don’t agree. Now quantum computing  "
+927.2,4.96,"is often portrayed as if it is a single thing. But 
+inside the world of quantum computers there are  "
+932.16,5.12,"a large range of approaches to turning different 
+kinds of quantum systems into quantum computers,  "
+937.28,5.36,"and there are two layers of nuance I need to talk 
+about. First of all are the models of quantum  "
+942.64,5.52,"computing: the overall approach to manipulating a 
+collection of qubits and then there’s the physical  "
+948.16,5.44,"implementations: the actual quantum objects you 
+build your qubits from, like a superconducting  "
+953.6,5.36,"loop, or individual atoms or photons. We’ll 
+start with the models of quantum computing.  "
+960.0,4.02,"It is interesting that there are different 
+models of quantum computing, because this is  "
+964.02,5.26,"not something we see with classical computers. 
+Practically all the computers we use today  "
+969.28,5.92,"work in the same way, they have a bunch of bits 
+holding the binary information of ones and zeros,  "
+975.2,4.56,"and we can do operations on these bits 
+using logical gates which are basically  "
+979.76,6.56,"simple operations that flip a bit, called a 
+NOT gate, or compare bits like giving you a 1  "
+986.32,6.08,"if two bits are both zero, and a 0 if they 
+are anything else this is called a NOR gate.  "
+992.4,4.72,"Interestingly you can build a full general 
+purpose computer from just bits and NOR gates.  "
+998.56,3.52,"In quantum computing there is a similar 
+model called gate model, or circuit model  "
+1003.36,4.08,"which is the most popular and most 
+understood model of quantum computing.  "
+1008.32,4.56,"In the circuit model you have your collection of 
+qubits which are entangled with each other, and  "
+1012.88,5.36,"then you have a bunch of gates which can perform 
+operations on small numbers of these qubits  "
+1018.24,6.0,"which change the states of the qubits without 
+measuring them. A quantum algorithm is built  "
+1024.24,6.24,"from a sequence of gates applied to the qubits in 
+a certain order, and then a measurement at the end  "
+1030.48,4.32,"when you get the final state, which hopefully is 
+the answer to the problem you are trying to solve.  "
+1036.0,4.8,"Simplistically you can think of these gates as 
+operations on the qubits that rotate the arrows  "
+1040.8,4.72,"to point in different directions. And these 
+operations change the probability of the final  "
+1045.52,6.4,"state of each qubit when it is finally measured. 
+Now there’s more to this which I don’t have time  "
+1051.92,5.52,"to explain here, but if you want to learn more 
+about them and do some quantum computing yourself  "
+1057.44,4.16,"I highly recommend the educational 
+website and YouTube channel called Qiskit.  "
+1062.56,4.48,"They are kindly sponsoring this video, and 
+honestly they are the best resource for people who  "
+1067.04,6.4,"want to learn more about quantum computing and get 
+some actual hands-on experience. Basically Qiskit  "
+1073.44,5.12,"is a software framework funded by IBM to make it 
+easier for people to get into the world of quantum  "
+1078.56,6.24,"computing. Everything there is free to access and 
+the code is all open source, there is an online  "
+1084.8,4.992,"text book which teaches you all the basics, so if 
+you don’t have a quantum physics background that  "
+1089.792,4.688,"is no problem at all, you can learn everything 
+you need there. Their Qiskit YouTube channel is  "
+1094.48,4.4,"also full of excellent tutorials and lectures, 
+I’ll link to all of this below. And in terms of  "
+1098.88,5.68,"quantum algorithms you can run through examples 
+of quantum circuits using their online tools.  "
+1104.56,3.84,"And if you want to run your own quantum 
+programs you can download their open-source  "
+1108.4,5.52,"SDK and run them on IBM hardware, either on 
+classical simulators of quantum computers, or  "
+1113.92,8.08,"on actual real world quantum computers, for free. 
+And the SDK is not only tied to IBM hardware. I  "
+1122.0,4.48,"used to work at another quantum computing company 
+called D-Wave, and there is an interface to their  "
+1126.48,5.6,"computers in the SDK as well if you want to learn 
+about their approach called quantum annealing and  "
+1132.08,4.88,"many other companies are available too. Personally 
+I’ve been using their website to learn gate model  "
+1136.96,5.12,"quantum computing deeper because my background is 
+in quantum annealing and I’m super happy that this  "
+1142.08,6.32,"educational resource exists, and is free to use so 
+please check that out if you want to dig deeper.  "
+1148.4,4.16,"Finally I just want to state that I’ve had 
+complete editorial control over the content  "
+1152.56,5.92,"of this video and my goal is always to be as 
+objective as I can, I just want to make sure you  "
+1158.48,4.88,"know that Qiskit is funded by IBM who are building 
+quantum computers, and I used to work for D-Wave  "
+1163.36,5.12,"who are making other quantum computers, just for 
+transparency so you know everyone’s backgrounds.  "
+1170.16,4.56,"Right, back to the models of quantum computing 
+we’ve already looked at the circuit model,  "
+1174.72,5.52,"but closely related to it is measurement based or 
+one-way quantum computing which involves setting  "
+1180.24,6.32,"up an initial entangled state, and then measuring 
+qubits one by one during the computation,  "
+1186.56,3.6,"and mathematically this has been shown 
+to be equivalent to the circuit model.  "
+1191.52,4.0,"Now let’s look at the models I’m most familiar 
+with: adiabatic quantum computing and quantum  "
+1195.52,5.12,"annealing. Adiabatic quantum computing works 
+in a very different way to the circuit model.  "
+1200.64,4.88,"In adiabatic quantum computing you are taking 
+advantage of one of the fundamental behaviours  "
+1205.52,5.2,"in physics, the fact that every system in physics 
+always moves towards the minimum energy state.  "
+1211.44,5.28,"This is a very general principle, and adiabatic 
+quantum computing takes advantage of this by  "
+1216.72,4.88,"posing the problems you want solved in such 
+a way so that the minimum energy state of the  "
+1221.6,5.92,"quantum system is the answer to the problem. 
+You can picture this as an energy landscape,  "
+1227.52,5.36,"where each point on the landscape is one of the 
+potential outputs of the computer. In adiabatic  "
+1232.88,4.96,"quantum computing you start off with a flat 
+landscape, and gradually introduce the energy  "
+1237.84,4.88,"landscape of your problem where the answer to 
+your problem is the lowest position on the map.  "
+1243.36,3.2,"If you do this slowly enough, the quantum 
+computer will always stay in the lowest  "
+1246.56,4.48,"energy state so that when you measure it you 
+are most likely to get the correct answer.  "
+1252.0,4.64,"I should mention that I’m having to simplify 
+things a bit here to make it easier to understand,  "
+1256.64,4.24,"but it gives you the right picture of what is 
+going on. In reality I would need to talk about  "
+1260.88,6.4,"Hamiltonian’s and eigenstates but that’s beyond 
+the scope of this video. Even though adiabatic  "
+1267.28,4.4,"quantum computing is so different to the circuit 
+model, they have been shown to be mathematically  "
+1271.68,5.04,"equivalent, and problems can be mapped from one 
+to the other. And they are both something called  "
+1276.72,5.84,"a universal quantum computing scheme which means 
+that theoretically they can simulate any quantum  "
+1282.56,5.84,"system. Strongly related to adiabatic quantum 
+computing is quantum annealing which is not a  "
+1288.4,5.36,"universal quantum computing scheme, but works on 
+the same principle as adiabatic quantum computing  "
+1293.76,4.56,"with the system finding the minimum energy 
+state of an energy landscape that you give it.  "
+1299.76,4.64,"The reason it is not universal is because it 
+doesn’t have the full degrees of freedom to  "
+1304.4,5.12,"represent any quantum state, but even with this 
+limitation it can still be used to solve certain  "
+1309.52,5.36,"energy landscape problems like optimization 
+problems and simulate certain quantum systems,  "
+1314.88,4.48,"and example is spin glasses which are grids 
+of magnetic fields connected to each other.  "
+1320.0,4.88,"And quantum annealing is a stepping stone to 
+building a universal adiabatic quantum computer.  "
+1326.24,4.48,"The last model we are going to look at is called 
+topological quantum computing which is currently  "
+1330.72,5.12,"the most theoretical model of quantum computing 
+because it builds its qubits from an entity in  "
+1335.84,6.48,"physics called a Majorana zero-mode quasi-particle 
+which is a type of non-abelian anyon.  "
+1343.68,6.24,"Which is a bit of a mouthful and obviously 
+quite confusing but the important term here is  "
+1349.92,6.64,"quasi-particle. Quasi-particles aren’t fundamental 
+particles like atoms, electrons or photons,  "
+1356.56,5.28,"quasi-particles are created from the collected 
+behaviour of many particles together, and end up  "
+1361.84,6.4,"having particle-like properties despite not being 
+actually real. The clearest example of this is an  "
+1368.24,5.92,"electron hole: if you have a grid of electrons 
+with a gap in the middle, as the electrons fill  "
+1374.16,5.28,"in the gap it looks like this hole moves in 
+the opposite direction. This hole isn’t real,  "
+1379.44,4.88,"it’s just a hole, but you can treat it like 
+a particle with particle-like properties.  "
+1385.28,4.56,"In condensed matter physics there are a large 
+range of different kinds of quasi-particle and  "
+1389.84,5.8,"a Majorana zero-mode quasti-particle is an entity 
+that has been theoretically predicted, but there  "
+1395.64,4.68,"is still significant debate over whether they’ve 
+actually been experimentally observed or not.  "
+1401.52,4.56,"Now the reason why physicists are excited about 
+this model is because these quasi-particles are  "
+1406.08,5.28,"predicted to be a lot more stable than other 
+qubits because they are made from parts which  "
+1411.36,5.52,"are physically separated from each other. This 
+is good because the main source of failure in  "
+1416.88,4.48,"a quantum computer is noise, which comes from 
+rogue forms of energy creeping into the quantum  "
+1421.36,4.4,"computer making the qubits drift away from 
+where they should be and causing errors.  "
+1426.56,5.28,"But these quasi-particles are special because they 
+are protected from the noise by an energy gap.  "
+1431.84,5.2,"Basically what this means is it takes a certain 
+energy to bring the parts of the Majorana particle  "
+1437.04,6.16,"back together, so any perturbations of noise which 
+have a lower energy than that energy gap is not  "
+1443.2,6.16,"felt by the quasi-particle. This might have been 
+a bit confusing, but that’s okay I’m still getting  "
+1449.36,4.16,"my head around them too, but that was just the 
+best boiled down description I could come up with.  "
+1455.52,4.72,"Okay so that rounds up the different models of 
+quantum computation, but how do you actually build  "
+1460.24,4.88,"them? There are a huge range of different physical 
+implementations of quantum computers because  "
+1465.12,4.32,"there are so many different quantum systems 
+that you could potentially build them from.  "
+1470.08,5.6,"The requirements to build a qubit is actually 
+fairly simple: all you need is a two state quantum  "
+1475.68,5.92,"system when one state will represent 0 and the 
+other will represent 1. The most obvious example  "
+1481.6,5.28,"of this is the spin of a particle: the spin can 
+be up or down, but as we shall see there are many  "
+1486.88,5.76,"properties of particles we can use. In fact, there 
+are too many for me to list them all, so I’m just  "
+1492.64,5.76,"going to focus on the implementations that are the 
+most widely used and have been the most successful  "
+1498.4,6.32,"so far. But no matter what the approach is, they 
+all face a similar set of obstacles which we need  "
+1504.72,5.328,"to take a look at first. In general it’s really 
+hard to control quantum systems because if you  "
+1510.048,4.992,"have got any slight interaction with the outside 
+world the information starts leaking away. This  "
+1515.04,6.16,"is called decoherence. You want your qubits to be 
+entangled with each other, but don’t want them to  "
+1521.2,5.36,"be entangled with anything else. But the trouble 
+is, your qubits will be made of physical stuff  "
+1526.56,3.52,"and you will need other physical stuff 
+nearby to control and measure them,  "
+1530.64,3.76,"and your qubits are dumb they’ll 
+entangle with anything they can. So,  "
+1534.4,4.48,"you need to design your qubits very carefully to 
+protect them from entangling with the environment.  "
+1539.76,4.48,"Then you need to shield your qubits from 
+any kind of noise: things like cosmic rays,  "
+1544.24,5.84,"or radiation from things like phone calls, or 
+heat energy or any other kind of rogue particle.  "
+1551.28,5.36,"Unfortunately some amount of decoherence and 
+noise is inevitable in any physical system,  "
+1556.64,6.32,"and is impossible to eliminate completely. And it 
+gets worse the more qubits you have entangled with  "
+1562.96,5.36,"each other. This is the big open question still 
+hanging over the whole field of quantum computing:  "
+1568.32,5.36,"is it ever possible to make a working quantum 
+computer with a large number of qubits, or will  "
+1573.68,6.56,"decoherence and noise ruin everything? There 
+are strong opinions on both sides, and I guess  "
+1580.24,6.16,"we won’t know for sure until we actually build 
+them. One plan to deal with decoherence and noise  "
+1586.4,4.96,"is quantum error correction. This is an error 
+correction scheme to make fault-tolerant quantum  "
+1591.36,7.36,"computers by using many entangled qubits together 
+to represent one noise free qubit. How many  "
+1598.72,6.8,"you need depends on how good the qubits are, but 
+estimates are in the range of 100 to 1000 physical  "
+1605.52,7.6,"qubits to make one fault-tolerant qubit. Which 
+is a lot of qubits. And this brings us to another  "
+1613.12,6.32,"major obstacle: scalability. For each qubit you 
+need to have a bunch of wires to manipulate and  "
+1619.44,4.88,"measure it. For a small number of qubits this 
+is all manageable, but as the number of qubits  "
+1624.32,5.92,"increases the amount of extra stuff you need 
+increases linearly, which is a massive engineering  "
+1630.24,5.44,"problem. So any quantum computer design needs to 
+somehow be able to entangle all of the qubits,  "
+1635.68,6.64,"and then control and measure them in a scalable 
+way. So those are all the problems with building a  "
+1642.32,5.84,"real quantum computer, let’s take a look at the 
+different approaches scientists are pursuing.  "
+1649.44,5.36,"Superconducting quantum computers are currently 
+the most popular approach. A superconducting qubit  "
+1654.8,5.44,"is made from superconducting wires with a break 
+in the superconductor called a josephson junction.  "
+1661.28,4.64,"The most popular type of superconducting 
+qubit is called a transmon where the two  "
+1665.92,5.44,"level system is encoded in pairs of the 
+electric charge moving across the junction,  "
+1671.36,5.04,"specifically the frequency at which charges 
+oscillate back and forth across the junction.  "
+1676.4,4.0,"But there have been other designs that 
+use the magnetic flux in a loop of wire,  "
+1680.4,5.76,"or the phase across a wire as a two level 
+system known as flux qubits or phase qubits.  "
+1687.68,4.96,"Physicists have also looked at ways of making 
+qubits out of fundamental entities like atoms, or  "
+1692.64,5.68,"electrons or photons. Next are quantum dot quantum 
+computers or silicon spin quantum computers.  "
+1698.88,5.04,"Here I’m using quantum dot quantum computers 
+to collect a range of qubit designs built from  "
+1703.92,5.12,"semiconductors, things like silicon. Here the 
+qubits are made from electrons or even groups  "
+1709.04,6.88,"of electrons and the two level system is encoded 
+into the spin or charge of the electrons. On the  "
+1715.92,4.8,"chip there’s a small area where the electron 
+is restricted to is called a quantum dot,  "
+1721.28,4.8,"and operations on the qubits are performed through 
+voltages on the chip, or microwaves or magnetic  "
+1726.08,5.2,"fields. As well as silicon, people have also 
+used other semiconducting materials like gallium  "
+1731.28,6.56,"arsenide, silicon carbide and also diamond amongst 
+others, which all have different properties.  "
+1738.96,5.76,"Next we have linear optical quantum computing. 
+Optical quantum computers use photons of light  "
+1744.72,4.64,"as the qubits and they operate on these 
+qubits using optical elements like mirrors,  "
+1749.36,5.92,"waveplates and interferometers. At scale this has 
+been accomplished by printing these elements into  "
+1755.28,7.28,"integrated photonics chips. The two level system 
+in an optical quantum computer can have different  "
+1762.56,6.24,"designs, either a superposition of different 
+paths a single photon takes through the chip,  "
+1768.8,6.48,"or a superposition of different numbers of photons 
+present in a path. And these can be manipulated by  "
+1775.28,7.36,"applying a voltage to a path. Now onto trapped 
+ion quantum computers which use charged atoms  "
+1782.64,6.0,"as qubits. These atoms are ionised, having a 
+missing electron, which makes them electrically  "
+1788.64,5.6,"charged and means they can be levitated and 
+moved about with electromagnetic fields.  "
+1794.24,5.6,"Here the two level state that encodes the qubit 
+are two specific energy levels of the atom which  "
+1799.84,5.84,"can be manipulated or measured with microwaves 
+or laser beams. Next we have colour centre or  "
+1805.68,4.8,"nitrogen vacancy quantum computers which are 
+similar to trapped ion quantum computers in  "
+1810.48,5.28,"that the qubits are made from atoms, but instead 
+of being trapped in an electromagnetic field,  "
+1815.76,6.08,"they are embedded in a gap of the material like 
+nitrogen embedded in diamond or silicon carbide.  "
+1822.72,3.12,"There are a few different ways to make 
+these, but typically the qubits are  "
+1825.84,5.12,"the nuclear spins of the embedded atoms and 
+they are entangled together with electrons.  "
+1832.48,5.12,"The final approach is called neutral atoms 
+in optical lattices. In this approach the  "
+1837.6,6.48,"qubits are atoms, and the design uses cold atom 
+physics capturing neutral atoms like caesium  "
+1844.08,5.44,"into an optical lattice which is a crisscrossed 
+arrangement of laser beams, which form energy  "
+1849.52,5.84,"wells shaped kind of like an egg box. These atoms 
+are cooled down with lasers to a few millionths of  "
+1855.36,4.8,"a kelvin and there are a number of ways to encode 
+the two level system the qubit is built from:  "
+1860.16,5.12,"either the hyperfine energy level of the atom 
+or excited states and they can also make use of  "
+1865.28,5.28,"Rydberg atoms. And the atoms can be controlled 
+and entangled with each other with lasers.  "
+1871.84,5.6,"They can also be used as quantum simulators 
+as well as quantum computers. In fact a 10,000  "
+1877.44,5.2,"atom quantum simulator has been made, but this 
+doesn’t look like a universal quantum computer.  "
+1883.76,4.88,"These are the main approaches I’m going to cover 
+in this video, but it is not an exhaustive list,  "
+1888.64,3.84,"some other qubit designs include: 
+Electron-on-helium qubit,  "
+1892.48,8.08,"Cavity quantum electrodynamics, Magnetic Molecule, 
+Molecular Spins, NMR quantum computers. But these  "
+1900.56,4.0,"have not been built at the same scale as the 
+other approaches I mentioned in more detail.  "
+1905.44,4.16,"So that was the map of quantum computing and 
+that should give you an excellent overview of the  "
+1909.6,4.32,"field. As you can see, there are many different 
+approaches to building a quantum computer,  "
+1913.92,4.72,"and what is so interesting is that it’s not yet 
+clear which approach will win out in the long run.  "
+1919.36,4.72,"Now one thing I haven’t covered in this video are 
+the companies and startups and which approach they  "
+1924.08,5.68,"are using, along with their current best quantum 
+computers, and their roadmaps into the future.  "
+1930.4,5.36,"But this is what I’ll look at in my next video 
+so keep your eyes peeled for that. You don’t  "
+1935.76,5.36,"need to subscribe or anything, but check back in a 
+couple of weeks if you think you’d be interested.  "
+1941.68,4.0,"And like all my maps this map of quantum 
+computing is available to buy at my store  "
+1945.68,5.76,"dosmaps dot com, or to download as a digital 
+image for educational purposes links to all  "
+1951.44,4.64,"of that in the description below. Quick note 
+though, due to logistics we can only get the  "
+1956.08,4.24,"map of quantum computing to you after the 
+holidays, but everything else in my store  "
+1960.32,5.84,"is ready to go. We also have many educational 
+posters and a range of engaging kids books about  "
+1966.16,4.0,"science called Professor Astro Cat, so if you 
+are looking for some gifts that will help your  "
+1970.16,6.56,"loved ones learn about science, check that out. 
+Dosmaps dot com. Finally, a massive thank you to  "
+1976.72,4.72,"all my patreon supporters. As you can 
+probably tell I put a huge amount of work  "
+1981.44,8.4,"into these map videos and the support on patreon 
+is invaluable. Thank you. And I’ll see you soon!"

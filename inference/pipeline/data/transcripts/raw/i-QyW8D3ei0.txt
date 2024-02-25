@@ -1,0 +1,258 @@
+second,duration,transcript
+0.08,4.0,in order to understand what a software
+1.76,4.32,tester or quality assurance analyst does
+4.08,3.92,you first need to understand the process
+6.08,3.76,by which the software is conceptualized
+8.0,3.519,developed and maintained
+9.84,5.04,this process is known as software
+11.519,4.561,development lifecycle or the sdlc
+14.88,2.64,there are seven key points to
+16.08,2.56,understanding the software development
+17.52,3.12,life cycle
+18.64,4.879,phase one planning
+20.64,4.799,phase two requirement analysis
+23.519,4.641,phase three design
+25.439,6.481,phase four implementation and coding
+28.16,6.85,phase five testing phase 6 deployment
+31.92,5.36,and phase 7 maintenance
+35.01,4.19,[Music]
+37.28,2.959,so it all starts with this guy the
+39.2,2.879,customer
+40.239,3.84,he's the guy that has the business idea
+42.079,3.681,for our invoice application and the
+44.079,3.121,money to get it started
+45.76,3.6,he's going to reach out to multiple
+47.2,4.24,different tech companies until he finds
+49.36,3.519,one that he likes
+51.44,3.92,finally he's going to meet our company's
+52.879,4.241,product owner or our project manager
+55.36,4.4,they're going to discuss terms of their
+57.12,4.16,agreement sign a deal and accept the
+59.76,3.84,project
+61.28,5.04,this will move us into the next phase
+63.6,4.32,planning the requirements
+66.32,3.52,together the customer and the product
+67.92,3.519,owner will outline the requirements of
+69.84,3.36,the application
+71.439,4.881,let's imagine that the requirements that
+73.2,5.68,they've both agreed upon are as follows
+76.32,3.36,one user registration
+78.88,2.16,two
+79.68,2.24,login
+81.04,2.399,three
+81.92,2.4,log out
+83.439,3.841,four
+84.32,5.52,the dashboard landing page
+87.28,4.08,and so on and so forth
+89.84,4.4,throughout this course we'll be running
+91.36,4.56,multiple iterations of the sdlc to which
+94.24,4.239,new requirements and new features will
+95.92,2.559,be added
+99.04,3.52,now that we have the outlined
+100.4,6.16,requirements let's take them and move on
+102.56,4.0,to the requirement analysis phase
+107.6,5.04,here's our team operations developers
+110.479,3.841,product owners and testers
+112.64,3.36,we'll all meet up at an office for a few
+114.32,3.68,hours and define each outlined
+116.0,4.159,requirement and give more planning
+118.0,4.159,details
+120.159,4.56,let's start with requirement number one
+122.159,5.841,user registration we'll need a username
+124.719,5.52,input field a password field a check box
+128.0,3.68,to accept the terms and conditions
+130.239,3.281,a submit button
+131.68,4.48,and the ability to save the user into
+133.52,2.64,our database
+137.04,3.36,then we'll move to requirement number
+138.56,3.52,two the login
+140.4,3.44,we'll need a login page to allow
+142.08,2.799,returning users to log back into our
+143.84,3.28,system
+144.879,3.521,for this we need another username input
+147.12,3.119,field
+148.4,3.52,a password field along with another
+150.239,3.521,submit button
+151.92,3.76,from this we'll need to read the user's
+153.76,4.8,information out of the database and log
+155.68,2.88,them into our system
+160.319,4.321,requirement number three will require a
+162.239,4.0,logout button usually located around the
+164.64,3.679,same area where the user was logging in
+166.239,3.601,from when they press the logout button
+168.319,3.521,it should clear their session out of the
+169.84,3.52,browser to prevent other people from
+171.84,3.84,returning and logging back into their
+173.36,2.32,account
+177.04,4.24,finally requirement number four the
+179.28,4.319,dashboard this will essentially be the
+181.28,4.16,home page of our application
+183.599,4.241,after a new user is registered they
+185.44,4.799,should be redirected to the dashboard
+187.84,3.679,also when the user logs in with the
+190.239,4.481,returning account they should be
+191.519,5.281,redirected to the dashboard
+194.72,4.48,for our first sdlc i will keep the
+196.8,4.24,requirements easy in upcoming videos
+199.2,4.48,we'll dive further in with much harder
+201.04,4.16,customer requirements
+203.68,4.4,once all of the requirements have been
+205.2,4.959,analyzed by the team and defined
+208.08,4.239,the product owner will take all the
+210.159,5.761,defined requirements and create tickets
+212.319,3.601,in a project management system
+217.12,5.36,from here we'll move into the design
+218.959,3.521,phase of the sdlc
+223.68,3.44,the design phase takes all the
+225.28,2.8,requirements and starts to plan the
+227.12,2.8,product
+228.08,3.36,the design phase may include the
+229.92,4.08,business rules
+231.44,4.32,the user interface layouts
+234.0,5.68,color schemes
+235.76,3.92,what programming languages to use
+239.76,2.72,frameworks
+242.959,6.241,system server design
+245.76,3.44,database relationships
+250.239,3.801,architect of the application
+254.08,3.04,mobile aspects
+257.519,4.321,supported browsers
+259.12,2.72,and much more
+262.479,6.521,next we'll discuss the implementation
+264.96,4.04,and the coding of the application
+269.04,4.24,the implementation and coding phase is
+270.8,3.92,where everything starts to become fun
+273.28,3.52,the operations team will set up the
+274.72,4.8,physical hardware for the servers the
+276.8,4.32,developers will start writing the code
+279.52,3.28,the designers will continue planning the
+281.12,3.12,user interface
+282.8,2.88,and the testers will analyze the
+284.24,4.0,requirements and start building test
+285.68,4.079,cases for their test plans
+288.24,3.2,even in this stage testers are
+289.759,3.921,incredibly valuable they start to
+291.44,4.64,imagine the usability of the application
+293.68,4.16,and see how everything flows together
+296.08,3.839,sometimes while writing test cases they
+297.84,4.48,can discover things don't make sense and
+299.919,6.081,help redesign fundamental flaws in the
+302.32,3.68,early stages of the application
+306.8,3.839,next up we'll be discussing one of the
+308.479,5.201,most important phases which is the
+310.639,3.041,testing phase
+313.919,6.0,so why is the testing phase so important
+317.68,4.16,imagine that the developer has finished
+319.919,4.161,coding some of our new features in our
+321.84,3.44,requirements we found that when the user
+324.08,2.64,logs out
+325.28,3.12,that it's not actually clearing the
+326.72,3.12,session in the browser
+328.4,3.68,and that another
+329.84,3.919,person can walk up to their computer
+332.08,3.76,click the login button or click the
+333.759,3.44,refresh on the page and they gain access
+335.84,3.6,to their account
+337.199,4.961,get access to all of their money and
+339.44,5.44,start making payments on various things
+342.16,4.479,they'd be huge and expensive terrible
+344.88,3.36,bug that would get released if we didn't
+346.639,3.521,have testers to test these types of
+348.24,4.0,things beforehand
+350.16,3.07,so what does a tester actually do during
+352.24,2.239,the testing phase
+353.23,3.33,[Music]
+354.479,4.16,now that we have the servers all set up
+356.56,4.079,and the database is set up developers
+358.639,4.241,have finished coding they've given us an
+360.639,3.761,application an actual website that we
+362.88,3.52,can log into now
+364.4,3.84,now we can start testing and executing
+366.4,3.04,our test cases from the test plans that
+368.24,2.88,we've created
+369.44,3.039,validate that all of the requirements
+371.12,2.96,have been met
+372.479,3.361,make sure all the functionality is
+374.08,3.839,working as expected
+375.84,4.4,find as many bugs as we possibly can
+377.919,4.161,which could be color scheme is incorrect
+380.24,4.239,or there's a user interface bug
+382.08,4.239,somewhere the critical issue people not
+384.479,4.16,being able to log out maybe the users
+386.319,4.32,can't even register there's so many
+388.639,4.161,mistakes that developer can make and do
+390.639,3.921,make frequently
+392.8,3.92,so as we're testing we start to find
+394.56,4.479,bugs and what we'll do is we'll report
+396.72,4.56,them into a bug tracking system which is
+399.039,4.081,then assigned to a developer
+401.28,3.919,they'll go in and they'll fix the bug
+403.12,4.799,fix the issue and assign it back to us
+405.199,4.0,this is called a bug of life cycle you
+407.919,3.761,may have noticed that i've mentioned
+409.199,4.081,test cases test plans
+411.68,3.6,and bugs
+413.28,4.0,in the upcoming videos we'll go into the
+415.28,4.0,bug life cycle
+417.28,4.56,iterating with developers
+419.28,4.96,and how to write test plans and test
+421.84,2.4,cases
+425.039,4.401,up next we'll talk about the deployment
+427.199,2.241,phase
+429.68,4.959,the deployment phase the operations team
+432.8,3.44,will end up mirroring the staging or
+434.639,3.84,development environment systems that
+436.24,4.239,we've been testing in and get them ready
+438.479,3.84,for production meaning that they'll
+440.479,4.641,install new hardware brand new servers
+442.319,4.481,have everything scalable for production
+445.12,4.56,this includes setting up the links
+446.8,4.64,setting up the databases for real users
+449.68,4.239,syncing up with the development teams
+451.44,4.159,and release managers
+453.919,4.0,once they've completed all of these
+455.599,4.88,tasks our application will go live to
+457.919,4.801,real users
+460.479,3.921,this brings us to the final phase of the
+462.72,4.0,sdlc
+464.4,4.479,maintenance
+466.72,4.24,so imagine that we've released and our
+468.879,3.841,application became so successful we're
+470.96,3.44,just getting millions of users logging
+472.72,2.96,in and registering and using this
+474.4,3.04,application
+475.68,3.44,so we need to maintain
+477.44,3.84,the servers in the environment they need
+479.12,3.6,to monitor the load the stress
+481.28,3.84,everything coming on the servers by so
+482.72,4.56,many users logging in and using it it
+485.12,4.24,doesn't bring down the system maybe we
+487.28,3.68,need to make larger servers larger
+489.36,3.679,databases maybe we need to get faster
+490.96,3.76,computers there's a lot of stuff that
+493.039,4.72,goes under in the maintenance phase
+494.72,5.199,there will be bugs found in production
+497.759,4.321,it's called production support
+499.919,4.72,frequently users will email with their
+502.08,4.16,issues and you can stop and investigate
+504.639,3.361,what they're complaining about or what
+506.24,2.959,their issue is
+508.0,2.8,figure it out
+509.199,3.601,write up a bug
+510.8,4.239,get it resolved and do another
+512.8,4.0,deployment to production with issues
+515.039,4.961,fixed
+516.8,5.919,so to summarize we've discussed planning
+520.0,5.68,requirement analysis design
+522.719,6.721,implementation and coding testing
+525.68,3.76,deployment and maintenance
+530.48,4.4,all right awesome that wraps up the
+532.08,4.56,video on the sdlc
+534.88,3.68,one last thing to say is once we're in
+536.64,3.68,the maintenance phase new features will
+538.56,3.279,come through new requirements will come
+540.32,3.68,through and we'll restart the whole
+541.839,3.761,process again and be able to get new
+544.0,2.65,stuff added into our existing
+545.6,4.329,application
+546.65,3.279,[Music]

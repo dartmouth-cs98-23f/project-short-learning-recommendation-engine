@@ -1,0 +1,144 @@
+second,duration,transcript
+0.16,4.4,ever wondered how google translates an
+2.399,4.321,entire web page to a different language
+4.56,4.4,in a matter of seconds or your phone
+6.72,4.72,gallery group's images based on their
+8.96,5.759,location all of this is a product of
+11.44,5.36,deep learning but what exactly is deep
+14.719,4.161,learning deep learning is a subset of
+16.8,4.319,machine learning which in turn is a
+18.88,4.319,subset of artificial intelligence
+21.119,4.481,artificial intelligence is a technique
+23.199,4.881,that enables a machine to mimic human
+25.6,5.12,behavior machine learning is a technique
+28.08,5.68,to achieve ai through algorithms trained
+30.72,5.44,with data and finally deep learning is a
+33.76,4.72,type of machine learning inspired by the
+36.16,4.48,structure of the human brain in terms of
+38.48,4.64,deep learning this structure is called
+40.64,4.72,an artificial neural network let's
+43.12,4.56,understand deep learning better and how
+45.36,3.679,it's different from machine learning say
+47.68,3.359,we create a machine that could
+49.039,4.641,differentiate between tomatoes and
+51.039,4.081,cherries if done using machine learning
+53.68,3.68,we'd have to tell the machine the
+55.12,4.64,features based on which the two can be
+57.36,4.879,differentiated these features could be
+59.76,4.719,the size and the type of stim on them
+62.239,4.081,with deep learning on the other hand the
+64.479,4.32,features are picked out by the neural
+66.32,4.72,network without human intervention of
+68.799,4.0,course that kind of independence comes
+71.04,4.399,at the cost of having a much higher
+72.799,4.881,volume of data to train our machine
+75.439,3.761,now let's dive into the working of
+77.68,4.0,neural networks
+79.2,4.72,here we have three students each of them
+81.68,3.2,write down the digit 9 on a piece of
+83.92,2.8,paper
+84.88,4.4,notably they don't all write it
+86.72,4.48,identically the human brain can easily
+89.28,4.32,recognize the digits
+91.2,3.44,but what if a computer had to recognize
+93.6,3.44,them
+94.64,4.08,that's where deep learning comes in
+97.04,4.0,here's a neural network trained to
+98.72,5.039,identify handwritten digits
+101.04,4.56,each number is present as an image of 28
+103.759,5.121,times 28 pixels
+105.6,4.32,now that amounts to a total of 784
+108.88,3.36,pixels
+109.92,4.08,neurons the core entity of a neural
+112.24,3.68,network is where the information
+114.0,5.119,processing takes place
+115.92,5.28,each of the 784 pixels is fed to a
+119.119,3.121,neuron in the first layer of our neural
+121.2,3.519,network
+122.24,4.64,this forms the input layer
+124.719,4.4,on the other end we have the output
+126.88,4.24,layer with each neuron representing a
+129.119,3.2,digit with the hidden layers existing
+131.12,3.28,between them
+132.319,4.081,the information is transferred from one
+134.4,3.04,layer to another over connecting
+136.4,3.6,channels
+137.44,5.2,each of these has a value attached to it
+140.0,4.48,and hence is called a weighted channel
+142.64,4.64,all neurons have a unique number
+144.48,4.96,associated with it called bias
+147.28,4.64,this bias is added to the weighted sum
+149.44,4.48,of inputs reaching the neuron
+151.92,4.959,which is then applied to a function
+153.92,5.2,known as the activation function
+156.879,4.881,the result of the activation function
+159.12,5.04,determines if the neuron gets activated
+161.76,4.96,every activated neuron passes on
+164.16,4.88,information to the following layers
+166.72,5.36,this continues until the second last
+169.04,5.52,layer the one neuron activated in the
+172.08,4.799,output layer corresponds to the input
+174.56,4.399,digit the weights and bias are
+176.879,4.801,continuously adjusted to produce a
+178.959,5.36,well-trained network so where is deep
+181.68,4.479,learning applied in customer support
+184.319,5.041,when most people converse with customer
+186.159,5.281,support agents the conversation seems so
+189.36,4.56,real they don't even realize that it's
+191.44,4.64,actually a bot on the other side in
+193.92,5.12,medical care neural networks detect
+196.08,6.64,cancer cells and analyze mri images to
+199.04,6.559,give detailed results self-driving cars
+202.72,6.32,what seem like science fiction is now a
+205.599,5.121,reality apple tesla and nissan are only
+209.04,4.72,a few of the companies working on
+210.72,5.92,self-driving cars so deep learning has a
+213.76,5.44,vast scope but it too faces some
+216.64,5.519,limitations the first as we discussed
+219.2,4.8,earlier is data while deep learning is
+222.159,4.08,the most efficient way to deal with
+224.0,4.4,unstructured data a neural network
+226.239,4.881,requires a massive volume of data to
+228.4,4.72,train let's assume we always have access
+231.12,4.0,to the necessary amount of data
+233.12,5.119,processing this is not within the
+235.12,5.399,capability of every machine and that
+238.239,4.881,brings us to our second limitation
+240.519,5.241,computational power training in neural
+243.12,5.44,network requires graphical processing
+245.76,6.96,units which have thousands of cores as
+248.56,7.12,compared to cpus and gpus are of course
+252.72,5.759,more expensive and finally we come down
+255.68,5.76,to training time deep neural networks
+258.479,5.44,take hours or even months to train the
+261.44,5.36,time increases with the amount of data
+263.919,5.441,and number of layers in the network so
+266.8,4.399,here's a short quiz for you arrange the
+269.36,4.32,following statements in order to
+271.199,6.081,describe the working of a neural network
+273.68,7.2,a the bias is added b the weighted sum
+277.28,7.28,of the inputs is calculated c specific
+280.88,6.08,neuron is activated d the result is fed
+284.56,4.48,to an activation function leave your
+286.96,3.92,answers in the comments section below
+289.04,4.4,three of you stand a chance to win
+290.88,4.72,amazon vouchers so hurry some of the
+293.44,5.199,popular deep learning frameworks include
+295.6,6.96,tensorflow pytorch keras deep learning
+298.639,6.0,4j cafe and microsoft cognitive toolkit
+302.56,4.639,considering the future predictions for
+304.639,5.441,deep learning and ai we seem to have
+307.199,4.801,only scratched the surface in fact horus
+310.08,3.92,technology is working on a device for
+312.0,4.479,the blind that uses deep learning with
+314.0,5.12,computer vision to describe the world to
+316.479,5.761,the users replicating the human mind at
+319.12,5.6,the entirety may be not just an episode
+322.24,5.6,of science fiction for too long the
+324.72,5.759,future is indeed full of surprises and
+327.84,4.88,that is deep learning for you in short
+330.479,4.641,if you enjoyed this video do like and
+332.72,4.8,share it also subscribe to our channel
+335.12,5.04,if you haven't yet as we have a lot more
+337.52,5.959,exciting videos coming up fun learning
+340.16,3.319,till then

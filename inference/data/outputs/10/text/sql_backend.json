@@ -1,0 +1,17 @@
+Section 1: Understanding the Performance of SELECT *
+
+* Introduction: In this section, we will explore the reasons behind the slow performance of SELECT * in a row store database engine.
+* Content:
+	1. The concept of pages and their role in storing and accessing data in a database.
+	2. The process of reading data from a database, including full table scans and the use of indexes.
+	3. The impact of file system, operating system, and storage driver factors on data retrieval performance.
+	4. The role of shared memory and caching in optimizing database performance.
+* Topics:
+	1. Database architecture and data storage.
+	2. Data retrieval algorithms and performance optimization.
+	3. Operating system and storage driver fundamentals.
+	4. Memory management and caching techniques.
+* General Topics:
+	1. Database performance optimization (complexity score: 3.5)
+	2. Data retrieval algorithms (complexity score: 2.5)
+	3. Operating system and storage driver fundamentals (complexity score: 2.0)

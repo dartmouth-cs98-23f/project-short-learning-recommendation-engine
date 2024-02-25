@@ -1,0 +1,61 @@
+{
+  "introduction": "The video explores the reasons behind the slow performance of SELECT * queries in a row store database engine. It discusses how rows are stored in units called pages, and how reading a page involves multiple operations, including reading from disk, mapping to SSD blocks, and caching in shared memory. The video also covers the concept of shared memory and its role in query processing.",
+  "sections": [
+    {
+      "title": "Section 1: Understanding Pages and Row Storage",
+      "content": [
+        "Explanation of how rows are stored in fixed size pages in a database.",
+        "Discussion of how reading a page involves reading from disk and mapping to SSD blocks.",
+        "Introduction of the concept of shared memory and its role in query processing.",
+        "Explanation of how the page size affects the number of blocks read from disk."
+      ],
+      "topics": ["Page Storage", "Row Storage", "Reading from Disk", "Shared Memory"]
+    },
+    {
+      "title": "Section 2: Reading Pages from Disk",
+      "content": [
+        "Explanation of how reading a page from disk involves specifying the file descriptor, starting position, and number of bytes to read.",
+        "Discussion of how the file system maps the bytes to SSD blocks.",
+        "Explanation of how the API to read offset and length is not consistent across storage drivers.",
+        "Introduction of the concept of block storage and its impact on reading a single byte."
+      ],
+      "topics": ["Reading from Disk", "File System", "Storage Driver", "Block Storage"]
+    },
+    {
+      "title": "Section 3: Caching in Shared Memory",
+      "content": [
+        "Explanation of how the database caches pages in shared memory for faster query processing.",
+        "Discussion of how the shared memory allows multiple processes to access the same pages.",
+        "Introduction of the concept of multiprocessing and its impact on query performance.",
+        "Explanation of how the shared memory is managed by the database."
+      ],
+      "topics": ["Shared Memory", "Multiprocessing", "Database Management", "Query Processing"]
+    },
+    {
+      "title": "Section 4: Query Processing and Optimization",
+      "content": [
+        "Explanation of how queries are processed in a database.",
+        "Discussion of how the database optimizes queries for faster performance.",
+        "Introduction of the concept of query optimization and its impact on query performance.",
+        "Explanation of how the database determines which pages to read from disk."
+      ],
+      "topics": ["Query Processing", "Query Optimization", "Page Reading", "Database Performance"]
+    },
+    {
+      "title": "Section 5: Summary and Conclusion",
+      "content": [
+        "Recap of the key points discussed in the video.",
+        "Explanation of how understanding the fundamentals of database query processing can improve query performance.",
+        "Introduction of the concept of database performance tuning and its importance.",
+        "Summary of the key takeaways from the video."
+      ],
+      "topics": ["Database Query Processing", "Database Performance Tuning", "Key Takeaways"]
+    }
+  ],
+  "topics": ["Database Systems and Management", "Algorithms and Data Structures", "Computer Architecture", "Data Science and Analytics", "Human-Computer Interaction (HCI)"],
+  "generalTopics": [
+    {"topic": "Database Systems and Management", "complexity": 0.55},
+    {"topic": "Algorithms and Data Structures", "complexity": 0.45},
+    {"topic": "Computer Architecture", "complexity": 0.40}
+  ]
+}

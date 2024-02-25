@@ -1,0 +1,354 @@
+second,duration,transcript
+8.0,4.24,hello everyone welcome to simply learns
+10.0,4.08,youtube channel and in this session we
+12.24,4.24,will be discussing the tree data
+14.08,4.16,structure before we begin let me tell
+16.48,4.24,you guys that we have daily updates on
+18.24,4.16,multiple technologies if you are a tech
+20.72,3.52,geek in a continuous hunt for latest
+22.4,3.36,technological trends then consider
+24.24,2.959,getting subscribed to our youtube
+25.76,3.919,channel and don't forget to hit that
+27.199,4.961,bell icon to never miss an update from
+29.679,4.321,simply learn now without further ado
+32.16,4.72,let's get started with the agenda for
+34.0,2.88,today's discussion
+37.52,4.4,so we will be discussing what exactly is
+40.16,4.16,a tree data structure
+41.92,4.639,followed by that we will understand why
+44.32,4.0,we need a tree data structure
+46.559,4.241,then we will learn the tree
+48.32,5.44,terminologies followed by that we will
+50.8,5.599,understand tree node then we will see
+53.76,4.799,the types of trees and followed by that
+56.399,3.84,we will understand the tree traversal
+58.559,4.48,and finally we will see some
+60.239,5.2,applications of trees in real time i
+63.039,4.4,hope i made myself clear with the agenda
+65.439,4.481,now let's get started with the first
+67.439,5.201,topic that is what is a tree data
+69.92,5.44,structure
+72.64,5.28,so what exactly is a tree data structure
+75.36,5.119,the tree is a non-linear data structure
+77.92,4.64,that consists of nodes and is connected
+80.479,4.081,by edges i know it's a little difficult
+82.56,3.36,to understand just by the definition so
+84.56,2.72,let me show you the pictorial
+85.92,3.76,representation
+87.28,6.96,as you can see we have the elements that
+89.68,6.72,is 10 20 30 40 50 60 and 70 and all
+94.24,4.48,these are stored in the tree data
+96.4,5.359,structure they are stored in a
+98.72,5.439,non-linear structure if we had used
+101.759,4.561,arrays it would have been in a linear
+104.159,5.6,consecutive way where 10 starts first
+106.32,5.6,and 70 ends at the last position
+109.759,4.241,now in the next section we will discuss
+111.92,4.32,why we had made to a switch to the tree
+114.0,5.28,data structure when we already had a
+116.24,5.6,linear data structure that is airy
+119.28,5.519,now the next topic that is why we need
+121.84,2.959,tree data structure
+125.2,4.32,so there are many reasons why we had
+127.36,4.32,switched into tree data structure and
+129.52,4.48,one of the reason is a linear data
+131.68,5.36,structure always stores the elements in
+134.0,5.44,a sequential form that is one after the
+137.04,4.08,other and in operations to be performed
+139.44,3.84,in linear data structure
+141.12,4.4,that time complexity increases as the
+143.28,4.4,data size increases you can see here
+145.52,4.16,that as discussed before the elements
+147.68,4.559,are stored in a linear form that is 10
+149.68,4.639,at the first place and 70 at the last
+152.239,5.041,place imagine you wanted to access the
+154.319,5.28,element 70 then using the traversal you
+157.28,5.92,had to start from the first position
+159.599,6.321,that is 10 20 30 40 and slowly at the
+163.2,5.28,end is 70. so accessing that particular
+165.92,4.959,element is really time consuming we are
+168.48,5.52,facing this just for 70 elements imagine
+170.879,5.201,if we had 700 elements right so that is
+174.0,4.16,exactly why we had made a switch to tree
+176.08,4.64,data structure and using trade data
+178.16,4.159,structure we have many advantages as the
+180.72,4.159,tree data structure is completely
+182.319,4.64,non-linear and it allows easier access
+184.879,4.321,and quicker access of the data elements
+186.959,4.321,how is that possible we will look into
+189.2,4.959,it into the next segment where we will
+191.28,4.8,discuss about the traversal of trees
+194.159,3.761,now before we understand the traversal
+196.08,3.12,of trees we should understand another
+197.92,4.64,important topic that has the
+199.2,3.36,terminologies of tree
+203.84,6.319,so the first one is the node node is the
+207.36,5.439,entity that contains the keys and
+210.159,5.601,pointer to its child nodes
+212.799,7.36,so here you can see that the elements a
+215.76,7.119,b c d e f and g are the elements so each
+220.159,6.241,and every element or the blue dot is
+222.879,4.72,called as a node and the blue dots here
+226.4,3.36,are
+227.599,4.881,one two three four five six and seven so
+229.76,5.199,we have seven blue dots so we have seven
+232.48,4.479,elements here so you can see the line
+234.959,4.321,between each elements right so this
+236.959,6.081,particular line is called edge now we'll
+239.28,3.76,discuss about the edge in the next part
+244.0,4.799,so the connecting links between any two
+246.799,3.44,nodes are called as edges so we
+248.799,3.201,discussed about the nodes right where
+250.239,3.841,the element is stored the blue dots are
+252.0,3.92,the nodes and the lines connecting
+254.08,4.559,between the elements or nodes is called
+255.92,2.719,as the edge
+259.44,4.479,so out of all the nodes
+261.359,4.641,this first node that is the element a is
+263.919,3.121,called as the root node in a tree data
+266.0,4.0,structure
+267.04,5.36,so indirectly root node is also called
+270.0,4.479,as the parent node of all the nodes now
+272.4,4.799,we will understand what are parent nodes
+274.479,4.881,and children nodes
+277.199,4.72,so in a tree data structure the node
+279.36,5.839,that is the node's predecessor is called
+281.919,5.761,as parent node so here we have discussed
+285.199,3.601,that a or the root node is the parent of
+287.68,4.32,all nodes
+288.8,6.959,so for a b and c nodes are children
+292.0,8.16,nodes and for b and c nodes a happens to
+295.759,7.201,be the parent node similarly d and e are
+300.16,4.56,the children nodes of b and f and j are
+302.96,2.56,children nodes of c
+304.72,1.6,and
+305.52,3.679,the
+306.32,5.04,nodes d and e have b as the parent node
+309.199,5.201,and the nodes f and g have c as the
+311.36,5.36,parent node now followed by that
+314.4,4.32,we will understand the descendant node
+316.72,4.0,so as discussed before the descendant
+318.72,4.56,node is the node that comes after the
+320.72,5.36,parent node here the b and c are the
+323.28,5.44,descendants of a and d and e are
+326.08,4.959,descendants of b and similarly f and g
+328.72,4.96,are the descendants or children of the
+331.039,2.641,node c
+333.919,4.161,so in a tree data structure the node
+336.0,4.96,which does not have any child is called
+338.08,6.959,as the leaf node now at the end we have
+340.96,6.88,d e f and g so these particular nodes do
+345.039,4.72,not have any children nodes like b and c
+347.84,4.16,so these particular four nodes which do
+349.759,4.481,not have any children are called as the
+352.0,5.039,leaf nodes
+354.24,5.2,in a tree data structure the node with
+357.039,4.241,at least one child node is called as the
+359.44,4.879,internal node
+361.28,6.639,so here the internal nodes are p and c
+364.319,5.521,which have at least one child
+367.919,3.84,in a tree the total number of children
+369.84,4.56,of a node are called as the degree of
+371.759,5.041,that node so in this particular diagram
+374.4,4.96,the degree of root node is 2 because it
+376.8,5.519,has two child nodes and the degree of b
+379.36,5.679,is 2 as it has two child nodes similarly
+382.319,5.841,the degree of c is 2 because it has two
+385.039,4.0,child nodes but when it comes to d e f
+388.16,1.68,and g
+389.039,3.6,the
+389.84,4.639,degree is 0 because they do not have any
+392.639,3.761,child nodes
+394.479,4.0,in a tree data structure the root node
+396.4,4.0,is said to be at level 0 and the
+398.479,4.72,children of the root node are said to be
+400.4,5.519,at level 1 and the children nodes of the
+403.199,4.881,level 1 are at level 2. so to understand
+405.919,4.801,this let's go through the diagram as you
+408.08,4.88,can see this particular root node is
+410.72,4.8,called as level 0
+412.96,5.2,and followed by that we have the
+415.52,5.44,children nodes of a that is b and c and
+418.16,5.599,that level is called as level 1 and
+420.96,5.2,followed by that we have level 2 and if
+423.759,5.201,this tree goes forward the levels also
+426.16,4.879,increase accordingly
+428.96,4.16,now in a tree data structure the total
+431.039,4.88,number of edges from a leaf node to the
+433.12,4.96,particular node is the longest path and
+435.919,3.921,this particular path is called as the
+438.08,4.08,height of that node
+439.84,4.32,now here we have our general tree data
+442.16,4.96,structure and here you can see the
+444.16,6.64,height of node a s2
+447.12,7.28,and the height of node b and c together
+450.8,6.56,is at 1 and the height of the last leaf
+454.4,5.28,nodes happens to be 0.
+457.36,4.72,next in the tree data structure the
+459.68,4.639,total number of edges from the root node
+462.08,4.08,to a particular node is called as the
+464.319,3.28,depth of that node
+466.16,4.159,now in this particular tree data
+467.599,5.361,structure the depth of the root node is
+470.319,5.921,zero and the depth of b
+472.96,5.84,and c together is one because the number
+476.24,6.32,of edges connecting to the
+478.8,5.92,node a from b is just one and similarly
+482.56,5.359,the number of edges connecting the node
+484.72,6.56,c from a is just one so the depth of
+487.919,6.321,both b and c is one
+491.28,5.52,now if we consider the last leaf nodes
+494.24,5.2,then the depth is two because if you see
+496.8,5.119,g is connected to a using two different
+499.44,5.52,edges similarly f is connected to a
+501.919,6.481,using two different edges and e and d
+504.96,5.359,also have two nodes to connect to a so
+508.4,3.359,the depth is two
+510.319,4.241,now in the next segment we will
+511.759,5.681,understand the tree node
+514.56,5.68,so the tree data structure has data part
+517.44,5.039,and references to its left and right
+520.24,5.52,child node in the tree data structure so
+522.479,6.161,here you can see this is the node and
+525.76,5.759,the node has three segments that is data
+528.64,4.879,element and the references to its left
+531.519,3.921,child and the references to its right
+533.519,3.601,child
+535.44,4.399,now there are four different types of
+537.12,4.8,trees the first one is the binary tree
+539.839,5.201,followed by that we have the binary
+541.92,5.919,search tree then we have avl tree and
+545.04,4.88,finally we have the b3 let us discuss
+547.839,4.641,each one of them the first one is the
+549.92,5.039,binary tree a binary tree is a tree data
+552.48,4.88,structure in which each parent node at
+554.959,5.041,most has two children
+557.36,4.88,so in this particular tree we'll have at
+560.0,5.519,most two children that means it might
+562.24,5.92,have one or more than one but not more
+565.519,4.801,than two children per node
+568.16,2.96,moving ahead we have the binary search
+570.32,3.44,tree
+571.12,4.96,so a binary search tree or a bst is a
+573.76,5.6,tree data structure in which each node
+576.08,6.16,has a maximum of two children all nodes
+579.36,5.28,of the left sub tree are less than the
+582.24,5.76,right node all nodes on the right sub
+584.64,5.52,tree are more than the root node so here
+588.0,4.8,you can see the image or the gif which
+590.16,5.44,represents the image of a binary search
+592.8,5.12,tree so here all the nodes of the left
+595.6,3.919,sub tree are less than the root node and
+597.92,3.919,all the nodes of the right subtree are
+599.519,4.801,more than the root node
+601.839,4.881,the next type of the tree is the avl
+604.32,6.4,tree the avl tree got its name after
+606.72,5.44,inventory georgie adelson welsky and
+610.72,4.16,landis
+612.16,4.72,avl tree is the self-balancing tree in
+614.88,4.72,which each node maintains a balanced
+616.88,5.84,factor both value is either one
+619.6,4.96,zero or minus one
+622.72,4.48,balance factor is equals to height of
+624.56,4.88,the left subtree minus height of the
+627.2,5.12,right subtree or height of the right
+629.44,4.56,subtree minus height of the left subtree
+632.32,4.88,so in this particular image you can
+634.0,5.44,identify it is an avl tree
+637.2,3.6,and now the last type of tree that is
+639.44,4.399,the b tree
+640.8,5.12,b3 is a special kind of self balancing
+643.839,4.641,search tree in which each node can
+645.92,5.359,contain more than one key and can have
+648.48,6.08,more than two children b3 is also known
+651.279,6.081,as the height balanced m v tree now in
+654.56,4.0,this particular gif we can see how a b3
+657.36,3.599,looks like
+658.56,5.44,now followed by this we will discuss the
+660.959,3.041,tree traversal
+664.72,4.32,so traversing a tree helps to visit
+666.959,4.56,required node in the tree to perform
+669.04,4.96,specific operations tree traversal can
+671.519,4.56,be performed in three different ways the
+674.0,4.399,first one is the pre-order traversal
+676.079,4.081,where we visit the node
+678.399,3.68,and visit all the node from the left
+680.16,4.239,side then visit all the nodes from the
+682.079,5.361,right side so this particular gif is an
+684.399,4.961,example for pre-order traversal where we
+687.44,4.0,visit all the left side nodes first then
+689.36,3.68,we visit the right side nodes
+691.44,3.839,now we will move ahead into the next
+693.04,5.12,type of traversal
+695.279,4.961,that is the in order traversal
+698.16,4.48,first we visit all the nodes from the
+700.24,4.48,left side then we visit the root node
+702.64,4.72,and then represent all the nodes from
+704.72,4.799,the right side so this particular gif
+707.36,4.64,will be an example for the in order
+709.519,4.961,traversal where we visit all the left
+712.0,4.399,side nodes then we visit the root node
+714.48,4.16,and followed by that we will visit the
+716.399,4.321,right side nodes
+718.64,4.56,and the last type of traversal is the
+720.72,4.72,post order traversal where we visit all
+723.2,4.079,the nodes from the left side first then
+725.44,4.959,we visit all the nodes from the right
+727.279,4.8,side and finally visit the root node so
+730.399,4.161,this particular image on the right side
+732.079,4.641,is an example for post order traversal
+734.56,4.399,now before we get into learning the
+736.72,4.88,applications of trees we will try to
+738.959,5.601,execute one example based on the post
+741.6,4.88,order pre-order and in order traversals
+744.56,4.079,entry data structure
+746.48,4.4,so you can see that we have an example
+748.639,4.161,on my screen right now so here we have
+750.88,3.68,the node structure
+752.8,3.839,then we have the in order traversal
+754.56,4.64,function followed by that we have the
+756.639,4.721,pre-order traversal function and finally
+759.2,4.0,we have the post order traversal
+761.36,3.52,function now let's quickly run this
+763.2,3.52,program and see the output and don't
+764.88,3.36,worry about the code this particular
+766.72,3.119,code document will be attached in the
+768.24,3.12,description box below and you can have
+769.839,4.161,access to it
+771.36,5.279,now we have the run option over here and
+774.0,4.959,the program got successfully executed uh
+776.639,4.961,you can ignore this warning and here we
+778.959,4.801,have the in order traversal of the tree
+781.6,3.919,and the first output then we have the
+783.76,4.639,pre-order traversal of the tree and
+785.519,5.681,finally we have the post-order traversal
+788.399,3.68,of the tree now let's discuss the last
+791.2,2.8,part
+792.079,3.2,where we will learn the application of
+794.0,3.2,trees
+795.279,4.081,so the application of trees are as
+797.2,3.84,follows binary search trees are used to
+799.36,4.24,quickly check whether an element is
+801.04,5.919,present in the set or not then we have
+803.6,5.12,the most popular database usage of b3
+806.959,3.841,which is a variant of tree data
+808.72,3.76,structure then we have the modified
+810.8,4.32,version of trees called as trice which
+812.48,4.799,is used in the router to store routing
+815.12,4.32,information and finally the compiler
+817.279,4.961,uses a syntax tree to validate the
+819.44,4.399,syntax of every program you write
+822.24,4.159,so with that we have come to an end of
+823.839,3.921,this tutorial on tree data structure if
+826.399,2.801,you have any queries regarding the
+827.76,3.519,topics covered in this particular
+829.2,3.6,tutorial then please feel free to let us
+831.279,3.201,know in the comment section below and
+832.8,4.0,our team of experts will be happy to
+834.48,7.08,resolve all your queries until next time
+836.8,4.76,thank you stay safe and keep learning
+843.839,3.521,hi there if you like this video
+845.6,4.4,subscribe to the simply learn youtube
+847.36,4.8,channel and click here to watch similar
+850.0,5.48,videos to nerd up and get certified
+852.16,3.32,click here

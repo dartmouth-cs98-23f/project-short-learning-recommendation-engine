@@ -1,0 +1,460 @@
+second,duration,transcript
+0.25,3.26,[Music]
+0.949,4.091,thank you very much fat yeah today I'm
+3.51,3.69,going to talk about computer graphics
+5.04,4.44,and visualization and basically it is an
+7.2,5.13,area that evolved quite drastically and
+9.48,4.949,nowadays we can computer generated or
+12.33,3.99,generate on a computer photorealistic
+14.429,4.381,imagery and even deal with very large
+16.32,4.83,scale data sets this open up many
+18.81,3.75,applications and various areas and this
+21.15,2.61,is also why it's very exciting to work
+22.56,3.12,in this field because there's so many
+23.76,4.17,options on the table that are there to
+25.68,4.23,explore in this sense I'm also very
+27.93,4.259,happy to have a theme of different
+29.91,4.98,people behind me that will follow me in
+32.189,4.231,this endeavor at geo Delta at the
+34.89,3.329,computer graphics and visualization
+36.42,4.62,group which I'm heading we are four
+38.219,5.071,faculty members in total 17 members 12
+41.04,3.63,PhD students 20 master students many
+43.29,3.12,other people that are involved in the
+44.67,4.619,projects i'm showing here today so the
+46.41,4.71,credit does not only go to me now what
+49.289,4.261,do we do in this group well we have
+51.12,4.86,basically four focus areas the first one
+53.55,5.009,is named technology geometry processing
+55.98,4.98,rendering techniques and medical or data
+58.559,4.441,visualization so in order to give you a
+60.96,3.87,glimpse of what these topics stand for I
+63.0,3.9,prepared a couple of examples to show
+64.83,3.719,you this little bit further game
+66.9,3.69,technology is about automatically
+68.549,3.781,generating content and this becomes more
+70.59,3.87,and more important at nowadays because
+72.33,4.469,we have procedurally generated worlds in
+74.46,4.409,which players or even people are trained
+76.799,3.721,and for that reason the content is not
+78.869,3.151,that easy to produce anymore because
+80.52,3.599,these worlds can be like gigantic
+82.02,3.599,contain many many people that are
+84.119,4.86,interacting with it and therefore
+85.619,4.801,procedural methods are key here we also
+88.979,3.93,developed an asst content design
+90.42,4.44,interfaces that allows people to very
+92.909,4.17,easily proceed you to generate content
+94.86,4.11,but just a few scribbles and therefore
+97.079,4.29,create entire 3d environments that can
+98.97,4.079,then be explored these environments
+101.369,3.75,there of course populated with geometry
+103.049,6.18,and it is one of the other topics that
+105.119,5.971,we're looking at in detail how do we
+109.229,3.901,represent information how do we capture
+111.09,3.959,information from our surrounding how we
+113.13,4.23,transform that into a digital
+115.049,5.191,representation that then people can
+117.36,5.46,interact with here at the bottom you'll
+120.24,5.43,also see an example of an animation and
+122.82,4.5,deformation algorithm so we also look at
+125.67,3.809,what are realistic deformations of
+127.32,4.76,objects in order to make them really
+129.479,4.761,reliable in the spiritual world
+132.08,4.11,one key example here is of course also
+134.24,3.27,how do I represent this information how
+136.19,3.81,do I represent the data and the
+137.51,5.16,information that is hidden in it in one
+140.0,4.95,direction that we recently took is to
+142.67,3.6,look at how we can represent for example
+144.95,4.23,performance capture where you had
+146.27,5.16,scanners that you could register this
+149.18,4.98,virtual character here and then
+151.43,4.59,basically decimate its information in
+154.16,5.01,such a way that we only extract the most
+156.02,5.07,valuable available information in other
+159.17,4.65,words we can go ahead and then basically
+161.09,5.01,transform a performance capture on the
+163.82,3.93,left with all the details into something
+166.1,3.36,that becomes more and more approximate
+167.75,3.75,and the user can control this level of
+169.46,3.749,detail automatically so the most
+171.5,3.99,important movements are captured which
+173.209,4.081,can then be used to query databases to
+175.49,4.53,transfer the motion on to other
+177.29,5.07,characters or to do another analysis
+180.02,4.53,steps in such a way you have really a
+182.36,4.2,system that allows you to then take any
+184.55,4.32,kind of moving input and represented
+186.56,4.73,with very few primitives that capture
+188.87,5.16,the entire information of this sequence
+191.29,5.199,now in these images you already see the
+194.03,4.17,next topic that we of course address in
+196.489,3.931,this group which is rendering techniques
+198.2,3.96,ultimately you want to show something on
+200.42,3.96,the screen which means that you have to
+202.16,4.02,transform this kind of virtual object
+204.38,4.29,into something that is displayable on
+206.18,4.47,your device we're looking at realistic
+208.67,4.05,rendering including shadows shading
+210.65,4.2,global illumination non-photorealistic
+212.72,5.04,rendering which is more for illustrative
+214.85,4.859,purposes or to explain things better the
+217.76,3.81,HD studies that show that with the right
+219.709,4.441,abstraction you can increase
+221.57,3.84,memorability as well as also reaction
+224.15,3.0,time of the people that are interacting
+225.41,3.18,with the data so it becomes very
+227.15,3.809,important to look at this different
+228.59,4.98,topic and automatically this links in
+230.959,4.411,with perception how do we perceive the
+233.57,4.41,images that we show how do we actually
+235.37,5.07,perceive animations or even interactive
+237.98,4.05,data evis trations and finally
+240.44,3.78,computational photography how do we
+242.03,4.2,integrate real-world data into our
+244.22,3.42,approaches in order to make them more
+246.23,3.99,accessible we can take this even further
+247.64,4.319,with more photorealistic landscapes in
+250.22,3.84,this case here you have even
+251.959,5.461,participating media which is fog and
+254.06,5.67,share it becomes very difficult to do on
+257.42,4.77,because light interaction happens in the
+259.73,4.32,entire scene and we need to compute all
+262.19,3.72,of these values in real time this
+264.05,3.69,becomes extremely important for example
+265.91,4.23,if you want to train people in a driving
+267.74,4.2,simulator or in plane simulator because
+270.14,3.57,all of a sudden you need to integrate
+271.94,3.39,all these weather effects in order to
+273.71,3.36,make the simulation reduces little world
+275.33,4.35,is represented well we heard this before
+277.07,4.77,data is exploding with information
+279.68,3.96,everywhere and dealing with large-scale
+281.84,4.74,data sets is really a fundamental
+283.64,5.82,challenge that we need to address we
+286.58,4.89,look at topics like data analysis in
+289.46,4.74,order to get new insights of this
+291.47,4.98,information and produce representations
+294.2,3.3,that people can explore extract the
+296.45,3.87,knowledge that they're actually looking
+297.5,7.02,for and then use the insides in their
+300.32,7.77,own applications in this sense let me
+304.52,5.7,show you a couple of different themes
+308.09,4.56,related to our data and medical
+310.22,4.86,visualization direction on large-scale
+312.65,4.41,data display interaction methods visual
+315.08,5.37,analytics and medical visualization I
+317.06,5.64,think the key idea behind integrating
+320.45,4.92,the user and visualization techniques in
+322.7,4.95,big data is that if you look at a data
+325.37,4.35,development and recently used you have
+327.65,5.07,basically a development of compute power
+329.72,5.49,and data that before well behaved quite
+332.72,3.99,nicely right so we could basically deal
+335.21,4.56,with the data sets that we add at hand
+336.71,5.16,but this is about to change this means
+339.77,3.51,that the processing and analysis that we
+341.87,3.96,did before will not be sufficient
+343.28,4.95,anymore these two curves cross and we
+345.83,4.71,are basically out powered by the amount
+348.23,4.5,of data that is coming in consequently
+350.54,4.5,what we need is a new way to deal with
+352.73,4.44,data which means that you need to
+355.04,4.11,visualize it interact with and then
+357.17,3.57,guide what kind of data to keep what
+359.15,3.57,kind of data to involve in your
+360.74,3.9,processes and that means that the user
+362.72,4.38,has to be in the loop and we have visual
+364.64,5.01,beings so visualization is one of the
+367.1,5.64,key elements to have there to prove my
+369.65,4.74,point you're a very simple example this
+372.74,3.57,data set here if you look at it well
+374.39,3.87,it's very different difficult to grasp
+376.31,4.29,what is shown here but in fact it's just
+378.26,3.66,an app with different temperature levels
+380.6,3.21,and when I show you an image you
+381.92,3.57,immediately grasp what is going on you
+383.81,4.11,can see tendencies regions that are
+385.49,3.93,conformed so you get much better in size
+387.92,2.51,but this means that you need the right
+389.42,2.93,tools and the right
+390.43,5.22,solutions in order to make this really
+392.35,5.31,happen one domain that specifically key
+395.65,4.68,benefits from this is the medical domain
+397.66,4.86,here you can see a large-scale medical
+400.33,3.84,skin usually these are in your order or
+402.52,3.66,a couple of gigabytes that are coming
+404.17,3.15,out of those machines and now you need
+406.18,4.17,to write technique in order to
+407.32,5.1,illustrate the outcome here at the lower
+410.35,3.54,left the video just shows an interaction
+412.42,3.51,with such a data set where you for
+413.89,3.78,example strip off the skin only look at
+415.93,4.56,the bones look at different organs and
+417.67,6.0,then really make decisions based on this
+420.49,4.92,input because of its large and huge
+423.67,3.99,amount of data we also looked at
+425.41,5.34,compression techniques meaning how can
+427.66,5.19,we actually reduce the retail level that
+430.75,3.69,is given in such box of representations
+432.85,4.29,for this tiny cube that has been
+434.44,4.77,measured the GCU seen that looks like a
+437.14,4.62,3d environment that you might have seen
+439.21,5.13,from it that's a cheap video game but in
+441.76,4.74,fact this is made up of tiny little data
+444.34,4.35,cubes so we could also use the medical
+446.5,4.26,data set of a resolution that goes up to
+448.69,5.28,well I cannot pronounce the number and
+450.76,5.97,that's one of the things about numbers
+453.97,4.35,anymore but it's 2 to the power 51 boxes
+456.73,4.19,that are represented here insect
+458.32,5.34,together and there may be compressed to
+460.92,4.96,do representation is only for gigabyte
+463.66,5.34,large so it fits evening on interactive
+465.88,4.29,graphics part where zooms also look in
+469.0,2.58,the upper right corner that's the
+470.17,2.94,resolution of the boxes that we are
+471.58,3.75,dealing with you so it's really a
+473.11,4.59,gigantic environment represented in a
+475.33,4.89,very small amount of data and this
+477.7,5.07,reduction of information is also crucial
+480.22,4.05,when it comes to bandwidth and we have
+482.77,3.51,to transport the information to the
+484.27,4.41,graphics card or even to portable
+486.28,4.77,devices as was pointed out by gemach
+488.68,4.38,before and more and more things become
+491.05,3.51,mobile and we are looking at how can we
+493.06,3.66,deal with these large-scale data sets
+494.56,3.93,everywhere now one of the directions
+496.72,4.08,that we explore this for example
+498.49,4.92,rendering where you basically can have
+500.8,4.38,access two gigabytes of data on the fly
+503.41,3.689,but just taking out your phone
+505.18,4.049,connecting to the right server in an
+507.099,3.841,interactivity you can see here in this
+509.229,4.5,video also that several people can
+510.94,5.339,interact at the same time the noise is
+513.729,4.291,due to the calculation of the kind of
+516.279,3.901,lighting that we use which in this case
+518.02,3.87,also includes a lot of sampling
+520.18,5.159,processes so don't get distracted by
+521.89,5.25,their in the video but the nice thing is
+525.339,3.661,that it basically if you have several
+527.14,3.78,doctors discussing the same day as they
+529.0,4.29,can interact they can do annotations one
+530.92,4.02,of them can change the way that the data
+533.29,3.84,is represented take off the ceiling
+534.94,4.38,again discuss with the colleagues places
+537.13,5.82,clipping plane and Alton can come to a
+539.32,5.88,common conclusion now what I like other
+542.95,4.62,areas that benefit from large-scale data
+545.2,5.19,representations when the Netherlands one
+547.57,5.82,of the that's the fears that exists of
+550.39,5.31,course is fly that is always a big issue
+553.39,4.319,and so people have covered the entire
+555.7,5.4,Netherlands with planes that have
+557.709,6.211,registered a height field of the entire
+561.1,5.609,country and if highfield already
+563.92,5.97,represents a terabyte of data and one of
+566.709,4.62,the goals is to compute simulations in
+569.89,3.509,this high field in order to predict what
+571.329,3.931,kind of safety measures have to be put
+573.399,5.31,into place in order to protect the
+575.26,5.55,people H terabytes means 50 meters of
+578.709,4.651,CDs slows reading huge amount of data
+580.81,4.71,and if you want to integrate satellite
+583.36,6.39,data for example in order to find out
+585.52,7.379,something about 40 km i acquire year 1
+589.75,5.43,point 5 petabytes of data and so it's a
+592.899,5.911,huge amount a google earth already
+595.18,6.36,contains 21 petabytes of data today that
+598.81,4.62,is offered to you via disservice and now
+601.54,4.68,producing computations on a global scale
+603.43,4.44,like this is a big challenge you can
+606.22,3.809,show you a little bit of what you will
+607.87,3.84,also see in the class of how to produce
+610.029,4.801,a rendering systems live nation
+611.71,5.52,such gigantic data sets and information
+614.83,4.98,on the tribe because we needed we fly
+617.23,5.54,here from Delta baby over to rubble and
+619.81,5.49,where will show you a quick application
+622.77,5.2,that we built in the context of this
+625.3,3.93,flood protection measurement one of the
+627.97,2.84,things that people look at it for
+629.23,4.83,example if you have a river like this
+630.81,4.75,what happens if the water rises and so
+634.06,3.72,you can place this inside of the
+635.56,5.07,simulation and you can synthetic which
+637.78,5.46,neighborhood where the water is flowing
+640.63,4.08,what safety procedures to follow in
+643.24,4.02,order to make sure that people get out
+644.71,6.27,without a problem it turns out on a side
+647.26,5.85,note it can actually in some areas mean
+650.98,4.26,that if there is a real flooding you
+653.11,4.05,should climb to the top of your roof top
+655.24,4.35,because there's no way that you could
+657.16,4.53,get over any three out of this area fast
+659.59,4.47,enough and these kind of insights are
+661.69,4.05,very available to decision-makers in
+664.06,4.11,medical visualization it becomes a
+665.74,4.2,little less clear what the right
+668.17,4.62,recommendation and be two different
+669.94,6.18,presentations pictures for example I
+672.79,5.34,picked here a blood flow through this
+676.12,4.23,straightened we have the release
+678.13,6.06,scanners that are able to track what a
+680.35,6.21,flow of blood is inside of your body but
+684.19,5.22,they output these kind of images very
+686.56,5.19,hard for anybody that is not a domain
+689.41,3.78,expert so we also looked at Ellis
+691.75,7.02,trations that are a little bit more
+693.19,7.2,understandable like each one feeling for
+698.77,5.11,of you where does the blood flow where
+700.39,6.53,they went vortices what is the direction
+703.88,5.34,and people that are using these kind of
+706.92,5.82,illustrative already found very nice
+709.22,5.68,finding that were previously unknown for
+712.74,4.2,example about certain locations in the
+714.9,4.29,heart and how they are turbulences that
+716.94,4.56,are related to rings us to a kind of
+719.19,5.04,loop what we want to do is we want to
+721.5,4.83,have the visualization and interaction
+724.23,4.14,with the user that can explore the data
+726.33,4.8,and find what they're actually looking
+728.37,4.74,for now this is not always
+731.13,4.74,straightforward because this data
+733.11,5.19,analysis that over here cannot be done
+735.87,4.56,only when we want to support the human
+738.3,4.29,in this task and this is one of the
+740.43,4.2,research directions that includes visual
+742.59,4.26,analytics which at the moment is one
+744.63,6.84,other yeah let's say hot topic also in
+746.85,7.23,the area so what does it base or what is
+751.47,4.74,it based on well if we look at a high
+754.08,4.56,dimensional data set like this one here
+756.21,4.11,on the left you have the feeling okay it
+758.64,4.5,is three-dimensional because all the
+760.32,4.65,points and three dimensions but it turns
+763.14,5.97,out that it's actually in this case a
+764.97,6.93,folded piece of paper if you wonder so
+769.11,5.85,the data actually lives not in 3d it
+771.9,5.37,lives in 2d and if we can find out these
+774.96,7.02,kind of relationships we can reduce the
+777.27,7.62,dimensionality of available they mention
+781.98,5.82,that is intrinsically encoded so let me
+784.89,4.61,illustrate this with an example here is
+787.8,5.19,a data set where people have written
+789.5,5.23,numbers from 0 to 9 so everybody has a
+792.99,4.35,different handwriting so they don't
+794.73,8.07,match up but they collected 100 thousand
+797.34,8.04,samples and now this represents 4096
+802.8,4.26,dimensions sounds a bit weird but that
+805.38,3.93,is the number of pixels that were used
+807.06,4.14,to scan it every Bigfoot can change
+809.31,4.92,color so that gives you four thousand
+811.2,4.71,dimensions now what you can do is you
+814.23,5.04,can analyze this data set and actually
+815.91,6.619,embed it in a 2d representation what you
+819.27,5.989,get is something like this
+822.529,4.92,melody Judy where the goal was to
+825.259,3.721,maintain as much as possible the
+827.449,3.841,neighborhood relationships between
+828.98,10.32,different objects meaning if they're
+831.29,10.2,close now this is what it looks like and
+839.3,4.079,interestingly when you select a cluster
+841.49,4.649,like this one that is formed up here
+843.379,5.46,well it actually corresponds to certain
+846.139,4.62,elements in your data set so which means
+848.839,5.75,that this similarity can come out and
+850.759,5.88,become visually observable to the user
+854.589,3.61,unfortunately that is the downside well
+856.639,2.94,you can do this for all the numbers and
+858.199,3.781,look something like this and previous
+859.579,4.141,approaches have worked in the order of
+861.98,4.14,minutes for larger data sets in the
+863.72,4.979,order of hours which is very often
+866.12,4.68,unacceptable and undesirable so looking
+868.699,6.031,at like seller ation techniques like we
+870.8,6.449,did allows you to go down to timing we
+874.73,4.609,get similar results of these types of
+877.249,4.981,embeddings that allowed the interactions
+879.339,6.881,without having to wait for it for a long
+882.23,6.209,time now furthermore when you look at
+886.22,11.58,data like this you see okay similar
+888.439,11.34,information but you don't get a overview
+897.8,3.69,of what number is might be linked of
+899.779,4.261,what things might be very similar is
+901.49,4.469,seven looks a lot like a one is there a
+904.04,4.38,way to abstract is even further and
+905.959,5.161,create groups that are meaningfully
+908.42,4.74,connected so this is also direction as
+911.12,4.35,we looked into of how to create her
+913.16,3.81,ocular representations and for this I
+915.47,6.75,will change the example because it's a
+916.97,7.26,little bit better to feel where settle
+922.22,5.19,as it's like different spectral
+924.23,5.459,responses of the ground and we analyze
+927.41,4.849,these data sets to then define is
+929.689,2.57,embedding
+932.94,5.38,point spread out here not also high
+936.7,3.27,dimensional corresponding to different
+938.32,4.26,spectral bands that have been covered
+939.97,6.36,and then the user can select certain
+942.58,5.61,groups that then reflect properties this
+946.33,3.6,is not something we put in it is
+948.19,3.78,something that came out of the embedding
+949.93,3.36,in other words if you select the other
+951.97,4.23,clusters that you see there in this
+953.29,4.56,image it represents clouds ocean because
+956.2,3.9,on a high level while the ground is
+957.85,5.07,ground the clouds are clouds and the sea
+960.1,4.41,you see now if you take only the
+962.92,4.14,mainland you can do the same event
+964.51,5.52,embedding again and you see desert areas
+967.06,4.74,form mountains urban areas and for this
+970.03,3.96,particular case if you continue with the
+971.8,4.14,desert areas you find dry legs and a
+973.99,4.32,particular one off the dry lights that
+975.94,4.23,is the largest one also sticks out so
+978.31,3.6,you can see how you can dive into the
+980.17,3.42,data representation and find what you're
+981.91,6.9,actually looking for it would have been
+983.59,7.53,impossible to find this driving just
+988.81,4.29,tiny in comparison to all the other
+991.12,3.78,information it is there but if you know
+993.1,4.44,what you're looking for these kind of
+994.9,6.03,systems allow you to find the
+997.54,4.89,information you need now finding
+1000.93,3.83,information also means the user is
+1002.43,5.58,integrated in this process so if we also
+1004.76,5.56,looked extensively at tools that would
+1008.01,4.89,allow you to interact with a computer
+1010.32,5.82,that you can see for example gesture
+1012.9,6.24,control that is to modify a 3d object
+1016.14,4.98,here in this case in particular this
+1019.14,3.81,application is funny because seeing that
+1021.12,3.93,you don't touch anything with your hands
+1022.95,4.8,it also means that a surgeon with in
+1025.05,4.95,surgery can stay Sarah they can actually
+1027.75,7.22,interact with medical data set without
+1030.0,4.97,contaminating themselves if you
+1035.99,5.049,construction simplification animation
+1038.579,4.26,there's data display large-scale
+1041.039,3.75,realistic rendering illustrative
+1042.839,3.691,rendering perceptual methods also new
+1044.789,4.02,display technology and data
+1046.53,4.47,visualization and interaction which is
+1048.809,5.161,the main specific visualization visual
+1051.0,5.97,analytics and interaction methods so the
+1053.97,5.28,course is afternoon we're going to cover
+1056.97,3.6,many of these different directions I'm
+1059.25,3.299,going to give you insights and how they
+1060.57,3.69,actually work so that you can then pick
+1062.549,4.051,up the information that you might need
+1064.26,4.11,for your own projects and then also get
+1066.6,5.85,in touch with us if you are further
+1068.37,6.77,interested this thank you very much get
+1072.45,2.69,there no question
+1076.99,3.069,[Music]
+1083.18,3.439,[Music]

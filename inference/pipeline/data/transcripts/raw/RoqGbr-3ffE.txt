@@ -1,0 +1,176 @@
+second,duration,transcript
+3.429,5.711,"This paper presents a synthesis of COMPUTATIONAL
+RATIONALITY as a theory of human-computer"
+9.14,1.199,interaction.
+10.339,5.531,"Our point of departure is the observation
+that interactive behavior is highly adaptive."
+15.87,6.79,"That is, the way we act and think emerges,
+SOMEHOW, as a function of our beliefs, goals,"
+22.66,2.84,"capabilities, and the design."
+25.5,5.67,"Understanding this emergence is the primary
+goal of this theory."
+31.17,3.689,"Computational rationality builds on advances
+in machine learning, where, among others,"
+34.859,6.551,"reinforcement learning has shown tremendous
+success in solving complex interactive tasks."
+41.41,3.86,"In reinforcement learning, an agent tries
+to learn a sequence of actions that maximizes"
+45.27,1.48,its rewards.
+46.75,6.07,"This is very similar to HCI where users' goals
+are often distal and the world subject to"
+52.82,2.66,uncertainty and partial observability.
+55.48,8.53,"However, AI research is not aligned with HCI's
+goal of explaining HUMAN adaptation."
+64.01,8.35,"During the recent years, there has been increasing
+interest in exploiting RL to model HCI tasks."
+72.36,4.55,"Here you see an RL agent from last year's
+CHI."
+76.91,5.8,"It moves its eyes and fingers to type a given
+sentence with a given UI design."
+82.71,3.99,"The model demonstrates very human-like behavior
+in how it monitors."
+86.7,1.151,typing errors and reacts to them.
+87.851,8.479,"The benefit of RL for HCI is that we can change
+the design and a new behavior emerges."
+96.33,5.17,"Here, autocorrection was turned on and the
+agent learned to type in faster and a more"
+101.5,4.409,relaxed way relying on the autocorrection.
+105.909,4.551,"Remarkably, and in a stark contrast to the
+now-popular supervised learning paradigm,"
+110.46,7.32,"in RL, no human data is required for training
+agents."
+117.78,5.7,"In the wake of increasing interest in the
+field of HCI, we have to ask what IS computational"
+123.48,1.249,rationality for HCI?
+124.729,7.43,"That is, what are its core theoretical commitments,
+modeling ideas, and what is the scope of tasks"
+132.159,3.31,that we can model with it?
+135.469,5.041,"Computational rationality originates from
+the theory of reinforcement learning, but"
+140.51,5.17,"in applications in HCI it takes ideas from
+classical cognitive architecture models like"
+145.68,1.529,EPIC and GOMS.
+147.209,5.53,"In particular, it assumes that the agent can
+only access its internal environment, or cognition."
+152.739,6.01,"To model that environment, we can take ideas
+from cognitive architectures, among others."
+158.749,7.24,"We then use RL solvers to approximate boundedly
+optimal policies, which generates predictions"
+165.989,1.62,of human adaption.
+167.609,5.96,"To sum up, the theory assumes that human-like
+adaptive behavior emerges if the the relevant"
+173.569,7.0,"internal and external bounds are correctly
+specified."
+180.569,4.73,"Let's compare this more closely with the familiar
+cognitive architectures paradigm."
+185.299,5.77,"First, while cognitive architecture models
+model cognition as an information processor,"
+191.069,4.52,"in computational rationality the key purpose
+of cognition is to pick actions that are beneficial"
+195.589,1.05,for it.
+196.639,6.8,"While in cognitive architecture models a researcher
+manually specifies a rule set, in computational"
+203.439,7.3,"rationality a policy is obtained via optimization,
+for example via reinforcement learning."
+210.739,5.51,"Both approaches share the idea that behavior
+is limited by cognition."
+216.249,5.57,"However, in cognitive architecture models
+a theory is expressed by a program, or a rule"
+221.819,5.89,"set, while in computational rationality we
+use decision-theoretic formalisms, for example"
+227.709,5.721,"so-called POMDP - or partially observable
+Markov decision process."
+233.43,3.75,The theory makes four key commitments.
+237.18,5.979,"The first is that the user faces a decision
+problem that is stochastic and sequential;"
+243.159,4.871,"in other words, it must pick an action that
+maximizes its future rewards, however this"
+248.03,6.299,"is done under partial observability of the
+world that is stochastic."
+254.329,5.921,"Second, it does not have access to the hard,
+external reality, but only to its own cognitive"
+260.25,1.0,states.
+261.25,4.9,"Third, these states are limited by the bounds
+of human cognition."
+266.15,12.31,"Fourth, the agent's behavior, over time, approximates
+a policy optimized within those bounds."
+278.46,6.91,"If you are familiar with RL from the machine
+learning side, the main difference is the"
+285.37,4.18,internal environment.
+289.55,5.869,"Illustrating this further, in standard RL,
+the agent's policy is constrained by the external"
+295.419,1.0,environment.
+296.419,7.141,"We use RL to find the policy that maximizes
+the agent's subjective payoff."
+303.56,4.759,"By contrast, in computational rationality,
+we are also bounded by the agent's internal"
+308.319,1.201,environment.
+309.52,7.81,"The emergent behaviors can be very different
+between these two approaches."
+317.33,2.309,How are such models created?
+319.639,5.27,"We start modeling by creating a simulated
+environment that contains the user agent in"
+324.909,4.41,"its environment, including the design; for
+example, the eyes and fingers of a typist"
+329.319,4.111,operating on a simulated touchscreen interface.
+333.43,3.81,"Inputs and outputs to that system are processed
+by the internal environment, for example our"
+337.24,8.26,"motor and perceptual systems, which are then
+made available as states for the agent."
+345.5,4.8,"We further need to specify a reward function,
+for example ""maximize speed while minimizing"
+350.3,3.589,"errors""."
+353.889,3.761,"After this, we ask a RL solver to learn a
+policy."
+357.65,5.329,"After training we can simulate the learned
+policy and compute different dependent variables"
+362.979,2.641,that we're interested in.
+365.62,5.74,"For example, in the typing model, we can compute
+trajectories, heatmaps, and summary statistics."
+371.36,6.77,"In that particular paper, the results were
+remarkably close to human data."
+378.13,5.16,"In a stark contrast to AI research, the goal
+here is note to learn agents that are ""superior"
+383.29,6.589,"to humans but to predict their behavior, including
+their imperfections, like the errors they"
+389.879,1.57,make.
+391.449,3.391,But how far are with this type of modeling?
+394.84,5.349,"The paper reviews every paper published on
+the topic so far, 15 altogether."
+400.189,5.341,"They can be divided into six interactive tasks
+ranging from typing to driving and decision-making."
+405.53,8.669,"The paper also talks about an emerging opportunity
+to apply these models to explain human behavior."
+414.199,5.96,"Thanks to the fact that they have fewer number
+of free parameters, they can be fit to realistic"
+420.159,2.56,"human data much better than cognitive architecture
+models."
+422.719,4.961,"This is done via so-called likelihood free
+inference, where we try to find a combination"
+427.68,5.259,"of model parameters that produces as much
+as human-like data as possible."
+432.939,3.26,See the paper for examples.
+436.199,3.65,"Another emerging opportunity concerns design
+and adaptive UIs."
+439.849,4.581,"Here, we can use computational rationality
+to predict how users MIGHT adapt to changes"
+444.43,4.16,caused by a design or an intervention.
+448.59,1.639,See the paper for examples.
+450.229,6.821,"To summarize, HCI has a distinct interest
+toward computational rationality."
+457.05,4.5,"While AI research studies it as a general
+theory of intelligence, and cognitive science"
+461.55,4.769,"as a theory of human intelligence, in HCI
+we are interested in its potential to inform"
+466.319,3.081,the design of better UIs.
+469.4,4.94,"However, to make the approach more broadly
+accessible and relevant, using Ben Shneiderman's"
+474.34,5.74,"term, we need to expand it from micro-HCI
+and macro-HCI."
+480.08,4.19,"In order to touch topics like computed-mediated
+communication, interactive AI, and ubiquitous"
+484.27,4.53,"computing, several outstanding theoretical
+challenges remain, such as how to model human"
+488.8,4.369,"motivation, learning, situations, or social
+interactions."
+493.169,0.891,Thank you for your attention.

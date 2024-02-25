@@ -1,0 +1,134 @@
+second,duration,transcript
+0.08,4.239,we all use smart phones but have you
+2.08,5.52,ever wondered how much data it generates
+4.319,6.4,in the form of texts phone calls emails
+7.6,5.68,photos videos searches and music
+10.719,4.8,approximately 40 exabytes of data gets
+13.28,3.919,generated every month by a single
+15.519,4.401,smartphone user
+17.199,5.361,now imagine this number multiplied by 5
+19.92,5.199,billion smartphone users that's a lot
+22.56,4.799,for our mind even process isn't it in
+25.119,4.08,fact this amount of data is quite a lot
+27.359,4.24,for traditional computing systems to
+29.199,5.841,handle and this massive amount of data
+31.599,5.761,is what we term as big data let's have a
+35.04,5.28,look at the data generated per minute on
+37.36,6.0,the internet 2.1 million snaps are
+40.32,5.36,shared on snapchat 3.8 million search
+43.36,5.679,queries are made on google one million
+45.68,5.719,people log onto facebook 4.5 million
+49.039,6.0,videos are watched on youtube
+51.399,6.921,188 million emails are sent that's a lot
+55.039,5.601,of data so how do you classify any data
+58.32,4.559,as big data this is possible with the
+60.64,3.2,concept of five v's
+62.879,2.24,volume
+63.84,2.48,velocity
+65.119,3.921,variety
+66.32,4.479,veracity and value
+69.04,3.68,let us understand this with an example
+70.799,4.161,from the health care industry
+72.72,5.719,hospitals and clinics across the world
+74.96,6.32,generate massive volumes of data
+78.439,5.161,2314 exabytes of data are collected
+81.28,3.76,annually in the form of patient records
+83.6,3.44,and test results
+85.04,3.84,all this data is generated at a very
+87.04,4.079,high speed which attributes to the
+88.88,5.12,velocity of big data
+91.119,5.36,variety refers to the various data types
+94.0,5.6,such as structured semi-structured and
+96.479,6.64,unstructured data examples include excel
+99.6,5.44,records log files and x-ray images
+103.119,5.201,accuracy and trustworthiness of the
+105.04,5.52,generated data is termed as veracity
+108.32,4.4,analyzing all this data will benefit the
+110.56,5.199,medical sector by enabling faster
+112.72,4.64,disease detection better treatment and
+115.759,4.72,reduced cost
+117.36,5.6,this is known as the value of big data
+120.479,5.201,but how do we store and process this big
+122.96,5.68,data to do this job we have various
+125.68,6.32,frameworks such as cassandra hadoop and
+128.64,5.84,spark let us take hadoop as an example
+132.0,4.0,and see how hadoop stores and processes
+134.48,4.16,big data
+136.0,5.52,hadoop uses a distributed file system
+138.64,5.28,known as hadoop distributed file system
+141.52,4.48,to store big data if you have a huge
+143.92,4.48,file your file will be broken down into
+146.0,4.72,smaller chunks and stored in various
+148.4,4.8,machines not only that when you break
+150.72,4.64,the file you also make copies of it
+153.2,4.319,which goes into different nodes this way
+155.36,4.48,you store your big data in a distributed
+157.519,4.72,way and make sure that even if one
+159.84,4.56,machine fails your data is safe on
+162.239,4.481,another
+164.4,5.68,mapreduce technique is used to process
+166.72,5.04,big data a lengthy task a is broken into
+170.08,2.48,smaller tasks
+171.76,1.6,b
+172.56,1.759,c
+173.36,3.12,and d
+174.319,4.801,now instead of one machine three
+176.48,4.88,machines take up each task and complete
+179.12,4.64,it in a parallel fashion and assemble
+181.36,5.2,the results at the end thanks to this
+183.76,6.8,the processing becomes easy and fast
+186.56,5.759,this is known as parallel processing
+190.56,4.24,now that we have stored and processed
+192.319,4.56,our big data we can analyze this data
+194.8,5.04,for numerous applications
+196.879,5.521,in games like halo 3 and call of duty
+199.84,4.56,designers analyze user data to
+202.4,5.759,understand at which stage most of the
+204.4,5.44,users pause restart or quit playing this
+208.159,3.761,insight can help them rework on the
+209.84,3.6,story line of the game and improve the
+211.92,3.679,user experience
+213.44,3.359,which in turn reduces the customer churn
+215.599,3.521,rate
+216.799,4.321,similarly big data also helped with
+219.12,4.56,disaster management during hurricane
+221.12,4.32,sandy in 2012. it was used to gain a
+223.68,4.16,better understanding of the storm's
+225.44,4.719,effect on the east coast of the u.s and
+227.84,4.319,necessary measures were taken it could
+230.159,4.16,predict the hurricane's landfall five
+232.159,3.201,days in advance which wasn't possible
+234.319,2.801,earlier
+235.36,4.4,these are some of the clear indications
+237.12,5.6,of how valuable big data can be once it
+239.76,5.039,is accurately processed and analyzed
+242.72,4.079,so here's a question for you which of
+244.799,4.16,the following statements is not correct
+246.799,3.681,about hadoop distributed file system
+248.959,5.521,hdfs
+250.48,4.8,a hdfs is the storage layer of hadoop
+254.48,3.039,b
+255.28,4.079,data gets stored in a distributed manner
+257.519,2.641,in hdfs
+259.359,3.441,c
+260.16,3.759,hdfs performs parallel processing of
+262.8,1.92,data
+263.919,2.72,d
+264.72,4.8,smaller chunks of data are stored on
+266.639,4.56,multiple data nodes in hdfs
+269.52,4.08,give it a thought and leave your answers
+271.199,4.321,in the comment section below three lucky
+273.6,4.0,winners will receive amazon gift
+275.52,4.08,vouchers now that you have learned what
+277.6,4.319,big data is what do you think will be
+279.6,4.159,the most significant impact of big data
+281.919,4.481,in the future let us know in the
+283.759,4.961,comments below if you enjoyed this video
+286.4,4.72,it would only take a few seconds to like
+288.72,4.16,and share it also to subscribe to our
+291.12,4.0,channel if you haven't yet and hit the
+292.88,4.879,bell icon to get instant notifications
+295.12,5.88,about our new content stay tuned and
+297.759,3.241,keep learning
+304.33,3.06,[Music]
+311.44,2.08,you

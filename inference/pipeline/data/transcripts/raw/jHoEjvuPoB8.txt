@@ -1,0 +1,246 @@
+second,duration,transcript
+0.859,5.881,"Here, inside this refrigerator, at a temperature
+just a tick above absolute zero, isolated"
+6.74,5.059,"from the rest of the universe...
+...is a quantum computer."
+11.799,5.171,"If you believe the hype, this nascent technology
+embodies the promise of the future, and has"
+16.97,4.55,"the potential to revolutionize our lives with
+its turbo-charged computation."
+21.52,5.36,"But quantum computers aren’t the next generation
+of supercomputers—they’re something else"
+26.88,1.6,entirely.
+28.48,4.84,"And before we can even begin to talk about
+their potential applications, we need to understand"
+33.32,4.22,"the fundamental physics that drives the theory
+of quantum computing."
+37.54,7.29,"We’ll need to dive into another dimension,
+smaller and more alien than anything we intuitively"
+44.83,5.409,"understand: the subatomic world of quantum
+mechanics."
+50.239,7.181,"Feynman’s Idea
+In the 1980s, one of the most important physicists"
+57.42,3.84,of the 20th century encountered a major roadblock.
+61.26,3.52,"Richard Feynman was hungry for a window into
+the quantum universe."
+64.78,6.08,"But quantum systems, by nature, are fragile,
+and the information they hold hides from us."
+70.86,6.93,"Because Feynman couldn’t directly observe
+quantum events, he wanted to design a simulation."
+77.79,3.64,"It quickly became clear that his computer
+wasn’t up to the task."
+81.43,4.979,"As he added particles to the quantum systems
+he was modeling, the cost of computation began"
+86.409,1.631,to rise exponentially.
+88.04,5.02,"Feynman concluded that classical
+computers just can't scale up fast enough"
+93.06,4.95,"to keep pace with the growing complexity of
+quantum calculations."
+98.01,2.19,Then he had a breakthrough.
+100.2,4.05,"What if he could design a tool made up of
+quantum elements itself?"
+104.25,4.0,"This instrument would operate according to
+the laws of quantum physics, making it the"
+108.25,4.03,"perfect way to probe the mysteries of the
+quantum realm."
+112.28,3.03,The idea of the quantum computer was born.
+115.31,4.34,"And by dreaming it up, Feynman had started
+to build a bridge between quantum physics"
+119.65,2.85,and computer science.
+122.5,4.2,"To understand how quantum computing works,
+it’s essential to start by understanding"
+126.7,2.699,what makes it quantum in the first place.
+129.399,4.301,"This means that we need to talk about what’s
+at the heart of quantum physics: a concept"
+133.7,3.42,called amplitudes.
+137.12,18.73,"Here’s what the classical rules of probability
+tell us about getting tails if we toss a coin"
+155.85,1.88,20 times.
+157.73,5.03,"We add up the probabilities for all the possible
+outcomes resulting in tails."
+162.76,2.14,That’s just common sense.
+164.9,3.72,"But common sense doesn’t govern the quantum
+universe."
+168.62,4.46,"Before you measure a subatomic particle, you
+can think about it as a wave of probability"
+173.08,5.269,"that exists in a kind of black box—a quantum
+system with many different chances of being"
+178.349,1.071,in many different places.
+179.42,1.29,"Quantum mechanics, at its core, is a change
+to the rules of probability."
+180.71,1.38,"(02:05) This is also where the power of quantum
+computing comes from—from these different"
+182.09,2.38,"rules of probability than the ones that we
+are used to.Amplitudes are closely related"
+184.47,1.42,to probabilities.
+185.89,1.67,But they're not probabilities.
+187.56,5.05,"A key difference is probability is always
+a number from zero to one."
+192.61,2.97,But amplitudes are complex numbers.
+195.58,2.32,"And what this means is that they obey different
+rules."
+197.9,5.949,"So, if I want to know the total amplitude
+for something to happen, I have to add up"
+203.849,3.741,"the amplitudes for all the different ways
+that it could have happened."
+207.59,4.89,"But when I add up amplitudes, I see something
+new, which is that a particle might reach"
+212.48,6.369,"a certain place one way with a positive amplitude
+and another way with a negative amplitude."
+218.849,5.761,"And if that happens, then those two amplitudes
+can cancel each other out so that the total"
+224.61,4.519,"amplitude would be zero, and that would mean
+that that thing would never happen at all."
+229.129,1.0,"So the amplitudes are connected to the probability
+that you actually see something when you look"
+230.129,1.0,there.
+231.129,3.851,"This is sort of the central thing that quantum
+mechanics says about the world: that the way"
+234.98,5.46,"that you describe a physical system is by
+a list of amplitudes."
+240.44,6.39,"And the way that a physical system changes
+over time is by a linear transformation of"
+246.83,1.59,"these amplitudes—by some change to these
+amplitudes."
+248.42,7.289,"But how can quantum computers use amplitudes
+to store and manipulate information quantumly?"
+255.709,1.17,This is a qubit.
+256.879,3.79,"It’s the basic computational unit in quantum
+computing."
+260.669,4.43,"Qubits are like bits in a classical computer,
+but with a crucial difference."
+265.099,5.79,"A bit is binary—it stores information in
+strings of binary digits that can only be"
+270.889,1.74,0 or 1.
+272.629,6.521,"But qubits are made of subatomic particles,
+so they operate according to subatomic logic."
+279.15,5.81,"Qubits can be 0, 1, or what we call a linear
+combination of 0 and 1."
+284.96,4.959,"This fluid combination of amplitudes is at
+the core of quantum computing."
+289.919,4.691,"Before you measure a qubit, it exists in a
+state called superposition."
+294.61,4.54,"You can think about it as a quantum version
+of a probability distribution, where each"
+299.15,5.629,"qubit has some amplitude for being 0, and
+some amplitude for being 1."
+304.779,6.47,"Superposition is the reason that quantum computers
+can store and manipulate vast amounts of data"
+311.249,2.22,compared to classical computers.
+313.469,3.85,"When two or more qubits are in this closed
+state of superposition, they relate to one"
+317.319,3.261,another through the phenomenon of entanglement.
+320.58,14.28,"This means that their final outcomes, when
+we measure them, are mathematically related."
+334.86,6.309,"Quantum entanglement is the word we use for
+the characteristic correlations among parts"
+341.169,6.191,"of a quantum system, which are different from
+the correlations that we normally encounter"
+347.36,4.45,"in the classical world, in ordinary experience."
+351.81,2.309,You could think of it as like a book.
+354.119,4.27,"When you look at the pages one at a time,
+you don't see any information—you just see"
+358.389,5.31,"random gibberish because the information isn't
+encoded in the individual pages, but in the"
+363.699,1.411,correlations among them.
+365.11,5.85,"And to read the book, you have to collectively
+observe many pages at once."
+370.96,8.269,"But if you want to describe very highly entangled
+states using ordinary bits, it's extremely"
+379.229,1.06,expensive.
+380.289,3.02,"Imagine that you had a primitive 10-qubit
+computer."
+383.309,2.89,It could store 2^10 values in parallel.
+386.199,5.661,"To describe this entangled configuration with
+a classical computer, you’d need 16 kilobytes,"
+391.86,2.579,or 16 thousand bits.
+394.439,5.391,"Expand to a system with 500 entangled qubits,
+and you now require more classical bits than"
+399.83,2.54,there are atoms in the known universe.
+402.37,3.96,"This is exactly what Feynman meant when he
+said that classical computers weren’t scalable"
+406.33,3.209,for simulating quantum mechanics.
+409.539,4.481,"For a quantum computer to be of any use, you
+need to measure information from the qubits"
+414.02,1.929,to get an output.
+415.949,5.171,"The problem is, when a quantum system is measured,
+it collapses into a classical state."
+421.12,1.0,"If you look at a qubit, let's say to ask it
+whether it's zero or one, then you collapse"
+422.12,1.0,"its state, right?"
+423.12,1.0,"You force it to decide whether to be a zero
+or one."
+424.12,4.449,"Anything carries away information about whether
+that qubit is zero or one—so for example,"
+428.569,5.671,"if that information gets recorded in some
+radiation that's escaping from the quantum"
+434.24,6.561,"computer, then the effect on the qubit will
+be exactly as if someone had measured it to"
+440.801,1.0,see whether it was 0 or 1.
+441.801,1.0,"When you look at the system, then the amplitudes
+become probabilities."
+442.801,2.798,"To extract an answer from the quantum system
+that isn’t just a random outcome of probability,"
+445.599,3.0,"like the flip of a coin, we have to use interference."
+448.599,4.91,"Interference can be seen in classical physics
+… when waves in a pool hit each other, and"
+453.509,5.43,"one wave is above the surface, and the other
+wave is below the surface, and they cancel"
+458.939,2.1,each other.
+461.039,3.92,"Interference is just what amplitudes do when
+you add them up."
+464.959,4.97,"… If something can happen one way with an
+amplitude of a half and another way with an"
+469.929,5.2,"amplitude of minus a half, then the total
+amplitude for it to happen would be zero."
+475.129,2.65,"This is what you do in the famous double slit
+experiment."
+477.779,5.651,"You close one of the paths, and then you see
+that now the thing that previously never happened,"
+483.43,1.699,can happen.
+485.129,2.43,This is a quantum algorithm.
+487.559,6.031,"Scientists can harness interference by creating
+a deterministic sequence of qubit gates."
+493.59,2.62,"These qubit gates cause the amplitudes to
+add up constructively."
+496.21,1.0,"This means that they’re mathematically guaranteed
+to boost the probability of seeing one of"
+497.21,1.0,the right answers.
+498.21,1.0,This is a quantum algorithm.
+499.21,1.0,"Scientists can harness interference by creating
+a deterministic sequence of qubit gates."
+500.21,1.0,"These qubit gates cause the amplitudes to
+add up constructively."
+501.21,2.169,"This means that they’re mathematically guaranteed
+to boost the probability of seeing one of"
+503.379,1.21,the right answers.
+504.589,7.0,"You might ask, how could you possibly concentrate
+all this on the right answer when you yourself"
+511.589,3.851,"don't know in advance which answer is the
+right one?"
+515.44,7.709,"This is exactly why designing quantum algorithms
+is so difficult and why we have a whole field"
+523.149,3.18,that's been studying it for decades.
+526.329,6.481,"Since 1994, there have been a few major breakthroughs
+in quantum algorithms, with theoretical applications"
+532.81,4.25,"in fields such as cybersecurity and search
+optimization."
+537.06,4.949,"But according to most experts in the field,
+quantum computers are most likely to be useful"
+542.009,4.89,"for what they were born to do—when a curious
+physicist wondered about the deep structure"
+546.899,1.101,of our world.
+548.0,4.879,"I find quantum computing exciting as a way
+to explore physics."
+552.879,4.701,"Now, whether that's going to make anybody
+any money—whether there'll be practical"
+557.58,4.1,"applications in the near-term—that's still
+very much an open question."
+561.68,2.35,"But at least for physicists, it's an exciting
+time."
+564.03,5.74,"The truth is... that the most important application,
+I believe, of quantum computers is something"
+569.77,1.249,that we don't know yet.
+571.019,5.301,"I'm sure that once we have a quantum computer
+to play with, we'll find amazing applications"
+576.32,18.46,that we can't yet foresee.

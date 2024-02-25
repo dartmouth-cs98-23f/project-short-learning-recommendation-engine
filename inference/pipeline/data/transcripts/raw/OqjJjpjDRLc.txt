@@ -1,0 +1,235 @@
+second,duration,transcript
+0.06,1.979,I've got a pop quiz for you.
+2.04,2.189,What database system has been around
+4.23,3.149,for almost 50 years?
+7.38,1.559,I guess you can guessed it by the
+8.94,1.559,topic of this video.
+10.5,2.369,It's a relational database.
+12.87,1.0,"Hello, my name is Jamil Spain,"
+14.97,1.919,Developer Advocate with the IBM
+16.89,1.649,Cloud and Brand Technical
+18.54,1.559,Specialists in the U.S.
+20.1,1.979,Financial Services market.
+22.08,1.589,"And today's talk, we're going to"
+23.67,2.249,dive a little bit into relational
+25.92,0.869,databases.
+26.79,0.989,I'm going to get into some of the
+27.78,2.189,characteristics of the database
+29.97,2.129,model and also some benefits
+32.1,2.159,that it provides for you when making
+34.26,1.739,your decision that you want to use
+36.0,2.249,this for your next project
+38.25,0.959,to get started.
+39.21,1.889,Let's talk about the structure
+41.1,1.889,of a relational database
+42.99,1.049,system.
+44.04,2.159,It's going to pretty much map
+46.2,2.279,out your data points
+48.48,1.889,and bring out the relationships
+50.37,1.379,in that. And the way that it
+51.75,1.769,accomplishes that is through.
+53.52,2.039,"The first thing is making tables,"
+55.56,2.369,which represents particular
+57.93,1.979,items or nouns or particular
+59.91,1.829,entities of your particular
+61.74,1.769,system that you want to actually
+63.51,1.829,prototype. So let's say I
+65.34,1.02,have a bunch of books.
+69.33,2.219,Now this is going to be a table.
+71.55,2.129,It accomplishes the attributes
+73.68,2.969,of these books by having columns
+76.65,1.529,and columns will be things like
+78.18,1.0,name.
+81.52,1.0,Date.
+83.85,1.2,"OK, maybe author."
+86.63,1.349,"Of course, got to have a author for"
+87.98,1.56,a book and every.
+90.61,2.159,"Table is going to have an ID, feel"
+92.77,2.129,some way to uniquely identify
+94.9,2.309,it. Each each row
+97.21,1.0,of this.
+99.37,1.919,Database table represents an
+101.29,1.839,"actual record or an item,"
+103.13,1.159,a type of book.
+104.29,2.399,That's how it really fulfills
+106.69,1.979,that ability to hold the database
+108.67,1.0,system there.
+111.76,1.919,"And then as you wait, you"
+113.68,2.279,kind of query out this particular
+115.96,3.029,system is through what we call a
+118.99,2.219,you will a structured query
+121.21,1.409,language.
+122.62,1.379,"And it's a particular system, you"
+124.0,1.469,can say select.
+127.33,1.289,All the books.
+132.01,2.129,And give me all this data out
+134.14,1.559,for me to use.
+135.7,2.219,Now we have one particular item
+137.92,1.889,"here books, but where it really"
+139.81,1.619,"comes, you really see the power of a"
+141.43,1.409,relational database.
+142.84,2.249,Let's say now I want to
+145.09,1.169,show the authors.
+150.25,1.229,And the way that relational
+151.48,2.129,databases can really provide
+153.61,1.589,the structure of relating these two
+155.2,1.979,entities together is by
+157.18,2.009,describing them through a
+159.19,2.339,particular entity or relationships.
+161.53,1.589,You have one that you're here about
+163.12,2.069,where books can have multiple
+165.19,1.589,"authors, so maybe a one."
+167.8,1.619,To many.
+171.58,1.949,You can have a one
+173.53,1.139,to one.
+175.86,1.619,And just a couple of relationships
+177.48,2.009,you can you can kind of mirror
+179.49,1.859,"within the database system, so one"
+181.35,1.839,way that I can have this kind of a
+183.19,2.359,normalized structure is to say
+185.55,1.829,definitely the authors
+187.38,1.0,is going to have.
+189.39,2.069,Its own particular ID
+191.46,2.069,"and name any, any any"
+193.53,1.679,any particular order of attributes
+195.21,2.249,"that I want to describe there,"
+197.46,2.249,but I can also one of these fields
+199.71,2.579,can be an actual number
+202.29,1.89,that actually relates to the ID.
+206.4,1.319,"Of this feel, and this is what's"
+207.72,1.409,known as a foreign key.
+210.45,1.229,"And of course, there will be a name"
+211.68,1.649,"there, so when I do my query, the"
+213.33,2.009,"next query I do, I"
+215.34,1.889,can reference both these tables
+217.23,2.249,"and say, Hey, give me all the books"
+219.48,1.379,and give me more of the author
+220.86,2.309,information from this table using
+223.17,1.859,this foreign key to
+225.03,2.159,describe that particular structure
+227.19,0.899,there.
+228.09,1.349,And you can imagine you'll be
+229.44,1.439,running a lot of these queries a
+230.88,2.099,"lot, and there are some benefits"
+232.98,1.439,or some things that are provided to
+234.42,1.859,help with those to speed
+236.28,1.949,up these queries and make them
+238.23,2.729,operate as efficiently as possible.
+240.96,1.529,You have the database will provide
+242.49,1.289,ways that you can kind of set an
+243.78,1.889,index. Let's say that I'm often
+245.67,1.949,querying and always trying to pull
+247.62,1.829,out by name or by date.
+249.45,1.38,I can set an index.
+252.2,1.919,"On this particular column,"
+254.12,2.069,which will automatically index all
+256.19,1.739,"the values, so the next time you"
+257.93,1.619,"run, this query is going to pull"
+259.55,2.009,from what we like to call this cache
+261.56,1.469,of all the values.
+263.03,1.829,"Most importantly, every"
+264.86,2.939,"time new roles are added,"
+267.8,2.249,records are added to this particular
+270.05,2.339,table. The index keeps building
+272.39,1.829,"this recent, I like to say,"
+274.22,1.709,"cache of all these values, so it's"
+275.93,2.069,always keeping up to date
+278.0,1.289,to work there.
+279.29,1.709,So this is all the characteristics
+281.0,2.039,of what you kind of have to model
+283.04,1.949,out your particular
+284.99,1.469,application that you want to build
+286.46,1.919,and describe how the entities
+288.38,2.099,are related to each other.
+290.48,1.469,Now let's switch over here to some
+291.95,1.619,of the benefits that you're going to
+293.57,1.929,get out of the box with
+295.5,1.699,a relational database
+298.31,1.149,that you want to use.
+299.46,1.819,The first we'll talk about
+301.28,2.249,is actual
+303.53,1.0,consistency.
+310.08,1.649,"Now, this is useful because let's"
+311.73,1.529,say there is some point where I want
+313.26,1.439,to run multiple of these
+314.7,0.899,transactions.
+315.6,1.619,Let's say I'm modeling an inventory
+317.22,1.559,system for an E commerce
+318.78,2.069,"application, and I have the need"
+320.85,1.949,to write several
+322.8,2.009,queries in a row that may
+324.81,1.829,manage a couple of
+326.64,1.499,different subsystems.
+328.14,2.339,"But if one of those queries fails,"
+330.48,2.009,I want the option to be able
+332.49,2.099,to roll back.
+336.97,1.889,The whole set of all
+338.86,1.229,"those queries, just to make sure"
+340.09,2.639,that my data always maintains
+342.73,1.949,some consistency there.
+344.68,1.949,The second is the option
+346.63,3.909,to do stored procedures.
+350.54,1.979,Sounds like a very complicated
+352.52,1.079,word there.
+353.6,2.429,But think of store procedures as
+356.03,2.159,the ability to write multiple blocks
+358.19,1.979,"or functions of code,"
+360.17,1.139,or if there are a certain amount of
+361.31,1.739,queries that I continue to always
+363.05,2.189,"run, I can kind of model"
+365.24,1.859,these. So it takes me less
+367.1,1.769,code to write that particular
+370.19,1.769,to access that same functionality
+371.96,1.409,with less SQL code.
+373.37,1.919,And as you start to get into more
+375.29,2.309,SQL writing with
+377.6,2.039,"relational databases, you'll see"
+379.64,1.829,queries can get pretty big.
+381.47,1.859,Another way
+383.33,1.409,"you can do this, as well as another"
+384.74,1.739,topic code views here.
+386.48,1.169,Definitely want to introduce some of
+387.65,1.889,these keywords as you do your deeper
+389.54,1.859,dove. You were able to see a lot
+391.4,1.979,of these and it'd be familiar
+393.38,0.809,to you.
+394.19,2.729,And the last one is a mechanism
+396.92,1.859,to handle locking
+398.78,1.0,in the database.
+401.33,1.14,And concurrency.
+405.84,1.439,Why is that important?
+410.51,1.919,"Well, at some"
+412.43,1.949,point multiple users are going
+414.38,1.619,"to want to use the database, maybe"
+416.0,1.709,"at the same time, maybe two"
+417.71,1.439,applications are going to be adding
+419.15,0.899,in books.
+420.05,2.099,And if the first application
+422.15,1.889,is making a particular
+424.04,1.589,insert into this table.
+426.63,1.199,You're going to want to make sure
+427.83,2.009,that the database is locked until
+429.84,1.829,that right is done and then
+431.67,2.009,the second application has its
+433.68,1.859,ability to go in and make its insert
+435.54,0.809,as well.
+436.35,2.489,So these are all built into
+438.84,1.679,a lot of the relational databases
+440.52,0.959,that you use.
+441.48,1.679,A lot of these benefits will be
+443.16,1.829,"provided for you out of the box, not"
+444.99,2.189,necessarily something you'll have to
+447.18,1.949,"write in code, but just know"
+449.13,2.489,that you'll have this at top of mind
+451.62,2.219,when you are kind of selecting
+453.84,1.739,to use a relational database for
+455.58,1.709,your next project.
+457.29,1.289,I hope this is good for you to
+458.58,1.889,understand the foundation of
+460.47,1.919,relational databases.
+462.39,1.829,Talk to you next time.
+464.22,1.799,"If you have questions, please drop"
+466.02,1.469,us a line below.
+467.49,2.249,And if you want to see more videos
+469.74,1.979,"like this in the future, please"
+471.72,1.0,like and subscribe.

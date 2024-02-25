@@ -1,0 +1,56 @@
+{
+  "introduction": "In this video, we will explore the differences between the vanilla transformer and the architecture of mistral, a new language model from mistral AI. We will discuss the sliding window attention, the kv cache, the sparse mixture of experts model, and the code innovations in mistral. The video assumes a basic understanding of the transformer model and the attention mechanism.",
+  "sections": [
+    {
+      "title": "Section 1: Architecture Differences",
+      "content": [
+        "Mistral is a decoder-only model, similar to LLama but with some differences.",
+        "Mistral uses sliding window attention instead of group query attention.",
+        "Mistral has a rolling buffer kv cache for inferencing.",
+        "Mistral has a sparse mixture of experts model with experts in parallel."
+      ],
+      "topics": ["Mistral Architecture", "Sliding Window Attention", "KV Cache", "Sparse Mixture of Experts Model"]
+    },
+    {
+      "title": "Section 2: Model Parameters",
+      "content": [
+        "Mistral 7b and Mistral 8x7b are the two models discussed in the video.",
+        "The parameter dim indicates the dimension of the embedding vector.",
+        "Mistral has 32 encoder layers with a head dimension of 32 and a hidden dimension of 14336.",
+        "The number of heads of attention for the query is 32, while the number of heads for the k and v is 8."
+      ],
+      "topics": ["Mistral Models", "Parameter Dimension", "Encoder Layers", "Head Dimension", "Hidden Dimension", "Number of Heads"]
+    },
+    {
+      "title": "Section 3: Code Innovations",
+      "content": [
+        "Mistral uses the ceu function for the feed forward layer instead of the reu or zigo functions.",
+        "Mistral has one feed forward network in parallel with experts in the sparse mixture of experts model.",
+        "Mistral has a transformer block (encoder or decoder block) with a multi-head tension, od, norm, feed forward, and other norm.",
+        "Mistral uses a rolling buffer kv cache for inferencing."
+      ],
+      "topics": ["Feed Forward Layer", "Sparse Mixture of Experts Model", "Transformer Block", "KV Cache"]
+    },
+    {
+      "title": "Section 4: Comparison of Models",
+      "content": [
+        "Mistral 7b and Mistral 8x7b are compared based on their parameters.",
+        "Mistral 7b has 32 encoder layers with a head dimension of 32 and a hidden dimension of 14336.",
+        "Mistral 8x7b has 32 encoder layers with a head dimension of 32 and a hidden dimension of 14336.",
+        "Mistral 8x7b has one feed forward network in parallel with experts in the sparse mixture of experts model."
+      ],
+      "topics": ["Model Comparison", "Mistral 7b", "Mistral 8x7b"]
+    },
+    {
+      "title": "Section 5: General Topics",
+      "content": [
+        "The video covers topics related to transformer models and attention mechanisms.",
+        "Mistral uses a sliding window attention mechanism instead of group query attention.",
+        "Mistral has a sparse mixture of experts model with experts in parallel.",
+        "Mistral uses a rolling buffer kv cache for inferencing."
+      ],
+      "topics": ["Transformer Models", "Attention Mechanisms", "Sliding Window Attention", "Sparse Mixture of Experts Model", "KV Cache"]
+    }
+  ],
+  "topics": ["Mistral Architecture", "Sliding Window Attention", "KV Cache", "Sparse Mixture of Experts Model", "Feed Forward Layer", "Transformer Block", "Model Comparison", "Transformer Models", "Attention Mechanisms", "Sliding Window Attention", "Sparse Mixture of Experts Model", "KV Cache"],
+  "general

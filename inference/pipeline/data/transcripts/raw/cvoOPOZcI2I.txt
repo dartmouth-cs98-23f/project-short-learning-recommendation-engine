@@ -1,0 +1,137 @@
+second,duration,transcript
+2.399,5.36,hi everyone
+4.88,3.44,today i came up with uh data structures
+7.759,3.84,session
+8.32,4.319,uh session three in this session we can
+11.599,3.12,discuss about
+12.639,4.4,the graphs graph theory of data
+14.719,7.121,structure which is more important
+17.039,7.281,even for jobs okay so let me go to
+21.84,3.359,next slide yeah so let us see what is
+24.32,4.56,graph
+25.199,6.48,a graph is a combination of
+28.88,3.76,vectors and edges consists of a finite
+31.679,4.241,non-empty set
+32.64,5.599,of vertices the finite set of
+35.92,3.76,edges which connects pair of vertices so
+38.239,4.0,suppose in this graph
+39.68,3.52,one two three four five six so these
+42.239,3.921,circles are
+43.2,4.879,vertices and the lines which are
+46.16,6.16,connecting uh these circles
+48.079,6.0,are called edges so we see here v means
+52.32,3.759,vertices one two three four five are the
+54.079,5.28,vectors and edges are
+56.079,7.601,one one four and 4 2
+59.359,7.44,and 2 5 3 5 and 4 5 so these are all
+63.68,5.36,edges okay so a graph
+66.799,3.121,consists of a finite non empty set of
+69.04,3.28,vertices
+69.92,5.12,and a finite set of edges which connects
+72.32,5.119,pair of vertices
+75.04,4.32,okay now let us understand some
+77.439,3.68,terminologies like what is multi graph
+79.36,4.72,what is directed graph
+81.119,5.281,okay multi graph is a graph which
+84.08,5.359,consists of a set of vertices and edges
+86.4,4.399,and it just may contain multiple edges
+89.439,4.0,that is it just
+90.799,4.96,containing same pair of vertices or self
+93.439,2.32,edges
+96.159,4.0,so multi graph it contains multiple it i
+99.04,3.759,mean it's one here
+100.159,4.64,this can contain multiple edges okay it
+102.799,5.761,is containing same pair of vertices
+104.799,5.521,or selfies directly
+108.56,3.519,so what is directed roughly directed
+110.32,4.799,graph is one
+112.079,3.68,in which uh each edge is an ordered pair
+115.119,4.081,of
+115.759,6.72,vertices so if you look at below a graph
+119.2,4.16,uh see here from two to one the arrow is
+122.479,2.801,towards one
+123.36,4.16,so that means this is a directed track
+125.28,5.759,here it is showing this edge is showing
+127.52,5.68,a direction for the edge okay so from
+131.039,4.641,two to one we can go but from one to two
+133.2,5.36,here there is no uh direction so that
+135.68,6.16,means we we can't go from one to two
+138.56,5.6,okay so in directed graph this
+141.84,3.6,one ah one two two is not equals to two
+144.16,4.799,to one
+145.44,5.2,okay because uh we have direction uh
+148.959,3.36,towards only one direction suppose in
+150.64,4.16,the undirected draft
+152.319,3.681,uh this is equal so p1 and v2 both are
+154.8,4.24,equal so v 1
+156.0,4.72,v 2 or v 2 v 1 both are same
+159.04,4.72,but in directed rap it is different
+160.72,5.599,because we depends on direction
+163.76,3.92,okay let us go through let us see what
+166.319,3.441,is undirected of
+167.68,4.08,a graph whose definition makes a
+169.76,2.64,reference to unordered pairs of vertices
+171.76,3.839,that is
+172.4,4.24,v1 or v2 so here if you look at the
+175.599,4.0,diagram in
+176.64,5.12,directed graph so it was showing some
+179.599,3.681,arrow symbol here but here in undirected
+181.76,4.08,graph there is no arrow symbol
+183.28,3.84,or no direction we can check okay so
+185.84,3.679,that is called undirection
+187.12,4.16,i mean undirected graph so in undirected
+189.519,6.561,graph one two four is
+191.28,4.8,uh same as four to one okay
+197.44,3.36,yeah so what is degree of a vectors so
+199.68,3.199,degree of a vector
+200.8,3.28,is number of edges which are connecting
+202.879,4.08,to uh
+204.08,3.519,a number of edges which are connecting a
+206.959,2.321,vertex
+207.599,3.601,so in case of directed graphs and number
+209.28,3.92,of videos are going to a node
+211.2,3.92,is known as degree of corresponding node
+213.2,3.84,and number which is coming out of a node
+215.12,4.88,is known as out degree of
+217.04,3.52,corresponding node so degree suppose let
+220.0,3.599,us take
+220.56,4.8,let us see a is a vertex and va is
+223.599,3.28,being connected with two adjust that
+225.36,5.04,means degree of a is
+226.879,6.161,two okay for b also b is connecting
+230.4,3.919,by two edges so that means degree of
+233.04,4.88,this
+234.319,5.361,undirected vertex b is two
+237.92,3.2,so similarly for if you look at the
+239.68,4.559,second graph
+241.12,4.64,so p ah p has three edges so this one
+244.239,4.64,this one and this one that means p
+245.76,4.88,degree degree of p is three
+248.879,3.36,okay for all other vertices but in
+250.64,5.04,directed graph
+252.239,7.041,as it shows a direction uh
+255.68,5.2,uh as it shows direction so we have two
+259.28,3.199,two types of terminologies one is in
+260.88,4.64,degree and one is out degree
+262.479,3.681,so any edges coming to a particular
+265.52,4.239,matrix
+266.16,6.24,uh with text is called in degree any uh
+269.759,4.88,any edge which is going from current
+272.4,5.12,current vertex is called out degree of
+274.639,2.881,the current matrix
+278.479,4.801,yeah so complete graphs in undirected
+281.12,4.639,draft with n vertices and the nc2
+283.28,4.72,address is said to be complete
+285.759,3.44,the complete graph is under your draft
+288.0,5.759,with n vertices and
+289.199,8.641,nc to n2c2 edges
+293.759,4.081,is said to be complete
+302.32,5.12,see this is uh this one edge should
+305.919,3.12,should be connected to all other ridges
+307.44,4.479,in the graph suppose
+309.039,3.761,this this one so this is p e has
+311.919,4.161,connection to
+312.8,4.56,q or s all three so similarly q also has
+316.08,2.88,connection to all three
+317.36,8.24,other vertices so that is called
+318.96,6.64,complete graph

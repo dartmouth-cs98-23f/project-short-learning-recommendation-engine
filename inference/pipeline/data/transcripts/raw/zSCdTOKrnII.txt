@@ -1,0 +1,902 @@
+second,duration,transcript
+1.02,3.299,what is going on guys welcome back in
+3.12,3.779,this video today we're going to learn
+4.319,4.86,how to do parallel Computing using Cuda
+6.899,4.681,which is nvidia's parallel Computing
+9.179,4.821,platform and toolkit so let us get right
+11.58,2.42,into it
+16.1,3.309,[Music]
+21.359,3.721,alright so Cuda is as I already
+23.1,4.14,mentioned nvidia's parallel Computing
+25.08,3.42,platform and it is super important in
+27.24,3.06,machine learning because in machine
+28.5,3.72,learning a lot of the tasks are actually
+30.3,4.259,just linear algebra Matrix
+32.22,5.16,multiplications Matrix operations Vector
+34.559,5.461,operations things like that and Cuda is
+37.38,3.9,optimized for exactly that and in this
+40.02,2.96,video today I want to show you how it
+41.28,4.56,works I want to give you a very simple
+42.98,4.66,uh introduction example of a
+45.84,3.42,parallelized Hello World which is not
+47.64,3.36,very useful but you can see how it
+49.26,3.18,basically works and then we're going to
+51.0,4.26,implement something more advanced which
+52.44,5.82,is a matrix Vector multiplication first
+55.26,5.16,in core c and then in Cuda to see the
+58.26,3.6,performance difference there now to get
+60.42,3.54,started what you need is you need to
+61.86,4.86,have Cuda and the Cuda toolkit installed
+63.96,5.46,on your system the easiest way to do
+66.72,4.8,that is to just follow the instructions
+69.42,4.98,here in the documentation so you have
+71.52,4.8,instructions for Linux you have
+74.4,3.899,instructions for Windows and probably
+76.32,3.839,also for Mac you will hopefully find all
+78.299,3.0,three of them in the description down
+80.159,3.78,below so you can just follow the
+81.299,4.621,installation here I think though on
+83.939,5.04,Linux it's quite simple at least if you
+85.92,4.68,have the basic NVIDIA drivers installed
+88.979,3.481,and of course you need to have an Nvidia
+90.6,4.92,GPU for that you cannot do this with an
+92.46,6.119,AMD GPU but I think if I just run this
+95.52,5.099,command here I should be able to see
+98.579,4.141,where I'm running the compiler from yeah
+100.619,4.021,Nvidia Cuda toolkit so this is what you
+102.72,3.48,have to install but if you want to make
+104.64,3.119,sure everything works correctly just
+106.2,3.599,follow the installation instructions
+107.759,4.921,here now I need to mention that this
+109.799,5.761,video is going to be quite advanced in
+112.68,4.799,terms of it requires you to already have
+115.56,3.019,some C knowledge it requires you to
+117.479,3.78,already
+118.579,4.421,no basic programming concept so this is
+121.259,4.801,not an introduction video for someone
+123.0,5.399,who is never coded in C never coded in C
+126.06,3.899,plus plus or anything like that if you
+128.399,3.781,only know python you can still watch
+129.959,4.801,this to get some inspiration to see how
+132.18,4.5,it works but don't expect to to
+134.76,3.9,understand everything here because I'm
+136.68,4.68,going to just use Concepts or apply
+138.66,4.68,Concepts like malloc so allocation of
+141.36,4.68,memory freeing memory and stuff like
+143.34,4.5,that without explaining how it works and
+146.04,4.86,why it needs to be done
+147.84,4.619,so once you have everything set up we're
+150.9,3.96,going to go into the directory that
+152.459,4.86,we're going to be working in today so in
+154.86,3.959,my case it's this one it says python
+157.319,2.401,even though it's not going to be python
+158.819,2.821,today
+159.72,4.56,uh and we're going to start with a basic
+161.64,6.48,hello world example so
+164.28,6.539,Cuda is uh basically just C or C plus
+168.12,5.339,plus code but it's actually Cuda code so
+170.819,3.841,it's uh very similar the language is
+173.459,2.881,almost the same but you have some
+174.66,3.84,additional functions and data types and
+176.34,5.179,stuff like that and we're going to start
+178.5,6.42,now by creating a file called hello
+181.519,5.141,underscore Cuda dot C but we're not
+184.92,4.679,going to create a C file we're going to
+186.66,5.4,create a CU file a CU file is
+189.599,5.22,essentially a Cuda file instead of a
+192.06,4.92,just core c file and here now we're
+194.819,4.801,going to start by writing an ordinary
+196.98,4.14,hello world program in C but then we're
+199.62,3.96,going to change it so that it can be
+201.12,5.839,parallelized with Cuda so we're going to
+203.58,6.68,start by including
+206.959,7.121,include and then we're going to include
+210.26,7.5,stdio dot h and then we're going to
+214.08,3.68,define a function hello world
+218.28,5.28,and this function will just printf
+223.92,6.0,hello world
+226.019,7.94,or actually wanted to say hello Cuda
+229.92,4.039,so let's call this hello Cuda
+234.26,5.199,backslash n for line break and that is
+237.659,4.381,basically the function then we have our
+239.459,6.721,main function here which takes some
+242.04,4.14,parameters Maybe rxc
+246.239,7.681,and then also Arc B and then we have the
+250.26,6.24,return zero at the end and then we call
+253.92,6.24,our function hello Cuda
+256.5,5.94,and that is basically our C program now
+260.16,3.78,what we can do now in Cuda or maybe let
+262.44,3.18,me show you that this actually works and
+263.94,3.199,see for those of you who are not so
+265.62,6.78,familiar with c
+267.139,7.0,uh move this to this and now I can just
+272.4,5.04,compile it and the ordinary way to
+274.139,5.28,compile a c uh program is to say GCC or
+277.44,6.36,whatever compiler you want to use hello
+279.419,6.961,Cuda and then hello Cuda is the output
+283.8,4.8,and then I can just run Helen Cuda
+286.38,4.86,so this is an ordinary C program now now
+288.6,4.68,let's move it back to
+291.24,4.62,a Cuda file
+293.28,5.22,let's go into it and change the code so
+295.86,3.3,that it can be parallelized
+298.5,2.759,um
+299.16,4.14,and what we're going to do here is we're
+301.259,4.141,going to make this void function here
+303.3,3.72,we're going to make it a global function
+305.4,3.54,so global
+307.02,4.619,underscore underscore Global underscore
+308.94,4.319,underscore void hello Cuda and then when
+311.639,4.321,we call this function we're going to
+313.259,5.101,actually specify three angle brackets
+315.96,4.739,opening and closing and in here we're
+318.36,4.679,going to specify the grid shape and the
+320.699,5.28,block shape the basic idea of Cuda is
+323.039,4.921,that you have multiple blocks that are
+325.979,4.141,aligned in a grid and then you have in
+327.96,5.22,those blocks multiple threads now maybe
+330.12,4.919,I can give you again a not so good
+333.18,4.44,visualization here I'm only going to use
+335.039,4.861,my mouse so this is not going to look uh
+337.62,4.68,too great but you have basically a grid
+339.9,4.92,in your GPU you can say
+342.3,4.56,uh and in this grid you have different
+344.82,4.319,blocks so we can maybe split this up if
+346.86,4.619,this is now two by two
+349.139,5.521,so we have this two by two grid we have
+351.479,7.081,block zero zero we have block
+354.66,7.979,uh zero one we have block one zero and
+358.56,8.34,we have block one one now those blocks
+362.639,7.62,themselves contain threats so these
+366.9,4.799,different blocks are again split up here
+370.259,4.021,um maybe we should use a different color
+371.699,4.44,for this they have a structure
+374.28,4.08,themselves so maybe the block itself is
+376.139,4.5,also a two by two block every single
+378.36,5.88,block is a two by two block and in those
+380.639,6.241,blocks we have now the threat 0 0 and
+384.24,4.98,then zero one and one zero and one one
+386.88,4.14,and we have the same everywhere so zero
+389.22,4.919,zero zero one
+391.02,4.98,one zero one one in all these blocks we
+394.139,4.741,have threats and they can have whatever
+396.0,5.16,shape you want now I'm going to explain
+398.88,3.9,why this is useful later on for now it's
+401.16,3.72,not really useful for now it's just
+402.78,3.84,something that we need to know and I'm
+404.88,5.34,going to now specify that I want to have
+406.62,6.9,uh one block and one thread in this
+410.22,5.28,block so this would be one one
+413.52,3.84,um and what we can do now is we can
+415.5,5.34,compile this but we can compile this
+417.36,8.399,with uh the Nvidia compiler so with the
+420.84,7.979,Cuda compiler nvcc hello Cuda dot CU and
+425.759,4.861,then we can say output hello Cuda
+428.819,4.32,and now when I run this we will see
+430.62,4.38,everything is oh actually I forgot
+433.139,4.741,something important to actually see the
+435.0,6.5,output we need to call a function which
+437.88,6.24,is Cuda device
+441.5,4.599,synchronize to actually get the output
+444.12,3.419,here as well
+446.099,3.181,because otherwise everything is
+447.539,2.88,happening on the device so we compile
+449.28,3.479,again
+450.419,3.361,we run again and we can see Hello Cuda
+452.759,3.66,here
+453.78,4.74,so that's quite simple now I can also
+456.419,5.701,say I want to have
+458.52,5.34,two blocks with one thread each this
+462.12,5.16,would also work but then you can see
+463.86,7.02,what happens is I run this two times
+467.28,5.4,and I can then change this again and I
+470.88,3.599,can say I want to have basically I can
+472.68,3.54,say either two blocks in one thread I
+474.479,3.12,can also say one block with two threads
+476.22,3.3,the result would be the same in this
+477.599,4.081,case I can also say I want to have two
+479.52,5.84,blocks and two threads
+481.68,3.68,so in this case I would get
+485.759,5.88,four times hello Cuda that's the basic
+488.639,5.101,idea of how this works now why is this
+491.639,4.321,important why is this useful we can
+493.74,4.26,access inside of this function here
+495.96,3.72,certain values and I'm going to print
+498.0,4.199,them here for you so that you can see
+499.68,4.739,how this works we can have a block index
+502.199,4.56,X
+504.419,5.941,which is going to be a number we can
+506.759,5.941,have a block index Y which is also going
+510.36,4.38,to be a number we can have a threat
+512.7,3.899,index X
+514.74,4.679,which is also going to be a number and
+516.599,5.701,we can have a threat index y obviously
+519.419,6.54,which is again also going to be a number
+522.3,6.479,and let's add a backslash n here
+525.959,9.121,we can just get these values by
+528.779,12.0,accessing block idx dot X lock idx dot y
+535.08,7.8,threat idx dot X and threat idx dot Y
+540.779,4.981,and those are important because
+542.88,5.22,basically what we can do now is we can
+545.76,4.8,compile we can run
+548.1,4.679,and due to the shape that I provided we
+550.56,3.719,only have X values because I said I want
+552.779,3.541,to have two blocks and I didn't say I
+554.279,4.021,want to have uh two times two blocks
+556.32,4.079,with two times two threads I just have
+558.3,4.2,two blocks two threads so we're only
+560.399,5.761,using the x-axis but you can see that
+562.5,5.94,every time uh the GPU runs the code it
+566.16,4.98,runs it on a certain block and on a
+568.44,5.88,certain thread so we have block zero
+571.14,5.879,thread one block zero thread zero and so
+574.32,6.24,on and so forth which means that if I
+577.019,5.521,can say certain blocks of the GPU are
+580.56,4.68,responsible for certain blocks of a
+582.54,4.859,matrix calculation this is very
+585.24,4.98,compatible because a matrix has a
+587.399,5.521,certain uh shape a certain grit shape
+590.22,4.52,and the GPU has a certain grid shape and
+592.92,4.56,then I can just
+594.74,5.02,parallelize the operations in this grit
+597.48,4.62,shape sort of way so this is what we're
+599.76,3.9,going to do now with a matrix Vector
+602.1,3.54,multiplication and we're going to start
+603.66,5.04,by implementing this Matrix Vector
+605.64,4.74,multiplication in core c so to can
+608.7,3.48,follow the thought process if you're not
+610.38,4.86,familiar with Cuda and then we're going
+612.18,5.4,to do the same thing in Cuda so that we
+615.24,4.8,can see what changes and we can see also
+617.58,4.08,why it is faster so I'm going to start
+620.04,6.299,here in new file which is going to be
+621.66,7.98,Matrix underscore Vector dot C
+626.339,5.341,and this file here what we're going to
+629.64,4.46,do is we're going to import so we're
+631.68,3.06,going to include
+634.1,2.58,[Music]
+634.74,5.219,um
+636.68,4.719,stdio.h by the way excuse my slow typing
+639.959,3.601,I'm still getting used to my new
+641.399,4.38,keyboard I change the layout
+643.56,4.98,so I'm typing a little bit slower than
+645.779,5.521,usual but we import these two uh
+648.54,6.479,libraries here and then we say void
+651.3,3.719,Matrix vector
+655.079,5.641,uh product let's say
+658.44,4.98,and what we want to get here as an input
+660.72,4.799,is we want to have first of all a flow a
+663.42,4.38,float pointer
+665.519,4.861,to a matrix a
+667.8,5.279,want to have a float pointer to a matrix
+670.38,6.0,V to a vector V1
+673.079,5.161,and to a vector V2
+676.38,4.5,and want to have the Matrix size which
+678.24,5.76,is going to be an integer the basic idea
+680.88,7.38,is that we're going to have
+684.0,5.82,an N by n Matrix an n-sized Vector we're
+688.26,4.8,going to multiply the two and we're
+689.82,6.959,going to store the result in an N sized
+693.06,6.18,vector vector 2. again I'm not going to
+696.779,4.201,explain basic uh Matrix Vector
+699.24,4.2,multiplication I'm not going to explain
+700.98,4.62,what a pointer is I expect you to either
+703.44,4.68,know that or to not care about it if you
+705.6,4.02,watch this video
+708.12,2.94,um so we're going to Define this
+709.62,3.0,function now and we're going to do it in
+711.06,3.839,a very simple way we're going to have a
+712.62,8.04,loop and I
+714.899,8.581,from 0 I being less than the Matrix size
+720.66,4.679,and then I plus plus so we're basically
+723.48,3.479,just going
+725.339,4.5,through the rows
+726.959,4.261,so we're going through row 0 1 2 3 and
+729.839,3.18,so on
+731.22,3.54,and in there what we want to do is we
+733.019,4.32,want to have we want to keep track of a
+734.76,5.54,sum which starts at zero and then we're
+737.339,6.721,going to go through the columns
+740.3,6.219,int J equals zero
+744.06,4.32,J less than Matrix size we can do this
+746.519,3.921,again here because
+748.38,2.06,um
+750.899,4.741,because we have an N by n Matrix so the
+753.48,4.38,Matrix size is going to be the size of
+755.64,5.4,the row or the the amount of rows and
+757.86,5.36,the amount of columns and then J plus
+761.04,2.18,plus
+763.26,5.1,and all we want to do now basically is
+765.3,5.52,we want to say sum plus equals and we
+768.36,4.32,want to add whatever the value or we
+770.82,4.62,want to multiply whatever the value is
+772.68,5.399,at the current position so we take I the
+775.44,4.56,current row but we take it times The
+778.079,3.901,Matrix size because we want to go
+780.0,3.72,through the
+781.98,3.96,um so basically if you're the second row
+783.72,4.2,you want to not just go with two you
+785.94,3.78,want to go with
+787.92,3.659,um because we don't have a
+789.72,3.54,multi-dimensional array here we have a
+791.579,4.681,long array we have the flattened version
+793.26,5.22,of The Matrix basically and because of
+796.26,5.22,that we don't want to just go to row two
+798.48,6.419,we want to go to Row 2 but this means
+801.48,5.64,going uh two times The Matrix size plus
+804.899,6.541,whatever position we're at column wise
+807.12,8.58,so I times Matrix size
+811.44,5.579,plus J so basically maybe I can sketch
+815.7,3.75,this for those of you who cannot really
+817.019,2.76,follow we basically have
+819.45,1.11,[Music]
+819.779,3.661,um
+820.56,5.339,why can I not draw now
+823.44,3.86,let me try again
+825.899,4.62,okay now it works
+827.3,4.24,basically what we have is we have
+830.519,2.88,um
+831.54,3.9,we have a matrix
+833.399,4.38,let's say we have a three by three
+835.44,5.82,Matrix now
+837.779,6.18,and what I have in C is not the three by
+841.26,6.06,three Matrix I have a nine
+843.959,5.641,an array of size nine basically so we
+847.32,5.28,have nine positions here whatever and
+849.6,6.06,what I want to do is I want to go to I
+852.6,6.239,being 0 I being 1 I being 2 but I being
+855.66,7.02,2 basically means going
+858.839,5.701,6 and then also whatever I need so I
+862.68,4.02,have to go six positions to basically
+864.54,4.32,pass the first two rows that's the
+866.7,5.699,reason why we do that so I times Matrix
+868.86,5.039,size plus J how many uh which column in
+872.399,4.62,that row
+873.899,6.18,we take this value and we multiply it by
+877.019,6.62,Vector one and then just
+880.079,3.56,uh the position there
+883.92,3.96,and then in the end what we do is we say
+886.139,4.921,V2
+887.88,5.759,at respective row is going to be equal
+891.06,4.019,to the sum that is the result for this
+893.639,3.541,particular row this is just a basic
+895.079,4.26,matrix multiplication Matrix Vector
+897.18,4.44,multiplication
+899.339,4.5,um then we are going to have our main
+901.62,5.519,function which is going to take an INT
+903.839,5.701,Arc C character Part B actually we are
+907.139,4.64,not using that but I'm just gonna put it
+909.54,2.239,there
+911.82,4.5,um and then we're going to return zero
+914.16,4.38,in the end and what we want to do now is
+916.32,3.66,we want to just Define everything so we
+918.54,5.0,want to set everything up we want to
+919.98,7.74,have a float pointer a a float pointer
+923.54,6.22,uh V1 and V2
+927.72,3.479,then we want to define a matrix size now
+929.76,3.48,we're going to start with a matrix size
+931.199,3.841,of three just so we can see that the
+933.24,3.899,calculation is accurate and then we're
+935.04,5.159,going to go with 40 000 which is a good
+937.139,4.5,value I figured uh to show the
+940.199,3.841,performance difference between this
+941.639,4.081,version and the Cuda version so Matrix
+944.04,4.76,size is going to be three we're going to
+945.72,6.059,say a The Matrix is going to
+948.8,4.839,be typecasted here to a float pointer
+951.779,3.481,we're going to allocate so we're going
+953.639,4.681,to use malloc
+955.26,5.4,to allocate The Matrix size times The
+958.32,4.98,Matrix size because we have an N by n
+960.66,6.239,Matrix so Matrix size times Matrix size
+963.3,6.02,times the size of whatever a flow is on
+966.899,2.421,the system
+970.079,5.7,um so we can copy this we can do the
+972.54,5.4,same thing with V1 V2
+975.779,4.381,but this time of course uh we're going
+977.94,3.839,to just use one Matrix size because the
+980.16,4.26,vector size is going to be the same size
+981.779,4.5,as the as the Matrix but it's not going
+984.42,4.38,to be multi-dimensional so if we have a
+986.279,4.441,10 by 10 matrix we're going to have a 10
+988.8,6.659,sized Vector that's the basic idea so
+990.72,7.619,Matrix size times float size and then uh
+995.459,5.161,we're just going to initialize our uh
+998.339,4.981,Matrix in our Vector with some basic
+1000.62,6.36,values so we're going to say 4 and I
+1003.32,5.519,equals zero I being less than Matrix
+1006.98,6.14,size
+1008.839,4.281,and then I plus plus
+1013.459,4.201,inside of this we're going to run a
+1015.56,4.38,second Loop maybe I can just copy this
+1017.66,5.46,one here
+1019.94,5.78,but it's going to have a
+1023.12,2.6,J
+1029.54,5.159,and basically the idea is let me open my
+1032.059,7.561,paint again uh what we want to do here
+1034.699,7.321,is we want to if we have the Matrix
+1039.62,5.64,like this I mean just you know let's do
+1042.02,6.24,it like this 3.3 it's not the most
+1045.26,6.299,beautiful Matrix one a half to zero one
+1048.26,5.4,two three four and so on whatever the
+1051.559,4.201,size is and for the vector that we're
+1053.66,5.16,going to use we want to have also zero
+1055.76,5.039,one two three and so on that's the basic
+1058.82,3.359,idea of what we want to do here for the
+1060.799,3.181,initialization you can also just use
+1062.179,3.24,random initialization but I didn't want
+1063.98,3.3,to deal with the whole Randomness and
+1065.419,4.14,see now because I have to come up with
+1067.28,4.32,uh some some seed That Is Random and
+1069.559,4.5,stuff like that but we're going to just
+1071.6,7.56,do it like that now we're going to say
+1074.059,6.841,uh Matrix a i times Matrix size again so
+1079.16,5.04,we just do the same thing that I
+1080.9,5.159,explained Above So Matrix size plus J
+1084.2,4.46,and the value of this is going to be
+1086.059,2.601,exactly
+1089.66,4.92,loads and then uh
+1092.72,6.06,basically what's inside of the bracket
+1094.58,6.479,so I times Matrix size
+1098.78,4.98,plus Jake so the position is going to be
+1101.059,4.321,also the value
+1103.76,3.96,um and then for the vector we're going
+1105.38,6.38,to do a similar thing I'm going to copy
+1107.72,4.04,this here I'm going to paste it here
+1114.559,6.12,um we're gonna just say Vector one
+1117.08,7.14,position I is going to be equal to float
+1120.679,5.88,type casting of I
+1124.22,5.28,and that is the same idea then we
+1126.559,8.761,perform the Matrix Vector product for
+1129.5,9.24,this we pass again a B1 V2 Matrix size
+1135.32,4.979,then as a result of that in V2 we will
+1138.74,5.299,have the result of the multiplication
+1140.299,7.021,stored and then we can say four
+1144.039,7.121,int I equals zero
+1147.32,6.859,I being less than Matrix size
+1151.16,3.019,I plus plus
+1155.419,6.661,we can just print the result vector
+1159.62,5.54,so percent point to f
+1162.08,3.08,backslash n
+1165.5,7.26,and we want to have uh V2
+1170.6,4.62,I
+1172.76,5.12,and finally we free the resources so
+1175.22,2.66,free a
+1179.9,4.8,free V1
+1182.66,4.62,maybe two
+1184.7,4.8,and that should actually be it so GCC
+1187.28,5.82,Matrix vector
+1189.5,5.82,Dash o Matrix vector
+1193.1,4.62,let's see if we get the proper values
+1195.32,5.16,yes those are the correct results so now
+1197.72,5.459,we can also go ahead and change the
+1200.48,4.439,Matrix size to 40
+1203.179,4.801,000 and
+1204.919,4.801,I can compile this I can run this but
+1207.98,4.02,this will take some time I think around
+1209.72,3.78,eight seconds something like that I hope
+1212.0,3.0,this doesn't mess up the recording but
+1213.5,3.66,it shouldn't actually
+1215.0,3.6,but it takes some time as you can see to
+1217.16,3.96,do the calculation then we get the
+1218.6,4.5,output and this is now what we're going
+1221.12,4.26,to also Implement in Cuda and you're
+1223.1,4.5,going to see why Cuda is so powerful for
+1225.38,6.6,tasks like that so I'm going to start
+1227.6,8.48,here with a new file Matrix vector.cu
+1231.98,4.1,here we're going to now just include
+1238.0,4.36,stdio.h we're going to Define again a
+1240.98,5.24,global
+1242.36,8.88,void which is going to be a matrix
+1246.22,9.28,Vector products it takes again a float
+1251.24,8.059,pointer to a matrix a a float pointer
+1255.5,3.799,to a vector B1
+1259.34,5.48,load pointer to a vector V2 and a matrix
+1265.039,3.961,size integer
+1267.62,3.24,and now what we want to do again
+1269.0,4.799,remember we have the block index we have
+1270.86,4.98,the threat index we want the individual
+1273.799,3.901,threads to be responsible for parts of
+1275.84,4.26,the calculation so that all of them can
+1277.7,4.2,work at the same time in the GPU and
+1280.1,3.36,deliver the result faster and for this
+1281.9,4.26,we're going to say okay the row that I'm
+1283.46,4.56,currently working at the row that this
+1286.16,3.66,particular function call is going to be
+1288.02,3.12,working at will be determined by the
+1289.82,6.12,block index
+1291.14,6.6,x times the block dimension
+1295.94,3.239,of X I'm going to explain here in a
+1297.74,5.04,second why we do this
+1299.179,6.901,plus thread index
+1302.78,5.399,X and this is now exactly the same thing
+1306.08,4.74,that we had before remember we had the
+1308.179,4.441,same when I explained to you why we why
+1310.82,3.9,we have the flattened array and why we
+1312.62,4.5,have the Matrix and why we go through I
+1314.72,4.439,times Matrix size this is exactly the
+1317.12,4.86,same thing so we have I
+1319.159,7.081,times Matrix size here
+1321.98,6.12,so basically a column size plus J this
+1326.24,3.48,is what we had multiple times in the
+1328.1,4.38,last code and this is the same pattern
+1329.72,6.3,now we take the row the block index X
+1332.48,5.34,which is the row uh or
+1336.02,3.659,yeah and then we have the block
+1337.82,3.479,Dimension I mean actually we're flipping
+1339.679,2.88,this I think it's actually the column it
+1341.299,3.36,doesn't matter it works anyway because
+1342.559,5.1,it's squared uh but we have basically
+1344.659,6.0,the block index X the position times how
+1347.659,5.52,large is that uh Dimension this x
+1350.659,5.161,Dimension so in this case The Matrix
+1353.179,5.641,size as you can see and then we have the
+1355.82,4.26,thread index in that row or column
+1358.82,3.3,whatever you want to think about here
+1360.08,4.2,and this is the J that we have before so
+1362.12,3.6,it's the same pattern uh it's not
+1364.28,4.759,different and we're going to do the same
+1365.72,3.319,thing now with the column
+1370.28,4.139,uh I think it should actually also work
+1372.74,3.84,when you reverse it
+1374.419,3.24,I think so but we're going to keep it
+1376.58,3.66,like that because I don't want to mess
+1377.659,4.561,up my prepared code here since it's
+1380.24,4.08,squared it doesn't actually matter
+1382.22,4.68,but we have row and column now and we
+1384.32,4.92,determine by the index of the block that
+1386.9,4.86,we're currently currently at and by the
+1389.24,4.919,threat index we determine
+1391.76,4.799,what part of the calculation we're going
+1394.159,4.5,to focus on and to limit this we're not
+1396.559,4.081,going to actually use all of the threads
+1398.659,5.0,we're going to just say if the column
+1400.64,6.36,that we're working at is zero
+1403.659,5.741,and the row that we're working at is
+1407.0,5.28,less than the Matrix size
+1409.4,5.58,because of course we can also go uh we
+1412.28,5.7,can also have if we have for example a
+1414.98,5.1,block size of 10 but we only have a
+1417.98,4.559,matrix size of eight we can go beyond
+1420.08,4.74,the boundary and in this case of course
+1422.539,4.02,we don't want to go beyond the Matrix to
+1424.82,4.2,do calculations
+1426.559,4.98,so if that is the case we're going to
+1429.02,3.899,start with a float sum equal to zero
+1431.539,3.961,again
+1432.919,5.101,and we're going to iterate
+1435.5,5.22,for this particular column that we're in
+1438.02,6.659,we're going to iterate through the rows
+1440.72,6.3,so I equals zero
+1444.679,5.581,I being less than
+1447.02,6.32,The Matrix size
+1450.26,3.08,I plus plus
+1453.919,4.021,and then we want to say sum plus equal
+1455.84,6.48,so the code is quite similar again we
+1457.94,6.78,have a rho times
+1462.32,3.78,Matrix size
+1464.72,3.18,Plus
+1466.1,4.92,I
+1467.9,5.04,and then I think my naming is kind of
+1471.02,4.08,confusing I'm not sure if I shouldn't
+1472.94,3.54,reverse it
+1475.1,2.699,I'm gonna I'm gonna keep it like that
+1476.48,3.84,but maybe we're going to change it later
+1477.799,5.641,on V1
+1480.32,5.52,I and basically a calculation is the
+1483.44,4.619,same we focus on one column or one row
+1485.84,3.78,and we go through the fields of that
+1488.059,4.021,column row whatever you want to focus on
+1489.62,4.32,here and we do the multiplications there
+1492.08,4.38,and at the end we have a sum and this
+1493.94,5.52,sum is what we set and now here row is
+1496.46,5.4,definitely correct because we have in
+1499.46,6.02,the vector rows and here we want to say
+1501.86,3.62,that this is the sum
+1506.059,4.021,so the calculation now is basically the
+1508.34,4.319,same the only difference is that we
+1510.08,6.9,focus on specific we don't have two
+1512.659,7.02,Loops here we focus on a specific part
+1516.98,4.98,of the Matrix based on the Block index
+1519.679,4.021,and on the threat index so every thread
+1521.96,4.02,and block is going to have a different
+1523.7,4.14,responsibility which means that we don't
+1525.98,4.14,have to do all the work in one thread we
+1527.84,4.86,can split up the work and different
+1530.12,5.46,threads will produce different results
+1532.7,4.74,in this Vector in the GPU that's the
+1535.58,5.099,basic idea and now we're going to take
+1537.44,5.4,that and we're going to use that in the
+1540.679,4.201,main function now this is going to be a
+1542.84,5.28,little bit trickier than before because
+1544.88,5.039,there is something
+1548.12,3.299,um that we need to do here which we
+1549.919,4.38,didn't have to do before which is we
+1551.419,4.86,need to communicate uh between the
+1554.299,4.5,device and the host now the host is just
+1556.279,5.161,my CPU my basic program running on the
+1558.799,4.681,on the computer here and the device is
+1561.44,4.979,the GPU the device is this GPU this
+1563.48,5.1,parallel Computing uh device and we need
+1566.419,5.401,to transfer information back and forth
+1568.58,6.54,all the time to get the actual
+1571.82,5.28,um to to be able to pass values to the
+1575.12,4.32,GPU and to get the results from the GPU
+1577.1,4.5,to then display it on the host that's
+1579.44,5.219,the basic idea so what we need to do is
+1581.6,5.52,we need to define a float pointer a
+1584.659,4.981,again but we also need to define a float
+1587.12,4.74,pointer a underscore GPU
+1589.64,5.279,and the same is true we're going to do
+1591.86,8.1,that now here in three separate rows V1
+1594.919,7.74,and V1 GPU V2 and V2 GPU so we want to
+1599.96,4.86,have the equivalent one time on the host
+1602.659,4.201,and one time on the device
+1604.82,4.44,uh then we're going to again Define The
+1606.86,5.28,Matrix size this is something we only
+1609.26,5.039,need once forty thousand
+1612.14,3.6,actually let's start with three first so
+1614.299,4.021,that we can see again if this works
+1615.74,5.7,properly and then we're going to say
+1618.32,5.16,Dimension 3 which is a
+1621.44,3.839,a data type here and we're going to
+1623.48,4.38,define a block shape
+1625.279,5.64,now the block shape is the shape of the
+1627.86,5.16,block itself and basically the block
+1630.919,6.24,shape let me again open up my favorite
+1633.02,6.24,tool here the block shape is if we have
+1637.159,4.62,again
+1639.26,5.1,this is the overall shape so we have
+1641.779,5.341,maybe two times two two times two blocks
+1644.36,5.52,this whole thing here this two times two
+1647.12,5.28,structure will be the grid shape that's
+1649.88,3.659,what we're going to refer as the grid
+1652.4,3.84,shape
+1653.539,5.581,uh in that grid shape we have multiple
+1656.24,4.799,blocks one two three four blocks and
+1659.12,3.48,inside of those blocks we have maybe a
+1661.039,2.701,different shape maybe something like
+1662.6,4.62,this
+1663.74,5.76,uh four times four grid this here is
+1667.22,5.579,going to be the block shape so the shape
+1669.5,4.08,of the block itself
+1672.799,2.701,um
+1673.58,3.599,just so that you don't confuse it so the
+1675.5,3.72,block shape is not the shape of the
+1677.179,4.141,blocks how they are aligned but the
+1679.22,5.22,shape of the blocks inside of the blocks
+1681.32,4.859,I hope this is not too confusing
+1684.44,5.7,um and this is going to be in our case
+1686.179,7.561,32 times 32 2. in other words in each
+1690.14,5.94,block we have 32 times 32 threats that's
+1693.74,4.38,what this basically says and then we
+1696.08,4.979,also have
+1698.12,6.059,uh the grit shape so how many blocks do
+1701.059,5.821,we have and this is important we need to
+1704.179,5.701,calculate this based on the Matrix size
+1706.88,4.98,so we have three scenarios here we have
+1709.88,3.84,a matrix size that is perfectly
+1711.86,5.52,compatible with the block size so we
+1713.72,7.4,have for example a size of 32 and we
+1717.38,6.779,have a shape of 16. so we have basically
+1721.12,6.76,uh we need two times two to fill up the
+1724.159,5.581,space and it it fits perfectly or we
+1727.88,3.659,have something that's not precisely
+1729.74,6.66,compatible so maybe we have a matrix
+1731.539,8.101,size of 30 and a block shape of 16. in
+1736.4,4.86,this case we would have we would have to
+1739.64,5.22,use still two by two but we have some
+1741.26,6.299,remainder and then we have also the case
+1744.86,4.5,where the division would result in zero
+1747.559,5.161,and in this case we would have to just
+1749.36,6.72,force a one so if we have for example a
+1752.72,6.72,matrix size of 10 and we have a block
+1756.08,5.4,shape of 16 times 16. in this case we
+1759.44,2.94,would have one block even though it's
+1761.48,3.48,too much
+1762.38,4.1,so for this I came up with this
+1764.96,6.0,calculation here
+1766.48,6.28,maximum of 1.0 so to force a minimum of
+1770.96,4.5,one
+1772.76,4.019,um and then seal
+1775.46,4.68,float
+1776.779,5.181,actually like this so type casting float
+1780.14,5.24,Matrix size
+1781.96,7.719,divided by float
+1785.38,7.019,and then block shape
+1789.679,2.72,dot X
+1793.22,3.78,um
+1794.12,4.679,yeah that's that's it so basically we're
+1797.0,4.02,we're taking the Matrix size dividing it
+1798.799,4.081,by the block shape to calculate how many
+1801.02,4.019,blocks we need we seal the number
+1802.88,5.22,because we always want to have you know
+1805.039,4.821,you cannot have 5.6 blocks in this case
+1808.1,5.22,you would need six blocks
+1809.86,7.72,and in the case we get a zero out of
+1813.32,6.78,this division we go with 1.0 as a
+1817.58,6.38,minimum value here that we force and we
+1820.1,3.86,can then basically just copy this
+1826.1,5.9,and the same thing is done with Y for
+1829.279,2.721,the y-axis
+1832.159,4.921,all right so this is our grid shape this
+1834.2,5.699,is our block shape now
+1837.08,4.5,um and what we do now is we allocate the
+1839.899,3.601,space again so this is basically the
+1841.58,5.339,same as before so I can actually copy
+1843.5,5.279,this from our previous script that we
+1846.919,4.86,just wrote or that script program that
+1848.779,5.88,we just wrote so
+1851.779,6.541,this part is the same we allocate a the
+1854.659,6.24,1v2 on the host on the machine and we
+1858.32,3.959,also fill it up with the values here so
+1860.899,4.64,we're going to copy that this is going
+1862.279,3.26,to be the exact same thing
+1867.08,4.199,um yeah just allocating locally and
+1869.48,4.079,initializing again with zero one two
+1871.279,5.161,three and so on for the Matrix and for
+1873.559,6.061,the vector now the new thing is we need
+1876.44,5.099,to also allocate now on the device this
+1879.62,5.1,is allocating on the host but we need to
+1881.539,4.981,also allocate space for the GPU pointers
+1884.72,3.959,here and for that we need to use a
+1886.52,5.399,function called cuda malloc
+1888.679,6.901,so Cuda melloc will I'm going to use
+1891.919,6.841,your avoid pointer pointer and a
+1895.58,7.079,underscore GPU this is going to allocate
+1898.76,5.519,the size on or the space on the GPU on
+1902.659,4.14,the device
+1904.279,9.14,and the size is the same Matrix size
+1906.799,6.62,times Matrix size times size of float
+1913.52,8.34,and then we can copy this for
+1917.86,7.799,V1 V2 and we need to remove a matrix
+1921.86,3.799,size here because those are the vectors
+1926.6,5.16,but this is how you do that so now we
+1929.24,4.319,have a space allocated for those
+1931.76,4.38,variables now what we need to do is we
+1933.559,4.321,need to take these or actually just a
+1936.14,3.36,and V1 because this is just an empty
+1937.88,3.179,result Vector but we need to take the
+1939.5,3.779,Matrix and the vector that we want to
+1941.059,5.941,use for the calculation and we need to
+1943.279,5.461,copy them to the device so what we need
+1947.0,5.7,to do after the allocation is we need to
+1948.74,8.7,say Cuda mem copy
+1952.7,7.44,and we need to store in a GPU a so we
+1957.44,5.88,need to transfer a to the a GPU
+1960.14,5.899,and the size that we use for this is
+1963.32,7.079,Matrix size times Matrix size
+1966.039,6.281,times size off float again
+1970.399,8.361,and we need to pass the keyword here
+1972.32,6.44,Cuda mem copy post to device
+1979.94,4.619,same is done for V1
+1986.84,5.699,all right
+1988.82,5.3,and that's basically it we take the
+1992.539,4.441,local
+1994.12,4.659,Matrix and Vector from the host and we
+1996.98,3.9,transmit it to the device to the GPU
+1998.779,4.5,then what we do is we perform the
+2000.88,4.74,calculation on the GPU now we have all
+2003.279,6.361,the data on the GPU we perform the
+2005.62,6.36,calculation on the GPU by calling Matrix
+2009.64,4.08,Vector product and here now remember the
+2011.98,4.559,angle brackets
+2013.72,6.48,we passed a grit shape
+2016.539,8.64,and we pass the block shape
+2020.2,7.319,and then we call it on a underscore GPU
+2025.179,6.6,V1 GPU
+2027.519,6.9,and V2 GPU we didn't transfer V2 but we
+2031.779,5.28,still have V2 GPU and we still allocated
+2034.419,5.281,it here so the result is stored there we
+2037.059,4.021,also need to pass the Matrix size and
+2039.7,4.319,then what we need to do is since the
+2041.08,5.04,result is now in B2 GPU to get it on our
+2044.019,4.14,system on the host system we need to
+2046.12,4.759,transfer it back so we do another Cuda
+2048.159,2.72,mem copy
+2050.919,6.541,and we transfer from or into V2 from V2
+2055.899,7.2,GPU
+2057.46,9.179,Matrix size times size of float
+2063.099,6.0,and here now we use Cuda mem copy
+2066.639,4.74,device
+2069.099,4.08,to host
+2071.379,6.98,and now all we need to do is we need to
+2073.179,5.18,save 4 and I equals zero
+2078.58,5.42,I being less than Matrix size
+2084.399,6.2,I plus plus
+2087.58,3.019,we print
+2092.56,6.18,0.2 F backslash n
+2097.06,4.02,V2
+2098.74,5.28,I
+2101.08,5.64,and that is basically it what we need to
+2104.02,4.92,do in the end of course is also free
+2106.72,4.98,a
+2108.94,4.56,oh now I copy it
+2111.7,6.139,what did I do now hopefully I didn't
+2113.5,4.339,mess up anything free a
+2117.94,7.139,free V1 V2 and important we also need to
+2122.2,6.02,do Cuda free
+2125.079,3.141,a GPU
+2129.04,6.299,and then the same thing with
+2131.5,3.839,V1 B2
+2135.76,5.46,and then in the end of course return
+2138.94,4.98,zero
+2141.22,5.46,that is basically it so let me maybe
+2143.92,4.439,recap again we have this Matrix Vector
+2146.68,3.6,product we decide what we're going to
+2148.359,3.841,focus on here
+2150.28,5.52,um so which threat is going to do which
+2152.2,8.34,part of the work here we allocate a agpu
+2155.8,7.559,V1 V1 GPU V2 V2 GPU so one
+2160.54,5.34,um variable here one pointer on the host
+2163.359,4.621,system one on the device system then we
+2165.88,4.56,Define a matrix size we Define a block
+2167.98,6.119,shape we calculate based on that the
+2170.44,6.36,grid shape we allocate on the host we
+2174.099,5.461,initialize on the host we allocate on
+2176.8,4.74,the device we transmit to the device we
+2179.56,4.32,do the calculation we transmit the
+2181.54,4.02,result to the host and we print it on
+2183.88,4.14,the host and we free all the resources
+2185.56,3.6,that we allocated now let's see if that
+2188.02,3.48,works
+2189.16,6.6,if we didn't mess up anything so nbcc
+2191.5,6.9,Matrix vector.cu and then Matrix Vector
+2195.76,5.16,underscore Cuda
+2198.4,5.34,then point slash Matrix Vector
+2200.92,4.62,underscore Cuda and the results are
+2203.74,3.599,correct so let us go ahead now and
+2205.54,5.84,change this to
+2207.339,4.041,uh forty thousand
+2212.079,3.841,and let's
+2214.3,4.4,compile this
+2215.92,2.78,run this
+2219.579,5.401,and there you go so now what we can do
+2222.22,5.399,is we can time the two different uh
+2224.98,4.74,versions We can time the Matrix Vector
+2227.619,3.361,which is the C version the core c
+2229.72,3.359,version
+2230.98,6.5,and we can see that this takes around
+2233.079,4.401,seven eight seconds something like that
+2238.54,7.68,8.1 seconds and if I go and say Matrix
+2243.46,5.399,Vector Cuda
+2246.22,5.82,this one
+2248.859,5.281,only takes 4.55 seconds so it is a
+2252.04,4.26,massive speed up and this is a simple
+2254.14,3.84,example now I know it might be a little
+2256.3,4.559,bit confusing to some of you who are not
+2257.98,4.68,familiar with C or Cuda but in the
+2260.859,3.301,context of Cuda programming this is a
+2262.66,4.56,very very simple example this is not
+2264.16,6.24,complex but this type of
+2267.22,4.92,um this type of parallel Computing makes
+2270.4,3.3,machine learning much faster because
+2272.14,3.0,again as I mentioned machine learning is
+2273.7,4.08,a lot of linear algebra Matrix
+2275.14,5.459,multiplications Matrix operations and by
+2277.78,4.5,focusing or by mapping the grid
+2280.599,3.841,structure of the blocks and the threads
+2282.28,4.2,to the grid structure of the Matrix you
+2284.44,4.98,can do everything in parallel and you
+2286.48,5.16,can you have this new sort of Paradigm
+2289.42,4.98,of programming and it makes everything
+2291.64,4.8,much faster and much better and this is
+2294.4,4.5,now C you can also do this with C plus
+2296.44,4.26,plus and I think there's also an
+2298.9,3.84,interface in Python maybe I will make a
+2300.7,3.12,video about that once I get familiar
+2302.74,3.119,with that
+2303.82,3.96,but this is how you do Cuda programming
+2305.859,3.601,to speed up
+2307.78,3.96,um to speed up tasks to Speed Up
+2309.46,3.72,Programs with parallel Computing so
+2311.74,2.7,that's it for this video today I hope
+2313.18,3.12,you enjoyed it and hope you learned
+2314.44,3.3,something if so let me know by hitting a
+2316.3,2.7,like button and leaving a comment in the
+2317.74,2.58,comment section down below and of course
+2319.0,3.0,don't forget to subscribe to this
+2320.32,3.48,Channel and hit the notification Bell to
+2322.0,3.24,not miss a single future video for free
+2323.8,5.72,other than that thank you much for
+2325.24,4.28,watching see you next video and bye

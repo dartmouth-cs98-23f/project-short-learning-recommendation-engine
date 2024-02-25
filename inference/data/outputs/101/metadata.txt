@@ -1,0 +1,192 @@
+#####################
+###### METADATA ######
+#####################
+
+Model: mistralai/Mistral-7B-Instruct-v0.1
+Time: 1708747223.8316066
+Videos: [['https://www.youtube.com/watch?v=UiX8K-xBUpE', 'UiX8K-xBUpE', 'mixtral8x7b'], ['https://www.youtube.com/watch?v=Xdhe-meS30A', 'Xdhe-meS30A', 'catan'], ['https://www.youtube.com/watch?v=00AQjBDM46Q', '00AQjBDM46Q', 'mlops_llm_eval'], ['https://www.youtube.com/watch?v=5ChkQKUzDCs', '5ChkQKUzDCs', 'typescript_fireship'], ['https://www.youtube.com/watch?v=J0NuOlA2xDc', 'J0NuOlA2xDc', 'localized_deployment'], ['https://www.youtube.com/watch?v=E5kzAbD8D0w', 'E5kzAbD8D0w', 'dpo'], ['https://www.youtube.com/watch?v=wybjsKtA9hI', 'wybjsKtA9hI', 'sql_backend'], ['https://www.youtube.com/watch?v=CZw57SIwgiE', 'CZw57SIwgiE', 'threads_connections'], ['https://www.youtube.com/watch?v=p6wwj0ozifw', 'p6wwj0ozifw', 'hashing'], ['https://www.youtube.com/watch?v=kxT8-C1 vmd4', 'kxT8-C1vmd4', 'zig'], ['https://www.youtube.com/watch?v=5C_HPTJg5ek', '5C_HPTJg5ek', 'rust'], ['https://www.youtube.com/watch?v=HyWYpM_S-2c', 'HyWYpM_S-2c', 'react'], ['https://www.youtube.com/watch?v=MnpuK0MK4yo', 'MnpuK0MK4yo', 'react_svelte'], ['https://www.youtube.com/watch?v=lauywdXKEXI', 'lauywdXKEXI', 'full-stack']]
+Shots: ['mixtral8x7b', 'full-stack']
+Prompt: General Topics:
+[
+  "Algorithms and Data Structures",
+  "Artificial Intelligence (AI) and Machine Learning",
+  "Computer Architecture",
+  "Data Science and Analytics",
+  "Database Systems and Management",
+  "Human-Computer Interaction (HCI)",
+  "Programming Languages and Software Development",
+  "Software Engineering and System Design",
+  "Web Development and Internet Technologies",
+  "Computer Graphics and Visualization",
+  "Theoretical Computer Science",
+  "Quantum Computing"
+]
+
+Complexity Scale:
+[
+  0.00-0.09: Elementary,
+  0.10-0.19: Middle School,
+  0.20-0.29: High School,
+  0.30-0.39: Advanced High School,
+  0.40-0.49: Introductory College,
+  0.50-0.59: Average College Lecture,
+  0.60-0.69: Advanced College,
+  0.70-0.79: Graduate Level,
+  0.80-0.89: Advanced Graduate Level,
+  0.90-1.00: PhD Level Lecture
+]
+
+Generate a JSON summary the computer science or software engineering video. The summary should include:
+
+1. A high-level synopsis labeled as "introduction".
+2. A breakdown into 5 sections, each with:
+   - A title starting with "Section x" where x is the section number from 1 to 5.
+   - A "content" field containing 4 bullet points summarizing the section.
+   - A "topics" field listing the 3 most important topics covered in the section.
+3. A global "topics" array listing 5 key descriptors (1-2 words each) of topics covered in the video.
+4. A global "generalTopics" array selecting 3 topics from the "General Topics", each associated with an exact "complexity" score based on the "Complexity Scale". The complexity score should reflect the detailed complexity level with full two-decimal-place precision.
+
+The JSON structure should strictly follow this template:
+{
+  "introduction": "High level synopsis here",
+  "sections": [
+    {
+      "title": "Section 1",
+      "content": [
+        "Bullet point 1",
+        "Bullet point 2",
+        "Bullet point 3",
+        "Bullet point 4"
+      ],
+      "topics": ["Topic1", "Topic2", "Topic3"]
+    },
+    ... (total 5 sections)
+  ],
+  "topics": ["Descriptor1", "Descriptor2", "Descriptor3", "Descriptor4", "Descriptor5"],
+  "generalTopics": [
+    {
+      "name": "Selected general topic 1",
+      "complexity": "Exact complexity float with two decimals"
+    },
+    ... (total 3 general topics)
+  ]
+}
+
+The output must follow the specified JSON structure, focusing on domain-specific terminology in the "content" sections. Use the previous "Complexity Scale" list when generating "complexity". Use the previous "General Topics" list when generating the "generalTopics" field. If the video content does not directly match a topic from this list, select the closest related topic available. 
+
+
+###################
+###### INFERENCE ######
+###################
+Temperature: 0.5
+Top_k: 35
+Top_p: 0.96
+Tokens per shot: 6500
+Tokens per target: 7500
+Processing: typescript_fireship
+    Tokens: 7988
+    Decoding took: 63.278 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: zig
+    Tokens: 7634
+    Decoding took: 66.503 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: sql_backend
+    Tokens: 8547
+    Decoding took: 59.555 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: react_svelte
+    Tokens: 8489
+    Decoding took: 80.618 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: mixtral8x7b
+    Tokens: 8583
+    Decoding took: 66.024 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: react
+    Tokens: 7630
+    Decoding took: 78.438 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: mlops_llm_eval
+    Tokens: 8659
+    Decoding took: 78.563 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: rust
+    Tokens: 7532
+    Decoding took: 66.729 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: hashing
+    Tokens: 8658
+    Decoding took: 62.465 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: localized_deployment
+    Tokens: 7745
+    Decoding took: 65.142 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: full-stack
+    Tokens: 8597
+    Decoding took: 65.111 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: dpo
+    Tokens: 8596
+    Decoding took: 70.953 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Processing: threads_connections
+    Tokens: 8550
+    Decoding took: 75.14 seconds
+    cuda memory allocated: 14.00 GB, cuda memory cached: 14.36 GB
+Global runtime: 899.036 secondsFile: rust.jsonFile: sql_backend.jsonErrors: 1 validation error for VideoContent
+__root__
+  Invalid \escape: line 2 column 96 (char 97) [type=value_error.jsondecode, input_value='{\n  "introduction": "Th...y": 0.58\n    }\n  ]\n}', input_type=str]File: react_svelte.jsonFile: full-stack.jsonFile: hashing.jsonErrors: 3 validation errors for VideoContent
+generalTopics.0.name
+  Value error, Distributed Systems is not a valid general topic name [type=value_error, input_value='Distributed Systems', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.6/v/value_error
+generalTopics.1.name
+  Value error, Consistency Hashing is not a valid general topic name [type=value_error, input_value='Consistency Hashing', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.6/v/value_error
+generalTopics.2.name
+  Value error, Replication is not a valid general topic name [type=value_error, input_value='Replication', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.6/v/value_errorFile: react.jsonFile: zig.jsonFile: dpo.jsonFile: mixtral8x7b.jsonFile: typescript_fireship.jsonFile: threads_connections.jsonErrors: 3 validation errors for VideoContent
+generalTopics.0.name
+  Value error, Multithreading in Backend Applications is not a valid general topic name [type=value_error, input_value='Multithreading in Backend Applications', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.6/v/value_error
+generalTopics.1.name
+  Value error, Connection Management is not a valid general topic name [type=value_error, input_value='Connection Management', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.6/v/value_error
+generalTopics.2.name
+  Value error, Architectures for Scalable and High-Performance Multithreaded Applications is not a valid general topic name [type=value_error, input_value='Architectures for Scalab...tithreaded Applications', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.6/v/value_errorFile: mlops_llm_eval.jsonErrors: 3 validation errors for VideoContent
+generalTopics.0.name
+  Value error, AI and Machine Learning is not a valid general topic name [type=value_error, input_value='AI and Machine Learning', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.6/v/value_error
+generalTopics.1.name
+  Value error, Product Management is not a valid general topic name [type=value_error, input_value='Product Management', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.6/v/value_error
+generalTopics.2.name
+  Value error, Engineering is not a valid general topic name [type=value_error, input_value='Engineering', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.6/v/value_errorFile: localized_deployment.jsonTarget: rust, Hidden states took: 0.275 seconds
+    Target: rust tensor finished. Wrote to file.
+Target: sql_backend, Hidden states took: 0.235 seconds
+    Target: sql_backend tensor finished. Wrote to file.
+Target: react_svelte, Hidden states took: 0.309 seconds
+    Target: react_svelte tensor finished. Wrote to file.
+Target: full-stack, Hidden states took: 0.241 seconds
+    Target: full-stack tensor finished. Wrote to file.
+Target: hashing, Hidden states took: 0.238 seconds
+    Target: hashing tensor finished. Wrote to file.
+Target: react, Hidden states took: 0.31 seconds
+    Target: react tensor finished. Wrote to file.
+Target: zig, Hidden states took: 0.27 seconds
+    Target: zig tensor finished. Wrote to file.
+Target: dpo, Hidden states took: 0.277 seconds
+    Target: dpo tensor finished. Wrote to file.
+Target: mixtral8x7b, Hidden states took: 0.267 seconds
+    Target: mixtral8x7b tensor finished. Wrote to file.
+Target: typescript_fireship, Hidden states took: 0.24 seconds
+    Target: typescript_fireship tensor finished. Wrote to file.
+Target: threads_connections, Hidden states took: 0.303 seconds
+    Target: threads_connections tensor finished. Wrote to file.
+Target: mlops_llm_eval, Hidden states took: 0.306 seconds
+    Target: mlops_llm_eval tensor finished. Wrote to file.
+Target: localized_deployment, Hidden states took: 0.26 seconds
+    Target: localized_deployment tensor finished. Wrote to file.

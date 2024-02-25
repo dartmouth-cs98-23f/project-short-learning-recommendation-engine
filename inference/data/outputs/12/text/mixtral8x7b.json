@@ -1,0 +1,71 @@
+{
+  "introduction": "In this video, we explore the architecture differences between the vanilla transformer and Mistral, a new language model from Mistral AI. We discuss the sliding window attention, kv cache, sparse mixture of experts model, sharding, and pipeline parallelism. We also provide a code review of Mistral's implementation using the Xformers library.",
+  "sections": [
+    {
+      "title": "Section 1: Architectural Differences",
+      "content": [
+        "Mistral is a decoder-only model similar to LLama.",
+        "Sliding window attention is used instead of group query attention.",
+        "KV cache is a rolling buffer that is related to the sliding window attention.",
+        "Mistral uses a feed forward network with the CEU function."
+      ],
+      "topics": ["Mistral Architecture", "Sliding Window Attention", "KV Cache", "Feed Forward Network"]
+    },
+    {
+      "title": "Section 2: Comparison of Models",
+      "content": [
+        "Mistral 7b and Mistral 8x7b are the two models discussed.",
+        "Parameter dim indicates the dimension of the embedding vector.",
+        "Number of encoder layers and head dimensions are compared.",
+        "Group query attention is not equal in number of heads for k and v."
+      ],
+      "topics": ["Mistral 7b vs. Mistral 8x7b", "Parameter Dim", "Encoder Layers", "Head Dimensions", "Group Query Attention"]
+    },
+    {
+      "title": "Section 3: Sliding Window Attention",
+      "content": [
+        "Explanation of sliding window attention.",
+        "Relation to receptive field concept in convolutional neural networks.",
+        "How sliding window attention affects the model's performance.",
+        "Comparison with other attention mechanisms."
+      ],
+      "topics": ["Sliding Window Attention", "Receptive Field", "Model Performance", "Comparison with Other Attention Mechanisms"]
+    },
+    {
+      "title": "Section 4: KV Cache and Rolling Buffer",
+      "content": [
+        "Explanation of KV cache and its role in inference.",
+        "Relation to sliding window attention.",
+        "How KV cache affects the model's performance.",
+        "Comparison with other caching techniques."
+      ],
+      "topics": ["KV Cache", "Sliding Window Attention", "Model Performance", "Comparison with Other Caching Techniques"]
+    },
+    {
+      "title": "Section 5: Code Review of Mistral",
+      "content": [
+        "Overview of Mistral's code implementation.",
+        "Use of Xformers library for block attention.",
+        "Explanation of the pipeline parallelism.",
+        "Discussion of the sparse mixture of experts model and sharding."
+      ],
+      "topics": ["Mistral Code Implementation", "Xformers Library", "Pipeline Parallelism", "Sparse Mixture of Experts Model", "Sharding"]
+    }
+  ],
+  "topics": ["Mistral Architecture", "Sliding Window Attention", "KV Cache", "Feed Forward Network", "Parameter Dim", "Encoder Layers", "Head Dimensions", "Group Query Attention", "Sliding Window Attention", "Receptive Field", "Model Performance", "Comparison with Other Attention Mechanisms", "KV Cache", "Sliding Window Attention", "Model Performance", "Comparison with Other Caching Techniques", "Mistral Code Implementation", "Xformers Library", "Pipeline Parallelism", "Sparse Mixture of Experts Model", "Sharding"]
+  },
+  "general topics": [
+    {
+      "name": "Artificial Intelligence (AI) and Machine Learning",
+      "complexity": 0.65
+    },
+    {
+      "name": "Computer Architecture",
+      "complexity": 0.75
+    },
+    {
+      "name": "Data Science and Analytics",
+      "complexity": 0.55
+    }
+  ]
+}

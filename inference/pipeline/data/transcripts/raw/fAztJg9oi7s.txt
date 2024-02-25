@@ -1,0 +1,482 @@
+second,duration,transcript
+4.23,6.57,[Music]
+9.36,2.8,what is going on guys welcome back in
+10.8,3.52,today's we're going to talk about
+12.16,3.12,three-dimensional plotting in matplotlib
+14.32,2.719,which means we're going to make
+15.28,3.919,visualizations in three dimensions
+17.039,4.0,rather than only two dimensions and i
+19.199,3.441,have made a video on this already on my
+21.039,3.841,channel it's quite old it's part of the
+22.64,4.0,data science tutorial series uh it's low
+24.88,3.44,quality so i'm going to make a new video
+26.64,4.24,here with more information with better
+28.32,4.079,quality and better explanations so let's
+30.88,4.4,get right into it we're going to start
+32.399,5.84,by importing matplotlib
+35.28,5.68,dot pi plot s plt
+38.239,3.921,and we're going to also import numpy as
+40.96,2.72,np
+42.16,3.28,now we're going to use numpy mainly for
+43.68,3.199,the generation of data we're not going
+45.44,3.68,to plot actual data we're going to
+46.879,4.0,generate data using numpy and we're
+49.12,3.119,going to use obviously matplotlib for
+50.879,4.081,the plotting now one thing that you
+52.239,4.721,might want to or might have to import
+54.96,4.32,i'm not sure sometimes i needed it
+56.96,4.079,sometimes i don't need it now in the
+59.28,3.279,last try i did need it so i don't know
+61.039,3.44,if it's actually necessary but we're
+62.559,4.721,going to import from
+64.479,5.841,mpl underscore toolkits
+67.28,4.8,we're going to import mplot3d now again
+70.32,3.6,the syntax highlighting is going to show
+72.08,4.079,that we're actually not using it and
+73.92,4.0,sometimes if i remove it it works
+76.159,4.32,sometimes it says okay i don't know the
+77.92,4.08,projection 3d and it doesn't work so for
+80.479,3.761,some reason
+82.0,3.92,i'm not sure if we need that or not but
+84.24,3.12,if you want to make sure that it works
+85.92,3.199,then you want to import this as well
+87.36,3.36,it's part of matplotlid and of course as
+89.119,3.441,always if you don't have
+90.72,4.24,matplotlib installed then you're going
+92.56,6.559,to say pip install
+94.96,5.839,matplotlib and numpy like that
+99.119,2.881,all right so those are the imports and
+100.799,3.521,the first thing we're going to do is
+102.0,5.28,we're going to talk about plotting
+104.32,4.56,single three-dimensional points in order
+107.28,3.76,to do that obviously we just have to
+108.88,3.44,specify coordinates but before we can
+111.04,3.84,actually start plotting in three
+112.32,4.64,dimensions we need to create an axis
+114.88,3.44,and this axis has to have a 3d
+116.96,4.4,projection now we have different
+118.32,5.2,projections we don't have only uh 3d
+121.36,4.24,there is in the map of the documentation
+123.52,4.08,i think a large list of different
+125.6,3.76,projections that we can use
+127.6,4.639,but if you want to create a new axis you
+129.36,3.959,basically say ax or whatever you want
+132.239,4.72,equals
+133.319,5.961,plt.axis and then the projection
+136.959,3.92,in this case is going to be 3d now the
+139.28,3.44,projection
+140.879,3.681,is basically the type of coordinate
+142.72,3.28,system you have the basic default which
+144.56,3.12,is the two dimensions we have
+146.0,4.08,three-dimensional and we have certain
+147.68,4.08,specific kinds of plots for different
+150.08,4.159,scientific purposes or anything like
+151.76,4.96,that uh however we are going to pick 3d
+154.239,4.881,and then we're going to just say ax dot
+156.72,4.08,scatter so the basic scatter function
+159.12,4.08,and this time we provide three
+160.8,5.6,coordinates not just two so we have x y
+163.2,5.92,and z let's say three five seven for
+166.4,6.64,example and then plt
+169.12,5.839,show we're going to click on run
+173.04,3.44,and we're going to hopefully see a
+174.959,3.841,three-dimensional plot now i'm not going
+176.48,4.32,to rotate too much here because when i'm
+178.8,3.6,recording and i'm using math a little
+180.8,5.04,bit at the same time
+182.4,5.44,it's usually very laggy but you can also
+185.84,3.6,move this around here as you can see
+187.84,4.16,it's lagging i hope my recording is not
+189.44,4.4,crashing on me here uh but basically we
+192.0,3.36,can turn this around we can look at it
+193.84,3.119,from different perspectives you can see
+195.36,3.12,the coordinates here and this is the
+196.959,3.681,point that we actually plotted so i'm
+198.48,3.839,not gonna rotate too much throughout
+200.64,3.12,this video but that's how you do it you
+202.319,2.56,just use the mouse
+203.76,2.64,um
+204.879,3.601,and that's how you plot a single point
+206.4,5.04,now if you wanna make a scatter plot
+208.48,5.039,based on multiple arrays of individual
+211.44,4.64,coordinates we're going to just say
+213.519,4.241,scatter plots here
+216.08,3.28,we are going to create a new axis here
+217.76,3.36,as well or actually we don't have to do
+219.36,2.799,all this in a row let's just replace
+221.12,2.479,this
+222.159,4.321,with uh
+223.599,5.28,with new code we're going to again do
+226.48,3.26,plt axes
+228.879,3.28,projection
+229.74,5.779,[Music]
+232.159,7.041,3d and then we're going to say
+235.519,6.881,x data equals npa range
+239.2,5.84,and a range is basically you choose a
+242.4,4.8,starting point you choose an end point
+245.04,3.52,and then the step size it's not like lin
+247.2,3.92,space and length space you choose a
+248.56,4.08,starting point an end point and then how
+251.12,4.16,many values you want to generate in
+252.64,5.439,between here we specify the step size so
+255.28,5.84,this would mean uh start from zero and
+258.079,4.881,with a step size of 0.1 increase until
+261.12,4.079,you get to 50.
+262.96,5.679,we're going to do that for x we're going
+265.199,4.401,to then uh also generate y data the same
+268.639,2.721,way
+269.6,4.96,uh or actually let's do it in a
+271.36,4.8,different way let's say x data equals np
+274.56,3.04,dot because we don't want to have a
+276.16,3.36,structure we want to have some random
+277.6,5.12,stuff here so we're going to say np
+279.52,5.2,random dot rand int
+282.72,4.8,from 0 to 100
+284.72,4.4,we want to have the shape 500
+287.52,2.88,uh like that so basically one
+289.12,2.72,dimensional
+290.4,4.88,uh and then we're going to do the same
+291.84,5.68,thing for the y data for the z data and
+295.28,4.4,yeah that's basically just 100
+297.52,4.399,uh or just 500
+299.68,5.12,random points and for this we're just
+301.919,4.241,going to say ax dot scatter
+304.8,2.88,x data
+306.16,2.8,y data
+307.68,2.88,z data
+308.96,5.28,like that
+310.56,3.68,and of course plt dot show
+314.8,4.56,so that should look quite messy now
+318.08,3.839,there you go
+319.36,4.32,again we can rotate but it's going to be
+321.919,3.601,laggy but here you can see the
+323.68,3.76,individual data points
+325.52,3.519,so this is a very basic scatter plot and
+327.44,3.599,of course we can do the same thing as
+329.039,4.88,always now i'm not sure what the
+331.039,5.121,individual parameters were was it marker
+333.919,4.72,or was it m i'm not sure
+336.16,4.319,let's just try with
+338.639,3.681,with marker but i think it was m or
+340.479,3.841,something
+342.32,3.36,no there you go it was actually marker
+344.32,3.04,so you can change the marker you can
+345.68,3.12,change the color map you can change the
+347.36,4.96,alpha value
+348.8,5.92,so we can say alpha equals 0.1 i mean i
+352.32,3.68,think this should work here
+354.72,3.36,there you go then we have more
+356.0,4.24,transparency here uh so you can
+358.08,4.0,customize it like an ordinary 2d plot
+360.24,3.2,but it's in three dimension uh three
+362.08,2.8,dimensions now
+363.44,3.199,now let's say we don't want to plot
+364.88,3.92,points we want to plot let's say a
+366.639,4.241,function so we have some input values x
+368.8,4.399,and y and we want to have a function on
+370.88,4.0,the z coordinate if you want to do that
+373.199,4.081,of course let's just not delete all of
+374.88,5.439,this let's just delete this
+377.28,6.96,we're going to now say x data
+380.319,6.72,equals np a range
+384.24,4.799,from 0 to 100 shape 500 this makes more
+387.039,2.88,sense here because we want to have an
+389.039,3.801,uh
+389.919,4.641,oh sorry i'm stupid a
+392.84,2.76,range
+394.56,4.0,0
+395.6,4.48,50 and 0.1 this was what i wanted to do
+398.56,3.68,in this case it makes more sense because
+400.08,4.88,of course we want to have equally
+402.24,4.32,uh sized ticks on the x and y
+404.96,3.44,coordinates and then the z coordinates
+406.56,3.68,should be the result of whatever
+408.4,5.919,calculation we choose to make so we can
+410.24,6.959,say z data is basically just x data
+414.319,4.88,times y data a very simple function
+417.199,3.28,and if we do that
+419.199,5.44,we can say
+420.479,6.481,uh p or actually axis dot
+424.639,4.161,um
+426.96,3.44,was it scatter
+428.8,3.36,actually we should probably go with plot
+430.4,2.799,but let's see with scatter it works as
+432.16,3.36,well but
+433.199,3.681,it's more like a collection of points on
+435.52,3.6,a line
+436.88,4.48,but i see that in my prepared code for
+439.12,3.919,some reason i used
+441.36,3.36,scatter i think this is a mistake i
+443.039,3.201,think plot is actually the better
+444.72,3.28,function here
+446.24,4.32,you can see here that we have a function
+448.0,6.08,but it's actually consisting of
+450.56,5.039,um can i zoom in here
+454.08,2.959,come on
+455.599,2.88,however you can see it's individual
+457.039,2.88,points if you look closely you can see
+458.479,3.12,it's not actually aligned so i think
+459.919,3.921,this should be
+461.599,4.081,easy to fix by just using plot but i'm
+463.84,3.759,not sure since this is not the code i
+465.68,3.6,prepared here it's a little bit yeah
+467.599,3.201,there you go obviously it works better
+469.28,3.199,if you choose plot because then it's
+470.8,2.88,actually plotting a line
+472.479,3.921,um
+473.68,5.44,so this of course is also not true here
+476.4,3.919,so this is basically plotting a function
+479.12,3.359,now you can choose whatever function you
+480.319,4.801,want you can of course also say np dot
+482.479,5.681,sine of x data
+485.12,4.479,times np dot cosine of y data for
+488.16,3.68,example
+489.599,4.0,and then you'll get a different function
+491.84,3.28,obviously there you go in three
+493.599,4.88,dimensions
+495.12,5.359,uh but that's how you do a basic
+498.479,4.321,function or how you plot a basic
+500.479,3.681,function along an axis now one thing
+502.8,3.44,that i also want to do here before we
+504.16,3.599,get to the next uh topic which are
+506.24,2.799,surface plots
+507.759,2.88,i'm gonna talk a little bit about
+509.039,4.24,customization because of course we
+510.639,3.921,always wanna have some titles and labels
+513.279,3.44,and all that and that is not too
+514.56,3.919,different from what we usually do you
+516.719,4.88,basically plot something and then you
+518.479,5.68,say ax dot set underscore title and then
+521.599,4.881,we can say okay i don't know uh funny
+524.159,5.921,function could be the title
+526.48,5.44,and then i can say ax dot set underscore
+530.08,3.6,x label
+531.92,6.0,and this is going to be
+533.68,7.04,my x values in centimeters for example
+537.92,5.76,then we can go with my y label
+540.72,4.08,or my y values in i don't know
+543.68,4.76,vault
+544.8,3.64,and then we can say
+548.8,5.44,my
+550.8,4.32,fancy results
+554.24,2.88,in
+555.12,3.68,in this case i don't know
+557.12,2.8,centimeters times vault doesn't really
+558.8,3.92,make sense
+559.92,4.24,however we're going to do it like that
+562.72,2.72,just so we have something and then we
+564.16,3.04,can show that
+565.44,2.56,and you will see that we have
+567.2,2.56,some
+568.0,3.04,labels here as well
+569.76,3.04,all right now let us get to more
+571.04,3.12,interesting stuff and talk about surface
+572.8,3.52,plots this means that we're not just
+574.16,4.0,going to plot individual lines in three
+576.32,3.92,dimensions but we're going to actually
+578.16,3.76,plot the whole surface of the function
+580.24,4.32,because up until now what we did is
+581.92,4.96,let's say those are the x values one two
+584.56,4.48,three four five six seven and so on and
+586.88,4.72,then one two three four five six seven
+589.04,4.32,and so on are also the y values what we
+591.6,4.239,did up until now is let's say the
+593.36,3.84,function was z equals
+595.839,4.161,x times
+597.2,4.72,y what we did actually was not computing
+600.0,3.92,the whole function for a surface plot we
+601.92,5.039,just took the individual positions and
+603.92,8.4,combined them so 1 times 1 is 1 2 times
+606.959,7.44,2 is 4 3 times 3 is 9 then 16 25 36 49
+612.32,4.24,and so on
+614.399,4.0,this is basically what we did it was
+616.56,3.92,just taking the individual positions and
+618.399,4.161,combining them together however in order
+620.48,4.64,to plot the full function as a surface
+622.56,4.719,we need to combine all the values of x
+625.12,4.8,with all the values of y so we have to
+627.279,5.361,take 1 times 1 1 times 2 1 times 3 and
+629.92,4.4,so on until we have all the values and
+632.64,3.28,then we have one row of the z
+634.32,2.639,coordinates and this is what we're going
+635.92,2.72,to do now we're going to create a
+636.959,4.081,so-called mesh grid we're going to use a
+638.64,4.48,meshgrid function to create a grid of
+641.04,5.76,the value so that we have basically for
+643.12,5.44,each element in y we have a row with all
+646.8,4.159,the elements in x so that we can then
+648.56,4.8,combine them in z together so that we
+650.959,4.721,have this final grid of the results and
+653.36,4.0,we can use this grid to plot a surface
+655.68,3.92,plot in the end
+657.36,3.76,i hope this was somewhat understandable
+659.6,3.679,basically we would have something like
+661.12,4.88,that we would have one two three
+663.279,4.401,four five six and then one two three or
+666.0,2.72,actually let's just copy that
+667.68,2.24,uh
+668.72,3.28,that
+669.92,3.919,would be for example the mesh grid of x
+672.0,3.44,and then we would have if the values are
+673.839,3.68,the same obviously we would have the
+675.44,3.44,same thing for y and then when we
+677.519,3.841,combine them we would have the
+678.88,5.92,individual results in a
+681.36,5.919,uh six by six matrix or six by six array
+684.8,4.08,as the z values again and then we could
+687.279,2.881,plot a surface plot
+688.88,5.44,so for this we're going to start again
+690.16,7.04,with ax equals plt axis projection
+694.32,4.48,projection equals 3d
+697.2,4.4,and then we're going to say x data
+698.8,4.4,equals npa range
+701.6,5.12,0
+703.2,5.92,250 with a step size 0.1
+706.72,5.04,y data is the same and now these are
+709.12,5.44,just one row of the values so we have
+711.76,5.28,the values from 0 to 50 with the step
+714.56,4.32,size but we just have them one time we
+717.04,4.239,got to take this and
+718.88,4.0,uh duplicate the rows if you want as
+721.279,3.36,many times as there are elements in y
+722.88,3.92,data and then we do the same for y as
+724.639,3.2,well with the amount of elements in x
+726.8,2.8,data
+727.839,4.721,um so what we're going to do is we're
+729.6,6.16,going to say capital x capital y equals
+732.56,6.24,np dot mesh grid and we're going to pass
+735.76,5.92,x data and y data there you go and we
+738.8,5.2,can then print x for example to see what
+741.68,4.48,x looks like so to get a basic idea of
+744.0,4.32,what we're actually doing here
+746.16,4.799,and there you go you can see that we
+748.32,4.72,have one row of the values and we have
+750.959,3.12,multiple rows of the same values and y
+753.04,2.88,is looking
+754.079,2.961,is going to look the exact same way and
+755.92,3.52,now what we're going to do is we're
+757.04,5.28,going to define the z function by just
+759.44,5.839,saying x times y of course capital x and
+762.32,4.4,capital y and then z of course is also
+765.279,2.641,such a grid
+766.72,2.239,but
+767.92,4.039,it's going to look a little bit
+768.959,3.0,different
+772.079,5.281,you go so z is basically also such a
+774.88,4.8,grid with the individual results in
+777.36,3.68,order to plot this grid as a surface
+779.68,2.719,plot now what we're going to do is we're
+781.04,3.799,going to say
+782.399,5.44,ax dot
+784.839,4.841,plot underscore surface
+787.839,3.44,and we're going to plot x
+789.68,5.279,y and z
+791.279,3.68,like that and then plt dot show
+796.24,4.88,there you go
+798.639,4.161,and this is what we end up with again i
+801.12,2.88,hope this is not going to lack too much
+802.8,4.24,let me just
+804.0,4.959,see if i'm crashing my recording uh but
+807.04,3.68,this is as you can see the basic surface
+808.959,4.081,i'm going to rotate it a little bit so
+810.72,5.28,that you get an idea of how it works
+813.04,5.28,um yeah that's basically it the surface
+816.0,3.839,plot of x times y if x and y are the
+818.32,3.6,same values
+819.839,4.081,this is a very simple plot let's go
+821.92,3.039,ahead and do something more fancy let's
+823.92,6.719,just
+824.959,5.68,change this to np dot sine of x plus
+830.8,4.08,uh np or actually times
+833.44,3.6,np
+834.88,4.319,dot cosine of y let me just see what
+837.04,4.0,range i chose here because if we choose
+839.199,3.521,that range it's going to be extremely
+841.04,3.359,messy so i'm going to change this here
+842.72,5.2,to negative 5
+844.399,6.081,up until 5 and negative 5 up until 5
+847.92,5.599,here as well with the same step size
+850.48,5.12,and then we can run this hopefully and
+853.519,3.201,see a somewhat interesting plot there
+855.6,2.799,you go
+856.72,3.76,so it's all blue as you can see but we
+858.399,5.281,have these little bumps here
+860.48,5.28,uh we can also rotate this a little bit
+863.68,4.32,there you go you can see these waves
+865.76,4.56,that are of course produced by the sine
+868.0,4.24,and cosine function
+870.32,3.44,and what we can now do as well this is
+872.24,3.52,very interesting in my opinion is we can
+873.76,5.28,add a color map to it which basically
+875.76,5.439,means that the higher the values um
+879.04,4.72,or when the height changes the color
+881.199,4.32,changes as well and it changes based on
+883.76,5.519,the provided color map so we can say
+885.519,5.76,cmap equals and then plasma
+889.279,3.36,uh now you can choose a different column
+891.279,3.601,map you can go to the map of the
+892.639,4.161,documentation and look at the color maps
+894.88,4.319,but i'm going to just choose plasma for
+896.8,4.08,now and if we run this you're going to
+899.199,2.481,see that this looks actually kind of
+900.88,2.24,sick
+901.68,3.36,so you can see that the higher the
+903.12,4.159,values the more yellow they are and the
+905.04,4.96,lower the values the more purple they
+907.279,4.161,are in the middle they're orange pink
+910.0,3.519,red whatever
+911.44,3.6,but this is actually quite a cool plot
+913.519,4.241,in my opinion
+915.04,5.28,a basic surface plot now the last thing
+917.76,4.96,i want to show you is how we can rotate
+920.32,4.24,the plot uh
+922.72,3.44,programmatically so not just with a
+924.56,2.959,mouse but how we can actually set the
+926.16,3.119,values
+927.519,3.44,by default so maybe when we run the
+929.279,4.081,script we don't want to see the plot
+930.959,5.041,from this perspective here but we want
+933.36,5.76,to see it from a different perspective
+936.0,4.56,again please don't crash
+939.12,3.04,there you go so maybe you want to see it
+940.56,4.0,from that perspective and what's
+942.16,4.72,important here is uh the two values that
+944.56,4.24,you see here on the upper right when we
+946.88,4.8,rotate so when i drag this here you can
+948.8,4.24,see we have this azimuth and we have the
+951.68,3.599,elevation
+953.04,4.64,um this is basic those are basically the
+955.279,4.401,two values that determine the position
+957.68,4.399,that we look at this from so let's just
+959.68,3.519,say we want to look from added top down
+962.079,3.601,like that
+963.199,4.64,this would be azimuth of negative zero
+965.68,5.92,or basically zero and elevation of
+967.839,6.961,roughly 90 degrees so let's note that
+971.6,9.28,we had the
+974.8,8.88,azimuth of zero and the elevation of
+980.88,5.04,90. and we can choose these two values
+983.68,4.56,now manually in order to
+985.92,4.719,uh to initialize the view so we can say
+988.24,4.64,ax oh sorry
+990.639,4.801,ax dot
+992.88,4.639,view underscore init and here we can say
+995.44,5.519,asm equals zero
+997.519,5.921,and lf equals 90.
+1000.959,4.401,can then remove this and basically we
+1003.44,2.72,don't change anything else we just run
+1005.36,2.88,this
+1006.16,4.96,and you're going to see that the default
+1008.24,4.32,perspective is going to be top down
+1011.12,2.399,alright so that's it for today's video
+1012.56,2.639,if you enjoyed hope you learned
+1013.519,2.961,something if so let me know by hitting
+1015.199,2.961,the like button leaving a comment in the
+1016.48,2.96,comment section down below and of course
+1018.16,3.039,don't forget to subscribe to this
+1019.44,4.0,channel and hit the notification bell to
+1021.199,3.36,not miss a single future video for free
+1023.44,4.21,other than that thank you much for
+1024.559,18.561,watching see you next video and bye
+1027.65,17.549,[Music]
+1043.12,2.079,you
