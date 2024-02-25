@@ -1,0 +1,518 @@
+second,duration,transcript
+2.2,4.12,ok so now we're going to change topics
+5.18,4.26,and start talking about our first
+6.32,4.94,technical subject of this course and as
+9.44,4.97,an introduction to computer architecture
+11.26,6.4,we're going to be talking about what is
+14.41,6.82,architecture versus microarchitecture
+17.66,6.599,and I want to just briefly say that as
+21.23,5.309,you take this class the first three
+24.259,4.35,lectures or so should be review so if
+26.539,3.63,you sing in the class and you're saying
+28.609,4.411,oh I've seen all this before
+30.169,5.071,don't get up wait to the fourth or fifth
+33.02,2.58,lecture and then the content will become
+35.24,1.56,new
+35.6,3.21,and this is because I want to teach
+36.8,4.14,everything from first principles and get
+38.81,3.15,everyone up to speed but it's that those
+40.94,2.46,first few lectures are going to go very
+41.96,2.76,fast so if you're lost in the first
+43.4,4.4,three lectures which should be reviewed
+44.72,5.36,then that's probably a bad in indicator
+47.8,5.8,so we'll start off by talking about
+50.08,8.23,architecture versus microarchitecture
+53.6,7.56,and I wanted to say briefly what I mean
+58.31,6.66,by architecture and I have in this slide
+61.16,8.84,here a very large a4 what I'll sometimes
+64.97,8.01,call Big Eight architecture so your
+70.0,5.59,Patterson has he calls this instruction
+72.98,5.58,set architecture and when I contrast
+75.59,7.11,this with micro architecture or paracin
+78.56,6.12,hennessy calls organization so big 8
+82.7,4.89,architecture is an abstraction layer
+84.68,4.29,provided to software or instruction set
+87.59,3.54,architectures our abstraction layer
+88.97,6.18,provided to software which is designed
+91.13,7.11,to not change very much and it doesn't
+95.15,7.32,say it says how a theoretical
+98.24,5.45,fundamental sort of machine execute
+102.47,8.37,programs
+103.69,9.19,it does not say exactly the size of
+110.84,3.75,different structures how fast those
+112.88,6.29,things will run the exact implementation
+114.59,6.77,issues that falls into organization and
+119.17,5.47,one of the things I wanted to emphasize
+121.36,7.09,is that computer architecture is all
+124.64,6.209,about trade-offs so when I say it's all
+128.45,4.89,about trade-offs you can make different
+130.849,4.021,design decisions up here in the big a
+133.34,2.61,architecture or the instruction set
+134.87,3.42,architecture
+135.95,4.71,that'll influence the application it'll
+138.29,4.44,influence the microarchitecture but also
+140.66,3.329,you can make different design decisions
+142.73,2.339,down here and make a lot of different
+143.989,3.091,trade-offs on how to go about
+145.069,5.341,implementing a particular instruction
+147.08,4.769,set architecture and largely when you go
+150.41,3.75,to look at computer architecture and
+151.849,4.531,computer architecture implementation the
+154.16,3.96,design space is relatively flat there's
+156.38,3.42,sort of an optimum point where you you
+158.12,4.02,want to be but the other points around
+159.8,4.769,it are many times not horribly horribly
+162.14,3.959,bad though there are you know at the at
+164.569,4.23,extremes probably horribly bad design
+166.099,5.071,decisions but you know a lot of
+168.799,6.391,different design points are equally good
+171.17,5.94,or close to the optimal and the job of
+175.19,5.28,computer architect is to make the very
+177.11,4.86,subtle design decisions around how do
+180.47,4.379,you move around this point to make it
+181.97,5.579,both easier to program lives on for many
+184.849,5.401,years there's a little power and the
+187.549,5.461,sort of other a little bit of aesthetic
+190.25,4.769,characteristics mixed together with just
+193.01,5.24,making your computer and processor go
+195.019,5.461,fast we'll say and these trade-offs I
+198.25,4.93,will reiterate this over and over again
+200.48,4.77,in this class that because there's
+203.18,4.649,multiple different metrics so for
+205.25,4.819,instance speed energy cost and they
+207.829,4.951,trade off against each other many times
+210.069,4.931,and there is no necessarily optimal
+212.78,5.489,point it depends on you know if are you
+215.0,6.329,more cost driven in or energy driven or
+218.269,5.641,speed driven and within that point
+221.329,4.681,there's sort of sometimes Pareto optimal
+223.91,4.26,curves where all the points are are
+226.01,3.24,equally good if you're trying to trade
+228.17,4.14,off these different things for different
+229.25,5.67,cost models okay so let's let's talk
+232.31,4.28,about what is a instruction set
+234.92,5.34,architecture and what is a
+236.59,6.09,microarchitecture so a instruction set
+240.26,6.08,architecture or big a architecture is
+242.68,7.139,trying to provide the programmer some
+246.34,6.459,abstract machine model and many times
+249.819,6.91,what it really boils down to is it's all
+252.799,7.111,the programmer visible state so for
+256.729,5.94,instance how does the machine have
+259.91,4.68,memory doesn't have registers so that's
+262.669,5.761,the that's the programmer visible state
+264.59,4.76,it also encompasses the fundamental
+268.43,3.69,operation
+269.35,6.55,that the computer can run so these are
+272.12,6.03,called instructions and it defines the
+275.9,6.27,instructions and how they operate so for
+278.15,5.64,instance ad ad might be a fundamental
+282.17,2.85,instruction or fundamental operation in
+283.79,4.17,your computer instruction set
+285.02,5.67,architecture and it says the exact
+287.96,4.65,semantics on how to take one word in a
+290.69,7.17,register and add it to another word
+292.61,8.7,register and where it ends ends up then
+297.86,5.85,there's more complicated execution
+301.31,5.94,semantics so what'll be my execution
+303.71,4.98,semantics well if you just say ads take
+307.25,3.0,two numbers and add them together and
+308.69,3.75,put them in another register that many
+310.25,4.02,times does not encompass all of the
+312.44,3.06,instruction set architecture you'll have
+314.27,4.29,other things going on
+315.5,5.22,for instance IO interrupts and you have
+318.56,4.29,to define in your instruction set
+320.72,4.74,architecture or your big a computer
+322.85,4.41,architecture what is these X semantics
+325.46,4.65,of an interrupt or a instruction or a
+327.26,3.87,piece of data coming in on Io how does
+330.11,2.7,that interact with the rest of the
+331.13,4.62,processor so many times the instruction
+332.81,4.53,execution semantics is only half of it
+335.75,5.39,and we have to worry about is the the
+337.34,3.8,rest of the machine execution semantics
+341.32,6.57,Big Eight architecture has to define how
+345.44,5.88,the inputs and the outputs work and
+347.89,7.27,finally we has to define the data types
+351.32,5.4,and the sizes of the fundamental data
+355.16,4.32,words that you operate on so for
+356.72,3.39,instance do you operate on a bytes at a
+359.48,4.2,time
+360.11,5.73,four bytes at a time two bytes at a time
+363.68,5.19,how big is a byte do you actually have
+365.84,7.02,bytes so this is gets into sizes and
+368.87,6.18,then data types here might mean that you
+372.86,4.5,have other types of fundamental data so
+375.05,6.15,for instance the most basic one is you
+377.36,6.96,have just some bits sitting on on you
+381.2,4.98,know in a register in your processor but
+384.32,3.48,it could be much more complex so you
+386.18,4.47,could have for instance something like
+387.8,6.15,floating-point numbers where it's not
+390.65,6.63,just a bunch of bits it's it's formatted
+393.95,5.07,in a particular way and has very
+397.28,4.9,specific meanings it's a floating-point
+399.02,6.51,number that can range over
+402.18,5.76,let's say most of the the real numbers
+405.53,6.03,okay so in today's lecture we're going
+407.94,6.33,to step through all these different
+411.56,4.12,characteristics and requirements of
+414.27,4.649,building an instruction set architecture
+415.68,5.85,and I wanted to and we'll talk about how
+418.919,4.56,it's different than microarchitecture or
+421.53,4.109,organization so let's take out some
+423.479,4.521,examples of microarchitecture and
+425.639,4.65,organization
+428.0,3.55,so what microarchitecture and
+430.289,5.401,organization is really thinking about
+431.55,7.23,here is the trade-offs as you're going
+435.69,6.36,to implement a fixed instruction set
+438.78,6.54,architecture so for instance something
+442.05,5.549,like Intel's x86 is an instruction set
+445.32,4.59,architecture and there's many different
+447.599,5.281,micro architectures or implementations
+449.91,4.229,there is the AMD versions of the chips
+452.88,2.64,and then there's the Intel versions of
+454.139,3.06,the chips and even inside of let's say
+455.52,3.66,the Intel versions of the chips they
+457.199,3.871,have their high performance version for
+459.18,2.94,the laptop which looks one way or high
+461.07,3.45,performance personal info I'd say a
+462.12,5.15,server or or high-end laptop which looks
+464.52,5.04,one way and there's another chip for our
+467.27,4.2,tablets Intel's trying to make chips for
+469.56,5.34,tablets these days and they have their
+471.47,4.569,Atom processors and internally they look
+474.9,4.639,very different because they have very
+476.039,6.541,different speed energy cost trade-offs
+479.539,5.711,but they will all execute the same code
+482.58,6.059,and they all implement the same
+485.25,6.06,instruction set architecture so let's
+488.639,4.681,look at some examples of things that you
+491.31,4.05,might trade off in a microarchitecture
+493.32,5.189,so you might have different pipeline
+495.36,5.1,depth numbers of pipelines so you might
+498.509,4.53,have one processor pipeline or you might
+500.46,7.26,have six like something like the core
+503.039,7.801,i7s today cache sizes how big the chip
+507.72,8.129,is the silicon area how what's your peak
+510.84,7.53,power execution ordering well does the
+515.849,4.261,code run in order or can you execute the
+518.37,3.87,code out of order that's right
+520.11,5.16,it is possible to take a sequential
+522.24,4.349,program and actually execute later
+525.27,2.49,portions of the program before earlier
+526.589,3.091,portions of the program and that's kind
+527.76,3.87,of mind-boggling but it's a way to go
+529.68,5.099,about getting parallelism and if you
+531.63,4.36,keep your ordering correct things things
+534.779,6.401,work out
+535.99,8.159,the Swift's ALU whiffs you if you have a
+541.18,4.59,say a 64-bit machine you can actually go
+544.149,3.541,and implement that as a bunch of one bit
+545.77,3.06,adders for instance and people have done
+547.69,2.459,things like that in the
+548.83,3.84,microarchitecture and this allows you to
+550.149,7.321,build more expensive or less expensive
+552.67,7.859,versions of the same processor so let's
+557.47,4.79,talk about the history of why we came up
+560.529,5.331,with these two differentiations between
+562.26,7.829,architecture and microarchitecture and
+565.86,6.37,it came about because software sort of
+570.089,7.771,pushed it on us and ended up being a
+572.23,8.57,nice abstraction layer so back in the
+577.86,5.349,early 50s late 40s
+580.8,3.55,you had software that people mostly
+583.209,4.32,programmed either in assembly language
+584.35,4.53,or machine code language so yeah right
+587.529,4.68,ones and zeros or you had to write
+588.88,5.28,assembly code and sometime in the the
+592.209,4.171,mid 50s we started to see libraries show
+594.16,4.94,up so these are sort of floating point
+596.38,4.62,operations were made easier we had
+599.1,5.14,transcendentals as the sine cosine
+601.0,5.58,libraries you had some matrix and
+604.24,5.039,equation solvers and he started to see
+606.58,4.56,some libraries that people who call but
+609.279,4.201,people were not necessarily writing code
+611.14,6.66,by themselves or any large bodies of
+613.48,7.229,code in assembly programming because it
+617.8,4.68,was pretty painful and then at some
+620.709,5.221,point there was the invention of
+622.48,7.53,higher-level languages so a good example
+625.93,5.55,this was Fortran I came out in 1956 and
+630.01,4.73,a lot of things came along with this we
+631.48,7.38,had assemblers loaders linkers compilers
+634.74,6.51,a bunch of other software to track how
+638.86,4.169,your software is being used even and
+641.25,6.22,because we started to see these
+643.029,9.031,higher-level languages this started to
+647.47,5.76,give some portability to programming it
+652.06,3.87,wasn't that you had to write your
+653.23,8.51,program and have it only mapped to one
+655.93,9.59,Pro one processor ever and back in the
+661.74,7.22,50s even 60s time frame here machines
+665.52,7.759,required experienced operators
+668.96,5.939,who could write the programs and you
+673.279,2.941,know you you've got these machines and
+674.899,3.121,they had to be sold with a lot of
+676.22,4.26,software along with them so you had to
+678.02,4.56,basically run only the software that was
+680.48,4.5,given because it was yet to be a master
+682.58,4.14,programmer or someone who worked for the
+684.98,3.54,company too even that built the machine
+686.72,7.02,to even build a program these machines
+688.52,7.61,back in the day and the idea of
+693.74,5.07,instruction set architectures and these
+696.13,4.57,breaking the microarchitecture from the
+698.81,8.55,architecture didn't really exist back
+700.7,10.079,then and back in the early 60s IBM had
+707.36,6.39,four different product lines and they
+710.779,5.101,were all incompatible so you couldn't
+713.75,4.11,run code that you ran on one on the
+715.88,7.88,other so to give you an example here the
+717.86,8.97,IBM 701 was for scientific computing the
+723.76,4.389,1401 was mostly for business computation
+726.83,2.37,and I think they even had a second one
+728.149,2.581,that was sort of for business but
+729.2,4.74,different types of business computation
+730.73,7.049,and people sort of bought into a line
+733.94,5.76,and then as you as the line matured and
+737.779,4.641,developed they had either rewrite their
+739.7,5.94,code or they had to stick into one line
+742.42,5.05,but IBM had some and some crazy insights
+745.64,3.54,here is that they didn't want to have to
+747.47,3.239,when they went to the next generation of
+749.18,3.09,processor they wouldn't want to
+750.709,5.491,propagate these four lines they wanted
+752.27,6.03,to try to unify the four lines but one
+756.2,5.579,of the problems was these different
+758.3,5.97,lines had very different implementations
+761.779,3.541,and different cost points so the thing
+764.27,2.7,you were building for scientific
+765.32,3.209,computing wasn't necessarily the thing
+766.97,5.609,you want to build for business computing
+768.529,9.331,and the one that you built for business
+772.579,6.481,computing let's say didn't you wanted to
+777.86,3.96,not have it have very good
+779.06,5.19,floating-point performance so how do how
+781.82,4.44,do they go about solving this and their
+784.25,7.13,solution was they came up with something
+786.26,9.75,called the IBM 360 and the IBM 360 is
+791.38,6.52,probably the first true instruction set
+796.01,3.99,architecture that was implemented to be
+797.9,3.78,an instruction set architecture and the
+800.0,2.93,idea here was they wanted to unify all
+801.68,4.88,of these products
+802.93,5.82,into one platform but then implement
+806.56,6.18,different versions that were specialized
+808.75,6.45,for the different market niches so they
+812.74,4.38,could build they could unify a lot of
+815.2,4.889,their software systems unify a lot of
+817.12,4.86,what they built but still build
+820.089,5.551,different versions so let's let's take a
+821.98,5.79,look at the IBM 360 instruction set
+825.64,4.199,architecture and then talk about
+827.77,6.84,different micro architectures that have
+829.839,6.75,been built of the IBM 360 so the IBM 360
+834.61,4.919,is a general purpose register machine
+836.589,4.711,and we'll talk more about that later in
+839.529,5.281,this lecture but to give you an idea
+841.3,5.82,this is what the programmer saw or what
+844.81,4.35,the software system saw this isn't what
+847.12,3.39,was actually built in the hardware
+849.16,3.75,because that would be a
+850.51,6.3,microarchitecture constraint but the
+852.91,6.24,processor state had 16 general-purpose 3
+856.81,8.27,two-bit registers it had four
+859.15,8.939,floating-point registers had control
+865.08,7.75,flags if you will had a condition codes
+868.089,7.351,and control flags and it was a 24-bit
+872.83,5.1,address machine at the time that was
+875.44,6.149,huge so to the 24 was a very large
+877.93,5.73,number nowadays it's not so large and
+881.589,4.111,they've since expanded that on the IBM
+883.66,4.02,360 successors but they thought it was
+885.7,5.009,good for many many years and it was good
+887.68,5.52,for many many years and they defined a
+890.709,5.941,bunch of different data formats so there
+893.2,7.29,was 8-bit bytes 16-bit half words 32-bit
+896.65,5.04,words 64-bit double words and these were
+900.49,2.82,the fundamental data types that you
+901.69,3.99,could work on and you can name these
+903.31,5.01,different fundamental data types and it
+905.68,5.04,was actually the IBM 360 that came up
+908.32,5.94,with this idea that bytes should be 8
+910.72,7.89,bits long and that's lived on on for
+914.26,5.79,today because before that we had lots of
+918.61,7.65,different choices there was binary-coded
+920.05,9.81,decimal systems where the you actually
+926.26,5.91,would encode a number between 0 and 9
+929.86,3.9,and then you had the each digits and
+932.17,3.06,this is sometimes good for sort of
+933.76,2.73,spreadsheet calculations or business
+935.23,4.16,calculations we want to be very
+936.49,6.0,sice on your rounding to the penny and
+939.39,4.99,sometimes bit based things don't
+942.49,4.79,actually round appropriately oh they'll
+944.38,4.92,do the you lose pennies off the end and
+947.28,5.83,so you had these binary coded decimal
+949.3,5.88,systems and well-nigh BM 360 they they
+953.11,3.33,unified it all and said well no we're
+955.18,4.38,gonna throw out certain things and make
+956.44,4.8,make choices now they of course because
+959.56,3.9,it's the IBM 360 and they did have
+961.24,4.89,business applications they still support
+963.46,5.81,it binary coded decimal in a certain way
+966.13,5.25,and let's look at the microarchitecture
+969.27,6.34,implementations of this first
+971.38,6.69,instruction set architecture so at in
+975.61,5.85,this is in the same timeframe the same
+978.07,6.39,generation here there is the model 30 in
+981.46,7.86,the model 70 and this was very very
+984.46,6.75,different performance characteristics so
+989.32,4.77,if we we look at the machine let's start
+991.21,5.16,off by looking at the storage the the
+994.09,4.88,low-end model here had between 8 and 64
+996.37,6.48,kilobytes and the high-end model had
+998.97,7.09,between 256 and 512 kilobytes so very
+1002.85,4.23,very different sizes and this is what
+1006.06,3.23,I'm trying to get across here is the
+1007.08,6.36,microarchitecture can actually change
+1009.29,7.66,quite a bit even though the architecture
+1013.44,5.28,supports 64-bit and ads and additions
+1016.95,4.56,you can actually implement different
+1018.72,4.86,size data paths so in the low-end
+1021.51,4.949,machine they had an 8 bit data path and
+1023.58,6.24,for one to do a 64-bit operation it had
+1026.459,5.761,to do eight sapin operations to make up
+1029.82,4.04,a 64-bit operation and probably it
+1032.22,3.84,actually even had to do more than that
+1033.86,5.14,to handle all the carries correctly
+1036.06,5.67,versus the high-end implementation had a
+1039.0,7.4,full adder there and it can actually do
+1041.73,8.34,a 64-bit ad by itself without having to
+1046.4,7.99,do lots of micro sequence operations and
+1050.07,7.44,oh yes with minor modifications it lives
+1054.39,8.58,on today so this was designed in the 60s
+1057.51,7.41,and even today we still have system/360
+1062.97,6.06,derivative machines and a piece of code
+1064.92,5.129,you ran or you wrote back in 1965 will
+1069.03,2.69,still run on these machine
+1070.049,4.62,today which is pretty pretty amazing
+1071.72,7.809,natively so how does this survive on
+1074.669,9.171,today so here's actually the IBM 360 47
+1079.529,8.041,years later as in the Z 11
+1083.84,7.36,microprocessor so the IBM 360 has since
+1087.57,6.03,been renamed to the IBM 370 and then it
+1091.2,4.53,has been renamed to the IBM 370 e^x
+1093.6,4.889,which was in the 80s there was never a
+1095.73,5.399,IBM 380 strangely enough
+1098.489,5.971,and then later on they just changed the
+1101.129,5.43,name to the Z series so have a cooler
+1104.46,4.77,bottling model numbers here so we had
+1106.559,5.031,the IBM z series processors and this
+1109.23,7.949,lives on today so going back to that
+1111.59,7.6,8-bit processor which had a 1
+1117.179,6.6,microsecond control store read which is
+1119.19,8.219,forever we now have the z11 which is
+1123.779,7.64,running at 5.2 gigahertz has 1.4 billion
+1127.409,6.181,transistors they they have updated the
+1131.419,3.901,addressing so it's no longer 24-bit
+1133.59,5.309,addressing but it still supports the
+1135.32,7.15,original 360 addressing has four cores
+1138.899,12.09,out of order issue out of order memory
+1142.47,11.61,system big caches on on chip 24
+1150.989,4.5,megabytes of your l3 cache and you can
+1154.08,4.709,even put multiple these together to
+1155.489,7.081,build a multiprocessor system out of
+1158.789,6.181,lots and lots of multi course and what
+1162.57,4.799,I'm trying to get across here is that if
+1164.97,3.329,you go forward over time and you build
+1167.369,3.3,your instructions set architecture
+1168.299,3.48,correct it can live on and you have many
+1170.669,3.12,different microarchitecture
+1171.779,5.73,implementations and still leverage the
+1173.789,9.151,same software and a few few more
+1177.509,7.26,examples just to reinforce this a little
+1182.94,3.449,bit more let's take a look at an example
+1184.769,4.801,of something where you have the same
+1186.389,4.341,architecture but different micro
+1189.57,7.069,architectures
+1190.73,9.399,so here we have the AMD phenom x4 and
+1196.639,5.331,here we have the Adam Intel Atom
+1200.129,4.391,processor the first Intel Atom processor
+1201.97,4.23,and what you'll notice actually is that
+1204.52,6.83,they have the exact same instruction set
+1206.2,8.16,architecture they prefer on x86 code and
+1211.35,4.51,that is sign implementations and this is
+1214.36,6.06,just to point out here these are the
+1215.86,7.37,same time frames so this is modern
+1220.42,8.82,modern roughly modern-day processors
+1223.23,8.8,this one has four cores 125 watts here
+1229.24,5.01,we have single core 2 watts so there's
+1232.03,5.99,design trade-offs so you want to build
+1234.25,6.39,different processors in the same design
+1238.02,6.39,technology will say but with very
+1240.64,8.25,different cost power performance
+1244.41,6.7,trade-offs this one can decode 3
+1248.89,3.41,instructions this one can decode 2
+1251.11,4.11,instructions so it's a different
+1252.3,6.31,microarchitecture difference this one
+1255.22,9.69,has 64 kilobyte cache l1 this one as a
+1258.61,8.61,32 kilobytes l1 I cache very different
+1264.91,4.65,cache sizes even though they're
+1267.22,4.44,employing the same architecture or big a
+1269.56,4.68,architecture strangely enough they have
+1271.66,4.8,the same l2 size you know things happen
+1274.24,6.11,this one's out of order versus in order
+1276.46,8.94,and clock speeds are very different and
+1280.35,6.85,I want to contrast this with different
+1285.4,3.63,architecture or different Begay
+1287.2,6.63,architecture and different
+1289.03,6.3,microarchitecture so if we think about
+1293.83,6.38,some different examples of instruction
+1295.33,10.14,set architectures there's x86 there's
+1300.21,7.66,PowerPC there's IBM 360 there's alpha
+1305.47,3.54,there's arm you've probably heard all
+1307.87,3.27,these different names and these are
+1309.01,3.72,different instruction set architectures
+1311.14,4.11,so you can't run the same software on
+1312.73,5.19,those two different instruction set
+1315.25,4.38,architectures so here we have an example
+1317.92,3.41,of two different instruction set
+1319.63,4.53,architectures with two different
+1321.33,8.95,microarchitectures so we have the phenom
+1324.16,8.7,x4 here versus the IBM power 7 and we
+1330.28,5.08,already talked about the x4 here but the
+1332.86,4.54,power 7 has
+1335.36,4.02,our instruction set which is different
+1337.4,4.2,than the x86 instruction set so you
+1339.38,4.98,can't run one piece of code that's
+1341.6,6.72,compiled for this over here and vice
+1344.36,6.33,versa and the microarchitecture is are
+1348.32,5.489,different so here we have eight core 200
+1350.69,4.77,watts and decode six instructions per
+1353.809,5.281,cycle while this is a pretty beefy
+1355.46,6.18,processor it's also out of order and has
+1359.09,4.95,the same clock frequency something that
+1361.64,5.419,I that can also happen is you can end up
+1364.04,6.0,with architectures where you have
+1367.059,6.311,different instruction set architecture a
+1370.04,5.759,different big a architecture but almost
+1373.37,5.24,the same microarchitecture and this this
+1375.799,5.191,does this does happen so you end up with
+1378.61,5.11,let's say two processors that are both
+1380.99,4.83,three wide issue same calf sizes but
+1383.72,4.52,let's say one of them implements PowerPC
+1385.82,6.15,and the other one implements x86 and
+1388.24,5.559,things things like that do happen that's
+1391.97,4.44,more of a coincidence but I'm trying to
+1393.799,4.861,get across the idea that many times the
+1396.41,3.84,that the microarchitecture could be the
+1398.66,3.24,same and those are more trade-off
+1400.25,3.299,considerations versus the instruction
+1401.9,6.2,set architecture which is more of a
+1403.549,4.551,software programming design constraint
+1413.58,2.06,you

@@ -1,0 +1,291 @@
+second,duration,transcript
+0.0,3.419,any reasonable developer in today's
+1.62,3.6,world would learn react because it's the
+3.419,3.36,status quo and that's where the jobs are
+5.22,3.299,but life is a lot more fun when you
+6.779,3.301,become unreasonable and go against the
+8.519,3.481,status quo to push web development
+10.08,3.66,forward for future Generations in
+12.0,3.54,today's video we'll compare react and
+13.74,3.72,spelled side by side by looking at
+15.54,3.54,common patterns and design choices by
+17.46,2.76,the framework creators I'm not here to
+19.08,2.459,tell you that one is better than the
+20.22,3.12,other because that's what the comment
+21.539,3.48,section below this video is for the only
+23.34,3.3,way to truly find out which one is best
+25.019,3.661,is to build something with both of them
+26.64,3.66,and decide for yourself I just released
+28.68,3.96,a brand new full spell kick course
+30.3,4.259,yesterday and also have a full next js13
+32.64,3.419,course for fireship pro members going
+34.559,3.0,through each one of these courses will
+36.059,3.481,give you a really good idea of which
+37.559,3.601,framework is best for you first up we
+39.54,3.24,need to talk about rendering both of
+41.16,3.54,these Frameworks do the same thing they
+42.78,3.9,help developers build reactive uis with
+44.7,4.14,JavaScript by organizing code into
+46.68,3.059,reusable components an end user would
+48.84,2.699,never be able to tell the difference
+49.739,3.601,between the two but when it comes to the
+51.539,3.901,developer experience there is a world of
+53.34,3.84,difference react.js uses a runtime
+55.44,3.599,called the virtual Dom it keeps track of
+57.18,3.66,data changes in the application in order
+59.039,3.421,to render them in the act actual Dom in
+60.84,3.42,the browser the drawback is that this
+62.46,3.659,runtime requires some initial JavaScript
+64.26,4.14,and in Frameworks like nextjs your
+66.119,3.961,Baseline is around 70 kilobytes just to
+68.4,2.82,render a hello world as felt on the
+70.08,3.24,other hand takes an entirely different
+71.22,3.66,approach using a compiler to eliminate
+73.32,3.479,the need for a runtime it takes your
+74.88,3.54,svelt code and converts it into vanilla
+76.799,3.541,JavaScript which results in a far
+78.42,3.78,smaller hello world using a compiler
+80.34,3.84,though is kind of like cheating react.js
+82.2,3.54,is just JavaScript whereas spill can
+84.18,3.06,take non-javascript code to allow
+85.74,2.94,developers to do things more efficiently
+87.24,2.76,than they could otherwise but some
+88.68,3.18,JavaScript fundamentalists might
+90.0,3.18,consider this black magic what's ironic
+91.86,3.0,though is that vanilla JavaScript
+93.18,3.54,libraries tend to be much easier to work
+94.86,3.719,with in spell when compared to react
+96.72,3.899,however react does have a massive
+98.579,3.781,ecosystem of dedicated libraries to help
+100.619,3.481,you get things done now let's look at an
+102.36,3.42,actual code example of component State
+104.1,3.12,here we have a basic counter app in
+105.78,3.36,react we use functions to create
+107.22,3.96,components and then add reactive state
+109.14,4.2,to them with the use State hook that
+111.18,3.96,returns a reactive value and a Setter
+113.34,3.54,function to update the state pretty
+115.14,3.659,simple but let's see how it compares to
+116.88,3.9,svelt here on the right side in spelled
+118.799,3.721,you have only one component file and
+120.78,3.6,Define the logic within the script tags
+122.52,3.54,to create reactive State all you do is
+124.38,3.239,create a variable with the let keyword
+126.06,3.24,from there we can define a function on
+127.619,3.36,the click event that mutates the value
+129.3,3.12,directly the spell code is able to be
+130.979,3.421,more concise because it doesn't require
+132.42,3.72,any Imports or function calls to
+134.4,3.66,initialize the state it looks and feels
+136.14,3.54,like vanilla JavaScript but that's just
+138.06,3.42,an illusion so now let's look at how
+139.68,3.84,props work between the two Frameworks to
+141.48,4.02,pass props and react we do so by
+143.52,3.9,defining them as function arguments
+145.5,3.66,which are typically destructured like so
+147.42,3.66,in spell things look a lot different
+149.16,3.96,putting the export keyword in front of a
+151.08,3.96,variable allows it to be passed in from
+153.12,3.72,the outside on the other side using
+155.04,3.54,props looks basically identical in both
+156.84,3.479,Frameworks although spelled does use
+158.58,3.42,some syntactic sugar allowing you to
+160.319,3.541,more easily match variable names to
+162.0,3.18,props when it comes to props though one
+163.86,3.599,thing you can do in react that you can't
+165.18,3.48,do in svelte is pass components as props
+167.459,3.541,and that brings us to our next
+168.66,4.2,comparison children in react because we
+171.0,4.019,can pass components as props we can
+172.86,3.9,render them directly in the jsx in
+175.019,3.621,addition if we want to insert UI inside
+176.76,4.619,of a component we can use the built-in
+178.64,4.239,props.children value you now in smelt we
+181.379,3.601,have an entirely different system called
+182.879,4.44,slots the default slot is the equivalent
+184.98,4.08,to props.children however you can also
+187.319,3.84,create name slots that allow you to
+189.06,3.66,insert UI at specific points in this
+191.159,3.061,component's markup that gets the job
+192.72,3.72,done but I do kind of miss the ability
+194.22,3.72,to use components as props and so now
+196.44,3.6,let's look at how we might run code when
+197.94,3.84,a component is initialized in react we
+200.04,3.54,have the use effect hook which takes a
+201.78,3.42,callback function followed by an empty
+203.58,3.659,array to signify that it doesn't have
+205.2,3.899,any dependent data so it only runs once
+207.239,3.601,in svelte we have a similar pattern with
+209.099,3.601,the on Mount function it's more readable
+210.84,3.96,but more importantly it can handle an
+212.7,3.42,async function which is not possible in
+214.8,3.0,react which means you need to jump
+216.12,3.42,through this extra hoop of defining your
+217.8,3.24,own async function that's separate from
+219.54,2.88,the main callback but now we're going to
+221.04,3.24,see a much bigger Divergence between
+222.42,3.72,these two Frameworks with side effects
+224.28,3.3,and computed state in react we can
+226.14,3.239,create a side effect with the use effect
+227.58,4.14,hook again that updates the document
+229.379,3.72,title anytime the count changes we just
+231.72,3.239,need to tell it to watch the count by
+233.099,3.06,putting it in the dependencies array in
+234.959,3.241,svelte we have an entirely different
+236.159,4.201,mechanism called reactive declarations
+238.2,3.599,that start with a dollar sign and a
+240.36,3.78,colon this looks kind of weird at first
+241.799,4.5,but what it telespell to do is Rerun the
+244.14,3.78,code whenever any dependent data changes
+246.299,3.0,in this case the compiler knows that
+247.92,3.12,this code is dependent on the count
+249.299,3.72,value therefore it updates the document
+251.04,3.779,title whenever the value changes not
+253.019,3.421,only is it more concise but it also
+254.819,3.121,tends to be more reliable than react
+256.44,3.24,because it's easy to screw up the
+257.94,3.419,dependencies array and get unexpected
+259.68,3.0,results that are hard to debug that's
+261.359,3.361,just one of the reasons they call it
+262.68,4.14,useful gun but we can also use reactive
+264.72,4.02,declarations for computed state in react
+266.82,3.42,you can easily create computed state by
+268.74,3.12,simply defining a variable that's
+270.24,3.3,dependent on some State the problem is
+271.86,3.36,that this code will run every time this
+273.54,3.3,component is re-rendered therefore if
+275.22,3.6,you have an expensive computation you'll
+276.84,3.84,need to wrap this code and use memo and
+278.82,3.54,once again tell it explicitly which data
+280.68,3.6,it depends on this will cache or
+282.36,3.3,memorize the value between renders in
+284.28,3.3,svelt you don't even have to memorize
+285.66,3.78,the word memoize we can just use the
+287.58,3.6,same reactive declaration as before to
+289.44,3.18,define a new variable again it
+291.18,2.94,automatically knows to only run this
+292.62,3.06,code when the count changes that's
+294.12,3.359,pretty cool but now let's look at some
+295.68,4.44,differences in templating starting with
+297.479,4.321,conditional logic react uses jsx where
+300.12,3.299,you put your HTML in your JavaScript
+301.8,3.48,whereas spelled has its own templating
+303.419,4.201,approach where you bring JavaScript into
+305.28,3.84,your HTML jsx is one of react's great
+307.62,3.0,Innovations if you like some of the
+309.12,3.54,ideas of svelte but don't like its
+310.62,4.44,templating system a good alternative is
+312.66,4.2,sola.js which is kind of like react with
+315.06,3.48,a smelt style compiler when it comes to
+316.86,3.72,conditional logic and react we can't
+318.54,3.719,directly use an if statement because a
+320.58,3.72,function component needs to return a
+322.259,4.44,JavaScript expression that represents a
+324.3,4.44,single value to represent a basic if-el
+326.699,3.901,statement or true false situation we can
+328.74,3.36,use a ternary operator and represent
+330.6,3.72,everything with a single line of code
+332.1,3.42,now remember smelt uses a compiler which
+334.32,3.06,means it can come up with any kind of
+335.52,3.48,templating magic that it wants to it
+337.38,3.539,allows you to create if else statements
+339.0,3.539,in the HTML very similar to how you
+340.919,3.421,would in normal JavaScript it's a bit
+342.539,3.241,more verbose but more readable in my
+344.34,2.76,opinion and the readability is very
+345.78,3.06,noticeable when you have multiple
+347.1,3.36,conditions like an if else statement
+348.84,3.299,because in react you'll occasionally see
+350.46,3.239,nightmare code like this of nested
+352.139,3.361,ternaries although there are better ways
+353.699,3.601,of doing this like extracting the logic
+355.5,3.18,to its own dedicated component and now
+357.3,3.0,let's take a look at Loops the most
+358.68,3.6,common way to Loop and react is to use
+360.3,3.78,the map function on an array this allows
+362.28,3.84,you to define a callback function that
+364.08,3.839,Returns the UI for each item in that
+366.12,3.84,array in addition we can make it a key
+367.919,3.901,Loop by adding a key prop to the child
+369.96,3.6,in Silt we can Loop over an array of
+371.82,3.659,data within each Loop it creates a
+373.56,3.78,template variable for each item and then
+375.479,3.241,we can use its data inside the tags you
+377.34,3.12,make it a key Loop we can add
+378.72,3.599,parentheses with the value for the key
+380.46,3.12,inside of the each block now let's
+382.319,3.66,switch gears to the big complicated
+383.58,4.32,topic of shared State like how do I take
+385.979,3.241,one reactive value and share it
+387.9,2.88,throughout the entire component tree
+389.22,3.36,react doesn't really have a primitive
+390.78,2.94,way to do this out of the box and you'll
+392.58,3.66,typically need to bring in a state
+393.72,4.68,management solution like mobx or Redux
+396.24,4.5,or my personal favorite Joe Tai which
+398.4,4.44,means state in Japanese with Joe Tai we
+400.74,4.019,create an atom to represent a value then
+402.84,4.02,in one or more components we can use the
+404.759,4.021,use atom hook to access that value
+406.86,3.839,instead of using the built-in use
+408.78,3.359,statehook and react we can now use that
+410.699,2.821,state in multiple places because it's
+412.139,3.361,been decoupled from the component
+413.52,4.019,spelled has a similar mechanism built in
+415.5,4.919,called stores which are very similar to
+417.539,4.44,observables in libraries like rxj s we
+420.419,3.421,can create a writable store to represent
+421.979,3.72,a value what's crazy though is that we
+423.84,4.02,can then subscribe to the value of that
+425.699,4.021,store inside of any component both in
+427.86,3.119,the templates and in the JavaScript all
+429.72,2.759,we have to do is put a dollar sign in
+430.979,3.72,front of it thanks to the magic of the
+432.479,3.481,compiler as a spell user myself I can't
+434.699,3.241,even begin to tell you how much
+435.96,3.54,complexity and code this one little
+437.94,3.479,mechanism will eliminate from your code
+439.5,3.539,base it allows you to use reactive data
+441.419,3.9,throughout the entire application with
+443.039,3.72,surgical precision and zero boilerplate
+445.319,3.301,on top of that it knows when to
+446.759,3.601,automatically unsubscribe from data when
+448.62,3.359,it no longer has any listeners and that
+450.36,3.779,can be extremely important when using
+451.979,4.201,real real-time data like firestore for
+454.139,4.321,example speaking of async data let's
+456.18,4.26,talk about promises react has a new use
+458.46,3.78,hook that's currently experimental that
+460.44,3.479,can be used to unwrap promises directly
+462.24,3.359,in a component it's essentially the
+463.919,3.241,equivalent to the await keyword which
+465.599,3.54,resolves the value of the promise into
+467.16,3.72,the variable however you'll also likely
+469.139,3.661,want to show a loading State and handle
+470.88,3.719,errors one way to do that is to wrap
+472.8,3.299,this component with suspense which will
+474.599,2.94,render this loading spinner as a
+476.099,2.88,fallback while the promise is being
+477.539,3.421,resolved and then we could wrap all of
+478.979,3.66,that in an error boundary to show an
+480.96,3.359,error page if it's rejected this code is
+482.639,2.881,a bit intimidating and requires a lot of
+484.319,3.181,knowledge of react to even understand
+485.52,3.84,what the hell is going on in svelte we
+487.5,3.84,can actually unwrap promises directly in
+489.36,3.48,a template using a weight while awaiting
+491.34,3.0,show a loading spinner then when the
+492.84,3.359,number resolves show the main UI
+494.34,4.079,otherwise if there's an error show the
+496.199,3.78,error UI it's easily understandable for
+498.419,3.18,any JavaScript developer who knows
+499.979,3.06,promises and finally if you want to see
+501.599,3.361,some full stack comparisons on the
+503.039,3.78,server become a fireship pro member to
+504.96,2.82,get access to these full courses huge
+506.819,2.641,thanks to everyone who's already
+507.78,3.539,supported by work there and today is the
+509.46,3.54,last day to get 35 off a membership
+511.319,3.241,using that code below thanks for
+513.0,3.68,watching and I will see you in the next
+514.56,2.12,one

@@ -1,0 +1,67 @@
+General Topics:
+[
+  "Algorithms and Data Structures",
+  "Artificial Intelligence (AI) and Machine Learning",
+  "Computer Architecture",
+  "Data Science and Analytics",
+  "Database Systems and Management",
+  "Human-Computer Interaction (HCI)",
+  "Programming Languages and Software Development",
+  "Software Engineering and System Design",
+  "Web Development and Internet Technologies",
+  "Computer Graphics and Visualization",
+  "Theoretical Computer Science",
+  "Quantum Computing"
+]
+
+Complexity Scale:
+[
+  0.00-0.09: Elementary,
+  0.10-0.19: Middle School,
+  0.20-0.29: High School,
+  0.30-0.39: Advanced High School,
+  0.40-0.49: Introductory College,
+  0.50-0.59: Average College Lecture,
+  0.60-0.69: Advanced College,
+  0.70-0.79: Graduate Level,
+  0.80-0.89: Advanced Graduate Level,
+  0.90-1.00: PhD Level Lecture
+]
+
+Generate a JSON summary the computer science or software engineering video. The summary should include:
+
+1. A high-level synopsis labeled as "introduction".
+2. A breakdown into 5 sections, each with:
+   - A title starting with "Section x" where x is the section number from 1 to 5.
+   - A "content" field containing 4 bullet points summarizing the section.
+   - A "topics" field listing the 3 most important topics covered in the section.
+3. A global "topics" array listing 5 key descriptors (1-2 words each) of topics covered in the video.
+4. A global "generalTopics" array selecting 3 topics from the "General Topics", each associated with an exact "complexity" score based on the "Complexity Scale". The complexity score should reflect the detailed complexity level with full two-decimal-place precision.
+
+The JSON structure should strictly follow this template:
+{
+  "introduction": "High level synopsis here",
+  "sections": [
+    {
+      "title": "Section 1",
+      "content": [
+        "Bullet point 1",
+        "Bullet point 2",
+        "Bullet point 3",
+        "Bullet point 4"
+      ],
+      "topics": ["Topic1", "Topic2", "Topic3"]
+    },
+    ... (total 5 sections)
+  ],
+  "topics": ["Descriptor1", "Descriptor2", "Descriptor3", "Descriptor4", "Descriptor5"],
+  "generalTopics": [
+    {
+      "name": "Selected general topic 1",
+      "complexity": "Exact complexity float with two decimals"
+    },
+    ... (total 3 general topics)
+  ]
+}
+
+The output must follow the specified JSON structure, focusing on domain-specific terminology in the "content" sections. Use the previous "Complexity Scale" list when generating "complexity". Use the previous "General Topics" list when generating the "generalTopics" field. If the video content does not directly match a topic from this list, select the closest related topic available. 

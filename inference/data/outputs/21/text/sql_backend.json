@@ -1,0 +1,78 @@
+{
+"introduction": "Exploring the reasons behind the slow performance of SELECT \* in a database.",
+"sections": [
+{
+"title": "Section 1: Understanding the Basics of SELECT \*",
+"content": [
+"The basics of SELECT \* and its purpose.",
+"Explanation of the different types of columns in a database.",
+"Discussion on the importance of selecting only the necessary columns for optimal performance.",
+"Examples of how to use SELECT \* in a database."
+],
+"topics": ["SELECT \* basics", "Column types", "Importance of selecting only necessary columns", "Examples"]
+},
+{
+"title": "Section 2: Understanding the Impact of Page Reads on Performance",
+"content": [
+"Explanation of how page reads affect the performance of SELECT \*.",
+"Discussion on the different types of pages in a database.",
+"Explanation of how the file system, operating system, and network aspects impact page reads.",
+"Explanation of how the database engine handles page reads."
+],
+"topics": ["Page reads and performance", "Types of pages", "Impact of file system, operating system, and network aspects", "Database engine handling of page reads"]
+},
+{
+"title": "Section 3: Understanding the Role of Deserialization in Performance",
+"content": [
+"Explanation of deserialization and its purpose in a database.",
+"Discussion on how deserialization affects the performance of SELECT \*.",
+"Explanation of the different types of deserialization in a database.",
+"Examples of how to optimize deserialization for better performance."
+],
+"topics": ["Deserialization and performance", "Types of deserialization", "Examples of optimization"]
+},
+{
+"title": "Section 4: Understanding the Impact of Network Cost on Performance",
+"content": [
+"Explanation of network cost and its impact on the performance of SELECT \*.",
+"Discussion on how to minimize network cost for better performance.",
+"Explanation of the different types of network cost in a database.",
+"Examples of how to optimize network cost for better performance."
+],
+"topics": ["Network cost and performance", "Types of network cost", "Examples of optimization"]
+},
+{
+"title": "Section 5: Conclusion and Best Practices",
+"content": [
+"Summary of the key takeaways from the video.",
+"Explanation of best practices for optimizing SELECT \* performance.",
+"Discussion on the importance of understanding the underlying details of database performance.",
+"Examples of how to apply best practices in a real-world scenario."
+],
+"topics": ["Key takeaways", "Best practices for optimization", "Understanding database performance", "Real-world application"]
+}
+],
+"topics": ["Database performance", "SELECT \*", "Page reads", "Deserialization", "Network cost"],
+"general topics": [
+{
+"name": "Database Performance",
+"complexity": "3.5"
+},
+{
+"name": "SELECT \*",
+"complexity": "2.8"
+},
+{
+"name": "Page Reads",
+"complexity": "3.2"
+},
+{
+"name": "Deserialization",
+"complexity": "3.8"
+},
+{
+"name": "Network Cost",
+"complexity": "3.6"
+}
+]
+}

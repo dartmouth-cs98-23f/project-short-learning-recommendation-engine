@@ -1,0 +1,218 @@
+second,duration,transcript
+0.08,3.04,let's talk about data science and some
+1.76,3.2,of the other related terms you may have
+3.12,3.279,heard such as predictive analytics
+4.96,3.679,machine learning
+6.399,3.681,advanced analytics and others
+8.639,3.281,so let's start with the textbook
+10.08,4.08,definition of data science
+11.92,6.4,so data science is the field of study
+14.16,6.24,that that involves extracting
+18.32,3.039,knowledge
+20.4,3.52,and
+21.359,2.561,insights
+24.32,3.6,from
+26.56,4.36,noisy
+27.92,3.0,data
+31.199,4.081,and then turning those insights
+33.6,3.36,into
+35.28,4.08,actions
+36.96,3.759,that our business or organization can
+39.36,3.359,take
+40.719,4.561,okay so let's dig into it a little bit
+42.719,5.041,more and discuss what are the different
+45.28,4.56,areas that are covered by data science
+47.76,3.84,so really data science is the
+49.84,3.199,intersection between three different
+51.6,3.76,disciplines
+53.039,4.961,we start with
+55.36,4.24,computer science
+58.0,4.559,then
+59.6,6.72,we also cover
+62.559,5.441,the area of mathematics
+66.32,4.159,and then what i think is the most
+68.0,2.479,important
+70.84,3.4,is business
+74.64,4.24,expertise
+77.36,4.399,so the intersection of these three
+78.88,4.559,disciplines is data science
+81.759,4.0,and true data science initiatives
+83.439,5.281,involve collaboration across all these
+85.759,2.961,three different areas
+89.119,4.481,okay so now let's touch on the different
+91.36,4.24,types of data science that you can do
+93.6,3.76,now what we need to understand here is
+95.6,3.04,that we have different data science
+97.36,2.96,methods
+98.64,3.519,for different questions that we might
+100.32,4.079,ask in an organization
+102.159,4.561,and these questions can vary by
+104.399,6.801,complexity and the value that we get out
+106.72,4.48,of them so let's chart them here
+112.84,4.2,by complexity
+115.759,3.841,and
+117.04,2.56,value
+120.24,4.08,okay so the first one that we have here
+122.479,4.32,is
+124.32,4.639,descriptive
+126.799,4.24,analytics
+128.959,4.161,so this is really about what is
+131.039,4.081,happening in my business right and it
+133.12,3.199,involves having accurate data collection
+135.12,3.44,to make sure that we know what's
+136.319,3.521,happening so a a good question we could
+138.56,4.16,ask here is
+139.84,6.399,well did sales go up or down
+142.72,3.519,the next level is
+146.72,4.48,diagnostic
+148.56,2.64,analytics
+151.599,5.041,and this is more about why did something
+154.08,4.48,happen so why did sales go up or down
+156.64,3.84,and it involves
+158.56,4.0,drilling down to the root cause of our
+160.48,6.24,problem
+162.56,4.16,now the next one that we have is
+167.519,2.881,predictive
+168.84,3.72,analytics
+170.4,3.52,so this is about what is likely to
+172.56,3.6,happen next
+173.92,4.16,right so what will our sales performance
+176.16,3.359,be next quarter
+178.08,3.76,and it involves using historical
+179.519,5.841,patterns in our uh in our data to
+181.84,5.52,predict outcomes in the future
+185.36,4.48,and then finally
+187.36,3.92,we have
+189.84,4.08,prescriptive
+191.28,2.64,analytics
+194.64,4.48,so this is about what do i need to do
+196.48,5.039,next what is the recommended best action
+199.12,4.479,for a particular outcome so question we
+201.519,4.241,could ask here is what do i need to do
+203.599,3.521,to improve sales by 10
+205.76,2.24,right
+207.12,2.8,okay
+208.0,5.2,so now we can talk about how data
+209.92,6.08,science is done and who actually does it
+213.2,5.759,so let's look at the data science life
+216.0,6.56,cycle and the first thing that we always
+218.959,6.081,must start with is
+222.56,2.48,business
+225.36,2.799,understanding
+229.76,4.16,so this is really critical to make sure
+231.92,5.28,that we're asking the right question
+233.92,4.48,before we go down a lengthy data science
+237.2,3.2,initiative
+238.4,3.68,and this is where you can see the having
+240.4,2.96,the business expertise and the domain
+242.08,3.04,expertise
+243.36,4.32,can be incredibly critical to make sure
+245.12,5.119,that we're asking the right questions
+247.68,5.52,okay so once we've defined that
+250.239,6.321,we can move on to
+253.2,3.36,data mining
+256.959,3.68,so this is this is the process of
+258.959,3.68,actually going out into our data
+260.639,3.601,landscape and procuring the data that we
+262.639,4.0,need for our analysis
+264.24,5.6,so once we've done that
+266.639,3.201,we can move on to
+269.919,3.601,data
+271.04,2.48,cleaning
+274.16,3.52,so
+274.96,3.6,the the reality of the marketplace is
+277.68,3.519,that
+278.56,4.639,once we when we find data it's probably
+281.199,4.881,not in the best format that we need it
+283.199,5.44,in and it probably has uh some some
+286.08,4.64,issues with it right it might have rows
+288.639,3.761,that have missing values it might have
+290.72,3.36,duplicates in it so there's some
+292.4,4.32,preparation and cleaning that we have to
+294.08,6.24,do before it's ready for our analysis
+296.72,6.88,so once we've done that cleansing
+300.32,3.28,we can move on to
+303.84,2.88,exploration
+308.88,4.24,okay so this is the part of the process
+311.52,3.76,that allows us to use different
+313.12,3.68,analytical tools that can start helping
+315.28,2.88,us answer some of
+316.8,3.44,the the types of questions that i
+318.16,4.319,mentioned here earlier
+320.24,3.84,and if we actually want to get into some
+322.479,3.521,of these higher value questions like
+324.08,4.08,predictive and prescriptive
+326.0,4.32,then we must start using advanced
+328.16,4.4,analytical tools such as
+330.32,3.84,machine learning tools
+332.56,3.52,that leverage massive amounts of
+334.16,4.16,computing power and massive amounts of
+336.08,4.24,high quality data
+338.32,4.8,to make predictions and prescribe
+340.32,5.12,actions for the future
+343.12,4.079,now once we've done our exploration and
+345.44,3.36,perhaps our advanced
+347.199,3.921,analytics
+348.8,5.04,what do we do next well we need to
+351.12,2.72,visualize
+354.32,4.48,our insights and outcomes of our
+356.56,3.12,analysis
+358.8,3.04,okay
+359.68,3.04,now i want to quickly touch on who does
+361.84,2.56,what
+362.72,4.0,in this life cycle
+364.4,3.519,so in an organization you may have roles
+366.72,3.28,like
+367.919,3.601,a business analyst
+370.0,3.6,you might have
+371.52,3.92,data engineers
+373.6,4.719,and then you might have
+375.44,3.599,data scientists
+378.319,2.481,so
+379.039,4.081,business analysts
+380.8,4.0,are obviously involved in formulating
+383.12,3.199,the questions they have the domain
+384.8,3.839,expertise they can help with the
+386.319,4.241,business understanding but they're also
+388.639,4.481,involved with
+390.56,4.96,visualizing our insights in a way that's
+393.12,3.6,useful for the business right
+395.52,3.2,and then we have folks like data
+396.72,5.36,engineering folks so these are the
+398.72,5.44,people that can help us find the data
+402.08,3.44,clean the data
+404.16,4.0,and then also help with some of the
+405.52,5.28,exploration
+408.16,4.24,we move on to our data scientists so
+410.8,3.6,these are the people that will really
+412.4,4.0,help us with the exploration they'll
+414.4,3.519,help us with the advanced machine
+416.4,3.359,learning techniques
+417.919,3.68,and they'll also assist in the
+419.759,3.761,visualization
+421.599,4.16,so you can see there's there's some
+423.52,3.6,overlap between the roles and that's why
+425.759,3.44,it's critical
+427.12,3.199,to have collaboration
+429.199,2.641,across
+430.319,3.6,these roles
+431.84,4.24,and what you also start seeing nowadays
+433.919,3.68,in the marketplace is that sometimes
+436.08,3.04,business analysts have to do some
+437.599,2.88,machine learning they have to help out
+439.12,3.44,with exploration
+440.479,4.321,data scientists sometimes need to go and
+442.56,4.16,find the data on their own so there's a
+444.8,3.36,lot of overlap and
+446.72,4.0,these different roles must collaborate
+448.16,4.8,with each other
+450.72,4.8,okay so i hope you can see now how the
+452.96,4.799,data science life cycle can help us take
+455.52,3.679,noisy data turn it into knowledge and
+457.759,4.0,insights and then turn it into
+459.199,3.921,meaningful action for our business
+461.759,3.201,thank you
+463.12,3.6,if you have questions please drop us a
+464.96,3.76,line below and if you want to see more
+466.72,5.12,videos like this in the future please
+468.72,3.12,like and subscribe

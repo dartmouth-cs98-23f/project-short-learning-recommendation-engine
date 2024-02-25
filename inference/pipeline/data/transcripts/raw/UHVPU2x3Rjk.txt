@@ -1,0 +1,255 @@
+second,duration,transcript
+1.159,5.14,you kind of mentioned the different
+4.38,4.71,maybe radical computational medium like
+6.299,4.831,biological and there's other ideas so
+9.09,4.53,there's a lot of spaces in a6 or
+11.13,4.53,domain-specific and then there could be
+13.62,4.649,quantum computers and wood so we can
+15.66,4.65,think of all those different mediums and
+18.269,4.711,types of computation what's the
+20.31,5.939,connection between swapping out
+22.98,4.859,different hardware systems in the
+26.249,3.391,instruction set do you see those as
+27.839,4.321,disjoint or they fundamentally coupled
+29.64,7.29,yeah so what's so kind of if we go back
+32.16,6.449,to the history you know when Moore's Law
+36.93,4.74,is in full effect and you're getting
+38.609,5.61,twice as many transistors every couple
+41.67,4.29,of years you know kind of the challenge
+44.219,3.39,for computer designers is how can we
+45.96,4.11,take advantage of that how can we turn
+47.609,5.07,those transistors into better computers
+50.07,6.66,faster typically and so there was an era
+52.679,7.171,I guess in the 80s and 90s where
+56.73,6.09,computers were doubling performance
+59.85,6.57,every 18 months and if you weren't
+62.82,6.54,around then what would happen is you had
+66.42,5.19,your computer and your friend's computer
+69.36,4.56,which was like a year year and a half
+71.61,4.53,newer and it was much faster than your
+73.92,4.17,computer and you he he or she could get
+76.14,3.54,their work done much faster than your
+78.09,3.45,typical achiever so people took their
+79.68,4.979,computers perfectly good computers and
+81.54,5.609,threw them away to buy a newer computer
+84.659,5.1,because the computer one or two years
+87.149,4.591,later was so much faster so that's what
+89.759,4.89,the world was like in the 80s and 90s
+91.74,5.64,well with the slowing down of Moore's
+94.649,5.07,Law that's no longer true right he's not
+97.38,4.26,now with you know not death side
+99.719,4.86,computers with the laptops I only get a
+101.64,5.549,new laptop when it breaks right well
+104.579,3.96,damn the disk broke or this display
+107.189,3.18,broke I got to buy a new computer but
+108.539,4.08,before you would throw them away because
+110.369,5.221,it just they were just so sluggish
+112.619,8.07,compared to the latest computers so
+115.59,8.73,that's you know that's a huge change of
+120.689,6.091,what's gone on so but yes since this
+124.32,5.43,lasted for decades kind of programmers
+126.78,6.72,and maybe all of society is used to
+129.75,5.19,computers getting faster regularly it we
+133.5,3.27,now now believe those of
+134.94,4.02,who are in computer design it's called
+136.77,4.94,computer architecture that the path
+138.96,6.75,forward is instead is to add
+141.71,6.15,accelerators that only work well for
+145.71,6.15,certain applications
+147.86,6.7,so since Moore's law is slowing down
+151.86,5.19,we don't think general-purpose computers
+154.56,4.41,are and get a lot faster so the Intel
+157.05,3.36,process of the world are not going to
+158.97,4.5,haven't been getting a lot faster
+160.41,3.6,they've been barely improving like a few
+163.47,2.76,percent a year
+164.01,4.62,it used to be doubling every 18 months
+166.23,4.65,and now it's doubling every 20 years so
+168.63,4.44,it was just shocking so to be able to
+170.88,4.47,deliver on what Moore's Law used to do
+173.07,5.27,we think what's going to happen what is
+175.35,5.34,happening right now is people adding
+178.34,6.0,accelerators to their microprocessors
+180.69,7.38,that only work well for some domains and
+184.34,5.86,by sheer coincidence at the same time
+188.07,3.9,that this is happening has been this
+190.2,6.57,revolution in artificial intelligence
+191.97,8.04,called machine learning so with as I'm
+196.77,5.73,sure your other guests have said you
+200.01,4.949,know a I had these two competing schools
+202.5,4.05,of thought is that we could figure out
+204.959,4.471,artificial intelligence by just writing
+206.55,5.79,the rules top-down or that was wrong you
+209.43,4.47,had to look at data and infer what the
+212.34,4.41,rules are the machine learning and
+213.9,4.53,what's happened in the last decade or
+216.75,4.739,eight years this machine learning has
+218.43,5.25,won and it turns out that machine
+221.489,5.431,learning the hardware you built for
+223.68,6.99,machine learning is pretty much multiply
+226.92,5.24,the matrix multiply is a key feature for
+230.67,5.46,the way people machine learning is done
+232.16,6.01,so that's a godsend for computer
+236.13,4.02,designers we know how to make metrics
+238.17,3.78,multiply run really fast so
+240.15,3.66,general-purpose microprocessors are
+241.95,3.539,slowing down we're adding accelerators
+243.81,4.05,for machine learning that fundamentally
+245.489,3.451,are doing matrix multiplies much more
+247.86,4.02,efficiently than general-purpose
+248.94,4.86,computers have done so we have to come
+251.88,3.69,up with a new way to accelerate things
+253.8,3.18,the danger of only accelerating one
+255.57,4.139,application is how important is that
+256.98,4.59,application turns a translate machine
+259.709,6.121,learning gets used for all kinds of
+261.57,6.48,things so serendipitously we found
+265.83,3.059,something to accelerate that's widely
+268.05,3.299,applicable
+268.889,3.541,and we don't even we're in the middle of
+271.349,2.79,this revolution of machine learning
+272.43,3.78,we're not sure what the limits of
+274.139,5.131,machine learning are so this has been
+276.21,5.699,kind of a godsend if you're going to be
+279.27,6.269,able to Excel deliver on improved
+281.909,6.0,performance as long as people are moving
+285.539,4.261,their programs to be embracing more
+287.909,3.84,machine learning we know how to give
+289.8,3.199,them more performance even as Moore's
+291.749,5.22,Law is slowing down and
+292.999,6.361,counter-intuitively the machine learning
+296.969,5.461,mechanism you can say is domain-specific
+299.36,7.649,but because it's leveraging data it's
+302.43,7.38,actually could be very broad in terms of
+307.009,4.75,in terms of the domains that could be
+309.81,4.979,applied in yeah that's exactly right
+311.759,4.351,sort of it's almost sort of people
+314.789,4.56,sometimes talk about the idea of
+316.11,5.579,software 2.0 we're almost taking another
+319.349,5.461,step up in the abstraction layer in
+321.689,5.1,designing machine learning systems
+324.81,3.84,because now you're programming in the
+326.789,3.78,space of data in the space of hyper
+328.65,4.59,parameters it's changing fundamentally
+330.569,5.611,the nature of programming and so the
+333.24,4.679,specialized devices that that accelerate
+336.18,3.509,the performance especially neural
+337.919,5.851,network based machine learning systems
+339.689,6.361,might become the new general yes so the
+343.77,5.34,this thing that's interesting point out
+346.05,6.089,these are not coral these are not tied
+349.11,5.669,together the it's enthusiasm about
+352.139,4.921,machine learning about creating programs
+354.779,3.75,driven from data that we should figure
+357.06,3.539,out the answers from data rather than
+358.529,4.5,kind of top down which classically the
+360.599,3.901,way most programming is done and the way
+363.029,4.11,artificial intelligent used to be done
+364.5,6.36,that's a movement that's going on at the
+367.139,5.131,same time coincidentally and the the
+370.86,4.38,first word machine learnings of machines
+372.27,5.19,right so that's going to increase the
+375.24,4.409,demand for computing because instead of
+377.46,4.199,programmers being smart writing those
+379.649,4.14,those things down we're going to instead
+381.659,4.021,use computers to examine a lot of data
+383.789,6.66,to kind of create the programs that's
+385.68,5.969,the idea and remarkably this gets used
+390.449,3.361,for all kinds of things very
+391.649,3.811,successfully the image recognition the
+393.81,6.659,language translation the game playing
+395.46,7.079,and you know he gets into pieces of the
+400.469,2.341,software stack like databases and stuff
+402.539,1.861,like that
+402.81,3.48,we're not quite sure how journal
+404.4,3.66,purposes but that's going on independent
+406.29,3.42,this hardware stuff what's happening on
+408.06,3.27,the hardware side is Moore's law is
+409.71,4.35,slowing down right when we need a lot
+411.33,4.77,more cycles it's failing us it's failing
+414.06,3.81,us right when we need it because there's
+416.1,4.44,going to be a greater in peace a greater
+417.87,4.08,increase in computing and then this idea
+420.54,4.17,that we're going to do so-called
+421.95,4.77,domain-specific here's a domain that
+424.71,5.34,your greatest fear is you'll make this
+426.72,6.11,one thing work and that'll help you know
+430.05,4.89,5% of the people in the world well this
+432.83,3.82,this looks like it's a very general
+434.94,5.55,purpose thing so the timing is
+436.65,5.91,fortuitous that if we can perhaps if we
+440.49,4.89,can keep building hardware that will
+442.56,6.18,accelerate machine learning the neural
+445.38,5.36,networks that'll beat the timing be
+448.74,5.1,right that that neural network
+450.74,5.71,revolution will transform your software
+453.84,4.02,the so called software 2.0 and the
+456.45,3.21,software the future will be very
+457.86,4.559,different from the software the past and
+459.66,3.96,just as our microprocessors even though
+462.419,4.711,we're still going to have that same
+463.62,4.98,basic risk instructions to run a big
+467.13,3.81,pieces of the software stack like user
+468.6,4.77,interfaces and stuff like that we can
+470.94,3.99,accelerate the the kind of a small piece
+473.37,3.75,that's computationally intensive it's
+474.93,4.2,not lots of lines of code but there it
+477.12,4.08,takes a lot of cycles to run that code
+479.13,4.08,that that's going to be the accelerator
+481.2,5.67,piece and so this that's what makes us
+483.21,6.54,from a computer designer's perspective a
+486.87,4.95,really interesting decade but Hennessy
+489.75,4.08,and I talked about in the title of our
+491.82,5.58,Turing warrant speech is a new golden
+493.83,6.899,age we we see this as a very exciting
+497.4,5.19,decade much like when we were assistant
+500.729,3.511,professors and the wrists stuff was
+502.59,2.91,going on that was a very exciting time
+504.24,3.44,was where we were changing what was
+505.5,4.889,going on we see this happening again
+507.68,5.289,tremendous opportunities of people
+510.389,4.141,because we're fundamentally changing how
+512.969,4.051,software is built and how we're running
+514.53,4.77,it so which layer of the abstraction do
+517.02,4.8,you think most of the acceleration might
+519.3,5.01,be happening if you look in the next ten
+521.82,4.29,years that Google is working on a lot of
+524.31,3.93,exciting stuff with the TPU sort of
+526.11,5.43,there's a closer to the hardware that
+528.24,5.25,could be optimizations around the IROC
+531.54,3.99,closer to the instruction set that could
+533.49,3.12,be optimization at the compiler level it
+535.53,3.809,could be even at the high
+536.61,4.8,level software stack yeah it's got to be
+539.339,4.381,I mean if you think about the the old
+541.41,4.47,risks this debate it was both
+543.72,5.39,it was software hardware it was the
+545.88,5.28,compilers improving as well as the
+549.11,5.349,architecture improving and that that's
+551.16,5.72,likely to be the way things are now with
+554.459,5.25,machine learning they they're using
+556.88,6.519,domain-specific languages the languages
+559.709,5.13,like tensorflow and pi torch are very
+563.399,3.93,popular with the machine learning people
+564.839,4.111,that those are the raising the level of
+567.329,3.231,abstraction it's easier for people to
+568.95,5.19,write machine learning in these
+570.56,5.17,domain-specific languages like like pi
+574.14,4.11,torch in tensorflow
+575.73,5.01,so we're the most optimization right
+578.25,4.56,yeah and so the and so they'll be both
+580.74,4.529,the compiler piece and the hardware
+582.81,4.56,piece underneath it so as you kind of
+585.269,4.711,the fatal flaw for hardware people is to
+587.37,4.709,create really great hardware but not
+589.98,3.81,have brought along the compilers and
+592.079,3.871,what we're seeing right now in the
+593.79,4.68,marketplace because of this enthusiasm
+595.95,5.19,around hardware for machine learning is
+598.47,4.71,getting you know probably a billions of
+601.14,3.75,dollars invested in start-up companies
+603.18,4.529,we're seeing startup companies go
+604.89,4.59,belly-up because they focus on the
+607.709,4.281,hardware but didn't bring the software
+609.48,2.51,stack along
+618.22,2.06,you

@@ -1,0 +1,28 @@
+second,duration,transcript
+2.899,4.091,"Imagine a Neural Network as a kind of
+black box, which takes one or multiple"
+6.99,4.8,"inputs like the sensors of a self-driving
+car, processing them into one or multiple"
+11.79,4.11,"outputs like the controls of that car.
+The neural network itself consists of"
+15.9,4.469,"many small units called ""Neurons"". These
+Neurons are grouped into several layers."
+20.369,4.351,Units of one layer interact with the Neurons of the next layer through
+24.72,4.26,"weighted connections"" which really are just connections with a real-valued number"
+28.98,3.029,"attached to them.
+A Neuron takes the value of a connected"
+32.009,3.48,"Neuron and multiplies it with their
+connection's weight. The sum of all"
+35.489,3.57,"connected Neurons and the Neuron's bias
+value is then put into a so-called"
+39.059,3.811,"activation function"", which simply
+mathematically transforms the value"
+42.87,3.84,"before it finally can be passed on to
+the next Neuron. This way the inputs are"
+46.71,3.54,"propagated through the whole network.
+That's pretty much all the network does"
+50.25,4.23,"but the real deal behind neural networks
+is to find the right weights in order to"
+54.48,4.23,"get the right results. This can be done
+through a wide range of techniques"
+58.71,5.599,such as machine learning however that's a topic for another minute.

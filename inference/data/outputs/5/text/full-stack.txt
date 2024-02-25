@@ -1,0 +1,61 @@
+{
+  "introduction": "The video tutorial provides a step-by-step guide to building a job board app as a real startup. The app will pull job data from a single API, filter the jobs, and display them on a simple React frontend with Material UI. The app will use an Express server for data storage and a Node cron job to fetch and refresh the job feed at regular intervals. The tutorial covers the frontend development, API integration, and data filtering algorithm.",
+  "sections": [
+    {
+      "title": "Section 1: Frontend Development",
+      "content": [
+        "Introduction to React and Material UI.",
+        "Setting up a new React app and installing Material UI.",
+        "Creating components for jobs and a single job.",
+        "Styling the job list and job components."
+      ],
+      "topics": ["React", "Material UI", "Job List Styling", "Job Component Styling"]
+    },
+    {
+      "title": "Section 2: API Integration",
+      "content": [
+        "Overview of the job board API.",
+        "Fetching job data from the API.",
+        "Filtering job data based on job level and other criteria.",
+        "Manipulating job data for display on the frontend."
+      ],
+      "topics": ["Job Board API", "Job Data Fetching", "Job Data Filtering", "Job Data Manipulation"]
+    },
+    {
+      "title": "Section 3: Data Storage and Cron Job",
+      "content": [
+        "Using Redis for data storage.",
+        "Implementing a Node cron job to fetch and refresh job data.",
+        "Ensuring data accuracy and up-to-date information.",
+        "Scaling the app for multiple job board APIs."
+      ],
+      "topics": ["Redis", "Node Cron Job", "Data Accuracy", "Scalability"]
+    },
+    {
+      "title": "Section 4: Algorithm Development",
+      "content": [
+        "Designing a filtering algorithm for job data.",
+        "Analyzing job data for job level and other criteria.",
+        "Implementing the algorithm on the backend.",
+        "Testing and refining the algorithm for accuracy."
+      ],
+      "topics": ["Algorithm Design", "Job Data Analysis", "Algorithm Implementation", "Algorithm Testing"]
+    },
+    {
+      "title": "Section 5: Full Stack Development",
+      "content": [
+        "Integrating the frontend, API, and data storage components.",
+        "Testing and debugging the app.",
+        "Deploying the app to a production environment.",
+        "Scaling the app for future growth and expansion."
+      ],
+      "topics": ["Full Stack Development", "Testing and Debugging", "Deployment", "Scalability"]
+    }
+  ],
+  "topics": ["React", "Material UI", "Job Board API", "Redis", "Node Cron Job", "Algorithm Design", "Job Data Analysis", "Algorithm Implementation", "Algorithm Testing", "Full Stack Development", "Testing and Debugging", "Deployment", "Scalability"],
+  "generalTopics": [
+    {"topic": "Web Development and Internet Technologies", "complexity": 0.75},
+    {"topic": "Software Engineering and System Design", "complexity": 0.85},
+    {"topic": "Data Science and Analytics", "complexity": 0.65}
+  ]
+}

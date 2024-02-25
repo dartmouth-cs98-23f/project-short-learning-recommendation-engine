@@ -1,0 +1,70 @@
+second,duration,transcript
+0.24,4.64,data driven documents or d3 is a
+3.12,3.759,javascript library for creating
+4.88,3.92,interactive data visualizations with
+6.879,4.161,scalable vector graphics if you've ever
+8.8,3.919,been to a website that has a graph map
+11.04,4.08,scatter plot histogram dependency
+12.719,4.56,diagram b swarm tree map or pie chart
+15.12,4.72,it's probably powered by d3 under the
+17.279,4.881,hood it was created in 2011 with the
+19.84,4.48,goal of generating svg graphics from
+22.16,4.64,data drawing a data visualization by
+24.32,4.08,hand is extremely difficult with d3 you
+26.8,3.6,start with some input data then write
+28.4,3.679,some javascript to programmatically draw
+30.4,3.76,the graphic for you which can then be
+32.079,3.761,made interactive with things like labels
+34.16,3.76,and controls and when the underlying
+35.84,4.16,data changes it can interpolate and
+37.92,4.08,animate between values resulting in a
+40.0,3.92,beautiful visual for the end user that's
+42.0,4.16,built entirely on web standards that you
+43.92,5.04,already know like html css and
+46.16,4.879,javascript its api allows you to select
+48.96,3.68,and manipulate items in the dom not much
+51.039,3.52,different than something like jquery
+52.64,3.919,what makes d3 different is that you can
+54.559,3.84,set properties as functions that
+56.559,3.921,automatically draw different graphics
+58.399,3.761,based on your data to get started you'll
+60.48,3.999,first want to grab an element from the
+62.16,4.72,dom with the select method like an empty
+64.479,4.481,svg you could then draw a single shape
+66.88,4.0,inside of it with the append method and
+68.96,3.76,customize its appearance by chaining the
+70.88,3.919,attribute method to it that draws a
+72.72,4.0,single shape but the real power of d3
+74.799,4.0,comes into play when you attach data to
+76.72,3.92,a selection instead of using a for loop
+78.799,4.0,to draw a bunch of shapes the select all
+80.64,3.76,method allows you to describe how to
+82.799,3.521,draw shape making your code more
+84.4,3.52,declarative you can then attach data to
+86.32,3.52,it in the form of an array or an
+87.92,3.839,external file and it will draw a shape
+89.84,4.319,for every point in your data set each
+91.759,4.641,point has three possible states enter
+94.159,4.401,update and exit enter is when you would
+96.4,4.079,initially draw your shape but d3 also
+98.56,3.919,keeps track of changes to the data set
+100.479,4.161,allowing you to react when data is
+102.479,3.92,updated or removed it also provides a
+104.64,3.2,bunch of features to make your data look
+106.399,3.441,beautiful like helpers that
+107.84,4.639,automatically draw scales along the x
+109.84,4.639,and y axis based on the domain and range
+112.479,4.0,of the data or you might use transition
+114.479,3.92,to create an animation as each data
+116.479,3.6,point is added to the chart and finally
+118.399,3.921,you might listen to events to add
+120.079,5.201,tooltips or other interactive elements
+122.32,4.399,to your chart this has been d3js in 100
+125.28,3.28,seconds if you want to see more short
+126.719,3.441,videos like this hit the like button and
+128.56,3.92,subscribe and if you want to go beyond
+130.16,4.32,100 seconds there's a new fireship pro
+132.48,4.0,lesson about building a real-time chart
+134.48,3.92,with d3 and firestore thanks for
+136.48,4.92,watching and i will see you in the next
+138.4,3.0,one

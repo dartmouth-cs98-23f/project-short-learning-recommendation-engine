@@ -1,0 +1,1055 @@
+second,duration,transcript
+0.0,4.319,over the past few months a lot of people
+2.28,4.74,have asked me about the creative process
+4.319,4.681,behind my videos like what software I
+7.02,4.26,use and how some particular animations
+9.0,4.62,were brought to life this is why I
+11.28,3.6,decided to make a dedicated video where
+13.62,3.659,I would share with you some of my
+14.88,4.62,secrets and use animations from my
+17.279,4.321,previous videos as illustrative examples
+19.5,6.26,just to walk you through how they were
+21.6,4.16,done if you're interested stay tuned
+31.439,3.96,before we dive deeper into the
+33.059,4.561,animations themselves let me address one
+35.399,4.98,of the most common questions I get and
+37.62,4.86,that is what software do I use here's
+40.379,4.261,the thing unfortunately there is no
+42.48,5.04,ultimate tool that will help you create
+44.64,5.16,a video from start to finish instead
+47.52,4.26,every software is made for specific
+49.8,3.3,purposes and thus has its own
+51.78,3.66,limitations
+53.1,5.099,that's why my workflow is almost always
+55.44,5.16,some combination of many programs and
+58.199,4.68,packages that I use depending on the
+60.6,4.32,problem at hand so I've prepared the
+62.879,4.681,whole list of software that I use in
+64.92,5.22,video production and when exactly I use
+67.56,5.76,each of them starting with Adobe After
+70.14,4.62,Effects this is my main Workhorse that I
+73.32,4.02,use for the majority of simple
+74.76,4.98,animations as well as for composing the
+77.34,5.34,results of other programs into the final
+79.74,5.28,video to me after effects offers an
+82.68,4.079,optimal balance between capabilities and
+85.02,4.86,usability I don't really need to create
+86.759,5.281,any realistic explosions key in fancy
+89.88,4.32,color correction 3D tracking or anything
+92.04,4.56,like that for this purpose there are
+94.2,4.8,other dedicated applications much more
+96.6,4.44,powerful than After Effects but using
+99.0,4.56,them for simpler stuff would be an
+101.04,5.52,Overkill like trying to cut a paper with
+103.56,5.28,a chainsaw for example I can create the
+106.56,5.28,text stylize it to globe with gradient
+108.84,5.4,make it appear on the screen add an
+111.84,5.76,image that would pop up wiggle around
+114.24,5.699,and gradually change its Hue and finally
+117.6,5.519,make a smooth transition out of the
+119.939,6.121,scene within just a few clicks
+123.119,4.801,number two python now this is where
+126.06,4.38,things get interesting unfortunately
+127.92,4.38,scripting in After Effects is not as
+130.44,4.08,powerful as convenient as compared to
+132.3,5.22,some other programs yes technically
+134.52,5.04,there is a JavaScript API but honestly I
+137.52,3.6,found it to be quite unusable and there
+139.56,2.88,is only so much you can do without
+141.12,3.6,scripting
+142.44,3.78,create a pair of circles that would
+144.72,4.2,wiggle around while always being
+146.22,5.4,connected by a line easy
+148.92,5.039,but creating a hundred of such circles
+151.62,4.259,and lines that would form a wiggling
+153.959,3.78,graph with specified properties
+155.879,3.901,optimally positioned in a
+157.739,3.181,two-dimensional space is pretty much
+159.78,2.7,impossible
+160.92,3.48,this is why when I need to create
+162.48,4.979,something that can't really be done by
+164.4,4.44,hand I have to rely on other tools that
+167.459,3.601,would allow me to make visualizations
+168.84,4.5,programmatically taking advantage of
+171.06,5.039,mathematical functions heavy numerical
+173.34,4.56,calculations variables Loops recursion
+176.099,3.901,stuff like that typically I do
+177.9,3.66,everything in Python since this is the
+180.0,4.08,programming language I'm most familiar
+181.56,4.8,with and it has a few great modules for
+184.08,3.96,creating visualizations but hey if you
+186.36,4.739,have a lot of experience in other
+188.04,5.04,languages like C plus or Julia and would
+191.099,3.901,strongly prefer to use them instead
+193.08,4.92,there are some really great solutions
+195.0,5.34,for them as well the choice of the exact
+198.0,4.86,tool doesn't really matter anyway in my
+200.34,4.44,work I mostly use two python packages
+202.86,3.959,the first one is called many it was
+204.78,4.44,originally developed by Grand Sanderson
+206.819,3.961,also known as three blue and brown who
+209.22,3.9,I'm sure most of you have heard about
+210.78,4.319,today there is a rapidly developing
+213.12,4.56,version of many maintained by the
+215.099,4.381,community I've used it extensively in my
+217.68,4.32,earlier videos for all sorts of
+219.48,4.08,mathematical animations but I just kept
+222.0,3.959,bumping into things that I couldn't
+223.56,4.739,Implement in manim for example drawing
+225.959,4.92,gradient lines colored by coordinate
+228.299,5.101,Plus at times I found the workflow to be
+230.879,4.86,tedious and not really intuitive this is
+233.4,4.74,why about 10 months ago I gradually
+235.739,4.86,began to switch to another visualization
+238.14,4.2,module called matplotlib I'm sure most
+240.599,3.42,of you probably recognized that name
+242.34,3.899,because it's like the most popular
+244.019,4.681,solution for plotting or data
+246.239,5.28,visualization in Python what is less
+248.7,5.52,known however is that method lip is not
+251.519,4.261,limited to simple static plots like the
+254.22,3.78,ones you would create for a research
+255.78,3.9,paper in fact it has some of the most
+258.0,4.199,amazing animation capabilities
+259.68,4.799,personally I find Matlock lip to be much
+262.199,4.201,more intuitive compared to manim and
+264.479,4.741,although it is more low level in a way
+266.4,5.4,so that the same animation takes up more
+269.22,4.56,lines of code it gives me much more
+271.8,4.38,control and much more freedom over
+273.78,4.74,manipulating individual elements on the
+276.18,4.26,screen on a frame by frame basis so
+278.52,4.739,nowadays whenever I need to create an
+280.44,5.28,animation of a plot being drawn or
+283.259,4.38,visualize some complex system beat an
+285.72,4.259,icing model or an artificial neural
+287.639,3.961,network I use Matlock lab further in the
+289.979,4.381,video we will take a look at a few
+291.6,4.86,examples of how exactly it is done one
+294.36,4.44,thing that I still invariably do in many
+296.46,4.14,however is these types of graph
+298.8,4.619,animations this would certainly be
+300.6,5.58,possible to recreate in matplotlib but
+303.419,4.681,manim just has got such an amazing out
+306.18,4.14,of the box solution for graph theory
+308.1,5.099,that I can't ignore it within just a few
+310.32,5.34,lines of code it is possible to draw a
+313.199,4.741,graph object from Network X and make it
+315.66,4.86,wiggle number three blender
+317.94,4.86,unfortunately both After Effects and
+320.52,4.5,python Solutions have very limited
+322.8,4.44,capabilities of working with all three
+325.02,5.459,dimensions so whenever I need to create
+327.24,6.36,something in 3D B neurons mice running
+330.479,5.581,in mazes or fancy surface plots I use
+333.6,4.319,blender it is completely free and open
+336.06,4.32,source but that doesn't make it less
+337.919,5.461,powerful additionally blender has got an
+340.38,4.74,amazing python API which means it is
+343.38,4.68,possible to create some 3D
+345.12,5.4,visualizations programmatically as well
+348.06,4.979,these three pieces of software After
+350.52,4.739,Effects Python and blender are the
+353.039,4.081,backbone of my animation workflow but
+355.259,4.021,there are a few other programs mostly
+357.12,4.2,from the Adobe suite that I use every
+359.28,3.9,now and then at different stages of
+361.32,4.2,video production for example Adobe
+363.18,4.56,Illustrator is my go-to Vector editor
+365.52,4.44,when I need to draw something like a
+367.74,4.2,simple asset or a diagram the good thing
+369.96,4.62,about it is that it works seamlessly
+371.94,5.039,with Adobe After Effects so I can use
+374.58,4.86,Illustrator files to drive some
+376.979,4.741,animations and whenever I need to change
+379.44,4.14,the source in illustrator things will
+381.72,4.62,automatically be updated in After
+383.58,5.76,Effects as well Photoshop is mostly for
+386.34,4.979,thumbnails and minor raster work like
+389.34,4.799,separating a subject from a background
+391.319,5.1,or color correcting by the way just like
+394.139,4.981,illustrator Photoshop integrates nicely
+396.419,4.741,with After Effects Adobe Premiere Pro
+399.12,4.079,now although After Effects is certainly
+401.16,4.62,good for animating it is virtually
+403.199,4.44,unusable for classic video editing you
+405.78,4.68,know like trimming Clips arranging them
+407.639,4.56,in time adding sounds background music
+410.46,3.78,stuff like that for this type of video
+412.199,3.961,editing and usually at the final stage
+414.24,4.26,and especially when I'm shooting with a
+416.16,4.86,face camera I use Premiere and finally
+418.5,5.46,Adobe Audition for all sorts of audio
+421.02,5.519,work removing background noise enhancing
+423.96,4.56,The Voice removing plosives and other
+426.539,5.28,nasty things like breaths and mouth
+428.52,5.64,sounds and that's pretty much it all the
+431.819,4.801,software I use to make my videos now
+434.16,4.56,let's be more specific and take a
+436.62,4.44,detailed look at how some of the
+438.72,4.56,animations were done here's the list of
+441.06,4.74,what I'm going to talk about along with
+443.28,3.96,time codes so you can easily find a
+445.8,3.299,particular animation you're looking for
+447.24,3.51,or you know just watch the whole thing
+449.099,6.0,that would be awesome as well
+450.75,6.75,[Music]
+455.099,4.32,were wondering how mad but lib can be
+457.5,3.84,used to create mathematical animations
+459.419,3.78,over the years I've developed a few
+461.34,4.74,tricks and strategies on how to use
+463.199,5.701,map.lib in Synergy with After Effects
+466.08,4.5,and this is actually the key takeaway no
+468.9,3.96,single mathematical animation you can
+470.58,5.28,find in my videos was created with
+472.86,5.7,mat.lib or manim alone there is always
+475.86,5.339,some After Effects involved to enhance
+478.56,5.16,the animations I've actually prepared a
+481.199,4.801,short animated clip to use as an example
+483.72,5.099,don't search for any deep meaning in it
+486.0,5.039,essentially the only purpose of this toy
+488.819,5.28,animation is to illustrate various
+491.039,5.581,approaches here it is consider an arrow
+494.099,3.66,rotating around a circle with variable
+496.62,3.78,speed
+497.759,5.94,if we trace the y-coordinate of the
+500.4,5.4,arrow tip we will get a sinusoid with
+503.699,4.321,time varying frequency
+505.8,5.459,let's say we want the amplitude of the
+508.02,4.98,sinusoid to change in time according to
+511.259,4.261,this function right here
+513.0,4.32,let's zoom into the resulting wave and
+515.52,5.24,make it wiggle for a while between the
+517.32,3.44,two states just for fun
+521.099,5.641,alright great now let's break it down
+523.62,5.88,piece by piece first I usually identify
+526.74,4.68,the core components the building blocks
+529.5,4.32,of the scene for this first portion
+531.42,5.16,right here these would be the arrow
+533.82,5.22,spinning around the Rainbow Circle the
+536.58,5.759,graph of a wave colored by the face
+539.04,5.46,being gradually drawn along with the
+542.339,5.401,field graph of frequency as a function
+544.5,5.94,of time these three elements should be
+547.74,5.4,synchronized to each other and be
+550.44,5.1,optimally arranged on the screen along
+553.14,5.16,with some texts once I've identified
+555.54,4.919,what exactly needs to be done it's time
+558.3,4.44,to determine the tool that I'm going to
+560.459,5.041,use for each of the jobs in this case
+562.74,4.86,either after effects or python now of
+565.5,3.779,course there is no right or wrong answer
+567.6,4.62,since it's the matter of personal
+569.279,4.861,preferences and experiences for me draw
+572.22,4.5,in such a wave from scratch in After
+574.14,5.16,Effects and synchronizing it to the
+576.72,4.14,spinning Arrow would be a pain so I'm
+579.3,3.92,better off creating something like that
+580.86,4.8,and inapt.lib on the other hand
+583.22,5.619,arranging everything on the screen and
+585.66,6.06,animating texts directly in Python would
+588.839,5.581,be tedious if not impossible so let's
+591.72,5.1,leave that to After Effects once
+594.42,4.62,individual jobs are allocated to their
+596.82,5.1,respective software it's time to get to
+599.04,4.5,work alright so in Python let's start
+601.92,3.78,off by creating an array of
+603.54,4.02,instantaneous frequencies that would
+605.7,4.44,tell the arrow how fast it should move
+607.56,5.16,at every point in time and the array
+610.14,5.04,containing the resulting sinusoid for
+612.72,5.16,visualization let's set up a method lib
+615.18,5.279,axis with high enough resolution make it
+617.88,5.76,completely black and add a nice thin
+620.459,6.661,grid to plot our array as a gradient
+623.64,5.84,line colored by face values we can use
+627.12,5.46,metal Clips align collection object
+629.48,5.08,specify the array of colors obtained
+632.58,4.68,from the array of phases by passing it
+634.56,5.399,through a color map stylize the line a
+637.26,5.639,little bit and finally add the resulting
+639.959,6.06,line collection object to the axis voila
+642.899,5.581,we got an image of a wave but we need it
+646.019,4.56,to be animated in for this purpose let's
+648.48,4.859,use the funk animation class available
+650.579,4.561,in the animation submodule of mat.lib
+653.339,4.201,essentially actually the way it works is
+655.14,4.98,you define a function that would be
+657.54,4.979,repeatedly called and would modify the
+660.12,5.339,plot at every frame of the animation
+662.519,5.401,this function let's call it animate wave
+665.459,5.101,we'll accept the parameter specifying
+667.92,4.919,the current frame for this case since we
+670.56,5.279,are creating a drawing animation let's
+672.839,5.341,call this parameter T current and we are
+675.839,5.521,going to animate it from the first value
+678.18,5.88,of our time array which is 0 to the last
+681.36,5.159,which in this case is 5. whenever the
+684.06,4.62,animate wave function is called it
+686.519,6.06,should hide the portion of the graph
+688.68,5.7,where time is greater than T current and
+692.579,4.26,show the portion where the time is less
+694.38,4.139,than or equal to T current the way we
+696.839,3.961,can do it is the following
+698.519,4.801,remember when creating the line
+700.8,3.84,collection object we specified the color
+703.32,3.72,for each point
+704.64,5.52,well in a similar fashion it is possible
+707.04,4.979,to specify the opacity of each point by
+710.16,4.14,the way in Python opacity is usually
+712.019,5.401,called Alpha so we can call line
+714.3,5.64,collection dot set Alpha the expression
+717.42,4.979,in the parenthesis will compare each
+719.94,6.0,element of the time array to the value
+722.399,6.361,of T current and return a binary mask of
+725.94,5.339,ones and zeros which we can use to set
+728.76,5.16,the opacity of individual line segments
+731.279,5.0,to create the animation let's create an
+733.92,5.76,instance of the funk animation class
+736.279,4.481,passing our figure object the animation
+739.68,3.48,function
+740.76,4.86,and the list of frames
+743.16,5.88,in this case we are going to animate the
+745.62,7.02,value of T current from T start to T end
+749.04,6.0,and let's make it 5000 frames to make
+752.64,4.199,the animation smooth let's tell python
+755.04,4.32,that the interval between consecutive
+756.839,5.041,frames should be around 30 milliseconds
+759.36,5.039,so the animation will be saved with 30
+761.88,4.86,frames per second finally we need to
+764.399,5.101,call Dot save on the resulting animation
+766.74,5.64,object and a few moments later we got a
+769.5,5.1,nice animation of a wave being drawn I
+772.38,4.259,think it's a great point to pause and
+774.6,3.84,talk about the number of frames you
+776.639,4.5,probably noticed that the resulting
+778.44,4.56,video is extremely long two and a half
+781.139,3.781,minutes and the reason for that is
+783.0,4.2,because I need the animations to be
+784.92,4.859,synchronized with my voice I want to
+787.2,4.8,easily control the speed with which they
+789.779,5.161,play but here's the thing if the
+792.0,6.24,animation is long I can easily make it 5
+794.94,5.16,times faster and it will look nice I can
+798.24,5.399,even tweak the rate and make it
+800.1,6.179,non-linear to achieve the easing effect
+803.639,4.981,but going the other way around making
+806.279,5.161,the fast animation 5 times slower
+808.62,6.54,although technically possible will give
+811.44,7.38,you a very choppy and ugly result
+815.16,6.359,in the first case the file contains a
+818.82,5.639,large number of frames let's say 5000
+821.519,5.461,and to speed the animation up the video
+824.459,5.281,editing software simply takes every
+826.98,4.28,fifth frame change them together and the
+829.74,4.8,result looks good
+831.26,6.22,alternatively to slow a faster animation
+834.54,6.479,down it needs to somehow stretch the
+837.48,6.479,existing thousand frames into 5000 since
+841.019,5.94,it can't augment the pre-rendered video
+843.959,5.581,with any new frames the existing ones
+846.959,4.801,are simply repeated so that now you
+849.54,5.16,perceive the animation as if it is
+851.76,5.16,played with 6 frames per second instead
+854.7,4.379,of the normal 30. this is why when
+856.92,5.28,creating the animation building blocks
+859.079,5.521,in Python I intentionally save them as
+862.2,5.28,videos with humongous number of frames
+864.6,5.22,because I can always easily throw some
+867.48,4.919,of those out but to generate new ones
+869.82,4.8,would require rewriting the entire code
+872.399,4.921,similarly to how when you are buying
+874.62,5.459,wallpaper rolls it's certainly better to
+877.32,5.28,overestimate than to underestimate OK
+880.079,4.62,let's get back to matplotlib in exactly
+882.6,4.979,the same way we can animate the
+884.699,4.861,frequency graph the only difference is
+887.579,4.801,that it is completely white instead of
+889.56,5.339,the gradient and also includes a fill
+892.38,5.459,let's create the fill object using
+894.899,5.521,x.fill between method and modify our
+897.839,5.341,existing animation function a little bit
+900.42,5.039,now on every frame along with setting
+903.18,5.339,the opacity of the line segments it
+905.459,6.12,should also modify the fill as of right
+908.519,5.76,now matpatlib can't modify the existing
+911.579,5.581,polygon but we can easily just delete
+914.279,5.461,the old fill and recreate the new one
+917.16,4.919,with necessary limits on every frame
+919.74,5.219,specified by T current
+922.079,6.06,for the arrow let's set up a black
+924.959,5.161,figure with polar axes and specify how
+928.139,4.26,ticks and the grid should look like we
+930.12,4.98,can draw the colored Circle in exactly
+932.399,5.24,the same way we did with the way just
+935.1,6.359,generate an array of angle values
+937.639,6.521,linearly spaced from 0 to 2 pi along
+941.459,4.861,with the array of radii all the elements
+944.16,4.619,of which will be equal to 1. in order to
+946.32,4.139,add the circle to the axis we can use
+948.779,4.62,the code with a line collection from
+950.459,5.761,before only now for the case of polar
+953.399,5.761,axis segments will be specified with
+956.22,5.88,angle and radius values instead of X and
+959.16,5.64,Y to create an arrow let's define a
+962.1,5.7,function called get polar arrow that
+964.8,5.76,will take the value of the angle and add
+967.8,5.76,the arrow to the axis by calling x dot
+970.56,5.399,Arrow rotated and colored according to
+973.56,5.1,the angle to create the animation itself
+975.959,5.581,we need a very simple animation function
+978.66,6.0,that will remove the old arrow and
+981.54,5.64,create a new one on every frame as we
+984.66,5.94,gradually change the angle according to
+987.18,5.76,our array of phases and here we go
+990.6,4.44,next in the animation there is this
+992.94,5.459,graph of the amplitude being drawn
+995.04,6.06,together with the field and later the
+998.399,5.821,copy of the curve should detach from The
+1001.1,5.58,Fill fly down and kind of Squish the
+1004.22,4.32,sinusoid into the target shape this part
+1006.68,3.48,is a bit tricky and there are always
+1008.54,3.9,many ways you can achieve the same
+1010.16,4.679,result what I suggest we do is the
+1012.44,5.16,following in Python using similar
+1014.839,5.461,approaches first animate only the
+1017.6,4.919,amplitude curve without the fill you'll
+1020.3,5.039,see why in a minute then by modifying
+1022.519,5.581,the code slightly animate only the fill
+1025.339,5.941,and save the result into its own video
+1028.1,5.4,file unfortunately matplotlib can't
+1031.28,4.5,really color these fields with gradient
+1033.5,5.1,so we'll have to tackle this on post
+1035.78,5.279,processing for now let's make the fill
+1038.6,4.62,fully white finally before we can
+1041.059,5.4,compose everything we need this last
+1043.22,5.64,animation of one wave being gradually
+1046.459,4.201,transformed into another
+1048.86,3.6,took me a while to figure out how to do
+1050.66,4.139,this but this solution turned out to be
+1052.46,4.14,pretty straightforward first create the
+1054.799,3.541,line collection corresponding to the
+1056.6,4.26,initial stage as we did in the beginning
+1058.34,4.86,the animation function should gradually
+1060.86,5.46,interpolate between the curves
+1063.2,5.58,the initial array wave and the wave
+1066.32,4.44,times amplitude array to achieve this
+1068.78,4.92,the function will take a single
+1070.76,6.06,parameter called proportion which is a
+1073.7,6.06,number between 0 and 1 specifying where
+1076.82,5.64,we are in the interpolation process so
+1079.76,6.06,on every frame the animation function
+1082.46,5.099,will mix the two arrays accordingly and
+1085.82,4.08,change the segments of the line
+1087.559,4.86,collection object as you can see when
+1089.9,6.24,the proportion is equal to zero this
+1092.419,6.361,expression evaluates to just wave while
+1096.14,4.98,when the proportion is 1 it equals to
+1098.78,4.8,wave times amplitude and everything in
+1101.12,6.179,between let's animate the proportion
+1103.58,6.479,value from 0 to 1 say with 500 frames
+1107.299,5.161,and boom smooth interpolation between
+1110.059,5.041,the two functions pretty neat right
+1112.46,5.04,believe it or not but now we have all
+1115.1,4.86,the necessary building blocks we need to
+1117.5,5.28,create the full animation let's put
+1119.96,5.339,python aside for now and finally move to
+1122.78,4.92,Adobe After Effects now I'm not going to
+1125.299,3.901,explain every single thing just cover
+1127.7,4.32,the key ideas
+1129.2,5.219,in After Effects I usually scale and
+1132.02,5.039,position the layers accordingly to
+1134.419,5.521,compose the scene by the way notice that
+1137.059,5.521,these video files have black background
+1139.94,5.46,which looks kind of ugly if you want to
+1142.58,5.339,put them on a nice dark but not
+1145.4,4.98,completely black background in addition
+1147.919,4.861,this prevents them from overlapping to
+1150.38,5.76,solve this issue pretty much for every
+1152.78,5.759,single asset I set the blending mode to
+1156.14,4.86,screen I'm not going to explain the
+1158.539,4.5,theory behind blending mounts if you're
+1161.0,4.38,interested check out this great article
+1163.039,5.281,on Wiki essentially everything that's
+1165.38,5.4,black will be made transparent so that
+1168.32,4.92,now not only can we see the background
+1170.78,4.92,but it is also possible to arrange them
+1173.24,4.679,however we want without one layer
+1175.7,5.16,obstructing another we can now adjust
+1177.919,5.76,the speed of the animations using the
+1180.86,5.4,time remapping property and arrange them
+1183.679,5.461,on the timeline for instance I want the
+1186.26,5.76,amplitude animation to appear only after
+1189.14,5.94,the first three animations relating to
+1192.02,5.22,the arrow are Dawn plane now because the
+1195.08,4.26,amplitude curve and the fill are two
+1197.24,4.679,separate video files we can take
+1199.34,5.04,advantage of that and do something about
+1201.919,5.161,this horrible white fill in After
+1204.38,4.98,Effects using the gradient ramp we will
+1207.08,5.52,fill the layer with orange and red
+1209.36,6.6,gradient according to the curve and set
+1212.6,5.939,the layer mask to its own copy so that
+1215.96,5.579,now only the pixels that were white in
+1218.539,5.581,the original file will be shown while
+1221.539,5.581,the other pixels that were black will be
+1224.12,6.6,transparent now just lower the opacity
+1227.12,6.36,and voila a nice gradient fill that is
+1230.72,5.339,animated together with the Curve now to
+1233.48,4.68,the squishing part notice how the last
+1236.059,5.641,frame of the video with the wave being
+1238.16,5.519,drawn is identical to the first frame of
+1241.7,4.44,the video with the interpolation between
+1243.679,4.5,the waves because of this we can
+1246.14,5.279,seamlessly Stitch the two videos
+1248.179,5.701,together as long as both layers in After
+1251.419,6.061,Effects have the same position and scale
+1253.88,6.78,foreign as a result the wave is first
+1257.48,5.46,being drawn and then after a pause is
+1260.66,4.62,being morphed into the amplitude
+1262.94,4.92,modulated version of itself while the
+1265.28,4.86,rate of both animations as well as the
+1267.86,4.8,duration of the pause can be easily
+1270.14,5.34,tweaked in After Effects by animating
+1272.66,5.879,the time remapping property to match the
+1275.48,5.64,voice as a nice touch we can make a copy
+1278.539,5.52,of the amplitude curve layer and animate
+1281.12,4.86,its position and opacity to achieve this
+1284.059,4.141,effect as if the curve is kind of
+1285.98,4.8,squished in the wave in order to zoom
+1288.2,4.859,into the wave let's parent all the
+1290.78,4.379,layers to the wave interpolation video
+1293.059,4.62,so that they will inherit the
+1295.159,5.101,Transformations and animate the scale
+1297.679,4.98,and the position of the parent layer and
+1300.26,5.1,maybe simultaneously animate the opacity
+1302.659,4.981,of some of the child layers to make them
+1305.36,4.319,Disappear Completely finally as you may
+1307.64,4.38,have guessed already we are going to use
+1309.679,4.681,the time remapping property to create
+1312.02,4.62,this wiggling animation this is where
+1314.36,4.319,the fact that the source video contains
+1316.64,5.399,a large number of frames will come in
+1318.679,5.761,handy and and that's pretty much it just
+1322.039,4.5,add the texts maybe stylize the
+1324.44,5.599,animations by adding a few effects to
+1326.539,3.5,your liking and render the video
+1334.46,2.839,all right
+1338.659,4.821,so just a quick recap of how Python and
+1341.539,4.201,after effects can be used in tandem
+1343.48,4.0,matplotlib is used to create the
+1345.74,2.819,mathematical building blocks of
+1347.48,3.6,animations
+1348.559,5.401,those building blocks like graphs or
+1351.08,5.94,array images usually are then scaled
+1353.96,5.219,arranged and composed together in After
+1357.02,4.68,Effects which also helps with
+1359.179,4.62,synchronizing the resulting animation to
+1361.7,4.859,the voiceover and remember time
+1363.799,5.281,remapping is your best friend
+1366.559,4.141,well I hope this was helpful and with a
+1369.08,4.079,major block of mathematical animations
+1370.7,4.52,out of the way let's look at a few more
+1373.159,4.52,tricky ones
+1375.22,4.839,foreign
+1377.679,4.961,what you see right here is the
+1380.059,5.221,biophysically accurate description of
+1382.64,4.74,how membrane voltage propagates through
+1385.28,4.44,a pyramidal neuron during action
+1387.38,4.44,potential let me tell you a short back
+1389.72,4.439,story of how such animations were born
+1391.82,4.14,in the first place while I Was preparing
+1394.159,4.681,to make a video on dendritic
+1395.96,5.4,computations this one right here I
+1398.84,5.459,realized that I needed some way to
+1401.36,5.76,animate realistic dynamics of membrane
+1404.299,4.801,voltage in space and time since you know
+1407.12,4.14,this was the central point of the video
+1409.1,4.26,however after searching the internet for
+1411.26,4.68,a solution I just couldn't really find
+1413.36,4.319,anything that would work so I did what
+1415.94,4.5,every rational person would do in this
+1417.679,5.88,case I created my own tool the main idea
+1420.44,5.64,was to run biophysical simulations using
+1423.559,4.86,real neuron morphologies in the free
+1426.08,4.979,neuron simulator environment and then
+1428.419,5.221,somehow brain simulation data into
+1431.059,4.561,blender along with geometry this task
+1433.64,3.899,turned out to be not as straightforward
+1435.62,3.66,as I hoped for and it took me a couple
+1437.539,3.721,of weeks of experimenting and going
+1439.28,4.86,through the blender API documentation
+1441.26,4.62,before I could make it work realizing
+1444.14,3.96,that I will probably need this for
+1445.88,4.14,future videos and other people might
+1448.1,4.5,find that helpful I went ahead and
+1450.02,5.639,created an actual blender add-on called
+1452.6,4.98,blender Spike which is now available on
+1455.659,3.601,my GitHub along with the detailed
+1457.58,4.02,instructions
+1459.26,4.38,now you may be wondering why not name It
+1461.6,4.319,Blend or neuron because that would be so
+1463.64,3.96,much cooler turns out there already is
+1465.919,4.921,an add-on called blender neuron
+1467.6,5.52,developed in 2018 designed to do exactly
+1470.84,4.199,that but unfortunately no matter how
+1473.12,4.38,hard I tried I couldn't make it work
+1475.039,4.981,anyway creating your own simulations
+1477.5,4.38,from scratch in blender Spike requires
+1480.02,4.38,knowledge of Python and the basics of
+1481.88,4.62,neuron simulator to load the morphology
+1484.4,3.12,set up the biophysics and run the
+1486.5,4.38,simulation
+1487.52,5.76,results are then exported into a blender
+1490.88,5.34,friendly format with a little companion
+1493.28,5.399,module called blender Spike Pi this
+1496.22,4.98,resulting dot pickle file essentially
+1498.679,4.441,contains all the data including the
+1501.2,4.38,morphology of the branches and the frame
+1503.12,4.919,by frame voltage data for each branch
+1505.58,4.219,the good news is once you have the dot
+1508.039,4.741,pickle file with the simulation results
+1509.799,5.561,for example by downloading an existing
+1512.78,4.5,one from my GitHub or asking your
+1515.36,4.319,simulation proficient friends to create
+1517.28,5.1,one for you you can simply dump that
+1519.679,4.86,into blender and easily customize the
+1522.38,5.52,appearance of the neuron the color map
+1524.539,5.76,glow intensity to build your own unique
+1527.9,4.98,animations to take it one step further
+1530.299,4.86,it is possible to combine blender Spike
+1532.88,4.02,with matplotlib animations which I
+1535.159,3.9,discussed previously it is
+1536.9,4.56,straightforward since blender updates
+1539.059,5.821,the voltage by looking up values from
+1541.46,5.64,the python array stored in the pickle so
+1544.88,3.06,for example we can render the neuron in
+1547.1,4.02,blender
+1547.94,5.58,animate voltage graphs in matplotlib and
+1551.12,6.98,compose and sync the two videos in After
+1553.52,4.58,Effects for a more complex animation
+1561.38,4.26,another animation a lot of people are
+1563.36,4.5,interested in is this slicing through
+1565.64,5.159,probability distribution from the video
+1567.86,4.919,on cognitive maps not gonna lie this is
+1570.799,4.081,one of my favorites as well this was
+1572.779,4.14,created in blender with just a little
+1574.88,4.14,bit of python by the way the exact
+1576.919,4.081,method I'm about to describe was used
+1579.02,4.259,for this animation from the wavelet
+1581.0,3.9,transform video as well now the first
+1583.279,3.361,step is to construct the
+1584.9,4.379,three-dimensional surface inside the
+1586.64,5.519,blender unfortunately there is no native
+1589.279,5.101,way to just tell blender to plot a
+1592.159,4.861,surface so we will have to use a
+1594.38,4.679,workaround we will first use Python to
+1597.02,4.32,generate a black and white image called
+1599.059,5.401,the height map which means that white
+1601.34,5.88,pixels correspond to more elevated areas
+1604.46,5.4,this can be done with net.lib by calling
+1607.22,4.559,the dot emcee function with a binary
+1609.86,3.179,color map here is what the resultant
+1611.779,3.601,image looks like
+1613.039,5.64,in blender we can now create a grid
+1615.38,5.1,object apply the displace modifier and
+1618.679,4.261,specify the texture to be the
+1620.48,5.22,displacement map we have just saved what
+1622.94,5.219,this will do is extrude the vertices of
+1625.7,5.64,the grid as specified by the brightness
+1628.159,6.361,of the image and voila a nicely looking
+1631.34,5.52,3D visualization of the array one way to
+1634.52,4.8,cover this would be to create a color
+1636.86,5.16,image in matpatlab in a similar Manner
+1639.32,4.14,and then apply that image as a texture
+1642.02,3.72,to the object
+1643.46,4.98,but in this particular example since the
+1645.74,5.58,coloring is quite simple namely it's
+1648.44,4.979,just a gradient along one axis we can
+1651.32,4.2,create it right inside blender to
+1653.419,4.62,specify materials we are going to use
+1655.52,4.98,blenders node based Shader editor
+1658.039,5.401,essentially it allows to create complex
+1660.5,5.52,materials by routing basic computations
+1663.44,5.219,and materials through a system of
+1666.02,5.399,interconnected nodes for example we can
+1668.659,5.76,modify the default green material by
+1671.419,5.76,specifying that the base color should be
+1674.419,3.781,taken from a gradient using a color map
+1677.179,3.24,node
+1678.2,5.52,and that the position along the gradient
+1680.419,5.701,should depend on the y coordinate you
+1683.72,4.98,can now manually create any gradient you
+1686.12,4.799,want or use this tiny add-on called
+1688.7,4.56,blender color maps to quickly bring
+1690.919,4.86,gradients from MacBook lip color Maps
+1693.26,4.74,into blender alright now to the slicing
+1695.779,4.801,part the key idea behind this is that
+1698.0,4.679,inside the node editor blender allows
+1700.58,4.079,you to mix different shaders in
+1702.679,4.021,different proportions which could be a
+1704.659,4.38,function of variables including other
+1706.7,4.32,objects sounds confusing but here's what
+1709.039,4.74,I mean suppose I want to mix the
+1711.02,5.82,gradient Shader with a fully transparent
+1713.779,5.341,Shader well I can just add a mixed
+1716.84,4.92,Shader node in blender and change the
+1719.12,5.1,factor slider which is the proportion in
+1721.76,5.34,which the two shaders are mixed so for
+1724.22,6.14,zero only the gradient is visible for
+1727.1,5.939,one the object is fully transparent 0.5
+1730.36,4.419,somewhere in the middle you get the idea
+1733.039,4.321,the cool thing about it is that this
+1734.779,4.741,factor is not restricted to being a
+1737.36,5.1,constant value for example we can plug
+1739.52,5.399,the Z coordinate of the object there to
+1742.46,4.68,achieve this cool fading effect which
+1744.919,4.86,depends on the height in order to slice
+1747.14,5.58,the surface let's create another object
+1749.779,4.921,an empty plane it will not be rendered
+1752.72,4.02,and will use it only to drive the
+1754.7,4.079,material namely let's take the
+1756.74,5.1,y-coordinate of the empty object
+1758.779,5.701,threshold it with some value and feed
+1761.84,5.1,the output into the factor of the mixed
+1764.48,5.46,Shader that way the vertices of our
+1766.94,5.099,surface will have either one or the
+1769.94,4.859,other Shader depending on the location
+1772.039,5.0,of the empty object
+1774.799,2.24,foreign
+1778.399,4.921,to achieve this thin white line and the
+1780.86,5.4,boundary the idea is similar we just
+1783.32,5.28,create a third Shader that will be a
+1786.26,4.919,pure white glow and mix the three
+1788.6,4.86,shaders depending on the position of the
+1791.179,4.141,cutting plane there is just this funny
+1793.46,3.719,note set up to work around the
+1795.32,4.62,limitation that the blender can't mix
+1797.179,5.041,three shaders simultaneously so I first
+1799.94,4.739,have to mix the two shaders together and
+1802.22,4.14,then mix the result with the third now
+1804.679,4.74,we can duplicate the surface object
+1806.36,5.52,apply the wireframe modifier to one copy
+1809.419,4.98,well to make it wireframe and simply
+1811.88,5.399,reverse the order in which the shaders
+1814.399,5.28,are mixed so that now the wireframe is
+1817.279,4.561,visible when the original surface is
+1819.679,3.841,transparent and vice versa and now
+1821.84,3.839,what's left to do is the animate the
+1823.52,5.779,movement of the cutting plane make the
+1825.679,3.62,camera spin around and here we go
+1830.659,3.0,foreign
+1837.34,4.42,about the three-dimensional animations
+1839.779,4.081,of brain structures the models
+1841.76,4.26,themselves come from the existing brain
+1843.86,4.679,atlases in particular the ones published
+1846.02,4.62,by Alan Institute downloading them can
+1848.539,4.081,be a bit of a challenge given that the
+1850.64,3.659,interface is not really intuitive I
+1852.62,4.26,found that the most convenient way to
+1854.299,6.48,use brain atlases is through brain Globe
+1856.88,6.0,API which provides a python interface to
+1860.779,4.321,download and navigate the data then
+1862.88,5.34,what's left to do is navigate to the
+1865.1,6.6,folder where the atlas is stored locate
+1868.22,6.24,the necessary.obj file since they are
+1871.7,5.16,named by their IDs and bring the model
+1874.46,4.079,into blender but this can be tedious
+1876.86,4.08,especially when you want to bring
+1878.539,4.981,multiple brain structures into a single
+1880.94,4.92,scene to simplify the process I've put
+1883.52,4.86,together a tiny blender add-on called
+1885.86,4.799,blenderbrain very original name in I
+1888.38,4.2,know which you can find on GitHub it
+1890.659,5.101,allows you to import meshes from
+1892.58,5.579,specified Atlas in one click simply by
+1895.76,4.46,specifying their acronym which you can
+1898.159,4.321,look up in the corresponding
+1900.22,4.78,structures.csv file that the blender
+1902.48,4.38,Globe downloads for example let's say I
+1905.0,4.02,want to look at the ce3 region of the
+1906.86,5.36,mouse keeper campus well I can just
+1909.02,6.12,select the atlas and type in ca3
+1912.22,6.1,similarly I can bring the dented gyrus
+1915.14,5.34,into the scene by typing DG notice how
+1918.32,4.8,it automatically gets positioned into
+1920.48,4.38,the anatomically correct place and
+1923.12,4.2,suppose we want to look at where these
+1924.86,5.88,two structures are located relative to
+1927.32,5.76,the entire brain typing in Gray Imports
+1930.74,4.679,the entire gray matter and since
+1933.08,4.56,hippocampus and Dente gyrus are
+1935.419,5.401,subcortical structures we can't really
+1937.64,5.7,see them now let's change that make the
+1940.82,4.62,gray matter almost transparent change
+1943.34,4.439,the environment settings so that there
+1945.44,4.619,is some backlight and color of the brain
+1947.779,5.461,structures for instance let's make the
+1950.059,5.821,dentage iris glow with blue and add this
+1953.24,5.64,subtle gradient to the glow of the C3
+1955.88,5.279,region along the x-axis what's left to
+1958.88,4.98,do is to animate the camera to spin
+1961.159,5.101,around the brain render it with a black
+1963.86,5.72,background and the footage is ready to
+1966.26,3.32,be used in After Effects
+1971.25,4.97,[Music]
+1973.96,4.959,finally I have prepared something
+1976.22,4.679,special for you namely let's explore how
+1978.919,4.86,to build this animation of information
+1980.899,5.341,transmission from the brain criticality
+1983.779,4.801,video yes including this segment where
+1986.24,4.26,the neurons are being rearranged now I
+1988.58,3.959,realized that this section will be a bit
+1990.5,3.899,more coding heavy and I will skip
+1992.539,3.961,through some of the technical details so
+1994.399,4.14,please be prepared for that by the way
+1996.5,4.74,you can find all the code for this video
+1998.539,4.38,on my GitHub as well okay so just to
+2001.24,3.48,remind you we want to animate the
+2002.919,5.041,simulation of a so-called branching
+2004.72,5.819,model it consists of M layers and each
+2007.96,5.459,layer has n neurons that can be in one
+2010.539,4.86,of two states on or off layers are
+2013.419,3.48,connected sequentially and each
+2015.399,3.961,connection has a certain transmission
+2016.899,4.741,probability associated with it so that
+2019.36,5.1,information can spread from left to
+2021.64,4.5,right this number Sigma which is equal
+2024.46,4.38,to the average number of neurons
+2026.14,5.1,activated by one Downstream neuron
+2028.84,5.16,controls the the behavior of our Network
+2031.24,5.039,additionally each neuron has a very
+2034.0,4.62,small probability of being spontaneously
+2036.279,4.681,activated even when it doesn't receive
+2038.62,4.62,any input before animating the activity
+2040.96,5.16,it's necessary to set up the simulation
+2043.24,5.52,itself let's define a function that
+2046.12,5.039,initializes the N by m array of zeros
+2048.76,5.04,that is going to store the state of the
+2051.159,5.401,network next we create a function called
+2053.8,4.74,Network advance that will advance the
+2056.56,4.02,network one step into the future and
+2058.54,4.139,return the update state to advance a
+2060.58,4.92,network we need to First randomly
+2062.679,5.22,activate a small subset of neurons in
+2065.5,4.98,order to model this stochastic input and
+2067.899,4.861,model the propagation of information as
+2070.48,3.96,specified by the value of Sigma once we
+2072.76,4.379,have a function that advances one time
+2074.44,4.8,step we can just call it sequentially a
+2077.139,5.161,few hundred times to get the full
+2079.24,5.82,simulation result great so now we have a
+2082.3,4.619,stack of 2D arrays containing the entire
+2085.06,4.38,evolution of the network
+2086.919,4.92,now we just need to somehow animate this
+2089.44,4.8,because each frame should depict one
+2091.839,5.04,state of the network which in turn is
+2094.24,5.22,given by a two-dimensional array a
+2096.879,5.581,natural solution is to use methodly
+2099.46,5.58,functions like IM show or P color mesh
+2102.46,4.86,then on every frame we just need to
+2105.04,5.46,change which of the arrays is being
+2107.32,5.7,plotted so just like before set up the
+2110.5,4.859,figure and axis plot the network state
+2113.02,4.92,I'm going to use P color mesh here
+2115.359,4.921,Define the animation function that would
+2117.94,5.58,change the data depending on the current
+2120.28,5.76,frame and call func animation to create
+2123.52,4.26,a video however there are a couple of
+2126.04,4.98,crucial problems with this animation
+2127.78,5.46,first of all it is too fast so much that
+2131.02,4.68,it is literally painful to look at it
+2133.24,4.92,this is because we currently change the
+2135.7,4.68,array on every single frame and the
+2138.16,4.679,interval between the frames is short we
+2140.38,5.16,can try to increase the interval but now
+2142.839,4.381,the animation is awfully topic let's do
+2145.54,3.9,something else instead consider the
+2147.22,5.04,Dynamics of a single neuron in isolation
+2149.44,4.38,right now if we plot its state as a
+2152.26,4.56,function of time we will get something
+2153.82,5.34,like this zeros interspersed by a few
+2156.82,4.259,ones which makes sense we are going to
+2159.16,4.679,cheat a little bit and kind of smooth
+2161.079,4.981,out its activity in time so instead of
+2163.839,4.801,instantaneously jumping to one and then
+2166.06,4.5,back to zero the neuron State Should
+2168.64,4.5,gradually increase and then decrease
+2170.56,5.279,according to this shape right here which
+2173.14,5.699,consists of two exponents so we need to
+2175.839,5.701,replace every single sudden jump with
+2178.839,5.28,this gradual rise and decay in
+2181.54,4.559,mathematical terms we have to convolve
+2184.119,4.021,the activity function with this
+2186.099,4.381,exponential thingy called the kernel
+2188.14,5.1,this operation can be easily done in
+2190.48,5.7,Python using numpies can evolve 1D
+2193.24,5.52,finally in P color mesh we can choose a
+2196.18,5.22,nice color map and animate the smoothed
+2198.76,4.319,States array instead just play around
+2201.4,4.32,with the time spread and the kernel
+2203.079,4.081,shape to achieve the optimal balance as
+2205.72,3.119,a side note if you don't like the
+2207.16,3.6,squares that the peak color mesh
+2208.839,4.141,produces with just a little bit of After
+2210.76,4.98,Effects they can be changed to pretty
+2212.98,5.099,much any shape for example circles just
+2215.74,4.92,create a shape layer on top of the video
+2218.079,5.641,draw one circle of the necessary size
+2220.66,5.699,add the repeater with a proper number of
+2223.72,5.16,copies and tweak the spacing to ensure
+2226.359,4.26,that all the circles in the row fall on
+2228.88,4.56,top of the squares for a one-to-one
+2230.619,5.281,mapping add another repeater and do the
+2233.44,4.86,same for the vertical spacing now just
+2235.9,4.74,change the track matte of the video to
+2238.3,5.16,Alpha matte essentially the video with
+2240.64,5.699,our colored squares will be now masked
+2243.46,4.98,by the circles and also feel free to add
+2246.339,4.681,the glow
+2248.44,4.8,finally let's create this rearranging
+2251.02,4.14,animation right here which by the way if
+2253.24,4.56,you are into manim can be quite useful
+2255.16,4.679,the code for running the simulations and
+2257.8,4.62,smoothing is the same but this time
+2259.839,5.221,instead of map.libs color mesh we are
+2262.42,5.1,going to use the graph object inside of
+2265.06,4.559,menu the main idea is to run the network
+2267.52,4.38,simulation but during the animation
+2269.619,4.681,initially Shuffle the position of
+2271.9,5.04,individual neurons on the screen then
+2274.3,5.34,animate how each neuron gradually
+2276.94,4.74,returns to its original place in the
+2279.64,3.479,multi-layered network I know it's a bit
+2281.68,4.14,backwards and kind of looks like
+2283.119,5.281,cheating but hey it gets the job done so
+2285.82,5.4,let's create a network of 10 layers with
+2288.4,4.86,10 neurons in each layer and run it for
+2291.22,3.66,a couple thousand iterations then use
+2293.26,4.38,this function that I stole from Network
+2294.88,5.459,X documentation which creates a
+2297.64,6.12,multi-layered network X graph object
+2300.339,6.481,from this specified layer sizes in our
+2303.76,5.099,case that's 10 layers with 10 nodes each
+2306.82,5.039,I've actually modified it at a little
+2308.859,6.061,bit so that now not all the edges are
+2311.859,5.281,shown only a random subset of them to
+2314.92,4.5,make the animation not too crowded with
+2317.14,4.38,the lines inside the definition of a
+2319.42,4.38,Manning scene let's create two
+2321.52,4.74,coordinate systems one for the square
+2323.8,5.22,grid and the other one for the layered
+2326.26,5.76,layout that will map the index of each
+2329.02,6.18,neuron to its position on the screen
+2332.02,5.64,then randomly Shuffle the positions of
+2335.2,4.98,all individual neurons and create a
+2337.66,4.62,mapping a kind of a lookup table
+2340.18,3.72,specifying that the first neuron in the
+2342.28,3.9,first layer should be located here
+2343.9,5.04,second neuron here
+2346.18,5.58,Etc we can now create the graph object
+2348.94,5.46,and tell Magnum its layout the positions
+2351.76,4.56,of individual nodes to animate the
+2354.4,4.38,colors of the nodes according to the
+2356.32,4.74,simulation data we are going to make use
+2358.78,4.98,of the magnum's value tracker class
+2361.06,4.68,let's create an updater function that
+2363.76,5.339,will be called on every single frame
+2365.74,6.3,this updater will change the colors of
+2369.099,5.401,our graphs nodes according to a color
+2372.04,5.039,map and the value that's been passed
+2374.5,5.22,into the color map is obtained by taking
+2377.079,4.981,the value of our value tracker on a
+2379.72,4.44,given frame and interpolating the
+2382.06,4.559,simulation array for every neuron
+2384.16,5.16,finally we need to connect the updater
+2386.619,4.98,function to the graph object and animate
+2389.32,4.62,the value tracker to make it transverse
+2391.599,4.381,a specified number of frames this will
+2393.94,4.44,create the animation similar to the one
+2395.98,5.28,we had in Matlab but with the positions
+2398.38,4.92,of neurons being randomly shuffled
+2401.26,4.14,but what if after playing for a few
+2403.3,4.44,seconds of activity in this shuffled
+2405.4,4.98,State we want to rearrange the neurons
+2407.74,4.74,into the original layered structure
+2410.38,4.62,without interrupting the activity
+2412.48,4.859,animation well luckily manium is very
+2415.0,4.8,clever about playing multiple animations
+2417.339,5.28,together so all we need to do is create
+2419.8,5.64,a list of animations that will move each
+2422.619,5.041,node into its original position append
+2425.44,4.139,this list with an animation for
+2427.66,4.26,incrementing the value of the value
+2429.579,4.981,tracker and play the resulting
+2431.92,4.98,collection of animations lastly let's
+2434.56,4.74,play a few seconds of activity in the
+2436.9,4.679,layered configuration by incrementing
+2439.3,3.84,the value tracker without moving the
+2441.579,4.02,nodes by the way I hope you can
+2443.14,4.979,appreciate how convenient it is to use
+2445.599,5.281,manim's graph object since when we
+2448.119,6.681,animated the positions of nodes all the
+2450.88,3.92,edges were animated automatically
+2456.28,5.04,as you can see pretty much every single
+2458.92,4.62,animation we covered today involved
+2461.32,4.56,python in one way or another
+2463.54,3.9,indeed this programming language is
+2465.88,3.42,quite powerful and has enormous
+2467.44,3.78,applications if you'd like to get
+2469.3,4.5,started with python and potentially
+2471.22,4.44,create your own visualizations you are
+2473.8,4.319,going to love our today's sponsor
+2475.66,4.679,brilliant.org
+2478.119,5.401,brilliant is an exceptional online
+2480.339,6.181,platform that offers interactive courses
+2483.52,6.12,in stem Fields what sets brilliant apart
+2486.52,5.94,is their emphasis on Active Learning and
+2489.64,4.979,problem solving approach enabling you to
+2492.46,3.24,tackle real world challenges with
+2494.619,2.881,confidence
+2495.7,3.48,the courses are packed with
+2497.5,4.5,interactivity and stunning
+2499.18,5.46,visualizations that help you develop an
+2502.0,5.94,intuitive understanding of even the most
+2504.64,5.699,challenging Concepts while problems and
+2507.94,3.24,quizzes further consolidate the
+2510.339,4.02,knowledge
+2511.18,5.64,brilliant offers over 90 courses on a
+2514.359,3.841,variety of subjects for multiple levels
+2516.82,4.019,of difficulty
+2518.2,4.44,whether you are a complete beginner or a
+2520.839,4.861,professional looking to expand your
+2522.64,4.86,skills brilliant has got you covered for
+2525.7,3.6,example if you are interested in
+2527.5,4.02,implementing some of the visuals from
+2529.3,4.26,this video you may want to check out
+2531.52,4.98,their course called programming with
+2533.56,5.82,python to get a firm grasp on the
+2536.5,5.52,fundamentals such as variables loops and
+2539.38,5.699,functions and from there you can move on
+2542.02,5.819,to algorithm fundamentals to learn more
+2545.079,5.701,complex algorithms like array sorting
+2547.839,5.581,and stable matching don't hesitate to
+2550.78,5.22,take curiosity to the next level and
+2553.42,5.84,start learning at your own pace just by
+2556.0,7.02,dedicating 15 minutes a day go to
+2559.26,7.0,brilliant.org artem care sonoff to get a
+2563.02,6.24,30-day free trial of everything brieland
+2566.26,6.0,has to offer and the first 200 people to
+2569.26,5.339,use this link will get 20 off the
+2572.26,4.5,premium subscription
+2574.599,4.381,all right well I hope some of it was
+2576.76,3.839,helpful if I left out a particular
+2578.98,3.48,animation and you would like to know
+2580.599,4.141,more about it let me know down in the
+2582.46,4.8,comment section and who knows maybe I'll
+2584.74,4.56,create a part too in the meantime if you
+2587.26,3.42,enjoyed this video press the like button
+2589.3,3.299,share it with your friends and
+2590.68,3.48,colleagues And subscribe to the channel
+2592.599,3.601,if you haven't already
+2594.16,5.22,stay tuned for more interesting topics
+2596.2,5.98,coming up goodbye and thank you for the
+2599.38,20.989,interest in science visualization
+2602.18,18.189,[Music]

@@ -1,0 +1,1335 @@
+second,duration,transcript
+9.2,4.8,okay guys good morning okay so have
+12.639,4.321,nothing for today
+14.0,5.6,chapter 15 evaluation inspection
+16.96,4.0,analytics and models
+19.6,4.0,so aims
+20.96,4.88,so describe the key concept i shaded
+23.6,5.12,with the inspection methods
+25.84,4.56,explain how to do heuristic evaluation
+28.72,3.519,and walkthroughs
+30.4,3.2,explain the role of analytics in
+32.239,3.601,evaluation
+33.6,6.08,describe house to you how to use speed
+35.84,3.84,loss a predictive model
+39.76,4.479,like so sometimes
+41.36,4.64,it is not practical to involve user in
+44.239,2.961,any evaluation because they are not
+46.0,4.399,available
+47.2,5.039,or there is insufficient time or it is
+50.399,4.881,difficult to find people
+52.239,6.96,so in such circumstances other people
+55.28,5.68,often refer to us a expert or researcher
+59.199,2.791,can provide feedback
+60.96,2.079,these people are
+61.99,2.809,[Music]
+63.039,4.08,who are knowledgeable about both
+64.799,4.561,interaction design and the needs and
+67.119,4.641,typical behavior of user
+69.36,5.28,various inspection methods for develop
+71.76,5.44,alternatives to usability testing in the
+74.64,4.799,early 1990s drawing on the software
+77.2,4.48,engineering practice where code and
+79.439,4.481,other type of inspection are commonly
+81.68,2.24,used
+84.159,5.041,the evaluation method described so far
+86.88,3.84,in our previous lesson have involved
+89.2,4.72,interaction
+90.72,5.28,with or direct observation of user
+93.92,4.72,so in this uh lesson we introduce
+96.0,5.2,methods that are based on understanding
+98.64,6.08,a user through knowledge codified in
+101.2,6.879,heuristic or data collected remotely or
+104.72,6.079,models that predict user performance so
+108.079,5.121,none of this method required user to be
+110.799,4.721,present during the evaluation
+113.2,5.12,inspection methods typically involve an
+115.52,4.32,expert role playing the user perform the
+118.32,4.399,product's design
+119.84,5.2,analyzing aspect of an interface and
+122.719,6.16,identifying any potential usability
+125.04,6.16,problem by using a set of guidelines
+128.879,5.921,so the most well known are the heuristic
+131.2,3.6,evaluation and the walkthroughs
+134.879,4.881,analytics involved user interaction
+137.2,4.8,lagging which usually done remotely so
+139.76,5.36,predictive models involve analyzing the
+142.0,5.2,various physical and mental operations
+145.12,4.479,that are needed to perform a particular
+147.2,6.0,task at the interface and operation
+149.599,5.601,analyzing them as a quantitative measure
+153.2,6.399,so one of the most commonly used
+155.2,4.399,productivity model is the beats law
+161.2,3.679,so heuristic evaluation
+165.68,4.8,heuristic evaluation is a usability
+168.0,7.04,inspection method that was
+170.48,4.56,developed by nielsen and his colleague
+175.2,4.0,and
+176.319,6.0,later modified by other researchers or
+179.2,5.92,evaluating specific types of system
+182.319,6.321,so in heuristic evaluation expert guided
+185.12,4.96,by a set of usability principle known as
+188.64,3.12,a
+190.08,3.04,heuristic
+191.76,4.32,so
+193.12,6.0,evaluate whether user interface elements
+196.08,6.159,such as dialog box menus navigation
+199.12,5.119,structure online health and so on
+202.239,4.56,uh on point the tried and tested
+204.239,5.36,principle so this heuristic closely
+206.799,5.601,resemble high level design principle
+209.599,5.36,sample making design consistent
+212.4,5.839,reducing memory load and using terms
+214.959,6.0,that user understand so the original
+218.239,5.841,setup heuristic for atl evaluation was
+220.959,5.121,developed by jacob nyonsen
+224.08,6.32,and his colleague who derived the
+226.08,7.76,apparently from the analysis of a 249
+230.4,3.44,usability problem
+236.08,5.76,so the vice version of nielsen regional
+239.12,2.72,heuristic
+242.319,5.2,first we have the visibility
+244.959,5.28,of system status
+247.519,5.041,so visibility of system status
+250.239,3.441,the system should always keep user
+252.56,3.519,informed
+253.68,4.799,about what is going on through
+256.079,3.68,appropriate feedback with reasonable
+258.479,3.921,time
+259.759,5.521,next we have um
+262.4,6.079,match between system and the real world
+265.28,5.44,so meaning um
+268.479,5.841,the system should speak the user
+270.72,6.479,language with words phrases and
+274.32,5.04,concept familiar to the user rather than
+277.199,4.641,system oriented terms
+279.36,5.68,by the read word a convention making
+281.84,5.359,information appear in a natural and a
+285.04,3.599,logical order
+287.199,4.481,then we have
+288.639,5.84,user control and freedom
+291.68,5.519,user control and freedom
+294.479,5.361,users often choose system function by
+297.199,5.121,mistake and will need a clearly marked
+299.84,4.799,emergency exit to leave the unwanted
+302.32,4.719,state without having to go through an
+304.639,5.84,extended dialog box
+307.039,7.041,example support of undo and
+310.479,4.961,next we have the consistence consistency
+314.08,3.44,and standard
+315.44,4.64,so users should not have to wonder
+317.52,4.56,whether different words situation or
+320.08,4.16,action mean the same thing
+322.08,6.08,uh
+324.24,7.76,meaning follow the platform convention
+328.16,3.84,then we have the error prevention
+333.36,5.04,uh error prevention so even better than
+335.84,4.639,good error message is a careful design
+338.4,4.4,that prevent a problem from occurring in
+340.479,4.72,the first place so either eliminate
+342.8,3.6,error prone condition or
+345.199,2.881,or check
+346.4,4.72,more than a present user with a
+348.08,5.2,confirmation option before they commit
+351.12,5.6,to the action
+353.28,6.72,then we have the recognition then recall
+356.72,5.84,it means minimize the user memory load
+360.0,3.68,by making objects action and option
+362.56,3.28,visible
+363.68,4.079,the user should not have to remember
+365.84,3.68,information from one part of the
+367.759,3.921,dialogue to another
+369.52,5.679,instruction or use of system should be
+371.68,5.519,visible or easily retrievable whether
+375.199,4.481,whenever appropriate
+377.199,5.361,then we have the flexibility and
+379.68,5.84,efficiency of use
+382.56,2.96,accelerators
+385.6,3.599,so
+386.4,5.2,unseen by the novice user may often
+389.199,4.881,speed up the interaction for the expert
+391.6,5.439,users such that the system can cater to
+394.08,5.04,both inexperienced and experienced user
+397.039,4.561,so meaning it allows users to tailor
+399.12,3.6,frequent action
+401.6,3.439,then
+402.72,4.319,we have the aesthetic and
+405.039,4.401,minimalist design
+407.039,5.041,um
+409.44,4.8,it means dialog box should not contain
+412.08,5.36,information that is
+414.24,6.72,irrelevant or rarely needed so every
+417.44,5.84,extra unit of information in a dial.com
+420.96,5.76,competes with the relevant units of
+423.28,5.039,information and diminish their relative
+426.72,4.0,visibility
+428.319,6.241,next we have
+430.72,4.8,help user recognize diagnose recover
+434.56,3.52,from
+435.52,2.56,errors
+439.919,4.0,message should be
+441.44,5.68,or error message should be expressed in
+443.919,5.441,a plain language so meaning no codes so
+447.12,6.639,precisely indicate the problem and
+449.36,4.399,constructively suggest a solution
+454.88,2.64,help
+456.03,3.41,[Music]
+457.52,4.72,help and documentation
+459.44,4.879,so have an augmentation so even though
+462.24,4.32,it is better if the system can be used
+464.319,4.0,without documentation it may be
+466.56,3.199,necessary to provide help and
+468.319,3.761,augmentation
+469.759,5.601,any such information should be easy to
+472.08,5.6,search focus on the user tasks these
+475.36,5.04,concrete steps to be carried out and not
+477.68,3.84,to be too large before bleeding on
+480.4,1.39,okay
+481.52,1.84,so
+481.79,2.77,[Music]
+483.36,2.64,next
+484.56,5.44,dial
+486.0,5.039,so number of evaluators and wrap them
+490.0,3.28,so
+491.039,4.321,this heuristic uh
+493.28,5.199,are intended to be used by judging
+495.36,4.16,aspect of the interface against
+498.479,3.361,them
+499.52,5.359,for example uh if a new social
+501.84,5.6,networking system is being evaluated
+504.879,4.88,they the evaluator may consider how a
+507.44,5.12,user would find find out how to add
+509.759,4.72,brands to her network or to his network
+512.56,4.399,so the evaluator is meant to go through
+514.479,4.8,the interface several times inspecting
+516.959,4.08,the barges interaction elements and
+519.279,4.961,comparing them with the lease of
+521.039,5.36,usability principle
+524.24,3.84,for example heuristic
+526.399,4.241,razor and each
+528.08,5.84,iteration usability problem will be
+530.64,6.24,identified other diagnosis will be
+533.92,5.68,refined until
+536.88,4.72,she or he is satisfied that the majority
+539.6,5.2,of the
+541.6,5.28,of the of them are clear
+544.8,4.64,although many heuristics apply to the
+546.88,5.12,most product example to be consistent
+549.44,5.12,and provide meaningful feedback some of
+552.0,5.6,the core heuristics are too general for
+554.56,5.6,evaluating products that have come
+557.6,4.96,come onto the market since nielsen and
+560.16,4.48,mollich first develop the method
+562.56,5.36,such as smartphones and other mobile
+564.64,6.319,device digital toys online communities
+567.92,5.359,ambient device and new web services
+570.959,4.56,we also suggest developing categories
+573.279,4.641,specific heuristics that apply the
+575.519,4.561,specific class of prada as a supplement
+577.92,4.72,to the general heuristic
+580.08,4.319,evaluator and researcher
+582.64,4.879,have therefore typically developed their
+584.399,5.921,own heuristic by tailoring a nelson
+587.519,4.481,heuristic with other design guidelines
+590.32,4.24,market research and requirements
+592.0,2.56,document
+594.8,5.84,exactly with a heuristic are appropriate
+598.48,5.039,and how many are needed for different
+600.64,5.36,product is the debatable and depends on
+603.519,4.961,the goals of the evaluation but most
+606.0,5.279,sets of heuristics have been
+608.48,4.72,have between 5 and 10 items
+611.279,4.721,so this number provides a good range of
+613.2,5.6,usability criteria by which to judge the
+616.0,4.32,various aspect of the interface
+618.8,3.599,more than 10 becomes difficult for
+620.32,3.519,evaluators to remember
+622.399,4.161,fewer
+623.839,6.041,fewer than pythons not to be sufficient
+626.56,3.32,and discriminating
+630.0,4.72,a key question that is frequently asked
+632.48,5.28,is how many evaluators
+634.72,4.48,are needed to carry out two heuristic
+637.76,3.92,evaluation
+639.2,5.6,while one evaluator can identify a large
+641.68,5.04,number of problems he or she may not
+644.8,5.36,catch all of them
+646.72,7.119,okay sure she may also have a tendency
+650.16,6.0,to concentrate more on one aspect of
+653.839,5.12,aspect at the expense of missing other
+656.16,5.84,for example uh in the study of heuristic
+658.959,6.0,valuation where 19 evaluators were asked
+662.0,6.079,to find 16 usability problems in a voice
+664.959,7.32,response system allowing the customer
+668.079,4.2,access to their backup
+675.279,2.401,nelson
+676.48,2.799,found a
+677.68,4.24,substantial difference between the
+679.279,4.881,number and type of usability problem
+681.92,4.8,found by the different evaluator
+684.16,4.96,he also notes that while some usability
+686.72,4.96,problems are very easy to find by all
+689.12,5.04,evaluators there are some problems that
+691.68,5.599,are found by very few experts
+694.16,5.919,therefore he urged that it's important
+697.279,5.441,to involve multiple evaluator in any
+700.079,6.961,heuristic evaluation and recommends
+702.72,6.16,between 3 and 5 evaluators
+707.04,4.4,his findings suggest that
+708.88,5.44,they can typically identify identify
+711.44,4.079,around 75 percent of total disability
+714.32,4.16,problem
+715.519,5.76,as shown in our figure that's
+718.48,2.799,said nothing
+721.44,5.519,okay so however
+723.76,5.519,employing multiple experts can be costly
+726.959,6.241,skillful expert can capture many of the
+729.279,6.401,usability problem by themselves and some
+733.2,5.199,consultancies now use this technique as
+735.68,3.92,the basis for critiquing interactive
+738.399,3.761,products
+739.6,5.6,a process that has become known as an
+742.16,4.239,expert treaty or expert treat in some
+745.2,4.8,countries
+746.399,5.361,but using only one or two experts on the
+750.0,4.8,heuristic evaluation
+751.76,4.079,can be a problematic since research has
+754.8,2.96,challenged
+755.839,5.921,news and findings and question whether
+757.76,6.639,even three to pipe evaluator is adequate
+761.76,4.4,for example
+764.399,3.841,carton and
+766.16,3.919,woodridge
+768.24,4.48,point out that the number of experts
+770.079,5.361,needed to find 70 percent of problem
+772.72,5.04,depends on the nature of the problems
+775.44,5.199,their analysis of the problem frequency
+777.76,6.319,and severity suggest that the highly
+780.639,3.44,misleading findings can
+785.44,2.48,so result
+785.76,6.48,conclusion from this is that more is
+787.92,6.8,better but more is also more expensive
+792.24,3.839,okay so however
+794.72,3.84,um
+796.079,5.44,because user and special facilities are
+798.56,4.959,not needed for heuristic evaluation and
+801.519,4.641,it is a comparatively
+803.519,5.201,inexpensive and quick it is popular with
+806.16,5.679,developer and is often known
+808.72,5.44,as a discount evaluation
+811.839,4.721,so for a quick evaluation of an early
+814.16,4.239,design one or two experts can probably
+816.56,2.959,identify most potential disability
+818.399,2.56,problem
+819.519,3.68,but if a
+820.959,4.961,total evaluation of a fully working
+823.199,5.361,prototype is needed then having a team
+825.92,4.4,or expert conducting table ratio and
+828.56,4.48,comparing your findings would be
+830.32,2.72,advisable
+835.839,5.721,heuristic for websites focus on criteria
+844.72,3.919,in the recent year
+846.88,3.6,so considerable attention has been
+848.639,3.76,purposed on the web
+850.48,3.52,mobile apps and other digital
+852.399,4.0,technologies
+854.0,3.6,okay so here is orbital rating website
+856.399,3.281,have become
+857.6,3.919,increasingly important and several
+859.68,3.36,slightly different setup heuristics have
+861.519,3.841,been developed
+863.04,3.919,a different sets of uh
+865.36,4.4,mobile weighting website have been
+866.959,4.0,developed based on news and original and
+869.76,4.0,heuristic
+870.959,5.841,one of this was developed by adibad
+873.76,6.16,okay so after discovering that muslim
+876.8,5.839,heuristic did not address a problem of a
+879.92,5.2,continuously evolving web he also found
+882.639,4.64,that there was an overlap between
+885.12,3.519,several of the guidelines
+887.279,3.12,and
+888.639,4.88,that they varied widely in terms of
+890.399,6.24,their scope and specificity which made
+893.519,3.12,them difficult to use
+897.199,3.601,okay so extra from the use of
+898.959,4.32,development
+900.8,5.76,that emphasize the web design issue
+903.279,6.641,first we have the clarity
+906.56,6.639,okay so clarity make the system as clear
+909.92,5.359,concise and meaningful as possible for
+913.199,5.121,the intended audience
+915.279,5.201,write a clear concise copy only use
+918.32,4.879,technical language for a technical
+920.48,4.4,audience right clear and meaningful
+923.199,5.841,meaningful labels
+924.88,4.16,use meaningful icons
+930.079,4.961,next we have um
+931.92,6.08,minimize unnecessary complexity and
+935.04,2.96,cognitive goal
+939.6,5.599,so meaning make the system as simple as
+942.72,4.96,possible for the user to accomplish
+945.199,5.361,their tasks so remove unnecessary
+947.68,5.92,functionality process step and visual
+950.56,4.0,clutter use progressive disclosure to
+953.6,2.56,hide
+954.56,3.76,advanced feature
+956.16,4.16,break down complicated processes into a
+958.32,5.12,multiple step
+960.32,6.959,prioritize using size shape color
+963.44,6.0,alignment and proximity
+967.279,4.641,then we have provide the user with the
+969.44,4.88,context
+971.92,5.039,okay so interface should provide user
+974.32,5.04,with a sense of context in time and
+976.959,2.401,space
+979.519,7.281,provide a clear site name and purpose
+983.36,3.44,highlight the current section
+986.959,5.361,in the navigation provide a breadcrumb
+989.519,7.12,trade use appropriate feedback message
+992.32,4.319,show numbers of step in a process
+998.24,3.839,reduce the
+999.519,5.041,perception of the latency by providing
+1002.079,5.12,visual cues example in progress
+1004.56,6.079,indicator or by allowing user to
+1007.199,6.0,complete other tasks while reading
+1010.639,6.721,next we have promote positive and
+1013.199,4.161,pleasurable user experience
+1017.44,3.92,okay so
+1018.959,4.081,the user should be treated with respect
+1021.36,4.079,and the design should be
+1023.04,5.759,aesthetically pleasing and promote a
+1025.439,5.52,pleasurable and rewarding experience so
+1028.799,5.12,create a pleasurable and attractive
+1030.959,4.08,design provide easily attainable goals
+1033.919,3.601,and
+1035.039,5.28,provide rewards for the usage and
+1037.52,2.799,progression
+1041.199,6.801,so using heuristic bandwidth
+1044.88,5.6,ambient display
+1048.0,3.52,again so heuristic evaluation has also
+1050.48,3.68,been used
+1051.52,5.12,to evaluate abstract aesthetic
+1054.16,4.879,peripheral display the portrait none
+1056.64,4.24,critical information at the periphery of
+1059.039,4.321,the user attention
+1060.88,4.88,so since this device are not designed
+1063.36,4.88,for past performance the researcher had
+1065.76,3.919,to develop a set of heuristics that took
+1068.24,3.84,this into account
+1069.679,4.161,so they did this by developing two
+1072.08,3.68,ambient display
+1073.84,4.88,one indicated how to
+1075.76,5.6,close a bus in the bus stop by showing
+1078.72,6.24,its number move upward on the screen the
+1081.36,5.76,other indicated how light or dark it was
+1084.96,3.04,outside by lightening or darkening the
+1087.12,1.919,light
+1088.0,4.48,display
+1089.039,5.52,so in our figure there are modified uh
+1092.48,4.96,nielsen heuristic to address the
+1094.559,4.801,characteristic of ambient display and as
+1097.44,4.239,a group of experts to evaluate the
+1099.36,4.4,display using them
+1101.679,4.401,okay so the heuristic that they develop
+1103.76,5.279,includes some that were specifically
+1106.08,5.52,geared towards ambient systems such as
+1109.039,4.961,visibility of state so the state of this
+1111.6,5.36,space should be clear when it's placed
+1114.0,5.12,in an intended setting
+1116.96,3.92,peripherality of this place or the
+1119.12,5.04,display should be
+1120.88,5.36,an obtrusive and remains so unless it
+1124.16,4.399,requires the user attention
+1126.24,4.559,users should be able to easily monitor
+1128.559,3.521,the display so in this study the
+1130.799,2.401,researcher found out that a
+1132.08,4.08,three-to-five
+1133.2,6.8,evaluator were able to identify this 40
+1136.16,5.2,to 60 percent of known usability issue
+1140.0,3.36,in the valley of study different
+1141.36,4.4,researchers used the same heuristic with
+1143.36,4.8,different ambient application
+1145.76,5.84,they found a 75 percent of known
+1148.16,7.12,usability problems with the 8 evaluators
+1151.6,6.079,and 35 to 55 were found with three to
+1155.28,5.84,five evaluators suggesting that the more
+1157.679,6.801,evaluator you have the more accurate the
+1161.12,6.16,result will be as other researchers uh
+1164.48,5.04,have also reported heuristic for other
+1167.28,4.88,products adopted from instant original
+1169.52,5.68,heuristic have continued to be developed
+1172.16,5.12,and include heuristic for evaluating
+1175.2,4.64,shared group wear
+1177.28,4.24,video games multiplayer games and online
+1179.84,5.76,communities
+1181.52,4.08,and information visualization
+1186.24,2.88,and
+1186.84,4.76,[Music]
+1189.12,5.6,eight golden rules of a set guideline
+1191.6,5.68,first developed in the mid-1980s
+1194.72,4.8,are also frequently adapted for use with
+1197.28,5.68,the different types of system
+1199.52,6.08,and environment and use as a heuristic
+1202.96,5.36,or identifying usability problem
+1205.6,4.319,so the first having a adidas eight night
+1208.32,4.16,and golden rules
+1209.919,4.88,uh strive for consistency
+1212.48,5.12,so consistent sequence of action should
+1214.799,5.36,be required in similar situation
+1217.6,5.52,identical to terminology should be used
+1220.159,5.321,in from minimums and help screen and
+1223.12,4.64,consistent coder laid out
+1225.48,4.199,capitalization points and so on should
+1227.76,4.159,be employed
+1229.679,4.081,exceptions such as record confirmation
+1231.919,3.601,or delete commands or no
+1233.76,3.68,echoing password should be
+1235.52,4.399,comprehensible and
+1237.44,4.96,limited in number
+1239.919,4.481,next are catered to universal use
+1242.4,4.639,usability
+1244.4,5.2,meaning recognize the means of diverse
+1247.039,4.481,users and design for
+1249.6,4.559,plasticity and facilitating
+1251.52,5.039,transformation of content so now buys to
+1254.159,5.281,expert a different age range
+1256.559,4.561,disabilities and technological diversity
+1259.44,4.0,each energy and spectrums of
+1261.12,4.4,requirements that guides design adding
+1263.44,5.28,picture to numbers such as
+1265.52,6.48,explanation and pictures for experts as
+1268.72,5.439,shortcuts and password pacing can enrich
+1272.0,6.08,the interface design and improve the
+1274.159,4.721,purchases of system quality
+1278.08,1.76,next
+1278.88,2.72,offer
+1279.84,4.319,informative feedback
+1281.6,4.959,so for every user action there should be
+1284.159,4.88,a system feedback for frequent and
+1286.559,3.441,monitor action the response can be
+1289.039,2.0,or less
+1290.0,3.679,whereas
+1291.039,5.601,for infrequent and major action the
+1293.679,4.801,response should be more substantial
+1296.64,4.08,visual presentation of object of
+1298.48,4.48,interest provided a convenient
+1300.72,3.68,environment for showing changes
+1302.96,4.719,explicitly
+1304.4,5.68,next we have the dialog a design dialog
+1307.679,4.401,to yield a closure
+1310.08,4.56,sequence of action should be organized
+1312.08,4.479,into groups with the beginning middle
+1314.64,4.48,and end
+1316.559,5.36,informative feedback at the completion
+1319.12,6.0,of group of action gives a operation the
+1321.919,6.24,satisfaction of accomplishing a sense of
+1325.12,6.0,relief a signal to drop contingency
+1328.159,5.52,plans from the minds and an indicator to
+1331.12,5.679,prepare for the next group of action for
+1333.679,6.161,example ecommerce website will be user
+1336.799,5.201,from selecting product will check out
+1339.84,5.44,ending with a clear confirmation page to
+1342.0,5.52,complete the transaction
+1345.28,4.96,next we have prevent errors
+1347.52,5.44,as much as possible we sign the systems
+1350.24,5.919,uh such that user cannot make serious
+1352.96,5.04,error for example gray out menu
+1356.159,2.961,items that are not appropriate and do
+1358.0,3.28,not allow
+1359.12,4.96,alphabetic characters in numeric entry
+1361.28,4.0,builds if a user makes an error the
+1364.08,3.28,interface should
+1365.28,4.48,detect the error and uh
+1367.36,5.36,and offer simple constructive and
+1369.76,6.159,specific instruction for recovery for
+1372.72,5.92,example a user should not have to retype
+1375.919,5.441,an entire name address from if they
+1378.64,5.6,enter invalid zip code but rather should
+1381.36,5.76,be guided to repair only the uh
+1384.24,2.88,the quality part
+1387.28,5.12,error action should leave the system
+1389.76,5.039,state unchanged or the interface should
+1392.4,3.519,give instruction about the restoring
+1394.799,3.601,mistake
+1395.919,3.521,next we have permit easy reversal of
+1398.4,3.6,action
+1399.44,6.479,as much as possible action should be
+1402.0,3.919,reversible so this feature
+1406.08,6.079,relieves anxiety since the user knows
+1409.76,5.279,the errors can be unbanned
+1412.159,3.921,and encourage exploration of unfamiliar
+1415.039,3.361,option
+1416.08,4.32,the units of reversibility may be a
+1418.4,4.96,single action
+1420.4,6.56,or data entry task or complete group of
+1423.36,7.84,actions as entry of name address block
+1426.96,4.24,next we have the support internal
+1431.919,3.041,so experienced user
+1434.08,3.28,uh
+1434.96,4.959,strongly desired the sense that they are
+1437.36,4.96,in charge of the interface and that the
+1439.919,4.88,interface responds to their action
+1442.32,4.719,they don't want a surprises or changes
+1444.799,4.321,in familiar behavior and they are
+1447.039,4.801,annoyed by
+1449.12,5.84,reduced data entry sequence difficulty
+1451.84,5.68,obtaining sr information and inability
+1454.96,5.28,to produce their desired result
+1457.52,4.159,last we have the reduce the short-term
+1460.24,3.6,memory loads
+1461.679,5.281,humans limit capacity for information
+1463.84,6.0,processing in short-term memory
+1466.96,2.88,is um
+1470.32,3.839,that we can remember so
+1476.24,4.16,so it requires a designer to avoid
+1478.48,4.96,interfacing which user must remember
+1480.4,5.519,information from one screen and then use
+1483.44,4.96,the information on the other other
+1485.919,4.321,screen it means that the smartphone
+1488.4,3.279,should not require the entry of the
+1490.24,4.24,phone numbers
+1491.679,4.961,website location should remain visible
+1494.48,4.4,multiple page display should be
+1496.64,4.72,consolidated and sufficient training
+1498.88,6.08,time should be allotted for complex
+1501.36,3.6,sequence of action
+1505.2,5.599,so three stages for doing heuristic
+1508.0,2.799,evaluation
+1511.84,3.52,doing heuristic evaluation can be broken
+1514.159,3.601,down into
+1515.36,4.48,into three main stages
+1517.76,4.08,okay first is um
+1519.84,5.439,the briefing session
+1521.84,5.839,to tell experts what to do
+1525.279,4.081,okay
+1527.679,4.561,so
+1529.36,5.76,a prepared script is useful as a guide
+1532.24,4.72,and to ensure each person receive the
+1535.12,4.559,same repeat
+1536.96,5.76,then the evaluation period in which each
+1539.679,5.201,expert typically spend one to two hours
+1542.72,5.52,independently inspecting the product
+1544.88,5.2,using a heuristic or guidance the expert
+1548.24,3.439,needs to take at least two passes
+1550.08,4.079,through the interface
+1551.679,5.36,the first pass gives appeal for the flow
+1554.159,5.201,of the interaction and the products fall
+1557.039,5.12,the second pass allows the evaluator to
+1559.36,5.199,propose a specific interface element in
+1562.159,5.281,the context of the whole product and to
+1564.559,6.081,identify potentially usability problem
+1567.44,5.2,if the evaluation is for
+1570.64,4.8,functioning product the evaluator need
+1572.64,6.08,to save some specific user tasks in mind
+1575.44,5.68,so that exploration is focused
+1578.72,5.52,suggesting tasks may be helpful but many
+1581.12,5.2,experts suggest their own tasks however
+1584.24,5.84,this approach is less easy if the
+1586.32,6.56,evaluation is done early in a design
+1590.08,4.32,vendors are only screened map up or
+1592.88,3.76,specification
+1594.4,5.519,the approach needs to be adapted to the
+1596.64,4.88,evaluation in circle circumstances
+1599.919,4.561,while working through the interface
+1601.52,5.68,specification or maps a second person
+1604.48,4.96,may record the problem identified or the
+1607.2,4.079,evaluator may think aloud
+1609.44,4.16,alternatively she
+1611.279,5.441,may take a note herself evaluator should
+1613.6,6.8,be encouraged to be specific as possible
+1616.72,5.52,and to record each problem clearly
+1620.4,4.24,and
+1622.24,5.12,that's the briefing session
+1624.64,6.08,we session in which expert together to
+1627.36,3.36,prioritize problem
+1630.92,3.24,[Music]
+1633.36,2.0,okay so
+1634.16,3.36,[Music]
+1635.36,4.16,they found i suggest a solution so the
+1637.52,2.96,heuristic function of the evaluators
+1639.52,3.44,attention
+1640.48,4.4,on a particular issue so selecting
+1642.96,4.959,appropriate heuristic is critically
+1644.88,5.039,important so even though there are there
+1647.919,4.88,is sometimes less agreement among
+1649.919,5.601,evaluator that is
+1652.799,4.721,is desirable as discussed
+1655.52,4.72,in
+1657.52,4.96,our next example okay there are fewer
+1660.24,5.28,practical and ethical issues near
+1662.48,6.16,evaluation uh than for other method
+1665.52,5.84,because users are not involved
+1668.64,5.519,a week is often cited as the time needed
+1671.36,5.439,to train evaluator but this depends on
+1674.159,4.561,the person's initial expertise so
+1676.799,4.401,typical user can be taught to do
+1678.72,4.88,heuristic evaluation although there have
+1681.2,4.16,been range that this approach is not
+1683.6,4.48,very successful
+1685.36,7.76,a variation of this method is to take a
+1688.08,5.04,team approach that may also involve user
+1693.84,4.16,so advantages and right there
+1700.32,3.44,okay so
+1701.679,5.201,you might have been uh have the
+1703.76,7.279,impression that heuristic evaluation is
+1706.88,6.799,uh once a poor designer and it can
+1711.039,5.601,reveal all the wrong with the design
+1713.679,5.36,however it has a problems
+1716.64,5.6,shortly after using evaluation was
+1719.039,5.921,developed several independent studies
+1722.24,6.159,compare urising evaluation with other
+1724.96,5.36,methods particularly user testing
+1728.399,4.481,they found that the different approaches
+1730.32,5.359,often identify different problems and
+1732.88,4.64,that sometimes heuristic evaluation is a
+1735.679,4.081,severe problem
+1737.52,4.32,so this urge for the using
+1739.76,4.639,complementary methods
+1741.84,5.36,furthermore heuristic evaluation should
+1744.399,3.841,not be taught as a replacement for user
+1747.2,3.76,testing
+1748.24,5.36,another problem concerned expert
+1750.96,4.16,reporting problems that don't exist in
+1753.6,3.92,other words some of the expert
+1755.12,4.159,predictions are wrong
+1757.52,3.36,bailly's
+1759.279,4.081,cite analysis
+1760.88,5.039,from three published resources
+1763.36,5.439,sources showing that only around 30
+1765.919,5.281,percent of the problem reported were
+1768.799,4.88,real usability problem
+1771.2,3.68,some of which were serious others
+1773.679,3.761,trivial
+1774.88,5.84,however the heuristic evaluator missed
+1777.44,6.16,about 20 percent of user problems
+1780.72,5.52,furthermore about 43 percent of the
+1783.6,4.72,problems identified by the expert were
+1786.24,5.919,not problems at all
+1788.32,6.239,okay so they were paul's alarm
+1792.159,4.64,so bayless points out point out that
+1794.559,5.441,this means only about half of the
+1796.799,5.12,problem identifies our true problem
+1800.0,4.559,more specifically for every true
+1801.919,5.281,usability problem identified there will
+1804.559,5.441,be a little over pulse alarm
+1807.2,4.32,one is two and about one half of the
+1810.0,4.159,miss problem
+1811.52,5.6,so in this analysis is true heuristic
+1814.159,5.361,evaluators tend to identify more false
+1817.12,4.559,alarms and miss more progress than they
+1819.52,4.72,have through hits
+1821.679,5.12,so the question is how can the number of
+1824.24,3.76,wholesalers or mysterious problems be
+1826.799,3.841,reduced
+1828.0,4.399,so checking the expert really have uh
+1830.64,4.56,the expertise that they have claimed
+1832.399,5.52,would have but how can this be done
+1835.2,5.199,so one way to overcome this problem is
+1837.919,5.36,to have several evaluators
+1840.399,5.28,so this helps to reduce the impact of
+1843.279,5.921,one person experience or poor
+1845.679,6.641,performance using heuristic evaluation
+1849.2,7.12,along with user testing and other method
+1852.32,4.0,is also a good idea
+1857.76,4.96,one heuristic evaluation has proven to
+1860.0,5.519,be very useful and used by many
+1862.72,4.72,usability experts over the years the
+1865.519,4.0,guidelines were designed to be applied
+1867.44,4.88,to pc based application
+1869.519,5.121,there were being developed in 1980s
+1872.32,4.88,giving the range of current technologies
+1874.64,5.84,examples smartphones and barges other
+1877.2,3.28,mobile device tablet
+1880.559,5.201,ambient system they have been developed
+1882.96,5.68,since nielsen device his original sets
+1885.76,5.84,up heuristic so it raises the question
+1888.64,5.36,whether they can continue to be used to
+1891.6,4.959,test usability and user experience with
+1894.0,4.96,a new product for example
+1896.559,5.12,how useful will they be for evaluating
+1898.96,6.64,wearable technologies such as smart
+1901.679,5.84,watches and augmented glasses
+1905.6,4.64,so what are the heuristic might be
+1907.519,5.201,needed there's also overlap between how
+1910.24,4.48,evaluation heuristic and other kinds of
+1912.72,4.4,design guidance are used
+1914.72,4.959,design guidelines and often converted
+1917.12,5.2,into heuristics so it is possible to use
+1919.679,6.081,this instead or in combination with
+1922.32,3.44,heuristic evaluation
+1926.88,3.279,cognitive work tools
+1930.24,4.88,okay so walkthroughs have been
+1932.399,5.76,used by system developers for many years
+1935.12,5.679,or inspecting code and other concept
+1938.159,5.201,offers an alternative approach to reduce
+1940.799,4.641,the heuristic evaluation or predicting
+1943.36,3.76,user problems without
+1945.44,3.359,user testing
+1947.12,4.0,as the name suggests walkthroughs
+1948.799,4.0,involves walking through a task with a
+1951.12,4.32,product and
+1952.799,4.561,nothing problematic usability feature
+1955.44,3.52,most walkthrough methods do not involve
+1957.36,3.76,users
+1958.96,4.88,others such as pluralistic walkthroughs
+1961.12,5.84,involves a team that may include user as
+1963.84,5.76,well as the developer and disability
+1966.96,2.64,specialist
+1970.24,3.0,so
+1988.48,3.76,i've got the doctors involved simulating
+1990.64,3.919,the user problem
+1992.24,4.319,uh solving process of each step in a
+1994.559,3.921,human computer dialogue
+1996.559,4.401,checking to see if the user goals and
+1998.48,4.72,memory for action can be assumed to be
+2000.96,4.48,the next correction action
+2003.2,5.44,so the defining feature is that they
+2005.44,6.4,focus on evaluating design or ease of
+2008.64,6.159,learning a focus that is motivated by
+2011.84,4.88,observing observation that users learn
+2014.799,3.841,by exploration
+2016.72,3.839,okay so the step involved in cognitive
+2018.64,4.48,walkthroughs are
+2020.559,2.561,we have the
+2025.039,4.961,characteristic of typical user are
+2027.12,5.2,identified and documented and sampled as
+2030.0,4.799,are developed the focus on aspect of the
+2032.32,5.199,design to be evaluated
+2034.799,4.801,a description map up or prototype of the
+2037.519,4.801,interface to be developed is also
+2039.6,5.199,produced along with a clear sequence of
+2042.32,6.079,action needed for the user to complete
+2044.799,6.401,the task a designer and one of more
+2048.399,4.72,expert evaluator come together to do the
+2051.2,4.0,analysis
+2053.119,4.641,the evaluator walk through the action
+2055.2,5.28,sequence for each task placing it with
+2057.76,4.56,the context of a typical scenario
+2060.48,3.76,and as they do
+2062.32,3.12,this they try to answer the following
+2064.24,2.639,question
+2065.44,3.52,okay first is
+2066.879,4.0,will the correct action be sufficient
+2068.96,5.36,evident to the user
+2070.879,4.96,so or will the user know what to do to
+2074.32,3.68,achieve the task
+2075.839,3.84,so will the user notice that the correct
+2078.0,4.48,action is available
+2079.679,5.2,so meaning can user see the button or
+2082.48,3.919,menu item that they should be used for
+2084.879,5.76,the next action
+2086.399,4.24,it is apparent when it's needed
+2091.119,4.321,next will the user
+2093.04,4.319,associate and interpret the response
+2095.44,4.48,from the action correctly so meaning
+2097.359,4.401,will the user know from the feedback
+2099.92,4.08,that they have made or correct or
+2101.76,5.359,incorrect choice of action in other
+2104.0,5.359,words uh will the user know what to do
+2107.119,4.641,see how to do it and understand from
+2109.359,3.76,feedback whether the action was correct
+2111.76,2.4,or not
+2113.119,3.121,um
+2114.16,3.84,as the walkthrough is being done a
+2116.24,3.359,record of critical information is
+2118.0,3.76,compiling which
+2119.599,6.561,assumption about the uh would cause
+2121.76,6.319,problem and why are identified
+2126.16,4.88,so note about
+2128.079,6.801,side issues and design changes are made
+2131.04,6.079,a summary of a result is a compile okay
+2134.88,6.0,next the design is the revise of the
+2137.119,3.761,peaks of the problem presented
+2142.079,2.641,so plus
+2151.68,5.84,are other type of work tools
+2154.96,5.52,in which user developers and usability
+2157.52,4.88,experts work together to step through
+2160.48,4.0,a task or scenario
+2162.4,4.0,discussing usability issue associated
+2164.48,4.4,with the diagonal elements
+2166.4,5.84,involved in the scenario step
+2168.88,5.6,in a pluralistic
+2172.24,4.64,each of the evaluator is asked to assume
+2174.48,4.48,the role of a typical user
+2176.88,3.68,scenarios of use consisting of your
+2178.96,4.159,prototype screen
+2180.56,5.279,are given to each evaluator who
+2183.119,4.96,writes down the sequence of action they
+2185.839,4.321,should take to move from one string to
+2188.079,5.681,another without uh
+2190.16,5.6,comparing with bellow panelists
+2193.76,4.0,when the panelists discuss the action
+2195.76,5.04,they each asset just before moving to
+2197.76,4.88,the next round of screen so this process
+2200.8,3.84,continues until all the scenarios have
+2202.64,4.719,been evaluated
+2204.64,5.36,okay so the benefits of pluralistic work
+2207.359,3.521,tools includes a strong focus on user
+2210.0,3.52,tasks
+2210.88,4.239,at a detailed level example looking at
+2213.52,4.8,the step taken
+2215.119,6.0,okay so this level of analysis analysis
+2218.32,6.0,can be uh a valuable for certain kinds
+2221.119,5.281,of systems such as safety critical ones
+2224.32,4.88,whereas usability problem identified for
+2226.4,6.24,a single step could be critical to its
+2229.2,6.0,safety and efficiency
+2232.64,5.28,the approach length incept will uh
+2235.2,5.28,parasitic participatory design practices
+2237.92,4.56,by involving multi-disciplinary team in
+2240.48,4.16,which users play a key role
+2242.48,5.44,furthermore the group brings a variety
+2244.64,6.8,of expertise and opinions or
+2247.92,5.679,interpreting each stage of interaction
+2251.44,5.2,limitation includes having to get all
+2253.599,5.601,the experts together at once and then
+2256.64,4.959,proceed at the rate of the slowest
+2259.2,4.48,furthermore only a limited number of
+2261.599,3.841,scenarios and
+2263.68,4.399,transports through the interface can
+2265.44,5.639,usually be explored because of the time
+2268.079,3.0,constraint
+2272.48,4.4,evaluation using analytics
+2278.32,4.0,so analytics is a method for evaluating
+2281.359,3.281,user
+2282.32,5.2,traffic through a system
+2284.64,5.28,so mostly such system involved
+2287.52,3.36,selling products or service
+2289.92,3.36,uh
+2290.88,4.64,so knowing what customers do and what is
+2293.28,5.04,important for improving the product or
+2295.52,4.599,service but analytics are also being
+2298.32,5.2,used for evaluating
+2300.119,3.401,non-transactional system
+2303.839,5.361,when used to examine a topic on a
+2305.839,5.76,website or part of the website
+2309.2,4.96,as i mentioned in
+2311.599,5.121,lesson in chapter seven the analytics
+2314.16,5.12,are known as web analytics
+2316.72,4.56,web analytics can be collected locally
+2319.28,3.92,or remotely across the internet by
+2321.28,4.799,lagging user activity
+2323.2,4.96,counting and analyzing the data in order
+2326.079,4.401,to understand what part of the website
+2328.16,4.88,are being used and when
+2330.48,5.2,all the analytics are from
+2333.04,4.799,our form of evaluation that is
+2335.68,4.96,particularly useful for evaluating the
+2337.839,4.961,visibility of a website they are also
+2340.64,5.12,valuable for business planning including
+2342.8,6.16,the business of online education
+2345.76,6.319,recently analytics have been applied to
+2348.96,4.639,understand how learners in massive open
+2352.079,3.201,online courses
+2353.599,4.081,and other web buys
+2355.28,4.24,web-based education courses interact
+2357.68,3.84,with this system
+2359.52,3.2,for example the developers of this
+2361.52,5.2,system are
+2362.72,6.879,interested in that as such question as
+2366.72,5.359,why do learners enroll in this system
+2369.599,3.76,and what point do learners tend to drop
+2372.079,3.201,out and why
+2373.359,4.081,what are the characteristics of learners
+2375.28,4.319,who complete the course compared with
+2377.44,4.32,those who do not complete it
+2379.599,4.641,so
+2381.76,4.64,now so many companies are developing
+2384.24,4.4,their own analytics tools
+2386.4,4.959,other use of the service of companies
+2388.64,4.0,such as google and
+2391.359,2.881,vice
+2392.64,4.56,so which uh
+2394.24,5.52,specialize in providing analytics and
+2397.2,4.56,the analysis necessary to understand
+2399.76,3.92,large volume of data
+2401.76,4.24,typically these
+2403.68,4.56,companies present their analysis in
+2406.0,4.8,forms that are easy to devel for
+2408.24,5.68,developers and website a manager to
+2410.8,4.08,understand for example in graphs tables
+2413.92,4.159,and
+2414.88,6.76,other types of data visualization
+2418.079,6.881,the homepage of pcstat or
+2421.64,5.4,pricestat.com so contains a short uh
+2424.96,4.56,promotional video describing the hints
+2427.04,4.24,of services that the company offers and
+2429.52,3.28,why these services are important to
+2431.28,4.24,businesses
+2432.8,5.279,an example of how web analytics can be
+2435.52,4.799,used to analyze and help developers to
+2438.079,6.401,improve our website performance is
+2440.319,5.841,provided by that analysis
+2444.48,3.839,okay so
+2446.16,5.12,example okay
+2448.319,6.241,uh mountain wines okay
+2451.28,5.92,uh it's located in saratoga california
+2454.56,5.2,so it aims to create a memorable
+2457.2,3.76,experience for guests who visit the
+2459.76,3.68,barnyard
+2460.96,4.24,so following on the traditional started
+2463.44,4.639,by paul mason
+2465.2,6.399,world famous winemaker
+2468.079,5.76,mountain wines offers a beautiful venue
+2471.599,4.881,for a variety of events including
+2473.839,6.321,weddings corporate meetings dinner
+2476.48,6.24,parties birthday concert and vacation so
+2480.16,4.88,mountain vines uses a variety
+2482.72,6.72,of advertising media to attract
+2485.04,8.079,customers to its website and in 2010
+2489.44,7.44,invest invested about
+2493.119,6.0,thousand dollar a month in advertising
+2496.88,4.56,however the website has remained
+2499.119,5.041,unchanged for several years because the
+2501.44,4.639,company didn't have a way of evaluating
+2504.16,4.159,its effectiveness and could not decide
+2506.079,4.24,whether to increase or decrease the
+2508.319,5.28,investment in
+2510.319,5.921,the they then decide to employ
+2513.599,5.201,a business staff to use their web
+2516.24,4.879,analytics tools prior to the in
+2518.8,4.0,this thing this company the only record
+2521.119,3.521,that mountain once had
+2522.8,4.319,of the effectiveness of itself
+2524.64,4.0,advertising came from the front desk
+2527.119,3.601,employees who were
+2528.64,5.199,instructed to ask visitor how did you
+2530.72,4.96,hear about mountain lions
+2533.839,4.24,so obviously that
+2535.68,5.04,provided mountain wines with data
+2538.079,5.601,showing how their website was being used
+2540.72,4.639,by potential customer example you
+2543.68,3.04,get a like that's showing
+2545.359,2.161,your
+2546.72,6.08,uh
+2547.52,7.2,nothing figure 15.4 and for 15.5
+2552.8,5.039,provides an overview of the number of
+2554.72,5.52,page view of the website per day
+2557.839,5.441,so you speak your pinpoint will provide
+2560.24,5.359,additional details and show the hours by
+2563.28,4.96,our traffic so clicking on the first
+2565.599,5.681,icon for the details show where the ip
+2568.24,3.92,address of the traffic are located
+2571.28,3.36,so
+2572.16,5.04,visit us can also provide information
+2574.64,5.12,about such thing as which visitor are
+2577.2,5.44,new to the site which are with uh
+2579.76,3.92,returners and which other pages visitors
+2582.64,4.16,came from
+2583.68,5.84,so using this data and data provided by
+2586.8,6.08,visit staff mountain ones could see
+2589.52,5.92,visitor totals and traffic's average
+2592.88,5.68,traffic sources traffic visitor activity
+2595.44,7.52,and more we discovered uh the importance
+2598.56,6.88,of visibility for the top search words
+2602.96,4.8,they could pinpoint where guests were
+2605.44,4.08,going on their website and they could
+2607.76,6.24,see where their guests were
+2609.52,4.48,geographically geographically located
+2616.0,4.72,social analysis
+2618.4,4.719,so more recently other types of
+2620.72,4.0,specialist analytics have also been
+2623.119,3.441,developed such as
+2624.72,3.44,visual analytics
+2626.56,4.24,in which thousands and sometimes
+2628.16,6.32,millions of data points are displayed
+2630.8,4.799,and manipulated visually
+2634.48,4.0,such as
+2635.599,5.441,social network analysis
+2638.48,4.96,example so light logging is another
+2641.04,5.12,interesting variation that can be used
+2643.44,5.76,for evaluation as well as for sharing
+2646.16,4.32,information with friends family and
+2649.2,3.84,colleagues
+2650.48,5.28,so typically live lagging involves
+2653.04,5.76,recording gps location
+2655.76,4.72,data and personal interaction data on
+2658.8,3.92,smartphones
+2660.48,4.8,in an evaluation context this can raise
+2662.72,5.04,privacy concern even though users tend
+2665.28,6.0,to get used to being that they generally
+2667.76,6.0,want to remain in a control of lagging
+2671.28,3.559,so this
+2673.76,4.8,dilemma
+2674.839,7.161,analyzing uh social networking behavior
+2678.56,6.24,sub invasion of privacy so some analytic
+2682.0,5.92,software can be used by it administrator
+2684.8,6.4,to track a worker's behavior on social
+2687.92,5.36,networking site during working hours
+2691.2,5.119,and the data collect that can be used to
+2693.28,5.839,determine who is collaborating with room
+2696.319,5.52,and to inform developers about how much
+2699.119,5.441,of their application are being used
+2701.839,4.161,or concept often referred to as
+2704.56,4.08,stickiness
+2706.0,5.119,so while this reason per tracking user
+2708.64,4.16,appeared to be a bona pipe so this is a
+2711.119,5.2,threat to
+2712.8,3.519,personal privacy
+2716.96,4.8,uh using web analytics again so there
+2719.44,5.36,are two types of web analytics on-site
+2721.76,5.2,and off-site analytics
+2724.8,4.16,so your on-site analytics are used by
+2726.96,3.04,website owners to measure booster
+2728.96,4.08,behavior
+2730.0,5.359,new upside measure a website visibility
+2733.04,4.72,and potential to acquire an audience on
+2735.359,5.441,the internet regardless of the who owns
+2737.76,4.8,the website so in recent years
+2740.8,4.08,however the difference between upside
+2742.56,4.48,and on-site analytics has learned but
+2744.88,4.32,some people still use this term
+2747.04,4.0,additional sources may also be used to
+2749.2,5.2,augment the data collected about a
+2751.04,5.36,website such as an email direct mail
+2754.4,4.4,campaign details
+2756.4,5.199,data sales and history
+2758.8,4.799,data which can be paired with a
+2761.599,4.48,web traffic data to provide further
+2763.599,5.041,insight into the user behavior
+2766.079,5.841,example are they in google analytics
+2768.64,6.959,even as early as 2012 google analytics
+2771.92,6.64,was analytics was the most widely used
+2775.599,3.921,on the site web analytics and statistics
+2778.56,3.519,service
+2779.52,6.48,more than 50 percent of the
+2782.079,6.561,10 000 most popular website at that time
+2786.0,4.319,use google analytics and its popularity
+2788.64,2.63,continues to soar
+2790.319,2.881,um
+2791.27,4.73,[Music]
+2793.2,4.8,shows part of google analytics for compa
+2796.0,4.72,how home buying
+2798.0,4.119,website for the previous edition of this
+2800.72,4.399,book
+2802.119,5.561,ideabook.com for the week uh starting at
+2805.119,5.521,the end of the november 2018 until the
+2807.68,6.0,beginning of december 2018.
+2810.64,7.199,okay so it's 17 of popular analytics
+2813.68,4.159,nothing in google analytics delay so
+2818.4,4.8,since 2012
+2820.24,5.119,so in addition to google analytics other
+2823.2,5.2,tools continue to emerge that provide
+2825.359,5.601,additional layers of information
+2828.4,5.84,so good access control option enroll in
+2830.96,5.359,real-time data collection
+2834.24,4.48,uh most analytics
+2836.319,5.201,including another type we should trust
+2838.72,4.96,search marketing social media marketing
+2841.52,4.48,and brand activity links and content
+2843.68,4.32,marketing and it's particularly useful
+2846.0,4.48,for leak management and analysis
+2848.0,4.96,analysis so you
+2850.48,6.599,are most analytics now then what
+2852.96,4.119,initially visits www.moss.com
+2858.0,3.599,also have the
+2859.28,4.799,through social metrics
+2861.599,5.281,uh autonomous attracts social media
+2864.079,4.161,metrics and helps calculate social media
+2866.88,2.4,marketing
+2868.24,5.079,okay
+2869.28,4.039,so you're gonna type send
+2876.88,5.12,general record website visitor action
+2879.599,5.96,and uses meta statistic to create this
+2882.0,3.559,file shipment
+2886.72,3.44,predictive models
+2889.2,3.2,okay
+2890.16,5.199,so similar to inspection methods and
+2892.4,5.919,analytics predictive models evaluate a
+2895.359,4.801,system without user being present
+2898.319,4.321,so rather than involving expert
+2900.16,5.36,evaluator role-playing user as
+2902.64,5.28,inspection or tracking their behavior
+2905.52,5.039,as in analytics predicted models use
+2907.92,4.48,formulas to derive values measure of
+2910.559,4.641,user performance
+2912.4,5.439,predictive modeling provide estimate of
+2915.2,5.28,the efficiency of different system for
+2917.839,4.961,various kinds of tasks for example a
+2920.48,5.359,smartphone designer may choose to use
+2922.8,5.68,predictive model because it can enable
+2925.839,5.52,her to determine accurately
+2928.48,5.2,which is optimal layout of keys on the
+2931.359,3.601,phone for allowing common operation to
+2933.68,2.96,be performed
+2934.96,5.84,so two types of predictive models have
+2936.64,6.64,been particularly influential in hci
+2940.8,5.92,and interaction design over uh over the
+2943.28,8.0,years the pitch though which
+2946.72,7.119,we will discuss really in the next slide
+2951.28,6.16,and the goms or
+2953.839,6.081,goms it up models which are rarely used
+2957.44,5.919,now as a tool were designed in the early
+2959.92,5.76,1980s primarily for comparing pc-based
+2963.359,4.96,interface for tasks that were highly
+2965.68,2.639,predictable
+2969.04,3.2,always a defeats here
+2972.72,5.04,so the pit's law
+2975.2,4.96,predicts the time it takes to reach a
+2977.76,4.559,target using pointing device
+2980.16,4.72,so it was originally used in human
+2982.319,4.8,factor research to model the
+2984.88,5.04,relationship between the speed and
+2987.119,4.161,accuracy when moving towards a target on
+2989.92,3.36,a display
+2991.28,4.72,in the interaction design it has been
+2993.28,5.279,used to describe the time it takes
+2996.0,5.2,to point at the target based on the size
+2998.559,3.841,of the object and the distance to the
+3001.2,3.2,object
+3002.4,4.0,specifically it is used to model the
+3004.4,2.88,time it takes to select object on the
+3006.4,3.199,screen
+3007.28,4.16,such as alpha geometric or different
+3009.599,4.161,spatial configuration
+3011.44,4.8,one of its main benefits that
+3013.76,5.839,it can help designer decide whether to
+3016.24,5.52,locate physical or digital button what
+3019.599,4.24,size they should be and how close
+3021.76,5.2,together they should be on a touch
+3023.839,6.081,display or physical device to begin with
+3026.96,4.159,it was most useful for designing
+3029.92,4.88,physical
+3031.119,5.521,laptop or pc keyboards layouts and the
+3034.8,4.4,placement of physical keys on mobile
+3036.64,5.52,devices such as smartphone
+3039.2,5.28,watches and remote controls
+3042.16,4.88,since lenses have been used more for
+3044.48,5.359,designing the layout of digital input
+3047.04,4.64,displayport touch screen interfaces
+3049.839,4.321,especially for considering the
+3051.68,5.2,effectiveness of the new ways of single
+3054.16,4.88,digit typing such as using
+3056.88,5.199,fingers or swiping
+3059.04,6.24,so the bigger the target the easier
+3062.079,6.161,and quicker it is to reach
+3065.28,5.6,this is why interface have a big buttons
+3068.24,5.119,are easier to use than interface that
+3070.88,4.959,presents lots of tiny buttons clamps
+3073.359,2.48,together
+3075.92,4.72,it's though also pretty
+3077.839,5.041,but the most quickly access target on
+3080.64,4.8,any computer display are the four
+3082.88,4.16,corners of the screen this uh this is
+3085.44,4.32,because of their
+3087.04,4.64,uh pinning action example the side of
+3089.76,4.4,the display constraint the user from
+3091.68,5.6,over stepping the target
+3094.16,6.72,however as pointed out by thug
+3097.28,6.319,on his asphalt.com website
+3100.88,4.88,corners seems strangely to be avoided at
+3103.599,4.641,all costs by the designer
+3105.76,5.12,it still can be useful for evaluating
+3108.24,6.24,system where the time to physical locate
+3110.88,5.679,an object is critical to a pass at hand
+3114.48,4.4,in particular it can help designer to
+3116.559,5.04,think about where to locate object on
+3118.88,5.199,the screen in relation to each other
+3121.599,4.881,these are specially useful for mobile
+3124.079,4.881,device where there is a limited space
+3126.48,3.52,for placing icons and buttons on the
+3128.96,3.28,screen
+3130.0,3.44,for example in the study carried out by
+3132.24,4.48,nokia
+3133.44,7.28,pixel was used to predict expert
+3136.72,6.56,expert texts uh enter rates for server
+3140.72,3.76,inputs methods on 12t cell phone key
+3143.28,3.44,file
+3144.48,5.2,the study has the designer to make
+3146.72,6.0,decision about the size of the key their
+3149.68,5.12,positioning and the sequence of presses
+3152.72,4.56,to perform common dust
+3154.8,4.48,trade-offs between the size of a device
+3157.28,3.68,and accuracy of using
+3159.28,3.44,it were made
+3160.96,3.119,with the help of the calculation from
+3162.72,4.24,this model
+3164.079,5.52,pits law have also been used to compare
+3166.96,4.32,eye tracking input with manual input for
+3169.599,4.72,visual target
+3171.28,5.36,so to compare different ways of mapping
+3174.319,3.76,a chinese character to the keyboard of
+3176.64,3.919,cell phones
+3178.079,4.881,and and also to investigate the backup
+3180.559,4.401,the size of physical gap between display
+3182.96,6.399,and proximity of targets in multiple
+3184.96,7.44,display environment and it also used to
+3189.359,5.841,evaluate tilt as an input method or
+3192.4,5.199,device with built in accelerometers such
+3195.2,3.68,as touchscreen phones and tablet's
+3197.599,2.72,computer
+3198.88,4.08,so the us
+3200.319,4.8,ask.com website also discuss
+3202.96,4.32,the application of its law to
+3205.119,6.0,smartphones and other new technologies
+3207.28,3.839,with limited screen real estate
+3216.559,4.0,some key point inspection can be used to
+3218.8,4.319,evaluate requirements markup and
+3220.559,4.881,functional prototype subsystem
+3223.119,4.96,user testing heuristic evaluation may
+3225.44,4.879,reveal different usability of problem
+3228.079,3.681,design guidelines can be used to develop
+3230.319,4.0,your listing
+3231.76,5.12,walkthroughs are focused so are suitable
+3234.319,5.441,reading small parts of products and
+3236.88,6.16,analytics involve collecting data user
+3239.76,5.12,activity of a website
+3243.04,4.96,so
+3244.88,5.6,in our lessons or in this lesson
+3248.0,5.359,i presented inspection evaluation method
+3250.48,5.52,focusing heuristic evaluation and work
+3253.359,3.521,which are usually done by your
+3256.0,2.48,your
+3256.88,4.08,specialist
+3258.48,4.96,usually you refer to an expert
+3260.96,4.639,who roll these user
+3263.44,4.8,with the design and prototypes in a
+3265.599,4.161,specification using their substantial
+3268.24,4.64,knowledge the kinds of problems that
+3269.76,4.48,users typically encounter and then offer
+3272.88,3.28,their opinion
+3274.24,4.16,so here is the evaluation and workforce
+3276.16,4.959,offer evaluator a structure
+3278.4,5.6,to guide the evaluation process
+3281.119,5.041,and analytics um
+3284.0,5.359,in which user interaction are logged are
+3286.16,6.48,often performed remotely and without a
+3289.359,6.161,user being aware that their interaction
+3292.64,4.24,rv income so very large of volume data
+3295.52,3.92,are collected
+3296.88,4.08,anonymized and static statistically
+3299.44,4.159,analyze using
+3300.96,4.56,specially developed software services
+3303.599,5.121,so the analysis provides information
+3305.52,5.279,about how a system is used example how
+3308.72,4.48,different version of website or
+3310.799,4.721,prototype performed or which part of a
+3313.2,4.879,website are standard news possibly due
+3315.52,3.68,to the port usability design or lack of
+3318.079,2.72,appeal
+3319.2,4.08,data are often
+3320.799,5.681,presented visually so that it it is
+3323.28,4.96,easier to see trends and interprets and
+3326.48,4.56,results
+3328.24,4.879,lastly pete's law is an example of a
+3331.04,5.36,technique that can be used to predict
+3333.119,6.081,user performance but determining whether
+3336.4,4.8,a proposed interface system or a keypad
+3339.2,4.399,layout will be optimized
+3341.2,4.24,typically pizzle is used for
+3343.599,3.921,use to
+3345.44,4.879,compare different design up layouts for
+3347.52,5.36,virtual or physical objects such as both
+3350.319,5.121,on on a device or screen for small
+3352.88,5.84,sequence of frequent nipple compass so
+3355.44,6.32,evaluators typically find that they have
+3358.72,4.8,modified this metal core valuation with
+3361.76,4.4,the market since speed slow was
+3363.52,4.96,originally developed that is similar to
+3366.16,3.679,the other methods discussed
+3368.48,4.48,in our
+3369.839,5.441,earlier lesson which frequently also
+3372.96,4.879,have to be modified
+3375.28,5.559,okay so that's it for today and thank
+3377.839,3.0,you

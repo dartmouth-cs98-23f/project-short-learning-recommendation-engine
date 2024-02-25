@@ -1,0 +1,61 @@
+{
+  "introduction": "This video discusses the reasons behind the slow performance of the SELECT * statement in a relational database. It covers the concept of pages in a database, how they are read, and the role of shared memory in the process.",
+  "sections": [
+    {
+      "title": "Section 1: Understanding Pages in a Database",
+      "content": [
+        "Explanation of how pages are stored in a database.",
+        "Discussion on the fixed size of database pages.",
+        "Explanation of how page numbers are determined.",
+        "Comparison of page sizes between different databases."
+      ],
+      "topics": ["Database Pages", "Page Numbers", "Page Sizes", "Database Comparison"]
+    },
+    {
+      "title": "Section 2: Reading Pages in a Database",
+      "content": [
+        "Explanation of how to read a page from a database.",
+        "Discussion on the limitations of reading from disk.",
+        "Explanation of how page sizes affect reading performance.",
+        "Comparison of reading performance between different databases."
+      ],
+      "topics": ["Reading Pages", "Disk Limitations", "Page Sizes", "Database Comparison"]
+    },
+    {
+      "title": "Section 3: Shared Memory and Performance",
+      "content": [
+        "Explanation of shared memory in a database.",
+        "Discussion on how shared memory improves performance.",
+        "Explanation of how shared memory affects query performance.",
+        "Comparison of shared memory performance between different databases."
+      ],
+      "topics": ["Shared Memory", "Performance Improvement", "Query Performance", "Database Comparison"]
+    },
+    {
+      "title": "Section 4: Page Caching and Performance",
+      "content": [
+        "Explanation of page caching in a database.",
+        "Discussion on how page caching improves performance.",
+        "Explanation of how page caching affects query performance.",
+        "Comparison of page caching performance between different databases."
+      ],
+      "topics": ["Page Caching", "Performance Improvement", "Query Performance", "Database Comparison"]
+    },
+    {
+      "title": "Section 5: Conclusion and Best Practices",
+      "content": [
+        "Summary of key takeaways from the video.",
+        "Discussion on best practices for optimizing database performance.",
+        "Explanation of the importance of understanding database architecture.",
+        "Final thoughts on the importance of performance optimization."
+      ],
+      "topics": ["Summary", "Best Practices", "Database Architecture", "Final Thoughts"]
+    }
+  ],
+  "topics": ["Database Pages", "Reading Pages", "Shared Memory", "Page Caching", "Performance Optimization"],
+  "general topics": [
+    {"name": "Database Performance Optimization", "complexity": 0.75},
+    {"name": "Database Architecture", "complexity": 0.85},
+    {"name": "Database Comparison", "complexity": 0.65}
+  ]
+}

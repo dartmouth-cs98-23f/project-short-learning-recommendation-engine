@@ -1,0 +1,361 @@
+second,duration,transcript
+0.03,4.71,hi the topic is dreadful search and
+2.73,4.62,depth-first search in this video I will
+4.74,6.12,cover these two traversal methods by
+7.35,5.1,taking various examples well for such an
+10.86,6.179,effort search our graph traversal
+12.45,6.81,methods so we'll understand quickly the
+17.039,5.16,difference between them throw this a
+19.26,4.92,small example then afterward I'll take
+22.199,5.731,another example and I will explain you
+24.18,5.55,in detail now for quick understanding I
+27.93,5.73,have taken a simple graph actually it's
+29.73,6.81,a tree but a tree is also a graph so let
+33.66,6.21,us see so for traversal both of these
+36.54,5.66,traversal we have to know these two
+39.87,5.07,terms now for understanding these
+42.2,4.69,traversals we should know two terms one
+44.94,4.139,is visiting a vertex means going on a
+46.89,4.829,particular vertex second Irma's
+49.079,5.041,exploration of vertex exploration means
+51.719,4.741,if I am on sub particular vertex then
+54.12,5.52,visiting all its adjacent vertices is
+56.46,5.099,called as exploration so based on these
+59.64,4.169,two terms we can understand traversals
+61.559,4.981,so first I will explain in breadth first
+63.809,4.38,search see I am selecting vertex one as
+66.54,3.72,the starting vertex to find out
+68.189,5.22,breadth-first search we can select any
+70.26,7.56,vertex as a starting vertex now vertex
+73.409,6.841,one I will visit the vertex one now once
+77.82,5.07,the vertex is visited this word is I
+80.25,5.28,will start exploring means I will visit
+82.89,6.15,all adjacent vertices so who are those
+85.53,5.49,five four and two in which order I can
+89.04,4.259,visit I can visit them in any order so
+91.02,8.55,okay I will take two first then four
+93.299,8.191,then five next I should select the next
+99.57,3.869,vertex for exploration so these are
+101.49,3.96,already visited vertices after one I
+103.439,4.29,have a set at two four five then I
+105.45,4.68,should explore explore what I will
+107.729,5.28,explode - so who are a listen to two
+110.13,4.41,adjacent to two or seven six three in
+113.009,3.841,which order you can take you can take
+114.54,5.25,them in any order 7 then three then six
+116.85,5.58,in any order you can take that's all all
+119.79,4.8,the verses are visited and there is no
+122.43,6.059,vertex remaining for exploration
+124.59,7.0,this is breadth-first search now let us
+128.489,7.491,look at depth first
+131.59,7.66,I'll start from vertex one then from one
+135.98,7.679,I have stowed start its exploration so I
+139.25,7.14,will go to vertex two - now who are
+143.659,6.931,other adjacent vertices four and five no
+146.39,6.599,don't visit them you have reached a new
+150.59,5.729,vertex so you start exploring that
+152.989,5.521,vertex okay I'll start excluding - then
+156.319,4.801,who are adjacent to this seven six and
+158.51,5.61,three so I want to go to three okay go
+161.12,5.039,to three then shall I use it six and
+164.12,5.55,seven also known this is that first
+166.159,5.58,search start exploring three so if I
+169.67,4.89,start exploring three there is nothing
+171.739,6.0,connected to three okay so it means
+174.56,5.009,three is a completely explored then come
+177.739,7.95,back and then continue the exploration
+179.569,8.78,of - so who are there six explore six
+185.689,5.7,nothing is there come back go to seven
+188.349,5.651,explore seven visit seven explore 7
+191.389,5.791,there is nothing so come back to one now
+194.0,5.639,and continue the exploration of one who
+197.18,5.16,are adjacent to it for visit fool and
+199.639,6.481,explore for there is nothing come back
+202.34,7.53,then go to five five no in this way all
+206.12,7.92,are explored so the Traverse cells are
+209.87,6.69,different results are different so in
+214.04,5.099,breadth first search we will explore a
+216.56,5.22,vertex then we go to the next vertex for
+219.139,5.31,exploration but in depth first search
+221.78,5.4,once we extracted exploring once you
+224.449,6.12,visited a new vertex we will suspend
+227.18,5.339,this vertex and start its exploration so
+230.569,4.17,from one we got two so we started
+232.519,4.61,exploring - then from - we went on three
+234.739,4.89,so we'll start exploring three like this
+237.129,4.57,so when the first search approach is
+239.629,3.69,different and breadth for such a process
+241.699,3.481,is different so I'll take one more
+243.319,3.63,example and explain you what is the
+245.18,3.709,difference between that first search and
+246.949,5.28,depth-first search with a simple example
+248.889,7.481,one more example let us find
+252.229,8.671,breadth-first search actually this is a
+256.37,5.16,binary tree tree is also a graph so let
+260.9,3.36,us perform
+261.53,7.58,for search and see so as per binary tree
+264.26,9.72,I will perform level order 1 then 2 3
+269.11,7.57,then 4 5 6 7 4 5 6 7
+273.98,5.85,this is breadth-first search means
+276.68,7.47,breakfast surges just like a level order
+279.83,6.68,on a binary tree then what is the
+284.15,7.019,depth-first search
+286.51,7.0,visit one ok Explorer 1 so he got two so
+291.169,5.641,stop exploring one and start exploring
+293.51,5.01,two so four stop exploring two and
+296.81,5.22,continuing exploration of four there is
+298.52,5.37,nothing so go back and come to five now
+302.03,4.83,nothing is remaining so go back to one
+303.89,5.39,and come on this side then six and then
+306.86,5.46,go back and seven so this is like
+309.28,7.96,pre-order so that first search is just
+312.32,8.76,like level order and depth-first search
+317.24,9.9,is just like pre-order traversal of a
+321.08,8.399,graph I have taken a bigger graph now we
+327.14,6.18,will learn about bid for search and the
+329.479,6.421,first search in detail first of all
+333.32,4.53,breadth-first search for performing grid
+335.9,10.1,first search I will take one data
+337.85,11.819,structure that is Q I have taken a cue
+346.0,6.1,now I'll explain you initial step then I
+349.669,5.491,will explain you repeating step so what
+352.1,5.129,is the initial step start exploration
+355.16,3.66,from any one of the vertex so which what
+357.229,3.481,x I should select as a starting vertex
+358.82,3.93,for that for search you can select any
+360.71,5.31,what else you like so I will select
+362.75,5.91,vertex one so in the answer you show it
+366.02,6.69,one in the graph you draw here again
+368.66,6.569,then add it to Q this is the first step
+372.71,4.44,initial step now we will perform
+375.229,4.291,repeating steps so what are those
+377.15,4.889,repeating steps take all the vertex from
+379.52,6.48,Q and start exploring it
+382.039,7.111,so what X 1 who are adjacent to 1 4 & 2
+386.0,6.75,so explore them so first I want to visit
+389.15,4.83,for okay add it to result and also add
+392.75,4.77,it to Q next
+393.98,6.66,to go to to okay added to result and
+397.52,6.15,also added to queue no one is completely
+400.64,5.91,explored there is no urges on vertex
+403.67,5.79,remaining for vertex one this is first
+406.55,4.77,iteration completed now repeat the
+409.46,4.14,procedure what to do next
+411.32,5.73,select next vertex for exploration from
+413.6,6.12,queue that is for start exploring for so
+417.05,5.52,whose at this into four three so I am
+419.72,5.55,drawing it like a tree here so three is
+422.57,5.01,adjacent so add it to queue any other
+425.27,5.34,adjacent for for nothing is adjacent for
+427.58,5.81,four so four is completely explored
+430.61,7.31,now select next vertex for exploration
+433.39,9.34,that is two who are adjacent to two
+437.92,6.61,three five seven eight I can visit them
+442.73,4.44,in any order if I check three it's
+444.53,7.5,already explored so then I will prefer
+447.17,7.91,going on five first so five five next I
+452.03,7.47,want to go on eight okay eight so eight
+455.08,8.65,and eight next I will go on seven so
+459.5,6.02,seven and at seven here not two is a
+463.73,4.17,completely explored
+465.52,5.11,now select next vertex for exploration
+467.9,5.1,who is that three is there any at this
+470.63,5.28,one over this is for three yes to eight
+473.0,8.04,nine and ten so two is already visited
+475.91,11.07,so first I will take ten ten ten and
+481.04,7.95,then nine nine added to queue completed
+486.98,3.99,three is completely explored
+488.99,5.4,now select next vertex for exploration
+490.97,7.44,five anybody had just sent to five yes
+494.39,9.27,eight and seven and six so eight or the
+498.41,10.79,D visited seven already visited 6 this
+503.66,8.22,is 6 so 6 and 6 5 is completely explored
+509.2,6.91,select the next vertex for exploration 8
+511.88,5.19,who is adjacent to 8 2 and 7 - actually
+516.11,5.04,we came from there
+517.07,5.73,7 lloyd dotted line so vertex which is
+521.15,5.0,already visited we are drawing a dotted
+522.8,4.45,line then next vertex for exploration 7
+526.15,3.14,7
+527.25,4.83,is already explored so is there anything
+529.29,4.5,remaining four seven No ten there is
+532.08,4.32,nothing nearer to ten
+533.79,4.92,no nothing I just said to ten there is
+536.4,4.53,nothing as at the same to nine and there
+538.71,3.51,is nothing at the same to 6 so that's
+540.93,4.68,all this is
+542.22,6.45,breadth-first search completed and the
+545.61,11.34,tea that we got here is breadth-first
+548.67,12.18,search spanning tree dotted edges that
+556.95,7.59,we got here they are called as cross
+560.85,5.01,edges they are called as cross edges let
+564.54,4.17,us see what are the things that we have
+565.86,5.04,learned first thing as you can start
+568.71,5.34,breadth first search from any vertex you
+570.9,6.27,like first point second thing is when
+574.05,5.28,you are exploring any vertex 1 then you
+577.17,5.67,can visit the suggestion vertices in any
+579.33,6.51,order you like this or the second thing
+582.84,5.28,then both are leniency is given freedom
+585.84,6.21,is given to select any vertex then what
+588.12,6.09,is the rule here rule is when you are
+592.05,5.36,selecting a vertex for exploration you
+594.21,5.879,must visit all its adjacent vertices
+597.41,5.5,then only you should go to next vertex
+600.089,5.971,for exploration so it if I am exploring
+602.91,5.22,one then I should explicit a for as well
+606.06,6.09,as two then only I should sell it for
+608.13,7.47,for exploration this is the rule the
+612.15,5.25,next thing is last thing is you should
+615.6,8.04,select our next vertex for exploration
+617.4,8.01,from Q only so Q and exploration should
+623.64,3.51,be completely done these are the two
+625.41,4.26,important points about that first search
+627.15,6.15,you follow this one then you can get
+629.67,8.16,many answers I will write few more valid
+633.3,8.28,breadth first search is here first one
+637.83,5.94,I'll start from vertex one that is
+641.58,5.4,explore the adjacent vertices so first
+643.77,5.01,I'll explode two then four then I have
+646.98,3.99,to start exploring two because I have
+648.78,5.13,added to first so who are at this into
+650.97,4.13,two so I will take eight then five and
+653.91,3.14,seven then
+655.1,4.08,these are Addison to to all these are a
+657.05,4.47,different - - then I should explore
+659.18,5.25,which one for so water just sent two for
+661.52,5.43,three solid over then explore eight who
+664.43,7.26,is adjacent to eight five and seven both
+666.95,9.12,are visited now explore 7 so this is six
+671.69,7.59,now explore three so ten and nine so ten
+676.07,6.18,and nine this is one also this one is
+679.28,6.18,also a valid answer then one more
+682.25,6.99,I'll start exploration from five from
+685.46,7.8,five who are adjacent to eight seven and
+689.24,9.69,six now explore two who are resistant 2
+693.26,9.54,to 3 and 1 now explore 8 7 is already
+698.93,5.64,visited 7 everything is visited 6 and
+702.8,8.79,nothing is there so everything is
+704.57,9.72,visited explore 3 so 9 + 10 + 4 so 4 3 9
+711.59,4.77,10 and 4 I have visited 9 explore one
+714.29,6.18,nothing is remaining nine ten for not
+716.36,5.94,all are visited so this is also valid so
+720.47,3.69,like this you can start from any vertex
+722.3,4.59,and you can visit the adjacent in any
+724.16,7.41,order so you can form numerous number of
+726.89,6.99,valid breadth-first search next we will
+731.57,5.43,see depth-first search now next is
+733.88,6.48,depth-first search for this I will take
+737.0,11.67,a stack stack as a data structure used
+740.36,10.98,here let us start I can start the
+748.67,5.4,traversal from any vertex highlight so I
+751.34,6.9,want to start from vertex one so one is
+754.07,6.72,visited this is the initial step now the
+758.24,6.12,repeating step what I have to do every
+760.79,6.93,time as this new vertex is visited start
+764.36,11.76,exploring it so or adjacent to that four
+767.72,10.74,and two so visit four four four now the
+776.12,4.92,role in the first searches
+778.46,5.55,once you have visited one vertex still
+781.04,3.99,one more is remaining leave that we will
+784.01,3.75,see it afterwards
+785.03,5.28,first you start exploring four
+787.76,4.62,so this is the rule so once you have
+790.31,4.829,reached a new vertex start exploring
+792.38,5.04,that new vortex what about that one
+795.139,5.25,suspend it and keep it in the stable we
+797.42,5.849,can explore it later now start exploring
+800.389,5.671,for so from four I can go on three
+803.269,6.12,so they go to three three is visited now
+806.06,6.24,what to do suspend for and start
+809.389,7.32,exploring three from three I can go on
+812.3,7.26,ten so ten suspend trees start exploring
+816.709,5.37,ten there is no adjacent vertex of ten
+819.56,4.5,so go back to three so how to know I
+822.079,4.101,wait I have to go back this stack will
+824.06,4.62,give me their value so this three
+826.18,6.82,continue exploring three so I can go on
+828.68,8.06,nine 9 and again suspend tree and start
+833.0,7.829,exploring 9 from nyla cannot go anywhere
+836.74,8.05,then go back to 3 and start exploring 3
+840.829,8.551,so who is the descent to 3 2 so 2 is
+844.79,7.65,visited then from 2 whose adjacent
+849.38,8.22,suspended to and start exploring two so
+852.44,8.1,from 2 8 is Addison so take 8 now start
+857.6,8.28,exploring 8 so from there I can go on 7
+860.54,10.5,so suspend 8 so 7 is visited now we have
+865.88,7.319,to explore 7 from 7 I can go on 5 so 5
+871.04,5.31,is newly visited now we have to start
+873.199,6.12,exploring Phi so suspend seven and push
+876.35,8.07,it into the stack then from 5 who is
+879.319,8.551,adjacent 6 so visit six suspend 5 and
+884.42,5.88,continued exploration of 6 there is
+887.87,6.99,nothing at the same to 6 so go back to 5
+890.3,7.589,from 5 where I can go further so I can
+894.86,5.219,visit 2 which is already completed right
+897.889,5.101,I can visit 8 which is already completed
+900.079,5.041,so there is nothing remaining 4 5 so
+902.99,4.74,what happens in this way is we are going
+905.12,4.8,deep and deep right so in this way
+907.73,4.83,almost all vertices are visited only
+909.92,4.5,they are completely explored so 5 is
+912.56,5.16,completely explored go back to the
+914.42,5.4,previous vertex who is that 7 7 from 7
+917.72,5.46,very can go from 7 they can
+919.82,5.73,one two which is already visited then go
+923.18,5.07,back to eight from eight nothing is
+925.55,7.11,remaining so from to where I can go I
+928.25,6.48,can go to one right then nothing is
+932.66,4.92,remaining so go back before from four I
+934.73,6.48,cannot go anywhere from three one I
+937.58,7.94,cannot use it anywhere so that's all
+941.21,7.95,right so here is the defer search
+945.52,7.92,traversal result and this is a DFS
+949.16,9.69,spanning tree this is depth full search
+953.44,13.24,spanning tree and these are just are
+958.85,10.68,called as back edges so for this graph
+966.68,5.13,we can make a tree like and perform
+969.53,6.18,preorder so this is the pre-order of
+971.81,6.69,DISA tree c14 310 then nine then two
+975.71,5.49,eight seven five six one four three nine
+978.5,7.07,eight two so nine two eight seven five
+981.2,8.39,six so this is like pre-order traversal
+985.57,6.52,no I will write few more valid
+989.59,8.26,depth-first search directly looking into
+992.09,8.55,the graph I'll start from vertex 1 1
+997.85,8.16,this is the first one from 1 I will go
+1000.64,10.41,to tea from - I'll go to 8 from 8 I will
+1006.01,8.49,go to 7th from 7 and go to 5 then 6 from
+1011.05,5.73,6 I cannot go anywhere come back to 5 2
+1014.5,4.17,is already completed 7 also completed so
+1016.78,4.5,what was the route I have taken so come
+1018.67,4.74,back to 7 7 is completely explore come
+1021.28,7.2,back to 8 nothing remaining come back to
+1023.41,7.86,2 so from - I'll go 2 3 then 9 nothing
+1028.48,6.06,is there come back and go to 10 then go
+1031.27,5.34,back to 3 and go to 4 then one is
+1034.54,7.11,already explode so return back before
+1036.61,9.93,then 3 then 2 then 1 finished so this is
+1041.65,5.809,one answer then one more I'll show I'll
+1046.54,5.94,start
+1047.459,9.43,vortex train first is three then I'll
+1052.48,7.14,use it to fool than 1 then 2 then 5 then
+1056.889,5.37,6 from 6 and 8 cannot go anywhere come
+1059.62,7.23,back to 5 come back to 5 and go to 7
+1062.259,7.081,then 8 right from 8 and I'm back on to
+1066.85,4.59,what is already over so simply go back
+1069.34,5.66,to seven then five then come back to 2
+1071.44,6.479,then 2 from there I have already gone to
+1075.0,5.169,1 1 is already completed right so come
+1077.919,6.021,back to 4 then come back to 3 so from 3
+1080.169,7.561,who are remaining 10 and 9 so 10 then 9
+1083.94,5.859,this is also valid so you can start from
+1087.73,4.319,any vertex you like and you can visit
+1089.799,4.34,any neighboring vertex but only thing is
+1092.049,4.141,once you have visited a new vertex
+1094.139,5.821,suspend the exploration of current
+1096.19,5.969,vertex and start exploring new vortex
+1099.96,3.73,that's all about the first search and
+1102.159,3.421,breadth-first search and the time
+1103.69,7.31,complexity of both these methods is
+1105.58,5.42,order of n and this number of vertices

@@ -1,0 +1,74 @@
+second,duration,transcript
+9.46,3.62,"It is also very important to acquire
+the results of our computation,"
+13.08,3.12,by means of the qubit measurements.
+16.2,5.44,"We should not forget that measuring the qubit
+state will actually destroy the superposition."
+21.64,3.76,"As we explained before,
+the amplitude of the states of the qubit"
+25.4,5.96,"represents the probability with which
+a particular state of the qubit will be measured."
+31.36,4.179,"This again shows the non-deterministic
+way of quantum computing."
+35.539,5.041,"Even though the largest amplitude implies
+the highest probability for being read,"
+40.58,3.999,"it will happen that several runs
+of the same algorithms are needed."
+44.58,4.08,"And each time at the end of the algorithm,
+the measurement can be done"
+48.66,3.04,"and when done multiple times, the result,"
+51.7,3.84,"which has been read out,
+most of the times contains the result."
+56.74,5.6,"For doing a measurement, we need to measure
+the qubit and convert the analog signal"
+62.34,5.98,"we receive back from the qubit using 
+an Analog-to-Digital converter this time."
+68.33,5.79,"And then we apply a digital signal processing
+algorithm to discriminate the outcome of measurement"
+74.12,2.57,– whether it is a 0 or a 1.
+76.69,4.49,"The measurement outcome can be 
+a final result or an intermediate result,"
+81.18,3.32,which can be used to control further operations.
+86.26,6.52,"Closely related to this measurement operation
+is quantum error correction and detection."
+92.79,4.43,"We need to keep in mind that 
+qubits are fragile and error-prone"
+97.22,4.9,"and due to their very limited coherence time,
+they are exposed to errors."
+102.12,6.2,"Therefore, quantum error correction is 
+a critical component of the micro-architecture;"
+108.32,6.26,"and a dedicated unit is in charge of
+triggering periodic error-correction cycles"
+114.58,3.28,and correcting errors whenever they happen.
+117.86,5.1,"Such that they offer the required 
+fault-tolerance and provide correct results."
+123.6,3.2,"Once the measurements of
+the ancilla qubits are received,"
+126.8,5.02,"a decoder will interpret
+the readouts and determine whether or not"
+131.82,5.64,"an error has manifested itself for
+which some correction is necessary."
+137.46,5.48,"Quantum Error Correction is a very important
+functionality of the micro-architecture"
+142.94,4.98,"as certain estimates show that up to 90%
+of what a quantum processor is doing"
+147.92,4.9,"is actually related to that
+Quantum Error Correction activity."
+153.84,3.86,Another important component of the micro-architecture
+157.7,2.38,"is the qubit addressing table,"
+160.08,4.42,"which allows us to keep track
+of qubits and their locations."
+164.5,5.84,"The address and location of these qubits are
+basically used to update the physical address"
+170.34,6.64,"of each qubit used in our algorithm, 
+whenever it is moved from one location to the other."
+177.32,4.84,"This addressing table is crucial for 
+accommodating the routing mechanisms,"
+182.16,5.36,"which move qubits around
+to enable two-qubit operations"
+187.52,4.44,"which require the qubits nearest
+neighbour to be as close as possible."
+193.36,6.46,"Finally when operating all these units together,
+we can execute quantum algorithms"
+199.82,6.14,"and enjoy the opportunities that quantum computing
+has to offer in terms of computing speed-up."

@@ -1,0 +1,70 @@
+{
+  "introduction": "In this video, we explore the architectural differences between the vanilla transformer and the architecture of mistral, a new language model from mistal ai. We discuss the sliding window attention, the kv cache, model sharding, and the code of mistral. The video covers topics related to artificial intelligence, computer architecture, and software engineering.",
+  "sections": [
+    {
+      "title": "Section 1: Architectural Differences",
+      "content": [
+        "Explanation of the vanilla transformer architecture.",
+        "Introduction to the mistral architecture and its differences from the vanilla transformer.",
+        "Comparison of the self-attention mechanism in both architectures.",
+        "Discussion of the importance of the mask in the self-attention mechanism."
+      ],
+      "topics": ["Vanilla Transformer Architecture", "Mistral Architecture", "Self-Attention Mechanism"]
+    },
+    {
+      "title": "Section 2: Sliding Window Attention",
+      "content": [
+        "Explanation of the sliding window attention concept.",
+        "Discussion of its relationship to the concept of receptive fields in convolutional neural networks.",
+        "Presentation of the prefilling and chunking techniques used in the kv cache.",
+        "Explanation of how the last token output is used to build the kv cache."
+      ],
+      "topics": ["Sliding Window Attention", "Receptive Fields", "KV Cache"]
+    },
+    {
+      "title": "Section 3: Model Sharding",
+      "content": [
+        "Introduction to model sharding.",
+        "Explanation of how the mistral model is divided into groups of layers and placed in a single gpu.",
+        "Discussion of the importance of understanding the next token for each prompt.",
+        "Presentation of the embedding corresponding to the token number for each prompt."
+      ],
+      "topics": ["Model Sharding", "Next Token Determination", "Embedding Corresponding to Token Number"]
+    },
+    {
+      "title": "Section 4: Code of Mistral",
+      "content": [
+        "Explanation of the code structure and its innovations in the xforers library with block attention.",
+        "Presentation of the code for the sliding window attention.",
+        "Discussion of the challenges in understanding the code and the importance of learning from it.",
+        "Explanation of the learning process and the benefits of studying the code."
+      ],
+      "topics": ["Code of Mistral", "XForers Library with Block Attention", "Sliding Window Attention Code", "Learning from Code"]
+    },
+    {
+      "title": "Section 5: General Topics",
+      "content": [
+        "Summary of the key topics covered in the video.",
+        "Discussion of the importance of understanding the inner workings of the mistral model.",
+        "Explanation of the benefits of studying the code and the role of learning in software development.",
+        "Presentation of the global topics array and general topics."
+      ],
+      "topics": ["Key Topics", "Importance of Understanding Inner Workings", "Benefits of Studying Code", "Global Topics Array and General Topics"]
+    }
+  ],
+  "topics": ["Sliding Window Attention", "KV Cache", "Model Sharding", "Code of Mistral", "Understanding Inner Workings"],
+  "generalTopics": [
+    {
+      "name": "Artificial Intelligence (AI) and Machine Learning",
+      "complexity": 0.60
+    },
+    {
+      "name": "Computer Architecture",
+      "complexity": 0.50
+    },
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": 0.70
+    }
+  ]
+}

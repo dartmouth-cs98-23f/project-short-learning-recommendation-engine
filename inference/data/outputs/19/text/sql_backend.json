@@ -1,0 +1,70 @@
+{
+"introduction": "This computer science video provides an in-depth analysis of the reasons why selecting all columns in a SQL query can be slow. The video discusses the impact of page size, indexing, deserialization, and network costs on query performance.",
+"sections": [
+{
+"title": "Section 1: Understanding Page Sizes",
+"content": [
+"Page sizes in database systems can affect query performance.",
+"Fixed-size pages are typically used for storing data.",
+"Variable-size pages can be used for storing large amounts of data.",
+"Page sizes can be adjusted based on the amount of data being stored."
+],
+"topics": ["Page size", "Database systems", "Data storage"]
+},
+{
+"title": "Section 2: Indexing and Query Performance",
+"content": [
+"Indexing can improve query performance.",
+"Covering indexes can be used to reduce the number of columns retrieved.",
+"Index only scans can be used to retrieve only the data needed.",
+"The choice of index can affect query performance."
+],
+"topics": ["Indexing", "Query performance", "Covering indexes"]
+},
+{
+"title": "Section 3: Deserialization Costs",
+"content": [
+"Deserialization costs can add up when selecting all columns.",
+"Deserialization involves converting raw bytes to data types.",
+"The size of the data type can affect deserialization costs.",
+"Deserialization can be reduced by using smaller data types."
+],
+"topics": ["Deserialization", "Data types", "Conversion"]
+},
+{
+"title": "Section 4: Network Costs and Query Performance",
+"content": [
+"Network costs can affect query performance.",
+"Transmitting large amounts of data can be slow.",
+"Conjunction algorithms can be used to optimize data transmission.",
+"Client-side deserialization can improve query performance."
+],
+"topics": ["Network costs", "Data transmission", "Conjunction algorithms"]
+},
+{
+"title": "Section 5: Lazy Parsing and Client-Side Optimization",
+"content": [
+"Lazy parsing can improve query performance.",
+"Client-side optimization can reduce the amount of data retrieved.",
+"Client-side deserialization can improve query performance.",
+"The choice of client-side library can affect query performance."
+],
+"topics": ["Lazy parsing", "Client-side optimization", "Client-side deserialization"]
+}
+],
+"topics": ["Page size", "Indexing", "Deserialization", "Network costs", "Lazy parsing", "Client-side optimization", "Client-side deserialization"],
+"general topics": [
+{
+"name": "Database systems",
+"complexity": "0.35"
+},
+{
+"name": "Indexing",
+"complexity": "0.42"
+},
+{
+"name": "Network costs",
+"complexity": "0.48"
+}
+]
+}

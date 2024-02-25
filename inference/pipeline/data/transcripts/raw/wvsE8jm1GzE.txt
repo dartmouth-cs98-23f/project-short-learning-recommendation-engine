@@ -1,0 +1,133 @@
+second,duration,transcript
+0.0,2.315,[MUSIC PLAYING]
+5.854,1.291,"DANIEL SMILKOV: Hi, I'm Daniel."
+7.145,0.99,"MARTIN WATTENBERG:
+Hi, I'm Martin."
+8.135,1.416,"FERNANDA VIEGAS:
+Hi, I'm Fernanda."
+12.4,2.36,"Machine learning
+is pretty complex."
+14.76,1.91,"So we've been
+experimenting with ways"
+16.67,2.29,to visualize what's happening.
+18.96,2.48,"There's a core concept
+in machine learning"
+21.44,1.95,called high-dimensional space.
+23.39,3.18,"Here's one way to wrap your
+head around this concept."
+26.57,3.12,"You can think about people
+as being high-dimensional."
+29.69,2.64,"For example, take
+famous scientists."
+32.33,3.03,"You can think about when they
+were born, where they were"
+35.36,2.34,"born, their fields of study."
+37.7,3.06,"Each of these is like a
+dimension of that person."
+40.76,2.4,"These dimensions become
+difficult to untangle"
+43.16,2.04,"when you think about
+different people,"
+45.2,2.52,"because someone might
+be similar in some ways,"
+47.72,1.541,but very different in others.
+49.261,1.999,"MARTIN WATTENBERG: But
+this is the kind of thing"
+51.26,1.782,"you can use machine
+learning for."
+53.042,1.458,"With machine
+learning, the computer"
+54.5,1.791,"isn't told the meaning
+of these dimensions."
+56.291,2.379,It just sees them as numbers.
+58.67,3.03,"And it sees each set of
+numbers as a data point."
+61.7,2.85,"But by looking across all
+of these dimensions at once,"
+64.55,3.03,"it's able to place related
+points closer together"
+67.58,1.592,in high-dimensional space.
+69.172,1.708,"DANIEL SMILKOV: Here's
+a concrete example"
+70.88,3.24,"where words are treated as
+high-dimensional data points."
+74.12,1.59,"The important thing
+to remember is"
+75.71,2.88,"that we haven't told the
+computer the meaning of words."
+78.59,2.88,"Instead, we've shown it
+millions of sentences"
+81.47,2.16,"as examples of how
+words get used."
+83.63,2.79,"Here is a visualization
+of the results."
+86.42,1.65,"We're looking at
+a subset of words"
+88.07,1.68,"that the computer
+has learned about."
+89.75,2.34,Each dot represents one word.
+92.09,3.45,"Each word is a data point
+with 200 dimensions."
+95.54,2.73,"Using a technique called
+t-SNE, the computer"
+98.27,2.76,"clusters words together
+that it considers related."
+101.03,2.19,"And clusters
+form-base the meaning,"
+103.22,3.03,"even though we've never taught
+it the meaning of words."
+106.25,3.45,"Here is a cluster of
+numbers, months of the year,"
+109.7,5.192,"words related to space, people's
+names, cities, and so on."
+114.892,1.708,"FERNANDA VIEGAS: We
+can also look closely"
+116.6,2.04,at smaller sets of words.
+118.64,3.39,"If we search ""piano,""
+we can run t-SNE only"
+122.03,1.74,"on words related to ""piano."
+123.77,4.83,"We get clusters of composers,
+genres, musical instruments,"
+128.6,1.03,and more.
+129.63,1.5,"MARTIN WATTENBERG:
+And this approach"
+131.13,1.37,doesn't just work from words.
+132.5,2.55,"For example, you can
+also treat an image"
+135.05,1.65,"as a high-dimensional
+data point."
+136.7,1.95,"Here's a dataset
+where lots of people"
+138.65,2.22,wrote digits between 0 and 9.
+140.87,2.05,"People write in
+all kinds of ways."
+142.92,3.53,"So the question is, instead
+of us needing to manually code"
+146.45,2.19,"rules for all the
+ways people write,"
+148.64,3.98,"could a machine figure it out
+itself using machine learning?"
+152.62,2.56,Each image is 784 pixels.
+155.18,3.19,"The computer treats each
+pixel as a dimension."
+158.37,3.08,"Again, using t-SNE, it
+clusters these images"
+161.45,1.98,in a high-dimensional space.
+163.43,2.58,"We've color-coded them so
+that it's easier for us"
+166.01,1.59,to see what's going on.
+167.6,3.27,"And you can see groups of
+digits clustering together."
+170.87,3.37,"It's learned something about
+the meaning of these digits."
+174.24,2.0,"FERNANDA VIEGAS: These
+visualizations techniques"
+176.24,4.3,"we've been exploring can be
+useful for all kinds of things."
+180.54,2.54,"That's why we're working on
+open sourcing all of this"
+183.08,2.61,"as part of TensorFlow
+so that anyone"
+185.69,2.1,"can use these tools
+to explore their data."
+187.79,3.05,[MUSIC PLAYING]

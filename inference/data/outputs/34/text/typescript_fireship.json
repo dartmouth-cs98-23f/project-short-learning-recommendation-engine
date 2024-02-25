@@ -1,0 +1,70 @@
+{
+  "introduction": "This video discusses the evolution and current status of TypeScript, a JavaScript superset developed by Microsoft. It explores how TypeScript has gained popularity and adoption in various projects, including the Angular 2 framework and large libraries like Svelte, Drizzle, and Turbo. The video also delves into the reasons behind recent projects' decisions to ditch TypeScript in favor of vanilla JavaScript.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to TypeScript",
+      "content": [
+        "TypeScript was first released by Microsoft in 2012.",
+        "It was initially adopted by the Angular 2 framework, which was considered crazy at the time.",
+        "By the early 2020s, most haters had been converted into true believers.",
+        "Recently, big libraries like Svelte, Drizzle, and Turbo have decided to ditch TypeScript."
+      ],
+      "topics": ["TypeScript History", "Angular 2 Framework", "TypeScript Adoption", "Big Libraries Ditching TypeScript"]
+    },
+    {
+      "title": "Section 2: Reasons for Ditching TypeScript",
+      "content": [
+        "DHH, creator of Ruby on Rails, is getting rid of TypeScript and Turbo version 8.",
+        "The main reason is not because of the compile step but rather because it pollutes the code with quote type gymnastics.",
+        "TypeScript results in code that is anything but beautiful.",
+        "Spelled, a large framework, is also moving away from TypeScript."
+      ],
+      "topics": ["DHH's Reasons for Ditching TypeScript", "TypeScript Compile Step", "TypeScript Pollutes Code", "Spelled Moving Away from TypeScript"]
+    },
+    {
+      "title": "Section 3: Alternatives to TypeScript",
+      "content": [
+        "Svelte Fire, a library developed by the speaker, has to do its own type gymnastics with TypeScript just to get rid of red squiggly lines in the IDE.",
+        "The boss of the speaker would yell at him if he didn't code up to his standards.",
+        "Spelled Kit is already written in plain vanilla JavaScript and has no compile step.",
+        "Most large complex projects can still get most of the benefits of TypeScript but doing so with JavaScript talk."
+      ],
+      "topics": ["Svelte Fire and TypeScript", "Boss Yelling at the Speaker", "Spelled Kit and No Compile Step", "Large Complex Projects with TypeScript"]
+    },
+    {
+      "title": "Section 4: Future of TypeScript",
+      "content": [
+        "The speaker hopes we will see the end of the TypeScript vs. JavaScript holy war.",
+        "An optional type annotations proposal in Ecmascript could make TypeScript nearly obsolete.",
+        "The speaker recommends using TypeScript in large frameworks like Next.js or Spelled Kit.",
+        "The speaker acknowledges that trying to get the same results with JavaScript doc would be a total nightmare."
+      ],
+      "topics": ["TypeScript vs. JavaScript Holy War", "Optional Type Annotations Proposal", "Next.js and Spelled Kit with TypeScript", "JavaScript Doc Nightmare"]
+    },
+    {
+      "title": "Section 5: Conclusion",
+      "content": [
+        "TypeScript has gained popularity and adoption in various projects.",
+        "It is still widely used in large frameworks like Next.js and Spelled Kit.",
+        "The speaker acknowledges that trying to get the same results with JavaScript doc would be a total nightmare.",
+        "The speaker hopes we will see the end of the TypeScript vs. JavaScript holy war."
+      ],
+      "topics": ["TypeScript Popularity and Adoption", "Next.js and Spelled Kit with TypeScript", "JavaScript Doc Nightmare", "TypeScript vs. JavaScript Holy War"]
+    }
+  ],
+  "topics": ["TypeScript History", "Angular 2 Framework", "TypeScript Adoption", "Big Libraries Ditching TypeScript", "DHH's Reasons for Ditching TypeScript", "TypeScript Compile Step", "TypeScript Pollutes Code", "Spelled Moving Away from TypeScript", "Svelte Fire and TypeScript", "Boss Yelling at the Speaker", "Spelled Kit and No Compile Step", "Large Complex Projects with TypeScript", "TypeScript vs. JavaScript Holy War", "Optional Type Annotations Proposal", "Next.js and Spelled Kit with TypeScript", "JavaScript Doc Nightmare"],
+  "generalTopics": [
+    {
+      "name": "Programming Languages and Software Development",
+      "complexity": 0.59
+    },
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.61
+    },
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.49
+    }
+  ]
+}

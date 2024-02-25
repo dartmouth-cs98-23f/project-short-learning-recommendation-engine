@@ -1,0 +1,421 @@
+second,duration,transcript
+0.24,3.76,the central processing unit or cpu is
+2.72,3.119,like the engine in your car
+4.0,3.2,or the brain in your skull and is like a
+5.839,3.201,really fancy calculator
+7.2,3.519,used to run the applications on your
+9.04,3.519,computer when you write software in a
+10.719,3.201,language like javascript or python
+12.559,3.361,you're actually writing a set of
+13.92,3.68,instructions that will be executed as
+15.92,3.6,machine code by a cpu
+17.6,4.16,which itself is a carefully crafted
+19.52,3.919,piece of metal and silicon that contains
+21.76,4.0,billions of tiny transistors
+23.439,3.041,or on off switches that represent ones
+25.76,2.96,and zeros
+26.48,4.48,to perform mathematical calculations a
+28.72,4.08,cpu will combine multiple transistors
+30.96,4.16,together to form logic gates
+32.8,4.4,for example and will take two binary
+35.12,4.16,inputs and validate that both are true
+37.2,4.16,to produce a true output it only takes a
+39.28,4.0,few basic logic gates to solve highly
+41.36,3.44,complex computational problems
+43.28,3.439,modern chips contain billions of
+44.8,3.84,transistors and they can be flipped on
+46.719,3.921,and off billions of times per second
+48.64,3.759,the state of the cpu is synchronized by
+50.64,2.48,an oscillator known as the clock
+52.399,2.401,generator
+53.12,4.0,in general the more times the clock can
+54.8,4.079,pulse per second the faster the cpu can
+57.12,2.56,compute and is normally measured in
+58.879,2.561,gigahertz
+59.68,3.6,gamers will sometimes overclock their
+61.44,3.84,cpus to gain more performance
+63.28,3.92,at the cost of higher temperatures and a
+65.28,3.92,lower life expectancy now in order to
+67.2,3.36,run applications it interacts with the
+69.2,3.279,system memory or ram
+70.56,3.68,in a series of four steps known as the
+72.479,4.0,machine or instruction cycle
+74.24,3.84,step one is the fetch phase think of a
+76.479,3.841,software program as a set of
+78.08,4.399,instructions stored in the ram the cpu
+80.32,3.839,has registers to temporarily store the
+82.479,3.601,address and memory that it wants to
+84.159,2.561,interact with the program counter starts
+86.08,2.56,at 0
+86.72,3.84,and copies that address to the memory
+88.64,4.08,address register then the control unit
+90.56,2.879,sends out a signal to copy the data from
+92.72,2.56,that address
+93.439,3.761,to the instruction register at which
+95.28,2.799,point it needs to figure out how to use
+97.2,2.8,this instruction
+98.079,3.36,in the decode phase the control unit
+100.0,2.159,parses the actual bits in the
+101.439,2.64,instruction
+102.159,4.32,most importantly the opt code contains
+104.079,4.641,the instruction like add or subtract and
+106.479,3.841,the operand is the address in memory to
+108.72,3.359,perform that operation on
+110.32,3.92,the final execute stage takes the
+112.079,4.08,decoded information and passes it as
+114.24,2.8,electrical signals to the relevant parts
+116.159,3.28,of the cpu
+117.04,4.24,the arithmetic logic unit or alu can
+119.439,3.68,perform math on the data and then store
+121.28,3.68,the results in ram to change the state
+123.119,3.201,of the program the cycle is repeated
+124.96,3.439,billions of times per second
+126.32,3.999,and modern chips utilize multiple cpu
+128.399,2.64,cores to run multiple computations in
+130.319,2.64,parallel
+131.039,3.28,that's how a cpu works under the hood
+132.959,3.201,but there's a lot more you should know
+134.319,3.441,about processor architectures if you're
+136.16,3.28,a developer and that's why i've invited
+137.76,2.72,alex from the most underrated tech
+139.44,2.24,channel on youtube
+140.48,3.28,to break down some more advanced
+141.68,3.84,concepts like apple silicon and how to
+143.76,2.24,run performance benchmarking on your own
+145.52,2.16,machine
+146.0,4.08,hi everybody my name is alex and i'm
+147.68,3.279,here to take you beyond 100 seconds in
+150.08,2.64,your quest
+150.959,3.681,to learn about how processor
+152.72,3.92,architectures differ and also how those
+154.64,4.0,differences affect our productivity
+156.64,3.04,as developers i'll show you what the
+158.64,3.52,apple silicon
+159.68,4.08,chip and a refrigerator have in common
+162.16,4.079,and then i'll share some of my own
+163.76,4.32,experiences with using developer tools
+166.239,4.08,and build execution on the first
+168.08,5.2,generation apple silicon chip
+170.319,4.081,called the m1 ship as compared to the
+173.28,2.64,intel chip
+174.4,3.199,first and foremost i just want to say
+175.92,3.92,that my personal productivity as a
+177.599,3.441,developer depends less on processors
+179.84,3.6,inside my computer
+181.04,3.919,and more on how much coffee i had and
+183.44,3.12,whether i'm trying to work after a big
+184.959,3.841,meal
+186.56,3.12,but aside from human factors let's dig
+188.8,3.439,deeper into
+189.68,4.08,why the new apple silicon machines have
+192.239,2.961,been really kicking up a storm and
+193.76,3.28,changing the industry
+195.2,4.56,software development included and
+197.04,4.32,spoiler alert the m1 machines have been
+199.76,4.0,beating the intel machines in pretty
+201.36,5.2,much every build test i've thrown at it
+203.76,4.96,except a couple but it's not all roses
+206.56,2.56,so let's talk about some downsides later
+208.72,2.64,too
+209.12,3.36,so why is it so darn fast the first
+211.36,3.12,point i want to discuss
+212.48,3.759,is the physicality differences of the
+214.48,4.64,new apple silicon way
+216.239,5.201,versus the old intel and amd way this is
+219.12,3.36,what apple silicon and your refrigerator
+221.44,2.96,at home
+222.48,3.36,have in common all right imagine for a
+224.4,2.72,minute that you want to make a turkey
+225.84,3.2,with cheese sandwich
+227.12,3.199,you go over to the refrigerator and in
+229.04,3.68,one place
+230.319,4.0,you have the turkey breast the cheese
+232.72,3.439,the mayonnaise the mustard
+234.319,3.2,all those ingredients are right there in
+236.159,3.041,one place and you don't have to run
+237.519,3.601,around the house to gather them you
+239.2,2.72,don't have to drive to lots of stores to
+241.12,2.72,pick them up
+241.92,3.92,and this saves you lots of time and
+243.84,4.0,energy this kind of efficiency can be
+245.84,4.479,found in the new apple silicon
+247.84,3.36,chips because they aren't just a new
+250.319,2.801,processor
+251.2,3.599,apple silicon is a collection of many
+253.12,3.76,chips that are housed inside
+254.799,4.96,one silicon container and this type of
+256.88,5.52,system is known as a system on chip
+259.759,3.361,or sock and it's essentially an entire
+262.4,4.079,computer
+263.12,6.079,on one chip the main cpu the gpu
+266.479,4.241,the i o controller the ml engine they're
+269.199,3.601,all co-located
+270.72,4.08,so when the task is to make an
+272.8,3.839,electronic sandwich so to speak
+274.8,3.679,or in other words to do some work that
+276.639,3.921,involves all these different components
+278.479,3.361,a system on chip is going to be a lot
+280.56,3.76,more efficient
+281.84,3.68,in terms of energy usage using only a
+284.32,2.64,tiny bit of power
+285.52,3.44,and at the same time it's going to be
+286.96,3.36,faster than say a typical machine that
+288.96,4.08,has all the components
+290.32,3.68,separate intel based machines have a cpu
+293.04,3.36,that's a single
+294.0,3.759,chip and memory is located somewhere
+296.4,4.239,else on the motherboard
+297.759,4.641,the i o is somewhere else the individual
+300.639,3.521,components might be even more powerful
+302.4,4.32,than the ones available at the moment on
+304.16,5.28,the latest apple silicon based machines
+306.72,4.08,but that comes at a cost since these
+309.44,3.12,powerful components are like
+310.8,3.119,supermarkets that carry different
+312.56,3.84,sandwich ingredients
+313.919,3.761,as a result when you want a sandwich on
+316.4,3.2,an intel machine
+317.68,4.4,you'll have to drive all over town
+319.6,5.039,because one store will have the turkey
+322.08,4.64,another store will have the cheese yet
+324.639,4.081,another store will have the mayonnaise
+326.72,3.6,each store might be really good at their
+328.72,2.4,own process and have the best
+330.32,2.96,ingredients
+331.12,4.32,but each store also takes a lot of power
+333.28,4.0,to run losing out on the efficiency
+335.44,3.44,and since all you really want is just to
+337.28,3.68,make a simple sandwich
+338.88,3.52,you're wasting a ton of time and energy
+340.96,3.44,picking up the ingredients from
+342.4,3.519,all the different stores of course some
+344.4,3.92,might say the drawback
+345.919,3.84,with the system on chip design is that
+348.32,3.12,at least for now with the current
+349.759,3.041,selection of apple max you won't be able
+351.44,3.68,to upgrade or change
+352.8,3.6,any of the components you get what's on
+355.12,3.04,the menu and that's it
+356.4,3.68,but that's not news to most people that
+358.16,3.44,are familiar with the apple ecosystem
+360.08,3.04,once you accept that idea you might even
+361.6,2.64,see the benefits of having a more
+363.12,3.359,efficient design
+364.24,4.079,where all the components are on one chip
+366.479,3.361,and they outweigh the cons
+368.319,3.281,and still provide better performance
+369.84,3.68,than the alternative all right
+371.6,3.2,that's enough talk about food so how
+373.52,3.76,does this all affect
+374.8,4.239,real world development workflows so i've
+377.28,3.52,been doing a bunch of developer focused
+379.039,3.361,tests on the latest apple silicon
+380.8,3.6,machines over on my channel
+382.4,4.16,as well as comparing them to other
+384.4,3.28,machines like the intel max and pc
+386.56,2.72,machines too
+387.68,3.44,and in general the new design has been
+389.28,3.52,showing really great promise for my own
+391.12,4.0,workflows as a developer
+392.8,4.32,coffee and sandwiches excluded now there
+395.12,3.44,are lots of technology stacks that
+397.12,3.919,developers use of course
+398.56,4.0,and i'm trying builds in a few of them
+401.039,3.841,but now let me share some of the results
+402.56,4.0,i've seen with node and javascript tests
+404.88,3.84,and after that i'll also discuss the
+406.56,3.12,tech stacks that have the biggest gains
+408.72,2.24,on the new machines
+409.68,3.12,and also the stacks that have the
+410.96,3.6,biggest losses right now at the moment i
+412.8,4.32,started off trying out some existing
+414.56,4.639,javascript tests that are in the browser
+417.12,4.0,and then in node the browser test
+419.199,3.681,consisted of running speedometer
+421.12,3.6,which is a browser benchmark that
+422.88,2.8,measures the responsiveness of web
+424.72,3.44,applications
+425.68,3.76,it uses demo web apps to simulate their
+428.16,3.599,actions such as
+429.44,3.68,adding to-do items you visit the app in
+431.759,3.28,a browser of choice
+433.12,3.919,i tried chrome and safari for this and
+435.039,3.841,you execute the automated test that runs
+437.039,3.521,through a collection of applications
+438.88,5.039,built with some of the more popular
+440.56,5.759,ui frameworks like angular react amber
+443.919,3.12,even vanilla js and jquery and a whole
+446.319,2.72,bunch more
+447.039,3.681,and then this test reports the results
+449.039,3.44,as a single number when it's done
+450.72,3.68,this number represents the runs per
+452.479,3.361,minute and the higher the better when it
+454.4,2.72,was finished i found that it had
+455.84,4.079,significantly more
+457.12,4.96,iterations on the m1 safari had the best
+459.919,4.321,results even going off the scale
+462.08,4.559,and chrome did pretty well too i also
+464.24,3.359,ran some javascript benchmarks in a node
+466.639,3.201,environment
+467.599,3.761,and found a pretty cpu intensive
+469.84,3.84,algorithm called
+471.36,3.119,fancook redux that's implemented in
+473.68,3.519,javascript
+474.479,4.0,and created for benchmarks game a
+477.199,2.72,website that collects
+478.479,3.601,algorithms and tests in different
+479.919,4.72,languages and while my 16-inch
+482.08,3.36,macbook pro with the intel core i9
+484.639,3.12,processor
+485.44,4.319,did beat the macbook air with the m1
+487.759,3.28,chip it really didn't do so by a lot
+489.759,3.201,and when you consider the price
+491.039,3.761,differences between the machines
+492.96,3.519,and the fact that the m1 stayed cool
+494.8,3.92,throughout the test and
+496.479,3.28,that the battery hardly even took a hit
+498.72,3.199,on the m1
+499.759,4.081,you might be thinking whether the extra
+501.919,2.56,few seconds saved while running this
+503.84,2.639,benchmark
+504.479,4.0,on the intel i9 is really worth the
+506.479,2.801,money so running benchmarks is often
+508.479,2.801,very telling
+509.28,3.439,but it doesn't necessarily line up with
+511.28,3.36,real-world scenarios
+512.719,4.401,so that's why i also like to conduct my
+514.64,4.319,own tests whether using my own projects
+517.12,3.52,or other open source projects that are
+518.959,3.601,out there and that commenters
+520.64,3.12,sent to me and here's what i found i ran
+522.56,3.52,a build of the official
+523.76,3.519,nativescript plugins repository which is
+526.08,3.199,a project based on
+527.279,3.761,nx workspaces if you're not familiar
+529.279,2.24,with nx workspaces it allows you to
+531.04,3.04,scale
+531.519,3.201,large javascript and other tech stack
+534.08,2.879,projects
+534.72,3.2,and you can see the nx quickstart right
+536.959,3.121,here on this channel
+537.92,3.919,in my test the build that took about
+540.08,4.08,three minutes on each machine
+541.839,4.961,only differed in build time by tens of
+544.16,3.04,seconds with the m1 macbook air beating
+546.8,2.64,out
+547.2,3.12,the intel macbook pro two out of three
+549.44,3.12,times so
+550.32,4.16,let's talk about what dev stacks benefit
+552.56,2.399,the most from the new apple silicon
+554.48,2.479,chips
+554.959,3.921,at this time for javascript developers
+556.959,3.841,the benefits are already visible
+558.88,4.0,however if you're building mobile apps
+560.8,3.92,for ios for compiling c
+562.88,4.399,plus plus code then this is where you'll
+564.72,5.6,see a 40 to 50 percent improvement
+567.279,4.161,in build times i ran a few xcode builds
+570.32,3.199,and swift builds
+571.44,3.519,and i did some c plus plus algorithms
+573.519,4.401,and built opencv
+574.959,4.0,and webkit in all those tests the m1
+577.92,3.359,came out on top
+578.959,4.241,so what devstacks benefit the least so
+581.279,3.12,far in my own testing any builds that
+583.2,3.28,have to do with running
+584.399,3.521,natively built software and building
+586.48,4.56,using native tooling
+587.92,4.56,has absolutely destroyed intel and speed
+591.04,3.84,and battery performance
+592.48,3.6,native being compiled for the apple
+594.88,3.36,silicon architecture
+596.08,3.36,even when running some software via
+598.24,3.2,apple's rosetta
+599.44,4.32,that's the translation layer that allows
+601.44,5.519,you to run intel and amd based
+603.76,3.84,x64 and x86 programs on the new apple
+606.959,2.641,hardware
+607.6,3.44,even some of those software packages ran
+609.6,3.28,better than on intel
+611.04,3.359,and that's just amazing but there are
+612.88,3.84,workflows that aren't
+614.399,4.88,ready yet in my opinion if you are an
+616.72,5.28,android developer android studio
+619.279,3.761,and official android emulators work on
+622.0,3.36,apple silicon
+623.04,3.359,but they're currently using rosetta for
+625.36,3.039,translations
+626.399,3.601,and while rosetta is generally pretty
+628.399,4.0,good at running x86
+630.0,4.56,targeted code on arm chips it's not
+632.399,2.961,enough for the cpu hungry android
+634.56,2.959,workflows
+635.36,3.2,and i found the results to be not very
+637.519,2.88,usable at the moment
+638.56,3.44,the latest version of dot net which is
+640.399,3.921,version 5 right now
+642.0,4.48,isn't fully supported to run on arm
+644.32,3.04,simple console applications ran just
+646.48,3.28,fine for me
+647.36,3.919,but testing any web workflows like
+649.76,2.96,asp.net core
+651.279,2.961,doesn't work at all yet now it's
+652.72,3.119,expected that by the end of this year
+654.24,3.68,dot net six will come out
+655.839,3.44,it's in alpha right now and we'll have
+657.92,3.52,full support for arm
+659.279,4.161,until then if you need to develop.net
+661.44,4.079,apps i suggest using a pc
+663.44,3.839,with windows oh and if you think you can
+665.519,4.081,use a virtual windows machine
+667.279,4.401,i've tested this as well parallels is
+669.6,2.88,the only vendor that currently supports
+671.68,2.48,the m1
+672.48,3.44,chip to create a virtual windows
+674.16,4.0,environment but the issue is that the
+675.92,4.24,windows guest operating system for arm
+678.16,3.119,is still quite immature and needs a lot
+680.16,4.08,of work also
+681.279,4.881,visual studio 2019 the latest visual
+684.24,4.0,studio offering from microsoft
+686.16,4.08,is unfortunately not compatible with arm
+688.24,4.96,at all and my test is not
+690.24,3.839,stable even using the built-in windows
+693.2,4.0,translation
+694.079,5.2,of x64 software to run on
+697.2,3.92,arm hardware for game developers that
+699.279,2.8,use unity i'm pleased to say that it
+701.12,2.88,works surprisingly
+702.079,3.361,well on apple silicon via rosetta
+704.0,3.2,however it's not as performant as
+705.44,3.68,running natively on x86
+707.2,3.759,but by the time you watch this video
+709.12,3.279,unity might have a version natively
+710.959,3.361,compatible with m1
+712.399,3.041,which i know they're working hard to get
+714.32,3.199,out as soon as possible
+715.44,4.079,overall apple silicon has really put a
+717.519,3.921,boost into many workflows
+719.519,3.361,for developers and other professions and
+721.44,3.68,eventually even gaming
+722.88,3.36,and with the m1 tests we're seeing the
+725.12,3.36,improvements with
+726.24,4.08,just their entry level machines the
+728.48,3.76,upcoming second and third generation
+730.32,4.24,apple silicon machines will be even more
+732.24,4.08,performant and i can't wait to see that
+734.56,3.68,i think it's really gonna help us as
+736.32,3.6,developers move to the next level and i
+738.24,2.32,think it's just gonna lift up the entire
+739.92,2.64,industry
+740.56,4.399,to follow the updates on the new apple
+742.56,4.48,silicon chips as they relate to us
+744.959,3.521,developers as well as seeing me conduct
+747.04,1.84,these tests that i've been discussing
+748.48,2.159,here
+748.88,3.6,consider subscribing to my channel as
+750.639,3.601,well the link is down below
+752.48,3.52,i'm gonna wrap it up there thanks to
+754.24,2.719,fireship for hosting me to share this
+756.0,8.88,amazing new world
+756.959,7.921,that we're about to enter as developers

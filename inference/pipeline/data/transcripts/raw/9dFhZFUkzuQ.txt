@@ -1,0 +1,836 @@
+second,duration,transcript
+4.08,4.24,simply learn welcomes you to
+6.24,4.8,machine learning versus deep learning
+8.32,5.199,versus artificial intelligence some of
+11.04,4.16,the most exciting technologies evolving
+13.519,3.201,in today's world
+15.2,3.919,my name is richard kirschner and i'll be
+16.72,4.719,hosting this talk or simply learn
+19.119,4.4,before we start covering the basics of
+21.439,3.92,these three topics and how they connect
+23.519,3.52,and how they are different let's just
+25.359,4.16,look at a few examples so we get an
+27.039,3.841,understanding of what's going on
+29.519,3.841,here's an example of artificial
+30.88,3.679,intelligence in today's world amazon
+33.36,3.44,echo
+34.559,4.32,amazon echo is a wonderful tool we can
+36.8,4.24,go in there and you can say hey alexa
+38.879,4.641,what's the temperature in chicago
+41.04,4.72,and the amazon echo then translates that
+43.52,4.0,into zeros and ones and something the
+45.76,4.16,computer understands
+47.52,4.16,then it comes in and processes that
+49.92,3.279,information to identify what you're
+51.68,3.6,asking and what you need and where to
+53.199,4.081,get that information and then it comes
+55.28,3.919,back and says the current temperature in
+57.28,3.919,chicago is six degrees fahrenheit or
+59.199,3.52,whatever it is at the moment
+61.199,3.28,so this is a wonderful example of
+62.719,3.921,artificial intelligence that we're using
+64.479,4.161,right now today where that's at as far
+66.64,4.0,as a commercial deployment
+68.64,4.0,machine learning a machine learning
+70.64,4.64,example out there is google you're on
+72.64,4.72,your google search engine it comes up
+75.28,4.479,you spend a lot of time on the first
+77.36,3.2,link you come into and you read the page
+79.759,2.241,and
+80.56,3.599,google looks at that and says okay he
+82.0,3.439,spent five minutes on this let's give it
+84.159,3.201,a thumbs up
+85.439,3.441,and then you go to the second page and
+87.36,2.72,the third page you just kind of skip
+88.88,3.52,over them and glance at them for a
+90.08,3.679,couple seconds and google says i wasn't
+92.4,2.88,interested in those pages let's give
+93.759,2.801,them a thumbs down
+95.28,3.28,so this is a good example of machine
+96.56,3.84,learning as it starts guessing what you
+98.56,3.199,like and what you don't like so it gives
+100.4,3.92,you more information along what you're
+101.759,4.481,going to read and actually use
+104.32,3.2,and then we have an example of deep
+106.24,3.199,learning
+107.52,3.36,in this example we have a black and
+109.439,4.081,white image
+110.88,3.68,it comes into in this case a neural
+113.52,3.04,network
+114.56,3.599,some people like to call it a magic box
+116.56,3.199,because you really it's hard to follow
+118.159,3.441,all that's going on in there there's all
+119.759,3.201,these different weights and connections
+121.6,3.119,and nodes
+122.96,4.4,and then it comes out
+124.719,4.16,and colors the beach ball the people the
+127.36,3.36,background
+128.879,3.44,what's going on in here is the black and
+130.72,4.4,white image goes into this neural
+132.319,4.721,network and before it's ever gone in
+135.12,4.16,the neural network has looked at all
+137.04,4.16,these different pictures on the web or
+139.28,3.84,wherever it pulls the data from
+141.2,3.759,and it's already itemized them and kind
+143.12,3.68,of separated them that
+144.959,3.601,we have some that look like beach balls
+146.8,3.84,we have some that look like people and
+148.56,3.759,it programs that so that when the black
+150.64,3.2,and white image comes in it goes okay
+152.319,3.28,that piece right there
+153.84,3.2,resembles this and all these other
+155.599,4.161,photos
+157.04,4.479,and the network is able to identify that
+159.76,3.92,and then color the beach ball with the
+161.519,3.44,colors that you see on there so it gives
+163.68,2.8,it this is really wonderful because they
+164.959,2.56,did a wonderful job coloring this
+166.48,2.8,picture
+167.519,3.761,and that's the full setup is where the
+169.28,4.959,deep learning example comes in and they
+171.28,5.84,usually center around neural networks
+174.239,4.161,so we looked at a few examples what's in
+177.12,2.72,it for you
+178.4,4.08,first we're going to talk about human
+179.84,4.56,versus artificial intelligence
+182.48,4.88,this is very important because
+184.4,5.199,this is our marker we as humans are
+187.36,4.64,amazing and so we want to understand how
+189.599,4.64,artificial intelligence compares
+192.0,4.319,and what it does that it can accelerate
+194.239,4.161,above humans and how it can integrate
+196.319,3.521,with the human experience
+198.4,3.44,what is machine learning and deep
+199.84,3.36,learning all about are they really all
+201.84,3.679,that different
+203.2,3.44,we'll have a few more examples in here
+205.519,3.201,and then we'll talk a little bit about
+206.64,3.679,types of ai and machine learning and
+208.72,4.079,comparing machine learning in deep
+210.319,4.64,learning and finally a glimpse into the
+212.799,5.921,future
+214.959,5.761,human versus artificial intelligence
+218.72,3.84,humans are amazing let's just face it
+220.72,4.32,we're amazing creatures we're all over
+222.56,6.48,the planet we're exploring
+225.04,6.08,every nic chinook we've gone to the moon
+229.04,3.759,we've gone into outer space we're just
+231.12,3.199,amazing creatures
+232.799,4.08,we're able to use the available
+234.319,4.401,information to make decisions
+236.879,4.241,to communicate with other people
+238.72,4.96,identify patterns and data remember what
+241.12,3.839,people have said adapt to new situations
+243.68,2.4,so let's take a look at this so we so
+244.959,2.801,you can get a picture you're a human
+246.08,2.96,being so you know it's like to be human
+247.76,4.0,let's take a look at artificial
+249.04,4.72,intelligence versus the human artificial
+251.76,4.24,intelligence develops computer systems
+253.76,4.719,that can accomplish texts that require
+256.0,4.16,human intelligence
+258.479,3.28,so we're looking at this
+260.16,4.8,one of the things that computers can do
+261.759,5.041,they can provide more accurate results
+264.96,4.0,this is very important
+266.8,4.8,recently i did a project on
+268.96,4.799,cancer whereas identifying markers
+271.6,4.4,and as a human being you look at that
+273.759,4.88,and you might be looking at all the
+276.0,4.8,different images and the data that comes
+278.639,6.0,off of them and say i like this person
+280.8,5.839,so i want to give them a very good
+284.639,3.28,outlook and the next person you might
+286.639,3.12,not like so you want to give him a bad
+287.919,2.961,outlook well with artificial
+289.759,3.281,intelligence you're going to get a
+290.88,4.16,consistent prediction of what's going to
+293.04,3.599,come out interacts with humans using
+295.04,2.96,their natural language we've seen that
+296.639,2.641,as probably the biggest development
+298.0,2.88,feature right now that's in the
+299.28,3.919,commercial market that everybody gets to
+300.88,4.64,use as we saw with the example of alexa
+303.199,4.401,they learn from their mistakes and adapt
+305.52,4.959,to new environments so we see this
+307.6,4.8,slowly coming in more and more and they
+310.479,3.841,learn from the data and automate
+312.4,4.56,repetitive learning
+314.32,5.12,repetitive learning has a lot to do with
+316.96,4.4,the neural networks you have to program
+319.44,5.28,thousands upon thousands of pictures in
+321.36,5.92,there and it's all automated so as
+324.72,5.44,today's computers evolve it's very quick
+327.28,4.4,and easy and affordable to do this
+330.16,3.44,what is machine learning and deep
+331.68,3.92,learning all about
+333.6,3.68,imagine this say you had some time to
+335.6,3.52,waste not that any of us really have a
+337.28,3.199,lot of time anymore to just waste in
+339.12,2.96,today's world
+340.479,3.201,and you're sitting by the road and you
+342.08,4.8,have a whole lot of and a whole lot of
+343.68,5.2,time passes by there's a few hours
+346.88,4.319,and suddenly you wonder
+348.88,4.879,how many cars buses trucks and so on
+351.199,4.081,passed by in the six hours
+353.759,3.121,now chances are you're not going to sit
+355.28,3.44,by the road for six hours and count
+356.88,3.2,buses cars and trucks unless you're
+358.72,3.6,working for the city and you're trying
+360.08,4.32,to do city planning and you want to know
+362.32,3.68,hey do we need to add a new truck route
+364.4,3.68,maybe we need a bicycle length we have a
+366.0,3.68,lot of bicyclists here that kind of
+368.08,3.36,thing so maybe city planning would be
+369.68,3.519,great for this
+371.44,3.84,machine learning well the way machine
+373.199,4.881,learning works is we
+375.28,6.16,have labeled data with features
+378.08,5.92,okay so you have a truck or a car a
+381.44,4.24,motorcycle a bus or a bicycle and each
+384.0,4.639,one of those are labeled
+385.68,5.04,it comes in and based on those labels
+388.639,3.921,and comparing those features it gives
+390.72,4.08,you an answer it's a bicycle it's a
+392.56,4.24,truck it's a motorcycle this is a little
+394.8,3.839,bit more in depth on this
+396.8,3.44,and the model here it actually the
+398.639,3.921,features we're looking at would be like
+400.24,4.72,the tires someone sits there and figures
+402.56,4.24,out what a tire looks like it takes a
+404.96,3.519,lot of work if you try to try to figure
+406.8,4.399,the difference between a car tire a
+408.479,5.121,bicycle tire a motorcycle tire
+411.199,3.681,so in the machine learning field this
+413.6,3.36,could take a long time if you're going
+414.88,4.08,to do each individual
+416.96,4.0,aspect of a car
+418.96,4.079,and try to get a result on there and
+420.96,4.079,that's what they did do that was a very
+423.039,3.761,this is still used on smaller amounts of
+425.039,4.16,data where you figure out what those
+426.8,5.839,features are and then you label them
+429.199,5.601,deep learning so with deep learning
+432.639,5.041,one of our solutions is to take a very
+434.8,5.119,large unlabeled data set
+437.68,4.56,and we put that into a training model
+439.919,4.321,using artificial neural networks and
+442.24,3.92,then that goes into the neural network
+444.24,3.6,itself when we create a neural network
+446.16,4.0,and you'll see the arrows are actually
+447.84,4.0,kind of backward but which actually is a
+450.16,3.36,nice point because when we train the
+451.84,3.44,neural network
+453.52,3.84,we put the bicycle in and then it comes
+455.28,3.759,back and says if it's a truck it comes
+457.36,4.0,back and says well you need to change
+459.039,3.841,that to bicycle and then it changes all
+461.36,3.2,those weights going backward they call
+462.88,3.36,it back propagation
+464.56,3.52,and let it know it's a bicycle and
+466.24,4.399,that's how it learns
+468.08,4.559,once you've trained the neural network
+470.639,3.601,you then put the new data in and they
+472.639,3.041,call this testing the model so you need
+474.24,3.28,to have some data you've kept off to the
+475.68,3.359,side where you know the answer to
+477.52,3.44,and you take that and you provide the
+479.039,3.44,required output and you say okay is this
+480.96,3.76,is this neural network working correctly
+482.479,5.361,did it identify a bike as a bike a truck
+484.72,4.479,as a truck a motorcycle as a motorcycle
+487.84,2.4,let's just take a little closer look at
+489.199,2.881,that
+490.24,3.44,determining what objects are present in
+492.08,3.28,the data so how does deep learning do
+493.68,2.56,this and here we have the image of the
+495.36,4.72,bike
+496.24,5.92,it's 28 by 28 pixels that's a lot of
+500.08,3.76,information there could you imagine
+502.16,3.92,trying to guess that this is a bicycle
+503.84,3.68,image by looking at each one of those
+506.08,2.88,pixels and trying to figure out what's
+507.52,3.04,around it
+508.96,2.799,and we actually do that as human beings
+510.56,3.2,it's pretty amazing we know what a
+511.759,3.681,bicycle is and even though it comes in
+513.76,3.519,as all this information
+515.44,3.2,and what this looks like is the image
+517.279,3.841,comes in
+518.64,4.24,it converts it into a bunch of different
+521.12,3.6,nodes in this case there's a lot more
+522.88,3.12,than what they show here and it goes
+524.72,4.239,through these different layers and out
+526.0,4.959,comes and says okay this is a bicycle
+528.959,4.481,a lot of times they call this the magic
+530.959,3.921,black box why because as we watch it go
+533.44,3.12,across here
+534.88,3.6,all these weights
+536.56,3.76,and all the math behind this and it's
+538.48,3.76,not it's a little complicated on the
+540.32,3.36,math side you really don't need to know
+542.24,3.2,that when you're programming or doing
+543.68,3.599,working with the deep learning but it's
+545.44,3.44,like magic you don't know you really
+547.279,2.961,can't figure out what's going to come
+548.88,2.8,out by looking what's in each one of
+550.24,2.96,those dots and each one of those lines
+551.68,3.76,are firing and what's going in between
+553.2,3.92,them so we like to call it the magic box
+555.44,2.959,uh so that's where deep learning comes
+557.12,2.48,in
+558.399,2.56,and in the end it comes up and you have
+559.6,3.679,this whole neural network comes up and
+560.959,4.0,says okay we fire all these different
+563.279,3.68,pixels and we connects all these
+564.959,4.32,different dots and gives them different
+566.959,3.601,weights and says okay this is a bicycle
+569.279,3.841,and that's how we determine what the
+570.56,3.92,object is present in the data with deep
+573.12,3.12,learning
+574.48,3.44,machine learning we're going to take a
+576.24,3.039,step into machine learning here and
+577.92,3.359,you'll see how these fit together in a
+579.279,4.641,minute the system is able to make
+581.279,5.281,predictions or take decisions based on
+583.92,5.599,past data that's very important for
+586.56,4.48,machine learning is that we're
+589.519,2.88,looking at stuff and based on what's
+591.04,3.76,been there before
+592.399,4.081,we're creating a decision on there we're
+594.8,3.12,creating something out of there we're
+596.48,2.799,coloring a beach ball we're telling you
+597.92,2.96,what the weather is
+599.279,3.841,in chicago
+600.88,5.12,what's nice about machine learning is a
+603.12,5.04,very powerful processing capability it's
+606.0,3.92,quick and accurate outcomes
+608.16,4.08,so you get results right away once you
+609.92,3.44,program the system the results are very
+612.24,3.92,fast
+613.36,4.4,and the decisions and predictions are
+616.16,4.32,better they're more accurate they're
+617.76,4.16,consistent you can analyze very large
+620.48,2.88,amounts of data
+621.92,3.68,some of these data things that they're
+623.36,4.88,analyzing now are petabytes and
+625.6,4.4,terabytes of data it would take
+628.24,3.279,hundreds of people
+630.0,3.04,hundreds of years to go through some of
+631.519,3.041,this data and do the same thing that the
+633.04,3.76,machine learning can do in a very short
+634.56,4.24,period of time and it's inexpensive
+636.8,4.24,compared to hiring hundreds of people so
+638.8,4.32,it becomes a very affordable way to move
+641.04,2.96,into the future is to apply the machine
+643.12,4.0,learning
+644.0,5.04,to whatever businesses you're working on
+647.12,4.0,and deep learning systems think and
+649.04,4.56,learn like humans using artificial
+651.12,5.36,neural networks again it's like a magic
+653.6,5.6,box performance improves with more data
+656.48,4.96,so the more data the deep learning gets
+659.2,4.56,the more it gives you better results
+661.44,4.56,it's scalability so you can scale it up
+663.76,3.759,you can scale it down you can increase
+666.0,3.44,what you're looking at
+667.519,3.921,currently you know we're limited by the
+669.44,3.92,amount of computer processing power as
+671.44,3.839,to how big that can get but that
+673.36,4.08,envelope continually gets pushed every
+675.279,4.481,day on what it can do
+677.44,5.2,problem solved in an end-to-end method
+679.76,5.44,so instead of having to break it apart
+682.64,4.8,and you have the first piece coming in
+685.2,4.319,and you identify tires and the second
+687.44,3.92,piece is identifying
+689.519,3.281,labeling handlebars and then you bring
+691.36,3.76,that together that if it has handlebars
+692.8,4.64,and tires it's a bicycle and if it has
+695.12,4.159,something that looks like a large square
+697.44,4.0,it's probably a truck the neural
+699.279,3.441,networks does this all in one network
+701.44,2.639,you don't really know what's going on in
+702.72,2.72,all those weights and all those little
+704.079,3.44,bubbles
+705.44,5.12,but it does it pretty much
+707.519,4.961,in one package that's why the neural
+710.56,3.76,network systems are so big nowadays and
+712.48,4.0,coming into their own
+714.32,3.6,best features are selected by the system
+716.48,3.52,and it this is important they kind of
+717.92,5.2,put it it's on a bullet on the side here
+720.0,4.399,it's a subset of machine learning this
+723.12,3.68,is important
+724.399,4.081,we talk about deep learning it is a form
+726.8,3.44,of machine learning there's lots of
+728.48,3.919,other forms of machine learning data
+730.24,3.839,analysis but this is the newest and
+732.399,3.44,biggest thing that they apply to a lot
+734.079,3.2,of different packages and they use all
+735.839,4.081,the other machine learning tools
+737.279,4.081,available to work with it and it's very
+739.92,3.28,fast to test
+741.36,4.719,you put in your information
+743.2,5.12,you then have your group of tests
+746.079,3.921,and then you held some aside you see how
+748.32,3.04,does it do it's very quick to test it
+750.0,3.279,and see what's going on with your deep
+751.36,5.2,learning in your neural network
+753.279,5.521,are they really all that different
+756.56,3.2,ai versus machine learning versus deep
+758.8,3.039,learning
+759.76,4.48,concepts of ai
+761.839,4.641,so we have concepts of iii you'll see
+764.24,3.92,natural language processing
+766.48,3.84,machine learning an approach to create
+768.16,4.56,artificial intelligence so it's one of
+770.32,4.4,the subsets of artificial intelligence
+772.72,4.16,knowledge representation automated
+774.72,3.52,reasoning computer vision
+776.88,3.759,robotics
+778.24,4.88,machine learning versus ai versus deep
+780.639,4.32,learning or ai and machine learning and
+783.12,3.76,deep learning
+784.959,4.721,so we look at this we have ai with
+786.88,4.0,machine learning and deep learning and
+789.68,3.36,so we're going to put them all together
+790.88,3.92,we find out that ai is the big picture
+793.04,3.84,we have a collection of books
+794.8,5.2,it goes through some deep learning
+796.88,4.32,the digital data is analyzed text mining
+800.0,3.04,comes through
+801.2,5.52,the particular book you're looking for
+803.04,5.76,maybe it's a genre books is identified
+806.72,4.16,and in this case we have a robot that
+808.8,3.599,goes and gives a book to the patron i
+810.88,3.28,have yet to be at a library that has a
+812.399,3.521,robot bring me a book but that will be
+814.16,4.239,cool when it happens
+815.92,5.039,as we look at some of the pieces here
+818.399,4.641,this information goes into
+820.959,4.081,there's as far as this example
+823.04,4.56,the translation of the handwritten
+825.04,4.479,printed data to digital form
+827.6,3.28,that's pretty hard to do that's pretty
+829.519,3.361,hard to go in there and translate
+830.88,4.959,hundreds and hundreds of books
+832.88,5.84,and understand what they're trying to
+835.839,5.041,say if you've never read them so in this
+838.72,4.0,case we use the deep learning because
+840.88,3.28,you can already use examples where
+842.72,3.2,they've already classified a lot of
+844.16,4.479,books and then they can compare those
+845.92,5.44,texts and say oh okay this is a book on
+848.639,5.121,automotive repair this is a book on
+851.36,5.279,robotic building the digital data is in
+853.76,5.28,analyzed then we have more text mining
+856.639,4.56,using machine learning so maybe we'd use
+859.04,3.599,a different program to do a basic
+861.199,2.721,classify
+862.639,2.64,what you're looking for and say oh
+863.92,3.599,you're looking for
+865.279,4.161,auto repair and computers so you're
+867.519,3.361,looking for automated cars once it's
+869.44,3.519,identified then of course it brings you
+870.88,3.92,the book
+872.959,4.081,so here's a nice summation of what we
+874.8,4.56,were just talking about ai with machine
+877.04,4.32,learning and deep learning deep learning
+879.36,4.96,is a subset of machine learning which is
+881.36,4.4,a subset of artificial intelligence so
+884.32,3.84,you can look at artificial intelligence
+885.76,4.48,as the big picture how does this compare
+888.16,4.479,to the human experience
+890.24,4.719,in either doing the same thing as a
+892.639,4.961,human we do or it
+894.959,5.201,does it better than us and machine
+897.6,5.2,learning which has a lot of tools
+900.16,5.84,uh is something that learns from data
+902.8,5.12,past experiences it's programmed it's uh
+906.0,3.92,comes in there and it says hey we
+907.92,4.159,already had these five things happen the
+909.92,4.08,sixth one should be about the same and
+912.079,3.681,then there's a lot of tools in machine
+914.0,3.92,learning but deep learning then is a
+915.76,4.0,very specific tool in machine learning
+917.92,4.32,it's the artificial neural network which
+919.76,4.96,handles large amounts of data and is
+922.24,5.039,able to take huge pools
+924.72,4.4,of experiences pictures and ideas and
+927.279,4.24,bring them together
+929.12,5.04,real life examples
+931.519,4.56,artificial intelligence news generation
+934.16,4.239,very common nowadays as it goes through
+936.079,5.041,there and finds the news articles or
+938.399,3.761,generates the news based upon the news
+941.12,3.839,feeds
+942.16,4.72,or the back end coming in and says okay
+944.959,4.0,let's give you the actual news based on
+946.88,3.84,this there's all the different things
+948.959,4.0,amazon echo they have a number of
+950.72,3.679,different prime music on there of course
+952.959,4.161,there's also the
+954.399,6.24,google command and there's also
+957.12,5.76,cortana there's tons of smart home
+960.639,5.2,devices now where we can ask it to turn
+962.88,5.04,the tv on or play music for us that's
+965.839,3.201,all artificial intelligence from front
+967.92,3.52,to back
+969.04,5.44,you're having a human experience
+971.44,4.639,with these computers and these
+974.48,4.24,objects that are connected to the
+976.079,4.76,processing machine learning
+978.72,4.88,spam detection very common machine
+980.839,4.601,learning doesn't really have the human
+983.6,3.679,interaction part
+985.44,3.6,so this is the part where it goes and
+987.279,5.12,says okay that's a spam that's not a
+989.04,5.599,spam and it puts it in your spam folder
+992.399,4.081,search engine result refining
+994.639,3.841,another example of of
+996.48,4.479,machine learning whereas it looks at
+998.48,4.96,your different results and it go and it
+1000.959,4.481,is able to categorize them as far as it
+1003.44,4.72,said the most hits this is the least
+1005.44,4.319,viewed this has five stars you know
+1008.16,3.28,however they want to weight it
+1009.759,4.241,all exactly good examples of machine
+1011.44,4.72,learning and then the deep learning uh
+1014.0,4.56,deep learning another example is
+1016.16,4.72,as you have like a exit sign
+1018.56,3.44,in this case is translating it into
+1020.88,4.079,french
+1022.0,4.48,sorti i hope i said that right
+1024.959,3.281,neural network has been programmed with
+1026.48,4.079,all these different words and images and
+1028.24,4.4,so it's able to look at the exit in the
+1030.559,3.52,middle and it goes okay we want to know
+1032.64,4.0,what that is in french and it's able to
+1034.079,5.441,push that out in france french
+1036.64,4.799,and learn how to do that
+1039.52,3.6,and then we have chat bots
+1041.439,4.081,i remember when microsoft first had
+1043.12,5.12,their little paper clip um boy that was
+1045.52,5.2,like a long time ago they came up and
+1048.24,4.0,you would type in there and chat with it
+1050.72,3.44,these are growing you know it's nice to
+1052.24,4.0,just be able to ask a question and it
+1054.16,4.399,comes up and gives you the answer
+1056.24,5.2,and instead of it being were you just
+1058.559,4.24,doing a search on certain words it's now
+1061.44,3.52,able to start linking those words
+1062.799,3.601,together and form a sentence in that
+1064.96,4.64,chat box
+1066.4,5.6,types of ai and machine learning
+1069.6,4.48,types of artificial intelligence this in
+1072.0,3.6,the next few slides are really important
+1074.08,4.08,so one of the types of artificial
+1075.6,4.72,intelligence is reactive machines
+1078.16,3.36,systems that only react they don't form
+1080.32,2.719,memories they don't have past
+1081.52,3.92,experiences they have something that
+1083.039,5.281,happens to them and they react to it
+1085.44,5.599,my washing machine is one of those
+1088.32,4.8,if i put a ton of clothes in it and it
+1091.039,4.081,all clumped on one side
+1093.12,4.559,it automatically adds a weight to
+1095.12,4.4,recenter it so that my washing machine
+1097.679,4.641,is actually a reactive machine working
+1099.52,4.96,with whatever the load is and keeps it
+1102.32,3.84,nice and so when it spins it doesn't go
+1104.48,3.28,thumping against the side
+1106.16,3.2,limited memory another form of
+1107.76,3.76,artificial intelligence
+1109.36,4.0,systems look into the past
+1111.52,4.96,information is added over a period of
+1113.36,5.28,time and information is short-lived when
+1116.48,3.84,we're talking about this and you look at
+1118.64,4.08,like a neural network that's been
+1120.32,5.12,programmed to identify cars
+1122.72,5.04,it doesn't remember all those pictures
+1125.44,4.56,it has no memory as far as the hundreds
+1127.76,4.56,of pictures you process through it all
+1130.0,4.48,it has is this is the pattern i use to
+1132.32,4.08,identify cars as the final output for
+1134.48,3.439,that neural network we looked at
+1136.4,2.48,so when they talk about limited memory
+1137.919,3.12,this is what they're talking about
+1138.88,3.36,they're talking about i've created this
+1141.039,3.681,based on all these things but i'm not
+1142.24,4.72,going to remember anyone specifically
+1144.72,4.24,theory of mind systems being able to
+1146.96,3.92,understand human emotions and how they
+1148.96,3.68,affect decision making to adjust their
+1150.88,3.36,behaviors according to their human
+1152.64,3.12,understanding
+1154.24,3.52,this is important because this is our
+1155.76,4.24,page mark this is how we know
+1157.76,3.279,whether it is an artificial intelligence
+1160.0,2.96,or not
+1161.039,4.401,is it interacting with humans in a way
+1162.96,4.64,that we can understand
+1165.44,4.56,without that interaction
+1167.6,4.56,is just an object so we talk about
+1170.0,3.919,theory of mind we really understand how
+1172.16,4.0,it interfaces that whole if you're in
+1173.919,4.241,web development user experience would be
+1176.16,3.84,the term i would put in there so the
+1178.16,4.24,theory of mine would be user experience
+1180.0,4.4,how's the whole ui connected together
+1182.4,4.08,and one of the final things is as we get
+1184.4,3.92,into artificial intelligence is systems
+1186.48,4.16,being aware of themselves
+1188.32,4.32,understanding their internal states and
+1190.64,4.8,predicting other people's feelings and
+1192.64,5.2,act appropriately so as artificial
+1195.44,3.52,intelligence continues to progress
+1197.84,3.12,we see ones that are trying to
+1198.96,4.24,understand what makes people happy how
+1200.96,3.76,would they increase our happiness
+1203.2,2.96,how would they keep themselves from
+1204.72,3.28,breaking down if something's broken
+1206.16,4.8,inside they have that self-awareness to
+1208.0,6.24,be able to fix it and just based on all
+1210.96,5.2,that information predicting which action
+1214.24,3.36,would work the best what would help
+1216.16,3.2,people
+1217.6,3.04,if i know that you're having a cup of
+1219.36,3.6,coffee first thing in the morning is
+1220.64,3.919,what makes you happy as a robot i might
+1222.96,3.2,make you a cup of coffee every morning
+1224.559,3.521,at the same time
+1226.16,3.36,to help your life and help you grow
+1228.08,3.92,that'd be the self-awareness is being
+1229.52,3.92,able to know all those different things
+1232.0,3.6,types of machine learning and like i
+1233.44,4.4,said on the last slide this is very
+1235.6,3.92,important this is very important if you
+1237.84,4.16,decide to go in and get certified in
+1239.52,5.039,machine learning or know more about it
+1242.0,3.84,these are the three primary types of
+1244.559,3.761,machine learning
+1245.84,4.079,the first one is supervised learning
+1248.32,5.2,systems are able to predict future
+1249.919,5.521,outcome based on past data requires both
+1253.52,4.24,an input and an output to be given to
+1255.44,3.92,the model for it to be trained
+1257.76,4.159,so in this case we're looking at
+1259.36,3.92,anything where you have 100 images of a
+1261.919,3.76,bicycle
+1263.28,4.399,and those hundred images you know are
+1265.679,3.281,bicycle so it's their presets someone
+1267.679,3.441,already looked at all hundred images and
+1268.96,3.92,said these are pictures of bicycles and
+1271.12,4.24,so the computer learns from those and
+1272.88,5.52,then it's given another picture
+1275.36,4.88,and maybe the next picture is a bicycle
+1278.4,3.92,and it says oh that resembles all these
+1280.24,3.679,other bicycles so it's a bicycle and the
+1282.32,2.719,next one's a car and it says that's not
+1283.919,2.801,a bicycle
+1285.039,3.201,that would be supervised learning
+1286.72,3.92,because we had to train it we had to
+1288.24,4.16,supervise it unsupervised learning
+1290.64,4.24,systems are able to identify hidden
+1292.4,4.24,patterns from the input data provided
+1294.88,4.159,by making the data more readable and
+1296.64,4.64,organized the patterns similarities or
+1299.039,4.321,anomalies become more evident you'll
+1301.28,3.68,heard the term cluster how do you
+1303.36,3.679,cluster things together some of these
+1304.96,3.599,things go together some of these don't
+1307.039,2.721,this is unsupervised where you can look
+1308.559,2.881,at an image
+1309.76,3.12,and start pulling the different pieces
+1311.44,4.16,of the image out
+1312.88,4.159,because they aren't the same the human
+1315.6,3.199,all the parts of the human are not the
+1317.039,3.921,same as a fuzzy tree behind them just
+1318.799,4.721,slightly out of focus which is not the
+1320.96,3.68,same as the beach ball it's unsupervised
+1323.52,2.399,because we never told it what a beach
+1324.64,2.88,ball was we never told them what the
+1325.919,2.961,human was and we never told it that
+1327.52,3.12,those were trees
+1328.88,4.799,all we told it was hey separate this
+1330.64,4.56,picture by things that don't match
+1333.679,2.721,and things that do match and come
+1335.2,2.719,together
+1336.4,3.84,and finally there's reinforcement
+1337.919,4.24,learning systems are given no training
+1340.24,3.84,it learns on the basis of the reward
+1342.159,4.161,punishment it received for performing
+1344.08,4.16,its last action it helps increase the
+1346.32,4.239,efficiency of a tool function or a
+1348.24,4.559,program reinforced learning a
+1350.559,4.161,reinforcement learning is kind of you
+1352.799,4.321,give it a yes or no yes you give me the
+1354.72,4.48,right response no you didn't and then it
+1357.12,4.08,looks at that and says oh okay so based
+1359.2,4.16,on this data coming in
+1361.2,4.4,what i gave you was a wrong response so
+1363.36,4.0,next time i'll give you a different one
+1365.6,3.439,comparing machine learning and deep
+1367.36,4.08,learning so remember that deep learning
+1369.039,4.241,is a subcategory of machine learning so
+1371.44,3.76,it's one of the many tools
+1373.28,3.68,and so they were grouping a ton of
+1375.2,4.32,machine learning tools all together
+1376.96,4.079,linear regression k means clustering
+1379.52,3.92,there's all kinds of cool tools out
+1381.039,4.561,there you can use in machine learning
+1383.44,4.4,enables machines to take decisions to
+1385.6,3.68,make decisions on their own based on
+1387.84,3.52,past data
+1389.28,4.48,enables machines to make decisions with
+1391.36,4.08,the help of artificial neural networks
+1393.76,3.6,so it's doing the same thing but we're
+1395.44,3.359,using an artificial neural network as
+1397.36,3.12,opposed to one of the more traditional
+1398.799,3.441,machine learning tools
+1400.48,3.92,needs only a small amount of training
+1402.24,3.919,data this is very important when you're
+1404.4,3.2,talking about machine learning
+1406.159,3.041,they're usually not talking about huge
+1407.6,2.959,amounts of data we're talking about
+1409.2,3.2,maybe your spreadsheet from your
+1410.559,3.36,business and your totals for the end of
+1412.4,3.68,the year when you're talking about
+1413.919,4.161,neural networks you usually need a large
+1416.08,3.76,amount of data to train the data so
+1418.08,4.56,there's a lot of training involved if
+1419.84,3.68,you have under 500 points of data that's
+1422.64,3.039,probably
+1423.52,3.68,not going to go into machine learning or
+1425.679,4.721,maybe you have like the case of one of
+1427.2,5.44,the things 500 points of data and 30
+1430.4,3.84,different fields it starts getting
+1432.64,3.919,really confusing there in artificial
+1434.24,4.24,intelligence or machine learning and the
+1436.559,3.681,deep learning aspect really shines when
+1438.48,3.76,you get to that larger data that's
+1440.24,4.64,really complex
+1442.24,4.319,works well on a low end systems
+1444.88,3.52,so a lot of the machine learning tools
+1446.559,4.401,out there you can run on your laptop
+1448.4,3.68,with no problem and do the calculations
+1450.96,2.88,there
+1452.08,3.52,where with the machine learning usually
+1453.84,3.68,needs a higher end system to work it
+1455.6,4.4,takes a lot more processing power to
+1457.52,4.639,build those neural networks and to train
+1460.0,3.52,them it goes through a lot of data
+1462.159,3.281,we're talking about the general machine
+1463.52,4.0,learning tools most features need to be
+1465.44,4.4,identified in advanced and manually
+1467.52,4.48,coded so there's a lot of human work on
+1469.84,4.56,here the machine learns the features
+1472.0,4.72,from the data it is provided so again
+1474.4,3.92,it's like a magic box you don't have to
+1476.72,3.92,know what a tire is
+1478.32,4.239,it figures it out for you
+1480.64,4.639,the problem is divided into parts and
+1482.559,4.081,solved individually and then combined so
+1485.279,2.721,machine learning you usually have all
+1486.64,3.36,these different tools and use different
+1488.0,3.279,tools for different parts
+1490.0,3.039,and the problem is solved in an
+1491.279,4.241,end-to-end manner so you only have one
+1493.039,4.321,neural network or two neural networks
+1495.52,4.159,that is bringing the data in and putting
+1497.36,4.64,it out it's not going through a lot of
+1499.679,3.681,different processes to get there and
+1502.0,3.12,remember you can put machine learning
+1503.36,4.24,and deep learning together so you don't
+1505.12,4.0,always have just the deep learning
+1507.6,3.6,solving the problem by having selling
+1509.12,4.0,one piece of the puzzle
+1511.2,3.44,with regular machine learning and most
+1513.12,3.679,machine learning tools out there they
+1514.64,3.279,take longer to test and understand how
+1516.799,2.561,they work
+1517.919,3.281,and with the deep learning it's pretty
+1519.36,4.08,quick once you build that neural network
+1521.2,4.0,you test it and you know
+1523.44,3.76,so we're dealing with very crisp rules
+1525.2,3.52,limited resources
+1527.2,3.2,you have to really explain how the
+1528.72,3.68,decision was made when you use most
+1530.4,3.44,machine learning tools but when you use
+1532.4,2.879,the deep learning tool inside the
+1533.84,3.439,machine learning tools
+1535.279,3.921,the system takes care of it based on its
+1537.279,3.681,own logic and reasoning and again it's
+1539.2,3.68,like a magic black box
+1540.96,3.599,you really don't know how it came up
+1542.88,3.2,with the answer you just know it came up
+1544.559,3.521,with the right answer
+1546.08,4.0,a glimpse into the future
+1548.08,4.32,so a quick glimpse into the future
+1550.08,4.88,artificial intelligence using it to
+1552.4,4.72,detecting crimes before they happen
+1554.96,4.079,humanoid ai helpers which we already
+1557.12,3.439,have a lot of there'll be more and more
+1559.039,2.88,maybe it'll actually be androids that'd
+1560.559,2.961,be cool to have an android that comes
+1561.919,4.161,and gets stuff out of my fridge for me
+1563.52,5.039,machine learning increasing efficiency
+1566.08,4.32,in healthcare that's really big in all
+1568.559,3.441,the forms of machine learning better
+1570.4,3.12,marketing techniques
+1572.0,3.2,any of these things
+1573.52,3.68,if we get into the sciences it's just
+1575.2,4.32,off the scale machine learning and
+1577.2,4.8,artificial intelligence go everywhere
+1579.52,3.32,and then the subcategory deep learning
+1582.0,2.559,increased
+1582.84,2.92,personalization so what's really nice
+1584.559,4.0,about the deep learning is it's going to
+1585.76,5.039,start now catering to you that'll be one
+1588.559,3.441,of the things we see more and more of
+1590.799,3.281,and we'll have more of a hyper
+1592.0,3.76,intelligent personal assistant i'm
+1594.08,3.04,excited about that
+1595.76,3.2,what we have learned
+1597.12,3.12,so far we covered artificial
+1598.96,2.8,intelligence
+1600.24,4.0,in this case the
+1601.76,4.399,ai versus the human we did a lot of that
+1604.24,3.039,so we have a page marker of human
+1606.159,2.721,interaction
+1607.279,3.28,we discussed machine learning and all
+1608.88,4.0,their different parts and then we
+1610.559,5.201,discussed the deep learning aspect
+1612.88,4.08,we went into ai and machine learning and
+1615.76,2.96,deep learning
+1616.96,3.92,how they're all sub-categories of each
+1618.72,4.16,other very important to remember that
+1620.88,3.919,artificial intelligence is a big picture
+1622.88,4.24,machine learning is a category in
+1624.799,5.36,artificial intelligence and then deep
+1627.12,4.72,learning is a tool in machine learning
+1630.159,3.041,we talked of all the aspects in the
+1631.84,3.36,machine learning and deep learning and
+1633.2,3.359,how they compare and we took a quick
+1635.2,2.959,glimpse into the future and all the
+1636.559,3.12,different i'm sure you can come up with
+1638.159,3.281,many more examples of where it's coming
+1639.679,3.041,out in our future we looked at a few of
+1641.44,3.04,them so you have some ideas of where
+1642.72,3.12,this is going and all the different
+1644.48,2.72,wonderful opportunities are going to
+1645.84,3.439,come out with it
+1647.2,3.599,i would like to thank you for more
+1649.279,4.481,information visit us at
+1650.799,4.961,www.simplylearn.com
+1653.76,3.84,if you have any questions or like to
+1655.76,3.76,give us feedback please use the comments
+1657.6,4.559,down below thank you again and have a
+1659.52,2.639,wonderful day
+1665.039,3.52,hi there if you like this video
+1666.88,4.32,subscribe to the simply learn youtube
+1668.559,4.801,channel and click here to watch similar
+1671.2,5.479,videos turn it up and get certified
+1673.36,3.319,click here

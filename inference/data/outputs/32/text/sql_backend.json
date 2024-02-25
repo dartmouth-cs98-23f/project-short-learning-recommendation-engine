@@ -1,0 +1,70 @@
+{
+  "introduction": "This video delves into the reasons behind the slow performance of the SELECT \* statement in a relational database. It explores the impact of full table scans, deserialization costs, and network latency on query performance.",
+  "sections": [
+    {
+      "title": "Section 1: Full Table Scans",
+      "content": [
+        "Explanation of how full table scans are performed in a relational database.",
+        "Discussion on the performance impact of full table scans.",
+        "Comparison between index-based and index-only scans.",
+        "Explanation of how to optimize queries using indexes."
+      ],
+      "topics": ["Database Performance", "Indexing", "Query Optimization"]
+    },
+    {
+      "title": "Section 2: Deserialization Costs",
+      "content": [
+        "Explanation of deserialization costs in a relational database.",
+        "Discussion on the impact of deserialization costs on query performance.",
+        "Explanation of how to minimize deserialization costs.",
+        "Comparison between deserialization costs in different databases."
+      ],
+      "topics": ["Database Performance", "Deserialization", "Database Comparison"]
+    },
+    {
+      "title": "Section 3: Network Latency",
+      "content": [
+        "Explanation of network latency and its impact on query performance.",
+        "Discussion on how to minimize network latency.",
+        "Comparison between network latency in different databases and network configurations.",
+        "Explanation of how to optimize network configurations for better performance."
+      ],
+      "topics": ["Database Performance", "Network Latency", "Network Optimization"]
+    },
+    {
+      "title": "Section 4: Lazy Deserialization",
+      "content": [
+        "Explanation of lazy deserialization and its impact on query performance.",
+        "Discussion on how to use lazy deserialization for better performance.",
+        "Comparison between lazy deserialization and eager deserialization.",
+        "Explanation of how to implement lazy deserialization in different databases."
+      ],
+      "topics": ["Database Performance", "Deserialization", "Lazy Deserialization"]
+    },
+    {
+      "title": "Section 5: Avoiding Unnecessary Data",
+      "content": [
+        "Explanation of how to avoid sending unnecessary data over the network.",
+        "Discussion on the importance of minimizing data transfer.",
+        "Comparison between different data transfer methods and their impact on performance.",
+        "Explanation of how to optimize data transfer for better performance."
+      ],
+      "topics": ["Database Performance", "Data Transfer", "Optimization"]
+    }
+  ],
+  "topics": ["Database Performance", "Indexing", "Deserialization", "Network Latency", "Lazy Deserialization", "Data Transfer", "Optimization"],
+  "generalTopics": [
+    {
+      "name": "Database Performance",
+      "complexity": 0.70
+    },
+    {
+      "name": "Indexing",
+      "complexity": 0.60
+    },
+    {
+      "name": "Network Optimization",
+      "complexity": 0.50
+    }
+  ]
+}

@@ -1,0 +1,1165 @@
+second,duration,transcript
+2.85,3.1,[Music]
+6.049,4.241,hello everybody and welcome back I'm
+8.91,3.33,going to apologize right now for this
+10.29,4.469,long introduction but what I'm trying to
+12.24,5.28,do in this video is teach you software
+14.759,4.53,design at a very fundamental level so
+17.52,2.79,I've heard you guys loud and clear a lot
+19.289,2.851,of you are sick of the beginner
+20.31,3.75,tutorials you're sick of people assuming
+22.14,3.479,you know nothing and you want to get
+24.06,3.09,more into the intermediate and advanced
+25.619,3.841,level you want to figure out how do I
+27.15,4.35,design software how do I look at some
+29.46,3.39,system some program and come up with
+31.5,3.87,some kind of plan some kind of
+32.85,4.049,implementation approach or strategy that
+35.37,3.24,is exactly what I'm gonna be showing you
+36.899,4.021,here so on the left hand side of my
+38.61,4.109,screen you can see that we have this
+40.92,3.479,kind of mock software system that I've
+42.719,3.421,just come up with this completely random
+44.399,3.541,example that I just wrote up before this
+46.14,4.23,video and what we're gonna be doing is
+47.94,4.17,looking at this block of text here which
+50.37,3.18,you can really think of as the client
+52.11,3.12,you can think of is this is what the
+53.55,3.599,client wants this is what the person
+55.23,4.379,you're writing code for wants how do you
+57.149,4.351,take simply these four paragraphs here
+59.609,3.781,and translate that into a fully
+61.5,3.54,functioning software system that is
+63.39,3.24,exactly what we're gonna be doing here
+65.04,3.119,so we're gonna look through this we're
+66.63,3.93,gonna go through the process of picking
+68.159,4.021,up valuable information and then what
+70.56,4.26,we're gonna do is actually draw up a
+72.18,4.53,class diagram that has what our plan is
+74.82,3.99,going to be when we start implementing
+76.71,4.17,this and that leads me to my next point
+78.81,4.05,which is planning when you want to get
+80.88,3.39,out of that intermediate or you want to
+82.86,3.36,move from kind of intermediate to more
+84.27,3.57,advanced you already know how to program
+86.22,3.96,the next step is thinking about
+87.84,4.11,designing programs designing software
+90.18,3.6,it's not enough to be good at
+91.95,3.75,programming what you need to do is
+93.78,4.35,actually be able to think about the kind
+95.7,4.32,of overarching architecture of the
+98.13,3.809,program that you're writing you want to
+100.02,3.779,think of okay how are these objects
+101.939,4.081,these classes this system going to
+103.799,4.051,interact with other things and how can I
+106.02,4.05,think about all of these things before I
+107.85,4.62,actually start writing code that is what
+110.07,4.14,we are going to be doing here so without
+112.47,3.12,further ado let's go ahead and get
+114.21,3.299,started I'm gonna read through this
+115.59,3.419,design problem here there will be a link
+117.509,2.97,in the description if you prefer to read
+119.009,3.691,through that yourself I would encourage
+120.479,3.93,all of you before I go ahead and start
+122.7,3.57,doing all of this for you and showing it
+124.409,3.57,to you that you think about how you
+126.27,3.39,might design something that looks like
+127.979,3.601,this and if you were immediate thought
+129.66,3.45,as I have no idea then while this video
+131.58,2.19,is going to be perfect for you because
+133.11,3.48,I'm going to
+133.77,5.34,show you exactly how we can do this so
+136.59,4.74,let's go ahead and read through this so
+139.11,4.08,the problem I've had here is a design
+141.33,3.33,problem tech with Tim school of
+143.19,3.0,programmers so I just kind of made this
+144.66,3.69,name up I thought it would make sense I
+146.19,3.84,assume a lot of you guys are students or
+148.35,3.57,you were at one point a student so I
+150.03,4.47,think this will relate to a lot of you
+151.92,4.29,and the idea here is that the tech with
+154.5,3.48,Tim school of programmers needs a new
+156.21,4.08,system to track all of its students
+157.98,3.69,professors and courses so think of this
+160.29,2.91,as some kind of like you know mini
+161.67,3.39,University or something and they want a
+163.2,3.57,system or a database or something like
+165.06,3.87,that where they can track all of this
+166.77,3.93,information maybe they can ask some type
+168.93,3.72,of questions about a student they can
+170.7,4.08,check grades they can see who's teaching
+172.65,3.57,a course that's what this really is so
+174.78,3.18,we'll go through the details here but it
+176.22,3.39,wants to keep track of what courses are
+177.96,3.36,offered who teaches each course and
+179.61,3.27,which students are enrolled in those
+181.32,3.18,courses it what else would like to be
+182.88,3.75,able to track the grades of each of its
+184.5,3.9,students across all courses for each
+186.63,3.6,student and professor the school needs
+188.4,4.11,to know their address phone number and H
+190.23,5.49,so immediately even in just this first
+192.51,4.65,paragraph this has told us a lot we need
+195.72,2.97,a system right because we're just
+197.16,3.03,thinking about what is it that we
+198.69,3.0,actually need from the system these are
+200.19,3.66,really the requirements that are being
+201.69,3.69,listed out here and this system needs to
+203.85,3.45,keep track of students it needs to keep
+205.38,4.05,track of professors and it needs to keep
+207.3,4.26,track of courses what else doesn't need
+209.43,3.72,to keep track of well for each person we
+211.56,3.66,need their address their phone number
+213.15,3.57,their name and their age so let's keep
+215.22,4.05,that in mind we'll read through the rest
+216.72,4.62,and then we'll distill all of this ok so
+219.27,3.81,each course has a maximum and minimum
+221.34,4.11,number of students that they can enroll
+223.08,4.5,if the minimum number of students is not
+225.45,4.08,reached then the course will be canceled
+227.58,4.11,each course is taught by at least one
+229.53,4.02,professor but sometimes may be taught by
+231.69,3.66,many so in some situations there may be
+233.55,4.62,more than one professor that teaches the
+235.35,4.56,course all right professors are salaried
+238.17,3.45,employees at the tech with Tim School of
+239.91,3.299,programmers and therefore we need to
+241.62,3.839,keep track of how much they make each
+243.209,4.021,year if a professor teaches more than
+245.459,4.681,four courses in a semester they are
+247.23,3.24,"granted a one-time bonus of $20,000 all"
+250.14,3.21,right
+250.47,4.59,students can both can be both local or
+253.35,3.569,international students and full or
+255.06,3.12,part-time a student is considered a
+256.919,3.811,part-time student if they are enrolled
+258.18,4.5,in less than one or two courses during
+260.73,3.36,any given semester so actually sorry
+262.68,3.85,this should say if they are enrolled in
+264.09,3.82,one or two courses during any given
+266.53,2.97,semester so essentially you are
+267.91,4.35,part-time if you were taking two or less
+269.5,4.38,courses in a semester the maximum amount
+272.26,4.05,of courses a student may be enrolled in
+273.88,4.11,at one time is six students receive
+276.31,4.44,grades from each course these grades are
+277.99,4.29,numeric in in the range of 0 to 100 any
+280.75,4.2,students that have an above-average
+282.28,4.62,grade across our have an average grade
+284.95,3.9,sorry across all enrolled courses that
+286.9,4.41,are lower than 60% is said to be on
+288.85,4.11,academic probation so I apologize for
+291.31,4.41,butchering butchering some of that
+292.96,4.89,speech there but the idea here is we
+295.72,3.36,have this system it's fairly simple we
+297.85,3.15,need to keep track of students
+299.08,4.08,professors those students grades across
+301.0,4.35,all of the courses there's a few small
+303.16,3.509,nuances within that but this should be
+305.35,2.819,something that we're gonna be able to
+306.669,3.691,design and hopefully in the next you
+308.169,3.421,know 30 45 minutes with me explaining
+310.36,3.9,everything that I'm doing
+311.59,5.52,so given this block right given this
+314.26,5.13,text what we need to do now is translate
+317.11,3.869,this into a program and the first thing
+319.39,3.48,that I want to do is start thinking
+320.979,4.111,about all the information that I
+322.87,4.62,actually need to track and all of the
+325.09,4.68,potential classes I'm going to have in
+327.49,4.14,my UML class diagram so we're gonna
+329.77,4.05,design this using an object-oriented
+331.63,4.349,style which is very common and what most
+333.82,3.78,people kind of do and this doesn't
+335.979,3.331,necessarily mean that what I'm gonna
+337.6,4.02,design here will be the final
+339.31,4.229,implementation that we actually program
+341.62,4.44,up this is just kind of the thing that
+343.539,4.411,is you know our design this is what we
+346.06,3.78,thought this is our plan it's totally
+347.95,2.339,fine if we decide to deviate from this
+349.84,2.73,later
+350.289,4.111,especially if other things come up but
+352.57,3.84,we should at least have some kind of
+354.4,3.389,idea of what we want to do then we can
+356.41,4.14,follow about when we actually start
+357.789,4.38,coding so what I'm gonna do is have two
+360.55,3.33,windows here one on the left one on the
+362.169,3.75,right and I'm going to start listing
+363.88,4.47,first of all all of the classes that I
+365.919,4.351,think we should actually have based on
+368.35,3.87,the information I've seen here and this
+370.27,4.08,is kind of the first step think about
+372.22,4.71,all of the objects you might have in a
+374.35,4.92,system all of the main components that
+376.93,4.16,might have information within them so
+379.27,4.32,the first thing I'm gonna list here is
+381.09,4.21,students right we will probably have a
+383.59,3.78,student class because we're gonna have
+385.3,5.4,multiple students the next thing we're
+387.37,4.77,probably gonna have is well professors
+390.7,3.0,now I don't know if that's how you spell
+392.14,3.12,professors but and we'll put that there
+393.7,3.06,so we're gonna have a student class and
+395.26,3.45,a professor class because we're gonna
+396.76,2.58,need both a student and a professor and
+398.71,2.489,this
+399.34,3.96,has different information contained in
+401.199,4.081,it than the professor dis awesome
+403.3,4.35,alright so student professor next thing
+405.28,3.81,we need is probably a course right we're
+407.65,3.12,gonna have different courses those are
+409.09,3.15,gonna be taught by professors and those
+410.77,3.75,are gonna be taught by students and
+412.24,3.45,after reading this are not taught by
+414.52,3.149,students or I students will be enrolled
+415.69,4.41,in that course and after reading this
+417.669,4.261,first paragraph that is kind of what
+420.1,3.18,I've grabbed from that so I've said okay
+421.93,3.03,we need to keep track of students
+423.28,3.18,professors and courses all we need to
+424.96,3.45,see what courses are offered who teaches
+426.46,4.5,the course who's enrolled keep track of
+428.41,4.41,grades okay so that mate brings me to
+430.96,4.41,grades so now I need to keep track of
+432.82,3.87,greats how am I gonna do that well we'll
+435.37,3.18,keep moving and then we'll think about
+436.69,3.42,how that's gonna happen so each course
+438.55,2.91,has a maximum and minimum number of
+440.11,2.67,students that can enroll if the minimum
+441.46,3.24,number of students has not reached in
+442.78,3.449,that course will be canceled each course
+444.7,3.18,is taught by at least one professor but
+446.229,3.241,sometimes taught by many okay so that
+447.88,3.69,doesn't give me any more classes I don't
+449.47,3.78,think right now at least and let's keep
+451.57,3.12,going professors are salaried employees
+453.25,2.61,at Tech with Tim schooled programmer and
+454.69,3.03,therefore we need to keep track of how
+455.86,3.75,much they make a year okay that doesn't
+457.72,4.38,says say anything to me students can be
+459.61,3.99,both local or international a student is
+462.1,2.43,considered a part-time student if
+463.6,3.539,they're enrolled there one or two
+464.53,5.16,courses during any given semester that
+467.139,4.411,the duh duh okay and now after reading
+469.69,3.39,all of this what I've determined is we
+471.55,3.33,have student we have professor we have
+473.08,3.72,course the only thing we're really
+474.88,4.02,missing here is a way of keeping track
+476.8,4.17,of who is enrolled in what course and
+478.9,4.769,what grades each of these students have
+480.97,5.1,so what I'm actually going to do is I'm
+483.669,4.141,going to make a class called enroll now
+486.07,3.659,this is gonna seem weird but what this
+487.81,3.63,enroll class is going to do for us and
+489.729,3.781,it will make more sense as we go through
+491.44,5.19,this video is essentially link our
+493.51,5.129,students and our courses so essentially
+496.63,3.99,we have a way to say ok this course is
+498.639,5.191,taught by this professor and this
+500.62,5.31,student is enrolled in this course the
+503.83,4.05,reason I want this enroll is because
+505.93,4.35,this enroll will essentially tell me if
+507.88,4.11,first of all if this course is active
+510.28,3.03,right you know is there enough people in
+511.99,2.76,this course that this student this
+513.31,3.029,enrollment was successful that's
+514.75,3.779,something we could keep track of on the
+516.339,4.741,in rural class and it can keep track of
+518.529,4.56,the grade that the student had in the
+521.08,4.23,course we need some way to keep track of
+523.089,4.291,all of the grades for all of the courses
+525.31,4.529,for all of the students and this enroll
+527.38,4.56,class could be a way to do this now keep
+529.839,2.831,in mind that I might change this as we
+531.94,2.17,go through and
+532.67,3.33,I start drawing things out it might make
+534.11,3.75,more sense to do something else but this
+536.0,3.51,is my initial idea and this is where I'm
+537.86,2.94,starting from this is my starting ground
+539.51,2.88,and this is what I'm thinking about
+540.8,3.6,right now and this is what you should
+542.39,3.42,think about when you are reading some
+544.4,1.95,requirements that look something like
+545.81,2.67,this
+546.35,3.81,okay so I've settled on these four
+548.48,3.39,classes for right now these could change
+550.16,4.08,again I'm trying to walk you through the
+551.87,3.99,process as fully as we can so you really
+554.24,2.91,understand and these are the four
+555.86,3.39,classes that I think I'm gonna need
+557.15,4.5,student-professor course and this enroll
+559.25,4.05,one is gonna link those courses and
+561.65,3.45,those students together and store some
+563.3,3.24,information and it may be like the date
+565.1,4.26,we enrolled in the course something like
+566.54,3.93,that okay so now that I have that what
+569.36,2.76,I'm gonna do is I'm gonna spread these
+570.47,4.05,out and I'm gonna start listing
+572.12,6.96,information that I need to keep track of
+574.52,5.94,for students professors and so on so now
+579.08,3.09,what I'm gonna do is start looking at
+580.46,4.14,what information do I need for students
+582.17,4.56,so down here it says a student can be
+584.6,3.51,both local or international full or
+586.73,4.47,part-time so the first thing I'm gonna
+588.11,5.64,say is we'll say local and that will be
+591.2,4.71,a boolean value that's either gonna be
+593.75,4.08,true or false is this student local or
+595.91,5.72,are they not and in fact what I actually
+597.83,3.8,might make this is just international
+601.84,2.98,international I think that's right and
+603.68,3.33,this will just tell me if the students
+604.82,3.6,international or not and that will tell
+607.01,3.06,me if they're local right because it's a
+608.42,3.99,true or false value so we'll keep that
+610.07,4.14,as an attribute of my student class
+612.41,3.51,that's some type of information we're
+614.21,3.5,gonna need to know and then it says the
+615.92,4.89,student can either be full or part-time
+617.71,4.63,okay so we could consider that to be an
+620.81,3.96,attribute of the student whether they're
+622.34,4.62,full or part-time but how is that
+624.77,3.66,attribute derived that is derived based
+626.96,3.9,on the number of courses that they're
+628.43,4.2,enrolled in during a given semester so
+630.86,3.09,instead of making this an attribute what
+632.63,3.09,I'm actually gonna do is say well
+633.95,3.87,something that I need on my student is
+635.72,5.94,gonna be a method and the method is
+637.82,5.7,gonna say is part-time and this will
+641.66,3.78,simply return a boolean and what this
+643.52,3.69,will do is it will look at this student
+645.44,3.45,and tell me how many courses are
+647.21,4.41,enrolled in and if it is greater than
+648.89,4.02,the threshold of the part-time student
+651.62,3.09,then they will not be a part-time
+652.91,3.87,student right that is what this method
+654.71,3.96,will do so things that we start thinking
+656.78,3.42,about is how are we gonna implement this
+658.67,3.54,kind of attribute well we're gonna do
+660.2,4.59,that using a method so we can determine
+662.21,4.049,if a student is full or part-time okay
+664.79,3.06,so the maximum an amount
+666.259,4.29,courses a student may be enrolled in is
+667.85,5.909,six students receive grades okay and
+670.549,5.73,then what else does it say here if the
+673.759,3.66,average grade is lower than 60% they're
+676.279,3.691,on academic probation
+677.419,4.86,so this one is derived from their grades
+679.97,3.809,so again since it is a derived attribute
+682.279,3.6,it's not simply just something that's
+683.779,5.16,going to sit there what I need to do is
+685.879,5.87,have a method that tells me hey are they
+688.939,6.87,on probation so we'll say is on
+691.749,5.62,probation like that alright so we'll put
+695.809,3.24,that there and then this will be boolean
+697.369,3.69,and what these methods are intending to
+699.049,4.89,do is to look at attributes on the
+701.059,4.95,student evaluate them and then give us
+703.939,3.721,an answer to give us these kind of
+706.009,3.87,attitudes right are they part-time or
+707.66,3.779,are they on probation okay so now that
+709.879,3.27,we have that let's move to Professor
+711.439,3.33,don't worry there's a lot more stuff
+713.149,3.9,that I'm gonna add in here but I want to
+714.769,4.86,talk about that later so professor what
+717.049,4.23,do we need here well a professor we need
+719.629,4.2,to keep track of their salaries so first
+721.279,4.71,thing we'll say is salary and this will
+723.829,3.09,be a number right we're an int or
+725.989,2.07,whatever you want to call it well
+726.919,2.4,actually probably would be a float
+728.059,4.02,because they could have a decimal point
+729.319,4.98,salary so we'll put a salad right there
+732.079,3.78,what else do we need for a professor
+734.299,3.24,well there's nothing else on here that
+735.859,3.51,it really says we need other than their
+737.539,3.75,age name phone number etc which we'll
+739.369,4.59,get to in a second so for that I'm gonna
+741.289,3.931,leave it there now of course what do we
+743.959,3.3,need for a course well it doesn't
+745.22,4.049,specifically say there's anything we
+747.259,3.24,really need for a course but what I'm
+749.269,3.18,gonna have for a course of course
+750.499,3.42,is the name I'm gonna have the course
+752.449,3.6,code because that's something that we're
+753.919,5.551,probably gonna need the name will be a
+756.049,5.31,string the code will be a string as well
+759.47,3.929,actually and then what else do we need
+761.359,3.75,we need be minimum and maximum amount of
+763.399,4.73,students in the course we'll save min
+765.109,6.48,students that'll be an int and we'll say
+768.129,5.14,max students and that will be an int and
+771.589,3.75,then what I'm actually gonna have is
+773.269,4.35,well we need to determine is this course
+775.339,3.99,active or is it canceled so is this
+777.619,4.83,going on do we have enough students in
+779.329,4.56,this course for it to happen so what are
+782.449,4.71,we gonna do we're gonna add a method
+783.889,5.73,that says is active or will say is
+787.159,3.84,canceled just because that goes more
+789.619,3.42,with the requirements that we have there
+790.999,4.8,so we'll say is canceled boolean and
+793.039,4.32,what this will do is look at all of the
+795.799,3.761,students enrolled in this course and
+797.359,4.39,tell us if there is enough so
+799.56,4.259,it's canceled or it's not canceled right
+801.749,3.991,I hope that makes sense okay so we have
+803.819,4.111,student we have professor we have course
+805.74,3.93,another thing that I'm thinking we might
+807.93,3.889,want to do is have something like the
+809.67,4.469,start time for this course it doesn't
+811.819,4.57,necessarily say that we need that but if
+814.139,3.901,I'm thinking about my program in the
+816.389,3.57,future it probably makes sense to have
+818.04,3.599,something like start time right like
+819.959,3.24,when did this course start what you
+821.639,3.51,might want to keep track of it so we'll
+823.199,3.45,say start and we'll say that's a date
+825.149,3.0,and then while we're at that we might as
+826.649,3.48,well put an end as well and we'll say
+828.149,3.451,that that's gonna be a date - so
+830.129,2.82,hopefully you get the idea that what I'm
+831.6,3.27,doing is just going through and picking
+832.949,3.781,out all the necessary information and
+834.87,3.6,just listing it out so I can see it
+836.73,3.75,before I actually start drawing anything
+838.47,5.039,so we have student professor course and
+840.48,5.37,then we have enroll okay so enroll what
+843.509,4.14,do I need for enroll well this is gonna
+845.85,5.219,keep track of how my students are
+847.649,4.951,enrolled in courses so for enroll what
+851.069,4.32,I'm gonna do is I'm simply gonna say
+852.6,4.589,date so we'll literally say the date is
+855.389,4.231,gonna be a date so this is when this
+857.189,4.62,happened so when did they enroll we're
+859.62,4.38,gonna need what students enrolled what
+861.809,5.13,course enrolled and then we're also
+864.0,5.459,going to need B grade that the student
+866.939,3.991,got in that course this for me is pretty
+869.459,3.541,much gonna keep track of hey this
+870.93,4.079,student is enrolled in this course and
+873.0,4.139,this is the grade that they received in
+875.009,3.93,this course and that will be a float and
+877.139,3.721,then anything else that we might want to
+878.939,4.111,keep track of that's specific between a
+880.86,4.32,student and a course but doesn't make
+883.05,4.079,sense to go in just the student or just
+885.18,4.079,the course would be information we put
+887.129,3.51,in enroll and for now I don't think of
+889.259,3.3,anything so I'm gonna leave it like this
+890.639,5.13,and this is kind of the core information
+892.559,5.97,I need except for this address phone
+895.769,5.04,number name and age now the reason I've
+898.529,5.1,left this out is because these are gonna
+900.809,5.22,require some more classes notice that
+903.629,4.591,for both a student and a professor we
+906.029,3.961,have some shared functionality here we
+908.22,3.419,have some shared attributes we have the
+909.99,3.659,address the phone number the name and
+911.639,4.2,the age so what I'm actually going to do
+913.649,4.081,is I'm gonna make another class here I'm
+915.839,3.87,gonna call it person and what this
+917.73,4.049,person class is gonna represent is a
+919.709,4.17,base class for both the student and the
+921.779,3.66,professor so the student the professor
+923.879,3.51,have some shared things that we want to
+925.439,4.561,know about them so let's put that into a
+927.389,4.95,base class that I'm gonna call person so
+930.0,2.899,inside of person what I'm gonna do here
+932.339,1.97,is
+932.899,3.271,say okay what do we need well we need
+934.309,4.921,the name so actually we're gonna have to
+936.17,5.159,say first name oops if we could type
+939.23,5.549,here so first name that'll be a string
+941.329,6.391,we're gonna say last name that will be a
+944.779,4.98,string as well what else do we need we
+947.72,4.919,need the age of this person so do I do
+949.759,4.62,age int like that I'm gonna ask you as a
+952.639,3.45,question here I can't really because
+954.379,4.14,it's not an interactive environment but
+956.089,4.261,think about if this age makes sense to
+958.519,3.391,put here does it make sense to have an
+960.35,2.82,attribute called age because we want to
+961.91,3.239,keep track of the age right it says we
+963.17,4.109,need the age in this person class so
+965.149,3.72,think about it for a second okay I'm
+967.279,3.09,assuming you've thought about it and I'm
+968.869,4.111,gonna tell you right now that it makes
+970.369,5.46,no sense to put an attribute called age
+972.98,5.159,which is an int the reason you never put
+975.829,4.771,an attribute called age on something is
+978.139,5.73,because an age changes and guess what an
+980.6,5.07,age is derived from your birthdate so on
+983.869,3.96,the current date versus your birth date
+985.67,4.289,that determines your age so rather than
+987.829,5.31,keeping track of the age we want to keep
+989.959,6.031,track of the date of birth which will
+993.139,4.29,tell us the age right we can very easily
+995.99,3.36,find the age if we have the date of
+997.429,3.27,birth so this is gonna be a date so that
+999.35,2.909,was a little bit of a trick I put in
+1000.699,3.721,there just to see if I could fool you
+1002.259,4.56,guys okay next thing we need is a phone
+1004.42,5.099,number so let's say phone number if we
+1006.819,5.281,can do this like this so phone number
+1009.519,4.651,and that is gonna be a what is this I
+1012.1,3.39,guess we could call it I'm gonna call it
+1014.17,4.2,a string just because we can have like
+1015.49,4.889,the plus one - yada yada yada
+1018.37,3.6,there might be a specific attribute we
+1020.379,3.601,could use for that but a string it's
+1021.97,4.439,fine I think you guys get that all right
+1023.98,4.859,now we need B address so what is it in
+1026.409,4.951,address comprised of though is my
+1028.839,4.35,question here these address really an
+1031.36,4.38,attribute that I can put can I just put
+1033.189,5.13,a dress like that well the answer is yes
+1035.74,4.349,you can do that but what I usually like
+1038.319,4.531,to do just to make things easier for
+1040.089,3.99,myself in the future is make a separate
+1042.85,3.209,class called
+1044.079,4.32,address and it stores all of the
+1046.059,4.681,information in separate fields about the
+1048.399,5.041,address so this way I can very easily
+1050.74,4.35,grab information from the address I can
+1053.44,3.839,sort by people that are living in a
+1055.09,3.48,certain area it just makes things a lot
+1057.279,3.12,easier especially if you're thinking
+1058.57,3.989,about a database structure in the future
+1060.399,4.02,if you have a bunch of attributes that
+1062.559,3.721,could be squished in one separate out
+1064.419,4.081,into individual fields
+1066.28,4.17,let's look at this address what is an
+1068.5,4.2,address well we need a country we need
+1070.45,4.14,kind of a state or a province I'll just
+1072.7,3.27,call it a state but like it could be a
+1074.59,4.05,province that might make more sense
+1075.97,5.7,we're going to need a street
+1078.64,4.65,we'll need a street number so we could
+1081.67,3.96,call this the street address and that
+1083.29,5.49,could be one thanks we need country
+1085.63,5.49,states we're going to need a city we
+1088.78,4.44,need the street address and then we need
+1091.12,4.59,a postal code or zip code or something
+1093.22,4.38,like that so let's just go postal code
+1095.71,3.84,now these country this is gonna be a
+1097.6,3.9,string almost all of these are gonna be
+1099.55,5.13,strings actually this is gonna be a
+1101.5,4.83,string this is gonna be a string I think
+1104.68,4.07,almost all of these are gonna be strings
+1106.33,5.31,and the postal code will be a string as
+1108.75,5.05,well so those string and street address
+1111.64,3.84,needs to be one word okay so now we have
+1113.8,3.18,information relate to an address if we
+1115.48,2.7,wanted to add some more information
+1116.98,3.09,about address like maybe you wanted to
+1118.18,3.9,get really specific and go long gets you
+1120.07,4.11,latitude something like that you could
+1122.08,4.17,technically add that to this class and
+1124.18,3.96,now what we kind of have and let me go
+1126.25,4.17,over here and make this a bit bigger is
+1128.14,5.13,all of the information that we needed
+1130.42,4.23,out of this problem right here I've kind
+1133.27,2.91,of taken it out I've read through
+1134.65,2.85,everything we needed to and I've said
+1136.18,3.69,the information I need to store is the
+1137.5,4.56,following I need an address that has all
+1139.87,3.99,of this I need a person that has all
+1142.06,4.14,that I need a student a professor a
+1143.86,5.1,course and in enroll class that stores
+1146.2,4.41,the date and the grid awesome now the
+1148.96,4.11,next thing to consider is what we call
+1150.61,5.31,associations so I've listed all the
+1153.07,4.92,attributes specific to these classes but
+1155.92,4.29,these classes can associate with each
+1157.99,4.68,other in fact you know the address is
+1160.21,4.17,going to belong to a person right each
+1162.67,3.93,person needs to have an address a
+1164.38,4.17,student is going to be enrolled in a
+1166.6,3.72,course through this enroll class a
+1168.55,4.44,professor is going to be teaching a
+1170.32,5.25,course so how do we go about and do that
+1172.99,4.86,well this is where we use associations
+1175.57,5.91,now associations are different from
+1177.85,6.0,attributes they are a way of linking two
+1181.48,4.35,objects together and the next part of
+1183.85,4.44,what we're gonna do here is pretty much
+1185.83,5.04,determine how we want to associate all
+1188.29,4.59,of these objects and once we draw that
+1190.87,4.02,out and we have the association's don't
+1192.88,4.35,be focused on the implementation in code
+1194.89,4.35,just be focused on how these objects
+1197.23,2.68,interact with each other because if we
+1199.24,3.37,can understand
+1199.91,4.86,and that we can very easily implement
+1202.61,4.2,that into code later on using whatever
+1204.77,3.75,programming language we want and that's
+1206.81,4.14,why you'll notice you know I'm not using
+1208.52,3.87,STR like I've normally would in Python
+1210.95,3.54,I'm just writing things that are
+1212.39,4.2,descriptive enough that anybody in any
+1214.49,4.29,programming language could look at this
+1216.59,5.01,and translate this into some kind of
+1218.78,5.01,working implementation so let's keep
+1221.6,3.69,this on the side of our screen here I'll
+1223.79,3.63,make it a little bit smaller and I'm
+1225.29,3.63,gonna pop up actually one note and start
+1227.42,2.97,doing some drawing so let me grab my
+1228.92,3.45,drawing tab and I'll be right back
+1230.39,3.15,alright so I've shut off my camera here
+1232.37,3.36,just to give us the most amount of
+1233.54,3.9,screen real estate as possible and what
+1235.73,3.21,I'm gonna do is I'm gonna start I'm
+1237.44,2.79,gonna start by apologizing for my
+1238.94,4.17,drawing skills because they are very
+1240.23,4.8,poor but I'm actually going to draw what
+1243.11,3.93,we've just kind of done on the left hand
+1245.03,3.87,side of the screen here and put it into
+1247.04,3.6,a visual picture so we can actually see
+1248.9,4.62,what's going on so I want to draw all of
+1250.64,4.38,these classes and I'll tell you what all
+1253.52,3.42,of the things that I'm drawing mean and
+1255.02,3.87,then what we'll do is actually link them
+1256.94,3.6,up just using a lines so essentially I'm
+1258.89,3.18,gonna draw all these little boxes that
+1260.54,4.26,look like this you know I'm gonna write
+1262.07,4.8,here this is a person and then I'll put
+1264.8,3.72,in all of the associations for that
+1266.87,3.93,person then we'll have another class
+1268.52,4.59,over here and what a line like this
+1270.8,4.8,means is an association so essentially
+1273.11,4.83,this person interacts with this other
+1275.6,5.25,class and what we can do is put little
+1277.94,5.82,numbers and symbols on this Association
+1280.85,5.22,to tell us what this Association is is
+1283.76,5.31,this a one-to-one Association which
+1286.07,4.77,means one class links to one other class
+1289.07,3.57,or does this mean this one class could
+1290.84,3.75,look to many other classes is there a
+1292.64,4.38,limitation on the amount it can link to
+1294.59,4.92,well that's what we're gonna put here
+1297.02,4.23,and the idea is that you can write two
+1299.51,3.72,numbers so if you write one number what
+1301.25,5.01,this states is that is the amount of
+1303.23,5.64,associations so when I write one this is
+1306.26,4.83,saying that this person class one of it
+1308.87,4.29,can link to many which is what the
+1311.09,4.74,Asterix stands for of whatever this
+1313.16,6.36,class over here might be if I write
+1315.83,6.27,something like 1 dot dot - so say let's
+1319.52,5.13,replace this with 1 dot dot - what this
+1322.1,6.2,means is that we could have one or two
+1324.65,6.24,person classes if I write one dot dot
+1328.3,5.23,asterisks this says the minimum we can
+1330.89,5.13,have is 1 the maximum we can have is
+1333.53,4.23,infinite if I write just in asterisks
+1336.02,3.93,which is just my crappy star like this
+1337.76,4.86,this means we can have as many or as
+1339.95,4.95,little of whatever is on this side as we
+1342.62,3.66,want so I hope that makes sense it will
+1344.9,3.03,make more sense as we go through this
+1346.28,4.11,but I just wanted to give you a little
+1347.93,5.1,definition for we go too far all right
+1350.39,4.53,so let's delete that let's get back into
+1353.03,4.02,this so the first class and I'm actually
+1354.92,4.68,gonna draw is my person class now
+1357.05,4.56,remember my person class is gonna be a
+1359.6,3.72,base class so let me just up this pen
+1361.61,3.69,size a little bit to make a little bit
+1363.32,5.49,easier so let's draw a class like this
+1365.3,5.01,I'm gonna try very hard to keep this
+1368.81,3.24,neat enough that you can read but it is
+1370.31,3.27,hard to do with the drawing tablet so
+1372.05,4.02,we're gonna say that's person and what
+1373.58,4.23,does a person have on it first name last
+1376.07,3.39,name date of birth phone number now just
+1377.81,5.13,to keep this video shorter I'm gonna
+1379.46,4.86,avoid writing the actual type of what
+1382.94,3.06,these are so I'm not gonna write string
+1384.32,3.6,and all that I'm just gonna write the
+1386.0,5.7,actual name of the attribute so we'll
+1387.92,5.52,say here this is first name okay so what
+1391.7,3.51,I do a little - like this what I'm
+1393.44,4.14,saying is this is an attribute so I'm
+1395.21,3.99,essentially saying this is some piece of
+1397.58,4.2,information that is contained within
+1399.2,6.06,this class so I'm saying first name I'm
+1401.78,5.93,gonna say a last name like that what
+1405.26,7.26,else do we need date of birth okay
+1407.71,8.68,date of birth next we need a phone
+1412.52,5.04,number okay so let's go there all right
+1416.39,2.79,I don't think that's too bad thank you
+1417.56,3.3,guys can kind of read that so there we
+1419.18,2.67,go person first name last name date of
+1420.86,4.23,birth the phone number
+1421.85,5.91,okay now this a member is the base class
+1425.09,4.38,for my student and for my professor so
+1427.76,2.97,in order to illustrate that what I'm
+1429.47,3.18,gonna do is I'm gonna draw two more
+1430.73,3.78,classes underneath this and I'm gonna
+1432.65,3.78,show you kind of a fancy arrow that we
+1434.51,4.14,can use to illustrate that this is a
+1436.43,4.53,base class and this is a generalization
+1438.65,5.73,so I'm going to draw my two classes here
+1440.96,4.8,this is gonna be one for my student so
+1444.38,3.39,I'll say actually student will go on the
+1445.76,3.9,other side sorry actually maybe not
+1447.77,5.1,let's just leave student here student
+1449.66,4.89,and this will be professor like that
+1452.87,4.02,okay so we have our student and we have
+1454.55,4.11,our professor now let's write what we
+1456.89,4.41,need inside of here so for our professor
+1458.66,5.25,we just had the salary and for our
+1461.3,5.88,students we had what is it international
+1463.91,5.61,okay so international
+1467.18,4.2,and then we had two methods on our
+1469.52,3.84,student now usually you do a method
+1471.38,3.63,using a plus sign what this says
+1473.36,3.42,essentially is this is a public method
+1475.01,4.23,everyone else can see this there might
+1476.78,4.32,be more methods on the student or on the
+1479.24,3.33,professor in the future but if they are
+1481.1,3.6,not public we don't write them down
+1482.57,3.72,because we're just interested in what
+1484.7,2.94,you know all of these classes how
+1486.29,3.06,they're gonna interact together and what
+1487.64,7.2,they can see on each other so we have
+1489.35,8.19,student and we'll say is part time put
+1494.84,4.98,some brackets and we'll say on probation
+1497.54,3.54,I'm just gonna write probation just to
+1499.82,3.06,make it a little bit shorter will write
+1501.08,3.45,probation and we'll have two brackets
+1502.88,3.09,again if you can't read any of this look
+1504.53,4.11,on the side that's why I typed it out
+1505.97,4.86,now to illustrate that these are
+1508.64,4.53,actually going to be a generalization so
+1510.83,4.41,that this is the base class for those
+1513.17,4.56,two other classes what you do is you
+1515.24,5.12,simply do an arrow like this that is not
+1517.73,5.64,filled in and you just do a little line
+1520.36,4.63,to these two classes so what this says
+1523.37,4.29,essentially is that this student and
+1524.99,4.23,this professor are derived from this
+1527.66,4.89,person class so they are children class
+1529.22,5.28,of this base class person now what this
+1532.55,3.33,means is essentially that they have all
+1534.5,4.05,of these same attributes and
+1535.88,4.5,functionality as this person class so
+1538.55,4.38,any associations that are made between
+1540.38,5.28,person and some other class will apply
+1542.93,4.5,to both of these classes because they
+1545.66,3.99,are a generalization of this class
+1547.43,4.35,they're just a specific instance of a
+1549.65,3.69,person right I hope that makes sense so
+1551.78,3.45,let's say we had a teaching assistant
+1553.34,4.11,then all we would do is just go like
+1555.23,4.2,this and now all we have to add is
+1557.45,3.66,anything specific to the teaching
+1559.43,4.02,assistant if we want them to be a
+1561.11,4.17,derived classroom person so that is as
+1563.45,2.91,easy as that is and this is a very
+1565.28,3.23,common thing when you're designing
+1566.36,3.96,systems to have a base class that
+1568.51,3.58,represents kind of the core
+1570.32,3.93,functionality and then have specific
+1572.09,3.84,instances or specific classes underneath
+1574.25,3.39,that that have the additional
+1575.93,3.6,functionality you need so we have
+1577.64,4.71,persons student professor what do we
+1579.53,5.19,need next we need an address now who
+1582.35,4.74,hasn't addressed well a student and a
+1584.72,4.2,professor both have an address so what
+1587.09,5.31,I'm gonna do up here is I'm gonna draw
+1588.92,5.6,my address like this and just butcher
+1592.4,7.56,all of this once again okay so address
+1594.52,6.62,like that and let's go here and let's
+1599.96,6.82,write what we need for the address
+1601.14,10.14,we have a country okay we have a city we
+1606.78,5.94,have a state which I forgot and then I'm
+1611.28,2.64,just gonna put dot dot dot you get the
+1612.72,2.82,point we have a street address and a
+1613.92,2.79,postal code I don't think I need to go
+1615.54,2.79,through all of it I think you guys get
+1616.71,3.93,the point now what I'm gonna do is
+1618.33,4.38,actually draw our first Association so
+1620.64,4.53,what I just did down here is called a
+1622.71,4.38,generalization now that means that these
+1625.17,3.48,things are not associated they are
+1627.09,3.72,actually like the same thing right like
+1628.65,4.11,a student is a person and a professor is
+1630.81,4.32,a person so that is why they are called
+1632.76,5.67,a generalization when we do this kind of
+1635.13,6.39,arrow like that now what in association
+1638.43,6.21,is is a solid line between two classes
+1641.52,5.7,that says hey every time I make one of
+1644.64,4.83,these classes I can potentially have
+1647.22,4.91,this one linked up to it in some way and
+1649.47,4.89,now what I do is I define the
+1652.13,5.05,multiplicity is what it's called of my
+1654.36,4.32,association so essentially how many of
+1657.18,4.47,these things can be associated together
+1658.68,5.25,well it turns out that one person can
+1661.65,4.23,actually have multiple addresses right
+1663.93,3.78,that is very possible that they have
+1665.88,3.72,multiple addresses so what I'm gonna do
+1667.71,4.44,is I'm gonna say one person here because
+1669.6,4.89,an address can only belong to one person
+1672.15,4.68,will say one address is unique to one
+1674.49,3.84,person although in theory that's not
+1676.83,2.73,correct you could have brothers or
+1678.33,2.64,something that have the same address but
+1679.56,3.93,for our system we're going to assume
+1680.97,4.38,that this address object maybe there'll
+1683.49,3.78,be one that's exactly the same that's
+1685.35,3.81,totally fine but they will only belong
+1687.27,4.08,to one person they will not be attached
+1689.16,4.08,to two different people in other words
+1691.35,4.14,we won't have person one here in person
+1693.24,4.2,to here pointing to the same address
+1695.49,4.17,that won't ever happen they will be two
+1697.44,4.35,unique objects so we're gonna say one
+1699.66,3.63,and then here I'm actually going to say
+1701.79,3.96,asterisks and what I'm gonna do is say
+1703.29,5.01,one dot dot which essentially says that
+1705.75,4.92,one person must have at least one
+1708.3,5.1,address but they can have as many as
+1710.67,4.98,they want so the lower bound is one the
+1713.4,3.9,upper bound is infinite which means this
+1715.65,3.33,person could have infinite amount of
+1717.3,3.15,addresses we don't know where they're
+1718.98,3.78,gonna live or how many addresses they
+1720.45,3.9,have and they have to have at least one
+1722.76,3.69,or they have to at least tell us about
+1724.35,4.8,one for us to enter them into the system
+1726.45,4.68,so when you see something like this this
+1729.15,3.63,says that as soon as I make a person I
+1731.13,3.75,must create an address that is
+1732.78,4.17,associated with that person and
+1734.88,4.05,same thing over here on address this
+1736.95,3.63,says whenever I make an address I must
+1738.93,4.62,have a person that is associated with
+1740.58,5.64,that address as easy as it is that is
+1743.55,4.26,the first Association we need and in
+1746.22,3.27,fact we're actually getting close to
+1747.81,3.78,finish this program so we have our
+1749.49,4.44,person our student our professor and our
+1751.59,4.41,address the next thing we need is a
+1753.93,3.54,course now I'm running out of screen
+1756.0,3.75,real estate a bit so I'm gonna just do
+1757.47,3.72,the course over here which is kind of on
+1759.75,3.99,the edge of my drawing tablet so it's
+1761.19,4.62,hard to write accurately but will write
+1763.74,4.44,course and then what do we have for a
+1765.81,4.89,course well we actually had a bunch I'll
+1768.18,7.47,just write a few of this straightforward
+1770.7,6.99,ones here so we had name we had code we
+1775.65,6.09,had min so I'm just gonna short these
+1777.69,5.34,min max and then I'll just write we had
+1781.74,3.78,a start and end I'll just write the
+1783.03,3.66,method is canceled for now but again you
+1785.52,2.75,guys get the point that is the
+1786.69,5.16,information we would have had so is
+1788.27,6.66,cancelled with two brackets okay now
+1791.85,5.73,what do we need well guess what we have
+1794.93,4.06,professors that are teaching courses so
+1797.58,3.72,we need to have an association between
+1798.99,4.8,our professor and our course so that we
+1801.3,4.2,know that this professor is teaching
+1803.79,4.44,this course right so what I'm gonna do
+1805.5,5.55,is simply draw a line from professor to
+1808.23,5.91,course I'm gonna say course we'll put
+1811.05,5.52,one like that and then on professor how
+1814.14,4.5,many professors teach a course well it
+1816.57,4.38,said at least one professor teaches a
+1818.64,5.97,course but sometimes there may be many
+1820.95,5.82,so I'm gonna write one dot dot asterisks
+1824.61,5.07,like that which essentially says one
+1826.77,5.28,course is associated with one or many
+1829.68,4.2,professors and every time we make a
+1832.05,4.35,professor we must have it associated
+1833.88,4.05,with a course wait I don't know if that
+1836.4,3.68,sounds correct whenever we have a
+1837.93,4.14,professor it must be teaching a course
+1840.08,4.0,that's not necessarily true
+1842.07,4.38,we could have a professor that doesn't
+1844.08,4.2,teach a course that is a possibility of
+1846.45,4.68,our system so what I'm gonna do now is
+1848.28,5.79,on course go zero dot dot one which
+1851.13,5.07,essentially says we can have one
+1854.07,5.91,professor teaching this course but we
+1856.2,5.52,also might not have any professor sorry
+1859.98,3.36,all the way around a professor might
+1861.72,3.54,teach a course but they also might not
+1863.34,4.26,teach a course and in fact now that I'm
+1865.26,2.82,looking at it does only one course make
+1867.6,1.29,sense
+1868.08,3.15,because what this
+1868.89,5.04,then is a professor can only teach at
+1871.23,5.58,most one course no that's actually wrong
+1873.93,5.82,so what I need to do is change this over
+1876.81,4.98,here now to be a star because it could
+1879.75,3.78,have a professor could be teaching a
+1881.79,3.84,course it could be teaching many courses
+1883.53,4.5,it might not be teaching any at all so
+1885.63,4.56,let's erase this and let's change this
+1888.03,4.62,to a star now I know that just was like
+1890.19,3.78,a big you know run around in circles and
+1892.65,3.09,me doing everything except the right
+1893.97,3.21,answer but the point here is that that's
+1895.74,3.63,what you want to think about I'm
+1897.18,4.11,bringing you through these scenarios so
+1899.37,3.66,that you can understand how you approach
+1901.29,3.75,a problem like this and how you think
+1903.03,4.41,about those kind of edge cases when you
+1905.04,4.02,make your associations on here you want
+1907.44,4.05,to be very careful to design for
+1909.06,4.53,flexibility if you think the system in
+1911.49,4.59,the future might do what you're limiting
+1913.59,4.08,it to be able to do maybe don't limit it
+1916.08,4.02,to do that it's better to have a system
+1917.67,4.5,that is more flexible than to be super
+1920.1,3.81,robust and super defined to the
+1922.17,3.81,requirements because the requirements do
+1923.91,3.75,change and part of designing is
+1925.98,3.93,designing for scalability and
+1927.66,3.96,flexibility all right so the next class
+1929.91,4.23,we have is enroll and this actually
+1931.62,3.9,happens to be the last class but this is
+1934.14,3.48,actually one of the more complicated
+1935.52,3.93,ones and this is what I'm gonna call an
+1937.62,4.11,association class so I'm gonna draw it
+1939.45,5.66,over here and I'm gonna call this and
+1941.73,5.4,roll so let's say enroll like that and
+1945.11,4.18,inside of here we're gonna have a date
+1947.13,4.59,and what else are we gonna have we're
+1949.29,5.64,gonna have the grade the student
+1951.72,5.13,received from the course okay so this is
+1954.93,4.47,gonna be what we call an association
+1956.85,3.69,class now an association class is a
+1959.4,4.32,little bit different than a regular
+1960.54,6.06,class because what it does is link to
+1963.72,6.51,other classes together which means this
+1966.6,6.45,never exists on its own it always has an
+1970.23,4.59,association between a course and a
+1973.05,4.35,student and the whole point of it is to
+1974.82,4.08,link a course and a student together so
+1977.4,4.29,we draw it a little bit differently than
+1978.9,5.67,we draw most regular classes so what I'm
+1981.69,5.07,gonna do here is draw an association
+1984.57,3.18,between my student and my course it's
+1986.76,3.09,getting a little bit messy now I
+1987.75,3.84,apologize for that but we do have an
+1989.85,3.24,association now between the student and
+1991.59,3.36,the course and let's pick the
+1993.09,5.34,multiplicity and then I will talk about
+1994.95,6.69,how enroll actually operates here so the
+1998.43,4.379,multiplicity could be that a student can
+2001.64,3.119,be enroll enrolled in
+2002.809,4.62,multiple courses and a course can have
+2004.759,5.55,multiple students in it so what I'm
+2007.429,4.771,gonna say here is first of all on this
+2010.309,3.57,side we're gonna put many because a
+2012.2,3.479,course can have many students enrolled
+2013.879,3.601,in it it might have zero
+2015.679,4.32,I might have infinite right it might
+2017.48,5.939,have maximum then what we need to have
+2019.999,5.491,next is okay well how many courses can a
+2023.419,4.26,student be enrolled in well they can be
+2025.49,3.779,enrolled in zero so they could
+2027.679,2.97,technically be enrolled in zero courses
+2029.269,4.471,let me redraw that because I kind of
+2030.649,4.47,butchered it and a maximum is six so the
+2033.74,3.509,maximum amount of courses that can be
+2035.119,3.66,enrolled in is six so essentially what
+2037.249,4.321,I've said is that the lower bound is
+2038.779,5.1,zero the maximum is six which means that
+2041.57,4.229,can be in any range in between that and
+2043.879,4.081,based on the amount of courses they're
+2045.799,4.08,enrolled in well that is gonna tell us
+2047.96,4.02,if they are part-time or if they are
+2049.879,4.2,full-time right that is how we're gonna
+2051.98,3.75,drive that now this is where the
+2054.079,3.721,Association class comes in so what I'm
+2055.73,3.81,actually gonna do is draw a dotted line
+2057.8,3.74,and I'll redraw that again just to make
+2059.54,5.7,it more clear actually over here between
+2061.54,6.94,this Association and the in rural class
+2065.24,7.889,what this says is this Association is
+2068.48,6.119,really enroll hitting course and student
+2073.129,3.27,hitting enroll right so this is just
+2074.599,3.75,like this enroll class has an
+2076.399,4.831,association between course and students
+2078.349,5.461,and we use that to be able to determine
+2081.23,4.139,what courses a student is enrolled in
+2083.81,3.809,that that is the idea behind this
+2085.369,4.621,intermediate class it stores an
+2087.619,4.26,association with course it stores an
+2089.99,3.96,association with student and then it
+2091.879,4.921,also stores some attributes on it that
+2093.95,4.71,are very useful for example date this
+2096.8,3.75,tells us that whenever we create an
+2098.66,4.83,association between student and course
+2100.55,5.549,we must pick a date that this happened
+2103.49,5.099,at so we know when the student enrolled
+2106.099,4.351,in this course right that makes a lot of
+2108.589,3.601,sense and you can now determine say if a
+2110.45,3.54,student was late to enroll in the course
+2112.19,3.78,because on course if you look over here
+2113.99,3.81,we have the start and the end date
+2115.97,3.69,left-hand side of my screen and we can
+2117.8,4.5,compare the date that they enrolled in
+2119.66,5.37,to the start and the end then we have
+2122.3,5.1,great well that tells us what grade they
+2125.03,3.99,got in this enrolled course and since
+2127.4,4.439,there's an association between course
+2129.02,4.62,and enroll and student and enroll what
+2131.839,4.801,we can actually have is we can have the
+2133.64,4.59,professor update the grade of a student
+2136.64,2.76,so think about how this works right if I
+2138.23,3.809,need to update the grade of a student
+2139.4,5.189,well the professor has an association to
+2142.039,4.83,course the course has an association to
+2144.589,5.01,enroll and enroll has an association to
+2146.869,4.44,all of the students right so in this way
+2149.599,3.841,what I can do is I can have the
+2151.309,3.931,professor look at the course look at all
+2153.44,3.839,of the students enrolled and then go
+2155.24,4.589,into this enroll class and modify the
+2157.279,4.231,grade this way the professor does not
+2159.829,3.601,actually get to look at any of the
+2161.51,4.74,personal information of the student to
+2163.43,5.07,upgrade it it's great all it has to do
+2166.25,4.319,is look at this enroll Association class
+2168.5,3.99,and say hey all I need to do here is
+2170.569,4.02,change the grade and then that will
+2172.49,3.839,automatically update for the course and
+2174.589,3.871,for the student and what's great about
+2176.329,3.99,this is well since every single student
+2178.46,3.69,is associated to the course with an
+2180.319,3.78,enroll class if I want it to do
+2182.15,4.949,something like get the average grade of
+2184.099,5.19,the course all I would do is look at all
+2187.099,4.47,the associations between student and one
+2189.289,4.5,specific course look at that enroll
+2191.569,4.381,class and then grab all of those grades
+2193.789,3.99,so this is the kind of system that I
+2195.95,4.02,designed and that we were trying to
+2197.779,4.471,design from the beginning something that
+2199.97,3.72,is flexible and that can do a bunch of
+2202.25,3.869,operations that may not have been
+2203.69,5.429,defined yet but that we probably want to
+2206.119,6.42,do in the future so that is pretty much
+2209.119,5.371,it for this design I need to erase this
+2212.539,4.08,one line here I don't think that was
+2214.49,4.17,supposed to be there but this is our
+2216.619,4.23,finalized design and I apologize that is
+2218.66,4.02,super messy but the point of this video
+2220.849,3.781,is not to be like you know the most
+2222.68,4.71,perfect the most robust it's to teach
+2224.63,4.83,you the process of looking at a software
+2227.39,5.25,system and designing it from the ground
+2229.46,5.73,up starting from scratch extracting the
+2232.64,4.949,necessary information translating that
+2235.19,5.669,information and then drawing a somewhat
+2237.589,4.621,you know kind of plan drawing a design
+2240.859,3.331,that we can actually go ahead now and
+2242.21,4.349,implement because if you think about it
+2244.19,5.01,now all you have to do if you want to
+2246.559,4.591,make this system is look at this and
+2249.2,3.72,start implementing what I've defined and
+2251.15,3.689,if you actually look at this as not very
+2252.92,4.32,complicated right we've broken
+2254.839,3.811,everything down into classes which you
+2257.24,3.029,can write we've broken it down into
+2258.65,3.6,methods and we've broken it down into
+2260.269,3.6,attributes so you don't even really have
+2262.25,3.539,to think now when you go about
+2263.869,4.021,programming this you just have to look
+2265.789,2.97,at this design and follow it and if
+2267.89,1.79,there's something that needs to be
+2268.759,3.081,changed
+2269.68,3.9,make that change accordingly right if we
+2271.84,3.15,want to implement person all I do is
+2273.58,2.94,make a class called person add a
+2274.99,4.02,constructor that has these four
+2276.52,3.09,arguments and there we go I've made
+2279.01,2.07,person
+2279.61,3.51,all right I want student and professor
+2281.08,4.2,let's have them extend the person class
+2283.12,4.59,let's go okay add an international
+2285.28,5.22,attribute add these two methods is
+2287.71,5.21,part-time is on probation professor
+2290.5,4.62,let's add a salary there we go Oh
+2292.92,4.06,associations okay great let's handle
+2295.12,4.32,these associations let's make a private
+2296.98,5.04,field in each of these that stores the
+2299.44,4.98,association between address or something
+2302.02,4.71,like that right and that is as easy as
+2304.42,4.02,it is to do now the last thing I will
+2306.73,3.36,say here just because some people might
+2308.44,3.72,be confused on how these associations
+2310.09,4.41,are implemented when you have a
+2312.16,4.29,one-to-one Association you can think of
+2314.5,3.93,that just like another attribute so let
+2316.45,4.17,me actually I don't want to erase all of
+2318.43,5.67,this but let me just do something like
+2320.62,6.0,up here in this little area essentially
+2324.1,4.74,let's say person has a one-to-one
+2326.62,4.68,association with address so imagine that
+2328.84,5.91,this is actually one what that means is
+2331.3,5.25,on the person class we have another
+2334.75,3.57,attribute called address I don't need to
+2336.55,3.96,write it because the association's infer
+2338.32,4.05,that and what this is really equal to is
+2340.51,4.77,an address object right it's equal to
+2342.37,4.41,some instance of address and then that
+2345.28,3.45,way if we want to access the address of
+2346.78,4.11,a person I just call person dot address
+2348.73,5.01,now this is the exact same thing on
+2350.89,5.91,address so let me erase this if this is
+2353.74,7.17,one-to-one then on side of address right
+2356.8,6.75,this has an attribute that says person
+2360.91,5.67,so this just says person right and then
+2363.55,5.28,it points to a person object and there
+2366.58,4.02,you go that way the address if it wanted
+2368.83,3.63,to see the person it could the person
+2370.6,3.87,wants to see the address they can write
+2372.46,4.11,that is how a one-to-one Association
+2374.47,3.78,happens now sometimes you might not
+2376.57,3.69,store it on the address side it really
+2378.25,4.2,depends but now let's say we have this
+2380.26,3.96,one-to-many right then what we would do
+2382.45,4.29,is on here we'd have another attribute
+2384.22,4.23,it would be called addresses like that
+2386.74,3.99,and it would just be equal to a list
+2388.45,5.22,that stored all of the addresses inside
+2390.73,4.2,of it that's as easy as it is and that
+2393.67,3.09,is what I'm talking about when I say
+2394.93,3.81,Association it's just a link between
+2396.76,4.38,these two objects you implement that
+2398.74,3.849,link however you want but usually it's
+2401.14,3.31,done just with another attribute
+2402.589,4.23,or with something in the actual class
+2404.45,4.919,itself and that is how you can link
+2406.819,5.341,these different things together so with
+2409.369,5.311,that being said that has been this video
+2412.16,4.109,I know this is not you know the most I
+2414.68,3.539,don't want to say educational but this
+2416.269,3.54,is really just the way of teaching you
+2418.219,3.63,about how to think about this it's just
+2419.809,4.381,the way of training your brain to look
+2421.849,3.93,at information break it down and throw
+2424.19,3.359,it into some kind of design that you can
+2425.779,3.21,then go ahead and implement so like I
+2427.549,3.091,said at the beginning if you want to see
+2428.989,4.35,the code for this leave a like subscribe
+2430.64,4.439,to the channel comment spam me let me
+2433.339,3.69,know and I will try my best to make a
+2435.079,3.42,video where we implement this exact
+2437.029,2.611,design so that being said I hope you
+2438.499,2.881,enjoyed if you did leave it like
+2439.64,4.609,subscribe and I will see you in the next
+2441.38,2.869,YouTube video

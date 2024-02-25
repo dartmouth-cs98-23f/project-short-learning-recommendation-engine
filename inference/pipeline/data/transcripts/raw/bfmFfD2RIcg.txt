@@ -1,0 +1,151 @@
+second,duration,transcript
+0.24,4.559,last summer my family and i visited
+2.48,4.399,russia even though none of us could read
+4.799,4.161,russian we did not have any trouble in
+6.879,4.001,figuring our way out all thanks to
+8.96,4.0,google's real-time translation of
+10.88,3.6,russian boards into english
+12.96,3.76,this is just one of the several
+14.48,4.24,applications of neural networks
+16.72,4.16,neural networks form the base of deep
+18.72,4.319,learning a subfield of machine learning
+20.88,4.399,where the algorithms are inspired by the
+23.039,4.721,structure of the human brain neural
+25.279,4.961,networks take in data train themselves
+27.76,4.639,to recognize the patterns in this data
+30.24,3.999,and then predict the outputs for a new
+32.399,4.32,set of similar data
+34.239,4.48,let's understand how this is done
+36.719,4.481,let's construct a neural network that
+38.719,3.761,differentiates between a square circle
+41.2,3.28,and triangle
+42.48,4.72,neural networks are made up of layers of
+44.48,5.2,neurons these neurons are the core
+47.2,4.48,processing units of the network
+49.68,4.48,first we have the input layer which
+51.68,4.64,receives the input the output layer
+54.16,4.399,predicts our final output
+56.32,4.64,in between exists the hidden layers
+58.559,5.121,which perform most of the computations
+60.96,4.0,required by our network here's an image
+63.68,4.08,of a circle
+64.96,6.72,this image is composed of 28 by 28
+67.76,6.719,pixels which make up for 784 pixels
+71.68,4.88,each pixel is fed as input to each
+74.479,4.081,neuron of the first layer
+76.56,3.84,neurons of one layer are connected to
+78.56,2.96,neurons of the next layer through
+80.4,2.96,channels
+81.52,4.639,each of these channels is assigned a
+83.36,4.48,numerical value known as weight the
+86.159,4.0,inputs are multiplied to the
+87.84,4.8,corresponding weights and their sum is
+90.159,3.761,sent as input to the neurons in the
+92.64,3.6,hidden layer
+93.92,5.28,each of these neurons is associated with
+96.24,5.28,a numerical value called the bias which
+99.2,4.16,is then added to the input sum
+101.52,4.48,this value is then passed through a
+103.36,3.68,threshold function called the activation
+106.0,3.2,function
+107.04,4.64,the result of the activation function
+109.2,5.84,determines if the particular neuron will
+111.68,5.6,get activated or not an activated neuron
+115.04,4.719,transmits data to the neurons of the
+117.28,4.879,next layer over the channels
+119.759,3.761,in this manner the data is propagated
+122.159,4.32,through the network
+123.52,5.04,this is called forward propagation
+126.479,4.4,in the output layer the neuron with the
+128.56,4.72,highest value fires and determines the
+130.879,5.601,output the values are basically a
+133.28,5.52,probability for example here our neuron
+136.48,3.68,associated with square has the highest
+138.8,3.92,probability
+140.16,3.92,hence that's the output predicted by the
+142.72,3.92,neural network
+144.08,4.239,of course just by a look at it we know
+146.64,4.319,our neural network has made a wrong
+148.319,4.241,prediction but how does the network
+150.959,3.521,figure this out
+152.56,2.959,note that our network is yet to be
+154.48,3.44,trained
+155.519,4.8,during this training process along with
+157.92,5.28,the input our network also has the
+160.319,5.041,output fed to it the predicted output is
+163.2,4.48,compared against the actual output to
+165.36,4.239,realize the error in prediction the
+167.68,4.08,magnitude of the error indicates how
+169.599,4.64,wrong we are and the sign suggests if
+171.76,3.92,our predicted values are higher or lower
+174.239,3.521,than expected
+175.68,4.559,the arrows here give an indication of
+177.76,4.08,the direction and magnitude of change to
+180.239,3.92,reduce the error
+181.84,4.24,this information is then transferred
+184.159,4.481,backward through our network
+186.08,5.439,this is known as back propagation
+188.64,4.8,now based on this information the
+191.519,4.0,weights are adjusted
+193.44,4.079,this cycle of forward propagation and
+195.519,4.8,back propagation is iteratively
+197.519,5.041,performed with multiple inputs
+200.319,4.321,this process continues until our weights
+202.56,4.319,are assigned such that the network can
+204.64,3.44,predict the shapes correctly in most of
+206.879,3.36,the cases
+208.08,3.04,this brings our training process to an
+210.239,2.801,end
+211.12,4.8,you might wonder how long this training
+213.04,5.839,process takes honestly neural networks
+215.92,5.52,may take hours or even months to train
+218.879,4.401,but time is a reasonable trade-off when
+221.44,3.2,compared to its scope
+223.28,4.239,let us look at some of the prime
+224.64,5.44,applications of neural networks facial
+227.519,4.961,recognition cameras on smartphones these
+230.08,4.719,days can estimate the age of the person
+232.48,4.399,based on their facial features this is
+234.799,3.681,neural networks at play first
+236.879,3.36,differentiating the face from the
+238.48,4.0,background and then correlating the
+240.239,5.36,lines and spots on your face to a
+242.48,4.959,possible age forecasting neural networks
+245.599,4.0,are trained to understand the patterns
+247.439,4.8,and detect the possibility of rainfall
+249.599,5.681,or rise in stock prices with high
+252.239,4.96,accuracy music composition neural
+255.28,4.88,networks can even learn patterns in
+257.199,5.601,music and train itself enough to compose
+260.16,4.8,a fresh tune so here's a question for
+262.8,5.28,you which of the following statements
+264.96,6.0,does not hold true a activation
+268.08,5.2,functions are threshold functions b
+270.96,5.44,error is calculated at each layer of the
+273.28,4.96,neural network c both forward and back
+276.4,4.96,propagation take place during the
+278.24,5.2,training process of a neural network d
+281.36,4.24,most of the data processing is carried
+283.44,4.16,out in the hidden layers leave your
+285.6,3.84,answers in the comments section below
+287.6,5.2,three of you stand a chance to win
+289.44,5.44,amazon vouchers so don't miss it with
+292.8,4.8,deep learning and neural networks we are
+294.88,4.64,still taking baby steps the growth in
+297.6,4.72,this field has been foreseen by the big
+299.52,5.52,names companies such as google amazon
+302.32,5.04,and nvidia have invested in developing
+305.04,5.52,products such as libraries predictive
+307.36,5.36,models and intuitive gpus that support
+310.56,4.479,the implementation of neural networks
+312.72,4.8,the question dividing the visionaries is
+315.039,5.121,on the reach of neural networks to what
+317.52,4.239,extent can we replicate the human brain
+320.16,3.84,we'd have to wait a few more years to
+321.759,4.081,give a definite answer but if you
+324.0,4.639,enjoyed this video it would only take a
+325.84,4.799,few seconds to like and share it also if
+328.639,4.641,you haven't yet do subscribe to our
+330.639,5.521,channel and hit the bell icon as we have
+333.28,6.56,a lot more exciting videos coming up fun
+336.16,3.68,learning till then

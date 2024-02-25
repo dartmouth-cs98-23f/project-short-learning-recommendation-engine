@@ -1,0 +1,70 @@
+{
+  "introduction": "This video provides an overview of the Zig programming language, created by Andrew Kelly in 2016. Zig is a high-performance system programming language that is often labeled as the next generation alternative to C. It is minimal, extremely fast, and allows for low-level memory control. Zig has no hidden memory allocations, making the code far more explicit and portable. It also has no hidden control flow, no operator overloading, and doesn't even have exceptions. Zig has a unique comp time keyword that makes it trivial to run code at compile time instead of runtime. It integrates well into a C or C++ code base and supports cross compilation out of the box with LLVM. This video covers the basics of Zig programming and its unique features.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Zig",
+      "content": [
+        "Overview of Zig and its creator Andrew Kelly.",
+        "Comparison with C and other programming languages.",
+        "Unique features of Zig, such as comp time and explicit error handling.",
+        "Zig's minimalistic approach to programming."
+      ],
+      "topics": ["Zig Overview", "Comparison with C", "Unique Features", "Minimalistic Approach"]
+    },
+    {
+      "title": "Section 2: Memory Management in Zig",
+      "content": [
+        "Explanation of Zig's memory management system, including allocators and deallocators.",
+        "Swapping out allocators for different architectures.",
+        "Automatic memory management with the defer keyword.",
+        "Explicit error handling with the try keyword."
+      ],
+      "topics": ["Memory Management", "Allocators and Deallocators", "Swappable Allocators", "Explicit Error Handling"]
+    },
+    {
+      "title": "Section 3: Data Structures and Algorithms in Zig",
+      "content": [
+        "Overview of data structures and algorithms in Zig.",
+        "Examples of using data structures and algorithms in Zig programs.",
+        "Comparison with other programming languages for data structures and algorithms.",
+        "Best practices for using data structures and algorithms in Zig."
+      ],
+      "topics": ["Data Structures and Algorithms", "Examples in Zig Programs", "Comparison with Other Languages", "Best Practices"]
+    },
+    {
+      "title": "Section 4: Integration with C and C++",
+      "content": [
+        "Explanation of how Zig integrates with C and C++ code bases.",
+        "Cross-compilation support with LLVM.",
+        "Example of integrating Zig with C++.",
+        "Advantages of integrating Zig with C and C++."
+      ],
+      "topics": ["Integration with C and C++", "Cross-Compilation with LLVM", "Example Integration", "Advantages"]
+    },
+    {
+      "title": "Section 5: Advanced Topics in Zig",
+      "content": [
+        "Advanced features of Zig, such as macros and preprocessors.",
+        "Zig's built-in testing framework.",
+        "Zig's comp time keyword and its use cases.",
+        "Zig's future developments and community."
+      ],
+      "topics": ["Advanced Features", "Built-in Testing Framework", "Comp Time Keyword", "Future Developments and Community"]
+    }
+  ],
+  "topics": ["Zig Overview", "Memory Management", "Data Structures and Algorithms", "Integration with C and C++", "Advanced Features"],
+  "general topics": [
+    {
+      "name": "Programming Languages and Software Development",
+      "complexity": 0.50
+    },
+    {
+      "name": "Data Science and Analytics",
+      "complexity": 0.40
+    },
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.30
+    }
+  ]
+}

@@ -1,0 +1,1309 @@
+second,duration,transcript
+10.559,4.681,all right thanks for being here nice to
+12.78,4.74,be midway through Midway
+15.24,4.08,I'll be talking about pragmatic
+17.52,4.56,algorithm game algorithmic game theory
+19.32,4.56,which is a talk I gave at the acmec
+22.08,5.459,conference I adapted a little bit for
+23.88,5.52,you guys but uh just a bit so so let me
+27.539,3.421,start by saying what what algorithmic
+29.4,2.94,game theory means particularly to that
+30.96,4.619,Community
+32.34,5.52,um so there was this famous book uh this
+35.579,5.16,edited book called algorithmic game
+37.86,5.46,theory that ended up uh being sort of an
+40.739,6.121,early Point around which this field
+43.32,5.34,gelled and it described itself as being
+46.86,3.179,research it described this topic of
+48.66,3.12,algorithmic Game Theory as being about
+50.039,3.661,research at the interface of computer
+51.78,4.98,science game theory and economic theory
+53.7,4.62,largely motivated by the internet so if
+56.76,3.54,you look at the kind of work that that
+58.32,3.059,was proposed not just in that book but
+60.3,3.899,in work that has called itself
+61.379,4.381,algorithmic gain Theory afterwards
+64.199,3.001,um it seems that this community is
+65.76,3.96,particularly interested in the design of
+67.2,6.06,new mechanisms particularly but not only
+69.72,5.7,auctions and Market mechanisms trying to
+73.26,3.719,analyze existing mechanisms and figure
+75.42,3.18,out something about what they do
+76.979,3.721,particularly prominent example is
+78.6,4.8,sponsored search where the mechanism
+80.7,4.38,kind of predates a formalized design
+83.4,4.14,approach but then there's a question
+85.08,4.74,about what what happens in it and
+87.54,4.74,equilibrium computation which of course
+89.82,5.28,is a kind of of both a very fundamental
+92.28,4.32,computational problem and a kind of
+95.1,3.36,Bedrock tool that you would want to use
+96.6,4.5,in a lot of this kind of analysis
+98.46,5.159,so typically this community has gone for
+101.1,6.12,very general settings and attacked them
+103.619,5.281,theoretically as indeed we're all kind
+107.22,3.719,of familiar both in economics and
+108.9,4.679,computer science
+110.939,4.68,um and uh I think they've added a lot
+113.579,3.421,over the traditional economic kinds of
+115.619,4.32,analysis
+117.0,5.579,um yielding um both impossibility and
+119.939,4.741,optimality results which maybe aren't
+122.579,4.14,that uh different from what economists
+124.68,3.38,would expect to see the same kinds of
+126.719,4.38,things economists have proven for years
+128.06,5.44,but added to that kind of
+131.099,5.941,um repertoire also that the perspective
+133.5,5.04,of approximation and uh I I think really
+137.04,2.58,kind of move the ball down the field a
+138.54,2.94,bit from the perspective of
+139.62,3.6,approximation showing you know for
+141.48,3.78,example that they can achieve something
+143.22,4.08,close to Optimal Revenue with a simple
+145.26,4.8,mechanism or something like that
+147.3,4.14,and so so broadly speaking this is what
+150.06,3.06,I mean when I say algorithm and Game
+151.44,4.68,Theory this kind of field
+153.12,5.28,um mostly within CS but but very much in
+156.12,3.06,communication with economics
+158.4,2.16,um
+159.18,3.36,unfortunately I think this field
+160.56,4.259,struggles uh of course as any
+162.54,4.14,theoretical discipline does
+164.819,3.841,um with obtaining
+166.68,4.38,um the same kinds of clean theoretical
+168.66,4.92,results that address a complex and
+171.06,3.959,realistic problems so there tends to be
+173.58,3.36,this sort of boundary of analytic
+175.019,5.94,tractability Beyond which it's it's hard
+176.94,5.579,to go and this approximation framework
+180.959,3.06,makes it possible maybe to go further
+182.519,3.421,than one might expect but but
+184.019,3.72,nevertheless there there sometimes is
+185.94,4.5,this experience of hitting a wall and
+187.739,4.381,going to uh to something more pregnant
+190.44,4.32,more practical
+192.12,4.74,so the perspective that I'm going to
+194.76,3.899,Advocate today is what I'm calling a
+196.86,5.879,pragmatic approach to algorithmic Game
+198.659,5.281,Theory and what I want to argue uh you
+202.739,3.301,know what I did argue to that Community
+203.94,3.719,what I'm what I want to argue to those
+206.04,3.96,of you here who see yourself as part of
+207.659,4.981,that Community is that it's possible to
+210.0,4.08,get more traction on realistic problems
+212.64,3.84,that one should be interested in by
+214.08,5.04,leveraging 100 or both of two kinds of
+216.48,4.56,pragmatism and the first is to care
+219.12,3.899,about getting good performance only on
+221.04,4.08,problems of interest rather than in
+223.019,5.64,relatively unconstrained settings so to
+225.12,5.64,try to drill into much narrower and but
+228.659,3.061,nevertheless useful categories of
+230.76,3.08,problems
+231.72,4.86,and the second is to
+233.84,6.16,achieve success in statistical rather
+236.58,5.64,than analytical terms and so so this
+240.0,4.86,means to to adopt a kind of data-driven
+242.22,4.2,approach in one's work where the
+244.86,4.32,problems of Interest might be defined
+246.42,4.62,implicitly by a data set that that gives
+249.18,4.08,examples of the kinds of problems one
+251.04,4.14,cares about and or there may be
+253.26,3.479,data-driven measures of performance so
+255.18,3.059,we might be scored on some kind of
+256.739,3.921,average measure of performance over a
+258.239,4.261,data set rather than simply
+260.66,4.599,approving a theorem that says something
+262.5,4.44,about how close to optimality we've come
+265.259,3.361,um so all of this you can sort of see as
+266.94,3.42,a sort of machine learning perspective
+268.62,3.84,about how to do
+270.36,4.8,um work at the boundary of economics and
+272.46,4.08,community and computer science
+275.16,2.88,so
+276.54,4.2,um in this talk I'm going to talk about
+278.04,4.98,work that I've done with collaborators
+280.74,4.98,that attacks problems that are kind of
+283.02,4.619,core algorithmic Game Theory problems
+285.72,3.12,um in the sense that they're the same
+287.639,3.241,problems that the algorithmic game
+288.84,3.84,theory Community has been itself
+290.88,3.599,interested in a more theoretical vein
+292.68,4.38,but but that's pragmatic in both of
+294.479,5.461,these ways and before launching in let
+297.06,3.96,me just say the obvious that I I
+299.94,2.699,certainly don't mean to give the
+301.02,3.239,impression that I've invented the notion
+302.639,5.041,of being pragmatic about algorithmic
+304.259,5.641,Game Theory there are many others uh in
+307.68,4.799,in this computer science economics
+309.9,4.079,Community who do the same and indeed I
+312.479,3.241,think one reason that I'm really happy
+313.979,3.78,to be at this Workshop is I think that
+315.72,3.479,most of you here seem to have this kind
+317.759,3.961,of sensibility about the work that you
+319.199,4.921,do so I hope that makes you a receptive
+321.72,3.96,audience and probably the only way I
+324.12,2.7,could really piss you off and lose you
+325.68,2.459,would be if I gave you the impression
+326.82,2.819,that I was the only one doing this so
+328.139,3.661,let me let me reassure you that that's
+329.639,3.84,not what I think
+331.8,4.2,um so so in particular I'm going to talk
+333.479,4.021,about three different lines of work uh
+336.0,3.12,you can see them up at the Top If you
+337.5,4.22,have good eyes
+339.12,5.4,um the the first one I'll talk about is
+341.72,5.259,repurposing uh radio spectrum via what's
+344.52,4.56,called an incentive auction uh which is
+346.979,5.101,something the FCC is in the progress of
+349.08,4.26,doing as they do these kind of slides
+352.08,3.839,along the way I'm just going to kind of
+353.34,5.46,call out my collaborators so my PhD
+355.919,4.861,student Alexandra frechette is my main
+358.8,4.339,collaborator here and Frank Hunter
+360.78,5.22,holder who's lingshu and Steve ramage
+363.139,4.961,contributed in to some of the tools that
+366.0,4.56,I used in this work
+368.1,3.96,so you guys have probably heard about
+370.56,3.9,the incentive auction but let me just
+372.06,4.32,say just a little bit about it so the
+374.46,3.12,FCC had this great idea of having an
+376.38,4.319,auction that had something to do with
+377.58,4.619,incentives well no that's not quite it
+380.699,2.28,um but but the FCC
+382.199,2.94,um
+382.979,5.16,yeah what a great name right I don't
+385.139,5.4,know but uh but but anyway that's what
+388.139,5.28,they call it so what can I do about that
+390.539,5.22,um the FC the FCC wants to basically
+393.419,4.56,sell off radio spectrum to uh mobile
+395.759,3.901,phone companies as they do
+397.979,3.301,um the problem that they face is that
+399.66,3.42,they've kind of already sold all of it
+401.28,4.44,there just isn't really good radio
+403.08,4.98,spectrum to sell anymore and people
+405.72,3.9,still want to watch cat videos on their
+408.06,4.259,phones while they're on the subway so so
+409.62,3.9,we've got a problem and the solution to
+412.319,3.421,this problem
+413.52,4.38,um is to take radio spectrum that's
+415.74,5.28,being used for something else and
+417.9,4.68,repurpose it for use uh in uh in Mobile
+421.02,3.78,phones because that's the use that
+422.58,4.5,people now care about and in particular
+424.8,4.14,it turns out that television you know
+427.08,4.38,back in the day when when broadcast
+428.94,4.74,television started up it got given
+431.46,4.98,really awesome radio spectrum because
+433.68,5.4,that it was kind of the the big game in
+436.44,4.199,town and now broadcast television is not
+439.08,3.72,that important to people people are much
+440.639,5.701,more interested in in getting Television
+442.8,6.299,over cable or satellite or you know even
+446.34,4.44,over the Internet so so it seems like
+449.099,3.72,maybe there's there's some economic
+450.78,4.199,efficiency gains to be had here by by
+452.819,4.621,taking back some of that spectrum and
+454.979,3.541,and selling it off to uh to mobile phone
+457.44,3.96,companies where it can be used more
+458.52,5.519,productively of course the catch here is
+461.4,4.919,it's not I'm not a lawyer I'm I don't
+464.039,3.6,fully understand the legal side of these
+466.319,3.72,things about whether this is necessary
+467.639,4.321,or just a good idea but it's at the very
+470.039,4.5,least a good idea not to just confiscate
+471.96,5.4,this spectrum from the the television
+474.539,4.681,stations and and give it back to to the
+477.36,4.32,mobile phone companies in order to make
+479.22,4.62,this all go down in a sensible way uh it
+481.68,5.1,turns out that what one needs to do is
+483.84,5.28,to buy the the radio spectrum back from
+486.78,3.9,the television stations uh in order to
+489.12,3.6,be able to then sell it off to the
+490.68,3.72,mobile phone companies so this gives
+492.72,3.06,rise to the question of how you would go
+494.4,2.639,about doing that how are you going to
+495.78,3.96,buy back
+497.039,3.66,um the the right to broadcast from a
+499.74,3.66,whole bunch of different television
+500.699,4.62,stations all of which operate you know
+503.4,3.479,at particular powers on particular
+505.319,4.081,Channel bills in particular from
+506.879,4.561,particular antennas in given regions of
+509.4,4.319,the country in this crazy Patchwork all
+511.44,4.2,over the United States and you know one
+513.719,4.081,by one get different ones of them to
+515.64,4.259,sell back their their right to broadcast
+517.8,4.02,and somehow assemble this into something
+519.899,4.38,that that a mobile phone company would
+521.82,4.019,be interested in buying so so that's the
+524.279,3.721,the kind of underlying optimization
+525.839,3.661,problem that that is going to form the
+528.0,3.0,allocation problem for for this
+529.5,3.0,incentive option
+531.0,3.6,so
+532.5,3.839,um so I can tell you this this auction
+534.6,4.679,is now approved and ready to go you can
+536.339,4.981,see this is the report and order that
+539.279,4.5,the Federal Communications Commission
+541.32,3.6,um just put out uh announcing that this
+543.779,2.481,was going to happen and giving some
+544.92,4.08,details about how it's going to happen
+546.26,4.24,uh you can see it was just a little over
+549.0,4.26,a month ago that this happened so this
+550.5,4.86,is a really current thing uh the the
+553.26,3.84,reported order makes really entertaining
+555.36,4.8,reading I recommend that you sit down
+557.1,6.78,with it it's uh 488 pages long and it's
+560.16,5.28,written almost entirely by lawyers so
+563.88,3.24,um so I think it's great I mean you know
+565.44,3.839,you here at a business school presumably
+567.12,5.1,do this kind of thing all the time so
+569.279,5.341,you know that should be fun for you
+572.22,3.84,um but uh you know in case you're not
+574.62,3.899,going to read it let me just tell you a
+576.06,3.959,little bit about what it would say uh
+578.519,3.901,yeah I can sort of put in one slide with
+580.019,4.38,the 488 Pages safe from your point of
+582.42,4.8,view as economists
+584.399,4.56,um essentially there are going to be two
+587.22,4.92,different auctions that will happen in a
+588.959,4.621,linked way so there'll be a reverse
+592.14,3.06,um or descending price auction for
+593.58,3.96,broadcasters and in the reverse auction
+595.2,5.22,essentially what's going to happen is
+597.54,5.58,stations will be offered some very high
+600.42,5.039,reserve price to stop being television
+603.12,5.82,stations and instead to be people with
+605.459,5.281,bags of money and they'll they'll say
+608.94,4.14,yes I would take your large bag of money
+610.74,6.12,in exchange for not being a television
+613.08,5.58,station anymore and the FCC will look at
+616.86,4.08,all of these offers to stop broadcasting
+618.66,4.02,and and determine that it would be
+620.94,3.899,possible to get rid of a whole bunch of
+622.68,4.32,spectrum if that were true it would be
+624.839,4.68,possible to take all of the TV stations
+627.0,4.14,that go up to channel 52 and change that
+629.519,3.781,to TV stations that only go up to
+631.14,3.54,channel 30 and then they could take that
+633.3,3.84,radio spectrum that was used for
+634.68,4.74,channels 31 up to 52
+637.14,3.3,except for channel 37 if you're one of
+639.42,2.28,the people who understands how these
+640.44,2.459,things work
+641.7,3.3,um turns out there's something special
+642.899,4.081,going on there radio telescopes need to
+645.0,4.26,operate on channel 37.
+646.98,3.72,um and uh and you take that big block
+649.26,3.0,and then you can sell that off to the
+650.7,3.66,cell phone companies because what cell
+652.26,3.78,phones need is a big contiguous block of
+654.36,3.419,spectrum they they can't operate on
+656.04,4.739,little corners of spectrum in different
+657.779,4.62,geographical regions so so then you do
+660.779,2.881,that but then you've probably gotten too
+662.399,3.18,many people who are willing to accept
+663.66,3.299,big amounts of money so then you start
+665.579,3.301,lowering the amount of money that you're
+666.959,3.06,offering everybody and as the this
+668.88,3.44,amount of money that you're offering
+670.019,5.161,goes down at some point high value
+672.32,4.84,participants might say I'm not so happy
+675.18,3.54,anymore to accept your reduced amount of
+677.16,3.119,money I would rather go back to being a
+678.72,4.02,television station and they they would
+680.279,3.961,go back on the air you'd you'd confirm
+682.74,2.76,that it's still possible to put them
+684.24,3.48,somewhere
+685.5,4.74,and uh and you kind of keep doing this
+687.72,4.859,until everybody uh you know either is is
+690.24,3.9,being paid nothing or is indispensable
+692.579,4.5,to you and can't be put back on the air
+694.14,4.74,I'll show you that uh schematically in a
+697.079,2.82,minute you know why why do you have to
+698.88,2.04,go through the government to make this
+699.899,2.88,happen
+700.92,4.56,um the real reason is
+702.779,4.62,um let's say I'm a television station
+705.48,5.28,um in let's say right now I'm channel
+707.399,5.94,13. so or let's make me a UHF station
+710.76,4.139,and Sam Channel 15. um you know that's
+713.339,4.68,not a piece of spectrum that's going to
+714.899,5.101,get given to the radio uh to the uh the
+718.019,3.121,telecoms but instead what could happen
+720.0,3.6,is
+721.14,4.259,um you could take this and take somebody
+723.6,3.239,else who is in a useful piece of
+725.399,3.481,spectrum and kind of stick him into my
+726.839,4.201,spot on this ability to move around
+728.88,4.32,stations uh is something that only the
+731.04,3.9,government can do and fundamentally
+733.2,4.02,that's needed to get big contiguous
+734.94,4.44,blocks of usable Spectrum so so the
+737.22,3.66,government is telling the top the TV
+739.38,3.899,stations you know this is a one-time
+740.88,3.84,chance for you to participate in this
+743.279,2.941,auction and I think that's a pretty
+744.72,4.32,plausible thing to say because this
+746.22,4.38,repacking is uh you know it really has
+749.04,2.82,to happen on a national scale to be
+750.6,2.7,useful
+751.86,3.12,um and you know the government only can
+753.3,3.24,do this you know they're going to cause
+754.98,3.299,slightly different interference on the
+756.54,3.0,stations that get repacked they can only
+758.279,3.601,do this because they've been given
+759.54,5.78,Authority by a law so this can't really
+761.88,3.44,happen just just on the side
+765.48,3.96,um so this is the reverse auction the
+767.7,4.62,forward auction is then taking this
+769.44,4.56,stuff and selling it off to the um to
+772.32,3.42,the cell phone companies so so here
+774.0,4.38,we're going to have different licenses
+775.74,3.96,uh in every region and the prices for
+778.38,3.12,these licenses are going to increase
+779.7,4.199,until
+781.5,3.48,um uh supply and demand meet so you're
+783.899,2.221,going to have just a much more
+784.98,2.18,straightforward kind of ascending
+786.12,4.14,auction
+787.16,4.239,this is not absolutely trivial but this
+790.26,3.36,is kind of the sort of thing that the
+791.399,4.801,FCC has been doing for a long time
+793.62,4.62,um all right so so we have this reverse
+796.2,3.78,auction we have a forward auction and
+798.24,4.32,then we have we have some kind of link
+799.98,4.2,between them uh so we have we have some
+802.56,3.959,amount of Revenue that we need to
+804.18,4.62,achieve to to make everybody happy about
+806.519,5.521,what what just happened and if that
+808.8,4.68,hasn't happened then basically we
+812.04,4.26,um we decided that we were trying to
+813.48,4.62,clear too much spectrum and so then we
+816.3,3.42,we reduce the amount of spectrum that
+818.1,3.9,we're trying to clear and that will have
+819.72,3.96,the effect of both lowering the prices
+822.0,4.139,that we have to pay because we have to
+823.68,4.56,buy out fewer TVs stations and
+826.139,4.26,increasing the the per unit prices that
+828.24,4.02,we will end up charging telecoms because
+830.399,4.081,the supply will have gotten scarcer and
+832.26,3.96,so the prices will continue to rise and
+834.48,3.539,so so essentially what we'll do is we'll
+836.22,3.0,we'll just change the amount of spectrum
+838.019,2.76,that we have to clear and then keep
+839.22,3.179,running the auction you might notice
+840.779,3.781,that these two prices are not directly
+842.399,4.38,related to each other right so so this
+844.56,4.14,is not a double-sided Market
+846.779,3.421,um or if it's a double-sided Market it's
+848.7,3.66,very indirectly a double-sided Market
+850.2,3.96,because kind of what's happening is the
+852.36,4.14,government is you know doing this one
+854.16,4.44,auction with everybody and getting all
+856.5,3.3,these goods and then kind of glomming
+858.6,3.179,them together and turning them into
+859.8,3.96,something else and selling them to
+861.779,3.661,somebody else so the government gets to
+863.76,3.78,keep whatever the difference is and they
+865.44,3.48,the Congressional budget office has
+867.54,2.7,projected that that difference is 25
+868.92,4.02,billion dollars
+870.24,3.899,so so the government's take is is a
+872.94,2.579,bunch of money
+874.139,2.76,so let me tell you a little bit more
+875.519,3.961,about the reverse auction which is going
+876.899,3.961,to be my focus I found in talking to
+879.48,2.64,people that there seems to be a lot of
+880.86,2.76,misunderstanding about how this auction
+882.12,3.0,works and so
+883.62,4.019,um maybe you guys all understand it but
+885.12,4.68,I made a very sophisticated PowerPoint
+887.639,5.64,animation to explain how this works
+889.8,5.64,and and I say this both jokingly and not
+893.279,3.36,um I say it jokingly in the sense that
+895.44,3.839,when you see it you're going to be
+896.639,4.44,disappointed but but I say it seriously
+899.279,3.24,in the sense that it took me forever to
+901.079,3.841,make
+902.519,4.201,this so let's see
+904.92,4.2,um so so it turns out that rather than
+906.72,4.02,talking about uh buying our television
+909.12,3.06,stations which turns out for various
+910.74,2.279,reasons to be a little hard to think
+912.18,3.0,about
+913.019,3.361,um abstractly I'm going to switch to a
+915.18,3.54,problem that I think you have more
+916.38,5.699,experience with which is the problem of
+918.72,6.96,uh Airline over booking right so so you
+922.079,5.76,go to the uh your airline of choice and
+925.68,3.659,they say you know sorry remember that
+927.839,3.18,ticket we sold you for the flight that
+929.339,4.381,you're on well it doesn't really
+931.019,4.141,correspond to a seat on our plane
+933.72,3.059,um in fact you know it turns out there's
+935.16,4.38,this law that for some reason we can
+936.779,4.021,sell you things that don't exist and if
+939.54,3.06,you don't show up for the flight that we
+940.8,3.36,keep your money but if we don't have a
+942.6,3.9,seat for you that's just too bad for you
+944.16,3.96,and now we're gonna see what happens so
+946.5,3.6,so let's think about the part of what
+948.12,3.42,happens and and in fact what really
+950.1,3.299,happens is they just screw you in your
+951.54,3.299,strand in Chicago but let's imagine
+953.399,4.5,something slightly more reasonable that
+954.839,5.701,involves an auction so so the way this
+957.899,4.141,is going to work is uh and and for
+960.54,3.78,reasons that have to do with this FCC
+962.04,4.08,action I'm I'm going to ask that
+964.32,3.84,passengers either fly in the cabin
+966.12,3.74,they're assigned to or they have to give
+968.16,3.96,up their seat I'm not going to allow
+969.86,4.06,passengers in first class to move to
+972.12,3.3,economy class I'll explain afterwards
+973.92,4.38,why that's important
+975.42,4.74,so the feasibility constraint that I'm
+978.3,3.659,going to have as an airline is that the
+980.16,3.06,number of passengers in each cabin is
+981.959,3.24,less than or equal to the number of
+983.22,3.78,seats I have because I can't fly with
+985.199,4.681,people standing up
+987.0,4.38,um someday they'll do that but not yet
+989.88,4.44,um and I'll use a descending clock
+991.38,4.56,auction to set compensations and the way
+994.32,3.0,to think about this is I start with a
+995.94,4.139,plan that's big enough to hold everybody
+997.32,6.0,so so these dots which I individually
+1000.079,6.661,placed with my mouse are the people and
+1003.32,5.34,this is my plan right so this by analogy
+1006.74,4.2,is the current state of affairs with
+1008.66,3.84,with television stations they're all
+1010.94,2.819,kind of all the television stations have
+1012.5,3.12,somewhere to broadcast
+1013.759,3.841,the problem is we're going to get rid of
+1015.62,3.779,a bunch of the spots right we're gonna
+1017.6,3.06,this is clearing a bunch of spectrum
+1019.399,3.961,we're going to lose a bunch of the seats
+1020.66,4.139,and now we have people without seats
+1023.36,3.059,um and and this is where the airline
+1024.799,3.241,decides hey we could send a smaller plan
+1026.419,4.5,and save ourselves some money
+1028.04,4.62,so uh the airline offers compensation so
+1030.919,4.081,we say to everybody we'll give you a
+1032.66,4.86,thousand dollars if um
+1035.0,4.439,uh if you just elect not to fly and
+1037.52,3.12,we'll we'll fly you tomorrow morning and
+1039.439,2.76,everybody gets to make a choice about
+1040.64,4.26,whether that sounds good to them or not
+1042.199,4.201,and so some people say no I'm going to
+1044.9,3.0,hold on to my seat I'm not going to take
+1046.4,3.84,your thousand dollars and they're
+1047.9,4.32,they're on the plane and some people say
+1050.24,4.38,a thousand dollars would be great why
+1052.22,4.14,not I'll do it and and they kind of go
+1054.62,3.0,off to the side here and and so here's
+1056.36,3.12,our state of affairs with a thousand
+1057.62,3.84,dollars the thing to notice now is that
+1059.48,4.68,I've got a lot of empty seats so as an
+1061.46,4.56,airline I think Hmm these guys you know
+1064.16,3.78,don't don't seem to Value money all that
+1066.02,4.44,highly I made a bit of a mistake
+1067.94,4.26,offering them a thousand dollars so let
+1070.46,3.36,me let me change my offer so you say to
+1072.2,3.18,everybody remember what that thing I
+1073.82,2.94,said about a thousand dollars really I
+1075.38,3.72,was lying it's only eight hundred
+1076.76,5.4,dollars how do you feel about that
+1079.1,4.38,and uh and some of them say well you
+1082.16,2.94,know turns out I only did it because you
+1083.48,3.42,said a thousand dollars in fact I want
+1085.1,4.68,to go back on your stupid plane
+1086.9,5.279,and uh and so now some of them move back
+1089.78,4.56,and and in fact In First Class
+1092.179,3.421,um let's say they all move back so so
+1094.34,3.78,what's going to happen in this auction
+1095.6,3.9,then is these guys now these blue dots
+1098.12,2.52,have nowhere they can go on the plane
+1099.5,3.78,because I'm not going to let them go to
+1100.64,4.2,a different class and so that means
+1103.28,3.48,they've accepted an offer for eight
+1104.84,3.54,hundred dollars but I can't make them
+1106.76,3.24,any subsequent offers because I can't
+1108.38,3.9,back that offer up with anything if I
+1110.0,4.2,was to offer them 700 and they said I
+1112.28,3.3,won't take your offer I would be in the
+1114.2,3.359,embarrassing situation of not being able
+1115.58,3.839,to do anything so so I have to freeze
+1117.559,4.261,them at the last offer they accepted
+1119.419,4.341,these other guys though I can still do
+1121.82,5.16,without so for them I lowered the price
+1123.76,5.2,and then some of them move back and then
+1126.98,4.38,I lower the price again and then some of
+1128.96,4.14,them move back and until something
+1131.36,3.36,freezes again and now the green guys are
+1133.1,3.42,frozen because again there are no spots
+1134.72,5.579,for them so I freeze them at a different
+1136.52,5.039,price the blue guys are just gluttons
+1140.299,3.841,for punishment that's why they're flying
+1141.559,3.961,an economy class so we just keep on
+1144.14,3.899,hitting them with lower and lower prices
+1145.52,4.2,and some of them move back like the
+1148.039,4.081,suckers they are they'll even take 300
+1149.72,3.66,and eventually two hundred dollars a
+1152.12,4.2,couple of them move back and these guys
+1153.38,4.26,get Frozen and so so this is how the
+1156.32,2.359,auction works so basically we're going
+1157.64,3.36,to keep on
+1158.679,4.36,lowering prices on people as long as
+1161.0,3.98,it's possible to accommodate them back
+1163.039,4.38,where they were before and then
+1164.98,4.3,basically the the willingness of other
+1167.419,3.841,people to eventually
+1169.28,3.42,um participate in the auction or quit is
+1171.26,3.6,what's going to drive the prices for you
+1172.7,3.9,okay so so what does this correspond to
+1174.86,3.3,in reality you might think this
+1176.6,2.819,corresponds to sort of good spectrum and
+1178.16,3.6,medium spectrum and bad Spectrum but
+1179.419,3.661,that's that's really not true what I
+1181.76,3.539,want this instead to correspond to is
+1183.08,3.839,different places so there's nothing
+1185.299,3.061,special about first class you know it
+1186.919,4.26,might have been the first class got a
+1188.36,4.14,worse price than business glass what's
+1191.179,2.581,really special is that you can only go
+1192.5,3.299,back to the place that you originally
+1193.76,4.02,were and and that they're just different
+1195.799,3.481,constraints in different places so let's
+1197.78,3.66,say first class was really New York
+1199.28,3.6,economy class sorry guys it's the
+1201.44,4.38,Midwest
+1202.88,4.32,um and uh and so we just had different
+1205.82,3.54,feasibility constraints in different
+1207.2,3.599,places right so so it might be that New
+1209.36,2.699,York kind of walks up early because
+1210.799,3.0,there are a lot of constraints in the
+1212.059,3.181,New York Region where prices are just
+1213.799,4.141,falling and falling in Chicago because
+1215.24,4.92,you have lots of open space out here
+1217.94,3.9,um now now here's the the thing about
+1220.16,4.379,the real problem the feasibility
+1221.84,6.12,constraints in fact are a crazy jumbled
+1224.539,4.801,mess right so so this is a picture of
+1227.96,3.0,the feasibility constraints it might be
+1229.34,3.48,a picture made by Nick actually I'm not
+1230.96,3.599,sure did you make this picture
+1232.82,3.3,thanks for the picture Nick I never
+1234.559,3.0,thanked you properly I want to take this
+1236.12,4.04,opportunity
+1237.559,6.301,um so yeah okay that that was special
+1240.16,4.96,okay so so this is uh this is a
+1243.86,2.88,visualization of the real constraint
+1245.12,3.0,graph and and what you can see from this
+1246.74,3.66,is just kind of that it sucks right
+1248.12,3.78,there's just lots of lines everywhere
+1250.4,3.24,um but but in particular what you can
+1251.9,3.6,sort of Imagine from this picture is you
+1253.64,4.14,know every dot is a station right and a
+1255.5,3.6,line is these two stations somehow
+1257.78,3.48,constrain each other on what what
+1259.1,5.22,channels they're allowed to be on
+1261.26,5.76,um and and because there's just not a
+1264.32,4.26,lot of nice kind of symmetric cliques in
+1267.02,3.539,this graph everything has just got weird
+1268.58,4.56,stuff hanging off the side and that
+1270.559,4.261,means that it then my nice story about
+1273.14,2.94,kind of everyone in economy class is the
+1274.82,2.94,same and everyone in business class is
+1276.08,3.3,the same is not going to be true in this
+1277.76,3.48,graph the question of whether you can
+1279.38,3.72,personally go back is going to be a a
+1281.24,3.84,personalized choice for everybody
+1283.1,4.14,the point means there exists a
+1285.08,4.44,constraint between those two stations
+1287.24,4.559,that either they can't be on the same
+1289.52,4.68,channel they can't be on adjacent
+1291.799,3.901,channels they can't be on certain same
+1294.2,3.66,or adjacent channels but they're allowed
+1295.7,4.5,to be on other ones or some combination
+1297.86,5.1,of those sorts of constraints
+1300.2,4.5,um and and there are many channels so so
+1302.96,3.54,you know typically we're not going to
+1304.7,4.68,clear all the Spectrum so is there any
+1306.5,4.559,two channels linked by an edge can still
+1309.38,2.7,both be accommodated but you know
+1311.059,2.761,eventually they're going to start to
+1312.08,3.54,constrain each other as I reduce the set
+1313.82,4.859,of available channels
+1315.62,5.34,so so here's another visualization of
+1318.679,4.401,this graph which uh is maybe a little
+1320.96,4.32,bit easier to think about because
+1323.08,3.219,this one has the advantage that it looks
+1325.28,3.06,like the United States but the
+1326.299,4.62,disadvantage that you can't see just how
+1328.34,4.56,awful the New York Region really is
+1330.919,4.441,um it's really awful it has some nodes
+1332.9,3.96,with degrees above 200 so so there's
+1335.36,3.12,some really really densely connected
+1336.86,3.72,parts of this graph
+1338.48,3.179,um this just sort of blows it out in a
+1340.58,2.88,way that gives you a better sense of the
+1341.659,3.541,connectivity of the graph
+1343.46,3.36,um so so there's this underlying
+1345.2,3.3,computational problem if I want to do
+1346.82,3.18,this kind of Airline algorithm the way I
+1348.5,5.76,showed it to you this descending clock
+1350.0,5.64,auction which is asking for a given set
+1354.26,2.46,of people that I think are going to
+1355.64,3.24,participate in the auction that have
+1356.72,3.54,currently accepted going off air and
+1358.88,3.24,another set of people that I have to
+1360.26,4.26,repack because they've exited the
+1362.12,6.48,auction or they never participated is it
+1364.52,5.7,possible for me to also not take you for
+1368.6,4.439,every given person is it possible for me
+1370.22,4.439,to put you back on the air and somehow
+1373.039,3.901,readjust the stations I give to
+1374.659,5.041,everybody so the the whole thing works
+1376.94,5.099,and if so I get to lower your price and
+1379.7,3.959,if not then you're Frozen and I have to
+1382.039,2.581,take the last price you accepted in a
+1383.659,1.921,sense you're not participating in the
+1384.62,2.939,auction anymore
+1385.58,3.78,and and so this is this computational
+1387.559,3.961,problem that I'm going to have to answer
+1389.36,3.78,every time I want to consider lowering a
+1391.52,3.12,price for every single station so I'm
+1393.14,3.419,going to have to do this you know kind
+1394.64,3.18,of on the order of 2000 times every time
+1396.559,3.541,I take the clock
+1397.82,3.78,and uh you know bad news this is the
+1400.1,3.78,part where computer scientists come and
+1401.6,3.9,bum you out because uh this is an NP
+1403.88,3.659,complete problem
+1405.5,3.96,um which the theorists will tell you
+1407.539,3.361,means that you should go shoot yourself
+1409.46,2.76,in the corner because nothing can be
+1410.9,3.12,dealt with Chicago somebody can shoot
+1412.22,3.0,you for you you don't have to do it
+1414.02,4.56,yourself
+1415.22,5.04,um but you should be very sad uh the
+1418.58,3.3,pragmatic truth is just because the
+1420.26,3.36,problem is NP complete doesn't mean you
+1421.88,2.88,can never solve it it just means you
+1423.62,3.419,can't be confident that you can always
+1424.76,3.6,solve it so so it turns out there are a
+1427.039,3.601,whole kind of research communities
+1428.36,4.14,within CS about finding practical ways
+1430.64,3.659,of solving NP complete problems and they
+1432.5,4.02,work all the time you know Google
+1434.299,3.841,wouldn't be making a self-driving car if
+1436.52,3.48,it weren't possible to solve NP complete
+1438.14,3.0,problems with decent reliability all the
+1440.0,3.12,time
+1441.14,3.0,um you just can't do it absolutely all
+1443.12,2.46,the time that's why the car will
+1444.14,3.919,sometimes crash
+1445.58,2.479,sorry
+1448.82,2.16,or something
+1450.38,3.24,um
+1450.98,5.16,so uh so so here we've got a graph graph
+1453.62,4.74,coloring problem with 130 000 um
+1456.14,3.659,pairwise relationships between stations
+1458.36,4.62,something on the order of a couple of
+1459.799,5.641,million uh actual constraints which uh
+1462.98,4.26,speak about individual channels
+1465.44,3.119,um and the FCC was initially pretty
+1467.24,2.88,skeptical about whether this problem
+1468.559,3.24,could be solved at a national scale and
+1470.12,2.939,they were doing a bunch of pretty hacky
+1471.799,2.701,things to try to make the problem
+1473.059,3.301,smaller
+1474.5,2.64,um in the end uh we're solving this
+1476.36,3.179,problem
+1477.14,4.38,um exactly and at a national scale using
+1479.539,2.88,some tools from empirical algorithmic so
+1481.52,4.2,I'll tell you a little bit about how
+1482.419,4.861,we're doing that basically the the bunch
+1485.72,3.72,of tricks that we've got are to use a
+1487.28,4.019,satin coding automatic algorithm
+1489.44,3.119,configuration and algorithm portfolio so
+1491.299,3.901,I'll tell you kind of a slide about what
+1492.559,4.921,each of those things is so okay
+1495.2,5.04,um so so what do we do with this thing
+1497.48,6.319,um well how many of you know what
+1500.24,3.559,propositional satisfiability is
+1503.84,3.42,hooray for you okay you guys can get a
+1505.58,2.64,coffee I mean they spend like 30 seconds
+1507.26,3.18,telling the rest of you what
+1508.22,3.72,propositional satisfiability is this is
+1510.44,3.359,this is one of the awesome problems in
+1511.94,2.94,computer science right this is uh this
+1513.799,3.421,is part of the bread and butter of
+1514.88,4.52,computer science this is like the you
+1517.22,4.319,know Corno
+1519.4,4.3,whatever it is Chrono something
+1521.539,3.541,something what is that what is it is it
+1523.7,3.54,it's like Chrono competition or
+1525.08,3.719,something yeah that's why I'm a computer
+1527.24,3.299,scientist anyway
+1528.799,3.781,um so yeah please edit that part out of
+1530.539,4.26,the video we don't know about going on
+1532.58,3.3,Milton Friedman would be so unimpressed
+1534.799,1.921,with me
+1535.88,3.24,um
+1536.72,3.959,okay so so basically satisfiability is
+1539.12,3.24,what is actually the first problem that
+1540.679,3.181,was shown to be NP completers and the
+1542.36,3.96,the first little kind of set of problems
+1543.86,4.799,and uh it's really easy to think about
+1546.32,3.42,because it's so simple and that means
+1548.659,3.0,that there are some really powerful
+1549.74,3.6,algorithms that work with it because the
+1551.659,3.361,the problem itself is so simple that you
+1553.34,3.42,can really wrestle with it in great
+1555.02,3.899,detail so it's sort of a pure
+1556.76,3.659,combinatorial problem it says I've got a
+1558.919,4.021,set of variables and each variable can
+1560.419,4.321,be true or false then I can make
+1562.94,3.3,literals which are the variables that
+1564.74,3.72,either the variables themselves or the
+1566.24,4.62,negations of the variables I can make
+1568.46,4.74,Clauses which are disjunctions of
+1570.86,6.0,literals so a clause is something like a
+1573.2,5.82,or b or not C right so it's it's a
+1576.86,4.199,disjunction of either variables or
+1579.02,4.32,negated variables and then I make a
+1581.059,4.141,formula which is a conjunction of
+1583.34,6.6,Clauses so I end up with something that
+1585.2,7.859,looks like a or b or not C and D or e or
+1589.94,5.219,not a so I make this whole string of
+1593.059,4.381,propositional variables connected with
+1595.159,4.921,answers or knots in this particular way
+1597.44,4.68,and the question that I then ask is is
+1600.08,4.26,there some way of assigning values to
+1602.12,4.38,each variable from true or false that
+1604.34,3.48,make this whole logic formula evaluate
+1606.5,3.6,to true
+1607.82,4.32,and you know your first impulse might be
+1610.1,4.02,well sure that sounds really easy you
+1612.14,3.6,know I just I can just come up with true
+1614.12,3.36,and false values and then I I know I
+1615.74,3.12,know all about logic right I know how to
+1617.48,3.24,evaluate this thing and figure out
+1618.86,4.08,whether it's true or false and indeed
+1620.72,4.14,it's very easy to to come up with some
+1622.94,3.3,assignment of uh true and false values
+1624.86,3.299,to all the variables look at it in the
+1626.24,4.14,formula figure out if it's true or false
+1628.159,4.321,but then you might notice well if I've
+1630.38,4.08,got n variables there are two to the N
+1632.48,5.46,assignments of of truth values to those
+1634.46,5.52,variables and I could try each of them
+1637.94,3.54,and test it but is there some more
+1639.98,2.88,principled way of figuring out which of
+1641.48,4.319,those two to the end things I have to
+1642.86,4.559,try or do I have to do all of them well
+1645.799,3.061,if you can answer that question then
+1647.419,3.0,there's a million dollars waiting for
+1648.86,3.299,you at the clay Mathematics Institute
+1650.419,4.201,because that would involve answering the
+1652.159,5.4,question of whether p is equal to NP and
+1654.62,5.7,so we don't know but so far we haven't
+1657.559,4.821,found a way so so far more or less you
+1660.32,4.5,have to try everything
+1662.38,4.6,so this is sort of the combinatory the
+1664.82,3.3,the combination lock of combinatorial
+1666.98,3.84,problems you just sort of have to to
+1668.12,4.14,grind through everything or sort of in
+1670.82,3.78,the worst case it seems like you have to
+1672.26,3.72,but in practice maybe there's a lot of
+1674.6,3.42,structure in your problem right if I
+1675.98,5.16,gave you something like
+1678.02,4.86,um a or not a and all kinds of other
+1681.14,3.419,stuff maybe you could look at that and
+1682.88,3.539,say well that's got a contradiction in
+1684.559,3.48,it that first Clause simply can't be
+1686.419,2.88,satisfied so I don't need to grind
+1688.039,3.301,through all the other stuff I can just
+1689.299,3.301,spot that contradiction that's a very
+1691.34,2.219,simple example of the fact that you
+1692.6,3.059,don't always have to grind through
+1693.559,3.841,everything and and there are much richer
+1695.659,3.361,reasons why you might not have to grind
+1697.4,3.899,through everything so that that's this
+1699.02,3.96,kind of empirical algorithms framework
+1701.299,2.821,you can't do it for for the worst case
+1702.98,2.0,input but you can do it for everything
+1704.12,4.5,else
+1704.98,5.679,so how do we formulate this FTC problem
+1708.62,3.539,as a sad problem
+1710.659,4.321,um I'll just do this kind of at a high
+1712.159,4.681,level but basically we say every station
+1714.98,4.62,has to broadcast on one of its allowable
+1716.84,4.5,channels that gives me a constraint that
+1719.6,4.319,looks like this
+1721.34,4.28,um so so one of these at least one of
+1723.919,3.841,these variables has to be set to true
+1725.62,4.84,the variable which says this day
+1727.76,4.74,broadcast on this channel
+1730.46,3.599,um so the disjunction of all these
+1732.5,3.659,variables has to be true which means at
+1734.059,3.781,least one of them has to be true each
+1736.159,2.88,station only gets to broadcast on one
+1737.84,4.38,channel
+1739.039,4.981,um that means and the negation of each
+1742.22,5.04,pair of values that station could take
+1744.02,4.98,uh disjoint so so at least one of them
+1747.26,3.899,has to be false at least one of every
+1749.0,4.2,pair has to be false so far those two
+1751.159,4.26,things just say every station gets one
+1753.2,4.32,channel that doesn't seem like I've done
+1755.419,3.421,something very complicated yet
+1757.52,2.639,um but the interference thing is the
+1758.84,3.719,hard part so then I take all of these
+1760.159,4.5,pairwise interference constraints and I
+1762.559,3.781,I throw them all in so I say you can't
+1764.659,4.441,be on Channel 17 while I'm on channel
+1766.34,3.959,18. and I do that two and a half million
+1769.1,3.24,times for all of the pairwise
+1770.299,3.841,interference constraints and I just
+1772.34,3.54,throw them all in there too and then I
+1774.14,4.08,give this thing to a SAT solver with it
+1775.88,3.779,all of its Glory of tens of thousands of
+1778.22,3.36,variables and two and a half million
+1779.659,5.52,constraints and
+1781.58,5.16,it turns out as a side note that most of
+1785.179,3.841,the Clauses have only two variables in
+1786.74,4.08,them you'll notice only this first kind
+1789.02,3.48,of clause that I gave at the top has
+1790.82,3.239,more than two variables in them and
+1792.5,3.96,that's a really powerful thing for a SAT
+1794.059,4.261,solver because when one of the variable
+1796.46,4.02,when one of the literals gets set to
+1798.32,3.78,false I can infer that the second one
+1800.48,3.6,has to get set to true or the whole
+1802.1,3.36,thing's not going to work and that's
+1804.08,3.3,that's how I can see the contradiction
+1805.46,4.439,doesn't work because if one of them gets
+1807.38,3.96,said to false the other one uh
+1809.899,2.461,actually the contribution does work
+1811.34,2.579,doesn't it
+1812.36,2.46,never mind anyway
+1813.919,2.521,um
+1814.82,3.3,other things don't work
+1816.44,3.839,um yeah maybe I don't have a one
+1818.12,3.36,variable example but uh but anyway when
+1820.279,3.181,one of these things gets set to false
+1821.48,3.24,the other one has to be true and then I
+1823.46,3.0,know how this thing gets set and it
+1824.72,3.179,might appear in other formulas and so
+1826.46,3.3,then I can plug in its values in those
+1827.899,3.721,other formulas and that can cause other
+1829.76,3.36,things to get forced and I can get these
+1831.62,3.48,chains in something that's called Unit
+1833.12,3.539,propagation where I go grinding through
+1835.1,3.24,without having to do search setting all
+1836.659,3.781,kinds of variables and that's kind of a
+1838.34,3.719,powerful thing so so basically we get
+1840.44,3.3,this crazy thing you might think on the
+1842.059,3.961,face of it it's so ridiculously big
+1843.74,3.6,right I've got like tens of thousands of
+1846.02,2.46,variables and in the worst case I think
+1847.34,3.12,this thing is exponential in the number
+1848.48,3.179,of variables so how could this possibly
+1850.46,3.06,work
+1851.659,3.301,um the trick we're going to use is
+1853.52,3.3,something that my research group has
+1854.96,3.54,been working on pretty hard for about a
+1856.82,5.64,decade which is called algorithm
+1858.5,5.88,configuration and the idea is that
+1862.46,3.0,um it it turns out the heuristic
+1864.38,2.94,algorithms which is what we're talking
+1865.46,3.24,about here algorithms that that don't
+1867.32,3.479,come with a worst case performance
+1868.7,3.54,guarantee but that sort of embody things
+1870.799,4.081,that seem like they should be good ideas
+1872.24,5.34,which is what a heuristic is
+1874.88,3.84,um tend to have a lot of parameters as
+1877.58,3.479,you're building this kind of algorithm
+1878.72,4.079,you tend to face a choice about you know
+1881.059,3.661,how much pre-processing should I do
+1882.799,3.6,should I Branch this way or that way
+1884.72,4.559,which variable should I consider first
+1886.399,5.64,and the authors of these these
+1889.279,4.26,algorithms can and typically do expose
+1892.039,3.24,those choices to the end user as
+1893.539,4.5,parameters so they can be changed at
+1895.279,5.181,runtime so something that you might do
+1898.039,4.561,if you know that you have a given
+1900.46,4.839,distribution of problems that you need
+1902.6,4.079,to attack is to set those parameters in
+1905.299,3.36,a way that works particularly well for
+1906.679,3.781,your problem so that you effectively
+1908.659,5.88,custom design an algorithm that will
+1910.46,5.28,work well just for you and so so that
+1914.539,3.12,seems good except if you've got
+1915.74,4.02,something like 100 parameters you know
+1917.659,3.421,setting these things by hand by
+1919.76,2.76,repeatedly running the algorithm and
+1921.08,3.42,having it take many hours and then
+1922.52,4.86,seeing how it did is a pretty hard thing
+1924.5,4.799,to do so we've been working on what we
+1927.38,4.26,call Meta algorithms algorithms that
+1929.299,4.081,take other algorithms as input run those
+1931.64,5.1,other algorithms many times essentially
+1933.38,4.62,do a statistical experiment design on
+1936.74,4.02,these algorithms figure out kind of
+1938.0,4.5,what's going on with them and uh and
+1940.76,3.12,explore the space and eventually find
+1942.5,3.659,some parameter configuration that works
+1943.88,3.659,really well you might be skeptical that
+1946.159,3.721,such a thing could be make made
+1947.539,3.601,practical it's it's beyond the scope of
+1949.88,3.779,this talk to say much about how that
+1951.14,4.259,works so I'll say one thing but suffice
+1953.659,3.12,it to say that this really does work
+1955.399,2.101,pretty well
+1956.779,3.721,um
+1957.5,5.399,so kind of intuitively how do we do it
+1960.5,4.14,um Let me give the example of a single
+1962.899,3.481,parameter which is small enough that I
+1964.64,3.48,can draw it on the board here so so
+1966.38,3.36,let's say I have a parameter X which
+1968.12,3.84,affects the performance of my algorithm
+1969.74,4.319,and I have a parameter y that I want to
+1971.96,4.26,minimize think of why as something like
+1974.059,4.441,the log of runtime so I'm trying to make
+1976.22,4.5,an algorithm that that whose runtime is
+1978.5,3.48,minimized on the same instances so I'm
+1980.72,2.939,running this over and over again on the
+1981.98,4.14,same problems
+1983.659,4.5,um so let's let's imagine that this red
+1986.12,3.299,line in the graph here is the true
+1988.159,3.181,performance of the algorithm as a
+1989.419,3.781,function of x
+1991.34,3.179,um and of course I don't know that if I
+1993.2,3.719,knew that I would just minimize that but
+1994.519,3.9,I don't get to ever observe that what I
+1996.919,3.421,get to do is run the algorithm at
+1998.419,4.86,particular points and observe its run
+2000.34,5.28,time at that point so these blue circles
+2003.279,4.38,are places where I actually observed the
+2005.62,4.5,runtime of the algorithm
+2007.659,5.221,um then what I do is I fit a a
+2010.12,4.62,regression model to all of this I use a
+2012.88,3.36,fancy kind of non-parametric regression
+2014.74,3.96,in this case I'm using something called
+2016.24,4.14,gaussian process regression the
+2018.7,3.959,advantage of gaussian processes is they
+2020.38,3.539,give me uncertainty estimates well
+2022.659,2.88,they're non-parametric so they're
+2023.919,3.12,arbitrarily Wiggly which is important to
+2025.539,3.36,me and they give me uncertainty
+2027.039,3.901,estimates which are small at points that
+2028.899,3.961,I've observed because I I know what's
+2030.94,3.42,going on there and they get bigger as I
+2032.86,4.919,get away from points that I observe so
+2034.36,5.699,so these um these gray ellipses are the
+2037.779,4.081,uncertainty estimates at every point and
+2040.059,2.941,so what you'll see is you know right at
+2041.86,2.88,the Blue Points the uncertainty
+2043.0,6.06,estimates are small and as they get away
+2044.74,6.359,they're big and then what I do is I try
+2049.06,4.68,to find a point that looks like would be
+2051.099,4.441,good to evaluate a point that I haven't
+2053.74,3.0,seen yet that looks like it might be
+2055.54,3.359,better than anything that I've seen
+2056.74,3.32,before and what would it take to maybe
+2058.899,4.381,be better
+2060.06,4.9,you want to both be pretty low on the
+2063.28,4.44,line and also have pretty high
+2064.96,4.439,uncertainty and so so that Criterion is
+2067.72,3.48,called expected Improvement what's the
+2069.399,3.72,what's the amount of improvement that I
+2071.2,4.56,could gain conditional on being better
+2073.119,4.381,than the point that I've got now
+2075.76,3.359,um so the green line that I'm showing
+2077.5,3.659,you is a scaled version of expected
+2079.119,4.621,Improvement on this line and you can see
+2081.159,4.44,a good place to evaluate would be right
+2083.74,5.399,here according to the line
+2085.599,4.861,and because I have high uncertainty at
+2089.139,3.78,that point because these two points are
+2090.46,3.899,pretty far apart and also the line is
+2092.919,2.76,pretty small so here's a point that kind
+2094.359,2.76,of makes a good trade-off between the
+2095.679,3.241,height of the line and the amount of
+2097.119,4.321,uncertainty so I would then do another
+2098.92,4.32,experiment right there and I would learn
+2101.44,3.659,that in fact it's not as good as the as
+2103.24,3.72,the point to its left but then I would
+2105.099,4.201,update my uncertainty estimates that I'd
+2106.96,4.2,have another point and then I would end
+2109.3,4.14,up my second choice would be to go here
+2111.16,3.419,which really is a minimum or close to a
+2113.44,3.179,minimum and I learned something good and
+2114.579,4.741,I kind of keep going so so that's how
+2116.619,4.561,this sort of uh search Guided by a
+2119.32,4.56,learned model in real time kind of can
+2121.18,4.32,work so so this is uh this thing we have
+2123.88,4.56,called sequential model based algorithm
+2125.5,4.14,configuration or smack that's how it
+2128.44,4.5,works
+2129.64,5.34,okay so so that that's that's the idea
+2132.94,3.54,of algorithm configuration and then I
+2134.98,3.54,have the idea of making an algorithm
+2136.48,4.02,portfolio which essentially says
+2138.52,3.839,different solvers have different areas
+2140.5,3.119,of strength and weakness so why should I
+2142.359,3.361,have to commit just like a financial
+2143.619,3.841,portfolio why should I buy only one
+2145.72,4.8,stock why should I have only one
+2147.46,5.159,algorithm in my back pocket why not have
+2150.52,4.559,access to many uncorrelated algorithms
+2152.619,4.441,and thereby leverage the fact that that
+2155.079,3.241,the men of the the average of men's is
+2157.06,2.46,different than the the men of the
+2158.32,1.92,average
+2159.52,3.42,um
+2160.24,3.9,so uh so basically we leveraged this
+2162.94,3.48,idea too we built something called
+2164.14,3.78,sadzilla which is a portfolio of sat
+2166.42,3.78,solvers this is a pictorial
+2167.92,3.84,representation of what it does
+2170.2,3.68,um and uh
+2171.76,5.76,it's destroying Tokyo in this picture
+2173.88,5.38,and uh basically this has become just
+2177.52,4.86,kind of a dominantly successful strategy
+2179.26,5.64,in the sap Community whatever that is
+2182.38,6.6,um so so basically we took all of these
+2184.9,6.06,things together and and we built a uh a
+2188.98,3.48,SAT solver for the fcc's problem so so
+2190.96,2.94,I'm going to kind of conclude here by
+2192.46,5.28,showing you experimentally what did this
+2193.9,5.939,do on the fcc's problem and uh here's uh
+2197.74,4.68,so I need to show you uh how this graph
+2199.839,4.201,works so this is uh the run time so
+2202.42,3.24,basically I'm given some some
+2204.04,3.96,distribution of instances that that
+2205.66,5.16,arose in simulations of the auction that
+2208.0,4.859,really you know to our best knowledge
+2210.82,4.14,reflect what might happen in the fcc's
+2212.859,3.98,auction and I've got
+2214.96,4.26,um problems of up to
+2216.839,4.24,1133 stations
+2219.22,4.2,um which means tens of thousands of
+2221.079,4.561,variables in the Statin coding on the
+2223.42,4.199,full USA interference graph
+2225.64,3.9,um so I take those problems and then I
+2227.619,3.601,run various sat solvers on them so in
+2229.54,3.299,the upper left-hand Corner these are the
+2231.22,4.02,names of different and sat solvers that
+2232.839,4.26,I ran and I'm showing you a cumulative
+2235.24,3.78,density function here which says the
+2237.099,3.781,probability of the basically the
+2239.02,4.26,fraction of instances that got solved
+2240.88,4.32,within every amount of time so looking
+2243.28,5.1,for example at this blue line which is a
+2245.2,5.04,solver called clasp you know after uh 10
+2248.38,4.26,to the zero seconds after one second and
+2250.24,4.02,it solved nothing after about two
+2252.64,5.4,seconds it was starting to solve things
+2254.26,5.16,after 10 seconds it solved a little bit
+2258.04,4.02,more than 10 percent of the instances
+2259.42,3.96,and and so on and then we ran it for
+2262.06,2.82,five minutes we ran everything for five
+2263.38,3.36,minutes so after five minutes we just
+2264.88,3.42,stopped them because you know we're not
+2266.74,4.44,made of time here we have to stop it at
+2268.3,5.16,some point and uh and you see that the
+2271.18,5.04,best of the solvers got maybe 45 percent
+2273.46,4.56,of the instances solved which is already
+2276.22,3.359,kind of good I mean something I should
+2278.02,3.0,point out is that if you don't solve
+2279.579,2.821,something you can just call it
+2281.02,3.3,impossible you can just freeze that
+2282.4,3.6,station and that basically costs you
+2284.32,3.12,money but but that's okay right there's
+2286.0,2.579,nothing that goes wrong from an
+2287.44,3.0,incentive point of view if somebody gets
+2288.579,3.901,frozen early you just pay them too much
+2290.44,3.36,and as a computer scientist there's
+2292.48,4.26,something really beautiful about that
+2293.8,4.559,because there's a trade-off between how
+2296.74,3.42,well you can solve the problem and how
+2298.359,3.841,much you have to pay people so you can
+2300.16,4.679,really go to the FCC and say if I can
+2302.2,4.32,give you one percent you know better sat
+2304.839,4.321,solving ability I'm going to save you
+2306.52,4.2,100 million dollars and you know
+2309.16,2.939,normally in the sac Community you don't
+2310.72,3.02,get to say things like that so that's
+2312.099,4.381,pretty cool
+2313.74,4.42,normally you can say if I can you know
+2316.48,4.379,do one percent better I can write a
+2318.16,4.26,paper in the South Community okay so so
+2320.859,5.101,basically we added a specially
+2322.42,4.98,configured version of clasp uh we built
+2325.96,2.94,a specially configured version of clasp
+2327.4,3.42,why do we pick class which looks like
+2328.9,4.14,the worst thing here basically because
+2330.82,4.5,it was designed by its authors to expose
+2333.04,3.42,a lot of parameters so it was designed
+2335.32,3.18,to work really well with this
+2336.46,4.26,configuration kind of approach and so
+2338.5,4.079,it's really suited to this
+2340.72,4.08,um and and we built something that
+2342.579,4.5,worked dramatically better
+2344.8,3.779,um so this is now solving about 75
+2347.079,3.721,percent of the instances within five
+2348.579,4.921,minutes and so that's already looking
+2350.8,4.319,pretty good we then
+2353.5,3.119,um basically did both a bunch of
+2355.119,3.661,engineering and added some kind of
+2356.619,4.441,portfolio ideas to this and built
+2358.78,4.38,something that we call sat FC which for
+2361.06,4.26,feasibility checking which is this red
+2363.16,4.919,line and this is the thing that that
+2365.32,5.1,we've made available to the FCC
+2368.079,4.081,um and and you can see this is
+2370.42,4.38,stochastically dominating everything
+2372.16,4.32,else by by pretty healthy down partly
+2374.8,3.18,just by by dealing with very easy
+2376.48,3.359,instances very quickly there are a lot
+2377.98,3.84,of very easy instances
+2379.839,4.74,um but we're now solving
+2381.82,4.799,um just about everything all but about
+2384.579,3.78,two percent of the instances uh within
+2386.619,3.541,an eight hour cutoff
+2388.359,3.061,um and so so this already gives you some
+2390.16,3.3,sense that there's there's only so much
+2391.42,3.54,to be gained by parallelization here
+2393.46,3.78,there are only 2 000 stations that need
+2394.96,3.84,to be checked around
+2397.24,3.119,um so what does this look like most of
+2398.8,2.88,the problems were satisfiable the blue
+2400.359,3.24,bars here are points where it was
+2401.68,3.72,satisfiable the red bars are points
+2403.599,3.061,where it was unsat the gray bars are
+2405.4,2.88,points where we timed down and didn't
+2406.66,4.38,know and you can see we timed out in
+2408.28,4.799,about one percent of the instances
+2411.04,3.24,um so this is the last slide that I'll
+2413.079,3.121,give you
+2414.28,4.44,um so far I've talked about a situation
+2416.2,5.34,where we have people either going off
+2418.72,4.619,the air or staying on the air in
+2421.54,3.78,practice those of you who are old enough
+2423.339,4.5,to remember televisions as compared to
+2425.32,4.94,computers and particularly televisions
+2427.839,4.621,that you actually accessed on the air
+2430.26,4.359,might be aware of the fact that there's
+2432.46,4.02,something called UHF and VHF there are
+2434.619,4.381,different kinds of Television spectrum
+2436.48,4.92,and you might remember that VHF is kind
+2439.0,3.839,of bad relative to UHF right it's sort
+2441.4,4.8,of a grainier picture it's not quite as
+2442.839,5.581,good and so it is now we really have
+2446.2,4.02,both of those kinds of spectrum UHF is
+2448.42,3.24,the stuff that we actually want to sell
+2450.22,3.72,to the telecoms that's more appropriate
+2451.66,3.959,for them so one thing that we might be
+2453.94,3.84,able to do is say
+2455.619,3.601,um the UHF stations could instead of
+2457.78,3.54,going off the air maybe we should pay
+2459.22,4.139,them a lower amount to accept a lower
+2461.32,5.22,quality good to accept VHF Spectrum
+2463.359,4.861,instead of UHF spectrum and uh and and
+2466.54,3.36,then you know that's another way of
+2468.22,3.379,freeing up UHF Spectrum so maybe we
+2469.9,4.199,should give them these multiple options
+2471.599,3.941,this is tricky and you know then of
+2474.099,3.721,course I can do cascading things like I
+2475.54,4.74,can buy out a VHF station thereby making
+2477.82,4.14,some VHF Spectrum available and then I
+2480.28,3.42,can get a UHF guy to move into that and
+2481.96,3.6,if those two moves are cheaper than
+2483.7,4.379,getting that one guy to go off air maybe
+2485.56,5.279,that's a better thing to do so so we
+2488.079,4.5,what we and in fact there's not just VHF
+2490.839,3.301,but there's upper VHF and lower VHF
+2492.579,3.121,which are themselves different so
+2494.14,3.06,there's really three bands of spectrum
+2495.7,2.1,to care about
+2497.2,3.419,um
+2497.8,5.22,so it the problem is doing a design on
+2500.619,4.561,this kind of space involves multi-minded
+2503.02,3.96,bidders it involves bidders who have
+2505.18,5.04,values for now multiple things rather
+2506.98,4.5,than just going off air and and that
+2510.22,3.54,makes the auction design much more
+2511.48,4.26,complex because as all of us know here
+2513.76,4.5,auction design for multi-minded bidders
+2515.74,4.08,is is much uh more difficult to think
+2518.26,3.54,about than for single-minded bidders
+2519.82,4.98,except in this kind of Glorious Point
+2521.8,5.039,case of vcg so
+2524.8,3.42,um so this has been an area of active
+2526.839,4.081,study for the the groups working with
+2528.22,4.2,the FCC right now there are a whole
+2530.92,2.699,variety of different proposals on the
+2532.42,3.3,table
+2533.619,4.021,um I I'm happy to kind of talk to you
+2535.72,3.48,about some of the ideas here I've in the
+2537.64,4.68,end ended up proposing something which
+2539.2,4.08,I'm kind of excited about but I'm out of
+2542.32,2.759,time now so I'm not going to tell you
+2543.28,2.78,now what that is
+2545.079,2.581,um
+2546.06,4.72,instead
+2547.66,4.32,I will just conclude if my computer
+2550.78,3.96,worked the way I thought it did I'll
+2551.98,5.28,just conclude here so uh so there we go
+2554.74,4.56,so I guess I've told you about uh the
+2557.26,4.26,way the FCC incentive action works if
+2559.3,3.42,you're interested uh let me say sort of
+2561.52,2.339,one sentence about what these other
+2562.72,3.3,things are and I'm happy to talk with
+2563.859,4.861,you about them on the coffee break
+2566.02,4.44,um so one of them is this idea of what I
+2568.72,4.2,call computational mechanism analysis
+2570.46,4.74,which basically means using computers to
+2572.92,4.439,analyze existing mechanisms by solving
+2575.2,4.08,exactly for their equilibria on samples
+2577.359,3.72,from evaluation distribution of Interest
+2579.28,4.68,so we can think about something like
+2581.079,5.101,sponsored search auctions and ask
+2583.96,4.26,um you know how efficient is some given
+2586.18,4.38,mechanism or how much revenue would it
+2588.22,4.139,give me on expectation given different
+2590.56,3.6,settings of a reserve price parameter or
+2592.359,3.841,something like that so that's what I
+2594.16,3.72,call computational mechanism analysis it
+2596.2,3.659,basically works on the fact that that
+2597.88,4.08,they're now as of maybe five years ago
+2599.859,4.681,exists some really powerful techniques
+2601.96,4.44,for finding the exact equilibria of
+2604.54,2.88,compactly represented games so that
+2606.4,2.34,might be a technology that would be
+2607.42,3.48,interested think to some of you so I
+2608.74,4.68,just want to throw that out there the
+2610.9,4.62,last thing is about a kind of sabbatical
+2613.42,4.32,project that I worked on in Uganda for
+2615.52,4.62,building a cell phone based mobile
+2617.74,4.56,market for agricultural Commodities
+2620.14,5.54,allowing subsistence Farmers to sell
+2622.3,5.58,Surplus produce to traders in the cities
+2625.68,4.84,using a kind of Craigslist that runs
+2627.88,4.26,over SMS which is effectively a kind of
+2630.52,4.62,double auction so if you're curious
+2632.14,4.62,about the application of economic theory
+2635.14,3.66,to development problems I'm happy to
+2636.76,3.599,talk about that too so thanks for your
+2638.8,4.4,attention and let's all have lunch
+2640.359,2.841,cheers

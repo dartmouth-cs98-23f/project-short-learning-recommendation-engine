@@ -1,0 +1,364 @@
+second,duration,transcript
+0.3,3.3,[Music]
+1.04,4.48,we built computers to expand our brains
+3.6,3.759,originally scientists built computers to
+5.52,3.76,solve arithmetic but they turn out to be
+7.359,2.801,incredibly useful for many other things
+9.28,2.96,as well
+10.16,3.92,running the entire internet life like
+12.24,4.799,graphics artificial brains
+14.08,4.959,or simulating the universe but amazingly
+17.039,4.961,all of it boils down to just flipping
+19.039,4.4,zeros and ones computers have become
+22.0,3.439,smaller and more powerful
+23.439,3.92,and an incredible rate there's more
+25.439,4.281,computing power in your cell phone than
+27.359,3.68,there was in the entire world in the
+29.72,3.32,mid-1960s
+31.039,4.641,and the entire apollo moon landing could
+33.04,4.24,have been run on a couple of nintendos
+35.68,3.36,computer science is a subject that
+37.28,3.68,studies what computers can do
+39.04,3.92,it's a diverse and overlapping field but
+40.96,4.0,i'm gonna split it into three parts the
+42.96,5.04,fundamental theory of computer science
+44.96,4.16,computer engineering and applications
+48.0,3.52,we'll start with the father of
+49.12,4.24,theoretical computer science alan turing
+51.52,2.559,who formalized the concept of a turing
+53.36,2.4,machine
+54.079,3.521,which is a simple description of a
+55.76,3.52,general purpose computer
+57.6,3.04,people came up with other designs for
+59.28,3.04,computing machines but they're all
+60.64,3.44,equivalent to a turing machine which
+62.32,2.559,makes it the foundation of computer
+64.08,3.12,science
+64.879,3.681,a turing machine contains several parts
+67.2,3.04,an infinitely long tape
+68.56,3.68,that's split into cells containing
+70.24,4.0,symbols there's also a head that can
+72.24,3.919,read and write symbols to the tape
+74.24,3.76,a state register that stores the state
+76.159,3.121,of the head and a list of possible
+78.0,3.04,instructions
+79.28,3.519,in today's computers the tape is like
+81.04,4.0,the working memory or ram
+82.799,4.161,the head is the central processing unit
+85.04,3.36,and the list of instructions is held in
+86.96,3.04,the computer's memory
+88.4,3.759,even though a turing machine is a simple
+90.0,3.439,set of rules it's incredibly powerful
+92.159,3.28,and this is essentially what all
+93.439,3.761,computers do nowadays although
+95.439,3.761,our computers obviously have a few more
+97.2,3.68,parts like permanent storage and all the
+99.2,3.279,other components
+100.88,3.44,every problem that's computable by a
+102.479,4.081,turing machine is computable using
+104.32,4.479,lambda calculus which is the basis of
+106.56,4.0,research in programming languages
+108.799,4.161,computability theory attempts to
+110.56,3.839,classify what is and isn't computable
+112.96,3.519,there are some problems that due to
+114.399,3.921,their very nature can never be solved by
+116.479,3.041,a computer a famous example is the
+118.32,2.88,halting problem where you try and
+119.52,3.919,predict whether a program will stop
+121.2,3.84,running or carry on forever there are
+123.439,3.841,programs where this is impossible to
+125.04,4.24,answer by a computer or a human
+127.28,3.28,many problems are theoretically solvable
+129.28,3.44,but in practice take
+130.56,4.08,too much memory or more steps than the
+132.72,3.36,lifetime of the universe to solve and
+134.64,3.12,computational complexity
+136.08,3.28,attempts to categorize these problems
+137.76,2.96,according to how they scale
+139.36,3.599,there are many different classes of
+140.72,4.239,complexity and many classes of problem
+142.959,3.681,that fall into each type
+144.959,3.521,there are a lot of real world problems
+146.64,3.92,that fall into these impossible to solve
+148.48,4.479,categories but fortunately computer
+150.56,2.959,scientists have a bunch of sneaky tricks
+152.959,2.64,where you can
+153.519,3.921,fudge things and get pretty good answers
+155.599,2.241,but you'll never know if they're the
+157.44,2.64,best
+157.84,4.399,answer an algorithm is a set of
+160.08,3.439,instructions independent of the hardware
+162.239,3.761,or programming language
+163.519,4.0,designed to solve a particular problem
+166.0,2.56,it's kind of like a recipe of how to
+167.519,2.961,build a program
+168.56,3.6,and a lot of work is put into developing
+170.48,2.64,algorithms to get the best out of
+172.16,2.64,computers
+173.12,4.0,different algorithms can get to the same
+174.8,4.0,final result like sorting a random set
+177.12,3.6,of numbers into order but
+178.8,4.0,some algorithms are much more efficient
+180.72,4.72,than others this is studied in
+182.8,4.159,algorithmic complexity information
+185.44,3.36,theorist studies the properties of
+186.959,3.92,information and how it can be measured
+188.8,3.84,stored and communicated
+190.879,3.841,one application of this is how well you
+192.64,3.92,can compress data making it take up less
+194.72,2.72,memory while preserving all or most of
+196.56,3.28,the information
+197.44,4.48,but there are lots of other applications
+199.84,2.64,related to information theory is coding
+201.92,2.319,theory
+202.48,3.52,and cryptography is obviously very
+204.239,3.28,important for keeping information sent
+206.0,3.04,over the internet secret
+207.519,3.36,there are many different encryption
+209.04,3.919,schemes which scramble data and usually
+210.879,3.681,rely on some very complex mathematical
+212.959,3.92,problem to keep the information
+214.56,4.16,locked up these are the main branches of
+216.879,3.44,theoretical computer science although
+218.72,3.36,there are many more that i didn't have
+220.319,4.56,time to go into like logic
+222.08,4.159,graph theory computational geometry
+224.879,4.64,automata theory
+226.239,5.92,quantum computation parallel programming
+229.519,5.28,formal methods and data structures but
+232.159,4.481,let's move on to computer engineering
+234.799,3.201,designing computers is a challenge
+236.64,2.56,because they have to do so many
+238.0,2.959,different things
+239.2,3.36,designers need to try and make sure that
+240.959,3.761,they're capable of solving many
+242.56,3.12,different kinds of problems as optimally
+244.72,2.48,as possible
+245.68,3.04,every single task that runs on a
+247.2,3.2,computer goes through the core of the
+248.72,2.719,computer the cpu
+250.4,3.039,when you're doing lots of different
+251.439,2.561,things at the same time the cpu needs to
+253.439,2.08,switch back
+254.0,2.799,and forth between these jobs to make
+255.519,2.4,sure everything gets done in a
+256.799,2.96,reasonable time
+257.919,4.0,this is controlled by a scheduler which
+259.759,3.841,chooses what to do and when and tries to
+261.919,3.521,get through the tasks in the most
+263.6,3.2,efficient way which can be a very
+265.44,3.199,difficult problem
+266.8,4.0,multi-processing helps speed things up
+268.639,4.721,because the cpu has several cores that
+270.8,4.08,can execute multiple jobs in parallel
+273.36,3.279,but this makes the job of the scheduler
+274.88,3.92,even more complex
+276.639,3.361,computer architecture is how a processor
+278.8,2.959,is designed to perform
+280.0,3.44,tasks and different architectures are
+281.759,4.241,good at different things
+283.44,5.28,cpus are general purpose gpus are
+286.0,4.56,optimized for graphics and fpgas can be
+288.72,3.84,programmed to be very fast at a very
+290.56,3.52,narrow range of task
+292.56,3.28,on top of the raw hardware there are
+294.08,3.119,many layers of software written by
+295.84,2.88,programmers using many different
+297.199,3.681,programming languages
+298.72,4.08,a programming language is how humans
+300.88,3.759,tell a computer what to do and they vary
+302.8,4.16,greatly depending on the job at hand
+304.639,4.0,from low-level languages like assembly
+306.96,3.12,through to high-level languages like
+308.639,4.081,python or javascript
+310.08,4.559,for coding websites and apps in general
+312.72,3.84,the closer language is to the hardware
+314.639,2.801,the more difficult it is for humans to
+316.56,3.28,use
+317.44,3.92,at all stages of this hierarchy the code
+319.84,4.16,that programmers write needs to be
+321.36,4.48,turned into raw cpu instructions
+324.0,3.84,and this is done by one or several
+325.84,3.52,programs called compilers
+327.84,3.6,designing programming languages and
+329.36,4.16,compilers is a big deal because they are
+331.44,3.12,the tool that software engineers use to
+333.52,2.959,make everything
+334.56,4.079,so they need to be as easy to use as
+336.479,4.401,possible but also versatile enough to
+338.639,3.601,allow programmers to build their crazy
+340.88,2.72,ideas
+342.24,2.799,the operating system is the most
+343.6,3.68,important piece of software on the
+345.039,4.321,computer is it's what we interact with
+347.28,4.32,and it controls how all of the other
+349.36,4.24,programs are run on the hardware
+351.6,3.92,and engineering a good operating system
+353.6,3.76,is a huge challenge
+355.52,4.08,this brings us to software engineering
+357.36,3.679,writing bundles of instructions telling
+359.6,3.12,the computer what to do
+361.039,3.041,building good software is an art form
+362.72,2.479,because you have to translate your
+364.08,3.04,creative ideas
+365.199,3.12,into these logical instructions in a
+367.12,3.919,specific language
+368.319,3.761,make it as efficient as possible to run
+371.039,3.521,and as free of
+372.08,4.48,errors as you can so there are many best
+374.56,3.6,practices and design philosophies that
+376.56,3.44,people follow
+378.16,4.0,some other important areas are getting
+380.0,4.16,many computers to communicate and work
+382.16,4.08,together to solve problems
+384.16,4.319,storing and retrieving large amounts of
+386.24,4.959,data determining how well computer
+388.479,4.481,systems are performing at specific tasks
+391.199,4.0,and creating highly detailed and
+392.96,3.76,realistic graphics
+395.199,3.28,now we get to a really cool part of
+396.72,3.599,computer science getting computers to
+398.479,3.601,solve real world problems
+400.319,4.32,these technologies underlie a lot of the
+402.08,4.0,programs apps and websites we use
+404.639,3.201,when you're going on vacation you want
+406.08,4.0,to get the best trip for the money
+407.84,4.24,you're solving an optimization problem
+410.08,3.679,optimization problems appear everywhere
+412.08,3.76,and finding the best path or most
+413.759,4.16,efficient combination of parts can save
+415.84,3.359,businesses millions of dollars
+417.919,3.201,this is related to boolean
+419.199,2.801,satisfiability where you attempt to work
+421.12,3.6,out if a logic
+422.0,4.4,formula can be satisfied or not this was
+424.72,3.599,the first problem proved to be np
+426.4,3.28,complete and so widely considered to be
+428.319,3.201,impossible to solve
+429.68,4.0,but amazing development of new sat
+431.52,4.399,solvers means that huge sap problems are
+433.68,3.84,solved routinely today especially in
+435.919,3.761,artificial intelligence
+437.52,3.679,computers extend our brains and multiply
+439.68,3.12,our cognitive abilities
+441.199,3.681,the forefront of computer science
+442.8,3.679,research is developing computer systems
+444.88,4.0,that can think for themselves
+446.479,4.481,artificial intelligence there are many
+448.88,3.84,avenues that ai research takes the most
+450.96,2.72,prominent of which is machine learning
+452.72,2.72,which aims to
+453.68,3.76,develop algorithms and techniques to
+455.44,3.199,enable computers to learn from large
+457.44,2.8,amounts of data
+458.639,3.68,and then use what they've learned to do
+460.24,3.44,something useful like make decisions or
+462.319,2.801,classify things
+463.68,4.0,and there are many different types of
+465.12,4.079,machine learning closely related are
+467.68,3.519,fields like computer vision
+469.199,3.921,trying to make computers able to see
+471.199,5.041,objects in images like we do
+473.12,5.04,which uses image processing techniques
+476.24,4.0,natural language processing aims to get
+478.16,4.24,computers to understand and communicate
+480.24,4.16,using human language or to process large
+482.4,2.799,amounts of data in the form of words for
+484.4,2.72,analysis
+485.199,3.761,this commonly uses another field called
+487.12,3.199,knowledge representation where data is
+488.96,2.48,organized according to their
+490.319,2.481,relationships like
+491.44,3.36,words with similar meanings are
+492.8,3.839,clustered together machine learning
+494.8,4.079,algorithms have improved because of the
+496.639,4.081,large amount of data we give them
+498.879,3.681,big data looks at how to manage and
+500.72,2.879,analyze large amounts of data and get
+502.56,2.8,value from it
+503.599,3.6,and we'll get even more data from the
+505.36,3.44,internet of things adding data
+507.199,3.601,collection and communications to
+508.8,3.84,everyday objects
+510.8,3.28,hacking is not a traditional academic
+512.64,2.24,discipline but definitely worth
+514.08,2.639,mentioning
+514.88,3.519,trying to find weaknesses and computer
+516.719,3.44,systems and take advantage of them
+518.399,3.681,without being noticed
+520.159,4.24,computational science uses computers to
+522.08,4.96,help answer scientific questions from
+524.399,4.401,fundamental physics to neuroscience and
+527.04,2.96,often makes use of super computing which
+528.8,3.039,throws the way to the world's most
+530.0,2.64,powerful computers of very large
+531.839,3.521,problems
+532.64,4.4,often in the area of simulation then
+535.36,3.44,there is human computer interaction
+537.04,4.479,which looks at how to design computer
+538.8,5.039,systems to be easy and intuitive to use
+541.519,3.201,virtual reality augmented reality and
+543.839,3.361,telepresence
+544.72,3.36,enhancing or replacing our experience of
+547.2,2.56,reality
+548.08,3.92,and finally robotics which gives
+549.76,2.96,computers a physical embodiment from a
+552.0,2.8,roomba
+552.72,3.44,to trying to make intelligent human-like
+554.8,3.36,machines
+556.16,4.0,so that is my map of computer science a
+558.16,2.72,field that's still developing as fast as
+560.16,2.56,it ever has
+560.88,4.0,despite the fact that the underlying
+562.72,4.32,hardware is hitting some hard limits as
+564.88,2.8,we struggle to miniaturize transistors
+567.04,2.239,anymore
+567.68,3.68,so lots of people are working on other
+569.279,3.041,kinds of computers to try and overcome
+571.36,3.44,this problem
+572.32,4.56,computers have had an absolutely huge
+574.8,3.599,impact on human society so it's going to
+576.88,3.6,be interesting to see where this
+578.399,2.88,technology goes in the next hundred
+580.48,4.32,years
+581.279,6.321,who knows perhaps one day we'll all be
+584.8,2.8,computers
+588.08,3.92,as per usual if you want to get hold of
+590.0,4.16,this map as a poster
+592.0,3.839,i've made it available so check in the
+594.16,3.04,description below for some links
+595.839,3.041,and also if you want to find out more
+597.2,3.56,about computer science i recommend you
+598.88,3.36,check out the sponsor for this video
+600.76,3.4,brilliant.org
+602.24,3.76,people often ask me how to go about
+604.16,2.16,learning more about the kind of subjects
+606.0,2.48,i
+606.32,3.84,cover in these videos and as well as
+608.48,3.44,watching videos a really great way is to
+610.16,4.0,get down and solve some real
+611.92,3.2,problems and brilliant does an excellent
+614.16,2.799,job at this
+615.12,3.839,it's a really cool website and also an
+616.959,4.0,app which helps you learn by
+618.959,4.161,getting you to solve interesting
+620.959,3.361,problems in science mathematics and
+623.12,2.88,computer science
+624.32,3.36,and each of the courses starts off kind
+626.0,2.56,of easy and fun and then gets more and
+627.68,3.52,more challenging
+628.56,4.56,as you master the concepts if you want
+631.2,3.6,to learn specifically about computer
+633.12,2.64,science they've got whole courses built
+634.8,3.44,around topics
+635.76,3.68,in this video like logic algorithms
+638.24,3.44,machine learning
+639.44,3.28,artificial intelligence so if you want
+641.68,4.32,to check that out
+642.72,6.16,just type in brilliant.org slash d
+646.0,4.399,o s or even better click the link in the
+648.88,3.12,description below
+650.399,3.12,because that lets them know that you've
+652.0,3.519,come from here
+653.519,5.841,so thanks again for watching and i'll be
+655.519,3.841,back soon with a new video

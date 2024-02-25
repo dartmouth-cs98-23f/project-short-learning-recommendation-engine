@@ -1,0 +1,70 @@
+{
+  "introduction": "In this video, we dive deep into the reasons why using SELECT \* is slow in a row store database engine. We explore the reasons behind this, including full table scans, deserialization costs, and network costs. We discuss how to avoid these issues by using index only scans, and how to optimize client deserialization and client building for better performance.",
+  "sections": [
+    {
+      "title": "Section 1: Understanding SELECT \*",
+      "content": [
+        "Explanation of SELECT \* and its purpose.",
+        "Discussion on the performance implications of using SELECT \*.",
+        "Introduction to the concept of index only scans.",
+        "Explanation of the difference between index only scans and full table scans."
+      ],
+      "topics": ["SELECT \*", "Index Only Scans", "Full Table Scans"]
+    },
+    {
+      "title": "Section 2: Deserialization Costs",
+      "content": [
+        "Explanation of deserialization costs and their impact on performance.",
+        "Discussion on how to reduce deserialization costs by using index only scans.",
+        "Explanation of client deserialization and its role in performance optimization.",
+        "Comparison between client deserialization and client building."
+      ],
+      "topics": ["Deserialization Costs", "Client Deserialization", "Client Building"]
+    },
+    {
+      "title": "Section 3: Network Costs",
+      "content": [
+        "Explanation of network costs and their impact on performance.",
+        "Discussion on how to reduce network costs by using index only scans.",
+        "Explanation of the importance of acknowledging received data and retransmitting lost data.",
+        "Comparison between acknowledging received data and retransmitting lost data."
+      ],
+      "topics": ["Network Costs", "Acknowledging Received Data", "Retransmitting Lost Data"]
+    },
+    {
+      "title": "Section 4: Optimizing Client Deserialization and Client Building",
+      "content": [
+        "Explanation of how to optimize client deserialization and client building for better performance.",
+        "Discussion on the importance of lazy deserialization and avoiding unnecessary data retrieval.",
+        "Explanation of the difference between lazy deserialization and eager deserialization.",
+        "Comparison between lazy deserialization and eager deserialization."
+      ],
+      "topics": ["Client Deserialization", "Client Building", "Lazy Deserialization", "Eager Deserialization"]
+    },
+    {
+      "title": "Section 5: Conclusion and Next Steps",
+      "content": [
+        "Summary of the main points discussed in the video.",
+        "Explanation of how to apply the concepts discussed in the video to real-world scenarios.",
+        "Discussion on future research and improvements in database performance.",
+        "Call to action for viewers to experiment with the concepts discussed in the video."
+      ],
+      "topics": ["Conclusion", "Real-World Applications", "Future Research", "Call to Action"]
+    }
+  ],
+  "topics": ["Database Performance", "SQL Query Optimization", "Network Optimization"],
+  "generalTopics": [
+    {
+      "name": "Database Performance",
+      "complexity": 0.65
+    },
+    {
+      "name": "SQL Query Optimization",
+      "complexity": 0.55
+    },
+    {
+      "name": "Network Optimization",
+      "complexity": 0.75
+    }
+  ]
+}

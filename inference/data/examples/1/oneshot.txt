@@ -1,0 +1,45 @@
+{
+    "introduction": "The video discusses the concept and application of consistent hashing, a method used in distributing systems. The speaker begins by providing a brief explanation of hash tables and their use in software engineering. Then, he delves into issues that arise when the size of arrays changes in hash tables. This leads to the main point of the discussion - challenges in distributed systems when databases become too large for a single instance and need to be broken down or 'sharded' among multiple servers.",
+    "sections": [
+        {
+            "title": "Section 1: Hash Tables and Arrays",
+            "content": [
+                "Explanation of the advantage of hash tables in quickly finding a value given a key.",
+                "The fundamental role of arrays in hash tables.",
+                "Issue with the changing array sizes in hash tables."
+            ]
+        },
+        {
+            "title": "Section 2: Need for Distributed Systems",
+            "content": [
+                "The problem of large databases exceeding the limits of a single instance.",
+                "The decision to distribute or 'shard' the database across multiple servers.",
+                "The challenge presented by only having the key and needing to determine which server to access for the value."
+            ]
+        },
+        {
+            "title": "Section 3: Introduction to Consistent Hashing",
+            "content": [
+                "An attempt to address the issue using the concept of consistent hashing.",
+                "Explanation of how consistent hashing works, converting keys into server names on a circular ‘ring’ of server nodes.",
+                "Discussing how consistent hashing minimises data movement when server nodes are added."
+            ]
+        },
+        {
+            "title": "Section 4: Adding and Removing Servers in Consistent Hashing",
+            "content": [
+                "The computational complexity when a new server is introduced.",
+                "The process and challenges of moving data when a server is to be removed."
+            ]
+        },
+        {
+            "title": "Section 5: Limitations and Considerations with Consistent Hashing",
+            "content": [
+                "The cost and effort involved in consistent hashing, especially in rolling back operations.",
+                "Addressing the need for redundancy in case of server crashes.",
+                "The limitation of having more than 360 servers, potentially causing overlaps in key mapping."
+            ]
+        }
+    ],
+    "conclusion": "Overall, consistent hashing is presented as an efficient method in managing large databases across multiple servers, albeit it revolves around complex computational processes and has various limitations, such as the need for data redundancy and scalability concerns."
+}

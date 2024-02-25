@@ -1,0 +1,75 @@
+{
+"introduction": "In this video, we will build a job board app that can be used as a real startup. We will start by creating a minimum viable product (MVP) that consists of a single data feed from a job board API. We will use React and Redux for the front-end, Node.js and Express for the back-end, and Redis for data storage. We will also implement a cron job to fetch and refresh job data at a specified interval.",
+"sections": [
+{
+"title": "Section 1: Setting up the project",
+"content": [
+"Installing Node.js and npm",
+"Creating a new directory for the project",
+"Initializing the project with npm",
+"Installing required dependencies"
+],
+"topics": ["Node.js", "npm", "project setup", "dependency management"]
+}
+,
+{
+"title": "Section 2: Building the front-end",
+"content": [
+"Creating a new React app",
+"Installing required dependencies",
+"Configuring the app for production",
+"Creating components for the job board"
+],
+"topics": ["React", "React components", "job board UI", "production configuration"]
+}
+,
+{
+"title": "Section 3: Implementing the back-end",
+"content": [
+"Setting up the Express server",
+"Configuring Redis for data storage",
+"Creating API endpoints for job data",
+"Implementing the cron job for job data refresh"
+],
+"topics": ["Express", "Redis", "API endpoints", "cron job"]
+}
+,
+{
+"title": "Section 4: Filtering job data",
+"content": [
+"Defining the filtering criteria",
+"Implementing the filtering algorithm",
+"Testing the filtering logic",
+"Integrating the filtering logic with the job board API"
+],
+"topics": ["filtering criteria", "filtering algorithm", "job board API integration", "testing"]
+}
+,
+{
+"title": "Section 5: Deploying the app",
+"content": [
+"Setting up a production server",
+"Configuring the app for production",
+"Deploying the app to a public domain",
+"Testing the deployed app"
+],
+"topics": ["production server", "production configuration", "public domain deployment", "testing"]
+}
+]
+,
+"topics": ["job board API", "React", "Express", "Redis", "cron job", "filtering algorithm", "production configuration", "public domain deployment"],
+"general topics": [
+{
+"name": "Web Development and Internet Technologies",
+"complexity": 0.80
+},
+{
+"name": "Algorithms and Data Structures",
+"complexity": 0.60
+},
+{
+"name": "Database Systems and Management",
+"complexity": 0.50
+}
+]
+}

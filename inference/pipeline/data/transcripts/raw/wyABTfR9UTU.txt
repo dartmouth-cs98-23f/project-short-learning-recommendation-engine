@@ -1,0 +1,511 @@
+second,duration,transcript
+2.0,4.879,0 is better than functional
+4.319,4.081,or is it the other way around maybe the
+6.879,2.321,next big thing will be better than both
+8.4,2.48,of them
+9.2,3.599,this is one of those arguments that
+10.88,4.16,exercises developers
+12.799,3.04,and they tend to fall into one camp or
+15.04,2.48,the other
+15.839,3.681,either you think that functional
+17.52,4.32,programming is the only sane answer
+19.52,3.919,or ooh is the defining approach for
+21.84,3.84,complex systems
+23.439,3.041,so what are the differences and do they
+25.68,3.28,matter
+26.48,4.0,what advantages does language paradigm
+28.96,3.599,have to offer
+30.48,4.48,and have we found all of the paradigms
+32.559,8.19,that there are to find
+34.96,5.789,[Music]
+41.28,4.4,hi i'm dave farley of continuous
+43.28,5.2,delivery welcome to my channel if you
+45.68,4.8,haven't already please do hit subscribe
+48.48,3.12,and if you enjoyed the video hit like as
+50.48,2.96,well
+51.6,3.76,i'd like to begin by thanking my
+53.44,5.119,sponsors harness
+55.36,5.6,equal experts octopus and spec
+58.559,3.041,flow they're all helping us to grow this
+60.96,2.56,channel
+61.6,4.48,so please do check out their links in
+63.52,4.56,the description below
+66.08,3.039,whatever programming paradigm or
+68.08,3.68,technology you
+69.119,4.161,pick a deployment pipeline will improve
+71.76,3.679,your workflow
+73.28,4.96,check out my new continuous delivery
+75.439,4.561,pipelines book on leanpub
+78.24,3.199,which will help you to get started
+80.0,4.799,building and to build
+81.439,5.841,better deployment pipelines links in the
+84.799,4.241,description again
+87.28,3.519,in this episode i want to explore
+89.04,4.719,programming paradigms
+90.799,4.801,there's an argument made by bob martin
+93.759,4.32,that we've identified all of the
+95.6,5.199,paradigms that there are to find
+98.079,4.961,i think that he might be wrong but we'll
+100.799,4.64,cover that later on
+103.04,3.2,i do though like his analysis of
+105.439,2.561,language the
+106.24,4.239,language paradigms that we currently
+108.0,3.28,have he argues that a programming
+110.479,3.761,paradigm
+111.28,4.4,works by removing a freedom of some kind
+114.24,4.559,it constrains us
+115.68,5.36,in some way limiting our options
+118.799,5.28,in ways that tend to help us to reduce
+121.04,6.16,or even avoid some kinds of mistakes
+124.079,4.081,i quite like that description a good
+127.2,3.039,place to start
+128.16,3.6,is how these paradigms arose in the
+130.239,3.921,first place the first
+131.76,3.199,languages were unstructured kind of
+134.16,3.6,paradigm
+134.959,5.0,free they were general purpose languages
+137.76,3.44,but this first generation were pretty
+139.959,2.92,unconstrained
+141.2,3.84,they were really like high level
+142.879,2.72,assembler languages in some sense you
+145.04,3.68,could do
+145.599,5.041,anything the usual way to describe the
+148.72,5.04,history of programming languages
+150.64,5.679,is as some kind of linear progression
+153.76,3.199,we started with unstructured languages
+156.319,3.2,invented
+156.959,3.28,structure and then oo came along and
+159.519,3.921,finally
+160.239,6.241,functional is the new kid on the block
+163.44,5.439,this is rubbish and completely wrong in
+166.48,3.2,reality it was quite a lot messier than
+168.879,3.121,that
+169.68,4.8,grace hopper wrote the first compiler of
+172.0,4.56,any kind in the early 1950s
+174.48,4.24,fortran was the first high-level
+176.56,4.92,language written in 1957
+178.72,4.48,which is quickly followed by lisp in
+181.48,4.52,1958
+183.2,3.28,so languages began with an unstructured
+186.0,2.72,language
+186.48,4.16,fortran but then the second language
+188.72,4.72,invented was functional
+190.64,3.84,kind of fortran was intentionally
+193.44,3.76,mathematical
+194.48,4.16,fortran was named for formula translator
+197.2,3.84,it was unstructured
+198.64,4.48,but was built on some core concepts that
+201.04,4.08,are common in programming today
+203.12,4.399,concepts like variable assignment
+205.12,4.479,conditionals and loops
+207.519,3.921,cobol was the next big language written
+209.599,3.121,in 1959
+211.44,3.439,it was trying to make programming
+212.72,3.68,language more like natural language and
+214.879,3.201,so easier to learn
+216.4,3.68,which i think that most people these
+218.08,3.92,days would consider a mistake for a
+220.08,4.159,general purpose language
+222.0,4.4,lisp was written for researching
+224.239,4.241,artificial intelligence
+226.4,4.64,at the time we'll come back to the
+228.48,3.119,functional paradigm that lisp gave birth
+231.04,3.919,to
+231.599,6.321,shortly so people built most
+234.959,5.041,systems in fortran or cobol for a while
+237.92,4.239,lisp was a bit of an outlier even
+240.0,3.12,then but systems were getting bigger and
+242.159,3.36,more complex
+243.12,4.399,so the lack of constraints meant that
+245.519,3.601,there were lots of balls of mud being
+247.519,4.8,produced
+249.12,5.44,dykstra came along in 1968.
+252.319,5.04,he wanted systems to be mathematically
+254.56,3.44,provable so he said go-to statements are
+257.359,3.28,considered
+258.0,3.28,harmful and gave birth to structured
+260.639,4.241,programming
+261.28,5.68,in 68. structured programming works by
+264.88,5.28,constraining the flow of
+266.96,5.519,transfer of control you can't just jump
+270.16,5.44,to any point in a program as you could
+272.479,5.761,in cobol or fortran or assembler
+275.6,3.76,you are forced to jump to fixed points
+278.24,3.28,that are defined
+279.36,3.04,jump to points in the language if you
+281.52,4.0,like that we
+282.4,6.0,these days call functions or methods
+285.52,4.48,this allows us to be a bit more cautious
+288.4,4.48,at these points
+290.0,4.96,we're forced to assemble arguments and
+292.88,4.879,we can check them for validity if we
+294.96,5.44,want to when a call is received
+297.759,3.041,as i said earlier it's a mistake to see
+300.4,2.639,this
+300.8,4.08,as some kind of linear progression of
+303.039,4.88,language goodness
+304.88,4.08,while all of this was going on elsewhere
+307.919,4.241,in parallel
+308.96,6.799,ooh was being invented the term oo
+312.16,5.759,was invented by alan kaye in 1966
+315.759,3.921,but the ideas that led to it were around
+317.919,5.12,for a few years before that
+319.68,6.239,even as early as 1961. the first
+323.039,5.6,real oo language was simula which was
+325.919,5.361,created in 1965
+328.639,3.28,but there were earlier attempts the
+331.28,3.919,radical
+331.919,5.761,oo step though was small talk in 1972.
+335.199,3.44,the oo paradigm is not really what most
+337.68,5.04,people think
+338.639,6.0,though it's not really about inheritance
+342.72,4.0,and why it is about putting data and
+344.639,4.641,behavior together i think that most
+346.72,4.72,oo programmers would say it is much more
+349.28,5.359,about polymorphism
+351.44,5.52,later alan kaye said this
+354.639,4.4,i'm sorry that i long ago coined the
+356.96,4.0,term objects for this topic
+359.039,3.6,because it gets many people to focus on
+360.96,5.519,the lesser idea
+362.639,4.241,the big idea is messaging i think that
+366.479,3.361,what
+366.88,5.439,k means here is that the real value is
+369.84,4.88,that we can send a message to something
+372.319,3.6,and it figures out how to process that
+374.72,3.44,message
+375.919,3.761,we can send the same message to two
+378.16,3.92,different things
+379.68,4.32,and each of them deals with that same
+382.08,5.36,message but in different ways
+384.0,5.039,ways that make sense to them this is
+387.44,4.16,polymorphism really
+389.039,4.241,this is the real power of o not
+391.6,5.28,inheritance
+393.28,6.8,in fact the 1972 version of small talk
+396.88,6.4,didn't support inheritance at all
+400.08,5.119,in bob martin's model this uh
+403.28,3.6,this is called dependency management
+405.199,5.201,through polymorphism that's how he
+406.88,6.159,characterizes the oo paradigm
+410.4,4.48,the real value of oo is our ability to
+413.039,4.401,modularize our systems
+414.88,3.28,and deal from the outside with different
+417.44,5.759,modules
+418.16,7.52,in consistent ways this is polymorphism
+423.199,3.921,structured oo and functional aren't the
+425.68,3.919,only paradigms
+427.12,4.72,logic programming constrains programs to
+429.599,3.121,follow the rules of formal logic for
+431.84,2.88,example
+432.72,3.84,you could argue that machine learning in
+434.72,4.24,its current incarnation
+436.56,4.24,is a different paradigm that constrains
+438.96,4.239,programmers by allowing them to pick
+440.8,4.56,good examples and the only defined
+443.199,3.84,fitness functions
+445.36,3.36,but let's get back to our topic for
+447.039,5.28,today though
+448.72,5.759,remember on the timeline kind of weirdly
+452.319,5.841,structured programming is historically
+454.479,6.401,the last of these paradigms to turn up
+458.16,4.64,but let's loop back to the current on
+460.88,4.8,point fashion leader
+462.8,5.28,the functional paradigm the defining
+465.68,5.919,characteristic of functional programming
+468.08,6.799,is really that it constrains assignment
+471.599,3.841,we write code with no side effects each
+474.879,3.201,function
+475.44,4.72,translates its inputs into a new output
+478.08,4.959,and that's all it does
+480.16,4.879,without changing these inputs in any way
+483.039,5.28,and without relying on anything
+485.039,5.201,but its inputs to achieve its goals
+488.319,4.0,sometimes functional programmers talk
+490.24,4.799,about this as separating data
+492.319,4.241,and function but if i'm honest i think
+495.039,3.201,that this is probably so that they can
+496.56,4.24,argue with oo programmers
+498.24,3.76,who talk about combining data and
+500.8,3.76,behavior
+502.0,3.759,in reality i like the idea of the
+504.56,3.68,constraints
+505.759,4.961,i think that we talk a lot of rubbish
+508.24,6.32,about languages and paradigms
+510.72,6.239,i am probably primarily an oo programmer
+514.56,4.959,that's where i spent most of my career
+516.959,3.921,but a lot of my thinking was informed by
+519.519,3.041,my early programming
+520.88,3.68,in assembler languages of different
+522.56,3.6,kinds an unstructured approach
+524.56,2.48,programming approach if ever there was
+526.16,3.119,one
+527.04,4.479,by shooting myself in the foot many
+529.279,4.881,times when writing assembler programs
+531.519,5.521,i adopted some defensive habits that i
+534.16,5.6,later learned were part functional part
+537.04,4.64,part structured so that when i learned
+539.76,4.72,more about these ideas
+541.68,3.52,they kind of fit together and that is
+544.48,2.72,what i
+545.2,3.68,like about this model of constraints
+547.2,4.0,because that's exactly how
+548.88,3.36,and why i learned these things i wanted
+551.2,3.52,to constrain
+552.24,4.719,the freedom with which i made designs so
+554.72,4.72,that i screwed up less often
+556.959,4.401,i adopt programming habits that limit
+559.44,3.2,the degree to which i screw up when i
+561.36,3.52,write code
+562.64,4.639,i don't really think of myself as a
+564.88,4.88,language or even a paradigm-focused
+567.279,5.281,developer but i like to pick the tools
+569.76,5.44,that make sense to me at the time
+572.56,3.52,modern languages are mostly a
+575.2,4.0,combination
+576.08,5.52,of these constraints really pure in
+579.2,4.88,concept although there are some
+581.6,3.04,i laugh when functional programmers
+584.08,4.08,rubbish
+584.64,6.4,oo for example and then go on to use
+588.16,4.64,collections to implement folds and the
+591.04,3.6,degree to which the collections like
+592.8,4.4,these make sense
+594.64,3.28,is really applying polymorphism to me
+597.2,3.52,and oh
+597.92,4.479,idea the degree to which the data is
+600.72,5.04,external in a list
+602.399,6.481,is an implementation detail in this case
+605.76,6.16,as long as we don't change that data
+608.88,5.04,if i write immutable code in java or c
+611.92,4.88,sharp or any other oo programming
+613.92,4.159,language then i can justifiably be seen
+616.8,4.56,to be writing in a
+618.079,6.401,functional style i used to write c
+621.36,5.36,i used to use ideas that i now i'd call
+624.48,3.52,oo and functional in the design of my
+626.72,3.2,code
+628.0,3.68,my language didn't help me much in those
+629.92,4.96,days in the same way that
+631.68,4.24,java doesn't enforce no assignment when
+634.88,3.6,i'm using it
+635.92,3.599,but it doesn't take a lot of
+638.48,4.64,self-discipline
+639.519,6.481,to achieve the same results if i want to
+643.12,3.279,so at the technical level i think that
+646.0,3.12,your
+646.399,3.841,choice of paradigm is just that it's a
+649.12,4.56,choice
+650.24,5.92,and it can be fluid and contextual
+653.68,4.399,let's be clear though you can write crap
+656.16,3.84,code in any paradigm
+658.079,4.0,and you can write great code in any
+660.0,5.6,paradigm too
+662.079,6.641,there's no functional good oh bad
+665.6,5.84,here there's a fashion
+668.72,4.32,for each side to rubbish the other and
+671.44,2.959,if i'm honest i think that that is a
+673.04,3.76,little naive
+674.399,5.041,there are advantages to different para
+676.8,5.2,paradigms different advantages for each
+679.44,4.32,as i've said i am more of an ooh than a
+682.0,3.36,functional programmer so probably
+683.76,3.36,somewhat biased
+685.36,4.24,the problem with this kind of religious
+687.12,4.719,war is that people get over-emotional
+689.6,4.0,so if i do trample on any of your sacred
+691.839,2.721,cows during the course of this please do
+693.6,3.6,forgive me
+694.56,3.36,there is a social dimension to all of
+697.2,3.199,this though
+697.92,4.24,and we need we tend to be too tribal in
+700.399,4.241,software development
+702.16,5.119,broadly i think that we could over
+704.64,4.639,simplify the tribes like this
+707.279,4.0,functional programmers tend to think of
+709.279,4.481,programming as maths
+711.279,4.961,oo programmers tend to think of coding
+713.76,5.759,as a problem of modeling
+716.24,6.24,neither of these are completely true but
+719.519,5.281,may be a reasonable approximation so the
+722.48,4.56,benefits of a functional approach
+724.8,4.88,are that we can abstract ideas into
+727.04,5.84,functions that are always correct
+729.68,4.24,in every circumstance and so write less
+732.88,4.079,code
+733.92,5.359,by excluding or at least constraining
+736.959,4.0,assignment we can create more stable
+739.279,5.281,systems and maybe even
+740.959,6.401,prove more provable systems the benefits
+744.56,5.36,of a model-based approach are that we
+747.36,3.76,can be guided in our analysis by the
+749.92,2.24,problem
+751.12,3.76,i think that this is one of the
+752.16,6.08,advantages that ooh has
+754.88,5.44,over functional programming it's that
+758.24,3.92,when done well the code is more
+760.32,2.959,navigable because it's closer to the
+762.16,2.72,problem
+763.279,3.601,it allows us to explore the
+764.88,3.84,relationships more clearly
+766.88,3.759,and understand the problem in small
+768.72,4.08,pieces in a way that is
+770.639,4.161,closely related to how we think about
+772.8,5.839,the problem
+774.8,6.24,human beings are naturally classifiers
+778.639,4.32,this gets us to what seems to me like an
+781.04,4.88,important point
+782.959,5.44,i think oo is more closely aligned with
+785.92,4.64,how humans brains work
+788.399,3.44,i can certainly buy the claim that the
+790.56,3.92,more mathematical
+791.839,5.12,functional approach is a more rigorous
+794.48,5.68,way to capture an idea
+796.959,4.081,but much as i love maths it's famously
+800.16,2.88,difficult
+801.04,4.4,and in essence an unnatural way of
+803.04,5.28,thinking for human brains
+805.44,5.44,we value mathematical thinkers highly
+808.32,5.36,because their skills are so rare
+810.88,4.16,this is so obvious if i throw a ball to
+813.68,3.92,you
+815.04,4.4,is it easier to catch it or to work out
+817.6,3.44,the physics of its flight and predict
+819.44,3.839,where it will land so that you can move
+821.04,4.08,to the right place
+823.279,4.081,we don't do the maths when we catch a
+825.12,3.44,ball if we did we'd certainly miss the
+827.36,4.0,ball
+828.56,4.0,so there's something to be said for ease
+831.36,5.2,of comprehension
+832.56,8.079,clarity of expression which is clearer
+836.56,6.639,this or this
+840.639,4.161,even if you are a functional programmer
+843.199,2.561,i think that you would agree that the
+844.8,4.08,second version
+845.76,5.68,was easier to read sure we can
+848.88,3.12,argue about the flexibility of folds
+851.44,2.88,versus
+852.0,3.6,loops and because of the immutability of
+854.32,3.36,functional style
+855.6,4.0,our potential to parallelize the
+857.68,3.279,computation of our programs
+859.6,2.799,an argument which i confess as a
+860.959,3.201,developer of high performance systems
+862.399,3.281,i'm a bit skeptical about
+864.16,3.679,but the readability the
+865.68,3.519,comprehensibility of our code matters a
+867.839,4.0,lot
+869.199,5.361,here is a function written in imperative
+871.839,5.68,style in this case in java
+874.56,3.68,we're just going to look at a collection
+877.519,4.88,of numbers
+878.24,4.159,and form some kind of total
+882.8,4.64,here is the same function written in
+884.959,2.481,haskell
+887.68,3.68,in this case we're going to define the
+890.72,4.08,function
+891.36,5.44,as a recursive function
+894.8,3.68,the first seems to be a lot easier to
+896.8,3.36,explain to somebody that has never
+898.48,5.2,written any code
+900.16,6.479,because of this alignment with the way
+903.68,4.719,in which people think about things
+906.639,3.121,you have to ask to access some
+908.399,4.44,reasonably complex
+909.76,6.079,ideas like recursion to even start to
+912.839,5.961,understand the second example
+915.839,5.281,yes the code is shorter but that
+918.8,5.279,compromises its readability somewhat
+921.12,6.079,too the first is a bit more like
+924.079,6.161,catching the ball than doing the maths
+927.199,6.161,in reality in haskell this sum function
+930.24,6.88,is a library function which i'm told is
+933.36,3.76,apparently implemented like this
+937.839,5.041,i rest my case i think that the
+940.32,5.199,functional paradigm has a lot to offer
+942.88,3.12,in particular the idea of limiting side
+945.519,2.801,effects
+946.0,4.0,is an excellent one however you choose
+948.32,3.68,to write your programs
+950.0,4.24,i've adopted that style of thinking in
+952.0,5.44,my oo code for a long time now
+954.24,5.039,not eliminating assignment but certainly
+957.44,3.04,limiting it and reducing the side
+959.279,3.601,effects
+960.48,3.2,i confess that i've never tried to write
+962.88,3.28,a whole
+963.68,3.68,functional sys system as a pure
+966.16,2.88,functional system
+967.36,3.44,and i'm sure that i would learn a lot if
+969.04,4.0,i did but i think
+970.8,4.719,that one of the reasons that everyone
+973.04,4.479,doesn't do functional programming
+975.519,4.161,is that it's more difficult to transpose
+977.519,4.081,these isds into the kinds of functions
+979.68,4.159,in a way that keeps the code readable
+981.6,4.32,and navigable
+983.839,4.081,i said at the beginning that i disagreed
+985.92,4.24,somewhat with bob martin about
+987.92,4.08,whether we have found all of the
+990.16,4.479,programming paradigms
+992.0,3.36,there is another aspect of programs and
+994.639,4.0,programming
+995.36,4.0,that we can usefully constrain that has
+998.639,3.361,some very
+999.36,4.56,interesting properties that is
+1002.0,4.56,synchronicity
+1003.92,4.8,what if we constrained our programs to
+1006.56,3.92,disallow synchronous calls between
+1008.72,3.76,modules of code
+1010.48,3.359,each component of the system only
+1012.48,4.799,communicated
+1013.839,6.721,with any other by sending a message
+1017.279,6.881,response is sent in a different message
+1020.56,6.879,some time later i'm not talking
+1024.16,6.72,about async awaits here which i dislike
+1027.439,4.24,more like this a sends an add item
+1030.88,3.84,message
+1031.679,5.76,to b sometime later b
+1034.72,5.76,sends an item added message back saying
+1037.439,5.921,confirming the receipt
+1040.48,3.92,concurrency only allowed at these module
+1043.36,4.079,boundaries
+1044.4,3.6,no creating threads inside a module each
+1047.439,3.041,module
+1048.0,3.28,is internally single threaded and so
+1050.48,4.079,naturally
+1051.28,6.639,concurrent each module is
+1054.559,6.561,allowed to be stateful or stateless
+1057.919,5.361,as need arises this approach is
+1061.12,3.919,significantly higher performance than
+1063.28,2.24,any other approach that i am familiar
+1065.039,2.081,with
+1065.52,3.279,certainly higher performance than a
+1067.12,4.08,functional design
+1068.799,4.24,functional systems copy a lot of stuff
+1071.2,4.24,to achieve immutability
+1073.039,4.481,the best that they can do is clever
+1075.44,3.2,tricks to pretend that they're copying
+1077.52,2.96,things
+1078.64,3.039,but but actually not moving the bytes
+1080.48,3.68,around in memory
+1081.679,5.841,however clever these tricks are though
+1084.16,5.92,it's still going to add cpu cycles
+1087.52,3.6,this is less tightly coupled than oo
+1090.08,3.76,systems this
+1091.12,4.16,this approach of limiting synchronicity
+1093.84,3.6,that i've described
+1095.28,5.2,but it has some properties of both
+1097.44,5.52,functional and oo design
+1100.48,4.16,it also sounds to me quite a lot closer
+1102.96,4.719,to the vision that alan k
+1104.64,4.56,had back in the 1960s
+1107.679,3.441,i wrote about some of these ideas in a
+1109.2,4.479,thing called the reactive manifesto
+1111.12,4.4,there's a link in the description if
+1113.679,4.321,you'd like to hear more about
+1115.52,3.84,these kinds of ideas in a future video
+1118.0,5.84,do let me know in the comments
+1119.36,4.48,thank you very much for watching
+1129.33,3.69,[Music]

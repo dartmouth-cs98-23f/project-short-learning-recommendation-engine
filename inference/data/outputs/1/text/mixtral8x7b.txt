@@ -1,0 +1,46 @@
+"introduction": "The video provides an introduction to the new language model, Mistral, which was recently released by Mistral AI, a startup in Europe. The speaker explains the differences between Mistral and other transformer-based models, including the vanilla transformer and LLama. The speaker further outlines the topics to be covered in the video, including the sliding window attention, the kv cache, sparse mixture of experts, sharding, pipeline parallelism, and code analysis of Mistral."
+
+"sections": [
+    {
+      "title": "Architecture Differences",
+      "content": [
+        "Mistral is a decoder-only model that resembles LLama but differs in various aspects.",
+        "Vanilla Transformer vs. Mitral: Vanilla Transformer has cross attention and Mitral uses sliding window attention.",
+        "Feed Forward Networks: Mitral has 8x7b feed forwards in parallel with experts, while the vanilla Transformer uses ReLU or ZiGo functions.",
+        "Mistral repeats the block 32 times, with the output of each feed going to the next layer as input. The output finalizes at the linear and softmax layers.",
+        "Comparison of Mistral's architecture with other transformer models.",
+        "Understanding the code analysis of Mitral."
+      ]
+    },
+    {
+      "title": "Sliding Window Attention",
+      "content": [
+        "Explanation of sliding window attention, which is similar to group query attention but with a rolling buffer cache."
+        "Differences between sliding window attention and LLama.",
+        "A brief introduction to the kv cache.",
+        "Explanation of Mitral's sharding process."
+        "Comparison of Mitral with other transformer models."
+      ]
+    },
+    {
+      "title": "Pipeline Parallelism",
+      "content": [
+        "Explanation of pipeline parallelism in LLama."
+        "How pipeline parallelism differs from Mitral's expert network architecture.",
+        "Understanding the concept and role of Mitral in LLM development."
+      ]
+    },
+    {
+      "title": "The X-Fer Mixer Library",
+      "content": [
+        "Mistral uses the X-Fer Mixer Library with the block attention mechanism.",
+        "Comparison with other transformer models and their attention mechanisms.",
+        "The role of X-Fer Mixer in Mitral's architecture."
+      ]
+    },
+    {
+      "title": "Conclusion",
+      "content": [
+        "Summary of key points discussed in the video.",
+        "Recap of the evolution of LLM technology.",
+        "Future outlook for LLMs and their role in

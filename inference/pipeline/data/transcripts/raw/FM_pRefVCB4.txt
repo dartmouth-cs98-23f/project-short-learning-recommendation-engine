@@ -1,0 +1,243 @@
+second,duration,transcript
+0.0,3.84,hello and welcome to pseudocode this
+1.68,5.04,video onwards we are going to start our
+3.84,5.12,journey of design patterns and before i
+6.72,3.76,go into the details of types of design
+8.96,3.679,patterns and we start looking at
+10.48,4.159,different class diagrams and code let's
+12.639,4.48,first try to understand
+14.639,4.881,why there are design patterns why do we
+17.119,5.361,study them what is the use of design
+19.52,5.28,patterns why are they so popular and
+22.48,6.84,what actually every design pattern
+24.8,4.52,entails so let's get started
+36.88,3.92,even though there are different
+38.8,4.72,techniques for object oriented modeling
+40.8,3.759,like uml diagrams concept of classes and
+43.52,2.64,objects
+44.559,3.361,and there are different principles like
+46.16,3.28,solid principles which we have discussed
+47.92,3.2,if you have not watched those videos
+49.44,3.279,please go and check them out even though
+51.12,3.439,these principles exist even though there
+52.719,4.241,are so many guidelines and techniques
+54.559,4.32,still it is not possible to model the
+56.96,3.919,real world in terms of objects and
+58.879,4.32,classes there are some problems which
+60.879,4.161,cannot actually directly be modeled
+63.199,3.761,there are also some scenarios which do
+65.04,3.6,not exist in real world but have to be
+66.96,3.92,solved in code
+68.64,4.88,in those cases there are different set
+70.88,4.48,of problems that occur and there are
+73.52,3.52,certain solutions to those problems
+75.36,4.0,which have been solved in different
+77.04,4.8,complex object-oriented problems such
+79.36,5.119,problems occur in the world of
+81.84,4.639,object-oriented software design
+84.479,3.68,over and over again and there are some
+86.479,4.161,solutions in order to solve those
+88.159,4.561,problems and those solutions are very
+90.64,4.479,definite so since we do not have to
+92.72,4.399,reinvent the wheel and since all those
+95.119,4.0,problems have been faced by expert
+97.119,3.601,designers and software developers
+99.119,3.521,previously they have come up with
+100.72,3.28,different patterns using which they have
+102.64,3.6,solved those problems and those
+104.0,4.079,solutions have been robust over time
+106.24,4.08,they have proven their worth over time
+108.079,3.921,and hence we study these design patterns
+110.32,4.799,using these design patterns we can
+112.0,5.2,actually solve the complex and classic
+115.119,4.561,problems in software world
+117.2,4.08,and we don't have to go looking for new
+119.68,3.28,solutions because these are tried and
+121.28,4.159,tested solutions tried and tested
+122.96,4.479,patterns which have been used and have
+125.439,3.921,proven their worth over time
+127.439,3.6,if i have to pick up the definition of a
+129.36,3.36,design pattern from a book which i have
+131.039,3.121,linked in the description the definition
+132.72,3.599,of design pattern goes something like
+134.16,5.12,this each pattern describes a problem
+136.319,5.441,that occurs over and over multiple times
+139.28,4.4,in our environment and core of the
+141.76,4.16,solution to that problem that that you
+143.68,4.559,can use a million times without ever
+145.92,4.64,doing it same way twice
+148.239,4.08,now what does this mean this means that
+150.56,4.959,every pattern that we are going to study
+152.319,5.28,is going to describe a problem
+155.519,3.841,and the solution the core part of the
+157.599,3.92,solution to that problem using that
+159.36,4.959,pattern but the implementation of that
+161.519,4.561,pattern by you or by someone else for
+164.319,3.681,that similar kind of problem is not
+166.08,3.6,going to be the same you will use that
+168.0,3.68,pattern because as the name itself
+169.68,3.68,suggest it's a pattern it's a template
+171.68,3.52,you're going to use that pattern you're
+173.36,4.159,going to use that pattern to identify
+175.2,3.92,the problem to identify the core way of
+177.519,3.44,solving that problem but your
+179.12,3.759,implementation might vary depending on
+180.959,3.841,the language depending on the context
+182.879,4.08,depending on the domain of the problem
+184.8,4.32,and hence one design pattern can be
+186.959,3.521,implemented in different ways in order
+189.12,3.28,to solve similar problems but the
+190.48,3.759,implementation of those patterns can or
+192.4,3.839,cannot be same again going by the
+194.239,4.241,definition of for the design patterns by
+196.239,4.801,the book any pattern consists of four
+198.48,4.64,parts the pattern name itself the
+201.04,4.64,problem the solution to that problem and
+203.12,5.039,the consequences of using that pattern
+205.68,4.639,let's see what each of these means
+208.159,4.561,the pattern or the pattern name itself
+210.319,4.321,actually gives you an idea about the
+212.72,4.32,problem what that pattern is going to
+214.64,4.64,solve or how that particular problem is
+217.04,4.16,solved using that pattern when you hear
+219.28,4.0,names like factory pattern or adapter
+221.2,4.48,pattern or command of chain pattern you
+223.28,5.12,get an idea from the name about the kind
+225.68,5.119,of problem this pattern might be solving
+228.4,4.24,also it's a good idea to have the name
+230.799,3.761,for a pattern so that you can actually
+232.64,4.0,communicate with your peers your other
+234.56,4.08,developers and other stakeholders in an
+236.64,3.28,effective way if they also understand
+238.64,3.36,the same pattern that you are talking
+239.92,4.879,about you can actually use the name of
+242.0,5.28,that pattern in order to ease
+244.799,4.241,your communication for example many of
+247.28,3.76,us have been using different design
+249.04,3.199,patterns i'm also among one of them that
+251.04,2.72,we have been using different design
+252.239,3.601,patterns but we don't know the name for
+253.76,3.599,it yet and if someone asks that same
+255.84,3.119,thing in an interview or in a
+257.359,3.521,conversation we just don't know the name
+258.959,3.441,it might sound very trivial to not
+260.88,3.36,remember the names of patterns but
+262.4,4.32,actually if you know the names of the
+264.24,3.84,patterns that you're using or that uh
+266.72,3.36,using those patterns if you're solving
+268.08,4.32,the problems it makes it much easier for
+270.08,4.399,you to communicate with others and
+272.4,3.359,also to provide solution to others so
+274.479,3.361,the pattern name just gives you a
+275.759,3.44,vocabulary and a common ground to stand
+277.84,3.12,on while carrying out the technical
+279.199,3.681,discussions the next part of the design
+280.96,4.72,pattern is the problem itself the
+282.88,5.039,pattern actually describes the problem
+285.68,3.84,it is going to solve this whole idea
+287.919,3.361,comes from one of the books which has
+289.52,3.679,been written about the towns and cities
+291.28,3.919,the structuring of towns and cities if
+293.199,4.321,you think about it all the towns and
+295.199,4.641,cities have similar kind of problems how
+297.52,3.92,the water flow will be taken care of how
+299.84,3.68,the garbage will be taken care of how
+301.44,3.84,the traffic of the city will be designed
+303.52,3.92,so that people can move from one part of
+305.28,4.08,the city to another and all those
+307.44,4.479,problems have similar kind of solutions
+309.36,4.64,we all have flyovers and signals in our
+311.919,4.0,cities we all have garbage collected
+314.0,3.919,trucks in our cities we all have an
+315.919,4.56,underlying severe system in the cities
+317.919,4.881,right so design pattern also describes
+320.479,4.321,the kind of problem that we are solving
+322.8,4.32,and then there is a solution to the
+324.8,4.64,problem which brings us to the third
+327.12,4.639,part of the pattern the solution itself
+329.44,4.16,if you think about it for any city the
+331.759,3.681,straightforward solution to control the
+333.6,3.439,traffic is traffic signals
+335.44,3.36,straightforward solution to control the
+337.039,4.561,speed of the vehicles are the speed
+338.8,4.64,breakers if a city wants to be green and
+341.6,3.68,environmental friendly and it wants to
+343.44,3.12,reduce number of vehicles on the road
+345.28,3.52,there are solutions like public
+346.56,4.56,transport which includes metros buses
+348.8,4.72,etc similarly the pattern describes the
+351.12,4.0,problem and the solution the problem
+353.52,4.72,in the example that we're talking about
+355.12,5.04,is moving of people from one place to
+358.24,3.36,another without harming the environment
+360.16,3.28,and the solution is
+361.6,3.92,public transport the problem is
+363.44,3.84,controlling the accidents in the in the
+365.52,3.76,city controlling the speed of the
+367.28,4.16,vehicles and the answer is speed breaker
+369.28,4.24,similarly every design pattern which is
+371.44,4.4,describing a problem will describe a
+373.52,4.239,solution to that problem also that you
+375.84,4.079,can go and use
+377.759,3.761,in your code base or in your design you
+379.919,3.84,can map actually the problem to the
+381.52,3.6,problem and solution to the solution and
+383.759,3.44,obviously the last part is the
+385.12,3.6,consequences if you are going to apply a
+387.199,4.0,design pattern obviously there are going
+388.72,3.84,to be the pro and the basic pro is that
+391.199,3.601,you get a solution to the problem that
+392.56,3.84,you are solving but there are also going
+394.8,3.6,to be cons of using certain design
+396.4,3.919,patterns that also we will study with
+398.4,3.919,each design pattern that where are the
+400.319,3.281,situations where it is a good idea to
+402.319,2.88,use a pattern and where are the
+403.6,3.28,situations where it is not a good idea
+405.199,4.081,to use such a pattern and just go with
+406.88,4.56,the naive way or the direct way of
+409.28,4.24,solving that problem again if we talk
+411.44,4.319,about the example of cities true if you
+413.52,4.56,build roads and good traffic signals and
+415.759,4.72,good traffic uh control system in the
+418.08,4.32,city it allows people to travel from one
+420.479,4.16,place to another but the obvious con is
+422.4,4.16,that you end up with a lot of people
+424.639,2.96,emitting a lot of co2 in the environment
+426.56,2.56,because they have their personal
+427.599,3.6,vehicles then you come up with another
+429.12,3.28,solution like public transport but then
+431.199,2.801,again you have to care about the
+432.4,3.519,security of the public transport and
+434.0,3.599,running cost of the public transport so
+435.919,4.081,that the government does not incur all
+437.599,4.72,the losses while uh giving a reasonable
+440.0,4.4,option to the uh citizens of that
+442.319,3.6,particular city so
+444.4,3.04,naturally any design pattern that you
+445.919,4.0,are using it will it is going to have
+447.44,4.4,some consequences some pros and cons and
+449.919,3.601,weighing these pros and cons in order to
+451.84,3.68,make a decision whether you should apply
+453.52,3.76,that design pattern or not is one of the
+455.52,3.679,very important part of your decision
+457.28,3.28,making of your design decision making
+459.199,3.361,and hence i am talking about the
+460.56,4.319,structure of design pattern here
+462.56,3.919,before we go ahead and act and learn the
+464.879,3.121,actual design patterns these are the
+466.479,2.881,things that we have to keep in mind
+468.0,2.639,while learning and applying those
+469.36,4.239,patterns
+470.639,5.441,so this was the brief definition of what
+473.599,4.641,design patterns entail why we study
+476.08,4.0,design patterns and how can we use
+478.24,4.16,design patterns so that they are useful
+480.08,3.839,to us and are not creating any negative
+482.4,3.04,impact on the design that we are
+483.919,3.041,creating in the next video we are going
+485.44,3.039,to talk about the organization of
+486.96,3.919,different design patterns and the types
+488.479,3.631,of design patterns till then take care
+490.879,4.281,see
+492.11,3.05,[Music]

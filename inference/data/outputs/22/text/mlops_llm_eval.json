@@ -1,0 +1,60 @@
+{
+"introduction": "This episode of the MOPS Community Podcast features a conversation with Apara, co-founder of Arise AI. Apara discusses her experience in evaluating large language models (LLMs) and the challenges and opportunities presented by this emerging field. She shares insights from her work at Uber and her current role at Arise, where she leads the product team. Apara also discusses the importance of observability in LLM systems and the role of Phoenix, an open-source package developed by Arise, in this area.",
+"sections": [
+{
+"title": "Section 1: Introduction to LLM Evaluation",
+"content": [
+"Discussion of the importance of evaluating LLMs for understanding their performance and identifying areas for improvement.",
+"Explanation of the different types of LLM evaluations, including context length and placement of context within the application."
+],
+"topics": ["LLM evaluation", "Context length", "Context placement"]
+},
+{
+"title": "Section 2: Evaluating LLM Performance",
+"content": [
+"Discussion of the challenges faced in evaluating LLM performance, including the need for rigorous study and benchmarking.",
+"Explanation of the importance of understanding the data set used for training and testing LLMs."
+],
+"topics": ["LLM performance evaluation", "Data set understanding"]
+},
+{
+"title": "Section 3: Observability in LLM Systems",
+"content": [
+"Discussion of the importance of observability in LLM systems for understanding their behavior and identifying issues.",
+"Explanation of the role of Phoenix in providing visibility into LLM applications and their performance."
+],
+"topics": ["Observability in LLM systems", "Phoenix role"]
+},
+{
+"title": "Section 4: LLM Fine-Tuning and Training",
+"content": [
+"Discussion of the role of fine-tuning and training in improving LLM performance and understanding.",
+"Explanation of the importance of considering the lowest hanging fruit for improving LLM performance."
+],
+"topics": ["LLM fine-tuning", "LLM training", "Lowest hanging fruit"]
+},
+{
+"title": "Section 5: Scaling LLM Applications",
+"content": [
+"Discussion of the importance of scaling LLM applications for real-world use and measuring their ROI.",
+"Explanation of the challenges faced in scaling LLM applications and the need for a rigorous approach."
+],
+"topics": ["LLM application scaling", "ROI measurement", "Scaling challenges"]
+}
+],
+"topics": ["LLM evaluation", "Data set understanding", "Observability in LLM systems", "LLM fine-tuning", "LLM training", "LLM application scaling", "ROI measurement", "Scaling challenges"],
+"general topics": [
+{
+"name": "LLM Evaluation",
+"complexity": "0.80"
+},
+{
+"name": "Data Science and Analytics",
+"complexity": "0.70"
+},
+{
+"name": "Programming Languages and Software Development",
+"complexity": "0.60"
+}
+]
+}

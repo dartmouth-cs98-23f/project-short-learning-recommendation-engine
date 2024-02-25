@@ -1,0 +1,506 @@
+second,duration,transcript
+7.44,4.74,alright so sounds like my mic is live so
+10.74,4.71,thank you for sticking around this
+12.18,4.89,afternoon again so I'm Harlan Harris my
+15.45,3.87,day job is I work for the Education
+17.07,4.08,Advisory Board we build enterprise
+19.32,3.99,software and do best practices research
+21.15,4.05,for colleges and universities and as
+23.31,4.08,Jared mentioned I'm also co-founder of
+25.2,4.11,data community DC and the data science
+27.39,5.849,DC meet up if you are on town you should
+29.31,5.88,definitely check us out my academic
+33.239,3.66,background is in machine learning and in
+35.19,3.36,cognitive science i'm not a software
+36.899,3.331,architect by training but i have worked
+38.55,4.109,closely with software architects and a
+40.23,3.87,number of project projects and so i'm
+42.659,4.141,going to talk today about some things
+44.1,4.649,that I have learned so i'm going to talk
+46.8,4.859,about architecture and i'm going to talk
+48.749,4.68,about choices so first of all what is
+51.659,4.56,software architecture what do I mean I'm
+53.429,4.5,just going to steal from wikipedia it's
+56.219,3.12,the high level structure of a software
+57.929,4.171,system particularly a complicated
+59.339,5.04,software system as well as the sort of
+62.1,5.25,processes and things around it and in
+64.379,5.491,terms of choices what I mean is what
+67.35,4.11,technologies are you going to use what
+69.87,4.38,are the boundaries between each of those
+71.46,5.67,technologies what do the piece different
+74.25,4.65,pieces do and also importantly who's
+77.13,4.35,responsible for building each of the
+78.9,5.31,pieces of these technologies and in
+81.48,4.89,order to make good architectural choices
+84.21,3.51,you have to ask good questions and so
+86.37,2.64,I'm today going to walk through some
+87.72,3.45,questions that I found to be helpful
+89.01,4.74,when making choices about software
+91.17,7.23,architecture and particularly when it
+93.75,7.23,involves are so a bunch of questions
+98.4,6.21,first question is is a data product at
+100.98,6.36,all so some of you may have read this
+104.61,4.8,book data jujitsu by DJ Patil who is now
+107.34,3.57,a DC resident he also has the
+109.41,3.96,second-rate title of chief data
+110.91,3.9,scientist of the United States but
+113.37,3.84,anyway he wrote this great little 18
+114.81,4.86,page ebook about data products however
+117.21,4.98,it doesn't really define a data product
+119.67,5.43,to my mind and so particularly when
+122.19,5.929,working in our not all of our work is
+125.1,8.279,data products and so if you're do well
+128.119,8.73,keynote quit unexpectedly I have never
+133.379,3.47,seen that all right I'll be right back
+140.14,15.79,hahahaha should have used PowerPoint our
+146.45,14.069,mark down okay uh see where am I hey
+155.93,6.15,we're back okay right so if you're doing
+160.519,4.141,an analysis it doesn't have what an
+162.08,4.29,architect architect might describe as a
+164.66,3.12,maintenance phase that maybe you don't
+166.37,3.03,have to worry about this stuff so if
+167.78,3.84,you're writing a report in a suite or
+169.4,5.85,something or a one-off shiny app then
+171.62,5.459,you know tune out for the next 17
+175.25,3.45,minutes but if you do have a maintenance
+177.079,4.19,phase then I think you need to ask these
+178.7,6.509,questions and make some of these choices
+181.269,6.131,so next question is how many users are
+185.209,4.14,you writing this application for so if
+187.4,3.96,you have something small maybe used just
+189.349,3.121,by a few or a few dozen people inside of
+191.36,2.64,an organization you might make a
+192.47,4.349,different choice there's some really
+194.0,4.98,great options for this so half the
+196.819,4.23,people in last two days have talked
+198.98,4.68,about shiny killer tool for hosting
+201.049,4.891,relatively simple reactive web apps it
+203.66,5.1,does scale well particularly if you pay
+205.94,4.799,our studio for their server product you
+208.76,3.96,can also roll your own with our Apache
+210.739,3.72,or some other things I've seen less
+212.72,4.799,about our Apache and rook in recent
+214.459,4.891,years I don't know sort of why that is
+217.519,3.631,but it's definitely an option you can
+219.35,6.59,also roll your own servers and Python
+221.15,8.01,and so forth if you'd like next question
+225.94,6.129,where does the model end and the rest of
+229.16,4.53,the application begin so in some
+232.069,3.361,circumstances your model might be the
+233.69,3.12,entire application and again something
+235.43,5.55,like shiny might be a really great
+236.81,6.42,approach for solving that problem but on
+240.98,4.159,other circumstances your model might
+243.23,5.49,just be a small piece of a big system
+245.139,5.41,and this brings to mind sort of a recent
+248.72,3.84,trend in systems architecture called
+250.549,3.78,micro services this is sort of an
+252.56,4.56,updated take on the services oriented
+254.329,5.611,architecture trend of about ten years or
+257.12,4.229,so ago and the idea is pretty simple if
+259.94,3.57,you're building a little piece of a big
+261.349,3.901,system you think about building a little
+263.51,3.81,standalone web service that interacts
+265.25,5.73,with the other pieces in a sort of
+267.32,6.06,well-defined well architected way and
+270.98,4.77,other other pieces of the system then
+273.38,4.38,end up rendering the web pages and the
+275.75,3.93,charts and graphs and so forth so you
+277.76,4.49,know sorry not ggplot it's going to be
+279.68,7.92,JavaScript but the model itself might be
+282.25,7.12,remain in our but not necessarily maybe
+287.6,3.24,you don't actually need to have our in
+289.37,3.39,the loop in in particular in the
+290.84,3.57,prediction loop so if you're fitting a
+292.76,3.63,regression model and your results is
+294.41,3.54,just some coefficients or you're
+296.39,3.39,building just a really simple decision
+297.95,3.42,tree maybe you don't actually need to
+299.78,3.6,bother somebody I can't remember who
+301.37,3.87,said once that much of the time you can
+303.38,4.17,turn your model into just a few lines of
+305.24,5.1,sequel and be done with it right sequel
+307.55,5.4,the logic is just a simple decision tree
+310.34,4.86,and so maybe all you need to do is throw
+312.95,3.48,your coefficients over the wall not
+315.2,3.3,always a good idea but there are
+316.43,4.17,exceptions a slightly more powerful
+318.5,3.93,approach is p FML predictive model
+320.6,3.3,markup language this gives you a little
+322.43,3.18,more control over things like feature
+323.9,5.49,engineering and there are some
+325.61,6.21,interesting options there too next
+329.39,4.56,question how often at what temp oh do
+331.82,4.02,you need to make predictions do you need
+333.95,3.33,to make predictions on a daily basis or
+335.84,3.87,do you need to make predictions in the
+337.28,3.66,next say 20 milliseconds and so
+339.71,3.54,architectural you're going to make a
+340.94,5.46,really different choice depending on
+343.25,5.7,this so that is Anna batcher on-demand
+346.4,5.16,process or equivalently how far in
+348.95,7.56,advance do you know what entities you
+351.56,9.65,need to predict a note on the sort of on
+356.51,6.87,demand thing so the performance of
+361.21,3.94,different algorithms varies a lot in
+363.38,4.2,terms of how quickly the latency can be
+365.15,3.78,if you have a new example so things like
+367.58,3.33,k-nearest neighbor is really expensive
+368.93,4.26,to make new predictions if you have to
+370.91,3.78,do that really fast things like support
+373.19,3.57,vector machines could be kind of slow as
+374.69,3.36,well even random forests are doing a
+376.76,3.39,really simple thing but a fair number of
+378.05,4.05,times if this is really important to you
+380.15,3.87,there's some interesting techniques that
+382.1,3.78,I've learned about recently such as
+384.02,3.45,lattice regression that actually turned
+385.88,3.48,types of prediction model into like a
+387.47,6.42,linear interpolation of look-up tables
+389.36,6.84,and this can be incredibly fast so that
+393.89,4.14,was prediction there the next question
+396.2,4.98,is fitting how frequently do you need to
+398.03,5.19,fit a model so you know if you're doing
+401.18,3.72,this on an annual basis this is probably
+403.22,3.03,somebody sitting down there
+404.9,2.73,taking a week they're trying to figure
+406.25,3.15,out what all the bit the best type of
+407.63,3.3,parameters are and the best architecture
+409.4,3.63,and everything else that's a very
+410.93,3.0,different story from a daily fit this is
+413.03,2.85,probably something you're doing
+413.93,3.63,automatically but you can have
+415.88,2.7,monitoring processes that are going to
+417.56,2.639,tell you what your daily
+418.58,3.54,cross-validation score is or something
+420.199,4.321,and if you're doing this on an ongoing
+422.12,3.93,basis so every time an input comes in
+424.52,3.149,your shifting your coefficients or
+426.05,3.209,something then you're probably using
+427.669,3.991,some sort of specialized online
+429.259,5.521,algorithm the architectural choices here
+431.66,5.879,are depend a lot on the frequency of
+434.78,4.919,fitting this of course is related to the
+437.539,3.841,concept of concept rift or comeria drift
+439.699,3.811,so how fast is the world that you care
+441.38,4.53,about change if you're thinking about
+443.51,5.1,quarterly retail sales that kind of
+445.91,4.53,world changes pretty slowly and you're
+448.61,3.809,maybe fitting on an annual basis if
+450.44,3.36,you're doing high-frequency finance or
+452.419,5.25,twitter trends or something then the
+453.8,5.67,world is changing pretty quick next
+457.669,6.331,question how many models are you
+459.47,7.68,building are you building one model are
+464.0,5.58,you building one per product line are
+467.15,5.519,you building one per user so potentially
+469.58,4.86,a very large number of models and so
+472.669,4.051,these questions are actually sort of
+474.44,4.8,begging the question of how much design
+476.72,4.77,or how much feature engineering are you
+479.24,4.56,actually doing for the models that your
+481.49,4.77,building or equivalently at what
+483.8,4.77,granularity do you need to apply domain
+486.26,4.98,knowledge to be effective so recall that
+488.57,4.529,substantive expertise in a domain is a
+491.24,3.63,critical part at being effective in data
+493.099,3.511,science and so having an architecture
+494.87,3.269,that lets you apply your domain
+496.61,3.6,knowledge at the right times and the
+498.139,4.56,right level of granularity is really
+500.21,7.23,critical to building a good model in
+502.699,8.161,production there's also all the
+507.44,5.13,nitty-gritty of writing software so you
+510.86,3.96,know what happens if you have a model
+512.57,4.019,and it breaks so stops making
+514.82,4.56,predictions you definitely need to know
+516.589,4.711,about that you know even worse what
+519.38,3.599,happens if it starts only making stupid
+521.3,3.6,predictions and you don't find out for a
+522.979,4.071,month what happens to you if that's the
+524.9,2.15,case
+530.72,7.45,so this is a quote from Russell belkin
+534.42,5.159,in a recent talk about building data
+538.17,3.63,products stuff they've known you should
+539.579,3.45,definitely read this blog post so the
+541.8,3.659,quote is there's only one right answer
+543.029,3.99,and starting point for a data product
+545.459,3.901,understanding how you will evaluate
+547.019,8.19,performance and building evaluation
+549.36,7.14,tools good advice okay so I'm going to
+555.209,4.44,talk about kind of like one and a half
+556.5,6.029,examples of architectures that I've been
+559.649,4.201,involved with the first one here I'm
+562.529,2.821,going to be really vague so I don't
+563.85,3.96,actually have permission to identify the
+565.35,5.31,product of the domain but I can tell you
+567.81,4.8,a lot about the architecture and so the
+570.66,4.169,situation is I had created a multi-part
+572.61,3.24,model in our used a bunch of packages
+574.829,2.82,and techniques that would have been
+575.85,4.53,incredibly difficult to rewrite in
+577.649,4.62,another platform the productions of the
+580.38,3.84,model it was actually this sort of quasi
+582.269,4.141,Bayesian thing were forecasts for
+584.22,3.809,thousands of entities but fortunately
+586.41,3.57,that set of entities was known and
+588.029,4.111,bounded and didn't change that quickly
+589.98,4.44,so we decided that the right thing to do
+592.14,3.9,is to annotate a database and to update
+594.42,2.43,those annotations frequently so I'm
+596.04,3.6,going to tell you more about that
+596.85,5.549,decision incidentally I did extract the
+599.64,5.49,sort of framework for this architecture
+602.399,5.221,and put it on github so if you want to
+605.13,4.019,check that out please do note however
+607.62,3.329,this is a few years old I might make
+609.149,4.201,some different sort of decisions on the
+610.949,4.861,details if i were to redo this now but
+613.35,4.59,it's a good starting point I think so to
+615.81,4.08,answer my own questions absolutely a
+617.94,4.35,data product expected maintenance and
+619.89,5.73,upgrades over time hundreds to thousands
+622.29,6.299,of users but really a small component of
+625.62,4.409,several different applications really
+628.589,2.93,importantly because of the complexity of
+630.029,4.231,the algorithm that was already sort of
+631.519,5.861,developed in our we wanted to keep our
+634.26,5.37,in the loop predictions however not
+637.38,4.56,super frequent so relatively small
+639.63,4.319,number of entities the world didn't
+641.94,4.019,change that quickly so if the entity was
+643.949,3.51,known to have changed we updated sort of
+645.959,3.75,daily otherwise or sorry hourly
+647.459,5.851,otherwise we'd updated once or twice a
+649.709,4.981,day fitting also pretty slow so once a
+653.31,4.43,quarter twice a year or something like
+654.69,5.19,that the key is no real time prediction
+657.74,4.53,so using a database to meet
+659.88,6.39,and not a huge number of separate models
+662.27,6.04,and so this is an architectural diagram
+666.27,4.41,lots of boxes and arrows don't worry
+668.31,4.86,about it the key point is that the
+670.68,4.17,prediction system was on a clock and it
+673.17,3.84,pulls in business data from a database
+674.85,4.14,makes predictions pushes the results
+677.01,3.39,back into the database and then all the
+678.99,4.05,systems the architectures on the left
+680.4,4.32,are the applications on the left are not
+683.04,3.99,actually touching are at any point in
+684.72,5.28,the processes of getting the UI in front
+687.03,5.04,of users so our was in production but it
+690.0,5.04,was not in the real-time part of the
+692.07,4.26,loop also worth noting a little bit
+695.04,5.1,about what I actually stored in the
+696.33,6.06,database so this is sort of the content
+700.14,6.0,was the ID or the foreign key of the
+702.39,5.28,entity so that it could be joined a time
+706.14,3.21,stamp which is really handy for making
+707.67,5.34,sure that your predictions I have not
+709.35,5.85,gotten stale and then also the results
+713.01,3.9,of this this forecast process which as I
+715.2,3.87,mentioned het was a bayesian so it had a
+716.91,4.83,posterior distribution so I scored the
+719.07,5.13,expected value as well as the CDF the
+721.74,4.02,CDF is great because it allows you to
+724.2,5.19,read off prediction interval so you can
+725.76,6.75,say you know I expect the outcome to be
+729.39,5.61,between the 10th and 90th percentile and
+732.51,4.88,that gives the user is some range of
+735.0,5.31,understanding of how confident you are
+737.39,5.77,and as a tangent it's actually really
+740.31,4.2,good idea to be in precise when you know
+743.16,3.75,that you're in precise and it builds
+744.51,4.02,trust so if your model can do you know
+746.91,4.11,the little sort of shrug emoticon right
+748.53,4.44,then people will trust it more when it's
+751.02,5.33,actually confident so to the extent that
+752.97,3.38,you can build that and that's a big plus
+756.44,6.4,so for math to nitty gritty really
+760.5,3.87,quickly here configuration this is
+762.84,3.36,pretty easy in our it's an interpreted
+764.37,4.29,language you just source a file that
+766.2,4.11,assigns some things two variables one
+768.66,3.93,thing that we learned it's handy to
+770.31,4.38,separate model configuration from
+772.59,3.69,environment configuration so you might
+774.69,3.86,want to change the model configuration
+776.28,4.26,but the ops guys they want to
+778.55,3.46,configuration of what database they're
+780.54,2.97,pointing to and some other things and
+782.01,2.82,it's good to have those separate so
+783.51,6.69,they're not like playing with your model
+784.83,7.74,parameters logging is also easy there a
+790.2,4.1,couple good packages log for our was at
+792.57,5.1,John miles white package
+794.3,6.31,was easy to pipe to a monitoring system
+797.67,4.92,the standard our air handling try catch
+800.61,4.56,and and so forth gives you the tools to
+802.59,5.52,catch and log errors and also to exit
+805.17,5.97,with fatal errors in a way that you get
+808.11,5.91,to know what happened this is kind of
+811.14,7.44,cool so when you're making this decision
+814.02,6.06,to keep our out of the real time loop
+818.58,3.9,and in particular not to build a UI
+820.08,4.32,around your our system it's awfully
+822.48,4.35,handy still to have a web page and a
+824.4,4.29,particular webpage around the status of
+826.83,4.44,the system so you can use ours built-in
+828.69,5.73,web service that was developed for help
+831.27,6.72,pages to do other things so this is what
+834.42,7.2,sort of broken our apache use and so you
+837.99,5.73,can connect to that web server the code
+841.62,6.45,is in the github repo and basically you
+843.72,7.44,just create an HTML block and you paste
+848.07,4.44,in stuff that is interesting so accounts
+851.16,3.48,of how many entities you've scored
+852.51,4.02,whether the many errors or weird
+854.64,3.33,situations you know things out of bounds
+856.53,3.42,what the uptime is stuff like that
+857.97,3.69,really handy avoids having to like dive
+859.95,3.09,into the logging system to get some just
+861.66,3.54,you know what is the status of the
+863.04,4.35,system right now but that type of
+865.2,4.08,application or that type of system
+867.39,7.26,doesn't scale well if you need to serve
+869.28,8.48,lots of predictions very quickly testing
+874.65,5.97,we identified three classes of tests and
+877.76,4.84,other people earlier talked about tests
+880.62,3.75,that which is a great package there's
+882.6,3.63,also various types of the standard model
+884.37,3.96,fitting testing that you do boast on
+886.23,4.02,sort of historical data as well as maybe
+888.33,3.0,recent stuff to look you know for stuff
+890.25,4.05,out of the boundaries of what you'd
+891.33,4.92,expected that's you know on the data
+894.3,3.75,scientist side of things also did a
+896.25,3.72,process for this project of data flow
+898.05,3.24,testing so working with QA staff where
+899.97,3.06,they would go into the database and like
+901.29,4.02,you know wiggle some things and you
+903.03,5.01,would watch the the data flow through
+905.31,4.26,the process the prediction the score get
+908.04,3.06,happened and right back to the database
+909.57,3.33,look at the log files and so forth
+911.1,3.6,important to validate that that process
+912.9,3.93,all works and then post deployment
+914.7,4.41,testing or monitoring so right it's
+916.83,4.8,really important to store at least a
+919.11,4.38,sample of your predictions so that once
+921.63,3.36,you know time catches up with your
+923.49,3.85,predictions you can see how well you did
+924.99,5.02,and make changes as necessary
+927.34,4.47,uh just a note the first time we did
+930.01,3.48,this deployment figuring all this stuff
+931.81,3.84,out was a giant pain in the ass because
+933.49,3.93,none of the tech people had any idea of
+935.65,4.83,what to do when faced with an
+937.42,5.16,application with no interface and very
+940.48,4.05,limited amount of sort of direct testing
+942.58,3.42,that they could do and you know who's to
+944.53,3.42,say what the right answer is also they
+946.0,4.89,don't really like that anyway but what
+947.95,5.31,we got through that so that was that
+950.89,4.35,application I also want to give a shout
+953.26,3.93,out here to Jeremy Stanley who gave a
+955.24,3.63,really nice talk about a somewhat
+957.19,4.59,related architecture that they use at
+958.87,5.55,sail through at mls month just up the
+961.78,4.26,street unlike my use case that I just
+964.42,3.12,talked about their world does change
+966.04,4.2,quickly so they actually refit their
+967.54,3.84,models on a daily basis automatically if
+970.24,6.75,you're interested in that definitely
+971.38,7.91,check out the youtube video later so in
+976.99,4.77,my few remaining minutes I'm going to
+979.29,4.33,tell you a little bit about my current
+981.76,3.51,project at EAB this is a model of
+983.62,4.77,student success that is the likelihood
+985.27,5.55,of individual students at our customer
+988.39,4.74,organizations to graduate and it's used
+990.82,5.49,by academic advisors for triage as part
+993.13,6.72,of a big workflow tool so to answer my
+996.31,6.78,own questions again data product so
+999.85,6.84,importantly one model per customer with
+1003.09,5.58,customizations so the model is fit only
+1006.69,5.19,rarely and so we do want the ability to
+1008.67,5.46,apply our domain knowledge but the
+1011.88,3.84,outcomes change slowly so basically
+1014.13,4.02,people only graduate once or twice a
+1015.72,4.5,year so we don't need to fit very often
+1018.15,3.81,but we do need to score on demand and
+1020.22,4.02,particularly to help with hypotheticals
+1021.96,4.8,so what might happen if a student
+1024.24,6.69,switched majors we want a platform that
+1026.76,6.27,can provide a score or a likelihood in
+1030.93,3.87,that sort of hypothetical situation and
+1033.03,3.24,we also as part of these decisions
+1034.8,3.27,wanted a platform that could support
+1036.27,4.23,other data products in the future using
+1038.07,4.05,the same architecture so you know
+1040.5,3.48,potentially multiply these numbers by
+1042.12,5.37,something else to look at what we might
+1043.98,6.09,be able to do down the road and just
+1047.49,4.53,fairly recently figured up finish out
+1050.07,3.75,this decision process looking at
+1052.02,4.02,technologies and boundaries and so forth
+1053.82,3.69,we did this fairly complicated decision
+1056.04,3.51,rubric looking at a couple of different
+1057.51,3.51,types of costs and performance and
+1059.55,3.98,flexibility
+1061.02,4.77,looking at operational complexity for
+1063.53,3.46,solutions that included a vendor looking
+1065.79,3.27,at what their support would be what
+1066.99,3.6,direction they move we look at a half
+1069.06,3.96,dozen or so different systems or
+1070.59,4.29,architectures some were you know more
+1073.02,5.01,are some involved actually switching to
+1074.88,4.62,an entirely different language and we
+1078.03,4.98,came up with an answer which in this
+1079.5,5.82,case was a new york company y hat their
+1083.01,5.1,science ops product allows very rapid
+1085.32,4.32,deployment of models in our or python to
+1088.11,4.53,a cluster with load balancing and a high
+1089.64,4.8,performance api and for us it really hit
+1092.64,4.11,the sweet spot of sort of scalable
+1094.44,5.34,scoring the ease of deploying many
+1096.75,6.15,models and in particular it draws that
+1099.78,4.8,who does what architectural line really
+1102.9,4.14,well and really consistent with our sort
+1104.58,6.12,of vision and so the architecture here
+1107.04,6.87,the key thing is that we want the data
+1110.7,4.74,scientists to own the data science stack
+1113.91,4.56,which means that we're responsible for
+1115.44,5.25,modeling in our Python and getting those
+1118.47,4.02,models up and running as a robust
+1120.69,3.84,service but the actual user facing
+1122.49,4.5,applications are written by other people
+1124.53,5.04,and will rely on sort of the tool of
+1126.99,4.65,science ops to bridge that gap since
+1129.57,4.89,there are Joe's here earlier folks from
+1131.64,4.56,revolution our second choice was there
+1134.46,4.62,deploy our product which does a very
+1136.2,7.11,analogous thing of sort of hosting
+1139.08,5.97,models on the cloud with an API there
+1143.31,3.93,was the limitation of our only we want
+1145.05,4.5,some flexibility going forward also
+1147.24,5.13,getting that that who does what line
+1149.55,4.62,right is tricky and at least the way we
+1152.37,3.33,were reading it their system has a
+1154.17,4.26,little bit more of a throw out things
+1155.7,4.47,over the wall feel where the expectation
+1158.43,3.57,or the design is the developers on the
+1160.17,4.74,application side create the API for
+1162.0,6.66,themselves and for us we really wanted
+1164.91,7.59,to draw a clean line and you know so we
+1168.66,5.79,made that decision accordingly so you
+1172.5,5.79,might be asking how's that working out
+1174.45,8.22,for me and so the system is not yet in
+1178.29,6.87,production so I don't actually know this
+1182.67,4.86,said go to the Earl conference in Boston
+1185.16,4.38,this is effective applications of the
+1187.53,5.1,our language I'll be talking about my
+1189.54,4.6,experiences up there later this year so
+1192.63,3.57,thank you
+1194.14,2.06,you

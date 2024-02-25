@@ -1,0 +1,345 @@
+second,duration,transcript
+0.48,6.24,again welcome to database system cs630
+4.16,4.8,introduction to database these lectures
+6.72,3.04,cover chapter one of our course sales
+8.96,2.48,book
+9.76,4.08,our main objective is to go through
+11.44,5.839,different types of databases
+13.84,5.359,and also database applications the basic
+17.279,5.281,definitions
+19.199,5.201,also database management functionalities
+22.56,4.639,we should also discuss about the main
+24.4,6.0,characteristics of database approach
+27.199,5.281,and also the advantages
+30.4,4.159,so we start with the types of databases
+32.48,4.0,and database application
+34.559,5.201,normally traditional applications will
+36.48,4.56,be numeric and textural databases where
+39.76,5.279,we store
+41.04,6.4,values and text messages
+45.039,5.36,but most recent or more recent
+47.44,5.52,applications are multimedia database
+50.399,4.561,where we can install media data such as
+52.96,4.079,graphics images
+54.96,3.599,also we have geographic information
+57.039,4.241,system
+58.559,4.8,biological and genome database that's
+61.28,3.919,mostly in a computational biology
+63.359,3.921,bioinformatics
+65.199,3.121,data warehouses
+67.28,3.839,mobile
+68.32,6.24,databases such as our smartphone
+71.119,6.801,or any mobile devices tablets etc
+74.56,6.239,also real-time and active databases
+77.92,5.04,such as a stock market and
+80.799,4.401,database system
+82.96,4.4,so a numeric and textual database system
+85.2,4.72,we see a database
+87.36,5.6,that provide numeric information such as
+89.92,5.199,statistics or demographic information
+92.96,4.56,it's a numeric databases
+95.119,3.761,also traditional textual database
+97.52,4.08,interfaces
+98.88,4.32,allow users to search an index composed
+101.6,6.08,of exclusively
+103.2,6.8,of terms extracted from documents
+107.68,4.799,now a multimedia database is a
+110.0,4.56,collection of related
+112.479,5.521,for multimedia data
+114.56,5.44,so multimedia data can be images or
+118.0,4.24,media data types
+120.0,5.439,videos etc
+122.24,5.199,we also have a mobile databases
+125.439,4.24,which is in mobile computing devices
+127.439,4.88,such as smartphones
+129.679,5.28,and personal digital assistants also
+132.319,5.681,store and share data over a mobile
+134.959,5.681,network or a database which is actually
+138.0,5.28,stored by the mobile device
+140.64,4.72,this could be a list of contacts
+143.28,3.84,price information
+145.36,4.239,distance traveled or any other
+147.12,4.24,information
+149.599,2.801,we also have geographical information
+151.36,4.159,system
+152.4,4.24,which is a computer system for capturing
+155.519,3.921,storing
+156.64,6.48,checking and displaying data related to
+159.44,7.68,positions on our health surface
+163.12,6.64,now by relating similarly unrelated data
+167.12,5.119,gis can help individuals and
+169.76,3.6,organizations better understand spatial
+172.239,4.0,patterns
+173.36,5.68,and also relationships
+176.239,5.36,biological and genome databases
+179.04,4.96,can be again broadly classified into
+181.599,4.0,sequence structure and functional
+184.0,4.56,databases
+185.599,6.0,so nuclear acid and protein sequences
+188.56,6.319,are saw in a sequence databases
+191.599,5.241,for example a nucleotide for dna
+194.879,5.841,would be the
+196.84,6.28,ac and the four nucleotides also protein
+200.72,5.92,concepts protein sequence
+203.12,5.679,agtc for dna
+206.64,5.36,and then we also have
+208.799,6.321,the structure normally for protein
+212.0,4.799,structure databases to store a 3d
+215.12,4.72,structure of a
+216.799,4.8,protein or rna
+219.84,5.52,then functional data based on what we
+221.599,7.36,store the data but let's say the protein
+225.36,5.599,functions etc dna function etc now human
+228.959,3.601,genomic databases also are referred to
+230.959,4.56,as online
+232.56,5.36,repository of genomic variants
+235.519,3.521,mainly described for a single or more
+237.92,3.519,genes
+239.04,3.919,or specifically for a population or
+241.439,4.241,ethnic group
+242.959,3.681,aiming to facilitate diagnosis at dna
+245.68,3.52,level
+246.64,4.159,and also to correlate genomic variants
+249.2,4.0,with specific
+250.799,4.8,phenotypic patterns and clinical
+253.2,5.279,features
+255.599,5.2,a data warehouse normally is where
+258.479,3.761,companies or business organizations
+260.799,3.921,store
+262.24,4.56,historical data for so many years so
+264.72,4.8,most business organizations may have a
+266.8,5.52,regular database system for transaction
+269.52,4.72,or we say transactional database
+272.32,3.68,where they may have a policy that okay
+274.24,4.32,every month we may
+276.0,4.96,transfer our transaction database to our
+278.56,5.199,data warehouse so data warehouse we may
+280.96,4.88,have historical data for many years
+283.759,4.961,and these datas are very good for
+285.84,5.6,analytics such as using data mining
+288.72,5.199,algorithm or machine learning algorithm
+291.44,5.6,to find a knowledge from that database
+293.919,5.201,system so a data warehouse again is a
+297.04,5.12,type of data management system that is
+299.12,5.28,designed to enable and support business
+302.16,4.8,intelligence activities
+304.4,4.799,especially analytics
+306.96,4.079,so data warehouses are solely tended to
+309.199,4.241,perform queries
+311.039,5.281,and also analysis and often contain
+313.44,5.599,large amounts of historical data
+316.32,5.04,the data within a data warehouse is
+319.039,3.6,usually derived from a wide range of
+321.36,3.36,sources
+322.639,5.681,such as application log files
+324.72,5.84,transaction applications etc
+328.32,3.68,also data warehouse centralizes and
+330.56,3.6,consolidates
+332.0,4.639,large amount of data from multiple
+334.16,2.479,sources
+336.88,4.8,we also have the real-time database
+339.52,4.64,which is a database
+341.68,4.32,that uses a real-time processing to
+344.16,4.8,handle workloads
+346.0,5.44,whose state is constantly changing
+348.96,3.6,this differ from traditional databases
+351.44,4.0,containing
+352.56,4.0,persistent data mostly unaffected by
+355.44,2.96,time
+356.56,2.96,a very good example would be a stock
+358.4,1.84,market
+359.52,3.84,that
+360.24,4.6,changes very rapidly rapidly and dynamic
+363.36,4.48,in the real
+364.84,4.68,time the recent development is the
+367.84,4.56,social network
+369.52,5.76,the internet example facebook twitter
+372.4,4.32,linking and these organizations also
+375.28,4.24,have their own
+376.72,5.12,database system so social networks start
+379.52,4.64,capturing a lot of information
+381.84,4.24,about people and about communications
+384.16,4.8,among people posts
+386.08,4.16,twins photos videos and systems such as
+388.96,4.079,facebook
+390.24,5.92,twitter linking
+393.039,5.201,search engines such as google bin yahoo
+396.16,4.479,also collect their own
+398.24,4.399,representative web pages for searching
+400.639,4.161,purposes
+402.639,4.481,now new technologies are emerging from
+404.8,5.679,so-called known database software
+407.12,6.24,vendors to manage vast amount of data
+410.479,4.401,generated on the web
+413.36,3.679,and big data
+414.88,4.64,storage system involving large process
+417.039,5.681,of distributed computers
+419.52,5.84,and no sql system
+422.72,5.759,also a large amount of data now reset on
+425.36,5.2,the crowd which means it is a huge data
+428.479,3.84,data centers using
+430.56,3.52,thousands of machines
+432.319,4.081,again the future lectures we shall go
+434.08,4.8,through this concept especially
+436.4,3.84,the null sql
+438.88,3.36,now these are some of the basic
+440.24,3.84,definitions in database management
+442.24,4.32,system first we start with what is a
+444.08,4.08,database again it's a collection of
+446.56,3.68,related data
+448.16,4.8,example will be a customer database
+450.24,5.28,system or patient database
+452.96,4.639,which means information about the
+455.52,4.079,patients or customers
+457.599,3.44,also what is the data data will be a
+459.599,3.281,known facts
+461.039,3.521,that can be recorded and have an
+462.88,3.599,implicit meaning example would be a
+464.56,5.759,patient's last name
+466.479,5.84,or employee salary rate
+470.319,4.16,meaning what means some part of the real
+472.319,3.44,world about which data is stored in a
+474.479,3.28,database
+475.759,4.56,so example will be a student grade and
+477.759,5.361,transcript at a university
+480.319,5.28,then a database management system is the
+483.12,4.16,software or the application
+485.599,4.0,that we use to
+487.28,4.56,create or develop
+489.599,3.28,a database system and also
+491.84,2.32,manage
+492.879,4.72,and
+494.16,5.2,manipulate the data in a database system
+497.599,3.6,so a software package system to
+499.36,5.2,facilitate the creation
+501.199,5.201,and maintenance of computerized database
+504.56,5.12,a database system now will be the
+506.4,5.84,combination of a database software
+509.68,4.64,and the data itself
+512.24,4.4,and this is what discussed about
+514.32,4.159,database system
+516.64,4.24,how we can use the software to create
+518.479,6.241,our data what tools we can use in the
+520.88,6.32,software and how we can manage this data
+524.72,5.119,if stored in the database
+527.2,4.24,now the impact of databases and database
+529.839,4.0,technology
+531.44,5.12,in businesses for example banking
+533.839,5.521,insurance retail transportation health
+536.56,6.32,care manufacturer this business
+539.36,6.8,organizations all use databases
+542.88,6.079,because any business operation surely
+546.16,5.04,data will be generated and this data
+548.959,4.401,need to be stored somewhere we also have
+551.2,3.68,service industries such as financial
+553.36,4.0,real estate
+554.88,3.84,legal electronic commerce small
+557.36,4.32,businesses
+558.72,5.679,also generate data so
+561.68,5.279,they need database system to again store
+564.399,5.041,their data and manage it education
+566.959,4.241,resources for content and delivery
+569.44,3.44,these resources also are stored in the
+571.2,5.04,database system
+572.88,6.32,most recently again example facebook
+576.24,5.039,linking etc social network
+579.2,5.68,environment and scientific applications
+581.279,5.921,such as medicine and genetics
+584.88,5.76,personalized application based on smart
+587.2,5.28,mobile devices
+590.64,4.24,now to simplify database system
+592.48,3.68,environment normally we have three
+594.88,4.399,levels
+596.16,4.08,the the lower level is where our actual
+599.279,2.881,data
+600.24,3.36,is stored so here we see store data
+602.16,3.44,definition
+603.6,3.76,then the store database
+605.6,4.16,in the future we shall discuss about
+607.36,3.919,what is a mental data
+609.76,4.24,then we have the middle tab which will
+611.279,5.68,be the database manager software
+614.0,5.12,we use it to create our environment and
+616.959,4.481,we store the data we manage the data
+619.12,5.04,from the user can only interact with the
+621.44,4.0,system from the application programs or
+624.16,3.52,queries
+625.44,5.399,so we have database system database
+627.68,6.719,management system then there's physical
+630.839,5.721,storage so a typical database management
+634.399,3.201,system functionality
+636.56,3.76,can be
+637.6,3.76,defining a particular database in terms
+640.32,3.199,of
+641.36,4.719,its data types structures and
+643.519,4.641,constraints again our future lecture we
+646.079,4.161,may discuss this more detail
+648.16,4.72,also to construct or load the initial
+650.24,3.839,database content on a secondary storage
+652.88,4.399,medium
+654.079,6.161,also manipulating the database
+657.279,5.281,how to retrieve data using example query
+660.24,5.599,or generating reports
+662.56,6.08,also modifications inserting data
+665.839,4.801,deleting data or update data in the
+668.64,3.759,database system
+670.64,3.84,accessing the database through a web
+672.399,5.281,application
+674.48,5.359,also processing and sharing by a set of
+677.68,5.279,concurrent users and application
+679.839,5.44,programs yet keeping all data valid and
+682.959,5.041,consistent
+685.279,4.081,so again database technology make all
+688.0,3.6,this possible
+689.36,3.68,application activities against a
+691.6,4.4,database
+693.04,5.2,here we say applications interact with a
+696.0,3.68,database by generating
+698.24,3.68,queries
+699.68,4.96,queries that access different part of a
+701.92,4.56,data and formulate a result of a request
+704.64,4.4,a query normally will be a question that
+706.48,5.2,we ask the system for example we have a
+709.04,4.479,customer database system we can write a
+711.68,4.8,query that we need all customers that
+713.519,4.961,came from new york state or we need all
+716.48,4.24,the customers that spend more than 50
+718.48,4.64,dollars which means we have to write a
+720.72,5.44,query to get a result we may have
+723.12,4.959,thousand customers maybe only five
+726.16,3.84,spend more than fifty dollars
+728.079,6.401,we don't want to go through the
+730.0,6.8,manually so using a query very quick
+734.48,5.28,also transactions that may read some
+736.8,5.52,data and update setting values or
+739.76,4.0,generate new data and store that in a
+742.32,4.639,database
+743.76,6.16,applications must not allow unauthorized
+746.959,5.68,users to access data
+749.92,6.32,so that means application must allow
+752.639,6.481,only authorized users to access data
+756.24,4.8,that's security and also application
+759.12,5.6,must keep up with changing user
+761.04,5.84,requirement against the database
+764.72,3.52,additional database management system
+766.88,3.68,functionality
+768.24,5.76,including protection or security
+770.56,6.32,measures to prevent unauthorized assets
+774.0,5.2,also active processing to take internal
+776.88,5.519,actions on data
+779.2,5.12,presentation and visualization of data
+782.399,4.641,maintenance of the database and
+784.32,4.959,associated programs over the lifetime of
+787.04,4.88,the database application
+789.279,4.641,also called a database or software or
+791.92,3.84,system application
+793.92,3.599,so in summary we went through different
+795.76,4.16,types of database
+797.519,3.76,the definition of database database
+799.92,4.479,applications
+801.279,5.841,and also the typical functionality of a
+804.399,5.521,database management system so again this
+807.12,4.8,is chapter one part one of our lectures
+809.92,5.12,in the future lectures we may go through
+811.92,6.919,detail about the few items we want here
+815.04,3.799,thank you for your time

@@ -1,0 +1,182 @@
+second,duration,transcript
+0.21,4.02,[Music]
+0.329,5.661,a popular interview question concerns
+4.23,3.869,the four core concepts in
+5.99,5.729,object-oriented programming this
+8.099,7.381,concepts are encapsulation abstraction
+11.719,5.741,inheritance and polymorphism let's look
+15.48,4.02,at each of these concepts before
+17.46,4.02,object-oriented programming we had
+19.5,4.47,procedure of programming that divided a
+21.48,4.68,program into a set of functions so we
+23.97,4.83,have data stored in a bunch of variables
+26.16,5.55,and functions that operate on the data
+28.8,5.16,this style of programming is very simple
+31.71,4.349,and straightforward often it's what you
+33.96,4.47,learn as part of your first programming
+36.059,4.32,subject at a university but as your
+38.43,3.87,programs grow it will end up with a
+40.379,4.321,bunch of functions that are all over the
+42.3,4.71,place you might find yourself copying
+44.7,4.32,and pasting lines of code over and over
+47.01,4.11,you make a change to one function and
+49.02,5.01,then several other functions break
+51.12,5.13,that's what we call spaghetti code there
+54.03,5.15,is so much interdependence e between all
+56.25,4.98,these functions it becomes problematic
+59.18,4.21,object-oriented programming came to
+61.23,4.05,solve this problem in object-oriented
+63.39,4.38,programming we combine a group of
+65.28,6.36,related variables and functions into a
+67.77,6.09,unit we call that unit an object we
+71.64,5.339,refer to these variables as properties
+73.86,6.149,and the functions as methods here's an
+76.979,5.28,example think of a car a car is an
+80.009,5.821,object with properties such as make
+82.259,6.781,model and color and methods like start
+85.83,3.6,stop and move now you might say what
+89.04,2.64,marche
+89.43,5.46,we don't have cars in our programs give
+91.68,5.1,me a real programming example ok think
+94.89,4.47,of the local storage object in your
+96.78,5.28,browser's every browser has a local
+99.36,5.7,storage object that allows you to store
+102.06,5.55,data locally this local storage object
+105.06,4.44,has a property like length which returns
+107.61,5.61,the number of objects in the storage and
+109.5,5.88,metals like set item and remove item so
+113.22,4.59,in object-oriented programming we group
+115.38,5.309,related variables and functions that
+117.81,5.909,operate on them into objects and this is
+120.689,5.64,what we call encapsulation let me show
+123.719,5.4,you an example of this in action so here
+126.329,5.851,we have three variables base salary over
+129.119,3.581,time and rate below these we have a
+132.18,3.669,function
+132.7,4.98,to calculate the wage for an employee we
+135.849,4.381,refer to this kind of implementation as
+137.68,4.8,procedural so we have variables on one
+140.23,4.86,side and functions on the other side
+142.48,4.89,they're hard decoupled now let's take a
+145.09,4.29,look at the object-oriented way to solve
+147.37,5.13,this problem we can have an employee
+149.38,6.21,object with three properties a salary
+152.5,6.39,over time and rate and a method called
+155.59,5.22,get wage now why is this better well
+158.89,4.709,first of all look at the get wage
+160.81,6.3,function this function has no parameters
+163.599,6.211,in contrast in a procedural example our
+167.11,4.92,get wage function has three parameters
+169.81,4.44,the reason in this implementation we
+172.03,4.85,don't have any parameters is because all
+174.25,5.819,these parameters are actually modeled as
+176.88,5.32,properties of this object all these
+180.069,4.23,properties and the get wage function
+182.2,4.5,they are highly related so they are part
+184.299,5.16,of one unit so one of the symptoms of
+186.7,5.31,procedural code is functions with so
+189.459,4.651,many parameters when you write code in
+192.01,4.5,an object-oriented way your functions
+194.11,5.909,end up having fewer and fewer parameters
+196.51,6.18,as Uncle Bob says the best functions are
+200.019,4.861,those with no parameters the fewer the
+202.69,4.859,number of parameters the easier it is to
+204.88,4.8,use and maintain that function so that's
+207.549,5.22,encapsulation now let's look at
+209.68,5.97,abstraction think of a DVD player as an
+212.769,5.461,object this DVD player has a complex
+215.65,4.559,logic board on the inside and a few
+218.23,4.05,buttons on the outside that you interact
+220.209,4.65,with you simply press the play button
+222.28,5.039,and you don't care what happens on the
+224.859,5.1,inside all that complexity is hidden
+227.319,4.89,from you this is abstraction in practice
+229.959,4.62,we can use the same technique in our
+232.209,4.56,objects so we can hide some of the
+234.579,4.581,properties and methods from the outside
+236.769,4.861,and this gives us a couple of benefits
+239.16,5.38,first is that we'll make the interface
+241.63,4.77,of those objects simpler using an
+244.54,4.44,understanding an object with a few
+246.4,4.619,properties and methods is easier than an
+248.98,5.069,object with several properties and
+251.019,5.731,methods the second benefit is that it
+254.049,5.581,helps us reduce the impact of change
+256.75,6.01,let's imagine that tomorrow we change
+259.63,5.11,these inner or private methods
+262.76,3.96,these changes will leak to the outside
+264.74,3.96,because we don't have any code that
+266.72,4.62,touches these methods outside of their
+268.7,5.01,containing object we may delete a method
+271.34,4.5,or change its parameters but none of
+273.71,4.56,these changes will impact the rest of
+275.84,4.71,the applications code so with
+278.27,5.13,abstraction we reduce the impact of
+280.55,4.98,change now the third core concept in
+283.4,4.98,object-oriented programming inheritance
+285.53,5.88,inheritance is a mechanism that allows
+288.38,6.12,you to eliminate redundant code here's
+291.41,6.03,an example think of HTML elements like
+294.5,3.63,text boxes drop-down lists checkboxes
+297.44,3.06,and so on
+298.13,4.44,all these elements have a few things in
+300.5,5.13,common they should have properties like
+302.57,6.24,hidden and inner HTML and metals like
+305.63,5.31,click and focus instead of redefining
+308.81,5.31,all these properties and methods for
+310.94,5.73,every type of HTML element we can define
+314.12,5.55,them once in a generic object call it
+316.67,5.97,HTML element and have other objects
+319.67,5.91,inherit these properties and methods so
+322.64,7.05,inheritance helps us eliminate redundant
+325.58,8.19,code and finally polymorphism poly means
+329.69,6.9,many more means form so polymorphism
+333.77,5.07,means many forms in object-oriented
+336.59,4.47,programming polymorphism is a technique
+338.84,3.3,that allows you to get rid of long
+341.06,4.35,ethanol's
+342.14,5.88,or switch and case statements so back to
+345.41,4.68,our HTML elements example all these
+348.02,4.62,objects should have the ability to be
+350.09,4.8,rendered on a page but the way each
+352.64,4.35,element is rendered is different from
+354.89,4.68,the others if you want to render
+356.99,4.74,multiple HTML elements in a procedural
+359.57,5.31,way our code would probably look like
+361.73,5.34,this but with object orientation we can
+364.88,4.71,implement a render method in each of
+367.07,5.28,these objects and the render method will
+369.59,5.94,behave differently depending on the type
+372.35,4.98,of the object you're referencing so we
+375.53,4.32,can get rid of this nasty switch and
+377.33,5.55,case and use one line of code like this
+379.85,5.19,you will see that later in the course so
+382.88,5.01,here are the benefits of object oriented
+385.04,5.16,programming using encapsulation we group
+387.89,5.21,related variables and functions together
+390.2,6.0,and this way we can reduce complexity
+393.1,5.14,now we can reuse this object and do
+396.2,5.01,from parts of a program or in different
+398.24,5.85,programs with abstraction we hide the
+401.21,5.73,details and the complexity and show only
+404.09,5.94,the essentials this technique reduces
+406.94,5.79,complexity and also isolates the impact
+410.03,5.7,of changes in the code with inheritance
+412.73,6.06,we can eliminate redundant code and with
+415.73,5.9,polymorphism we can refactor ugly switch
+418.79,2.84,case statements
+423.639,4.83,well hello it's me mash again I wanted
+426.52,3.57,to say thank you very much for watching
+428.469,3.63,this tutorial to the end I hope you
+430.09,3.93,learned a lot please share and like this
+432.099,3.09,video to support me if you want to learn
+434.02,3.269,more about the object-oriented
+435.189,3.811,programming as I told you before I have
+437.289,4.021,a course called object-oriented
+439.0,4.169,programming in JavaScript if you want to
+441.31,3.599,learn more click on the link in the
+443.169,4.53,video description and enroll in the
+444.909,4.5,course if not that's perfectly fine make
+447.699,4.5,sure to subscribe to my channel because
+449.409,5.6,I upload new videos every week thank you
+452.199,2.81,and have a great day

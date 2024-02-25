@@ -1,0 +1,77 @@
+second,duration,transcript
+0.03,6.21,hello in this video we will learn more
+3.12,5.58,about relational databases there are
+6.24,7.649,many popular relational databases like
+8.7,7.53,MySQL SQL Server oracle sybase etc in a
+13.889,4.861,relational database the data is stored
+16.23,5.969,in multiple tables that are linked by a
+18.75,6.3,common field a table is also called as a
+22.199,5.941,relation and is a data set that is
+25.05,5.46,organized into rows and columns for
+28.14,4.77,example this table has the information
+30.51,5.67,about student and this one has
+32.91,6.0,information about customers each row in
+36.18,5.64,this table is called as record or tuple
+38.91,6.419,which represents one complete unit of
+41.82,6.09,information so in our example here each
+45.329,5.671,row has information about one student
+47.91,5.76,only columns are also called as fees or
+51.0,5.399,attributes which contain one type of
+53.67,5.22,information the number of columns or
+56.399,5.16,attributes is called as degree of the
+58.89,5.909,relation for example the degree of this
+61.559,5.761,table is 3 similarly the number of rows
+64.799,5.191,or tuples in a table is called as
+67.32,6.6,cardinality of the relation in this
+69.99,6.93,example here the cardinality is 4 let's
+73.92,4.92,quickly take a look at some questions in
+76.92,5.129,this table what is the degree and
+78.84,6.9,cardinality of the table degree is 2 and
+82.049,5.521,cardinality is fine another example in
+85.74,5.25,this table what is the degree and
+87.57,6.659,cardinality degrees 4 and cardinality is
+90.99,6.12,3 now in a database one of the key
+94.229,5.82,concept is to be able to identify each
+97.11,5.789,row or tuple unity let's take this
+100.049,5.46,student data as an example now when I
+102.899,4.951,want to enter marks these two students
+105.509,2.82,have same info so which one should I
+107.85,3.9,update
+108.329,5.82,that's where Keys help us typically a
+111.75,4.649,table has one column or field which
+114.149,4.981,uniquely identifies the records in the
+116.399,5.341,table this field is called as primary
+119.13,4.769,key when a database is designed or
+121.74,4.68,created in a table we search for
+123.899,5.071,attributes which uniquely identify a row
+126.42,4.53,there could be more than one attribute
+128.97,4.65,like that and they our fault as
+130.95,5.52,candidate keys means they all are
+133.62,5.49,candidate to be the primary team out of
+136.47,5.13,these candidate keys one is selected as
+139.11,4.98,primary key and remaining are called
+141.6,4.41,as ultimate keys it is very much
+144.09,5.04,possible that these keys are actually
+146.01,5.82,combination of attributes for example I
+149.13,6.06,can use name plus surname as combination
+151.83,6.3,which will uniquely identify a room then
+155.19,5.94,the heat is called as composite key now
+158.13,5.34,many databases have multiple tables how
+161.13,4.92,are they linked with each other they are
+163.47,5.04,linked through foreign key a foreign key
+166.05,5.13,is a field that references the primary
+168.51,5.64,key of another table let's take this
+171.18,5.76,example we have a student table and then
+174.15,5.16,we have a result table the student table
+176.94,4.89,has a list of all students that are
+179.31,5.25,there in the class all the results of
+181.83,5.129,students are in the result table rule
+184.56,4.08,number is the primary key and the result
+186.959,4.951,table has a foreign key role number
+188.64,5.22,which links it to the student table this
+191.91,5.16,is the foreign key which references the
+193.86,4.77,primary key in another table in our next
+197.07,4.139,video we are going to learn more about
+198.63,3.15,SQL and how we can manipulate these
+201.209,7.661,tables
+201.78,7.09,[Music]

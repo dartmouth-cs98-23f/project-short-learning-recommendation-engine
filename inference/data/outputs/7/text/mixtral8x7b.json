@@ -1,0 +1,80 @@
+{
+  "introduction": {
+    "content": [
+      "The video discusses the architectural differences between the vanilla transformer and the architecture of mistral, a new language model from mistral ai.",
+      "The differences are highlighted in red, including the use of sliding window attention, group query attention, and kv cache for inferencing.",
+      "Mistral is a decoder-only model that resembles the decoder side of the transformer, with one or more linear layers depending on the application.",
+      "The input is converted into embeddings, which are then fed into a block that is repeated 32 times, with the output of each layer being fed to the next layer."
+    ],
+    "topics": ["Vanilla Transformer", "Mistral", "Architectural Differences", "Language Models"]
+  }
+}
+
+{
+  "sections": [
+    {
+      "title": "Section 1: Introduction",
+      "content": [
+        "The video introduces the topic of the architectural differences between the vanilla transformer and the architecture of mistral.",
+        "The differences are highlighted in red, with mistral being a decoder-only model that resembles the decoder side of the transformer.",
+        "The video briefly explains the vanilla transformer, including the self attention mechanism and feed forward network.",
+        "Mistral uses sliding window attention, group query attention, and kv cache for inferencing."
+      ],
+      "topics": ["Vanilla Transformer", "Mistral", "Architectural Differences", "Language Models"]
+    },
+    {
+      "title": "Section 2: Vanilla Transformer Architecture",
+      "content": [
+        "The video explains the architecture of the vanilla transformer, including the self attention mechanism and feed forward network.",
+        "The self attention mechanism allows the model to weigh the importance of each token in the sentence, while the feed forward network is used to process the token embeddings.",
+        "The vanilla transformer is a decoder-only model that resembles the decoder side of the transformer.",
+        "The input is converted into embeddings, which are then fed into a block that is repeated 32 times, with the output of each layer being fed to the next layer."
+      ],
+      "topics": ["Vanilla Transformer", "Architecture", "Self Attention", "Feed Forward Network"]
+    },
+    {
+      "title": "Section 3: Mistral Architecture",
+      "content": [
+        "The video explains the architecture of mistral, a new language model from mistral ai.",
+        "Mistral is a decoder-only model that resembles the decoder side of the transformer, with one or more linear layers depending on the application.",
+        "The input is converted into embeddings, which are then fed into a block that is repeated 32 times, with the output of each layer being fed to the next layer.",
+        "Mistral uses sliding window attention, group query attention, and kv cache for inferencing."
+      ],
+      "topics": ["Mistral", "Architecture", "Decoder-Only Model", "Linear Layers"]
+    },
+    {
+      "title": "Section 4: Differences Between Vanilla Transformer and Mistral",
+      "content": [
+        "The video highlights the differences between the vanilla transformer and the architecture of mistral.",
+        "Mistral uses sliding window attention, group query attention, and kv cache for inferencing, while the vanilla transformer uses the self attention mechanism and feed forward network.",
+        "Mistral is a decoder-only model that resembles the decoder side of the transformer, while the vanilla transformer is a decoder-only model.",
+        "Mistral has one or more linear layers depending on the application, while the vanilla transformer has a fixed number of linear layers."
+      ],
+      "topics": ["Vanilla Transformer", "Mistral", "Architectural Differences", "Language Models"]
+    },
+    {
+      "title": "Section 5: Conclusion",
+      "content": [
+        "The video concludes by summarizing the differences between the vanilla transformer and the architecture of mistral.",
+        "Mistral is a decoder-only model that resembles the decoder side of the transformer, with one or more linear layers depending on the application.",
+        "Mistral uses sliding window attention, group query attention, and kv cache for inferencing, while the vanilla transformer uses the self attention mechanism and feed forward network.",
+        "Mistral has a fixed number of linear layers, while the vanilla transformer has a fixed number of linear layers."
+      ],
+      "topics": ["Vanilla Transformer", "Mistral", "Architectural Differences", "Language Models"]
+    }
+  ],
+  "general": [
+    {
+      "topic": "Transformer Model",
+      "complexity": 0.75
+    },
+    {
+      "topic": "Language Models",
+      "complexity": 0.65
+    },
+    {
+      "topic": "Architectural Differences",
+      "complexity": 0.55
+    }
+  ]
+}

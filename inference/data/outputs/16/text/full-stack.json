@@ -1,0 +1,70 @@
+{
+  "introduction": "The video tutorial demonstrates the process of building a job board app from scratch, intended to serve as a real startup platform for entry-level or junior developer positions. The app will start with a single data feed from a job board API, pulling jobs and filtering them down, and displaying them in a simple, super minimal front end using React and Material UI.",
+  "sections": [
+    {
+      "title": "Section 1: Front End Setup",
+      "content": [
+        "Initial setup of a React project with Create React App and Material UI.",
+        "Creation of a separate component for jobs and a single job component.",
+        "Implementation of typography for styling and app state management.",
+        "Addition of CSS for job display and styling."
+      ],
+      "topics": ["React", "Material UI", "Typography", "CSS"]
+    },
+    {
+      "title": "Section 2: Data Feed Integration",
+      "content": [
+        "Introduction to the API for the job board platform.",
+        "Pulling job data from the API and filtering it down.",
+        "Handling pagination and storing job data in Redis.",
+        "Setting up a Node cron job to refresh the job data at a set interval."
+      ],
+      "topics": ["API Integration", "Data Storage", "Filtering Algorithm", "Cron Job"]
+    },
+    {
+      "title": "Section 3: Backend Development",
+      "content": [
+        "Implementation of the Express server for handling API requests.",
+        "Setting up the Redis store for data storage and retrieval.",
+        "Implementation of the filtering algorithm for job data.",
+        "Testing and debugging the backend code."
+      ],
+      "topics": ["Express Server", "Redis", "Filtering Algorithm", "Testing"]
+    },
+    {
+      "title": "Section 4: Deployment",
+      "content": [
+        "Setting up a virtual private server for hosting the job board app.",
+        "Configuring Nginx for load balancing and SSL encryption.",
+        "Deploying the app to the server and testing its functionality.",
+        "Optimizing the app for performance and scalability."
+      ],
+      "topics": ["Deployment", "Nginx Configuration", "SSL Encryption", "Performance Optimization"]
+    },
+    {
+      "title": "Section 5: Future Developments",
+      "content": [
+        "Expanding the job board API to include more platforms.",
+        "Implementing search indexes and advanced filtering options.",
+        "Integrating machine learning for job matching and personalization.",
+        "Exploring other front-end frameworks and design libraries."
+      ],
+      "topics": ["API Expansion", "Search Indexes", "Machine Learning", "Front-end Frameworks"]
+    }
+  ],
+  "topics": ["React", "Material UI", "API Integration", "Data Storage", "Filtering Algorithm", "Backend Development", "Deployment", "Future Developments"],
+  "general topics": [
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.68
+    },
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": 0.51
+    },
+    {
+      "name": "Data Science and Analytics",
+      "complexity": 0.42
+    }
+  ]
+}

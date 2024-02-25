@@ -1,0 +1,569 @@
+second,duration,transcript
+0.6,6.199,[Music]
+8.16,2.88,hello
+8.8,3.28,and welcome to pseudocode today we are
+11.04,3.599,going to talk about
+12.08,4.48,databases in this video we are going to
+14.639,3.841,cover different types of databases what
+16.56,4.0,are the use case and examples
+18.48,3.2,the pros and cons of the same so let's
+20.56,3.44,get started
+21.68,4.08,if we go back to the visual metaphor of
+24.0,3.76,buildings that we have talked about
+25.76,3.439,and in the previous video we discussed
+27.76,4.72,how we can compare
+29.199,5.441,people to data if people are like data
+32.48,4.079,in terms of buildings then what could be
+34.64,4.88,databases
+36.559,3.84,the way those buildings house people for
+39.52,3.039,example
+40.399,3.761,rooms in a hospital look different from
+42.559,3.601,rooms in a hotel
+44.16,3.6,in a movie theater there are chairs
+46.16,3.04,lined up in front of the screen so that
+47.76,3.68,people can sit and watch a movie
+49.2,3.519,in malls there are big large spaces so
+51.44,4.4,that people can move around
+52.719,3.52,similarly different databases depending
+55.84,3.359,on
+56.239,3.441,the property of data and the volume of
+59.199,3.2,data
+59.68,4.559,querying requirements provide different
+62.399,4.161,features and the way to store
+64.239,3.92,data so in this video we are going to
+66.56,2.16,see how those different types of
+68.159,2.561,database
+68.72,3.6,provide and fulfill such requirements
+70.72,4.24,some popular type of databases
+72.32,4.799,are relational non-relational file type
+74.96,4.56,dbs network dbs etc
+77.119,3.281,in this video we are going to focus on
+79.52,3.44,relational
+80.4,3.2,and non-relational dbs non-relational
+82.96,2.56,db's
+83.6,3.28,are again divided into multiple types
+85.52,4.32,like key value stores
+86.88,4.32,column based dbs document based db's
+89.84,3.04,search db's etc
+91.2,3.76,so we will look into those examples as
+92.88,2.8,well relational dbs are the most popular
+94.96,3.519,ones
+95.68,3.6,and here are the two factors that help
+98.479,2.481,you decide
+99.28,3.519,whether you have to select a relational
+100.96,4.56,db for your use case or not
+102.799,3.841,schema and asset properties let's talk
+105.52,3.84,about schema
+106.64,4.479,schema in relational dbs refers to how
+109.36,6.399,your data is going to be structured
+111.119,8.721,so in relational dbs you have tables
+115.759,6.801,and rows which store the data
+119.84,4.72,so if your data can be represented in
+122.56,3.68,the form of tables and rows
+124.56,3.52,while satisfying the property of
+126.24,3.519,relational db's like if your data is
+128.08,3.2,complex and it could be represented
+129.759,3.84,using relational tables
+131.28,3.84,easily then you select uh relational
+133.599,3.28,labels a classic example
+135.12,3.199,is employees data so you have an
+136.879,6.161,employees table
+138.319,6.801,a department table an account table
+143.04,4.48,so employees table is going to store the
+145.12,5.68,data of employees like name
+147.52,6.719,age phone number uh city
+150.8,7.36,department id account id etc
+154.239,6.241,now this id refers to the primary key or
+158.16,5.04,the unique id which identifies
+160.48,4.399,every employee and department id and
+163.2,4.64,account id are foreign keys
+164.879,4.161,which identifies which department this
+167.84,3.039,employee belongs to
+169.04,4.08,and what is the account id of this
+170.879,4.161,employee so these are called foreign
+173.12,4.16,keys the department table will have
+175.04,4.64,details like the name of the department
+177.28,4.16,when it was a started and other details
+179.68,2.639,an account id will have other details
+181.44,4.159,like balance
+182.319,4.161,and so on now how schema constraints
+185.599,2.72,come into the picture
+186.48,3.44,employee data will have requirement that
+188.319,2.64,one employee has to belong to a
+189.92,2.959,department
+190.959,3.041,and that employee has to have an account
+192.879,2.961,as well so
+194.0,3.599,department and account cannot be null
+195.84,2.64,that is a schema constraint and if your
+197.599,2.72,data
+198.48,3.119,can satisfy that and you know that that
+200.319,2.081,this is going to be the structure of
+201.599,2.481,your data
+202.4,3.759,we make the decision of selecting
+204.08,4.799,relation dbs what are the benefits
+206.159,3.201,of this relational dbs or schema one you
+208.879,3.041,can
+209.36,3.76,represent complex data easily using
+211.92,3.36,relational tables
+213.12,3.28,second with the schema constraints uh
+215.28,3.679,you can ensure
+216.4,4.32,that some garbage data or null data
+218.959,3.521,doesn't get into your database because
+220.72,3.68,the schema constraint like department id
+222.48,3.6,cannot be null account id cannot be null
+224.4,3.839,will ensure that you don't have
+226.08,3.92,inconsistent data or bad data
+228.239,3.521,in your database talking about asset
+230.0,3.36,properties if you don't know
+231.76,3.44,what are asset properties i have
+233.36,3.92,included a link in the description
+235.2,3.039,but still i'll cover basics of acid
+237.28,2.959,properties
+238.239,3.041,so a in acid properties stands for
+240.239,3.36,atomicity
+241.28,3.36,atomicity means a transaction in a
+243.599,2.961,database either
+244.64,3.84,happens completely or doesn't happen at
+246.56,3.599,all so for example if you have to
+248.48,2.8,transfer money from one account to
+250.159,2.8,another account
+251.28,3.28,the transaction should deduct money from
+252.959,2.721,one account and put money into the
+254.56,2.399,another account
+255.68,2.959,but it should not happen that it
+256.959,3.441,deducted from one account and didn't
+258.639,3.28,update into the another account
+260.4,4.16,so that is breaking the rule of
+261.919,4.401,atomicity relational db's ensure that
+264.56,3.199,all the transactions are atomic either
+266.32,2.72,they happen completely or they don't
+267.759,3.841,happen at all
+269.04,4.48,second is consistency consistency means
+271.6,3.52,that at any given point of time
+273.52,3.84,the state of the database will be
+275.12,3.04,consistent it will not happen that if
+277.36,2.64,two
+278.16,3.92,reads are happening if two requests are
+280.0,4.0,trying to read the account balance one
+282.08,3.92,request gets the response as 500 and
+284.0,4.639,another gets the response as 400.
+286.0,4.56,this is not possible if the db supports
+288.639,3.521,asset properties because your database
+290.56,4.32,is consistent it will give the same
+292.16,5.52,value to both the request
+294.88,4.56,then isolation isolation means the two
+297.68,2.16,transactions do not know about each
+299.44,2.88,other
+299.84,3.52,for example there is a read happening on
+302.32,3.36,the balance
+303.36,3.679,and at the same time there is a write is
+305.68,4.4,also happening
+307.039,6.321,suppose when read is happening read
+310.08,5.2,will uh read the older value like 500
+313.36,4.48,until the right is completed and right
+315.28,4.24,will go and update that value to 600.
+317.84,4.16,if the read happens after right it will
+319.52,4.48,get 600 if the read happens before right
+322.0,3.68,it will get 500. read would not know
+324.0,3.68,about the right operation so this is
+325.68,4.56,called isolation
+327.68,4.88,then durability durability is a
+330.24,4.0,mechanism that database ensures whatever
+332.56,3.44,rights or updates are happening
+334.24,3.76,they are logged properly and all the
+336.0,4.32,details and the data is getting
+338.0,4.479,persisted into the disk storage so that
+340.32,4.4,is just a brief of asset properties
+342.479,4.481,now if you have to support your business
+344.72,4.319,requirements as per asset properties
+346.96,3.6,if you have the need for transactions or
+349.039,3.921,if you are building like a
+350.56,3.919,banking application which has a
+352.96,4.239,requirement for transactions
+354.479,3.601,then and also if you have a fixed schema
+357.199,3.361,which is not
+358.08,3.2,going to change in future as much you
+360.56,2.72,select
+361.28,4.479,relational dbs what are the things that
+363.28,5.68,relational dbs cannot support
+365.759,4.0,for example you have a certain kind of
+368.96,3.359,data
+369.759,4.241,in which this schema is not fixed you do
+372.319,2.481,not know what are the different columns
+374.0,2.88,or fields
+374.8,3.679,that could evolve as your product
+376.88,2.56,evolves and you are not sure that how
+378.479,3.041,your uh
+379.44,3.759,how the schema of your data is going to
+381.52,3.84,evolve in that case
+383.199,3.28,using relational dbs becomes a little
+385.36,3.839,difficult
+386.479,4.321,although there are uh ways to update
+389.199,2.321,columns and change the scheme of the
+390.8,3.44,table but
+391.52,4.08,if when the table size grows and the
+394.24,3.44,data set becomes huge
+395.6,3.12,it becomes increasingly complex to add
+397.68,2.799,new columns
+398.72,3.039,and also when the data size grows and
+400.479,2.961,the queries require
+401.759,3.601,multiple properties to be fetched from
+403.44,2.72,different tables the joins can become
+405.36,3.119,expensive
+406.16,3.12,so that is the case when relational dbs
+408.479,2.801,don't have
+409.28,3.44,show much performance as expected second
+411.28,4.479,part is scaling
+412.72,5.68,in case of relational dbs it is easy to
+415.759,4.16,store or scale vertically we are going
+418.4,3.68,to discuss vertical
+419.919,3.12,scaling on horizontal scaling in detail
+422.08,2.8,but right now just
+423.039,4.321,understand vertical scaling means you
+424.88,4.4,can increase the storage of one machine
+427.36,3.52,so suppose if you have a table that has
+429.28,3.199,say 1 million rows
+430.88,3.36,when you foresee that it is going to
+432.479,4.0,grow to 2 million rows you can increase
+434.24,2.56,the memory of that machine but in case
+436.479,2.641,of
+436.8,4.08,relational dbs it becomes difficult to
+439.12,2.88,divide that table and put it on two
+440.88,2.879,different machines
+442.0,3.039,there are ways to divide the table
+443.759,4.081,through application code
+445.039,5.121,but it is difficult to perform
+447.84,4.0,horizontal scaling in case of relational
+450.16,3.92,dbs now let's talk about
+451.84,3.919,non-relational dbs or sometimes known as
+454.08,4.559,nosql dbs
+455.759,3.44,in such databases the schema is not
+458.639,2.4,fixed
+459.199,3.761,and different types of non-relational
+461.039,4.401,dbs cater to different requirements
+462.96,3.679,let's first talk about key value stores
+465.44,3.759,key value stores
+466.639,4.641,have just uh like a hash map it will
+469.199,4.4,just have a key
+471.28,3.44,and a value so suppose you have
+473.599,4.641,requirements like
+474.72,6.479,you have a feature flag or you have
+478.24,5.12,certain discount or promotion
+481.199,3.201,or you want to enable certain feature in
+483.36,4.0,a certain city
+484.4,2.96,for your application
+487.68,4.72,so these kind of values could be stored
+490.96,3.359,in
+492.4,3.84,key value stores there are multiple
+494.319,3.921,other cases for key value stores like
+496.24,4.88,caching solutions are implemented using
+498.24,4.399,key value stores some examples are redis
+501.12,3.919,dynamodb memcache
+502.639,3.441,etc the benefit of key value stores is
+505.039,3.121,they are quite fast
+506.08,4.08,and they provide quick access because
+508.16,4.16,most of the data stores are in memory
+510.16,3.439,apart from uh such kind of data like
+512.32,2.8,application related data or
+513.599,3.92,configuration related data
+515.12,3.68,you can also store like request response
+517.519,3.681,into key value stores
+518.8,3.76,again key value stores could be used in
+521.2,2.8,multiple caching solutions
+522.56,3.6,which we will discuss in detail in the
+524.0,4.72,caching video next let's talk about
+526.16,4.16,document based databases document based
+528.72,4.16,databases are usually
+530.32,3.92,used when you are not sure of the schema
+532.88,2.88,or how the data
+534.24,3.2,and the fields different fields of data
+535.76,3.519,are going to evolve over time
+537.44,3.2,in such cases document based dbs are
+539.279,4.721,used so there is
+540.64,3.36,no fixed schema
+544.08,4.4,and one more important point for
+545.68,7.2,documentdbs are they can support
+548.48,4.4,heavy reads and writes
+553.44,3.44,so let's see how a document based db
+555.76,3.92,looks like
+556.88,3.44,just like in relation dbs we have tables
+559.68,4.64,and rows
+560.32,4.0,document dbs have collections
+564.48,4.479,and documents so you can think of
+567.76,3.92,documents as rows
+568.959,4.161,and collections like tables the use
+571.68,4.8,cases like when you have to
+573.12,5.04,for example store a product details
+576.48,3.44,like for an e-commerce website if you
+578.16,5.76,have to store product details for an
+579.92,7.359,item so you will have item name
+583.92,6.64,item id price
+587.279,4.161,availability tax etc some some details
+590.56,3.04,like that
+591.44,4.399,and you know that these details although
+593.6,5.359,are known but they can change over time
+595.839,4.881,also when querying such kind of data
+598.959,4.32,you would need all these properties at
+600.72,4.799,once in one query so you don't want to
+603.279,3.921,have this different data in different
+605.519,4.721,tables and then make joins
+607.2,3.52,and fetch the data so documentdbs help
+610.24,2.719,you
+610.72,4.32,in decreasing that complexity where you
+612.959,3.761,can just simply fetch documents
+615.04,3.84,from the database so when you have use
+616.72,3.679,cases like that the schema is not fixed
+618.88,2.32,you don't know how it is going to evolve
+620.399,3.281,over time
+621.2,3.52,you want that flexibility of keeping
+623.68,2.96,dynamic data
+624.72,3.2,and also when you have the use cases for
+626.64,3.6,heavy reads and writes
+627.92,4.32,in such cases document dbs are a choice
+630.24,2.96,let's take one more example to make it
+632.24,3.36,more clear
+633.2,4.24,suppose you have a relational db where
+635.6,4.72,you store user related data
+637.44,4.56,so you would have a user table where you
+640.32,5.759,have user id
+642.0,7.44,name city country
+646.079,4.161,the company he works for etc if you have
+649.44,3.04,to fetch
+650.24,4.08,all the user details you would have to
+652.48,4.32,make query to user table
+654.32,4.16,then city table country table and
+656.8,3.52,company table to fetch the details
+658.48,4.24,related to city country and company
+660.32,3.36,and also you have a requirement of
+662.72,3.44,saving a
+663.68,4.48,large amount of user data so this kind
+666.16,3.04,of case becomes complicated while using
+668.16,3.6,relational dbs
+669.2,3.199,on the other hand if you put all this
+671.76,4.4,information
+672.399,6.88,in a document db where you have user
+676.16,5.52,and city and country and
+679.279,4.0,id all that all these details which are
+681.68,3.68,fetched from different tables in case of
+683.279,3.921,relational db if these are fetched
+685.36,3.919,if these are stored in the document db
+687.2,2.72,itself it it just have to fetch one
+689.279,2.56,document
+689.92,3.84,let's look at what are the downsides of
+691.839,3.761,uh document based db's
+693.76,4.0,first that you don't have schema so you
+695.6,3.52,might have null values or empty values
+697.76,3.12,in your db
+699.12,3.04,if and you have to uh you might have to
+700.88,4.16,handle that in your application
+702.16,3.52,code and second is these type of dbs do
+705.04,2.56,not provide
+705.68,3.599,asset transactions so sometimes the
+707.6,2.799,updates could become complex and you
+709.279,3.281,cannot ensure
+710.399,3.12,if the transaction is completed or not
+712.56,2.24,completed
+713.519,3.201,although you can handle that using
+714.8,3.839,application code but that facility is
+716.72,2.559,not provided by the db itself so to
+718.639,3.76,summarize
+719.279,3.761,some of the benefits or the reasons to
+722.399,3.201,choose a
+723.04,4.16,document databases is they provide uh
+725.6,2.72,they are highly scalable they provide
+727.2,2.48,sharding capabilities
+728.32,3.6,if you have dynamic data and you want
+729.68,4.08,that flexibility that you need a schema
+731.92,4.24,less organization of your data
+733.76,3.519,also uh such dbs provide special
+736.16,3.679,querying operations
+737.279,4.481,aggregation queries that can help you to
+739.839,3.841,fetch data as per the requirement
+741.76,3.519,when you have all these factors nosql
+743.68,3.52,db's or documentdbs
+745.279,3.68,are one of the choices if you don't
+747.2,4.079,understand sharding
+748.959,3.921,or horizontal or vertical scaling as i
+751.279,3.201,said there are dedicated videos on this
+752.88,4.24,topic and we'll cover
+754.48,3.52,more about db sharding in those videos
+757.12,2.64,now let's discuss
+758.0,3.92,what are column dbs or column wide
+759.76,4.16,stores column dbs are sort of a
+761.92,3.359,midway of relational dbs and document
+763.92,3.44,tvs in a way
+765.279,3.761,that there is sort of a fixed schema
+767.36,3.919,with tables and columns
+769.04,3.359,but these dbs do not support the asset
+771.279,3.441,transactions
+772.399,4.481,also such databases are used when you
+774.72,4.559,have a requirement of heavy reads
+776.88,3.12,some examples are even data or streaming
+779.279,2.881,data
+780.0,4.399,so if you use a music app you are
+782.16,4.56,continuously either liking the
+784.399,3.44,song or skipping over the song
+786.72,3.119,favoriting your song
+787.839,4.321,all those interactions that are doing
+789.839,4.641,have to be written and stored in dbs as
+792.16,4.08,even data so that analytics could be run
+794.48,4.0,over them such kind of data
+796.24,3.36,is stored in column dbs some other
+798.48,4.0,examples could be
+799.6,4.32,storing health tracking data or storing
+802.48,3.44,data for iot devices
+803.92,4.0,where different sensors are deployed and
+805.92,4.0,sensors are sending data continuously
+807.92,3.039,within every 10 seconds or 30 seconds in
+809.92,3.28,all such use cases
+810.959,4.081,column dbs are used because they support
+813.2,4.56,a large number of heavy rides
+815.04,4.88,coming to the reads such dbs do not
+817.76,2.639,support huge number of leads but they do
+819.92,3.279,support
+820.399,4.081,special kind of reads and the table
+823.199,3.76,structure is defined
+824.48,3.68,by the kind of queries you have to make
+826.959,3.12,for example
+828.16,3.44,the music app the queries will be you
+830.079,4.081,have to fetch user detail
+831.6,4.4,song detail you have to fetch uh users
+834.16,3.679,that have liked a particular song
+836.0,3.6,and also you have to fetch the songs
+837.839,4.401,that are liked by a particular user
+839.6,3.52,so some tables in column db could be
+842.24,3.2,then users
+843.12,3.04,songs users by liked songs and songs by
+845.44,2.959,users like
+846.16,4.16,this design in column dbs is done uh
+848.399,2.481,with respect to what kind of reads are
+850.32,3.519,required
+850.88,4.639,also column dbs are a good supporter of
+853.839,2.641,distributed databases if you don't know
+855.519,2.961,what are distributed
+856.48,4.159,databases we will have a dedicated video
+858.48,4.08,on distributed dbs where we will
+860.639,3.841,dig into more of this in detail some
+862.56,3.279,popular examples of column dbs are
+864.48,3.919,cassandra hbase
+865.839,4.24,sila etc in the description i have
+868.399,2.481,linked companies which use these
+870.079,2.721,databases
+870.88,3.519,and some more examples and use cases so
+872.8,3.52,that you understand how different
+874.399,2.721,companies are using these dbs now let's
+876.32,3.28,talk about
+877.12,4.159,search databases whenever you interact
+879.6,2.64,with any application where you search
+881.279,2.721,for something like
+882.24,3.92,for booking a flight or for booking a
+884.0,4.88,movie or if you're purchasing an item
+886.16,4.4,on amazon all those full text search
+888.88,4.72,queries are supported by
+890.56,3.76,data stored in search databases for
+893.6,2.88,example
+894.32,3.36,if you're reading a book you usually
+896.48,4.96,have an index
+897.68,4.08,at the starting of the book you can find
+901.44,2.48,out
+901.76,3.519,where uh every chapter can be accessed
+903.92,4.08,so suppose if you want to go
+905.279,3.68,to chapter 5 it will say okay go to page
+908.0,3.279,237
+908.959,3.041,so that's how you can easily access this
+911.279,3.761,page
+912.0,7.519,similarly the data against those queries
+915.04,6.72,is stored in advanced indexes
+919.519,5.201,inside search databases so when you
+921.76,4.879,search for a particular item say post it
+924.72,4.479,there will be data saved in these
+926.639,2.56,indexes
+929.839,5.281,to support those search queries some
+932.16,5.599,examples of such databases are elastic
+935.12,3.04,solar etc the important thing to note
+937.759,2.961,here
+938.16,3.76,is the data that is stored in search
+940.72,3.919,databases
+941.92,3.44,that is not the primary data store so if
+944.639,2.721,if you are
+945.36,3.279,working with an e-commerce application
+947.36,3.039,the product catalog
+948.639,3.681,all the products and items will be
+950.399,4.0,stored in a primary database maybe a
+952.32,3.68,relational or a non-relational db
+954.399,3.68,and the results of search queries are
+956.0,2.8,the data on which frequent queries are
+958.079,3.041,executed
+958.8,4.24,that will be stored on search db and it
+961.12,2.959,will be refreshed as per the frequency
+963.04,4.159,of the queries
+964.079,4.161,some other use cases for data are images
+967.199,3.601,and videos
+968.24,3.279,such a kind of data is stored usually on
+970.8,3.76,cloud
+971.519,5.281,in amazon s3 or buckets in case
+974.56,4.56,someone is using gcp then there are
+976.8,4.08,large data sets or time series data
+979.12,3.279,where a lot of data has to be stored and
+980.88,2.959,analytics is run over that
+982.399,3.281,there are different kind of databases
+983.839,3.521,which cater to such needs
+985.68,3.68,all the details are included in the
+987.36,3.599,description so the types of dbs and
+989.36,3.2,different use cases that we have just
+990.959,2.161,discussed these are the most popular
+992.56,2.32,ones
+993.12,3.519,there are many more types of databases
+994.88,3.28,and there are many more use cases
+996.639,2.961,again i have included all of them in
+998.16,2.4,description if you are more curious
+999.6,2.72,about the same
+1000.56,3.76,but the rules and the thumb rules that
+1002.32,3.6,we have discussed here could be easily
+1004.32,3.36,used whenever you are preparing for
+1005.92,3.359,system design and when you are trying to
+1007.68,4.159,build a large scale system
+1009.279,3.041,however these cannot be used as strict
+1011.839,2.321,rules
+1012.32,3.04,in some cases it will be very easy for
+1014.16,2.72,you to identify
+1015.36,3.44,that certain requirement it could be
+1016.88,3.759,fulfilled with a key value data store
+1018.8,3.599,but in some cases when requirements are
+1020.639,3.601,fuzzy and when you don't know how the
+1022.399,3.68,data is going to evolve over time
+1024.24,3.199,it might be a difficult decision to
+1026.079,3.12,choose between a relational or a
+1027.439,2.64,non-relational db or a document or a
+1029.199,3.041,column db
+1030.079,4.161,in such cases usually people sit with
+1032.24,3.679,team weigh all the pros and cons and
+1034.24,2.959,then decide what is the choice that they
+1035.919,3.841,have to go ahead with
+1037.199,4.48,and it is also possible that uh you
+1039.76,3.6,might have chosen a relational db at
+1041.679,3.681,certain point uh in your product life
+1043.36,3.199,cycle but uh five years down the line or
+1045.36,3.76,ten years down the line
+1046.559,3.841,when the scale is huge and when the data
+1049.12,3.12,is growing so fast you might have to
+1050.4,3.76,migrate to other kind of databases
+1052.24,3.28,big companies in some cases have to
+1054.16,3.28,develop their in-house database
+1055.52,3.6,solutions to fulfill their requirements
+1057.44,3.68,so there is no right or wrong answers
+1059.12,2.72,here these were just some rules that you
+1061.12,3.28,could use
+1061.84,4.079,to select databases so that was a short
+1064.4,3.84,introduction to different types of
+1065.919,4.161,databases and their use cases
+1068.24,3.6,in further videos we are going to talk
+1070.08,4.24,about different techniques
+1071.84,3.28,of databases like replication indexing
+1074.32,4.0,sharding
+1075.12,4.559,scaling etc stay tuned for that again
+1078.32,1.76,for your reading there are links in the
+1079.679,1.921,description
+1080.08,15.76,description please don't forget to check
+1081.6,14.24,them out and see you in the next video
+1097.76,2.08,you

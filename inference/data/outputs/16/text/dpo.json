@@ -1,0 +1,69 @@
+{
+  "introduction": "This video discusses Direct Preference Optimization (DPO), a new approach to training language models that moves the probabilities of a model away from bad answers towards good answers. It is a more efficient technique than traditional methods used by companies like Open AI and Meta. The video provides an overview of standard training, contrasts it with DPO, and introduces two DPO data sets. It also walks through the training notebook for DPO step by step. The video aims to help viewers take a model they've developed into a chat format and align it in a similar way to commercial models. The video covers high-level concepts and provides examples to illustrate the concepts.",
+  "sections": [
+    {
+      "title": "Section 1: Standard Training",
+      "content": [
+        "Explanation of standard language model training",
+        "Penalizing the model based on predicted next token versus actual next token",
+        "Example of a data set with dublin as the next token 10 times and cork as the next token one time",
+        "Increasing the probability of dublin with more and more data that says the capital violent is dublin"
+      ],
+      "topics": ["Standard Training", "Language Model Training", "Data Set"]
+    },
+    {
+      "title": "Section 2: Direct Preference Optimization",
+      "content": [
+        "Explanation of Direct Preference Optimization (DPO)",
+        "Penalizing the model to incentivize the probability of the model being trained increasing for dublin relative to the probability that the reference model predicts for dublin",
+        "Penalizing the model to incentivize the probability it predicts for cork should be reduced relative to the probability of the reference model",
+        "Using pairs of options to bias the model away from bad answers and towards good answers"
+      ],
+      "topics": ["Direct Preference Optimization", "DPO", "Pairs of Options"]
+    },
+    {
+      "title": "Section 3: DPO Data Sets",
+      "content": [
+        "Explanation of the two DPO data sets",
+        "Dublin as the next token 10 times and cork as the next token one time",
+        "Chosen response: dublin, Rejected response: cork"
+      ],
+      "topics": ["DPO Data Sets", "Dublin as Next Token", "Chosen Response"]
+    },
+    {
+      "title": "Section 4: Training Notebook",
+      "content": [
+        "Overview of the training notebook",
+        "Starting with a model, duplicating it to create a reference model",
+        "Penalizing the model to incentivize the probability of the model being trained increasing for dublin relative to the probability that the reference model predicts for dublin",
+        "Penalizing the model to incentivize the probability it predicts for cork should be reduced relative to the probability of the reference model"
+      ],
+      "topics": ["Training Notebook", "Model", "Reference Model", "Penalty"]
+    },
+    {
+      "title": "Section 5: Conclusion",
+      "content": [
+        "Summary of the key points covered in the video",
+        "DPO as a new approach to training language models",
+        "Moving the probabilities of a model away from bad answers towards good answers",
+        "Example of using DPO to align a model in a similar way to commercial models"
+      ],
+      "topics": ["Conclusion", "DPO", "Language Models", "Commercial Models"]
+    }
+  ],
+  "topics": ["Language Models", "Artificial Intelligence", "Machine Learning", "Direct Preference Optimization"],
+  "general topics": [
+    {
+      "name": "Artificial Intelligence",
+      "complexity": 0.75
+    },
+    {
+      "name": "Language Models",
+      "complexity": 0.80
+    },
+    {
+      "name": "Direct Preference Optimization",
+      "complexity": 0.90
+    }
+  ]
+}

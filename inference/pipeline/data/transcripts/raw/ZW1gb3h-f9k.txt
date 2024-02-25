@@ -1,0 +1,194 @@
+second,duration,transcript
+0.0,2.308,"Dear students, welcome to Gate Smashers"
+2.333,2.667,In this video I am going to explain the difference between
+5.0,3.0,Risk and Cisc which is a very important topic
+8.0,2.0,From your competitive exams point of view
+10.0,4.0,Even it is very important for college and university level exams
+14.0,3.0,So guys like the video quickly and subscribe the channel
+17.0,2.0,If you haven't done it yet and if you have done it
+19.0,2.0,Then you can share it with other devices
+21.0,2.0,Subscribers are very important
+23.0,5.041,"So as you know that the maximum syllabus
+ of computer organization and architecture"
+28.066,1.934,We have completed the maximum syllabus on our channel
+30.0,2.0,You will get all the videos in the playlist
+32.0,3.0,I am covering the remaining 2-3 topics
+35.0,5.0,"So that you can prepare the entire playlist, 
+the entire syllabus in that playlist"
+40.0,3.0,So if we talk about cisc and Risk
+43.0,2.0,So the categorization we have done
+45.0,4.0,On what basis is it done based on an instruction set
+49.0,2.0,Means how many number of instructions we have to put
+51.0,3.572,So what is the meaning of complex instruction set
+54.705,2.295,Why we made the system complex
+57.0,2.0,Because number of instructions are large
+59.0,4.0,"And if we talk about it, what is the meaning of reduced instruction set"
+63.0,2.0,Number of instructions are less
+65.0,2.0,The most important difference is this
+67.0,2.658,Number of instructions are large
+69.683,2.317,"What is the number of instructions, I have less"
+72.0,4.0,"Now here on the basis of that only 
+the other differences are being made"
+76.0,2.0,Then if we talk here
+78.0,2.0,Variable length instruction format
+80.0,3.0,Means the instructions we are using in this
+83.0,5.0,"Is 16 bit, 32 bit, 64 bit"
+88.0,2.0,Means it is not of one size
+90.0,4.0,We have kept instructions of different sizes
+94.0,4.0,But here I have fixed length instruction format
+98.0,3.0,Means I am using 32 bit instruction format
+101.0,5.0,"So in that only my opcode, operand, 
+whatever field I am keeping for instruction"
+106.0,2.0,I am doing fixed format
+108.0,4.0,So this point gives benefit to whom
+112.0,2.0,It gives benefit to program counter
+114.0,3.0,Because program counter knows that instruction start from here
+117.0,2.0,And next instruction starts from here
+119.0,3.0,"End is here, from that next starts from here"
+122.0,2.0,"Here it is a little difficult, why"
+124.0,2.0,Because if one instruction is of 1 byte
+126.0,3.798,"It is of 2 byte, 4 byte, 8 byte"
+129.932,5.668,"So according to that program counter has
+ to contain address of next available instruction"
+135.625,1.375,So this point is a little bit
+137.0,3.0,For that problem can not be called a problem
+140.0,4.0,"Means this point is a little bit difficult 
+according to program counter"
+144.0,2.0,"But this is its easiness, that's it"
+146.0,3.0,You can write no to problem or that
+149.0,3.0,Then if we talk about large number of addressing modes
+152.0,3.0,Here it supports large number of addressing modes
+155.0,5.0,"What is large number? Means all
+ your 8-9 addressing modes have variations"
+160.0,2.0,What is supporting all of them?
+162.0,2.0,Few number of addressing modes
+164.0,2.83,Maximum we have 4 addressing modes here
+167.096,2.904,And here I have so many addressing modes
+170.0,1.0,What problem can come?
+171.0,2.671,Or what you can say is important point
+173.696,1.304,If you are asked in exam
+175.0,4.0,Then you have to mention in the instruction
+179.0,3.0,"Which addressing mode is there, where is your operand"
+182.0,3.0,So this thing you have to mention separately here
+185.0,2.0,Because number of addressing mode is supporting more
+187.0,2.0,Number of addressing mode is supporting less
+189.0,3.0,That's why it works properly in fixed length
+192.0,2.0,Then if we talk about cost
+194.0,2.0,"Cost is high, more powerful"
+196.0,4.0,Simple reason you know is number of instruction set is large
+200.0,3.0,Number of instruction set large means
+203.0,4.0,"That if you have to do any work, division, multiplication"
+207.0,4.0,"You have to check any bit, if you have to check anything"
+211.0,3.0,You will get maximum instructions in this
+214.0,3.0,But here you will not get maximum instructions
+217.0,3.0,"Yes, you can use available instructions"
+220.0,3.0,And make complex instructions
+223.0,2.0,But by default you are getting
+225.0,3.0,Easy instructions or less number of instructions
+228.0,5.0,You can use them multiple times and make it as a complex
+233.0,2.0,But here you will get complex by default
+235.0,2.0,On hardware obviously
+237.0,3.0,If you want to get more number of instructions
+240.0,4.0,Then hardware should be more available
+244.0,3.636,"Now let's say you have to do addition, subtraction"
+247.661,2.339,"You have to do multiplication, division"
+250.0,3.0,So hardware should support you properly
+253.0,3.347,You should have more additional functionality in hardware
+256.372,2.111,That's why it will be costly but powerful
+258.616,1.384,What is here?
+260.0,2.769,Let's say you have only addition and subtraction
+262.794,2.206,"If you don't want multiplication, what can you do?"
+265.0,2.0,To do multiplication
+267.0,3.0,You can get addition multiple times
+270.0,1.0,So what does it mean?
+271.0,4.0,It easily provides you all the instructions
+275.0,1.0,But if hardware cost will be more
+276.0,2.0,That's why overall cost will increase
+278.0,3.0,And overall cost will be less
+281.0,2.504,Then if we talk about several cycle instructions
+283.529,2.0,Means instructions are not necessary
+285.554,1.446,That work will be completed in one cycle
+287.0,2.0,You can also take multiple cycles
+289.0,2.0,The CPI value is a bit here
+291.0,2.0,"That's why it is a bit messy, it is too much"
+293.0,4.573,But here we try to keep CPI 1 using the pipeline
+297.598,2.402,Because instruction is complete in single cycle
+300.0,3.0,Then manipulation directly in the memory
+303.0,3.0,Here your instructions are mostly memory to memory
+306.0,4.0,Means whatever changes we are manipulating in memory
+310.0,2.0,We are doing it directly in RAM
+312.0,2.0,Here we are using registers
+314.0,4.0,Here we are using register to register instructions more
+318.0,3.0,Although load and store will be used by default
+321.0,2.0,Because you will load data from memory
+323.0,3.0,And you will store the final result
+326.0,2.0,So here load and store is mainly used
+328.0,1.0,Related to memory
+329.0,3.0,But here the proper utilization of memory is there
+332.0,4.173,Most of the work we are performing in memory
+336.198,1.802,Then this micro programmed control unit is based
+338.0,3.0,And this is hardwired control unit based
+341.0,2.0,Control unit that generates signals
+343.0,3.0,"If you want to fetch, decode, execute any instruction"
+346.0,3.0,All this work is to generate signals of control unit
+349.0,2.0,So this is micro programmed based
+351.0,2.0,In which we can make changes
+353.0,2.0,But this is hardwired
+355.0,2.0,Fixed kind of environment
+357.0,2.0,These are some examples that you can note
+359.0,2.0,No need to remember
+361.0,3.0,But mainly you can note some examples
+364.0,4.0,I have written the popular architecture here
+368.0,2.0,Like this Fugaku
+370.0,2.0,Actually in 2020
+372.0,1.0,Supercomputer
+373.0,2.0,This is the example of supercomputer
+375.0,3.0,So it also uses RISC system
+378.0,2.0,I am finally summarizing this with a small example
+380.0,3.0,So that you can get clear from the example
+383.0,1.0,Let's say this is my RAM
+384.0,3.0,Register set and this is my execution unit
+387.0,3.0,Now see in RAM let's say my location is 2 by 2
+390.0,3.0,In 2 by 2 let's say my number of rows is 4
+393.0,3.0,So in 2nd row in 2nd column there is X
+396.0,2.0,In 3rd row in 3rd column there is Y
+398.0,2.0,Just for example I am taking
+400.0,3.0,Now see what I have to do in CISC
+403.0,5.0,In CISC directly use MULT instruction
+408.0,3.0,What is there in 2 column 2
+411.0,2.0,"X is there, so take X"
+413.0,2.0,In column 3 what is there in 3 column 3
+415.0,2.0,"Y is there, so take Y"
+417.0,3.0,So it has to complete in one instruction
+420.0,3.0,And it means in a way X is equal to X into Y
+423.0,3.0,"Means whatever location you read in it, take it"
+426.0,3.0,And directly multiply in memory
+429.0,3.0,And store in the same location of memory
+432.0,2.0,So when you use this instruction
+434.0,3.0,Or you can say let's say you are using this code
+437.0,3.0,"So in assembly code, machine code"
+440.0,2.0,What is the number of micro instructions to do?
+442.0,1.0,"To do less, why?"
+443.0,2.0,Because this format which is more
+445.0,3.0,You can say the instructions are compatible in a way
+448.0,3.0,So that's why it has to produce less number of micro operations
+451.0,3.0,See here we are doing the same work
+454.0,2.0,First of all what will have to be done
+456.0,2.0,"Whatever data is in this location, 
+it has to be brought in register"
+458.0,4.0,"Loaded, then loaded the one in the other location"
+462.0,2.0,Then what we used Prode
+464.0,2.0,What we did in registers
+466.0,2.0,Produced A and B
+468.0,4.0,And finally we stored the same value again in 2x2 location
+472.0,3.0,So we are doing this whole work in 4 instructions
+475.0,2.0,This is done in 1 micro instructions
+477.0,4.11,So somewhere memory utilization is more here
+481.135,1.865,But if we talk about today's time
+483.0,2.888,RAM has become very cheap
+485.913,3.087,"As compared to the last 10, 20, 30 years"
+489.0,3.0,So that's why this system is more popular than this
+492.0,2.0,So these small examples as much as you have told
+494.0,2.0,These points are more than sufficient
+496.0,3.399,"For your college, university exam as well as competitive exam"
+499.424,7.576,Thank you.

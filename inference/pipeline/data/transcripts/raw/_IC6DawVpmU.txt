@@ -1,0 +1,580 @@
+second,duration,transcript
+5.071,0.901,"In this video,"
+6.039,1.968,"we're gonna look
+at how predictive modeling"
+8.074,1.702,"can be used
+in an educational setting."
+9.843,2.435,"And more specifically
+we're gonna look at an example"
+12.345,1.802,"of how we can use
+predictive modeling"
+14.214,2.636,"to detect students
+who game the system."
+18.985,1.802,"So, this video
+is gonna just start"
+20.854,2.002,"with a brief introduction
+of predictive modeling"
+22.922,1.936,"and the example
+of gaming the system."
+24.924,3.003,"So predictive modeling,
+what is it?"
+27.994,2.102,"It's a category
+of machine learning"
+30.163,2.035,"which is a field
+in computer science."
+32.265,2.936,"Uh, where we study how the
+computers can learn from data."
+35.268,2.836,"So more specifically, uh,"
+38.171,2.636,"predictive modeling is a type
+of supervised learning"
+40.874,3.403,"which means that we know what
+we want the computer to learn,"
+44.344,1.968,"and what we do
+is we give it example"
+46.379,1.568,of what we want to learn
+48.014,2.803,"and we let the computer
+discover general rules"
+50.884,2.669,"about when the example
+is or is not"
+53.62,2.836,"an ex-uh, what we-an example
+of what we want it to learn."
+56.523,2.235,"So what predictive
+modeling-what we're gonna do"
+58.825,1.868,"is we're gonna
+try to develop models"
+60.76,2.936,"that can infer
+one specific aspect of the data"
+63.763,2.036,"which we call
+the predicted variables."
+65.865,2.67,"And this prediction
+can be about future event,"
+68.601,2.97,"or they can be about events
+that are happening at the moment"
+71.638,2.602,"but that are unknown
+values in our data."
+74.307,3.637,"And so, just to give
+a little bit of vocabulary."
+78.011,2.836,"When we talk
+about predictive modeling, uh,"
+80.914,2.068,w-the predicted variable
+83.049,2.136,"we also sometimes
+call it the label."
+85.251,1.869,"And the predictors
+that are gonna be used"
+87.187,3.37,"to predict that variable,
+we also sometimes call features."
+90.623,2.303,"So I'm gonna be using
+those terms in this video."
+92.992,3.07,"So there are
+two main categories"
+96.129,1.368,of predictive modeling
+97.564,1.434,"that we're gonna
+be talking about today."
+99.065,1.568,"The first one is regression,"
+100.7,2.035,and the second one classifications.
+102.802,2.269,"The idea behind
+those two types of analysis"
+105.138,1.068,is very similar.
+106.272,1.702,"Their main difference
+is gonna be"
+108.041,2.669,"in the nature of the variable
+we're trying to predict."
+110.777,2.769,"So, for regressions
+we're gonna look"
+113.613,3.57,"at predicting variables that
+are numerical and continuous."
+117.25,2.269,"Whereas for classification,
+we're gonna look"
+119.586,3.036,"at predicting variables
+that are categorical."
+122.689,2.402,"So for example, for regression,"
+125.158,2.202,"uh, something
+that we might be interested in"
+127.427,3.437,"in the educational context,
+is to try to predict"
+130.93,1.402,how long is it gonna take
+132.398,1.435,"for a student
+to solve a problem."
+133.9,3.437,"Or what is gonna be the score
+of the student"
+137.403,1.235,on the future test?
+138.705,2.169,Or how many weeks is a student
+140.94,2.236,"gonna stay engaged
+in an online course?"
+143.243,4.571,"Um, on the hand when we're
+doing classification analysis,"
+147.881,3.837,"uh, we're gonna try to predict
+a categorical labels."
+151.784,2.937,"So for example, will the
+student complete the course?"
+154.787,1.135,"So, we're not trying to predict"
+155.989,1.568,"what the grade of the student
+is gonna be,"
+157.624,1.101,"we're just trying to predict,"
+158.791,3.237,is the student gonna complete- yes or no?
+162.095,1.668,"Uh, the same thing
+if we look at"
+163.83,4.371,will the student get the next answer right to this problem.
+169.602,2.336,"So, in this video
+we're gonna illustrate"
+172.005,2.335,"the process of building
+a predictive model"
+174.407,3.904,"using an example of when
+student games the system,"
+178.378,1.735,"which is
+a classification problem."
+181.414,2.402,"So what exactly is
+a student gaming the system?"
+183.883,2.136,"Well, it's a type
+of disengaged behavior"
+186.085,3.003,"in which the student
+try to solve problems"
+189.155,2.603,"without actually
+having to learn anything"
+191.824,3.437,"by abusing the support
+that the software gives you."
+195.328,1.001,"So for example,"
+196.396,2.502,trying to abuse the hints provided by the system
+198.965,2.769,"or trying to systematically
+try to guess the answer."
+203.102,2.536,"And more specifically,
+we're gonna look at the problem"
+205.705,2.636,"of students who game
+intelligent tutoring system."
+208.408,2.102,"And what intelligent
+tutoring system is,"
+210.577,2.936,"it's a-a
+problem solving environments"
+213.58,3.436,where the problem is broken down into smaller steps.
+217.083,1.468,"And in order to solve
+the problem,"
+218.618,3.403,"the student has to solve
+each of those individual steps."
+222.088,2.236,"And usually
+that kind of environment,"
+224.39,1.368,"intelligent tutors,"
+225.825,1.869,"they will provide support
+to the student"
+227.76,1.869,in the form of next step hints
+229.696,2.035,"about what the student
+should be doing next."
+231.798,3.57,"And also, um, feedback
+on each step"
+235.435,2.502,"to say if the step
+was correct or incorrect."
+238.004,2.769,"And the reason why
+we're interested in studying"
+240.84,2.035,"gaming the system
+in those environment"
+242.942,3.404,"is that it's been linked
+to poor learning outcomes"
+246.412,3.204,"and poorer long-term
+academics success."
+249.682,2.87,"So, as I said earlier,"
+252.619,3.036,"gaming the system
+is a classification problem."
+255.722,2.502,"In this problem,
+what we're gonna be predicting"
+258.291,2.636,"is a categorical label
+which is"
+260.994,1.868,is the student gaming the system
+262.929,2.436,"or is the student
+not gaming the system."
+265.431,2.603,"So, if we want to build
+this model,"
+268.101,1.835,the first thing we need to do
+270.003,1.334,is we need to get example
+271.404,2.469,"of what gaming behavior
+look like."
+273.94,2.536,"So it means we need
+to collect labels."
+276.542,1.735,"And so there are
+many different ways"
+278.344,1.535,to collect labels depending on
+279.946,2.769,"what type of lavel-label
+you are looking for."
+282.782,3.003,"Some of them might come from
+the learning environment itself."
+285.852,2.769,"So, if you're looking at,
+uh, in software performance"
+288.688,3.904,the-did the student just manage to complete to problem or not.
+292.659,1.901,"Uh, it could be school records"
+294.627,1.869,"if you want to look
+at grades of the students."
+296.562,1.769,"Uh, it could be test data."
+298.398,2.736,"Uh, but it cannot-but
+sometimes we also wanna"
+301.2,1.969,"predict things that are not
+in the learning environment."
+303.236,2.269,"And then in that cases,"
+305.571,3.404,"then we will have to go
+and collect additional data."
+309.042,2.469,"And this can be achieved
+using survey,"
+311.577,3.737,"field observations,
+a video/ audio/ text coding,"
+315.381,1.535,"there's many different
+ways to do it."
+318.151,2.235,"In the context
+of gaming the system,"
+320.453,3.136,"well, we don't know when students are gaming the system."
+323.656,1.902,"The learning environment
+does not provide us"
+325.625,1.568,with information about that.
+327.26,1.234,"The learning environment
+does not know"
+328.561,2.236,"whether the student
+is gaming the system or not."
+330.863,1.202,"Uh, and if it did,"
+332.131,2.403,"then we would not
+need to create a model of it."
+334.6,2.403,"Uh, so we need
+additional data collection."
+337.07,2.736,"And one way to do that
+is to collect data"
+339.872,2.269,"using something
+we call text replays."
+342.208,5.005,"So text replays, what they are is a vis-textual representation"
+347.28,1.968,of the actions that the students
+349.315,1.802,"are doing
+in the learning environment."
+351.184,2.168,"So for example,
+here we have a text replay"
+353.419,2.403,which is a clip of five action
+355.888,2.536,"that the students
+was doing in the tutor."
+358.491,3.237,"And so in order to get
+examples of gaming behavior,"
+361.794,1.802,"a human will sit
+at the computer,"
+363.663,2.803,"look at the text replay,
+and then make a judgement"
+366.532,3.537,"on whether, uh,
+this is an example of gaming"
+370.136,1.935,"or it's an example
+of not gaming."
+372.138,2.569,"And so if we look
+at the specific clip,"
+374.774,2.402,"just to give you an idea,
+what we can see"
+377.243,1.902,"is that the first action
+that the student is doing,"
+379.212,2.102,"uh, they get the correct answer and then they move on"
+381.38,2.503,"to the next step
+that they're supposed to do."
+383.95,2.502,"20 seconds later,
+they answer minutes"
+386.519,1.602,as the answer for that step.
+388.187,2.736,"And the system tells
+them that this an error."
+390.99,2.236,"So four seconds later,
+they enter hour"
+393.292,1.535,which is again an error.
+394.894,3.003,"And then seven seconds later
+they answer years,"
+397.964,1.468,again an error.
+399.499,4.304,"And 14 seconds later, week
+which is again an error."
+403.87,2.402,"And so what we can see if we
+look at this behavior"
+406.339,3.103,"is a very systematic behavior
+of trying to guess"
+409.509,1.434,what the answer would be
+411.01,2.236,"by entering
+all the units of time"
+413.312,2.036,"the student th-can think of
+in order"
+415.414,2.036,"from the smallest one
+to the largest one."
+417.517,2.802,"And so a human might look
+at this behavior and say,"
+420.386,1.602,I think that the student
+422.054,1.736,"is currently trying
+to game the system"
+423.856,1.368,"because they're
+trying to guess the answer."
+425.291,4.838,"So, the human will do that
+for a large amount of clips"
+430.196,3.103,"of-of behavior from the student
+to get the large amount"
+433.366,2.969,"of example of gaming
+and not gaming look like."
+436.402,2.636,"And then once we have
+those labels what we can do"
+439.105,2.402,"is we can take them
+and synchronize them"
+441.574,1.969,"with the data
+of what the student is doing."
+443.609,2.937,"And then we can use that to
+compute what we call features,"
+446.612,2.803,"which is the variables
+that are gonna be used"
+449.482,2.235,to create our predictive model.
+451.784,2.069,"And those features
+are gonna summarize"
+453.92,2.602,"the behavior of the student
+in that example."
+456.589,3.737,"So, this is a process that
+we call feature engineering."
+460.393,3.27,"So, in the context
+of an intelligent tutor,"
+463.729,2.803,well some of the feature engineering that we might do
+466.599,2.669,"is look at
+in that clip of action,"
+469.335,2.903,"how many actions were
+in that specific time window."
+473.406,2.903,"What was the average time
+taken between each actions?"
+476.375,3.17,"Uh, how many times
+does the student ask for help?"
+479.612,2.135,How many answers were correct?
+481.814,1.769,"How many answers
+were incorrect?"
+483.649,2.436,"Then once we've created
+those features,"
+486.152,1.168,we've computed them
+487.386,1.735,"for the different examples
+of gaming behavior we have,"
+489.188,2.436,"then we can synchronize
+everything together."
+491.691,3.503,"And we get this information
+about what the student was doing"
+495.261,2.603,"while they were
+gaming or not gaming."
+497.93,1.468,"So for example here,"
+499.465,1.468,"if we take the first row
+of the table"
+501.0,2.436,"then we can see that
+for the first row"
+503.502,1.936,"the student did six action,"
+505.504,2.37,"and then
+took three seconds per action."
+507.94,4.705,"Which is fairly quick
+and then they ask five hints."
+512.712,1.034,"They've got
+one correct answer,"
+513.813,1.701,"and they didn't get
+any incorrect answer."
+515.581,3.47,"And the human label
+this particular behavior"
+519.118,1.535,as gaming the system.
+520.72,2.702,"Now, once we've collected
+all this data,"
+523.489,2.603,"what we do is we use
+machine learning algorithms,"
+526.158,3.304,"uh, to try to identify
+patterns in the data"
+529.528,3.07,"that might not be easy
+for human to pick up on."
+533.799,1.869,"And so for example,
+what we might want to do"
+535.735,3.17,"is build something
+we call a decision tree."
+538.971,2.069,"So that tree
+what it's gonna do,"
+541.107,2.302,its gonna partition the data
+543.476,2.102,"according to the differenet
+values of the features"
+545.645,2.769,"and then depending on the different values of the feature,"
+548.481,2.369,"its gonna make a prediction
+based-uh, saying"
+550.917,2.068,"whether the student
+is gaming or not gaming."
+553.052,2.169,So if we get an example here
+555.288,1.868,"of what a decision tree
+might look like."
+557.223,2.235,"Uh, we start
+at the root of the tree"
+559.525,1.602,which is the node at the top.
+561.193,2.636,"So for each node
+there's gonna be two branches,"
+563.896,1.535,and it's gonna separate
+565.498,1.902,"one of the features
+into two partition."
+567.466,2.837,"So, first of all here
+we might have, uh,"
+570.369,2.169,"the first node is looking
+at the average time"
+572.605,2.069,"that the student takes
+for action."
+574.74,2.503,"So, in this example
+we might say,"
+577.31,1.635,"Well, if the student is taking"
+579.011,1.969,"more than three seconds
+per action,"
+581.047,1.835,then the student is not gaming
+582.949,1.768,"because he's not going
+fast enough."
+584.784,2.936,"Uh, and then-but then
+if the student is taking"
+587.787,1.535,"three or less seconds
+per action,"
+589.388,2.236,"then we're gonna look
+at the number of hints"
+591.691,1.101,that were requested.
+592.858,2.503,"If there's a large number
+of hints that were requested,"
+595.428,2.068,"we're gonna say the student
+is gaming the system"
+597.563,2.736,"because they're asking
+a lot of hints and going fast."
+600.366,2.636,"Now if the student
+is not asking a lot of hints,"
+603.069,2.869,"then maybe we wanna look at
+the number of incorrect answer,"
+606.005,2.803,"and say that if the student
+is going fast and entering"
+608.874,2.77,"a lot of incorrect answer they
+might be gaming the system."
+611.711,3.303,"So this model is not
+an actual true model"
+615.081,0.901,"of gaming the system,"
+616.048,2.67,"it's just an example to kind
+of illustrate the process."
+618.784,1.769,"A real model
+of gaming the system"
+620.619,1.902,"would probably be
+much more complex."
+623.689,2.202,"Now, once we have that model,
+what we can do is"
+625.958,2.302,"we can take data about
+the behavior of the student"
+628.327,2.336,"and use it to get
+a prediction from the model."
+630.73,3.536,"So for example, if the student
+has an average time"
+634.333,2.903,"for action of eight seconds,
+ask for hints five times,"
+637.303,1.935,and has three incorrect answers
+639.305,2.936,"then we'll go into the tree
+and we'll take the right branch"
+642.308,2.069,"depending on the value
+of the feature."
+644.443,1.268,And what we're gonna see here
+645.778,1.568,"is that because
+the average time for action"
+647.413,2.569,is greater than three seconds then the model is gonna say
+650.049,3.337,"that is not
+an, uh, gaming behavior."
+653.452,3.103,"And then we could do
+the same thing"
+656.622,1.735,for a different example
+658.424,2.169,"where the student took
+three seconds per action"
+660.659,2.837,"on average,
+asked hints six times,"
+663.562,2.203,"and entered
+zero incorrect answer."
+665.831,2.903,"And now we would take
+the right branch at first,"
+668.801,2.135,"because the time is smaller
+than or equal to three."
+671.003,1.802,"And then we would take
+the right branch again,"
+672.872,2.235,"because the number of hints
+is greater than four."
+675.174,2.769,"In that-in that case
+the model would predict"
+678.01,3.137,"that the student is currently
+gaming the system."
+681.213,3.571,"So this is kind of the
+process to build the model."
+684.85,2.736,"Now once we have the model,
+what we'll wanna do"
+687.653,2.136,"is evaluate
+is this a good model."
+689.855,1.802,"Uh, so I won't go into details"
+691.724,2.369,"on how to evaluate
+if it's a good model or not."
+694.16,2.335,"But just to give you
+a general idea,"
+696.562,2.236,"what we're gonna do is
+we're gonna take the model"
+698.864,3.137,and we're gonna reapply it to data for which we have labels.
+702.068,1.534,And then we're gonna compare
+703.669,2.169,the labels and the prediction from the model.
+705.905,3.67,"Uh, ideally that's gonna
+be done on data that's new"
+709.642,2.202,"and unseen when we
+were building the model."
+711.911,2.602,"So, what you might want to do
+is take your initial data"
+714.58,4.071,"and then get a part of the data
+and use it to build your model"
+718.717,1.769,and then take part of the data
+720.553,2.202,"and keep it aside for later
+to test on it."
+722.822,3.403,"Uh, you can also use
+more advanced techniques"
+726.292,1.234,such as cross validation
+727.593,2.503,"which I'm not gonna describe
+in this video."
+730.162,2.069,"So, now if we go back
+to our data,"
+732.298,2.235,we can add a column in our table
+734.6,2.135,"to say what did
+the model predict?"
+736.802,2.336,"So, in this specific example,"
+739.205,2.369,"if I use the model
+that I shown earlier,"
+741.64,2.803,"what we would get is that
+out of five examples"
+744.51,2.669,"the model would get
+the right prediction four times."
+747.246,3.403,"Which means that the model
+would have an accuracy of 80%."
+750.716,4.004,"So there is many different
+ways to evaluate"
+754.787,1.268,the performance of a model.
+756.122,1.668,"Many different
+metrics you can use."
+757.857,2.469,"Um, each one are gonna have
+their own strengths,"
+760.392,1.869,"so it's up to you
+to decide which one"
+762.328,1.868,"is more appropriate
+for your data."
+764.263,2.469,"Or you can also compute
+more than one metric."
+766.799,3.704,"So some of them include
+accuracy, precision, recall,"
+770.569,2.002,"Cohen's Kappa, uh,"
+772.638,3.704,and the area under the ROC curve also known as AUC.
+778.144,2.068,"And now just
+to quickly conclude this video,"
+780.279,4.171,"uh, what we did here is
+we took a very quick overview"
+784.517,3.336,"of how predictive modeling
+can be used in education."
+787.92,2.502,"Uh, we can see that it has
+many different applications."
+790.489,1.235,"Uh, for example,"
+791.79,3.371,"when we're studying behavior such as gaming the system, uh,"
+795.227,2.436,"then we might use our model
+to study the relationship"
+797.73,2.502,"between the behavior itself
+and learning outcomes."
+800.299,3.17,"So maybe student who engage
+in more lo-gaming the system,"
+803.536,2.902,"uh, don't perform
+as well on future tests."
+806.505,1.468,Or we can use the model
+808.04,2.369,"to inform teacher about what's going on with the student,"
+810.476,2.936,"so that the teacher
+can look at the report and see,"
+813.479,2.402,"oh there's a lot of gaming
+going on with this student"
+815.948,2.169,and I better go and figure out what's going on.
+818.184,2.135,"How I can better support
+the sys-the student?"
+820.386,3.87,"Or we could use the model to
+drive automated interventions"
+824.323,3.804,"in the system itself to offset
+negative learning outcomes."
+828.194,1.401,"So maybe if we observe
+that the student"
+829.662,2.202,"is gaming the system
+pretty often,"
+831.931,3.737,then we maybe we can propose remedial learning activities
+835.734,2.369,"to try to improve
+the learning for that student."

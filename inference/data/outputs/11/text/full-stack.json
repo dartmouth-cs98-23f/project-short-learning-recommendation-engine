@@ -1,0 +1,51 @@
+Introduction:
+
+* The video tutorial will guide you through the process of building a job board app that could be a real startup.
+* The app will use a single data feed from a job board API, with a simple frontend and backend.
+* The app will filter the jobs based on their level and remove senior and manager jobs.
+
+Section 1: Planning the Frontend
+
+* Create a new React app and install Material UI.
+* Create a new component for jobs and another for a single job.
+* Use typography to hold the app state and render the jobs.
+* Use variant typography to style the job list.
+* Add CSS for the job component to make it a display flex.
+
+Section 2: Building the Frontend
+
+* Create a job list component and map it to the job data.
+* Use the jobTitle and jobCompany fields to display the job details.
+* Add some margin and padding to the job list.
+* Style the job component using CSS.
+
+Section 3: Setting up the Backend
+
+* Use an Express server and Redis for data storage.
+* Create a Node cron job to fetch the jobs and refresh them at a set interval.
+* Filter the jobs based on their level and remove senior and manager jobs.
+* Create an algorithm to filter the jobs based on their level and years of experience.
+
+Section 4: Deploying the App
+
+* Deploy the app on a virtual private server.
+* Configure Nginx and SSL certificates for security.
+* Test the app and make any necessary adjustments.
+
+Topics:
+
+* React
+* Material UI
+* Express server
+* Redis
+* Node cron job
+* Job board API
+* Filtering algorithm
+
+General Topics:
+
+* Web Development and Internet Technologies
+* Software Engineering and System Design
+* Data Science and Analytics
+
+The JSON summary should include the high-level synopsis, breakdown into sections, topics, and general topics.

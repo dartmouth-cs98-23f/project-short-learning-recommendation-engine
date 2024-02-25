@@ -1,0 +1,70 @@
+{
+  "introduction": "In this video, we will discuss the process of building a job board app that could be a real startup. We will start with a single data feed, a job board API, and a minimal simple frontend using React and Material UI. We will use an Express server for data storage and a Node cron job to fetch jobs and refresh them at a set interval.",
+  "sections": [
+    {
+      "title": "Section 1: Setting up the Frontend",
+      "content": [
+        "Creating a new React app in the 'junior dev' directory.",
+        "Installing Material UI and importing it into the app.",
+        "Creating a new component for jobs and a single job component.",
+        "Designing the job list component and the single job component."
+      ],
+      "topics": ["React", "Material UI", "Job List Component", "Single Job Component"]
+    },
+    {
+      "title": "Section 2: Building the Backend",
+      "content": [
+        "Setting up an Express server for data storage.",
+        "Creating a Node cron job to fetch jobs and refresh them at a set interval.",
+        "Filtering jobs using an algorithm and storing them in Redis.",
+        "Implementing pagination to fetch jobs in batches."
+      ],
+      "topics": ["Express Server", "Node Cron Job", "Algorithm", "Pagination"]
+    },
+    {
+      "title": "Section 3: Deploying the App",
+      "content": [
+        "Setting up a virtual private server and configuring Nginx with SSL certificates.",
+        "Deploying the app to the server and testing it.",
+        "Optimizing the app for production readiness.",
+        "Monitoring the app's performance and troubleshooting issues."
+      ],
+      "topics": ["Deployment", "Nginx Configuration", "SSL Certificates", "Monitoring"]
+    },
+    {
+      "title": "Section 4: Future Developments",
+      "content": [
+        "Expanding the job board API to include multiple sources.",
+        "Creating search indexes and other advanced filtering options.",
+        "Implementing user authentication and authorization.",
+        "Adding more features to enhance the user experience."
+      ],
+      "topics": ["Job Board API Expansion", "Search Indexes", "User Authentication", "User Experience"]
+    },
+    {
+      "title": "Section 5: Conclusion",
+      "content": [
+        "Summarizing the key takeaways from the video.",
+        "Providing resources for further learning and development.",
+        "Encouraging viewers to share their thoughts and feedback.",
+        "Thanking viewers for watching and supporting the content."
+      ],
+      "topics": ["Key Takeaways", "Resources", "Feedback", "Thank You"]
+    }
+  ],
+  "topics": ["React", "Express Server", "Node Cron Job", "Algorithm", "Pagination", "Deployment", "Nginx Configuration", "SSL Certificates", "Job Board API Expansion", "Search Indexes", "User Authentication", "User Experience"],
+  "general topics": [
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.68
+    },
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": 0.51
+    },
+    {
+      "name": "Data Science and Analytics",
+      "complexity": 0.41
+    }
+  ]
+}

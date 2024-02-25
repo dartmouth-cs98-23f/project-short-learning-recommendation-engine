@@ -1,0 +1,324 @@
+second,duration,transcript
+2.8,2.8,all right this is an introduction to
+4.16,4.16,parallel programming we're going to
+5.6,4.88,discuss the different types of uh
+8.32,3.84,programming paradigms and some different
+10.48,4.0,libraries and and application
+12.16,4.48,programming interfaces that are common
+14.48,5.28,uh and when we're talking about parallel
+16.64,4.799,programming so just to take care of some
+19.76,3.2,terminology first
+21.439,2.241,um
+22.96,2.479,well
+23.68,4.24,we'll talk about a node you can think of
+25.439,4.24,this as a standalone computer
+27.92,4.24,it's similar to like a desktop computer
+29.679,5.04,or even a laptop
+32.16,5.84,this would be comprised of multiple cpus
+34.719,6.801,cores processors possibly even gpus or
+38.0,5.12,many integrated core accelerators
+41.52,4.32,things that you would normally find in a
+43.12,4.08,high performance say desktop computer
+45.84,2.879,even though they don't have that form
+47.2,3.44,factor of a desktop computer they're
+48.719,4.081,typically blades
+50.64,4.079,that are located in a rack and network
+52.8,3.68,together to find
+54.719,3.281,to form what we call a supercomputer
+56.48,2.64,right so a supercomputer is just a
+58.0,3.12,collection
+59.12,4.8,of nodes and each of these nodes is sort
+61.12,3.6,of a standalone desktop computer
+63.92,1.92,again
+64.72,3.04,they don't they don't look like a
+65.84,3.68,desktop computer
+67.76,5.96,but they have all the essential features
+69.52,4.2,that a desktop computer would have
+75.2,4.64,the next thing is you know these are all
+76.96,6.4,sort of synonym synonyms cpu central
+79.84,5.12,processing units socket processor core
+83.36,4.079,i mean technically there's a difference
+84.96,4.159,between a cpu and a socket as you can or
+87.439,4.0,a socket and a core as you could have
+89.119,5.201,multiple cores per socket but for the
+91.439,5.601,purpose of this class it's fine just to
+94.32,4.32,use the same um
+97.04,4.0,you know or use them as synonyms so this
+98.64,3.68,is the singular sort of execution point
+101.04,3.84,in a computer
+102.32,4.159,and finally then we have tasks and a
+104.88,3.76,task would be
+106.479,5.121,a single instance of computational work
+108.64,5.2,so essentially what we're going to do is
+111.6,3.839,often we have multiple tasks that we can
+113.84,3.599,do at the same time
+115.439,4.64,and we're going to then run them on
+117.439,4.481,multiple processors or multiple cores
+120.079,4.72,simultaneously and those chords can
+121.92,4.96,exist on a single node or they can exist
+124.799,5.041,across a network of nodes
+126.88,2.96,on a supercomputer
+130.879,4.961,so there's different types of
+132.64,3.2,parallel architectures
+136.0,3.13,the the sort of
+138.4,2.08,most common
+139.13,3.03,[Music]
+140.48,3.44,is a distributed memory you know most
+142.16,4.4,common form of a supercomputer would be
+143.92,3.52,a distributed memory form factor this is
+146.56,2.56,where
+147.44,4.799,again like i said you have a collection
+149.12,3.119,of nodes each one of these
+152.319,3.521,would represent a node where you have a
+153.76,3.36,cpu and memory and when i say when we're
+155.84,4.399,talking about memory here we're talking
+157.12,5.119,about ram random access memory not not
+160.239,3.36,hard disk space the hard disk space
+162.239,3.201,would be shared amongst the whole
+163.599,2.561,network
+165.44,2.24,but
+166.16,3.359,essentially you'd have a whole network
+167.68,4.24,of individual nodes
+169.519,4.481,that each have cpus and some memory and
+171.92,4.72,then you'd send the tasks off to each of
+174.0,5.44,those and communicate over the network
+176.64,4.72,when needed to share information between
+179.44,3.92,the different computers
+181.36,3.519,the the other
+183.36,3.519,form factor is what's called a shared
+184.879,3.041,memory computer
+186.879,3.44,these were
+187.92,5.28,pretty rare or very expensive until
+190.319,4.56,until very recently with the advent of
+193.2,3.28,general purpose graphics processing
+194.879,4.321,units and
+196.48,5.6,intel mini integrated core chips
+199.2,5.36,which are both a type of shared memory
+202.08,3.92,accelerator you would call them
+204.56,2.72,but
+206.0,3.68,you can have a
+207.28,5.679,more traditional vectorized
+209.68,4.559,cpu type computer that also has shared
+212.959,3.681,memory
+214.239,3.681,again memory being ram and in this case
+216.64,3.599,you'd have
+217.92,3.599,multiple cpus that all have access to
+220.239,4.161,the same ram
+221.519,2.881,and you can use
+224.64,4.08,an advantage of that
+226.72,2.96,or you can you can take advantage of
+228.72,3.12,this to
+229.68,5.36,do different computational tasks on each
+231.84,5.44,cpu without having to communicate
+235.04,4.559,across a network
+237.28,5.039,when needed to share information
+239.599,5.761,between the tasks
+242.319,4.721,more often than not this is the type of
+245.36,4.159,architectures that we're seeing nowadays
+247.04,3.759,in modern supercomputers
+249.519,3.28,that is
+250.799,5.761,basically you have a collection of nodes
+252.799,5.941,where each node then has multiple cpus
+256.56,3.359,spread out across a network or even
+258.74,3.82,[Music]
+259.919,4.56,of the form factor where
+262.56,4.96,you have a network of nodes and each
+264.479,5.28,node has possibly multiple cpus
+267.52,4.16,and multiple say gpus graphics
+269.759,5.121,processing units which can be used to do
+271.68,3.2,numerical computations
+275.199,2.0,or
+276.32,2.319,even
+277.199,4.0,you know it's not listed here but you
+278.639,3.761,could you could count many integrated
+281.199,3.28,core chips
+282.4,4.48,uh in a similar way to graphics
+284.479,5.601,processor units they both plug into the
+286.88,7.96,same sort of pci bus
+290.08,6.32,on on a uh on a computer's heart uh
+294.84,3.24,motherboard
+296.4,4.32,so
+298.08,3.92,these are common programming models
+300.72,3.52,you would call these application
+302.0,4.0,programming interfaces or particular
+304.24,3.84,libraries
+306.0,4.0,and so for shared memory computing you
+308.08,4.399,have several
+310.0,3.84,posix threads which are a posix unix
+312.479,4.0,standard
+313.84,6.0,openmp
+316.479,6.0,openacc which is a very new thing that
+319.84,5.04,will probably one day
+322.479,4.0,encompass openmp as well
+324.88,4.159,if you're working on an intel machine
+326.479,3.841,you can use uh thread building blocks so
+329.039,3.121,these are
+330.32,2.719,application programming interfaces which
+332.16,3.759,would be
+333.039,5.281,a standard or
+335.919,6.401,a standard set of functions that you
+338.32,6.319,would call in a certain way or possibly
+342.32,5.52,instructions for the compiler that you
+344.639,3.201,would use in a certain way
+348.0,4.09,to say unroll for loops or do other
+350.639,3.12,types of things
+352.09,4.47,[Music]
+353.759,4.72,and and a lot of them have have
+356.56,4.16,interfaces in multiple languages so
+358.479,4.321,fortran c c plus plus these types of
+360.72,4.88,things
+362.8,4.88,additionally since we talked about gpus
+365.6,4.4,gp gpus general purpose graphs
+367.68,4.239,processing processing units these are
+370.0,4.08,gpus that are intended to do numerical
+371.919,4.4,computations on and not just for for
+374.08,4.239,graphics processing
+376.319,4.241,there you have cuda which is this is a
+378.319,4.88,standard by nvidia it's an application
+380.56,4.88,programming interface uh that only works
+383.199,4.401,on nvidia machines and they have their
+385.44,4.64,own compilers and such
+387.6,3.439,opencl
+390.08,3.04,is
+391.039,5.361,introduced by apple and was later open
+393.12,6.0,sourced but it's a way to do gp gpu
+396.4,4.639,calculations on any gpu so it's
+399.12,3.76,supported by nvidia but you could also
+401.039,3.841,use it on
+402.88,3.52,you know intel graphics processing units
+404.88,3.84,for example
+406.4,4.48,and again here you see open acc
+408.72,4.4,which is supported by nvidia and pgi
+410.88,4.08,compilers and others and this is a way
+413.12,4.639,to sort of standardize development
+414.96,4.32,between gpus and cpus
+417.759,3.121,it's an effort to do that so that you
+419.28,6.16,could write the same code and have it
+420.88,8.0,exploit multiple threads on a cpu or
+425.44,5.199,the graphics processing units as well
+428.88,3.759,some some really new techniques if you
+430.639,5.441,haven't integrated
+432.639,5.12,an intel mini integrated core chip
+436.08,2.959,you could use a technique called
+437.759,2.88,offloading where essentially you're
+439.039,4.961,going to move
+440.639,5.28,all the data from the cpu onto
+444.0,3.36,the mini-graded core chip
+445.919,2.881,and have the work done there of course
+447.36,4.32,there's some commun
+448.8,5.04,communication costs associated with that
+451.68,5.12,and then even newer there's this idea of
+453.84,5.44,myo the myo is an acronym that stands
+456.8,4.799,for mine yours ours
+459.28,5.359,and uh this idea is that you can
+461.599,3.761,essentially write the code in one way
+464.639,2.321,and
+465.36,3.36,then the computation will be shared
+466.96,4.079,between the cpu
+468.72,3.759,or multiple cpus
+471.039,2.72,that share ram
+472.479,3.28,along with
+473.759,3.681,the integrated the the mini integrated
+475.759,5.041,core chip that's
+477.44,4.8,available on that node as well
+480.8,3.28,for distributed memory there's really
+482.24,4.799,only only one way
+484.08,4.64,uh mpi message passage and message
+487.039,2.801,passing interface
+488.72,3.039,this is the
+489.84,5.359,de facto standard for distributed memory
+491.759,5.041,computing and one nice thing about it is
+495.199,3.28,once you once you learn this you can
+496.8,3.76,actually use it to do computations on
+498.479,3.84,shared memory machines as well
+500.56,3.68,you may not get quite the performance
+502.319,4.401,boost that you would by using some
+504.24,4.079,combination or you know using
+506.72,3.199,the shared memory but the nice thing is
+508.319,4.241,it does work it'll work on distributed
+509.919,4.321,memory machines and a shared memory
+512.56,5.44,machine and most of us now even our
+514.24,6.159,laptops for example have multiple
+518.0,4.0,cores that we could exploit so if you
+520.399,3.841,use mpi you could
+522.0,4.399,you know write code that could run
+524.24,3.92,well on a supercomputer but also
+526.399,3.761,take advantage of the multiple cores in
+528.16,4.16,your
+530.16,3.84,in your laptop without really any extra
+532.32,3.199,work
+534.0,3.44,and so you know again it stands for
+535.519,3.601,message passing interface this is an
+537.44,3.68,application programming interface this
+539.12,4.159,is not a programming language there are
+541.12,5.839,implementations of this
+543.279,5.761,uh in fortran c and c plus plus
+546.959,3.921,and then of course we've already learned
+549.04,3.28,how you can build wrappers
+550.88,3.2,so
+552.32,3.6,in this class we'll actually use a
+554.08,4.96,python wrapper
+555.92,5.2,to the c plus plus
+559.04,2.72,application programming interface of mpi
+561.12,2.88,and
+561.76,5.68,that's called mpi for pi and there'll be
+564.0,6.16,a whole uh additional lecture on on that
+567.44,3.839,and on mpi itself
+570.16,2.96,and again
+571.279,5.12,as i mentioned earlier most modern
+573.12,5.68,machines are hybrids that is the you
+576.399,4.88,know they are most modern supercomputers
+578.8,4.88,are some hybrid and in that they have
+581.279,4.801,both distributed memory nodes
+583.68,4.32,uh as well as on node you have either
+586.08,5.199,some gpu or mini integrated core
+588.0,4.88,acceleration or at least multiprocessors
+591.279,4.081,and so there's an opportunity to do
+592.88,6.0,hybrid parallelization where you use
+595.36,5.919,mpi to essentially send data
+598.88,3.92,between the nodes and then on nodes use
+601.279,4.401,some type of
+602.8,4.159,posix threads or intel intel tbb or
+605.68,4.48,something like that to speed up the
+606.959,3.201,computation even further
+610.24,2.8,so
+611.6,3.359,uh
+613.04,2.96,there's several different ways to kind
+614.959,3.761,of
+616.0,5.12,design parallel programs the only one
+618.72,4.96,i'm going to discuss here is really with
+621.12,5.12,re because it's it's the most common
+623.68,4.56,uh in engineering applications
+626.24,4.08,and that is that we're going to split
+628.24,5.52,the problem data set up so we'll have
+630.32,5.36,some problem data set this could be some
+633.76,3.92,large mesh associated with a finite
+635.68,4.8,element computation or
+637.68,4.719,some large data set associated with that
+640.48,3.599,you want to perform machine learning out
+642.399,2.801,on
+644.079,2.801,and
+645.2,3.92,so then we're going to split that data
+646.88,4.48,up into individual tasks where the work
+649.12,4.159,will be performed individually and then
+651.36,4.8,often of course these
+653.279,4.56,tasks cannot be performed in isolation
+656.16,3.52,when they can that's good and it's
+657.839,2.881,called an embarrassingly parallel
+659.68,2.64,program
+660.72,2.88,but often they can't be performed in
+662.32,3.68,isolation and so then there's
+663.6,5.2,communication amongst the tasks
+666.0,4.56,and that's what we'll use mpi for
+668.8,4.159,so finally i'd like to just end with the
+670.56,3.2,resources uh you know all the figures in
+672.959,2.241,this
+673.76,3.36,talk came from
+675.2,3.44,from this website but it's also just a
+677.12,3.68,good resource
+678.64,4.08,and fairly up-to-date with respect to uh
+680.8,3.52,parallel computing so
+682.72,3.2,if you have access to the live slides
+684.32,2.72,you can you can click on this hyperlink
+685.92,3.919,and take a look at that for more
+687.04,2.799,information

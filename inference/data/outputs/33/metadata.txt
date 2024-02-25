@@ -1,0 +1,210 @@
+#####################
+###### METADATA ######
+#####################
+
+Model: mistralai/Mistral-7B-Instruct-v0.1
+Time: 1708820159.952404
+Videos: [['https://www.youtube.com/watch?v=UiX8K-xBUpE', 'UiX8K-xBUpE', 'mixtral8x7b'], ['https://www.youtube.com/watch?v=Xdhe-meS30A', 'Xdhe-meS30A', 'catan'], ['https://www.youtube.com/watch?v=00AQjBDM46Q', '00AQjBDM46Q', 'mlops_llm_eval'], ['https://www.youtube.com/watch?v=5ChkQKUzDCs', '5ChkQKUzDCs', 'typescript_fireship'], ['https://www.youtube.com/watch?v=J0NuOlA2xDc', 'J0NuOlA2xDc', 'localized_deployment'], ['https://www.youtube.com/watch?v=E5kzAbD8D0w', 'E5kzAbD8D0w', 'dpo'], ['https://www.youtube.com/watch?v=wybjsKtA9hI', 'wybjsKtA9hI', 'sql_backend'], ['https://www.youtube.com/watch?v=CZw57SIwgiE', 'CZw57SIwgiE', 'threads_connections'], ['https://www.youtube.com/watch?v=p6wwj0ozifw', 'p6wwj0ozifw', 'hashing'], ['https://www.youtube.com/watch?v=kxT8-C1 vmd4', 'kxT8-C1vmd4', 'zig'], ['https://www.youtube.com/watch?v=5C_HPTJg5ek', '5C_HPTJg5ek', 'rust'], ['https://www.youtube.com/watch?v=HyWYpM_S-2c', 'HyWYpM_S-2c', 'react'], ['https://www.youtube.com/watch?v=MnpuK0MK4yo', 'MnpuK0MK4yo', 'react_svelte'], ['https://www.youtube.com/watch?v=lauywdXKEXI', 'lauywdXKEXI', 'full-stack']]
+Shots: ['mixtral8x7b', 'full-stack']
+Prompt: General Topics:
+[
+  "Algorithms and Data Structures",
+  "Artificial Intelligence (AI) and Machine Learning",
+  "Computer Architecture",
+  "Data Science and Analytics",
+  "Database Systems and Management",
+  "Human-Computer Interaction (HCI)",
+  "Programming Languages and Software Development",
+  "Software Engineering and System Design",
+  "Web Development and Internet Technologies",
+  "Computer Graphics and Visualization",
+  "Theoretical Computer Science",
+  "Quantum Computing"
+]
+
+Complexity Scale:
+[
+  0.00-0.09: Elementary,
+  0.10-0.19: Middle School,
+  0.20-0.29: High School,
+  0.30-0.39: Advanced High School,
+  0.40-0.49: Introductory College,
+  0.50-0.59: Average College Lecture,
+  0.60-0.69: Advanced College,
+  0.70-0.79: Graduate Level,
+  0.80-0.89: Advanced Graduate Level,
+  0.90-1.00: PhD Level Lecture
+]
+
+Generate a JSON summary the computer science or software engineering video. The summary should include:
+
+1. A high-level synopsis labeled as "introduction".
+2. A breakdown into 5 sections, each with:
+   - A title starting with "Section x" where x is the section number from 1 to 5.
+   - A "content" field containing 4 bullet points summarizing the section.
+   - A "topics" field listing the 3 most important topics covered in the section.
+3. A global "topics" array listing 5 key descriptors (1-2 words each) of topics covered in the video.
+4. A global "generalTopics" array selecting 3 topics from the "General Topics", each associated with an exact "complexity" score based on the "Complexity Scale". The complexity score should reflect the detailed complexity level with full two-decimal-place precision.
+
+The JSON structure should strictly follow this template:
+{
+  "introduction": "High level synopsis here",
+  "sections": [
+    {
+      "title": "Section 1",
+      "content": [
+        "Bullet point 1",
+        "Bullet point 2",
+        "Bullet point 3",
+        "Bullet point 4"
+      ],
+      "topics": ["Topic1", "Topic2", "Topic3"]
+    },
+    ... (total 5 sections)
+  ],
+  "topics": ["Descriptor1", "Descriptor2", "Descriptor3", "Descriptor4", "Descriptor5"],
+  "generalTopics": [
+    {
+      "name": "Selected general topic 1",
+      "complexity": "Exact complexity float with two decimals"
+    },
+    ... (total 3 general topics)
+  ]
+}
+
+The output must follow the specified JSON structure, focusing on domain-specific terminology in the "content" sections. Use the previous "Complexity Scale" list when generating "complexity". Use the previous "General Topics" list when generating the "generalTopics" field. If the video content does not directly match a topic from this list, select the closest related topic available. 
+
+
+###################
+###### INFERENCE ######
+###################
+Temperature: 0.5
+Top_k: 35
+Top_p: 0.96
+Tokens per shot: 6500
+Tokens per target: 7500
+Processing: dpo
+    Tokens: 8596
+
+
+###################
+###### INFERENCE ######
+###################
+Temperature: 0.5
+Top_k: 35
+Top_p: 0.96
+Tokens per shot: 5000
+Tokens per target: 6500
+Processing: dpo
+    Tokens: 7718
+    Decoding took: 57.309 seconds
+    cuda memory allocated: 15.38 GB, cuda memory cached: 16.03 GB
+Processing: full-stack
+    Tokens: 7724
+    Decoding took: 58.447 seconds
+    cuda memory allocated: 15.38 GB, cuda memory cached: 16.03 GB
+Processing: hashing
+    Tokens: 7747
+    Decoding took: 61.061 seconds
+    cuda memory allocated: 15.38 GB, cuda memory cached: 16.03 GB
+Processing: localized_deployment
+    Tokens: 7091
+    Decoding took: 57.303 seconds
+    cuda memory allocated: 15.38 GB, cuda memory cached: 16.03 GB
+Processing: mixtral8x7b
+    Tokens: 7729
+    Decoding took: 63.462 seconds
+    cuda memory allocated: 15.38 GB, cuda memory cached: 16.03 GB
+Processing: mlops_llm_eval
+    Tokens: 7781
+    Decoding took: 55.783 seconds
+    cuda memory allocated: 15.38 GB, cuda memory cached: 16.03 GB
+Processing: react
+    Tokens: 6976
+    Decoding took: 67.394 seconds
+    cuda memory allocated: 15.38 GB, cuda memory cached: 16.03 GB
+Processing: rust
+    Tokens: 6878
+    Decoding took: 64.348 seconds
+    cuda memory allocated: 15.38 GB, cuda memory cached: 16.03 GB
+Processing: sql_backend
+    Tokens: 7700
+    Decoding took: 60.051 seconds
+    cuda memory allocated: 15.38 GB, cuda memory cached: 16.03 GB
+Processing: threads_connections
+    Tokens: 7695
+    Decoding took: 62.639 seconds
+    cuda memory allocated: 15.38 GB, cuda memory cached: 16.03 GB
+Processing: react_svelte
+    Tokens: 7653
+    Decoding took: 52.89 seconds
+    cuda memory allocated: 15.38 GB, cuda memory cached: 16.03 GB
+Processing: typescript_fireship
+    Tokens: 7334
+    Decoding took: 72.233 seconds
+    cuda memory allocated: 15.38 GB, cuda memory cached: 16.03 GB
+Processing: zig
+    Tokens: 6980
+    Decoding took: 60.207 seconds
+    cuda memory allocated: 15.38 GB, cuda memory cached: 16.03 GB
+Global runtime: 793.996 secondsFile: dpo.jsonFile: full-stack.jsonFile: hashing.jsonFile: localized_deployment.jsonFile: mixtral8x7b.jsonFile: mlops_llm_eval.jsonErrors: 3 validation errors for VideoContent
+generalTopics.0.name
+  Value error, AI and Product is not a valid general topic name [type=value_error, input_value='AI and Product', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.5/v/value_error
+generalTopics.1.name
+  Value error, ML Ops Evaluations is not a valid general topic name [type=value_error, input_value='ML Ops Evaluations', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.5/v/value_error
+generalTopics.2.name
+  Value error, Finetuning Transition is not a valid general topic name [type=value_error, input_value='Finetuning Transition', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.5/v/value_errorFile: react.jsonFile: rust.jsonFile: sql_backend.jsonFile: threads_connections.jsonFile: react_svelte.jsonFile: typescript_fireship.jsonFile: zig.jsonFile: dpo.json
+File: full-stack.json
+File: hashing.json
+File: localized_deployment.json
+File: mixtral8x7b.json
+File: mlops_llm_eval.json
+Errors: 3 validation errors for VideoContent
+generalTopics.0.name
+  Value error, AI and Product is not a valid general topic name [type=value_error, input_value='AI and Product', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.5/v/value_error
+generalTopics.1.name
+  Value error, ML Ops Evaluations is not a valid general topic name [type=value_error, input_value='ML Ops Evaluations', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.5/v/value_error
+generalTopics.2.name
+  Value error, Finetuning Transition is not a valid general topic name [type=value_error, input_value='Finetuning Transition', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.5/v/value_errorFile: react.json
+File: rust.json
+File: sql_backend.json
+File: threads_connections.json
+File: react_svelte.json
+File: typescript_fireship.json
+File: zig.json
+
+
+###################
+###### INFERENCE ######
+###################
+Temperature: 0.5
+Top_k: 35
+Top_p: 0.96
+Tokens per shot: 5000
+Tokens per target: 6500
+Processing: mlops_llm_eval
+    Tokens: 7781
+    Decoding took: 61.87 seconds
+    cuda memory allocated: 15.38 GB, cuda memory cached: 16.03 GB
+Global runtime: 61.936 secondsFile: dpo.json
+File: full-stack.json
+File: hashing.json
+File: localized_deployment.json
+File: mixtral8x7b.json
+File: mlops_llm_eval.json
+Errors: 1 validation error for VideoContent
+generalTopics.0.name
+  Value error, AI and Machine Learning is not a valid general topic name [type=value_error, input_value='AI and Machine Learning', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.5/v/value_errorFile: react.json
+File: rust.json
+File: sql_backend.json
+File: threads_connections.json
+File: react_svelte.json
+File: typescript_fireship.json
+File: zig.json
