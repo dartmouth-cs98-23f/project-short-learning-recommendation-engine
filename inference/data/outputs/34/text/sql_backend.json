@@ -1,0 +1,70 @@
+{
+  "introduction": "In this video, we dive into the reasons why selecting all columns in a table, commonly referred to as 'select star', is slow in a row store database engine. We discuss the impact of full table scans, index only scans, deserialization cost, and network latency on query performance. We also explore the concept of lazy parsing and how it can improve performance.",
+  "sections": [
+    {
+      "title": "Section 1: Understanding Full Table Scans",
+      "content": [
+        "Explanation of full table scans and their impact on query performance.",
+        "Discussion of how to avoid full table scans by using indexes.",
+        "Comparison of index only scans versus full table scans in terms of performance.",
+        "Explanation of how to optimize index usage for better query performance."
+      ],
+      "topics": ["Full Table Scans", "Indexes", "Index Only Scans", "Index Optimization"]
+    },
+    {
+      "title": "Section 2: Deserialization Cost and Network Latency",
+      "content": [
+        "Explanation of deserialization cost and its impact on query performance.",
+        "Discussion of how to reduce deserialization cost by using appropriate data structures.",
+        "Explanation of network latency and its impact on query performance.",
+        "Discussion of techniques to minimize network latency, such as caching and reducing network traffic."
+      ],
+      "topics": ["Deserialization Cost", "Data Structures", "Network Latency", "Caching", "Network Traffic Reduction"]
+    },
+    {
+      "title": "Section 3: Lazy Parsing and Performance Optimization",
+      "content": [
+        "Explanation of lazy parsing and its benefits for query performance.",
+        "Discussion of how to implement lazy parsing in client-side applications.",
+        "Explanation of how to optimize lazy parsing for better query performance.",
+        "Comparison of lazy parsing versus eager parsing in terms of performance."
+      ],
+      "topics": ["Lazy Parsing", "Client-Side Applications", "Performance Optimization", "Eager Parsing vs Lazy Parsing"]
+    },
+    {
+      "title": "Section 4: Understanding Query Execution Plans",
+      "content": [
+        "Explanation of query execution plans and their impact on query performance.",
+        "Discussion of how to analyze and optimize query execution plans.",
+        "Explanation of common query execution plan issues and their solutions.",
+        "Comparison of different query execution plans in terms of performance."
+      ],
+      "topics": ["Query Execution Plans", "Query Optimization", "Query Execution Plan Issues", "Query Execution Plan Comparison"]
+    },
+    {
+      "title": "Section 5: Best Practices for Query Performance",
+      "content": [
+        "Summary of key takeaways from the video and best practices for query performance.",
+        "Discussion of common mistakes to avoid when optimizing queries.",
+        "Explanation of how to monitor and analyze query performance.",
+        "Comparison of different query optimization techniques in terms of effectiveness."
+      ],
+      "topics": ["Query Performance Best Practices", "Common Mistakes to Avoid", "Query Performance Monitoring and Analysis", "Query Optimization Technique Comparison"]
+    }
+  ],
+  "topics": ["Full Table Scans", "Indexes", "Deserialization Cost", "Network Latency", "Lazy Parsing", "Query Execution Plans", "Query Optimization", "Query Performance Best Practices", "Common Mistakes to Avoid", "Query Performance Monitoring and Analysis", "Query Optimization Technique Comparison"],
+  "generalTopics": [
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.7
+    },
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": 0.6
+    },
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.5
+    }
+  ]
+}

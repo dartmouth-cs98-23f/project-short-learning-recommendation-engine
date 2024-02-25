@@ -1,0 +1,436 @@
+
+###############################
+##########catan#############
+###############################
+
+
+###############################
+##########dpo#############
+###############################
+
+
+###############################
+##########full-stack#############
+###############################
+
+
+###############################
+##########hashing#############
+###############################
+
+
+###############################
+##########localized_deployment#############
+###############################
+
+
+###############################
+##########mixtral8x7b#############
+###############################
+
+
+###############################
+##########mlops_llm_eval#############
+###############################
+
+####################
+user
+####################
+Transcript:
+hello guys welcome back to my channel today we are going to talk about mistral so as you know mistral is a new language model that came out a few months ago from mistal ai which is a one of the hottest startup right now in europe for language models it also became a unicorn recently and we will exploring both the models they released one is the 7 billion and one is the 8 by7 billion model so lets review the topics of today the first thing i will introduce you is the architectural differences between the vanilla transformer and the architecture of mistal later we will see what is the sliding window attention and how it is related to the concept of receptive field a concept that usually we find in convolutional neural networks i will briefly review the kv cache because i want to introduce the concept of rolling buffer cache and also how it is done with prefilling and chunking uh we will see what is sparse mixture of experts model sharding with a little with a very brief introduction with d values if this concept is not clear i describe it very thoroughly in my previous video on lama the window size is the size of the sliding window that we used in the um calculation of the attention and we will see later how it works the context length is uh what is the context size of upon which it the model was trained upon uh and its much bigger for the 8x 7b the vocabulary size is the same for both and then the last two parameters you can see here are related to the sparse mixture of experts s a matrix that has the same shape as the input sequence but where each token now captures some more information about other tokens which tokens depending on the mask we have applied so our mask says that the first token can only watch itself so the first output token will be an embedding that will only depend on itself the second token will only depend on the first two tokens the third output token will only depend on the first three tokens the fourth will depend on the token number two because e take the last token of the output and we prep append it to the input for the temp step three and this will become the new input which will produce love that can then we take the last token of the output and we append it to the input for the time step four so it will become the new output will become love that can quickly then we take this word quickly we append it to the input for the next time step and it will produce the next token as output etc etc until the last token until we see the end   the kv cache that so that we can then exploit this kv cache to build new tokens future tokens now the prompt is known in advance right because because its the input of our user its what you ask to ch gpd for example right tell me a poem tell me write me a poem or tell me a joke this is our prompt so its known in advance so we dont we dont need to generate it okay so what we can do is we can prefill the kv cache using the tokens of the prompt but there are many ways to do it like we were doing b they want to work with and choosing the logits of the best two performing uh experts okay the next thing we are talking going to talk about is model sharding which is also implemented in the code of the mistal model so lets talk about it when we have a model that is too big to fit in a single gpu we can divide the model into groups of layers and place each group of layers in a single gpu for example in the case of mistal we have 32 layers of encoders you can see here one after another i didnt do o check the embedding corresponding to the token number three for the first prompt to the token number seven for the second prompt and the last token for the third prompt so we take all these embeddings we run them through the linear layer then we apply the soft marks and then we understand what is the next uh token from our vocabulary but you may be wondering how do we even produce an attention mask that can work with multiple prompts that are combined into one sequence such that the token of o ent with the official code of mistal so that you can understand uh more about the inner workings of this grd model i actually really enjoyed studying it i really enjoyed studying the code and i learned a lot of stuff you know um i think its very very good when you are doing something that is very complicated because it teaches you a lot because if something is simple then you dont learn much by the end of the day anyway guys thanks you for watching my video i hope you also enjoyed this journey with me even if it was very complicated i hope that you likeed this video and you will subscribe to my channel if you didnt please do it and the best way to support me guys is to share this video with all the people you know so share it on social media share it on linkedin on twitter etc because this is the best way to you can help me is to grow my channel and um please let me know if there is something that you dont understand i am always available to help and connect with me on linkedin byebye 
+Instruction:
+General Topics:
+[
+  "Algorithms and Data Structures",
+  "Artificial Intelligence (AI) and Machine Learning",
+  "Computer Architecture",
+  "Data Science and Analytics",
+  "Database Systems and Management",
+  "Human-Computer Interaction (HCI)",
+  "Programming Languages and Software Development",
+  "Software Engineering and System Design",
+  "Web Development and Internet Technologies",
+  "Computer Graphics and Visualization",
+  "Theoretical Computer Science",
+  "Quantum Computing"
+]
+
+Complexity Scale:
+[
+  0.00-0.09: Elementary,
+  0.10-0.19: Middle School,
+  0.20-0.29: High School,
+  0.30-0.39: Advanced High School,
+  0.40-0.49: Introductory College,
+  0.50-0.59: Average College Lecture,
+  0.60-0.69: Advanced College,
+  0.70-0.79: Graduate Level,
+  0.80-0.89: Advanced Graduate Level,
+  0.90-1.00: PhD Level Lecture
+]
+
+Generate a JSON summary the computer science or software engineering video. The summary should include:
+
+1. A high-level synopsis labeled as "introduction".
+2. A breakdown into 5 sections, each with:
+   - A title starting with "Section x" where x is the section number from 1 to 5.
+   - A "content" field containing 4 bullet points summarizing the section.
+   - A "topics" field listing the 3 most important topics covered in the section.
+3. A global "topics" array listing 5 key descriptors (1-2 words each) of topics covered in the video.
+4. A global "generalTopics" array selecting 3 topics from the "General Topics", each associated with an exact "complexity" score based on the "Complexity Scale". The complexity score should reflect the detailed complexity level with full two-decimal-place precision.
+
+The JSON structure should strictly follow this template:
+{
+  "introduction": "High level synopsis here",
+  "sections": [
+    {
+      "title": "Section 1",
+      "content": [
+        "Bullet point 1",
+        "Bullet point 2",
+        "Bullet point 3",
+        "Bullet point 4"
+      ],
+      "topics": ["Topic1", "Topic2", "Topic3"]
+    },
+    ... (total 5 sections)
+  ],
+  "topics": ["Descriptor1", "Descriptor2", "Descriptor3", "Descriptor4", "Descriptor5"],
+  "generalTopics": [
+    {
+      "name": "Selected general topic 1",
+      "complexity": "Exact complexity float with two decimals"
+    },
+    ... (total 3 general topics)
+  ]
+}
+
+The output must follow the specified JSON structure, focusing on domain-specific terminology in the "content" sections. Use the previous "Complexity Scale" list when generating "complexity". Use the previous "General Topics" list when generating the "generalTopics" field. If the video content does not directly match a topic from this list, select the closest related topic available. 
+####################
+assistant
+####################
+{
+  "introduction": "This video presents an in-depth analysis and tutorial on the Mistral language model, developed by Mistral AI. It covers architectural differences from traditional models, key features like sliding window attention, kv cache, and innovations such as sparse mixture of experts, model sharding, and the use of the xformers library for efficient processing. The presenter also delves into coding aspects, highlighting how these advanced concepts are implemented.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Mistral",
+      "content": [
+        "Overview of Mistral AI and its emergence as a leading startup in language models.",
+        "Distinction between Mistral's 7 billion and 8x7 billion models.",
+        "Comparison of Mistral's architecture to vanilla transformers.",
+        "Introduction to sliding window attention and its benefits."
+      ],
+      "topics": ["Mistral AI", "Architecture Comparison", "Sliding Window Attention"]
+    },
+    {
+      "title": "Section 2: Advanced Attention Mechanisms",
+      "content": [
+        "Explanation of sliding window attention and its implementation.",
+        "The concept of receptive fields in relation to convolutional neural networks.",
+        "Introduction to the kv cache and its significance.",
+        "The evolution of kv cache to rolling buffer cache for efficiency."
+      ],
+      "topics": ["Sliding Window Attention", "Receptive Fields", "KV Cache"]
+    },
+    {
+      "title": "Section 3: Sparse Mixture of Experts",
+      "content": [
+        "Overview of the mixture of experts model and its application in Mistral.",
+        "Differentiation between sparse and dense mixture of experts models.",
+        "Implementation of gating mechanisms to select experts.",
+        "Benefits of using a sparse mixture for performance and model capacity."
+      ],
+      "topics": ["Mixture of Experts", "Gating Mechanisms", "Sparse Mixture Benefits"]
+    },
+    {
+      "title": "Section 4: Model Sharding and Pipeline Parallelism",
+      "content": [
+        "Introduction to model sharding and its necessity for large models.",
+        "Comparison of traditional model training to pipeline parallelism.",
+        "How pipeline parallelism optimizes GPU utilization.",
+        "Potential challenges and solutions in implementing pipeline parallelism."
+      ],
+      "topics": ["Model Sharding", "Pipeline Parallelism", "GPU Utilization"]
+    },
+    {
+      "title": "Section 5: Code Innovations and xformers Library",
+      "content": [
+        "The complexity of Mistral's code and the challenge for beginners.",
+        "Use of the xformers library for memory-efficient attention calculations.",
+        "Creation of complex attention masks for variable-length inputs.",
+        "Importance of block attention and its implications for model performance."
+      ],
+      "topics": ["Code Complexity", "xformers Library", "Block Attention"]
+    }
+  ],
+  "topics": ["Language Models", "Attention Mechanisms", "Model Optimization", "GPU Efficiency", "Code Implementation"],
+  "generalTopics": [
+    {
+      "name": "Artificial Intelligence (AI) and Machine Learning",
+      "complexity": "0.87"
+    },
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": "0.68"
+    },
+    {
+      "name": "Programming Languages and Software Development",
+      "complexity": "0.65"
+    }
+  ]
+}
+####################
+user
+####################
+Transcript:
+whats up guys back today with another longer video which is to build a job board app that could actually be a real startup that people use theres a lot of different places to find entry level or junior developer jobs on the internet for example github jobs stack overflow jobs you have angel list you have indeed but filtering through those especially because you kind of have to spam applications for your first job can take a long time so the good thing about all these job boards is they have public apis for the most part you always want to start with an mvp that is the minimum viable product today that means were going to start with a single data feed that is a single job board api feeding into our app and then finally were gonna have a super minimal simple front end were gonna do this in react and material ui on the front end were gonna use an express server redis for our data storage because were not writing or persisting any data that is not part of the job feed and then finally a no p to date theres no expired jobs that the companies dont want people to see anymore and were basically staying in sync with whatever is in uh our upstream data source so within worker i want to create an indexjs which is going to manage all our worker tasks and i know already that were going to need the cron node library its just going to help us run simple cron jobs which is what i was saying before is the its the way you run a task on an interval basically forever if you want to opening up a n istent and that means if your system shuts off you lose all your ram so its not a fault tolerant database its not a durable database and the upside is though that its really fast its kind of like an object in javascript you just if you have the key its constant time access you just pull it out of your redis store and then you can serve it up in our case jumping back over to these um these job uh json that we got from github you can see every job has a uuid which is a guaranteed unique id because en we send it to our client but um in the meantime just to see the length and or rather see that the length matches our our length that we put in lets parse it and then lets do dot lake okay so its kind of a lot that we did without testing it lets restart our server do the same curl oh man okay 245 i dont remember if thats how many we put in were definitely getting a list of 245 which is a good sign now lets just try sending this back and see if we get that full uh stringified object thats exact m lets see if by pasting it directly in we we need to do anything else just going to make sure thats formatted correctly saved it and um lets just take this out classes direction rtl okay lets see how theme is being used because this is kind of a um darn all right i dont know why that would change from left to right but um it might be a mobile implementation specific thing so lets just take this and hard code it as right and well hard code this one as left and see if we run in any problems okay  y domain i already bought it a normalcom domain is going to be about 14 a year and the first thing we need to do is use the digital ocean name servers so that domain can be directed over to our server so youll see that i have clicked on my domain ive opened the dns tab and then theres a name servers tab and ive clicked use custom name servers now im going to put that on pause and jump over to the digital ocean dashboard you can make a digitalocean account for free and itll give you this dashboar doesnt affect anything on production so um proxying all api routes to a target of localhost sorry need the double quotes there http localhost uh 3001 was our api server i believe and ill save that and again that just helps us you know still develop in the same way but we need to make one config change for the production server as well so that was our change in um in our files and as i mentioned im going to go actually back into that nginx config file etc engine x sites available default and i ha  production launch so to speak this was just our base framework that were building more features off of but at minimum i think we need a few more data feeds and we need to make our algorithm a lot more robust prevent it from breaking on errors as well as filtering down those jobs a lot more because if we get in five feeds were just gonna have a huge amount of jobs and we really wanna make sure those are entry level jobs so im thinking that we parse through the description and look for like three to five years of experience and take those out i think anything less than three years would qualify as an entrylevel job so again were gonna have to keep working on the algorithm and then otherwise were gonna want to add a little bit of monitoring logging different things like that but that can all come later our mvp is done and our base of our application is done so thats pretty cool so anyway hope you learned something um let me know if you have any questions and i will talk to you guys soon 
+Instruction:
+General Topics:
+[
+  "Algorithms and Data Structures",
+  "Artificial Intelligence (AI) and Machine Learning",
+  "Computer Architecture",
+  "Data Science and Analytics",
+  "Database Systems and Management",
+  "Human-Computer Interaction (HCI)",
+  "Programming Languages and Software Development",
+  "Software Engineering and System Design",
+  "Web Development and Internet Technologies",
+  "Computer Graphics and Visualization",
+  "Theoretical Computer Science",
+  "Quantum Computing"
+]
+
+Complexity Scale:
+[
+  0.00-0.09: Elementary,
+  0.10-0.19: Middle School,
+  0.20-0.29: High School,
+  0.30-0.39: Advanced High School,
+  0.40-0.49: Introductory College,
+  0.50-0.59: Average College Lecture,
+  0.60-0.69: Advanced College,
+  0.70-0.79: Graduate Level,
+  0.80-0.89: Advanced Graduate Level,
+  0.90-1.00: PhD Level Lecture
+]
+
+Generate a JSON summary the computer science or software engineering video. The summary should include:
+
+1. A high-level synopsis labeled as "introduction".
+2. A breakdown into 5 sections, each with:
+   - A title starting with "Section x" where x is the section number from 1 to 5.
+   - A "content" field containing 4 bullet points summarizing the section.
+   - A "topics" field listing the 3 most important topics covered in the section.
+3. A global "topics" array listing 5 key descriptors (1-2 words each) of topics covered in the video.
+4. A global "generalTopics" array selecting 3 topics from the "General Topics", each associated with an exact "complexity" score based on the "Complexity Scale". The complexity score should reflect the detailed complexity level with full two-decimal-place precision.
+
+The JSON structure should strictly follow this template:
+{
+  "introduction": "High level synopsis here",
+  "sections": [
+    {
+      "title": "Section 1",
+      "content": [
+        "Bullet point 1",
+        "Bullet point 2",
+        "Bullet point 3",
+        "Bullet point 4"
+      ],
+      "topics": ["Topic1", "Topic2", "Topic3"]
+    },
+    ... (total 5 sections)
+  ],
+  "topics": ["Descriptor1", "Descriptor2", "Descriptor3", "Descriptor4", "Descriptor5"],
+  "generalTopics": [
+    {
+      "name": "Selected general topic 1",
+      "complexity": "Exact complexity float with two decimals"
+    },
+    ... (total 3 general topics)
+  ]
+}
+
+The output must follow the specified JSON structure, focusing on domain-specific terminology in the "content" sections. Use the previous "Complexity Scale" list when generating "complexity". Use the previous "General Topics" list when generating the "generalTopics" field. If the video content does not directly match a topic from this list, select the closest related topic available. 
+####################
+assistant
+####################
+{
+  "introduction": "This video guides viewers through building a job board application that aggregates entry-level developer job postings from various APIs. It covers the entire development process, including setting up the front end with React and Material UI, backend server with Express, data storage using Redis, and regular job fetching using a cron job. The project aims at simplifying the job search for entry-level positions by filtering out senior roles, focusing on a practical approach to developing a real-world application.",
+  "sections": [
+    {
+      "title": "Section 1: Project Setup and Initial Planning",
+      "content": [
+        "Introduction to the job board app concept, focusing on entry-level developer positions.",
+        "Decision to aggregate job postings from various APIs to simplify the job search process.",
+        "Outline of the tech stack: React and Material UI for the front end, Express for the backend, Redis for data storage, and node-cron for job fetching.",
+        "Initial setup of the project directory and installation of necessary libraries and frameworks."
+      ],
+      "topics": ["Project Planning", "Tech Stack Overview", "Initial Setup"]
+    },
+    {
+      "title": "Section 2: Frontend Development with React and Material UI",
+      "content": [
+        "Creation of the React app using create-react-app and setup of Material UI.",
+        "Building the front-end structure, including components for job listings and individual job details.",
+        "Introduction to React hooks for state management and API calls.",
+        "Styling of the front end with Material UI components for a user-friendly interface."
+      ],
+      "topics": ["React Setup", "Component Design", "State Management with Hooks"]
+    },
+    {
+      "title": "Section 3: Backend Server and Data Handling",
+      "content": [
+        "Setup of the Express server to handle API requests and serve the front end.",
+        "Introduction to Redis as an in-memory data store for caching job postings.",
+        "Implementation of a node-cron job to fetch new job postings at regular intervals.",
+        "Design of data structure and filtering algorithm to exclude senior-level jobs from the results."
+      ],
+      "topics": ["Express Server Setup", "Redis Data Storage", "Cron Job Implementation"]
+    },
+    {
+      "title": "Section 4: Integrating Job Board APIs",
+      "content": [
+        "Exploration of various job board APIs such as GitHub Jobs and Stack Overflow Jobs.",
+        "Implementation of API calls within the node-cron job to fetch job postings.",
+        "Discussion on handling API pagination and data aggregation.",
+        "Filtering and processing job data to match the application's criteria for entry-level positions."
+      ],
+      "topics": ["API Integration", "Data Fetching", "Pagination Handling"]
+    },
+    {
+      "title": "Section 5: Deployment and Final Touches",
+      "content": [
+        "Review of the completed application and its functionalities.",
+        "Discussion on potential improvements and additional features for future development.",
+        "Steps for deploying the application to a server using nginx and PM2 for process management.",
+        "Final testing and demonstration of the application in action, showcasing its ability to aggregate and display job postings."
+      ],
+      "topics": ["Application Review", "Future Improvements", "Deployment Process"]
+    }
+  ],
+  "topics": ["React", "Express", "Redis", "API Integration", "Deployment"],
+  "generalTopics": [
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.59
+    },
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": 0.61
+    },
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.53
+    }
+  ]
+}
+
+####################
+user
+####################
+Transcript:
+hold up before we get into this next episode i want to tell you about our virtual conference thats coming up on february 15th and february 22nd we did it two thursdays in a row this year because we wanted to make sure that the maximum amount of people could come for each day since the lineup is just looking absolutely incredible as you know we do let me name a few of the guests that weve got coming because it is worth talking about weve got jason louie weve got shrea shanar weve got dro who is product applied ai at uber weve got cameron wolf whos got an incredible podcast and hes director of ai at reeby engine weve got lauren lockridge who is working at google also doing some product stuff oh why is there so many product people here funny you should ask that because weve got a whole ai product owner track along with an engineering track and then as we like to weve got some handson workshops too let me just tell you some of these other names just for a moment you know because weve got them coming and it is really cool i havent named any of the keynotes yet either by the way go and check them out on your own if you want just go to home ops community and youll see but weve got tunji whos the lead researcher on the deep speed project at microsoft weve got golden who is the open sourc  of spanish poito and then i was like all right cool lets go over to bill bal uh ive heard good things about the city and the food and the people so i moved there as soon as i got there this girl was like i want nothing to do with you and so i was sitting there like heartbroken on the coastline of the bass country and it took me probably like a month to realize well theres theres much worse places i could be stuck and so i enjoyed it and i had the time in my life that year in bilbo and then i met my wife at the end of that year at this big music festival and uh so we were living in spain we ended up getting married like 5 years later had our   it might call out to an internal recommendation model so its not one or the other but sometimes you have both of them working together in a single app application and youre absolutely right they dont want stuff like it saying stuff it shouldnt say uh giving we had one interesting case where someones like i dont want to say we support something in this policy because im reliable to it if someone asks a question um and so theres all sorts of especially if youre putting it external facing theres all sorts of more rigor that it goes through to make sure its its working and what llm as a judge can do is well we see people checking for is things l rst of these like needle in a hy stack type of test you kind like that lost in the middle yeah and you know for those of you who havent seen it its basically um an awesome way to think about it which is you know it essentially checks you know on one axis you have how long is the context so the context can be one k to tokens all the way to you know for some of the smaller models its like 32k i think for some of the bigger ones um we tested uh pretty pretty significantly let me rouble check exactly what 120k i would imagine i think that it feels like anthropics goes all the way up to that or maybe its even more these days like 240 they just sai es and spans of your application so kind kind of like the full stack traces how you can think about it so um youll see the breakdown of each calls and then which calls took longer which calls used the most tokens and then you can also evaluate at each step in the calls so kind of like we were just talking about where at the end of the application at the very end um when it generated response you can have a score of of how well was the response but then if the response lets say was hallucinated or was incorrect then theres a step above you can go in and look at the individual span level evals look at well how well did it retrieve and then with w like you know did did have access to that training data set so i i wonder that all the time too well its pretty clear these days that uh as i did not coin this term but i like it and i will say it a lot benchmarks are and so all these benchmarks on hugging face or on twitter that youll see like oh this is soa this just came out it blew everything else out of the water by whatever 10 times or you make up a number there i dont even consider that to be valuable anymore its its really like what you were saying where these things i know you actually went and you did a rigorous study on it but its so funny because we are the rest of us are just g  because it is exactly like you said it is so much easier to just tweak the prompt then finetune it and and i didnt connect the dot on how similar the two are and like oh if were coming from the traditional ml space then its easier to jump there and be like oh well thats just because we need to finetune it and then itll do what we want it to do yeah totally um i i think theres just something very natural feeling about okay you know training is now fine tuning but its you know i think its one of those changes we all have to just just adapt with with the the space changing yeah a simulate yeah 100 excellent and then my my other hot take i guess of these problems and if you can use a model to make your life easier and get you into production faster then youre going to start seeing oh maybe its the prompts or oh maybe its you know whatever the case may be where youre falling behind and youre making mistakes or the system isnt designed properly yeah absolutely so i think uh maybe as we wrap up the podcast that thats really is get stuff out as fast as you can you know evaluate the outcomes i think thats you know lm ev vales is something that i think is pretty pretty got a lot of momentum around it in in the in folks who are deploying and in the community so evaluations is important and then um i think knowing how to set up the right evals knowing how to you know benchmark your own evals um customize it um what types of eval score versus classification theres just so much nuance in that whole eval space and so as we continue to drop more research or share more stuff were learning um we well share with the community excellent parta its been absolutely fascinating having you on as always i really appreciate it and look forward to having you back awesome thanks to me ch thanks and thanks mops community hey everyone my name is apara founder of arise and the best way to stay up to dat with mlops is by subscribing to this podcast 
+Instruction
+General Topics:
+[
+  "Algorithms and Data Structures",
+  "Artificial Intelligence (AI) and Machine Learning",
+  "Computer Architecture",
+  "Data Science and Analytics",
+  "Database Systems and Management",
+  "Human-Computer Interaction (HCI)",
+  "Programming Languages and Software Development",
+  "Software Engineering and System Design",
+  "Web Development and Internet Technologies",
+  "Computer Graphics and Visualization",
+  "Theoretical Computer Science",
+  "Quantum Computing"
+]
+
+Complexity Scale:
+[
+  0.00-0.09: Elementary,
+  0.10-0.19: Middle School,
+  0.20-0.29: High School,
+  0.30-0.39: Advanced High School,
+  0.40-0.49: Introductory College,
+  0.50-0.59: Average College Lecture,
+  0.60-0.69: Advanced College,
+  0.70-0.79: Graduate Level,
+  0.80-0.89: Advanced Graduate Level,
+  0.90-1.00: PhD Level Lecture
+]
+
+Generate a JSON summary the computer science or software engineering video. The summary should include:
+
+1. A high-level synopsis labeled as "introduction".
+2. A breakdown into 5 sections, each with:
+   - A title starting with "Section x" where x is the section number from 1 to 5.
+   - A "content" field containing 4 bullet points summarizing the section.
+   - A "topics" field listing the 3 most important topics covered in the section.
+3. A global "topics" array listing 5 key descriptors (1-2 words each) of topics covered in the video.
+4. A global "generalTopics" array selecting 3 topics from the "General Topics", each associated with an exact "complexity" score based on the "Complexity Scale". The complexity score should reflect the detailed complexity level with full two-decimal-place precision.
+
+The JSON structure should strictly follow this template:
+{
+  "introduction": "High level synopsis here",
+  "sections": [
+    {
+      "title": "Section 1",
+      "content": [
+        "Bullet point 1",
+        "Bullet point 2",
+        "Bullet point 3",
+        "Bullet point 4"
+      ],
+      "topics": ["Topic1", "Topic2", "Topic3"]
+    },
+    ... (total 5 sections)
+  ],
+  "topics": ["Descriptor1", "Descriptor2", "Descriptor3", "Descriptor4", "Descriptor5"],
+  "generalTopics": [
+    {
+      "name": "Selected general topic 1",
+      "complexity": "Exact complexity float with two decimals"
+    },
+    ... (total 3 general topics)
+  ]
+}
+
+The output must follow the specified JSON structure, focusing on domain-specific terminology in the "content" sections. Use the previous "Complexity Scale" list when generating "complexity". Use the previous "General Topics" list when generating the "generalTopics" field. If the video content does not directly match a topic from this list, select the closest related topic available. 
+
+###############################
+##########react#############
+###############################
+
+
+###############################
+##########rust#############
+###############################
+
+
+###############################
+##########sql_backend#############
+###############################
+
+
+###############################
+##########threads_connections#############
+###############################
+
+
+###############################
+##########react_svelte#############
+###############################
+
+
+###############################
+##########typescript_fireship#############
+###############################
+
+
+###############################
+##########zig#############
+###############################
+
