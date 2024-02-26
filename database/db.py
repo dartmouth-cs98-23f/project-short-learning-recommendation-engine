@@ -54,18 +54,22 @@ class DbClient:
         
         return index
     
-    def add_video(self, video_id: str, embeddings=None):
+    def add_video(self, video_id: str, embeddings=None, topics=None):
         """
             Add a video to the Pinecone index.
         """
         index = self.get_index("recommendations")
         embeddings = embeddings or self.get_embeddings(video_id)
+        topics = topics or []
         response = index.upsert(
             vectors = [{
                 "id": video_id,
-                "values": embeddings
+                "values": embeddings,
+                "metadata": {
+                    "topics": topics
+                }
             }],
-            namespace="video-transcripts"
+            namespace="video-transcripts",
         )
         
         if self.debug:

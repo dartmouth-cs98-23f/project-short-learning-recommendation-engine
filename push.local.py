@@ -62,14 +62,14 @@ for file in os.listdir(SUMMARY_PATH):
             # load tensors
 
             # get filename withouth extension
-            # basename = os.path.splitext(file)[0]
-            # with open(f"{EMBEDDINGS_PATH}/max_{basename}.pt", "rb") as f:
-            #     tensor = torch.load(f, map_location="cpu", weights_only=True)
-            #     tensor = tensor.numpy().tolist()
-            #     print(f"TENSOR:            {len(tensor)}")
+            basename = os.path.splitext(file)[0]
+            with open(f"{EMBEDDINGS_PATH}/max_{basename}.pt", "rb") as f:
+                tensor = torch.load(f, map_location="cpu", weights_only=True)
+                tensor = tensor.numpy().tolist()
+                print(f"TENSOR:            {len(tensor)}")
                 
-            #     # add to pinecone
-            #     response = db_client.add_video(f"{search_data['objectID']}", embeddings=tensor)
+                # add to pinecone
+                response = db_client.add_video(f"{search_data['objectID']}", embeddings=tensor, topics=search_data["topics"])
             
             
             
