@@ -69,14 +69,11 @@ def main():
                 path = f'{OUTPUT_DIR}/outputs/{current_doc["_id"]}/inference_output_{run}.json'
                 final_path = path
                 run_inference(device, tokenizer, model, path)
-                try:
-                    if validate_inference_output(path):
-                        did_fail = False
-                        break
-                except Exception as e:
-                    print(f"Validation failed: {e}")
+                if validate_inference_output(path):
+                    did_fail = False
+                    break
+                else:
                     did_fail = True
-                    continue
             generate_embedding(device, tokenizer, model, path)
             upload_to_database(did_fail, final_path)
 
