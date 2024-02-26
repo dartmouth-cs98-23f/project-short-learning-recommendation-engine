@@ -346,8 +346,6 @@ def get_next_document():
         ]
     })
 
-    print(f"Processing document: {current_doc['_id']}")
-
     return current_doc
 
 
