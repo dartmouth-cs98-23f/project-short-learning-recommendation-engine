@@ -1,0 +1,73 @@
+It is also very important to acquire
+the results of our computation,
+by means of the qubit measurements.
+We should not forget that measuring the qubit
+state will actually destroy the superposition.
+As we explained before,
+the amplitude of the states of the qubit
+represents the probability with which
+a particular state of the qubit will be measured.
+This again shows the non-deterministic
+way of quantum computing.
+Even though the largest amplitude implies
+the highest probability for being read,
+it will happen that several runs
+of the same algorithms are needed.
+And each time at the end of the algorithm,
+the measurement can be done
+and when done multiple times, the result,
+which has been read out,
+most of the times contains the result.
+For doing a measurement, we need to measure
+the qubit and convert the analog signal
+we receive back from the qubit using 
+an Analog-to-Digital converter this time.
+And then we apply a digital signal processing
+algorithm to discriminate the outcome of measurement
+– whether it is a 0 or a 1.
+The measurement outcome can be 
+a final result or an intermediate result,
+which can be used to control further operations.
+Closely related to this measurement operation
+is quantum error correction and detection.
+We need to keep in mind that 
+qubits are fragile and error-prone
+and due to their very limited coherence time,
+they are exposed to errors.
+Therefore, quantum error correction is 
+a critical component of the micro-architecture;
+and a dedicated unit is in charge of
+triggering periodic error-correction cycles
+and correcting errors whenever they happen.
+Such that they offer the required 
+fault-tolerance and provide correct results.
+Once the measurements of
+the ancilla qubits are received,
+a decoder will interpret
+the readouts and determine whether or not
+an error has manifested itself for
+which some correction is necessary.
+Quantum Error Correction is a very important
+functionality of the micro-architecture
+as certain estimates show that up to 90%
+of what a quantum processor is doing
+is actually related to that
+Quantum Error Correction activity.
+Another important component of the micro-architecture
+is the qubit addressing table,
+which allows us to keep track
+of qubits and their locations.
+The address and location of these qubits are
+basically used to update the physical address
+of each qubit used in our algorithm, 
+whenever it is moved from one location to the other.
+This addressing table is crucial for 
+accommodating the routing mechanisms,
+which move qubits around
+to enable two-qubit operations
+which require the qubits nearest
+neighbour to be as close as possible.
+Finally when operating all these units together,
+we can execute quantum algorithms
+and enjoy the opportunities that quantum computing
+has to offer in terms of computing speed-up.

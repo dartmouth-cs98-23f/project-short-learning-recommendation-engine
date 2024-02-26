@@ -1,0 +1,402 @@
+all right for my research topic I
+decided to do it on the architecture of
+nvidia gpus originally I wanted to do it
+on both AMD and NVIDIA but after I'd
+done a couple hours of research I found
+out that there is just going to be way
+too much information to cover for both
+architectures in just a 7 page paper so
+I just decided to get a little more
+specific and ended up just deciding to
+do it on Nvidia's architecture alright
+so when I was doing my research I just
+started on a googled NVIDIA GPU
+architecture and a few things came up
+but the kind of the main thing I first
+thing was Maxwell architecture so I
+clicked on that and I started looking
+into Maxwell architecture and actually
+found that it's not really an
+architecture it's a micro architecture
+and at first I wasn't really sure
+exactly what the difference was so then
+I had to go and look up all the
+information on that and then once I
+found out kind of the differences I
+realized oh I really did know the
+difference between an architecture and a
+micro architecture I just didn't really
+know that I knew that so basically when
+you think about the architecture it's
+basically the instruction set usually we
+just refer to it as is a but the
+architecture includes things like the
+registers the data types instruction
+types like add sub etc things like that
+kind of basically the things we learned
+at the first of the semester in like
+chapter 2 so kind of the way I like to
+think about it is when I think about the
+architecture I like to think about
+programming with MIPS when you're
+writing like a function like add in MIPS
+that functions basically the
+architecture and then when we look at
+the microarchitecture this is basically
+how the instruction set architecture is
+actually implemented um this is kind of
+the plans or like the design of how the
+architecture will get done what it needs
+to do on this this includes things like
+pipelining data paths and branch
+prediction this is kind of things we've
+just barely learned about
+Chapter four so I kind of want to give a
+quick background or history of the
+different Nvidia microarchitectures
+basically because I had no idea that
+they changed them I guess when I started
+my research I just kind of figured that
+Nvidia have an architecture and they
+just kind of stuck to it and they made
+like little improvements here and there
+I didn't really think that they would
+actually like rename them and change
+them that much so I just kinda want to
+give a quick background just on the
+different ones I'm kind of when they
+ended and when the new ones started so
+the oldest one that I could really find
+information on was Fermi and they do
+have some architectures that are older
+than for me but they don't really have
+very much information on them so Fermi
+and they used in their GeForce 400 and
+500 series GPUs they faded Fermi out in
+2011 and they replaced it with Kepler
+and Tipler is pretty well-documented I
+could find a lot of information on it
+and they use that for their 600 and 700
+series GPUs they use them in some of
+their GeForce 800 M series GPUs and the
+M is for mobile so they use those for
+like laptops and the idea for Kepler was
+to improve the energy efficiency over
+Fermi and they use Cutler until 2014 and
+they replaced Kepler with Maxwell and
+Maxwell is what they're currently using
+for Maxwell they use that in the later
+models of the GeForce 700 series GPUs
+and they use them in some of the hundred
+M and in the 900 series the 900 series
+it was a little bit confusing at first
+on those also because there's two
+versions of Maxwell there's Maxwell one
+and Maxwell - Maxwell - was implemented
+in the GeForce 900 series but it was
+just it's basically the same they just
+made slight improvements and again for
+Maxwell they wanted to keep on improving
+the energy efficiency but they also made
+a lot of improvements to the stringing
+multi processors
+those are pretty complex and they're
+kind of like at the heart of the
+architecture I guess so I'll be going
+over the streaming multi processors a
+little bit later
+but we kind of need a little bit more
+information on how the GPU works and how
+the architecture said it before we get
+to those so I'll be going over those
+here in just a little bit in my previous
+slide I had talked a little bit about
+this shimming multi processors and those
+kind of work together with CUDA so I
+wanted to give a quick rundown of CUDA
+before I went into further detail on the
+streaming multi processors CUDA stands
+for compute unified device architecture
+and it's basically CUDA is a parallel
+computing platform and a programming
+model that Nvidia created basically it
+allows the programmer to write their
+code a little bit differently and when
+you do that it gives instructions
+straight to the GPU bypassing the
+assembly language for CUDA you can write
+it in C C++ and Fortran and when you
+write CUDA for the same language they
+just kind of refer to it as parallel C
+so right here you can see the standard C
+code on the left and then the parallel C
+code on the right and probably the
+biggest company that is known for using
+this I guess would be Adobe they use it
+in a lot of their software and a lot of
+people that use Adobe products will use
+NVIDIA GPUs because they can use this
+parallel C code that adobe has written
+to take advantage of the GPU and it I
+just makes the program work a lot better
+with the GPU with CUDA you are able to
+take advantage of all the ALUs on the
+graphics card this is a really big
+advantage because the GPU has many more
+al use than the CPU does right here you
+can see an example of how many a user on
+the CPU on the Left compared to the al
+use of the GPU on the right and with all
+available use this basically what makes
+you so good at doing what they do with
+all of the al use they are able to
+calculate many more calculations so many
+more things so CUDA it basically lets
+you take advantage of the al use without
+said CUDA does still have some
+disadvantages and here are some of the
+advantages and disadvantages CUDA is
+very good at running parallel algorithms
+and parallel algorithms are basically
+algorithms that can be executed one
+piece at a time all on different
+processing devices then at the very end
+they combine them back together again
+serial algorithms on how to execute
+sequentially one time through CUDA
+doesn't take advantage of three augur
+ifs it works really well with parallel
+algorithms so if you're going to be
+using CUDA you need to keep that in mind
+so I've talked a little bit about what
+CUDA is now I'm going to talk about how
+it actually works
+CUDA uses thousands of threads executing
+in parallel all these threads are
+executing the same function and this is
+what's known as a kernel so right here
+we can see the thread is the little
+squiggly line the programmer or the
+compiler can organize the threads into
+what are called thread blocks which you
+can see on the slide are just multiple
+threads all block together or group
+together the thread blocks are then
+organized into grids of multiple thread
+blocks the thread block is the grouping
+of threads that are all executing at the
+same time basically these work together
+through shared memory a thread block has
+its own block ID for its grid earlier I
+mentioned the streaming multi processors
+this is kind of where they come back
+into the picture
+streaming multi processors are the part
+of the GPU that actually runs these
+kernels alright now we can dig a little
+bit into the streaming multi processors
+the streaming multi processors are very
+important I kind of like to think of
+them as like the heart of the
+architecture the streaming multi
+processors perform all the actual
+computations they have their own control
+units execution pipelines caches and
+registers Nvidia refers to the streaming
+multi processors in a couple different
+ways
+in the previous architecture Kepler they
+referred to as a streaming multi
+processor adds an SM X in Maxwell
+architecture they just refer to them as
+an SM m and when they compared both
+architectures together so if they're
+comparing Maxwell and Kepler they'll
+just refer to the streaming
+multiprocessor as an SM it was kind of
+confusing at first but once you figure
+it out it makes sense so just keep the
+wording in mind when I talk about these
+for the rest of the presentation for
+Maxwell the number of streaming multi
+processors is different depending on
+what Nvidia card you look at currently
+the GeForce GTX 980 is one of the
+top-of-the-line GPUs the Nvidia is
+making currently so in the next couple
+examples I'm going to be going over the
+architecture and the streaming multi
+processors of the GTX 980 and then just
+keep in mind since from talk about the
+980 this is a 900 series GPU so this is
+version 2 of Maxwell I don't know that
+they're that much different but just
+keep in mind that since I'm going over
+the GTX 980 this will be the second
+generation Maxwell architecture inside
+the microarchitecture of the GTX 980
+there are 4 64-bit memory controllers I
+have them highlighted right here in red
+with that there are 4g pcs these are
+bound to the 4 memory controllers GPC is
+short for graphics processing cluster
+each of these G pcs has for streaming
+multi processors inside of them so we
+have for streaming multi processors per
+G PC and then there are 4 G pcs so that
+gives us 16 streaming multi processors
+this is specifically for the gtx 980
+graphics card if you looked at a lower
+model like the 970 or the 960 those
+would have less streaming multi
+processors inside of them which
+effectively is what makes the GTX 980
+more powerful than those cards is the
+amount of streaming multi processors
+that is inside of the GPU now if we just
+focus on a single streaming multi
+processor we can see all these green
+cores
+and NVIDIA refers to these as CUDA cores
+and inside this remain multi processor
+it's split up into four processing
+blocks inside each of these blocks is a
+four by eight grid of cores and if we
+want to calculate this we can look and
+that gives us 32 cores per block and
+since the streaming multi processor is
+split up into four blocks each with 32
+cores that gives us a total of 128 cores
+for a single streaming multiprocessor
+and if we go back and look at the big
+picture we remember there 16 streaming
+multi processors in total so if each one
+has a 128 cores that gives us 2048 cores
+and I thought it was pretty cool to look
+at this because if we go to Nvidia's
+website and look at the specifications
+for the gtx 980 it's listed it is having
+2048 CUDA cores this to me was pretty
+cool because um you always hear about
+how many CUDA cores the graphics card
+has but that never really meant anything
+to me it was just a number so when I
+started doing this research I thought
+was cool that I could look down into the
+architecture of the GTX 980 look at the
+streaming multi processors and then see
+those actual CUDA cores and then see how
+the sharing multi processor split up and
+then to see how many of them are and
+then you can kind of draw the lines and
+make the connection to see oh this is
+where they get that number from so I
+thought that was pretty cool because it
+goes from just being a number to
+actually knowing what those CUDA cores
+are and where they are in the actual
+architecture of the GPU so I thought
+that was pretty cool going back to the
+streaming multi processor we need to
+take a look at these warp schedulers the
+streaming multi processor schedules
+threads in groups of 32 parallel threads
+these are what are called warps each
+streaming multiprocessor contains four
+warp schedulers each of these warp
+schedulers can run two instructions per
+warp every clock the streaming multi
+processor uses its own resources for
+scheduling an instruction buffer
+let's take a little closer look at the
+instruction buffer I wanted to compare
+the swimming multi processors between
+Kepler and Maxwell for Maxwell Nvidia
+gave each warp scheduler its own
+instruction buffer so for every
+streaming multi-process enter in Maxwell
+it has four instruction buffers if you
+compare this to the streaming multi
+processor in Kepler it still has four
+warp schedulers but they don't have any
+instruction buffer
+according to Nvidia and Maxwell they
+gave the streaming multi processor its
+own instruction buffer for each warp
+scheduler and this gave the swing multi
+process there's a huge performance
+increase let's take a little closer look
+at the numbers when you compare between
+Maxwell and Kepler so as you can see in
+Maxwell they doubled the amount of
+streaming multi processors compared to
+Kepler when you look at the CUDA cores
+they also increase the CUDA cores by 25
+percent and basically they increase
+everything while also decreasing the
+power consumption and effect made from
+the Maxwell architecture much more
+efficient looking at these performance
+increases between Maxwell and Kepler and
+one of the major improvements being the
+fact that Nvidia gave this roomy multi
+processor and Maxwell their own
+resources it kind of brought up a
+question that I thought of when I was
+doing the research and I just kind of I
+kind of wonder why it took Nvidia so
+long to give the sharing multi
+processors their own resources and with
+all the research that I've done you can
+tell that the Tsarina multi processors
+are very important and they have a big
+job to do they have tons of information
+going through them it just kind of seems
+like a natural idea to give them their
+own resources in all the previous
+architectures like Kepler the streaming
+multi processors had to share resources
+with other things so to me that would
+seem like a huge bottleneck so I wonder
+why it took so long until Maxwell for
+them to do this and
+I don't know it could be just a
+limitation of the technology or just a
+limitation of the hardware I don't know
+I'm not a GPU architect or anything like
+that and I could just be oversimplifying
+the problem it could be something
+they've been working on for a long time
+they've known about it and they just
+barely have the resources to do it now
+I'm not a hundred percent sure but when
+I was doing my research that was just
+kind of one of the things that I kind of
+brought up as a question I guess is I
+just wonder why it took so long
+obviously these are very complex and a
+lot of stuff goes into them and I'm not
+to the level where I could build a GPU
+or anything like that so I have faith
+that Nvidia does the best that they can
+do and I'm sure in the future the GPS
+will only get better and better and
+faster and more efficient and will get
+even more performance out of them but I
+really learned a lot doing this research
+paper at first it was really frustrating
+because I didn't realize how much that I
+didn't know so I would look up one thing
+and the article would be talking about
+something and then I'd have to do
+research on that because I didn't know
+what they were talking about so it was a
+lot more research than I had ever
+planned but I really did learn a lot and
+it was really is actually kind of fun to
+see what kind of how Nvidia creates
+these so I really enjoyed doing this
+research project and I actually learned
+much more than I had ever even thought
+that I could have and here's all my
+credits thank you very much

@@ -1,0 +1,339 @@
+[Music]
+so when we think about a career
+progression in tech we tend to think
+about
+junior to senior to lead to architect to
+principal
+and i think that misses the point to
+some degree because there is an axis of
+technical proficiency that's missing
+from that and i think that's most easily
+described as going from a
+framework consumer
+to a framework creator so you start off
+using something like spring or react or
+view depending on the paradigm within
+which you're working
+and
+you are
+uh moving up that technology proficiency
+chain from where you're actually just
+consuming that framework to where you're
+ending up creating a framework that is
+used by
+tens hundreds thousands tens of
+thousands of other engineers and they
+become your
+consumers
+so to get there you're you have to build
+up your technology your skill set right
+and you start off with basic proficiency
+in your language of choice and be it you
+know learning about all the ways of
+doing conditionals and looping
+and
+creating functions and methods and
+classes and instantiating objects and
+all that then you work up to data
+structures and algorithms and finally
+into
+design patterns
+and design patterns are ways of
+expressing
+solid
+architectures that are reusable and
+extensible and
+that are industry standards
+so in this video we're going to look at
+five different design patterns from this
+the original og book the gang of four
+design patterns book
+it is in c plus but
+the concepts are
+usable and understandable in any
+language and also in any environment so
+on the browser
+in android or ios on the server wherever
+you're going to be design patterns are
+going to help you go from a framework
+consumer to a framework creator all
+right let's start off with our first one
+and let's see how fast you can identify
+it so
+you have a database driver that you're
+connecting to you want to get a list of
+all of your customers so you make that
+query and you get back a list of all the
+objects which are customer objects so in
+this case you've got the
+customer object or the customer class of
+which you can have many and then the
+database driver of which there can only
+be one and you might have guessed it
+that's the singleton pattern as
+specified in here
+and it means that for that given class
+there can only be one instance and
+that's really good for doing things like
+a database driver
+or
+the list of all the configuration
+settings for your application or if
+you're over on the client maybe the data
+store the current state of the app
+that's stored in a singleton
+the pro is that you can go and get to
+that data anytime that you want all you
+have to do is just you know get the
+singleton and away you go
+the con in your evolution to framework
+creator is you might jump on the
+singleton bandwagon too early
+and once you've gone there once you've
+said that there can be only one and
+you've added that constraint it's really
+hard
+to back that out it means instead of
+everybody being able to just go and
+access it directly now you've got to
+pipe down whatever the current well
+database driver in this case is an
+example you got to pipe that down to
+whomever the consumers are so
+as with all of these design patterns you
+got to make sure that you're using it
+the right way and at the right time
+otherwise you're going to get stung
+the second design pattern we're going to
+look at is the facade pattern and a lot
+of these design patterns are actually
+modeled on real world building style
+architecture and this is no different so
+a facade in the real world is the front
+of a building and it hides all of the
+mechanics of the building inside the
+insulation the rooms the plumbing the
+infra the electricity and the basement
+and all that stuff that you don't want
+to see is hidden behind this nice facade
+it's got a door and some windows and all
+that looks really pretty got great curb
+appeal
+and so as a framework creator
+this gives you the facade pattern gives
+you the ability to put a nice external
+veneer on your app now the example that
+they use in the book is a compiler so a
+compiler has got all kinds of cool stuff
+inside it's got a parser it's got a
+lexical analyzer it's got a tokenizer
+it's got all kinds of fun stuff in there
+but from a consumer standpoint when you
+as a framework creator are thinking
+about your customer and having empathy
+for what they want to do in their
+priorities you're saying to yourself oh
+and maybe i don't want to give them
+access to all the internals there maybe
+i just want to give them a nice compiler
+facade where they give me something i
+compile it and i return it and away you
+go and i hide
+all those internals
+so that's the big pro it gives you and
+your consumer a nice interface and if
+you allow them then if they want to they
+can go around that interface and go and
+get to
+the interior if if you so choose
+now the downside is you can have a leaky
+paradigm there you can have a leaky
+abstraction in other words that you've
+oversimplified that compiler interface
+is so simple that it's not really usable
+and not really valuable and that can be
+a problem another problem is over
+verticalization meaning that you've
+created a facade that's so specific to a
+single use case that it's no longer
+generalized enough to be generally
+useful so those are things to watch out
+for when you're using a facade pattern
+so the next design pattern we're going
+to look at is the bridge pattern i call
+it the adapter pattern but they've got a
+different definition in the book for the
+adapter pattern but
+let me use a visual example on this one
+so
+here is a sony mirrorless camera just
+like the one i'm shooting on right now
+and it actually is two pieces right so
+you've got the camera body and then
+you've got the interchangeable lens and
+that allows this camera body to be
+multi-purpose right in this case
+this is a wide-angle lens good for
+giving nice big contacts like this
+this is a 55 millimeter lens which is a
+lot better if we're doing kind of head
+shot some portraiture and i use that
+when i'm doing zoom calls
+so uh why that's important in this
+context is from the software perspective
+you're doing a similar sort of thing
+you're creating an api or in this case
+the api is this like connector here in
+software world
+that would be an interface right and so
+now on the server side you might have
+that database driver that we talked
+about before you'd have an abstract
+interface for your database driver and
+then you'd have concrete implementations
+for say or dynamodb or whatever
+else you're going to get into and that's
+a great thing about this pattern is it
+allows you to create a product that's
+usable by
+a wide variety of customers in a wide
+variety of situations
+similar sort of thing on the client side
+you could do an analytics abstract
+interface and then have concrete
+implementations to go to something like
+adobe's omniture or segment or your own
+in-house homebrew whatever you want and
+that can work both
+on the website or on mobile
+the problem is
+the big con on this one is when you use
+it too much right so in this case
+there's only one extension point to this
+camera and it's this interchangeable
+lens
+so when you didn't go and go and create
+modules for this little dial here or the
+eyepiece right they used that pattern
+judiciously so
+you should do the same when it comes to
+your software
+don't overuse this pattern and the great
+thing about it is you can also bring it
+in later and that's what you can do with
+a lot of these design patterns you don't
+have to start out of the box by creating
+the world's most modular system get
+something working and then when you see
+the points where you need modularity and
+this bridge pattern then go bring those
+in
+the fourth pattern we're going to look
+at is the strategy pattern and it's one
+of my personal favorites so let's take a
+scenario you've got this piece of
+furball code that's gonna go and find a
+bunch of customers filter through them
+and then send out email and text
+notifications to them and nobody likes
+working on this piece of code since it's
+doing multiple things and it's just a
+hairball
+you can use the strategy pattern to
+significantly clean this up and how you
+do that is you go and take the mechanics
+of getting access to the customer
+records sending out the text and emails
+and then creating that as an
+infrastructure layer and then factoring
+out the filtering of those customers
+into one strategy which is the strategy
+that helps you go find the target
+customers you want
+and then the notification strategy as a
+different strategy and that helps you
+decide when and where and how you want
+to contact those customers so that
+strategy pattern
+cleans up and makes it very easy to use
+and then you can actually use that
+library or that system in a whole bunch
+of different scenarios and it becomes
+much less of a hairball so one thing you
+got to look out for on this is always
+make sure that you have
+decent default strategies so in the case
+of our refactoring we go and take the
+existing logic around the customer
+filtering and the customer send outs and
+turn those into the default strategies
+and then later on people can extend them
+otherwise you get a system where by
+default you're asked to do a lot up
+front and no customer wants to do that i
+want to go and take your library off the
+shelf just use it right away and then if
+it doesn't match what i want to do
+looking to see what the extension points
+are that i can tap into to modify the
+behavior to where i want it and the
+strategy pattern makes a great way to do
+that the fifth pattern we're going to
+look at is my favorite of all of the
+patterns and it's the observer pattern
+or what we've come to know now as pub
+sub because it's everywhere it's on the
+server as message queues between
+applications it's on the client as
+eventing systems pub sub is everywhere
+and there's a good reason for that
+because it allows for
+loose coupling between the publisher
+that's creating events and the
+subscriber or subscribers that are
+listening for those events and you can
+use it anywhere
+now the con on this particular pattern
+is that
+you can go overboard with it if
+everything is communicating by events
+then you can get into nasty event loops
+and it gets very hard to debug
+one thing publishes an event it goes to
+another object which in turn publishes
+his own events and it ends up kind of
+coming back around the original event
+which ends up creating more events and
+on and on and on and then you know
+you've got a serious problem where
+you're ending up adding in booleans to
+check whether you're emitting events and
+it just gets hairy so there's a couple
+of solves for this one is don't use the
+same message bus for everything have a
+specific purpose for each message bus
+and then to you know keep these systems
+localized you know if you're on the
+client you've got a button and it's an
+emitting an event that's good that's all
+you need you don't need to go beyond
+that so again
+as with all of these patterns
+use them judiciously but use them
+because most people understand those
+systems when they see them
+well i hope you liked this quick tour of
+five types of design patterns
+there are i think almost wow 20 or so
+different design patterns in this book
+this is a fantastic book should be on
+every developer's bookshelf
+if you have any questions or comments be
+sure to put those in the comment section
+down below if you like the video hit
+that like button let everybody know if
+you really like the video give brad a
+subscribe or jump over to my channel and
+give me a subscribe i'd appreciate it
+have a great day be happy be healthy and
+be safe

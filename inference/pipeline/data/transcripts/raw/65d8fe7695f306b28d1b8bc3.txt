@@ -1,0 +1,280 @@
+in this video we will study about web
+server
+and application server and this video
+will hopefully clear some of your doubts
+regarding web server and application
+server
+so let's begin what is a web server
+web server is a computer system
+that hosts websites so what do you mean
+by websites
+it's a collection of web pages
+so for example when you open amazon.com
+it's a website and it does not have a
+single web page but it has multiple web
+pages
+so when you open it you see the home web
+page
+but when you click on a product you will
+be uh
+taken towards a different web page that
+will be the product web page
+and there you will see multiple things
+the image of the product info
+and even recommendations so that means
+website and then any computer system can
+be a web server
+what is the difference between a normal
+computer system
+and a web server so the difference is
+that
+this computer system is running a web
+server software
+for example apache http
+web server this is the most popular one
+today as of now
+then we have microsoft iis and some
+others
+so is this the only difference that
+computer system
+and a computer system running web server
+software
+no there is one more difference and the
+second is that
+this computer system should be connected
+to internet
+in order to act as a web server
+otherwise
+uh clients web clients cannot contact it
+through http
+so it may not be able to it will not be
+able to serve those
+so it will not be acting as a web server
+so it should be connected to internet
+and it should be running a web server
+software
+so uh typically web servers host
+multiple websites
+some only host a few while others may
+host several hundreds
+but there are some dedicated servers
+also
+so based on that we will categorize a
+web server
+into two parts one is that web servers
+that host websites for multiple users
+these are called shared hosts
+and there are some dedicated uh web
+servers that will be hosting uh
+websites for single person or company
+and these will be called
+dedicated hosts
+so which servers are shared and which
+are dedicated
+so when let's say there is some personal
+website
+or some small websites which
+does not have huge amount of traffic
+then those who
+would be uh generally hosted on shared
+hosts
+but uh if there is a huge website and it
+has
+a high traffic then that requires
+a dedicated server for that and also if
+the sites require custom server
+modification then it will go for
+dedicated hosts now uh let's understand
+how this web server works
+so if we have a web server let's
+say this is the web server then there
+must be a client
+client whom the server is serving so we
+will call it
+web client so this client
+sends an http request to the web server
+and it will request for some page or it
+will require for some other resources
+so there are two possibilities one
+possibility is that the
+requested url the page that is requested
+or the file that is requested
+is present with the web server then it
+will immediately send
+a http response with the file
+but it may be possible that that is not
+present on the web server
+so it can look into a static
+database so these are files that is
+present to this
+then there may be also static database
+which the web server can contact and
+fetch the file
+and return to the send http response but
+there may be scenario that
+this is not present in the staticdb but
+it needs some processing
+then what this web server will do is
+that it will
+send a servlet request to the
+application server so you can now see
+application server coming into
+picture it will send a
+servlet request
+to application server so just a quick
+info what is a servlet if you may be
+wondering a servlet is a small java
+program that runs with a web server
+servlets receive and respond to requests
+from web clients usually across
+http so these will be some java programs
+so it will require some processing so it
+will send this servlet request
+to this application server it will
+contact the
+application data store
+in order to process run this servlet and
+fetch some
+details from here and do further
+processing
+and then it will send a servlet response
+to the web server and now this web
+server has the
+response built in so response ready so
+it can
+send http response back to the
+web client so this is how web server
+works
+and this application server may not be
+always required but it may be required
+when some intense processing is required
+which web server cannot handle so this
+is a
+rough idea and you should understand
+this flow
+now let's see some of the examples of
+web servers so one
+most popular web server is apache http
+server
+and its most popular as of now it's
+developed by
+apache software foundation
+and just a rough estimate roughly 60
+percent
+of the web servers run apache web server
+and it can be installed on
+all operating systems including linux
+unix windows
+freebsd mac ox osx and more
+and it's a open source software so all
+of these
+are related to its popularity that's why
+it's so popular
+then we have internet information
+services or in sort iis
+it's developed by microsoft
+and it runs on windows nt 2000 and 2003
+platforms
+and it is tightly integrated with the
+operating system
+so it is easy to administer it then we
+have some other web servers like lite pd
+sun java system web server and jigsaw
+server
+there are a few more but those are not
+that much popular
+now we have a good understanding of web
+server we also know
+the most popular web servers how web
+server functions
+now let's quickly look at application
+server
+so application server is a server that
+is specifically designed to
+run applications and here also we had
+seen that
+this was coming into picture when this
+web server did not had the request ready
+and it needed to run some
+java program to build the response
+so it's a server designed for running
+applications
+and it includes both hardware and
+software that
+provide an environment for programs to
+run
+so what are some of the uses of
+application server
+it's used for running web applications
+hosting a hypervisor that manages
+virtual machines so what are hypervisors
+these are software programs that manage
+one or more virtual machines and these
+can be used to create
+start stop and reset virtual machines
+then application server can be used for
+distributing and monitoring software
+updates and also processing data sent
+from
+another server now next question is why
+we use application server we already
+have some idea why we use application
+server
+so a web server if you see is designed
+and often optimized
+to serve web pages and not more than
+that
+therefore it may not have the resources
+to run demanding web applications
+so an application server provides the
+processing power
+and the memory to run these applications
+in real time
+it also provides the environment to run
+specific applications
+for example let's say a cloud service
+may need to process a data
+on a windows machine
+and a linux based server may provide the
+web interface for the cloud service
+but it cannot run the windows
+application it can just provide an
+interface therefore it may send the
+input data
+to a windows based application server so
+this web server
+is running on linux and it has some
+interface with which the the client can
+interact but it cannot process
+uh something some application which can
+only run on a windows so it has to
+contact
+the application server which will be
+running on windows
+and then it will run that application
+therefore may it may send input data to
+a windows based server and the
+application
+server can process the data and then
+return the result
+to the web server once processing is
+done
+and which can be output
+as the form of result on a web browser
+so it can be sent to the client
+so you see that here it's necessary
+it cannot do it cannot be done on the
+web server
+so this is some intuition why we need
+application server
+just one of the reasons is that it
+provides the environment
+to run a specific application web server
+may not have that environment
+and it's more powerful it provides
+processing power
+memory as well as environment
+so i hope i was able to clear your some
+of your doubts regarding web server and
+application server
+thank you

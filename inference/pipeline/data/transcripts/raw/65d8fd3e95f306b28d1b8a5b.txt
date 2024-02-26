@@ -1,0 +1,222 @@
+hello all welcome back to building
+predictive systems with Python and
+machine learning we're in a new section
+about building our first model
+classifying iris flowers by petal length
+and width and in this section we're
+going to take a look at number one
+exploring our first data sets number two
+building our first model and number
+three assessing our model let's talk
+about exploring our first data sets in
+this video we're gonna take a look at
+three topics so we're going to talk
+about what is - IRS data sets number two
+is what is the machine learning tasks
+associated with this iris data sets and
+number three is what I trained has
+splits and the features let's go in and
+take a look so here we are back in our
+trivia notebooks under building
+predictive systems where I'm going to
+just bring you through all of how we can
+build predictive learning systems in
+driven notebooks so it also teaches you
+how to use the popular two in the data
+science community the first thing to do
+is to get up data sets right so what we
+do is this data sets is actually within
+second learn already to create the iris
+data sets within your Python memory we
+actually because as the iris dataset is
+such a classic data sets to learn
+machine learning with it actually comes
+with secular first thing we need to do
+is from SK learn the
+in port load Maris and we need to create
+the data sets so we have iris load let's
+look at I receive a so iris data is a
+big dictionary so we have description we
+have the data itself and we have two
+feature names and the targets right so
+let's first look at the description
+so iris data is an iris plants database
+so it has a hundred 50 data points 50 in
+each of the three classes and it has
+four attributes for numeric predictive
+attributes and each attribute is
+described here we have sepal length
+sepal width petal length and petal width
+and there are three classes of iris we
+have setosa versicolor
+and virginica right so this is our
+introduction to our first data sets
+right so let's talk in depth about
+particular features of this data set so
+to do this let's first print out the
+data so I've printed this out actually
+with the pandas dataframe so that we can
+discuss this in a more visual sense and
+again we can see 150 data points in this
+table so a data point is very simple a
+data point is a collection of all the
+values of all the features in your data
+set and the correct answer right so in
+the Irish data sets we have three
+different types of flowers we want to
+classify and each type is denoted by a
+number so the type 1 is 0 type 2 is 1
+and type 3 is 2 we also have these
+things called features so features you
+can think of it as features of the thing
+we are looking at right so in the IRS
+data set a data point is represents a an
+individual flower right so the flower
+has many features right a flower can be
+tall wide different colors etc and in
+particular in the Irish data set the
+features that are present in the data
+sets are the sepal length sepal width
+and petal length and petal width of the
+individual flower measured and also what
+type of flower it is right so here we
+have to first have a flower which I
+believe should be iris setosa
+and this atossa flower has the sepal
+length of 5 cm sieve a width of 3 and
+how cm petal length of 1.4 cm and put a
+width of point 2 cm so always visualize
+in your head actually each data point
+it's not just a set of numbers but is
+actually an actual flower or maybe his
+actual house after person actual picture
+actual fashion item whatever it is
+always remember that machine learning is
+about discovering truth and patterns in
+the real world so half the real world in
+your head in this case we've measured
+for features from the flowers and these
+four features are the first four columns
+and the target is the type of flower
+that's is associated with or the type of
+flower that we measured and so let's
+talk a little bit about machine learning
+tasks wait under here so here we're
+trying to use the features of the flower
+to predict what type of flower it is
+because there are only three types of
+flowers and there you can only be one of
+the three types this is what's called a
+classification task where you're trying
+to predict group or label this opposes
+or mirrors what's called a regression
+task where you are trying to predict a
+number that is continuous
+right so you're trying to predict a
+number where there are no separation
+between nicely bucket the classes and
+there are also no predefined classes
+right so you can predict any number you
+wants but then you obviously have to
+target as a bunch of dots on a real
+number line and the idea is you want to
+predict the right dots every time you
+are presented with a particular feature
+the last thing I want to talk about is
+this idea of a train test split so
+imagine if you're building a predictive
+system on a data set like iris and you
+have 150 data points like this if you
+have trained your predictive system on
+the 150 data point you didn't
+do right because you can't test this
+predictive system you can validate this
+particular system all you can do is say
+ok I've used all my data
+I can't conceivably say I have trained
+my whole data sets but trained my whole
+motto on the data sets and I'm going to
+test the data or to test the model on a
+subset of data because the model has
+access to that data it can just remember
+what is in the data and show you the
+right answers so the only thing you can
+do is to expose this predictive system
+in real life into new unseen data that
+comes in organically and hope that it
+works right because you have no idea
+whether this data sets is the same as
+all the data that's coming forward you
+hope that it is you hope that your data
+and a model together has founded general
+patterns in the data and so it could
+generalize forward when we have new and
+thin data but you don't know that so the
+idea is to split your datasets into
+three sets we have the training sets
+which is typically 60 or 70% of data
+sets where you use to expose this data
+set to the model you know the testing
+sets which is the remaining let's say 15
+where you use it to test your model so
+that you can do train your model on a
+training set test it in the test sets
+and back and forth unto your test set
+performance which is not exposed in a
+model but it's just used to test a model
+until your test performance is good and
+then the last 15 percent of 20 percent
+of the data is called a validation set
+so only after you're happy with the test
+sets performance do you try it on a
+validation set
+the idea being when you are as a data
+scientist when you look at the test sets
+and test your models or the test sets no
+matter how much you don't expose that
+test set data into the model you as a
+data scientist still learn from the
+characteristics of this test sets right
+so eventually the data and characters in
+the test sets will leak into your model
+and your model would behave a certain
+way because you have seen some behavior
+in the test set so then the test set is
+again no longer unbiased and
+assimilating new unseen
+which is why of the validation sets
+which is the actually the ultimate test
+of whether your model works and you
+should use it as little as possible and
+you should never look at what's in the
+validation sets you should only look at
+it as oh you know this is how my model
+would perform in if we were exposed to
+some unseen data so that's the idea of a
+trained have split for any given data
+sets for some of the Irish data sets we
+have 150 data points will splits it and
+say 120 or even 100 goes into the
+training sets we'll use a hundred two
+trainer model will then test our model
+on 25 of the new data points or the
+remaining data points to see how our
+model works if it doesn't work well or
+we've written improve it then go back to
+the hundred and try to tweak down
+parameters and then also we're happy
+with this we then use the last final 25
+to judge how good a model is and that's
+all there is to it we talked about the
+Irish data sets which is 150 data points
+of Irish flowers we talked about the
+machine learning task which is
+classification tons of my trained has
+splits which allows us to simulate what
+happens if our model sees new data and
+we talked about features which are
+features of the underlying thing that
+the data points is measuring in this
+case features are the features of
+flowers that 150 flowers that were
+measured in the IRS data sets

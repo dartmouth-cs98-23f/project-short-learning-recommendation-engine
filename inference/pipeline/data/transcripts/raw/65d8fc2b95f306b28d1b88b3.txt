@@ -1,0 +1,76 @@
+hello in this video we will learn more
+about relational databases there are
+many popular relational databases like
+MySQL SQL Server oracle sybase etc in a
+relational database the data is stored
+in multiple tables that are linked by a
+common field a table is also called as a
+relation and is a data set that is
+organized into rows and columns for
+example this table has the information
+about student and this one has
+information about customers each row in
+this table is called as record or tuple
+which represents one complete unit of
+information so in our example here each
+row has information about one student
+only columns are also called as fees or
+attributes which contain one type of
+information the number of columns or
+attributes is called as degree of the
+relation for example the degree of this
+table is 3 similarly the number of rows
+or tuples in a table is called as
+cardinality of the relation in this
+example here the cardinality is 4 let's
+quickly take a look at some questions in
+this table what is the degree and
+cardinality of the table degree is 2 and
+cardinality is fine another example in
+this table what is the degree and
+cardinality degrees 4 and cardinality is
+3 now in a database one of the key
+concept is to be able to identify each
+row or tuple unity let's take this
+student data as an example now when I
+want to enter marks these two students
+have same info so which one should I
+update
+that's where Keys help us typically a
+table has one column or field which
+uniquely identifies the records in the
+table this field is called as primary
+key when a database is designed or
+created in a table we search for
+attributes which uniquely identify a row
+there could be more than one attribute
+like that and they our fault as
+candidate keys means they all are
+candidate to be the primary team out of
+these candidate keys one is selected as
+primary key and remaining are called
+as ultimate keys it is very much
+possible that these keys are actually
+combination of attributes for example I
+can use name plus surname as combination
+which will uniquely identify a room then
+the heat is called as composite key now
+many databases have multiple tables how
+are they linked with each other they are
+linked through foreign key a foreign key
+is a field that references the primary
+key of another table let's take this
+example we have a student table and then
+we have a result table the student table
+has a list of all students that are
+there in the class all the results of
+students are in the result table rule
+number is the primary key and the result
+table has a foreign key role number
+which links it to the student table this
+is the foreign key which references the
+primary key in another table in our next
+video we are going to learn more about
+SQL and how we can manipulate these
+tables
+[Music]

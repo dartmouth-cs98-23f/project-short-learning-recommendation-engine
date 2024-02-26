@@ -1,0 +1,1118 @@
+so what are programming paradigms that's
+of course important to understand
+in the end you could say it's just a way
+of writing code it's about how you write
+and organize your code it's not a syntax
+feature it's not a special feature
+exposed by the browser or anything like
+this it's really just how you structure
+your code and how you reason about your
+program you're writing so how your code
+is organized
+and in the end there are three paradigms
+you could follow you have object
+oriented programming you have procedural
+programming and you have functional
+programming now what does this mean
+if you're writing your code in an object
+oriented style it means that you
+organize your data and logic in objects
+or in classes and then in objects based
+on those classes which means you store
+your data in properties of objects you
+store your logic in methods of objects
+that's how you typically think about
+your code here everything in your
+application in your project gets
+represented as a class and then in the
+end as an object so you organize your
+code in logical entities you could say
+you kind of try to translate the
+application you're writing into the real
+world and you think about your
+application and the things that make up
+your application in real world terms if
+you're building a shop application you
+think about products and a shopping cart
+and so on that's how you
+think about your code and how you
+organize it now when you're following a
+procedural style and that's probably the
+style with which you got started when
+working with javascript you simply write
+a sequential series of execution steps
+and tasks so you have a top to bottom
+code execution you could say now you
+always have that in every style but here
+you simply list these different steps
+the engine in the end should execute and
+should perform you don't organize your
+code in logical
+groups or in logical pieces of data you
+don't use objects and entities to
+structure your code in the end you just
+execute step after step
+and then we have functional programming
+and there we organize our code in if
+possible pure functions with clearly
+defined tasks you get all the data a
+function needs as parameters and then
+this function often also returns
+something new so you pass data around
+with parameters and your functions are
+your way of organizing your code you
+have many functions probably more than
+you have in the other styles and your
+functions hold your logic every function
+if possible works on its own and this is
+how you structure your code now that's
+the theory it of course becomes way
+clearer if we see that on a real example
+so let's work on a very simple example
+application and this indeed will be a
+very trivial application here it's an
+application where i in the end have a
+html file which renders a form a form
+with two inputs and then with a button
+and i got some styling so that this
+doesn't look super ugly now we can
+simply open this by in the end double
+clicking that index.html file in the
+finder or windows explorer
+and what we get is something that looks
+like this now here nothing happens if
+you enter something here and click the
+button you'll just submit the form and
+therefore reload the page besides that
+nothing will happen
+we will now write code that changes this
+and we will write this application code
+three times in the three different
+programming styles and we'll start with
+procedural because as i mentioned this
+might be the style you used when you
+started with javascript because i would
+argue it is the style that's
+the most obvious to use if you're
+getting started with programming so
+let's add a new script here
+procedural.javascript
+you can of course name it however you
+want and in the index.html file below
+that link here i'll add a script import
+and point at
+procedural.javascript add the defer
+attribute to make sure that this script
+only runs after the entire file has been
+parsed and of course close the script
+tag as well
+and now we are importing this and we're
+ready to write some code
+and now we can really think about the
+different steps you want to execute
+because that's what procedural
+programming is all about
+so if we have a look at our html file
+what do we want to do
+well we want to listen to a click on
+this button of course or to be precise
+we want to listen for the submission of
+the forum
+we want to get the values the user
+entered for the username and for the
+password
+and we might want to validate those
+values so at least make sure both fields
+are not empty
+show an error message if they are empty
+and then in the end if everything has
+been valid do something with the data
+let's say create a new object a new user
+object and then log that to the console
+or something like this so something
+fairly trivial that is what we could do
+here
+so for that back to the procedural js
+file what do we need to do here well we
+need to get access to the form and to
+the two inputs so that we can work with
+the data there and then we can add a
+listener to the form and so on so
+getting access to those things is easy
+we have ids with the user input id on
+the forum with the user name id on this
+input and the password id on this input
+so we can use these three inputs to gain
+access
+so i'll store the form in a form
+constant or i'll store a reference to
+the forum in the form constant and we
+can get access with getelementbyid and
+then here it was user dash input
+and then second
+console i want to create here is the
+username input we can get access with
+document getelementbyid
+username
+and last but not least the password so
+the password input that can be fetched
+with document getelementbyid
+password like this okay
+so we get this axis let's now add an
+event listener so on the forum i'll add
+an event listener to the submit event
+because that is the event we want to
+listen to right
+and then we want to trigger a function
+when that executes we could use an
+anonymous function here but i will
+create a named function the sign up
+handler let's say
+it will get an event object
+automatically and i will point at this
+function
+when this
+event is triggered when this event is
+fired now this is vanilla javascript and
+of course even though we're using the
+procedural style we are allowed to work
+with functions as well this is not
+forbidden we just don't organize our
+code around the idea of using functions
+all the time
+so we pointed this function here when
+this event is triggered and now in this
+function we write all the logic again
+step by step which we want to execute so
+thus far our logic is get access to the
+different elements step by step and then
+define this function and then set up
+this listener now when this function
+runs we need to get the inputs here the
+values the user entered we need to
+validate them and then create a dummy
+user object with that data
+and actually first of all i want to call
+event prevent default to prevent that
+browser default of sending the form to a
+backend server which yet leads to a page
+refresh which i don't want here so let's
+call this as well
+and now we can get started let's get the
+concrete values the user entered so we
+got the
+entered username and we can get this out
+of username input dot value
+we can access dot value here because we
+know that the element we're selecting
+here is an input element which will have
+a value property
+side note you could actually also only
+get access to the username input in here
+if you wanted to because we really only
+need the two inputs here inside of this
+function so you don't have to do it
+globally here in this function it would
+also suffice so maybe let's reorganize
+our code to do that inside of this
+function
+maybe even after preventing the default
+really right before we need a value
+that's not required but it is a
+possibility
+so we get the
+enter the username we can also get the
+entered
+password and we get that from the
+password passwordinput.value of course
+just like this
+now with the two values we can validate
+them we could do this with a if check
+where we check if the entered username
+if we trim it to remove axis white space
+at the beginning and end if the length
+is equal to zero which means this is an
+invalid input it's empty in this case we
+could
+show an alert to the user and say
+invalid input
+username
+must not be empty that's something we
+could do here
+and we also return here which means we
+cancel this function execution so that
+we don't continue in the code
+if we make it past this if check we
+might still have an invalid input
+because our password our entered
+password
+whoops with a double s here entered
+password that might also be wrong so we
+trim this and check if the length is
+zero or maybe if it's
+smaller or equal than five because let's
+say we want the password which has at
+least five characters
+if it is too short we can say invalid
+input
+password must be
+six characters or longer and again we
+thereafter return so that we don't
+continue with the function execution if
+we do continue we made it past both if
+checks and we now know we have a valid
+input and that's where we now could
+create a new user object
+simply with an object literal again just
+like functions are not forbidden here
+objects are not forbidden here it's not
+like you're only allowed to use objects
+when you're writing object-oriented code
+it's more about how you organize your
+code and here it's really a step-by-step
+execution and we're using a very simple
+literal object here
+to store some data to group some data so
+here we then have let's say the username
+which is our entered username we have
+the password which is our entered
+password oops entered password and with
+that we're we're good and now we can
+console lock the user and maybe also
+send a greeting with hi
+i am
+plus
+name like this
+with that we had a very basic procedural
+program
+if we now save this
+and we go back to the browser and reload
+this page
+if i enter maximilian here and then any
+password of my choice
+which is let's say too short actually
+i get this error invalid input password
+must be six characters or longer
+if i don't enter maximally in here but
+i'll leave this empty i get this error
+regarding my username and if i do have
+valid inputs in both fields here
+you see we're logging the user we're
+logging hi i am maximillian now as i
+mentioned this code here should look
+fairly straightforward to you there also
+is nothing wrong with it but this would
+be the
+the simple procedural way of writing
+your code you think about the different
+steps you need to execute and you then
+just write them down and don't get me
+wrong code will always be executed from
+top to bottom but you could also
+organize this differently so let's have
+a look at the object oriented
+programming style next
+so we wrote this code here in the
+procedural style you could say now let's
+create a new javascript file oop dot js
+where we will write basically the same
+logic but now using an object-oriented
+style
+so for that in index.html i'll swap the
+import for the oop.js file here
+now how would this look like if we think
+about this in an object-oriented way now
+there are certainly different ways of
+approaching this but i would like to
+think about the different entities the
+different types of objects we could work
+with here we could say our
+forum for example is one object it's one
+object which in the end will have two
+inputs which has this button and which
+will have a method which is triggered
+when the button is fired
+the validation could be organized in its
+own object as well in a helper object
+which holds a validation logic that we
+could reuse in different parts of the
+application if we had multiple forms
+and the user we create in the end
+well we could create a blueprint for
+this user as well a class or a
+constructor function which allows us to
+create user objects which has a built-in
+greet method to show this greeting for
+example
+so
+here in the object oriented javascript
+file i will work with classes if you
+were working with an older version of
+javascript you could of course also work
+with constructor functions instead
+classes in the end are just syntactic
+sugar with some extras and you learn all
+about that of course in my complete
+guide in the object oriented and classes
+course section
+so which classes do we need here well we
+have our form right so add a user input
+form class here and this should hold
+everything that is related to my form
+i also want to have another class and
+the order does not really matter here
+i'll just have the form at the bottom
+because it is the thing i will actually
+uh start with and it will use all the
+other classes which i'm about to define
+so i want to define them first so
+technically as i said you could also
+organize this differently but here
+another class we'll need later is the
+user itself so not the input form but
+for the concrete user object we work
+with
+and then maybe also our
+validator clause here which holds our
+validation logic
+now let's start with the user input form
+though what could be in there
+well i want to define my constructor
+function which allows us to do some
+initialization work whenever we create
+uh instance based on this class
+now my goal is to create an instance
+based on this class when the app starts
+in the end
+so therefore here i want to get access
+to the different inputs in the html file
+and to the form itself so that we can
+add a listener
+so here i will add some properties to
+the instance created based on the class
+with this keyword for example a form
+property and the name is up to you
+and here i get access to get element by
+id user dash input so here i store
+access to this user input form
+i also want to get access to the
+different input fields in the form so i
+have my username input field
+document getelementbyid username
+and of course one for the password so
+password input
+with document getelementbyid
+password so basically
+what we stored in constants before
+here this constant this constant and
+this constant is now getting stored in
+properties of this
+class or to be precise in properties of
+the concrete objects created based on
+this class
+i also of course will reach out to my
+form and add an event listener here
+for the submit event and when this is
+triggered i of course want to trigger a
+function
+now we could work with an anonymous
+function here but since we're in a class
+and we want to write object oriented
+code it makes much more sense to create
+a method so a function inside of an
+object inside of a class here
+so for that i'll add the sign up handler
+method here which gets the event object
+and now i can point at it here this
+signup handler
+this ensures that this function which is
+registered on this class and which
+therefore is called a method is fired
+whenever the submit event occurs
+and in here we can now do stuff we can
+call event prevent default but we can
+also get the concrete entered values and
+validate them and so on
+now one important word
+if i want to get the let's say entered
+user name here
+then i of course can reach out to this
+username input so to this pointer at
+this input element in the html code we
+stored here and access dot value
+but this won't work
+why won't it work because this keyword
+inside of this method will not refer to
+this class in this case here why because
+this method gets fired upon this event
+and when you point at a function or a
+method
+based on an event that gets triggered so
+here on such a event listener that this
+keyword will be bound to the event
+target that's a default behavior to
+overwrite this we have to call bind this
+here this ensures that this keyword
+inside of sign up handler will point to
+the exact same thing this would point to
+in the constructor and that will be the
+instance created based on the class so
+now this will work correctly we can
+therefore also get the entered password
+here with this
+password input dot value
+so now we get the two values now it
+would make sense to validate them and
+here again thinking in an
+object-oriented way we could outsource
+this validation logic into a validator
+class we don't have to do that we could
+write it in line here we could just copy
+over this logic here from procedural but
+that means that whenever we have some
+other form in our application
+we can only reuse our code by copying it
+again and copy and pasting is not
+something you want to do too often
+because that is a bad programming style
+you're repeating yourself and you
+shouldn't do that
+so instead i'll add something here in
+the validator class i'll add a static
+method
+validate this means we can call it
+without instantiating this class
+and there i expect to get a value
+and then let's say a flag
+and a validator value if you want to so
+i'm writing a little bit of a more
+complex validator here what does this
+mean
+well value should be the
+value i want to check so the entered
+name and enter password
+flag should then allow us to identify
+which kind of validation we want to
+perform and then validator value is
+basically optional allowing us to
+configure the validation
+now for this to work i'll add two new
+static properties here
+required and i'm writing at all caps to
+make it clear that this is basically a
+globally unique value you could say
+and min length here
+and these are just identifiers which we
+can then use because my idea now is that
+i can check if in here in the validate
+function if the flag argument i'm
+getting if this is equal to this
+required
+so if we're running some required
+validation and if it is i want to return
+true or false i want to return true if
+the entered value is not empty and false
+if it is empty so i will return value
+trim
+[Music]
+length greater zero if it's not an empty
+input this will return true otherwise
+this will return false
+if the flag is let's say this
+min length
+then i will return value trim
+length greater validator value so this
+extra argument with which we can
+configure validation
+why am i doing it like this well simply
+just to show that now we would have a
+reusable validate function because in
+the user input form here in the sign up
+handler we can now use this
+we can now simply check if
+validator so this class i just worked in
+dot validate which we can call like this
+because it's a static method hence we
+don't need to instantiate the class
+if this yields true for the entered
+username which is the value and
+validator.required as a flag so i want
+to validate this here with the required
+validator and check if it's not empty if
+this returns true i'm fine if it does
+not return true indicated by this
+exclamation mark here i want to show an
+error
+but this is not the only validation of
+course i also want to check whenever
+validation logic here one hour
+expression
+if not
+validator validate for the entered
+password
+for the
+min length flag and a value of 5 as a
+minimum length
+if this returns not true
+or this first one returns not true in
+any of these cases i want to make it
+into this if block and here we can now
+show an alert and say invalid input
+username or password is wrong
+[Music]
+password
+should be at least
+6
+characters
+this is the alert we could show here and
+then we want to return here to not
+continue with this method execution so
+the error message the error handling
+still happens in this class here which
+makes sense because this is the place
+where i do work with my concrete values
+but the logic for checking the input is
+outsourced in a separate class now this
+is not a must do but it ensures that we
+could now reuse this validator in other
+forms of this application as well and we
+might of course have more complex
+validation logic in there than we
+currently do
+so now with this we know that after the
+safe check we have valid inputs and
+hence we could now create our new user
+so for this let's go to this user class
+and work on this here i want to define
+how a user should look like and attach
+any logic to it which it should have so
+for example here let's add a constructor
+to define some
+values with which we create a user
+specifically
+the user name and the user password
+let's say and then in here we have this
+user name set it equal to you name
+and this password set it equal to you
+password here this would allow us to
+create a new object with these two
+properties but i also want to add some
+logic i'll add a great method here to
+this user object where i just say
+console.log
+hi
+i am plus this username
+and with that we can create a new user
+based on this class down there our new
+user with new user here we need a new
+keyword to construct a new instance of
+the user class and we forward our
+entered username and our entered
+password here and thereafter we can not
+only log the
+new user but also call new user
+dot greet to execute that greet logic
+and with all that done there's just one
+remaining thing now thus far all the
+logic lives in the user input form but
+this is just a class right we need to
+instantiate it to bring this code to
+life
+so below this here we can call
+new
+user input form like this to create a
+new instance we could store it in a
+constant
+but if we don't work with this constant
+we also don't have to do that so here
+i'm just creating a new instance and
+with that this class here now comes to
+life we run this constructor we set up
+this event listener and we're there for
+good to go
+so now if we go back and we reload this
+page if we submit an empty form
+we should get an error and indeed we do
+if i enter a valid password here but i
+have an empty username it still gets
+this error and if i enter a valid
+username here but my password is too
+short
+we still get an error here if i enter a
+different password which is long enough
+we do log our user object here and this
+greeting so this now works and it's
+essentially the same logic as before in
+the procedural style the difference is
+now that we think about our code as
+different objects working together and
+we split our code logically into
+entities which can make it easier to
+reason about your code it can also help
+with reusing code as i mentioned at the
+example of the validator because we can
+use this anywhere in the application in
+the procedural style in the way we're
+doing it at the moment here we would
+have to copy this around to share it and
+again copy and pasting is bad because if
+you need to change your logic in one
+place you then need to change it in 10
+places or how often you're using it
+so that's the object oriented style so
+last but not least let's explore the
+functional programming style for this
+i'll create a new file here
+functional.js
+and of course import this here in the
+index.html file
+functional
+the idea behind functional programming
+now is that we organize our code around
+well functions so we can still then
+reuse and share logic by simply sharing
+a function by exporting it and importing
+it in another file and so on
+so how could we split this application
+here into a functionally written
+application
+it can be hard to think about this if
+you're relatively new in programming my
+personal experience shows that
+object-oriented programming is
+relatively easy to pick up because it's
+close to the real world so to say we
+think in objects and that's how we think
+about the real world as well
+the procedural style also is not too
+hard because we execute code step by
+steps and therefore all we have to do is
+that we have to think about what we want
+to do in our application step by step so
+what should happen when and then this
+code is basically writing itself
+now in the functional world
+it's a bit like in the object-oriented
+world we think about the different
+things that make up our application but
+the things are now not objects but
+instead different
+logical blocks something like a validate
+function a function to get access to a
+dom element a function to extract user
+input a function to create a new user a
+function to greet a user so basically we
+try to split our code into the different
+logical blocks we have here
+so
+in functional.js how could we get
+started because maybe that helps us
+understand how it works
+it still starts with us getting access
+to the form right we need access to the
+forms so that we can listen to the form
+submission
+to get access here
+we could write a new function
+connect form name is up to you and by
+the way you can write this function in
+any way you want in this function
+declaration style here you could also
+write it as a function expression or of
+course you could use an arrow function
+here if you wanted to that all works
+here i'll just write it like this
+so connect form just like this without
+any parameters for now and in there i
+want to get access to my form
+and i do so by calling document
+getelementbyid
+user-input
+and thereafter i will reach out to my
+form and add a submit event listener
+here
+and then then what then i want to point
+at a function that should execute when
+the form is submitted
+so maybe let's add a new function here
+the sign up handler which gets this
+event object which calls event prevent
+default it will also do more than that
+but this is something we definitely need
+to do and then i pointed it here this is
+something we could do but it's not the
+perfect way of setting this up instead
+the idea or the the core philosophy you
+really should embrace when writing
+functional code is that your functions
+should be pure and all the data they
+work with is received as parameters so
+that your functions are as predictable
+and reusable as possible
+so for this connect form function this
+means that we would probably get the
+form id as a parameter and also the form
+submit handler function as a
+parameter and then here instead of
+pointing at user input here we would
+point at form id
+and here
+we would just say forum submit handler
+and now this function has code
+which is totally reusable which makes no
+assumptions about what's in your html
+file it makes no assumption about this
+id
+and about the name of the function that
+should handle the submission
+instead we would call connect form here
+when our app is initialized so when this
+javascript file is parsed and executed
+for the first time and here i would feed
+in the concrete values so user input and
+a pointer at signup handler now of
+course in this simple app we don't gain
+much by this but now we really have a
+function which is pretty focused pretty
+straightforward pretty easy to
+understand and which is also pretty
+reusable because it's not tied to a
+specific forum in the html code if we
+had multiple forums which we wanted to
+connect with submit handlers we could
+reuse this function and we could just
+call it with different arguments that
+already is how you should think about
+code when thinking in a functional
+programming style
+so now we connect this form we point at
+the signup handler when the form gets
+submitted
+in the signup handler we now want to get
+our user input and we now also of course
+then want to validate it and create a
+new user
+now again we could copy our logic from
+procedural right we could copy this
+logic here
+for getting the user input for the
+moment and paste it in here and this
+would work
+but we're not really thinking in a
+functional way what did i just say about
+functions
+well they should be pure and should
+receive all the input they need as
+parameters and here again i'm hard
+coding ids which are ids from my html
+document into the function now we could
+do this but is this good well it's
+certainly not bad now you might argue
+that hard coding these ids into the
+function is not something you want to do
+because we got rid of it here but i
+would argue that the sign up handler is
+of course a very specific function which
+indeed can be tied to the html file
+because it really is about this sign up
+form it's not a general function here
+like connect forum was which should work
+with any form this really should only
+work with the signing up logic so that
+is fine
+but we're basically having some code
+repetition here
+why don't we create a new function here
+which we name
+get
+user input
+and here i expect to get
+my input element
+id
+and in this function we then return
+document get element by id to which i
+forward the input element id parameter
+and then i access dot value here
+now of course this only works with input
+elements but that's the idea behind this
+function so we could add an extra check
+which checks if this is an html input
+element but here i just assume that it
+always will be one and now we can
+rewrite this we can get rid of this line
+here
+and entered user name now simply is get
+user input
+for
+the username
+id
+and we can get rid of this line and the
+entered password now just is get user
+input
+for
+password and again we have a reusable
+function here and this is now leaner and
+more focused
+so now we got the input of course we
+want to validate it
+so unsurprisingly we create a new
+function for this the validate function
+and here we could again follow the logic
+we set up in the object oriented part we
+can expect a value a flag and a
+validator
+value here
+and then basically copy over the logic
+from oop because
+object-oriented programming and
+functional program is not that far apart
+it's a bit more than just translating
+classes to functions but the idea of
+organizing logic in methods and in
+classes is not that far away from the
+idea of organizing logic and functions
+so unsurprisingly we can copy the logic
+from the validate method here and add it
+in the validate function here
+now we just need to replace this
+required and this min length with just
+required admin length and add some
+global constants here and yes this is
+also possible not everything has to be
+inside of a function here we want some
+global flags some global identifiers and
+therefore we can define them just like
+this in our script here so now we have
+that we have our validate function we
+can now use this validate function here
+in the signup handler
+so here we could now call validate and
+forward the entered username and so on
+and that again would not be wrong
+but i want to create yet another new
+function
+maybe here which i'll name
+create user
+and this is a function that takes the
+username and the user
+password
+and this should now run the validation
+and that's just of course one way of
+doing it not the only correct one just
+one way of doing it so i want to run
+validation here and then if it succeeds
+also create my user
+so in here
+i will now check if
+not validate
+for user name and the required flag so
+if this yields false
+or
+if
+validate for the user password and the
+min length flag at a min length for five
+if either of the two yields falls we
+could throw an alert but this would be a
+side effect now what's a side effect a
+side effect basically is some logic you
+execute inside of a function
+which
+does something
+outside of the function which sends an
+http request which changes something in
+the dom or like in this case which shows
+an alert so these are typical side
+effects a pure function just receives
+parameters and then maybe returns
+something and for the same parameters it
+always returns the same thing a impure
+function which has a side effect
+might also do that it might also return
+always the same thing but it also might
+manipulate something outside of the
+function so like i said in the dom or a
+sender http request
+now sometimes you can't avoid this but
+here i want to have create user as a
+pure function so i will not throw my
+alert here instead i will throw a new
+error here with an error message of
+invalid input
+and i'll just copy the error message
+from the oop file here
+so copy that string
+and throw this here as an error message
+on this javascript error so here we're
+not showing an alert we're really
+throwing an error and that will
+automatically cancel the execution of
+the remaining function
+if this error gets not thrown so if we
+make it past this if check if we do have
+valid inputs
+then i will return a new object
+and that is my user with a username
+which holds the username value and with
+a password which holds this user
+password value
+so now create user is something we could
+call here in the sign up handler
+we got our new user by calling create
+user and we forward the entered
+username and the entered
+password now this could fail however
+this would throw an error if we have
+invalid inputs so here we can use try
+catch and again we could use try catch
+in the object oriented style and the
+procedural style as well don't get me
+wrong but now i think here it's really
+clean to do it like this we use try
+catch and we try to create a new user
+but if this fails i will now show my
+alert here and yes this will now produce
+a side effect but we could even
+outsource this into a separate function
+show alert but since i would do nothing
+else in there but call the alert
+function i'll do it just in here and as
+i said sometimes you can't avoid it it's
+okay to have functions that produce side
+effects you just want to keep most
+functions pure and side effect free
+here however i will output the error
+message in an alert
+if this succeeds however i want to
+console log the new user and of course
+also greet the new user
+for that we could create a number a new
+function here
+the greet user function
+which gets a user object and just calls
+console.log
+hi
+i am
+plus user
+username
+and again this here would also
+technically be a side effect by the way
+because we do something outside of the
+function so here i can then call greet
+user and forward the new user and there
+are different ways of writing this these
+are just examples of course
+if we now save this and we reload this
+page if the form is empty and i click
+submit i get this error
+if i have a valid username but my
+password is too short i get an error
+if my
+password is long enough but the username
+is empty i get an error
+and if both is valid
+and we click create user
+we're showing hi i am maximilian
+the log is missing because i didn't
+enter it here so here of course i want
+to log my new user and then retry this
+so reload
+enter the values here again
+and now we get the same output as before
+so this now really is working and now
+this is an example of functional
+programming the core idea of course
+being that we organize our code into
+functions where most functions are pure
+and side effect free and therefore
+highly reusable so we saw three
+different styles and of course you can
+also mix these styles you could have a
+procedural style where you also work
+with classes and where you have multiple
+functions
+you can have a functional style where
+you somehow all the sneak in some
+classes though it then technically
+wouldn't be a pure functional style
+anymore
+which style is the best though well the
+best style is the style which best works
+for you that really is the truth now
+there will be people who strongly
+disagree because like a couple of other
+things in programming this really is
+something where you can have religious
+debates you can really discuss this and
+for a lot of people it seems to be the
+most important thing in life
+not to me though you can write code you
+can write apps with either style and you
+should find the style that best suits
+your needs
+now the more experience you get as a
+developer the more you will see that for
+a certain application types
+some styles tend to work better than
+other styles and again you can find
+discussions about this on the internet
+some of them are even kind of friendly
+which will show different applications
+and different examples for when to use
+which style
+you also sometimes have programming
+languages which strongly favor one style
+over another for example c sharp is a
+programming language which is heavily
+object oriented javascript on the other
+hand is pretty versatile there you can
+follow any style
+and therefore sometimes you also are
+forced into a certain style and
+sometimes you are not it's important to
+be aware of all these styles and
+nowadays at this point of time the
+functional style is really having a
+strong comeback and is super popular and
+it does have great advantages it's quite
+readable your code is really nicely
+organized
+it's very straightforward functions tend
+to be relatively small if you're using
+this style correctly
+and it also produces highly reusable
+code
+object-oriented programming was
+extremely popular a couple of years ago
+and it's still far from being not
+popular don't get me wrong
+and it does have advantages it's also
+producing reusable code and it splits
+your code into logical pieces now with
+the classes you sometimes have a little
+bit of overhead which you don't really
+want though and sometimes it's easier to
+split it when following the functional
+style
+the procedural style
+is not bad at all and great for some
+simpler scripts the more complex your
+application gets the more complex it
+might get to work with this style though
+because you will naturally end up with
+at least using some classes or some
+other functions to make it more readable
+at some point because if you only use
+this style and you write your steps your
+code step by step your code can get
+harder to organize and to reason about
+but again here also you can mix in more
+functions and so on and therefore also
+write great applications with the
+procedural style i hope that this
+overview was helpful and that it helps
+you make decisions about which styles
+you want and most importantly that it
+helps you understand styles being used
+in different projects or in different
+frameworks you work with in your future
+as a javascript developer

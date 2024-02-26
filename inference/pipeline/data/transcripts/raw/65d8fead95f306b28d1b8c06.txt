@@ -1,0 +1,459 @@
+[Music]
+thank you very much fat yeah today I'm
+going to talk about computer graphics
+and visualization and basically it is an
+area that evolved quite drastically and
+nowadays we can computer generated or
+generate on a computer photorealistic
+imagery and even deal with very large
+scale data sets this open up many
+applications and various areas and this
+is also why it's very exciting to work
+in this field because there's so many
+options on the table that are there to
+explore in this sense I'm also very
+happy to have a theme of different
+people behind me that will follow me in
+this endeavor at geo Delta at the
+computer graphics and visualization
+group which I'm heading we are four
+faculty members in total 17 members 12
+PhD students 20 master students many
+other people that are involved in the
+projects i'm showing here today so the
+credit does not only go to me now what
+do we do in this group well we have
+basically four focus areas the first one
+is named technology geometry processing
+rendering techniques and medical or data
+visualization so in order to give you a
+glimpse of what these topics stand for I
+prepared a couple of examples to show
+you this little bit further game
+technology is about automatically
+generating content and this becomes more
+and more important at nowadays because
+we have procedurally generated worlds in
+which players or even people are trained
+and for that reason the content is not
+that easy to produce anymore because
+these worlds can be like gigantic
+contain many many people that are
+interacting with it and therefore
+procedural methods are key here we also
+developed an asst content design
+interfaces that allows people to very
+easily proceed you to generate content
+but just a few scribbles and therefore
+create entire 3d environments that can
+then be explored these environments
+there of course populated with geometry
+and it is one of the other topics that
+we're looking at in detail how do we
+represent information how do we capture
+information from our surrounding how we
+transform that into a digital
+representation that then people can
+interact with here at the bottom you'll
+also see an example of an animation and
+deformation algorithm so we also look at
+what are realistic deformations of
+objects in order to make them really
+reliable in the spiritual world
+one key example here is of course also
+how do I represent this information how
+do I represent the data and the
+information that is hidden in it in one
+direction that we recently took is to
+look at how we can represent for example
+performance capture where you had
+scanners that you could register this
+virtual character here and then
+basically decimate its information in
+such a way that we only extract the most
+valuable available information in other
+words we can go ahead and then basically
+transform a performance capture on the
+left with all the details into something
+that becomes more and more approximate
+and the user can control this level of
+detail automatically so the most
+important movements are captured which
+can then be used to query databases to
+transfer the motion on to other
+characters or to do another analysis
+steps in such a way you have really a
+system that allows you to then take any
+kind of moving input and represented
+with very few primitives that capture
+the entire information of this sequence
+now in these images you already see the
+next topic that we of course address in
+this group which is rendering techniques
+ultimately you want to show something on
+the screen which means that you have to
+transform this kind of virtual object
+into something that is displayable on
+your device we're looking at realistic
+rendering including shadows shading
+global illumination non-photorealistic
+rendering which is more for illustrative
+purposes or to explain things better the
+HD studies that show that with the right
+abstraction you can increase
+memorability as well as also reaction
+time of the people that are interacting
+with the data so it becomes very
+important to look at this different
+topic and automatically this links in
+with perception how do we perceive the
+images that we show how do we actually
+perceive animations or even interactive
+data evis trations and finally
+computational photography how do we
+integrate real-world data into our
+approaches in order to make them more
+accessible we can take this even further
+with more photorealistic landscapes in
+this case here you have even
+participating media which is fog and
+share it becomes very difficult to do on
+because light interaction happens in the
+entire scene and we need to compute all
+of these values in real time this
+becomes extremely important for example
+if you want to train people in a driving
+simulator or in plane simulator because
+all of a sudden you need to integrate
+all these weather effects in order to
+make the simulation reduces little world
+is represented well we heard this before
+data is exploding with information
+everywhere and dealing with large-scale
+data sets is really a fundamental
+challenge that we need to address we
+look at topics like data analysis in
+order to get new insights of this
+information and produce representations
+that people can explore extract the
+knowledge that they're actually looking
+for and then use the insides in their
+own applications in this sense let me
+show you a couple of different themes
+related to our data and medical
+visualization direction on large-scale
+data display interaction methods visual
+analytics and medical visualization I
+think the key idea behind integrating
+the user and visualization techniques in
+big data is that if you look at a data
+development and recently used you have
+basically a development of compute power
+and data that before well behaved quite
+nicely right so we could basically deal
+with the data sets that we add at hand
+but this is about to change this means
+that the processing and analysis that we
+did before will not be sufficient
+anymore these two curves cross and we
+are basically out powered by the amount
+of data that is coming in consequently
+what we need is a new way to deal with
+data which means that you need to
+visualize it interact with and then
+guide what kind of data to keep what
+kind of data to involve in your
+processes and that means that the user
+has to be in the loop and we have visual
+beings so visualization is one of the
+key elements to have there to prove my
+point you're a very simple example this
+data set here if you look at it well
+it's very different difficult to grasp
+what is shown here but in fact it's just
+an app with different temperature levels
+and when I show you an image you
+immediately grasp what is going on you
+can see tendencies regions that are
+conformed so you get much better in size
+but this means that you need the right
+tools and the right
+solutions in order to make this really
+happen one domain that specifically key
+benefits from this is the medical domain
+here you can see a large-scale medical
+skin usually these are in your order or
+a couple of gigabytes that are coming
+out of those machines and now you need
+to write technique in order to
+illustrate the outcome here at the lower
+left the video just shows an interaction
+with such a data set where you for
+example strip off the skin only look at
+the bones look at different organs and
+then really make decisions based on this
+input because of its large and huge
+amount of data we also looked at
+compression techniques meaning how can
+we actually reduce the retail level that
+is given in such box of representations
+for this tiny cube that has been
+measured the GCU seen that looks like a
+3d environment that you might have seen
+from it that's a cheap video game but in
+fact this is made up of tiny little data
+cubes so we could also use the medical
+data set of a resolution that goes up to
+well I cannot pronounce the number and
+that's one of the things about numbers
+anymore but it's 2 to the power 51 boxes
+that are represented here insect
+together and there may be compressed to
+do representation is only for gigabyte
+large so it fits evening on interactive
+graphics part where zooms also look in
+the upper right corner that's the
+resolution of the boxes that we are
+dealing with you so it's really a
+gigantic environment represented in a
+very small amount of data and this
+reduction of information is also crucial
+when it comes to bandwidth and we have
+to transport the information to the
+graphics card or even to portable
+devices as was pointed out by gemach
+before and more and more things become
+mobile and we are looking at how can we
+deal with these large-scale data sets
+everywhere now one of the directions
+that we explore this for example
+rendering where you basically can have
+access two gigabytes of data on the fly
+but just taking out your phone
+connecting to the right server in an
+interactivity you can see here in this
+video also that several people can
+interact at the same time the noise is
+due to the calculation of the kind of
+lighting that we use which in this case
+also includes a lot of sampling
+processes so don't get distracted by
+their in the video but the nice thing is
+that it basically if you have several
+doctors discussing the same day as they
+can interact they can do annotations one
+of them can change the way that the data
+is represented take off the ceiling
+again discuss with the colleagues places
+clipping plane and Alton can come to a
+common conclusion now what I like other
+areas that benefit from large-scale data
+representations when the Netherlands one
+of the that's the fears that exists of
+course is fly that is always a big issue
+and so people have covered the entire
+Netherlands with planes that have
+registered a height field of the entire
+country and if highfield already
+represents a terabyte of data and one of
+the goals is to compute simulations in
+this high field in order to predict what
+kind of safety measures have to be put
+into place in order to protect the
+people H terabytes means 50 meters of
+CDs slows reading huge amount of data
+and if you want to integrate satellite
+data for example in order to find out
+something about 40 km i acquire year 1
+point 5 petabytes of data and so it's a
+huge amount a google earth already
+contains 21 petabytes of data today that
+is offered to you via disservice and now
+producing computations on a global scale
+like this is a big challenge you can
+show you a little bit of what you will
+also see in the class of how to produce
+a rendering systems live nation
+such gigantic data sets and information
+on the tribe because we needed we fly
+here from Delta baby over to rubble and
+where will show you a quick application
+that we built in the context of this
+flood protection measurement one of the
+things that people look at it for
+example if you have a river like this
+what happens if the water rises and so
+you can place this inside of the
+simulation and you can synthetic which
+neighborhood where the water is flowing
+what safety procedures to follow in
+order to make sure that people get out
+without a problem it turns out on a side
+note it can actually in some areas mean
+that if there is a real flooding you
+should climb to the top of your roof top
+because there's no way that you could
+get over any three out of this area fast
+enough and these kind of insights are
+very available to decision-makers in
+medical visualization it becomes a
+little less clear what the right
+recommendation and be two different
+presentations pictures for example I
+picked here a blood flow through this
+straightened we have the release
+scanners that are able to track what a
+flow of blood is inside of your body but
+they output these kind of images very
+hard for anybody that is not a domain
+expert so we also looked at Ellis
+trations that are a little bit more
+understandable like each one feeling for
+of you where does the blood flow where
+they went vortices what is the direction
+and people that are using these kind of
+illustrative already found very nice
+finding that were previously unknown for
+example about certain locations in the
+heart and how they are turbulences that
+are related to rings us to a kind of
+loop what we want to do is we want to
+have the visualization and interaction
+with the user that can explore the data
+and find what they're actually looking
+for now this is not always
+straightforward because this data
+analysis that over here cannot be done
+only when we want to support the human
+in this task and this is one of the
+research directions that includes visual
+analytics which at the moment is one
+other yeah let's say hot topic also in
+the area so what does it base or what is
+it based on well if we look at a high
+dimensional data set like this one here
+on the left you have the feeling okay it
+is three-dimensional because all the
+points and three dimensions but it turns
+out that it's actually in this case a
+folded piece of paper if you wonder so
+the data actually lives not in 3d it
+lives in 2d and if we can find out these
+kind of relationships we can reduce the
+dimensionality of available they mention
+that is intrinsically encoded so let me
+illustrate this with an example here is
+a data set where people have written
+numbers from 0 to 9 so everybody has a
+different handwriting so they don't
+match up but they collected 100 thousand
+samples and now this represents 4096
+dimensions sounds a bit weird but that
+is the number of pixels that were used
+to scan it every Bigfoot can change
+color so that gives you four thousand
+dimensions now what you can do is you
+can analyze this data set and actually
+embed it in a 2d representation what you
+get is something like this
+melody Judy where the goal was to
+maintain as much as possible the
+neighborhood relationships between
+different objects meaning if they're
+close now this is what it looks like and
+interestingly when you select a cluster
+like this one that is formed up here
+well it actually corresponds to certain
+elements in your data set so which means
+that this similarity can come out and
+become visually observable to the user
+unfortunately that is the downside well
+you can do this for all the numbers and
+look something like this and previous
+approaches have worked in the order of
+minutes for larger data sets in the
+order of hours which is very often
+unacceptable and undesirable so looking
+at like seller ation techniques like we
+did allows you to go down to timing we
+get similar results of these types of
+embeddings that allowed the interactions
+without having to wait for it for a long
+time now furthermore when you look at
+data like this you see okay similar
+information but you don't get a overview
+of what number is might be linked of
+what things might be very similar is
+seven looks a lot like a one is there a
+way to abstract is even further and
+create groups that are meaningfully
+connected so this is also direction as
+we looked into of how to create her
+ocular representations and for this I
+will change the example because it's a
+little bit better to feel where settle
+as it's like different spectral
+responses of the ground and we analyze
+these data sets to then define is
+embedding
+point spread out here not also high
+dimensional corresponding to different
+spectral bands that have been covered
+and then the user can select certain
+groups that then reflect properties this
+is not something we put in it is
+something that came out of the embedding
+in other words if you select the other
+clusters that you see there in this
+image it represents clouds ocean because
+on a high level while the ground is
+ground the clouds are clouds and the sea
+you see now if you take only the
+mainland you can do the same event
+embedding again and you see desert areas
+form mountains urban areas and for this
+particular case if you continue with the
+desert areas you find dry legs and a
+particular one off the dry lights that
+is the largest one also sticks out so
+you can see how you can dive into the
+data representation and find what you're
+actually looking for it would have been
+impossible to find this driving just
+tiny in comparison to all the other
+information it is there but if you know
+what you're looking for these kind of
+systems allow you to find the
+information you need now finding
+information also means the user is
+integrated in this process so if we also
+looked extensively at tools that would
+allow you to interact with a computer
+that you can see for example gesture
+control that is to modify a 3d object
+here in this case in particular this
+application is funny because seeing that
+you don't touch anything with your hands
+it also means that a surgeon with in
+surgery can stay Sarah they can actually
+interact with medical data set without
+contaminating themselves if you
+construction simplification animation
+there's data display large-scale
+realistic rendering illustrative
+rendering perceptual methods also new
+display technology and data
+visualization and interaction which is
+the main specific visualization visual
+analytics and interaction methods so the
+course is afternoon we're going to cover
+many of these different directions I'm
+going to give you insights and how they
+actually work so that you can then pick
+up the information that you might need
+for your own projects and then also get
+in touch with us if you are further
+interested this thank you very much get
+there no question
+[Music]
+[Music]

@@ -1,0 +1,65 @@
+{
+  "introduction": "In this video, the speaker compares React and Svelte side by side, looking at common patterns and design choices. They discuss rendering, component state, side effects, computed state, and templating. The video aims to help developers understand the differences between the two frameworks and choose the best one for their needs. The speaker also shares their experience with Svelte and provides a full Svelte course for Fireship Pro members.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction",
+      "content": [
+        "Explanation of the purpose of the video: comparing React and Svelte side by side.",
+        "Mention of the speaker's experience with Svelte.",
+        "Introduction of the full Svelte course for Fireship Pro members."
+      ],
+      "topics": ["Comparison of React and Svelte", "Speaker's Experience with Svelte", "Full Svelte Course"]
+    },
+    {
+      "title": "Section 2: Rendering",
+      "content": [
+        "Explanation of how both frameworks help developers build reactive UIs with JavaScript.",
+        "Comparison of React and Svelte's rendering methods.",
+        "Discussion on the use of props in both frameworks."
+      ],
+      "topics": ["Reactive UIs with JavaScript", "React vs Svelte Rendering", "Props in React and Svelte"]
+    },
+    {
+      "title": "Section 3: Component State and Side Effects",
+      "content": [
+        "Explanation of component state in both frameworks.",
+        "Comparison of React's useEffect hook and Svelte's reactive declarations.",
+        "Discussion on the differences in templating between React and Svelte."
+      ],
+      "topics": ["Component State in React and Svelte", "React's useEffect Hook vs Svelte's reactiveDeclarations", "Templating Differences"]
+    },
+    {
+      "title": "Section 4: Looping and Conditional Logic",
+      "content": [
+        "Explanation of how to loop and use conditional logic in both frameworks.",
+        "Comparison of React's map function and Svelte's key prop.",
+        "Discussion on the use of suspense and error boundaries in React."
+      ],
+      "topics": ["Looping in React and Svelte", "Conditional Logic in React and Svelte", "Suspense and Error Boundaries in React"]
+    },
+    {
+      "title": "Section 5: Shared State and Async Data",
+      "content": [
+        "Explanation of shared state in both frameworks.",
+        "Comparison of React's useEffect hook and Svelte's reactive declarations for async data.",
+        "Discussion on the use of loading spinners and error boundaries in both frameworks."
+      ],
+      "topics": ["Shared State in React and Svelte", "Async Data Handling in React and Svelte", "Loading Spinners and Error Boundaries"]
+    }
+  ],
+  "topics": ["React vs Svelte", "Component State and Side Effects", "Looping and Conditional Logic", "Shared State and Async Data", "Templating Differences"],
+  "generalTopics": [
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.61
+    },
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": 0.61
+    },
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.53
+    }
+  ]
+}

@@ -1,0 +1,717 @@
+[Applause]
+[Music]
+[Music]
+[Music]
+yeah you're listening to autodesk's
+digital Builder podcast a show that
+inspires construction professionals to
+innovate and use technology to improve
+how they build our
+world I'm Eric Thomas and I've been
+working in construction for nearly a
+decade and now I have the privilege to
+sit down with industry Trailblazers to
+hear how they're solving construction's
+biggest challenges and redefining the
+future of the built
+environment all right welcome to another
+episode of Autodesk digital Builder
+podcast we are coming to you live from
+Autodesk University it is the first of
+three days right now our first interview
+for the week actually so I'm excited I
+hope uh you are as well I'm sitting down
+today with Tanya custus the director of
+AI research with Autodesk today we're
+going to talk a little bit about what
+the heck AI is what ml is artificial
+intelligence machine learning what those
+impacts are and you know really leaning
+in on the the concept of why those tools
+are not scary and they're actually going
+to be our friend moving forward so I'm
+very grateful for uh Tanya to join me
+today and uh you know dispel some of
+those rumors Tanya how are you doing
+today we're back at at you it's great
+doing great yeah it's great to be here
+there's so many people here it's
+exciting to be back in Vegas yeah
+there's a I'd say what thousands of
+people staring at us right now so no big
+deal or any pressure right now I'm
+really excited to build on what we did
+last year at AES University in New
+Orleans and so we're going to have a
+super fun conversation and we're going
+to get into the thi of it so can you
+tell me a little bit more what does your
+team do at Autodesk because it's it's
+incredibly interesting and I'd really
+love if you could kind of give an
+overview of your role as AI research
+lead so my team does fundamental and
+applied AI research so we um extend and
+Advance the state-of-the-art in Ai and
+machine learning and you know in areas
+that can be applied to Autodesk products
+um doing computer science research uh
+doesn't look that interesting um we're
+not like it's not like a chemistry lab
+with um lab coats or anything but you
+know it's a lot of people in front of
+computers running
+experiments and um we do a lot of
+research on deep learning and generative
+AI for 3D 2D and C geometry you've got a
+robust amount that you're covering your
+team's doing some really cool stuff
+which is is great and I think it gives
+us a fantastic foundation for the rest
+of our conversation to kind of do away
+with those myths that we were talking
+about but the the media cycle is is a
+buzz right now about the impact of
+artificial intelligence and I think
+that's been growing for months and I was
+hoping you could give me some context
+why is this explosion of AI media
+happening and what do these what do
+these tools do right so why now um I've
+been doing this for the last 15 years
+and let me tell you no one has ever been
+interested in what I do until now um my
+parents have not understood what I've
+done till now um I deal with that all
+the time so um you know this isn't new
+okay the math isn't new um AI is not new
+it's it's more that we've reached this
+kind of Tipping Point where data is in
+the cloud it's in a place where we can
+run compute on it and so the collocation
+of data and compute is super important
+to why we're seeing this now but then
+also the side you know which leads to
+the size of the models and they be have
+become useful to people they become
+almost humanlike so they've they've
+become interesting like previously they
+were not so interesting yeah they've
+come to a point where they can help
+people save time and so you know like 10
+years ago I worked um at a place where
+we were generating summaries
+of legal legal briefs and legal cases
+the editors took more time to fix the
+garbage the computer generated then it
+took them to just write things but now
+we're at that Tipping Point where you
+can generate something and the editor
+can save time by just editing that thing
+that the computer generated so that's
+why now you know it's it's such a great
+inflection point too and I'm hearing
+more folks talk about Ai and our data
+and managing their data in a in a really
+robust way that I wasn't hearing 2 3 4
+years ago and I think the light bulb is
+starting to turn on people are starting
+to understand as you just alluded to
+like this is going to save me time this
+is going to make a big impact on the
+work that I do in my business and so
+there's there's just a lot happening
+right now and I'm excited I'm glad that
+you're excited and your team's doing so
+much fantastic work but could you dive
+into that ambiguity Gap a little bit for
+me right now so I think a lot lot of the
+challenge that we deal with is folks
+don't necessarily understand what these
+different tools and Technologies do and
+that is the Catalyst for the anxiety
+that folks are feeling and so I'd love
+it if you could you know lift the
+curtain a little bit and give a high
+level overview of you know what
+artificial intelligence is what machine
+learning is and you know what large
+language models are because I think that
+buzzword is starting to show up more
+often now too definitely definitely is
+um so generally we will Define
+artificial intelligence AI as
+capabilities that are being done by a
+computer that are typically thought of
+as being done by a human Okay so tasks
+that a human usually does they're being
+done by a computer so it's a pretty wide
+definition um machine learning is a
+subset of AI so not all AI is machine
+learning but machine learning is all
+AI the layer Nuance is exciting and
+machine learning is when we learn we use
+the computer learns from data so it's
+learning patterns and probabilities and
+and other information from the data
+itself like classification things um
+recommendation algorithms a lot a lot of
+things you see every day are just simple
+you know machine learning large language
+models
+are models built with machine learning
+and they are built on huge amounts of
+data and what they are trained to do the
+training objective of large language
+models is is to predict the next word
+which sounds so boring um however when
+you can do that and you can do it at
+scale you also get a ton of other tasks
+for free you get things like question
+answering summarization um even
+answering like math problems so you know
+there's that scale is something that I
+think surprised all of us um because we
+had never trained at that scale before
+we can use it for almost anything that
+we use traditional machine learning for
+like classification and and things like
+that so yeah it's a really really
+interesting place to be um but but again
+they're not perfect they don't do
+everything and they literally only
+predict the next word it's they also
+sound very confident so psychologically
+you would really like to believe them
+but they literally know nothing they
+know no facts what they are exceedingly
+good at large language models is
+syntax linguistic syntax so like
+structure of language and and there's so
+much there especially with the the way
+that I can learn from data and when I
+talk to construction folks on the
+regular I I really lean in on Data
+standards and being really intent with
+the way they capture the data because
+that impacts everything you're talking
+about so heavily as you start building
+on that it's the garbage in garbage out
+you know acronym where everybody goes
+okay well you you know put everything in
+at random and you know you're going to
+get random back out if you're not you
+know being very deliberate about how you
+set that up and so I think it it really
+is an exciting moment for our industry
+because we're we're starting to step
+back and say okay where where does this
+get to augment what we're doing where
+can it make improvements and I think
+that's where I really like to emphasize
+with folks that this isn't the the scary
+Skynet that's coming at you right now
+we're we're at this opportunity where
+you say Okay a computer can do something
+at scale that I can't do as a person or
+can do it much more quickly and now I
+get to go home at five instead of seven
+or I get to go do something else and
+100% you know that's that that feels a
+lot better than this weird big brothery
+Vibe of somebody watching everything
+you're doing like that's not the value
+and that's not what people are doing no
+and honestly computers really are quite
+stupid or I would not have a job so you
+know they they don't learn what you
+don't teach them number one and a lot of
+the
+Skynet you know Terminator scenarios
+thanks movies yeah are are from movies
+and it's also a little bit of like
+psychological projection right so
+whenever someone is afraid of like AI
+doing bad stuff I'm like well what bad
+stuff are you going to do you know no
+Tech is neutral and it's the people
+behind it that you know do bad stuff
+right so like databases you could use
+those for a lot of bad things but again
+it's not the database's fault but we
+tend to anthropomorphize Ai and sort of
+like treat it like it's a person a
+little bit and so there is a weird um
+psychological aspect to it as well but
+but honestly like AI is very not scary
+yeah and and I feel like everything
+you're sharing right now there there's a
+bit of a confirmation bias in there too
+where you go oh the bad thing happened
+and we noticed but how many times was
+the technology leveraged perfectly where
+nothing happened and it was just the
+most boring thing ever but you got to go
+home at 5 and if it's intuitive yeah if
+it's if it makes sense to you you don't
+notice it right like yeah like every
+every predictive texting suggestion you
+get you know 99 out of 100 are great and
+then you get one that's really weird and
+then you like laugh at how bad the
+algorithm is yeah okay yeah you're happy
+with your Google home mini until it's
+you know doing the wrong thing and then
+you're yelling at it or at least I am in
+my house don't tell anybody about that
+one but i' I'd like to move a little bit
+on into uh generative AI because that's
+another topic that comes up fairly
+regularly so can you tell me what what
+the heck is generative Ai and and what
+role does it have with in the
+construction industry just with AI
+generally um in the past traditional AI
+we've been encoding things so we've been
+taking a lot of information and kind of
+compressing it down and encoding it now
+what we're doing is we're taking those
+encodings and decoding them and in so
+doing it generates things okay so so
+it's sort of just like The Logical next
+step of figuring out how to do stuff
+with AI generative AI is when you put in
+a prompt and that prompt could be you
+know a word it could be a phrase it
+could be part of a drawing it could be
+you know an image whatever right and
+then the output of the algorithm
+actually generates the output for you so
+it's not like search where it's just
+finding the output it's actually you
+know generating so we see it a lot with
+um language models like we were talking
+about so chat gbt right can um you know
+you give it a question it generates an
+answer you um give it a couple articles
+and it will generate a summary for you
+that's what we're seeing and I think
+we'll see it more and more because
+generating things saves people time we
+can take pictures of a construction site
+and generate possible code violations
+here's a drawing and it can generate you
+know try these materials right so so
+there's anything where you kind of you
+know yeah generate anything namesake
+makes sense when you start digging a
+little bit in but you know anybody in
+construction now it it makes so much
+sense to think about these tools in
+their application because is the the
+labor shortages are not going away and
+anything that we can do to improve how
+our teams are able to go to work and do
+things at scale with less time and
+increasingly less resources available is
+a huge win and so I'm really excited to
+start seeing you know all these shifts
+and all the buzz but we have to
+obviously parse what's real and what
+isn't as we kind of get into it but i'
+I'd like to take a look at uh some of
+the exciting announcements that came out
+today during our keynote so I know
+Andrew shared some exciting things can
+you share your reaction to some of these
+developments and the the impacts that
+they're going to bring to Autodesk
+customers yeah absolutely I mean I think
+the the takeaways at least from my
+standpoint today were one you know we
+have been doing AI yeah this this isn't
+new so it's not new um but you know
+looking more at how do we leverage and
+sort of sew that AI together into an
+open platform um you know that approach
+is so important because data is so
+important and you can't do AI without
+data but also capturing the workflow and
+how the data moves through the workflow
+is is also just such an important part
+of AI because you're again you're
+predicting things so you want to be able
+to predict what's next and you can't
+predict what's next if you don't know
+what the next thing that's going to
+happen is like in the design workflow
+for example the importance of context
+also so like what Amy was talking about
+with um importing different contexts and
+contextual information again that is so
+important to you know the more the more
+data you give the computer the more it
+I'm not going to say understands but the
+better it can predict you know and
+thinking about um how we use AI at
+different levels right so we can use AI
+for analysis right so that's you know I
+have a lot of data I aggregated it and I
+learned these really interesting things
+right like that is great and you know
+but beyond that we can automate things
+right so boring things that designers
+don't want to do or that that take them
+a lot of time and then beyond that like
+you were talking about before
+augmentation so like that's the ultimate
+goal right like we want to make the
+computer better but we also want to make
+the human better right so like peanut
+butter and chocolate right all of those
+things sort of build on each other and I
+think you know Andrew did a good job of
+of sort of setting it up that way and
+and we don't want to take the humanity
+out of what we're doing as well like
+absolutely you see a lot of the buzz in
+the news right now where somebody goes
+oh we're gonna you know AI music and
+everything else it's like no like we
+want to automate the things people don't
+want to do so I can go sit on a beach
+and play music instead of you know doing
+some middle drawing you know takeoffs
+for 19 years or whatever it happens to
+be ex and you know AI it's it's a how
+not a what so we talk about like I want
+to do AI like okay but what do you want
+what problem are you solving right and
+AI honestly is not always the answer
+it's not always the best way to solve a
+problem and so you know it's a really
+important tool in a modern software
+engineering toolbox but you know you
+need to use it when it's right and when
+it's appropriate and I think you know
+obviously people want to use it because
+it's cool and fun but you know there's
+there's a lot of problems you don't need
+it for either yeah absolutely I think
+that's where that the hype narrative
+comes up a little bit sometimes we go I
+think every technology company
+regardless of what industry they're in
+in the last six months has announced
+something with I and it's just like well
+does that really do anything for your
+customers or did you think that that was
+important for round you know raising
+your series B round or something right
+and I mean so ultimately a new product
+should address like a either a customer
+need you haven't addressed in the past
+or you know we have plenty of products
+that we could just you know replace the
+guts of with AI and improve them right
+and and in those cases maybe you won't
+notice and maybe that's good that you
+don't notice right because it's working
+yeah sometimes that's okay if it's in
+the background it's just amplifying the
+workflows that you have but I think I
+think that leads into my next question
+actually can you talk a little bit about
+the the real risks that might you know
+come from introducing AI technology and
+how the teams that are developing the
+tools are really making sure that
+they're protecting our friends working
+in a first of all a data right so like
+you said garbage in garbage out making
+sure that you have the right data to
+train the right use cases so important
+there are a lot of things we're learning
+about different kinds of data right we
+don't have all the answers um sometimes
+processing data one way will lead to
+better results sometimes you know that
+there's there's a lot of Science and
+experimentation going on which is a lot
+of what my team does um but again it's
+looking at what's the right tool for the
+job there's always going to be danger in
+construction work what we're aiming for
+is to make it safer and using aii in
+ways that will make it safer so like
+augmentation maybe like seeing things or
+or patterns or trends that people are
+not seeing like what are the strengths
+of using AI for something and then you
+know using it correctly and I think not
+taking the human out of the loop is
+really important for things that are
+dangerous and we're also working um on
+my team to do a lot of AI alignment
+which is where we look at the output of
+the
+algorithms and we then kind of train
+secondary algorithms or use
+reinforcement learning to align them to
+what is either safer or people like
+better right um and you know so that
+that also is a really important tool for
+what we're doing in the safety
+conversations one that I I really like
+using it as an example actually because
+you think about it from you know a large
+project $200 million Construction
+project you've got your safety
+professionals on site they do their site
+walks they're looking for risks they're
+analyzing all these things technology
+can analyze these risks at a scale that
+a person can't do yeah and so if you're
+doing uh different types of scanning
+photography the technology can look for
+fall hazards or scaffolding issues
+that's not to say that your super
+shouldn't go out and do these site walks
+or anything because that human element
+is so important but what it means is
+you're just getting so much more
+opportunity to check and see if
+everything is safe and at a at a level
+that just a human just can't do it's
+just not possible it's processing more
+information for you yeah right so it's
+augmenting yep you and anybody on a
+construction site knows first thing you
+think about and last thing you think
+about is going to be safety so
+absolutely you know anything we can do
+to improve that is going to be great is
+there anything else that we can do to
+reduce some of these you know Common
+concerns that folks have or fears about
+these tools anything else that comes to
+mind um I mean a lot of what I do is
+just education right explain today right
+explaining to people that it's just math
+it's not scary um explaining to people
+that it's really the data that gives a
+company a competitive advantage in AI
+right so like Google and Bing if you
+look at both search engines you know
+Bing probably has better algorithm to be
+honest but Google has a lot more data
+right and so the data really is that
+competitive advantage and I think you
+know educating people how it works
+demystifying it is really important um
+but just you know transparency making
+sure people feel that their privacy is
+being protected or just when they're
+interacting with a tool being
+transparent that hey this this is AI
+right or this you know this
+recommendation was generated by a
+computer like and giving them choices
+right so here are a bunch of
+recommendations you can take them or not
+take them and that's totally cool and
+that's totally different than having it
+generate one answer
+and forcing them to use it right this is
+it we've seen when it makes mistakes and
+what it does you kind of back away and
+no thank you ex so a lot of it is like
+how do we interact with it in a design
+workflow especially even if you have
+another person generating something for
+you behind the scenes you probably don't
+want it or or don't love it as much as
+your own right and so you know it is
+about that choice and using the AI like
+a collaborator I think is will go a long
+way towards building trust I appreciate
+that and that that continued education
+and the conversation around it
+especially as it becomes more and more
+Buzzy I I think is incredibly important
+it's unfortunate almost that we've had
+all these Terminator movies and
+everything and somebody goes artificial
+intelligence they're coming like I wish
+I could have Arnold pop out right now or
+something join our conversation to help
+dissuade some of the uh the myths around
+it but sadly I called them a couple
+times and he wasn't available so we'll
+just have to roll solo but I've got a
+couple more questions for you today one
+more on AI can you can you tell me a
+little bit more more about the aspects
+of artificial intelligence that people
+are not talking about and they and what
+else should they be talking about like
+where are those gaps in the narrative
+right now that you're seeing sort of the
+no Tech is neutral situation right like
+again this is the next step of software
+engineering we've been using software
+for a long time right and so thinking of
+AI as something totally different than
+just using software I mean it's it's
+harmful but also a little naive um and
+you know just really people don't think
+enough about the data they don't think
+enough about you know they're like I
+want to do AI well like first you have
+to put your data in the cloud and that's
+probably boring and hard then you have
+to organize it in certain ways which
+again is like feels very remedial to
+people who want this big fireworks
+moment right they want it now yeah they
+want it now and and you know and a lot
+of AI is built on like smaller AI a lot
+of times the first thing things you're
+going to see out of using AI are I mean
+kind of boring there's a patient aspect
+to it there's the interface aspect right
+we're in control of how people interact
+with our AI making sure that the
+customers know that they're in control
+of their workflow that we're trying to
+help them we're not trying to replace
+them right I think all of those things
+are just super super important and
+there's no secret math right my team and
+I we publish a lot of papers
+and it's because the AI research
+Community is super open no one company
+has like some secret box of technology
+that hidden tool that we're all going to
+sneak in I mean no one does it is a very
+open conversation in the scientific
+Community I wish more people would learn
+about it so they're not afraid um but
+but yeah it's very open it's it's math
+honestly like are you afraid of math I
+mean kind of there there's a reason why
+I didn't go well I I abandoned
+engineering school just leave it at that
+all right well well I I appreciate that
+level set and and I think the point that
+you made about just the importance of
+you know just cleaning house with your
+data is huge we did a research report
+with FMI a couple years ago it was
+called harnessing the data advantage and
+construction and we really just leaned
+in on what folks were doing where were
+they concerned where were the success
+factors were and we found that a lot of
+people sit in a state of decision
+paralysis right now because they don't
+know where to start because it is
+overwhelming I I I have so much empathy
+for an organization especially a large
+one that hasn't standardized fully in a
+certain way and how they capture data or
+had the opportunity to think about what
+they want to do with their data which is
+I think the important part about where
+you start you got to go what what do you
+want to achieve you don't just start
+Gathering data madly exactly and when
+you think about that then you get to
+start identifying those little areas
+where you go okay where where is our TCH
+stack set up so well that making
+improvements on our data is going to
+have an impact with without as much of a
+burden you fix that and then you've got
+a win you get to show this to your team
+and you go look at this and now this
+cloud-based tool can figure this out
+what if we did this everywhere else and
+then you slowly start building if you
+try to boil the ocean with your entire
+data strategy and you've got none to
+start with it's a losing proposition
+because you're just going to be so
+overwhelmed got pick that Focus area
+absolutely again that sort of Paradigm
+of like analyze automate and then
+augment right like those go in in an
+order and they're you know progressively
+more thing you know more magnitude of
+things you can do with that data as you
+get it into shape for use so I think
+we're uh We've covered the gamut as far
+as high level on what the heck AI is and
+why you know people shouldn't be afraid
+of hanging out and uh you know
+installing some tool whether it's chat
+GPT or something there's a there's a
+myriad of things you can jump into and
+of course Autodesk has announced some
+new stuff and we've been doing a lot of
+cool stuff with regards to data as well
+so don't forget about that but moving on
+to our final question what is one tool
+that you will always use on any project
+that you work on Creative problem
+solving I like it it's the number one
+thing I look for when I hire people um
+you know my my undergrad degrees is in
+music my grad degrees are in linguistics
+and I'm here talking to you about
+construction so I like but it makes
+sense when we talk through it your your
+uh your background is so impressive so
+I'm really glad that we're here yeah
+being able to take something you know
+from somewhere and apply it to a new
+place
+you know AI is inherently
+interdisciplinary and and it's you know
+the thing I use every single day I like
+it and I think the the creative Focus
+that folks can bring to the table really
+helps us think about like what that what
+that what can we do what's possible
+what's the options and then you know we
+start trying things out and see where
+we're at and you know a few years
+hopefully the the level of automation as
+we move further and further into the
+cloud is going to continue to increase
+and I think I think that's applicable to
+you know no matter what industry you're
+working in whether it's construction or
+you know any of the other industries
+that AES serves or otherwise so
+absolutely well thank you so much for
+joining me today on digital builder for
+everybody who is sitting and staring at
+me right now and listening to the show
+of course I am your host Eric Thomas we
+are a weekly podcast a video first
+podcast as you might notice with all
+these cameras pointing directly at me
+right now if you are interested in
+checking out another episode make sure
+you head over to the Autodesk
+construction Cloud digital Builder blog
+or you can find me on LinkedIn at
+Builder unor digital and uh if you also
+have a moment and you like what we're up
+to I'd appreciate if you take a second
+to you know rate US five stars and
+whatever player that you listen to and
+uh without further Ado
+[Music]
+goodbye

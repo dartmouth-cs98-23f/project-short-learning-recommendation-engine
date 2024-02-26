@@ -1,0 +1,293 @@
+hey friends welcome back to the channel
+so in today's video we're going to talk
+about design patterns now high level
+programming languages have been around
+since around the 1950s and since then
+programmers have been using them to
+solve all sorts of different problems
+over time programmers have realized that
+even though the problems are unique
+there's often some similarities between
+the problems and the solutions they're
+not exactly the same so you can't create
+a library or use an algorithm to solve
+it instead they would reuse some of the
+main ideas of the solution for the
+different problems that they come across
+and eventually names were given to these
+typical Solutions and that is how design
+patterns were born so what is a design
+pattern if you're struggling to work out
+the difference between a design pattern
+and an algorithm then maybe this analogy
+will help so let's say it's my birthday
+tomorrow and my wife is going to bake me
+a birthday cake to do this you might
+follow a recipe and this is going to
+give a step-by-step instructions on how
+to bake that cake the recipe in this
+case is an algorithm it's giving you
+step-by-step instructions on how how to
+bake a cake you can repeat over and over
+again to produce the same thing sure you
+might switch out some of the ingredients
+to produce different cakes but these are
+really just different input variables as
+it's my hypothetical birthday I also
+want to have a birthday party now if you
+think about a birthday party in your
+head you're probably thinking about
+balloons and Banners and maybe someone
+with a cake with candles on it coming
+out at least that's what you all think
+about now but everybody's idea of a
+birthday party is going to be different
+there's no set steps to follow there's
+no recipe like you have with a cake
+essentially a birthday party is going to
+be different for every person like the
+problems that we face in software
+engineering but let's imagine that you
+have this amazing superpower that lets
+you see what everyone else is thinking
+if everyone's thinking about a birthday
+party even though they're very different
+you would still recognize it as a
+birthday party the birthday party in
+this case is a design pattern it's the
+concept of a birthday party that can be
+reused even if everything else is
+slightly different hopefully that
+analogy makes sense but if it does let's
+have a look at what the design patterns
+actually are in 1994 four authors wrote
+down 23 design patterns in the book
+design patterns elements of reusable
+object-oriented software
+now obviously that's a bit of a mouthful
+it's not something you can talk about at
+a party for example so most people call
+it the gang of four book if you've been
+programming for a little while already
+chances are you've probably already used
+some of the design patterns even without
+realizing it most of them are actually
+just common sense I know when I first
+started looking at them I recognized
+them immediately for patterns I use in
+my own code even if I gave them a
+slightly different name so we have 23
+design patterns and these are split into
+three main groups we have the creational
+design patterns so these relate to
+creating objects in your code we have
+the structural design pattern so how we
+actually structure those objects
+especially when they get quite large and
+finally we have the behavioral design
+patterns that covers the interaction
+between those objects and their
+responsibilities now you might be
+looking at this list and thinking wow
+I'm never going to remember any of those
+but no one's really expecting you to
+know all 23 design patterns but it's
+worth looking through them all and being
+familiar with them so that when you do
+have a problem you can think ah that
+sounds a bit similar to this design
+pattern and then you can go look it up
+and learn a bit more and see if it
+applies and the thing is out of all of
+these different design patterns there's
+only really five that I find myself
+using over and over again so let's have
+a look at those so the first design
+pattern we're going to look at is the
+strategy pattern now let's go back a bit
+to that cake baking analogy let's say
+you love cake so much that you decide to
+write an application that will give you
+cake recipes so let's say you start off
+with a birthday cake recipe but later
+you want to add in a red velvet cake and
+then a carrot cake now you could just do
+this with if statements and switch
+statements and add in all the cakes that
+way but then you want to add in a coffee
+cake and a lemon cake and all of these
+different cakes and eventually your code
+ends up more like spaghetti than cake
+and it's all going to get really really
+messy and the thing is the code in your
+application shouldn't really care too
+much about which cake you pick this is
+where the strategy pattern comes in you
+can split all of those cakes into their
+own classes and have each of them
+implement the same methods and then when
+it comes to the making a cake all you
+have to do is run two methods get
+ingredients and get method and this is
+really useful if you have multiple ways
+of achieving the same thing in your
+application let's say you've got a Maps
+application and you want to provide
+navigation via walking via car via
+cycling they're all going to have the
+same sort of functions but the actual
+implementation is going to be different
+for each of them this is definitely one
+pattern that's worth having in your
+toolbox to help you rightly encode the
+next pattern that I use the most is The
+Decorator pattern
+now if you need to extend an object
+without actually changing the original
+implementation then The Decorator
+pattern is one way to do that now I've
+mentioned The Decorator pattern before
+in my video about solid as it's one of
+the ways that you can make your code
+open to extension but close to
+modification I'll put a link at the end
+of the video to the solid video If you
+haven't watched it already again this is
+one of the patterns that I've used
+without realizing it before whenever you
+wrap a class in another class you're
+effectively using The Decorator pattern
+the way we normally do this is to have
+The Decorator implement the same
+interface as the component you want to
+extend and then in The Decorator
+Constructor we take in that component as
+an argument you can then implement the
+interface and still be able to call the
+original component but now you can add
+in additional functionality either
+before or after you make that call
+number three is the Observer pattern
+this pattern is something you're
+probably very familiar with already even
+if you've never actually used this
+pattern before the Observer pattern is
+used whenever you want to notify
+interested parties that something has
+happened if your subscriber to my
+newsletter the Curious engineer then
+every Sunday you will get an email from
+me it's not sent to everyone who watches
+my YouTube videos or reads my blog it's
+only sent to those select few who have
+subscribed to my newsletter this is how
+the Observer pattern works you have a
+publisher that implements the Subscribe
+unsubscribe and notify subscriber
+methods you then have a subscriber
+interface that all the subscribers need
+to implement to let the publisher notify
+them when a subscriber subscribes to a
+publisher they get added to an array and
+then all the publisher needs to do is to
+Loop through that array calling the
+update method on all the subscribers now
+the next pattern that we're going to
+look at is the Singleton pattern now
+when we think about Singleton's we think
+about creating one thing of course we
+have things like Global variables that
+you can specify and be able to access
+anywhere in your code the problem with
+that is you can also change it anywhere
+and that causes lots of different
+problems but there are cases where we do
+need to have a single object and make
+sure that we have a single object
+everywhere such as if you've got a
+database that you want to access you
+don't want a different connection to the
+database for every single time that
+someone needs to use it the typical way
+to do this is to create a sealed class
+with a private Constructor having a
+private Constructor means that no one
+outside of the class can create a new
+instance of it so you can't do new
+whatever you then create a separate
+method or a property that lets you
+create an instance of that class this is
+then stored in a static variable inside
+the class the problem with this code is
+is not thread safe you could have two
+threads call this code at exactly the
+same time they both reach that null
+check the instance would be null and
+they'd end up creating two instances of
+the same object now to get around this
+we need to have some form of locking
+mechanism so we need a way to stop the
+other threads from accessing the code if
+one of the threads is already there so
+to do this we have the same initial null
+check but then we implement the lock and
+then we check again to see whether the
+instance is still null before then
+creating it and this will prevent the
+two threads from creating separate
+instances of the object
+another way to do this if you're using C
+sharp.net4 is with the lazy type it's
+still thread safe but it uses a lot less
+code the last pattern that we're going
+to look at is the facade pattern now
+this is one that's essential to software
+development and everyday life in general
+the facade pattern is all about
+Simplicity we're constantly using
+different libraries and Frameworks and
+even though they save us time they can
+make our code messy and complicated and
+in many cases the libraries do a lot
+more than we actually need them to do
+let's say you're making use of a
+fictional logging library that isn't
+very well designed this Library can send
+logs to a file it can send it to the
+console and it can even send you a slack
+message the problem is this log Library
+only has one method called log and you
+have to specify with every single
+request what type of log message it is
+as well as how you want to log in rather
+than clutter up your code with all these
+implementation details you can create
+your own logger interface with simple
+methods that you can use throughout your
+code all of this messy code that's
+caused by this bad library is then just
+restricted to one class and if you do
+decide to change out the logging library
+then you only have one place to change
+it and the rest of your code doesn't
+need to be affected so these are the
+five patterns that I use the most and I
+know a lot of other developers do too
+but there's another 18 patterns that we
+haven't covered today and it's worth
+having a look at them so you're familiar
+with them if you have them in the back
+of your mind then you might remember at
+least something about them when you come
+to solve a problem there's a great
+website called refactoring.guru that
+covers the 23 design patterns from the
+book and gives examples on when you can
+use them it's definitely worth
+bookmarking so you can reference it
+later on if you like this video as I
+mentioned earlier I have a video on
+solid as well that's worth looking at
+thank you for watching and I'll
+hopefully see you in the next video
+foreign

@@ -1,0 +1,540 @@
+In this video, I'll give you a brief intro
+into the vast and incredibly interesting
+field of graph theory
+from a computer science perspective.
+Here's an example of a type of graph
+that we're going to talk about extensively
+in this video.
+If you were to ask me
+"What's the simplest definition of a graph
+for someone who knows
+nothing about the field?"
+what I could tell you
+is that you can think of a graph
+as a network
+that helps define and visualize
+relationships between various components.
+In this example, the circles that you see
+represent the components,
+and the lines connecting them
+can be thought of
+as signifying a relationship
+between the components.
+These ideas of course have
+more formal names in graph theory.
+We refer to these circles as
+vertices or nodes,
+and the relationships signified
+by connecting lines
+represent what we call
+edges in a graph.
+Graph theory is all about the study of
+the properties of these types of networks,
+and how they can be used to model and solve
+a whole host of interesting problems.
+This video is all about introducing you
+to core concepts related to graph theory,
+that we will then use to study
+fundamental graph algorithms.
+We'll first start with
+an important discussion
+on why we should even care
+about studying graphs,
+after which we'll formally define a graph,
+and introduce important terminology
+used to communicate
+ideas about graphs.
+Then, we'll talk about how computers might
+represent graphs as a data structure.
+And then I'll finish the video off
+with some interesting
+problems and questions
+around graphs that you can think about
+going forward.
+Let's first start with the
+most important question:
+"Why should we care about graph theory?"
+And the short answer to this is
+graphs show up everywhere;
+sometimes in expected ways, and also
+sometimes in surprising ways.
+One of the most direct applications are
+mapping and navigation applications.
+In any of these applications,
+you often deal with roads and intersections,
+which can be naturally modeled as a graph,
+where each vertex represents an intersection,
+and the edge between vertices signify
+the roads between intersections.
+You could imagine, navigation applications
+might be interested in the best route
+between a starting point and an ending point;
+and this problem naturally translates into
+many well-known graph theory problems.
+Another natural application of graphs
+is in social networks.
+In the context of this application, imagine
+edges of a graph now represent friendships
+between people in a network,
+where each node now represents an individual.
+Suppose you are interested in
+recommending new friends
+to person A, who currently has four friends.
+A natural way to solve this problem is to
+look at all of person A's friends,
+find friends of these friends,
+and recommend them.
+These types of problems are easily
+modeled and solved with graph theory.
+So these are examples of applications
+where it's honestly not too surprising
+that something like
+graph theory shows up.
+But the neat thing about graph theory
+is that it also find ways to show up
+in the most unexpected places.
+Let's talk about Sudoku.
+That's right.—I bet you
+didn't see that one coming.
+A lot of you have probably encountered
+a Sudoku puzzle at some point,
+but for those of you who haven't,
+here's a quick summary of
+how this puzzle works,
+so we're all on the same page.
+The goal of Sudoku is to fill
+missing entries of a 9x9 grid
+with numbers 1–9,
+but with a few constraints:
+The first constraint is that
+each 3x3 subgrid
+cannot have repeated numbers.
+The next constraint is that each row
+must have unique entries.
+And the last constraint puts
+a similar limitation on the columns,
+in which all entries of a column
+must be unique.
+It turns out that computers can solve
+Sudoku puzzles efficiently
+using graph theory.
+The graph here is quite subtle,
+but it does exist.
+What we are going to do is
+we're gonna assign each number a color,
+and then construct a graph as follows:
+For each 3x3 grid,
+we'll fill out the known entries
+with the respective color for the number,
+and assign one color to all unknown entries.
+The constraint here is that
+all of these 9 nodes as a group
+must have unique colors.
+We can then extend this mapping
+to all other 3x3 grids,
+and create the following graph.
+We still have to take care care of the
+other constraints.
+We can connect the graph along each row
+to represent the idea that
+every row on the graph
+must have a unique color.
+And we can do the same
+connections along columns
+for that respective constraint.
+Now we have a graph theory problem
+where we attempt to find colors
+assigned to vertices
+that satisfy all the laid-out constraints.
+It turns out that this is actually
+a well-known graph problem
+that graph theory provides
+an elegant algorithm for,
+and once we find a set of colors,
+we have a solution to a Sudoku puzzle.
+Let's now proceed to
+formally define a graph.
+A graph is a set of vertices and edges,
+where each edge is
+a connection between vertices.
+The way we usually denote
+an edge in a graph is by
+referring to it as a pair of vertices.
+As mentioned before,
+vertices and nodes are just different
+names for the same concept,
+that we will use interchangeably
+when discussing graphs.
+If you're forced to mathematically
+write down a definition of a graph,
+we can use set notation.
+For this particular graph, the vertex set
+looks like V = {0, 1, 2, 3, 4},
+and our set of edges would be denoted as
+E = {(0,1), (0,2), (0,3), (1,3), (2,3), (3,4)}.
+Let's now define some
+important terminology
+that you'll see over and over again
+when talking about graphs.
+The first important term is
+the concept of neighbors
+in a graph.
+Formally, two vertices are neighbors
+if an edge connects them.
+Here's an example:
+Vertices 1 & 8 of this graph are neighbors,
+since they are connected by an edge.
+One thing that we often query a graph for
+is all neighbors of a particular vertex.
+For example, if we were asked
+for all neighbors of node 0,
+the result would be the following set
+of 3 nodes: {4, 6, 8}.
+A related concept is the
+degree of a vertex.
+A degree of specific vertex is equal to
+the number of edges connected to it,
+or equivalently, the number of neighbors.
+As per this definition,
+the degree of vertex 0 would be 3.
+And the degree of vertex 3 would be 2.
+Let's now talk about paths.
+Paths are simply defined as a sequence
+of vertices connected by edges.
+Most of the paths that we'll deal with
+will be paths with unique vertices.
+For example, one path from
+vertex 0 to 2 is 0→6→7→3→2,
+and all vertices in the path
+only show up once,
+which is what we'll assume
+most of the time.
+One feature of paths is that
+they have respective lengths.
+A path length is simply defined as
+the number of edges in the path.
+In this example, the path length
+we have here would be 4.
+A related idea to a path is
+the concept of a cycle.
+A cycle is defined as a path that
+starts and ends at the same vertex.
+One key note about cycles is that
+all cycles are paths, but not all
+paths are necessarily cycles.
+There are several cycles in this graph.
+Here's an example of a cycle
+that begins at vertex 0,
+and ends at vertex 0: 0→8→1→5→4→0
+The last term I want to talk about
+is the concept of connectivity,
+which can be used in several contexts.
+The first context is with
+respect to 2 specific vertices:
+two vertices are connected
+if a path exists between them.
+The second context you may
+encounter connectivity,
+is when it is applied to a general graph:
+a graph is connected when
+all vertices are pairwise connected.
+In other words, a path exists
+between all pairs of vertices.
+This graph is an example
+of a connected graph,
+since if you pick any two vertices,
+we can identify a path between them.
+However, if we change up
+the graph a little bit,
+we now have an example of
+a graph that is not connected.
+Now it's easy to see that no path exists
+between several pairs of vertices.
+This naturally leads to a third context
+in which connectivity can be applied,
+which is the idea of a connected component.
+A connected component is a subset of
+vertices of the graph that is connected.
+For example, in this graph we have
+two connected components:
+The first being the following
+ set of vertices: V₁ = {0, 4, 6, 7, 8},
+and then the remaining vertices of the graph
+form the second connected component.
+Let's now transition to the types
+of graphs that you may encounter.
+The main graph we've seen so far is
+specifically called an undirected graph.
+Where for example if I have an edge
+connecting vertex 0 to vertex 1,
+it's implied that I also have an edge
+from vertex 1 to vertex 0.
+A graph where this would not be the case
+is called a directed graph,
+where now edges are unidirectional.
+Directed graphs
+also have their own classes.
+This particular graph has a cycle,
+so we can be more specific
+by referring to this graph
+as a directed cyclic graph.
+On the other hand,
+ if a graph is directed
+and contains no cycles,
+we refer to that specifically
+as a directed acyclic graph,
+which is a specific subset of graphs
+that has been studied quite rigorously
+since they show up in
+all sorts of interesting problems.
+Another important graph
+is a weighted graph.
+This graph is unique
+because each edge now
+is not treated equally,
+and some edges might have
+a larger weight than others.
+This can naturally model
+interesting metrics
+like traffic, distances on maps,
+and many other ideas.
+Another important class of graphs
+is trees.
+Trees have 3 key properties:
+all trees are connected and acyclic,
+removing an edge from a tree
+will disconnect the entire graph.
+And furthermore,
+adding any single edge to a tree
+will create a cycle.
+These are 3 valid examples of trees,
+and I encourage you to take a second,
+pause the video,
+and confirm that these properties hold.
+Personally I find verifying
+the second and third properties
+surprisingly satisfying.
+It really emphasizes
+how fragile a tree structure is,
+which I think, is kind of cool.
+Let's now move on to some
+more hands-on ideas.
+How does a computer represent a graph
+as a data structure?
+Take for example the following graphs.
+How would you go about organizing
+the information in this graph
+on a computer?
+[It] turns out that there are
+several accepted ways to do this,
+and some of them are better than others
+depending on the context.
+The first idea that is quite natural
+is to map vertices to one another
+through a matrix,
+which we formally call
+an adjacency matrix.
+The rules for creating this matrix
+are fairly intuitive:
+if an edge between node i and j exists,
+we will indicate this with an entry 1
+in our matrix;
+otherwise, the entry will be 0.
+Following these rules,
+this is what our adjacency matrix looks like
+for this graph.
+Notice that each edge creates two entries
+since this is an undirected graph.
+Make sure you take a moment to
+understand the mapping we have here.
+The second valid representation of a graph
+is actually fairly simple.
+We take all the edges
+and construct a set with each edge
+as follows.
+This representation is called
+an edge set,
+and it also contains all the information
+about vertices and edges
+that you would need for a graph.
+However, this representation
+is not as common,
+because it's a little hard to extract
+information about vertices of a graph
+using this particular representation.
+The third representation of a graph
+is called an adjacency list,
+and this is actually
+the most common representation used.
+The idea works as follows:
+we take each vertex, and map it
+to a list of its neighbors.
+For example, node 0 has 3 neighbors,
+specifically nodes 1, 2 and 3,
+so we map it to a list
+containing those values.
+The rest of the list is constructed
+in a similar manner.
+[The] nice thing about this representation
+is that it gives us an easy access
+to neighbors of a particular node,
+which is a tool that will be immensely useful
+in graph algorithms.
+Furthermore, this representation
+exploits the fact that
+most graphs in the real world
+are going to be sparse,
+meaning that we have
+a large number of vertices,
+with each vertex having
+relatively few edges.
+For example, in a social network
+you would actually make the most sense
+to have this representation,
+since there are going to be
+billions of nodes,
+but each node is unlikely to have
+more than a few thousand edges.
+An adjacency matrix for a graph like that
+would take way too much memory,
+but with an adjacency list
+it's much more manageable.
+For this reason in future videos
+we will primarily use adjacency lists
+as a way to represent graphs.
+The final thing I want to do in this video
+is to discuss some of the interesting
+problems and questions
+you may find in graph theory.
+In future videos we'll show you
+how you can apply graph algorithms
+to solve many of these problems.
+A fairly standard problem that
+you're likely to encounter all the time
+revolves around connectivity
+between two vertices.
+For example,
+it's easy for us to see that
+vertices 0 and 3 have
+many paths between them.
+But what sort of algorithms
+can we use to allow a computer
+to efficiently solve this problem?
+We can naturally extend this problem
+to ask if an entire graph is connected.
+There are a variety of efficient algorithms
+to solve these problems
+that we will cover in the next few videos.
+Another interesting problem
+in graph theory
+is the shortest path problem.
+Specifically, what is the path
+of the least length
+between two vertices?
+For this particular graph,
+here's the shortest path
+between vertices 0 and 3,
+which is something we as humans
+can generally eyeball
+for small enough graphs;
+but once again, what's the algorithm
+to solve this problem generally?
+Then there is the problem of
+cycle detection in a graph.
+Many of the algorithms that are
+used for connectivity problems
+can be naturally adapted to solve
+this problem as well.
+Another interesting problem
+in graph theory
+has to do with vertex coloring,
+which we actually saw
+in the Sudoku example.
+The problem formally stated is:
+given a set of colors,
+can we assign a color to each vertex
+such that no two neighbors
+are assigned the same color?
+In this graph, for two colors
+no such solution exists,
+but if given 3 colors,
+ this problem has a solution.
+Another very interesting problem
+to ask about graphs
+ is whether a path exists
+that uses every edge exactly once.
+This might be harder to tell,
+but this graph does indeed have
+one of these paths,
+and an efficient algorithm
+for this problem exists.
+These types of paths have
+tons of interesting applications
+in bioinformatics and circuit design.
+A similar question that you may ask is
+what about the existence of a path
+that uses every vertex exactly once?
+Such path also exists in this graph,
+but I think what you'll find
+more surprising
+is that there exist
+no efficient algorithms
+to solve this problem.
+What I mean by that
+is that all algorithms we have so far
+run in exponential time for this problem,
+which is incredibly slow
+for large enough graphs.
+In fact, if you are able to find
+an efficient algorithm
+for this particular problem,
+you would probably be given
+every single computer science award
+in existence,
+because it would help resolve
+a long-standing open problem.
+But don't get your hopes up there,
+because there's a fairly large consensus
+that no efficient algorithm
+for this problem exists.
+Let's now take a moment to recap
+the big ideas in this video.
+We first introduced graph theory
+through a variety of cool applications,
+where you saw why someone
+should even study graph theory.
+We then formally define graph theory
+along with important terminology
+and types of graphs
+that you will encounter.
+These concepts are
+incredibly important to understand,
+so that we have an appropriate framework
+for discussing graphs.
+We then introduced several
+representations of a graph
+as a data structure,
+with a specific emphasis
+on the practicality of the adjacency list.
+And lastly, we introduced
+some diverse and interesting problems
+to motivate the algorithms
+that we will go through in future videos.
+I hope this discussion gave you
+an appreciation for the massive field
+of graph theory.
+It's definitely one of my favorite topics
+in computer science,
+and I hope it becomes yours as well.
+Thanks for watching me.
+And as always, I'd appreciate it
+if you hit the like button
+if you enjoyed it.
+If you want to see more content like this,
+be sure to hit the subscribe button.
+And if you want to more directly
+support this channel,
+be sure to check out the Patreon page
+linked in the description below.
+See you in the next video.
+Captions by BertalanD

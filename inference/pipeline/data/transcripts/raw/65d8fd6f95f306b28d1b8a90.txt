@@ -1,0 +1,81 @@
+structured query language sql or sql for
+short is the gold standard language for
+communicating with relational database
+management systems you've likely heard
+of databases like mysql
+postgres microsoft sql server and oracle
+all of which are based on sql with their
+own little variations
+it was initially developed in the early
+70s to mutate and retrieve data from
+ibm's system r database by 1986
+it was standardized into the syntax that
+remains extremely popular in technical
+applications today a relational database
+organizes data into tables
+kind of like an excel spreadsheet where
+columns contain attributes or types of
+data
+while each row represents an individual
+record or data point with its own unique
+id
+known as a primary key we can establish
+relationships between data points
+by taking the unique id from one row and
+storing it on a different row in a
+different table
+in a special column known as a foreign
+key in the teams table the team id
+is the primary key but in the players
+table it's the foreign key
+and what that data structure tells us is
+that a player belongs to one team
+while a team can have many players what
+we've done here
+is structured our data in its smallest
+normal form to eliminate duplication and
+redundancy
+now the role of sql is not only to read
+create
+update and delete data but also to join
+data together
+based on the relationships embedded
+within it the syntax
+is comprised of several key parts if we
+zoom all the way out
+we have a statement or a piece of code
+that does something
+like reads or writes to the database
+within a statement we have a variety of
+keywords that can manipulate the
+database
+select can be used to make a query for
+the columns that you want
+from a table the column and table names
+are known as
+identifiers but we may not want every
+row in the table so we filter the
+results with the where keyword to only
+include records that meet a certain
+condition
+it's like looping over every row in the
+table and only returning rows in the
+query where the predicate evaluates to
+true
+then we might use the join keyword to
+connect data from an entirely different
+table
+by matching the primary key on this
+table to the foreign key on another
+table
+what we've created is a collection of
+clauses that make up
+a full sql statement we can now go and
+execute this code on the hundreds of
+different databases that support
+sql this has been structured query
+language in 100 seconds
+like and subscribe if you want to see a
+full sql tutorial
+thanks for watching and i will see you
+in the next one

@@ -1,0 +1,711 @@
+hello my name is jeff messier i'm a
+professor in electrical and software
+engineering in the schulich school of
+engineering at the university of calgary
+and in this lecture we're going to talk
+a little bit about programming languages
+to
+start out with i want to talk a little
+bit about how a micro architecture runs
+a program
+and a micro architecture runs a series
+of very low level instructions or
+commands called machine language
+commands and
+basically if you look at sort of the the
+logic design at how a microarchitecture
+works it basically
+reads one of these
+low-level machine language instructions
+out of memory
+feeds it into the processor and executes
+it then it reads the very next one out
+of memory and then it feeds it to the
+processor which executes it then it
+reads the very next one out of memory
+and then it executes it and so on and so
+on and so on so basically
+all a micro architecture is doing is
+reading and executing reading and
+executing
+and so
+one of the things that i'm going to try
+and address in this module is how does
+a high level program written in let's
+say c or python get translated down to
+this very sort of simple
+um
+abstraction for for running or executing
+a program
+so in this module i'm going to be
+talking about something i'm going to
+refer to as the big three and the the
+big three different kinds of programming
+languages are
+high-level programming languages
+machine
+language and
+assembly language
+and so to
+start out with
+high level languages are
+things like c python the kind the kinds
+of languages that you're probably
+already familiar with with using from a
+programming perspective
+machine language on the other hand are
+the actual binary commands that we feed
+directly into
+the processor's digital logic structure
+so these are the ones and zeros the
+digital voltage levels that literally
+get fed into the the circuitry that
+makes up our processor
+and these are very very low level
+commands
+the third type of
+language is something that we're going
+to refer to as assembly language or
+something that is referred to as
+assembly language and you can think of
+assembly language as an intermediate
+language that humans can read but is
+very very tightly
+tied or very very closely related to
+machine language there's almost but not
+quite a one-to-one mapping between
+assembly language instructions and
+machine language instructions
+and
+again this is maybe something that we
+take
+for granted today but it's worthwhile
+pausing here and to just appreciate what
+a significant innovation
+human readable programming languages
+were so
+back in the very early
+form of computers
+but back when people were using the very
+first generation of computers humans had
+to actually by hand
+encode the ones and zeros that made up
+the machine language instructions that
+were
+fed into the processor this is basically
+what punch cards were if you if you've
+heard of punch cards
+and so
+the idea of having a programming
+language that humans could read that we
+could type in using alphanumeric
+characters
+was a big innovation and actually
+assembly language was the first
+form of human readable programming
+language and as you're going to see
+because we're going to talk a lot about
+assembly language in this class as
+you're going to see assembly language
+while you know you can get the hang of
+it it isn't quite as intuitive as for
+example a python program so as soon as
+people started to work with human
+readable languages the race was on to
+develop languages that were more and
+more intuitive for humans but at the
+same time were
+mappable down into the low-level machine
+language instructions that
+processors needed in order to take
+action on something
+so starting off with high-level
+languages again these are the languages
+that probably you are most familiar with
+at this point and they include
+basically almost every programming
+language you can possibly name c plus c
+perl python ruby matlab
+awk javascript java all of these things
+are considered high level
+programming languages
+in this
+series we or in this class we are going
+to be using primarily c and there's two
+reasons for that
+the first reason is that c
+in general is relatively of all the
+high-level programming languages it's
+probably the easiest to map to assembly
+language and machine language and so
+i'll be using that in a lot of my
+examples
+and
+it's also the primary language we're
+going to be using in our hands-on work
+with our microcontrollers when we start
+to implement designs using
+microcontrollers
+now
+many
+not all as we're going to see but many
+high-level languages are translated into
+machine language using something called
+a tool j tool chain and a tool chain is
+basically a series of specialized
+programs that convert a high-level
+language down to the low-level machine
+language instructions that can be fed
+directly into a processor and we usually
+refer to this conversion as compiling a
+program so when we compile a program we
+take
+a
+a c program for example and we compile
+it down to an executable file or a
+binary file that contains the actual
+ones and zeros of the machine language
+instructions that can be fed into the
+processor as we're going to see
+compiling is even though that's the term
+that we use compiling actually refers to
+just a one specific part of this
+conversion process and we're going to
+see that in a second
+however
+it's worthwhile just at this point
+pausing for a second and talking about
+interpreted high-level languages because
+many of the languages that you may
+already have
+experience with are not actually
+compiled languages they're interpreted
+languages and probably the most common
+example of that these days is python so
+you don't actually compile a python
+program instead you write a python
+script we refer to generally python
+programs as python scripts and then that
+program gets read by an interpreter
+program and the python interpreter
+basically reads the scripts and then
+sends commands to the processor based on
+what's written in those scripts so the
+interpreter is a compiled program so
+somebody had to program
+the interpreter and compile it
+but when you actually execute your
+python script you're not actually doing
+any compiling and that's why maybe if
+you have programming you may have a lot
+of programming experience but you have
+never actually compiled anything before
+and um
+we're going to as i said we're going to
+focus on c in in this in this class so
+we're going to be dealing with a
+language that is compiled and so we're
+going to be talking about
+the tool chain and how that process of
+conversion to machine language works
+so as i mentioned assembly language was
+the original human readable
+language and
+there is an almost but not quite
+one-to-one mapping between an assembly
+language instruction and a machine
+language instruction as we get into
+assembly language you're going to see
+um
+you're going to see why i make that
+distinction
+and
+you know there was a time when humans
+would
+write assembly language programs from
+scratch
+and the original reason for this was
+back in the day
+it was relatively common for humans to
+be able to write more efficient assembly
+language than could be generated
+automatically by a tool chain however
+these days that's not really true
+anymore most modern tool chains are
+pretty good at generating highly
+optimized assembly language and so you
+don't really get much of a speed up
+advantage when a human tries to write
+assembly language from scratch however
+if i talk to my friends who work in
+firmware and embedded design
+they say that they do work with assembly
+language quite a bit still
+not so much to write assembly language
+but to look at it to understand why a
+processor is behaving the way that it is
+and this is relatively common for very
+high speed you know quote-unquote
+real-time applications so imagine if
+you're writing a processor to control a
+self-driving car or maybe even a drone
+or a fighter jet that processor has to
+be able to receive input make a decision
+and take action
+quickly enough to
+you know not crash the car or fly into
+the side of a mountain if you're if
+you're piloting a drone
+and
+sometimes with these very time critical
+applications the processor maybe take
+may end up taking a little longer than
+you expect and it's nice to be able to
+sort of look at the assembly language
+and sort of see the exact instructions
+kind of figure out what's happening and
+then see if you can change or optimize
+the program to
+to reduce bottlenecks
+another reason and really the primary
+reason why we study assembly language is
+that it is absolutely oops
+it
+must be understood by the designers of
+tool chains and micro architectures it
+is impossible for you to understand
+the hardware design of a computer
+processor or a micro architecture
+without also understanding assembly
+language that's fundamental you need to
+understand these low-level commands that
+are being executed by your micro
+architecture and if you're ever
+fortunate enough to work in a job where
+you're developing a new processor a new
+gpu a new arm core processor or
+something like that
+then
+you know how you design your digital
+hardware
+to support your app um your your machine
+language instruction set goes hand in
+hand and you may choose to
+make certain choices
+when developing your instruction set
+that will have certain implications on
+how simple or complex the hardware is to
+actually support that instruction set
+and
+hopefully that will become clear as we
+work through this
+as we work through this class because as
+i said we're going to you know get
+right down to the digital logic level
+when we start to build up our micro
+architecture but hand in hand step
+by step we're going to also be talking
+about assembly language and machine
+language as we develop the hardware so
+we're going to be simultaneously talking
+about hardware and software all the way
+through this course
+so
+when we talk about machine language so
+machine language commands are the binary
+instructions read from memory and dumped
+directly to the processor for execution
+and so these are very very low level
+commands
+and
+you know as we
+talked a little bit about in the
+introduction
+the machine the family of machine
+language commands
+that can run on a micro architecture in
+many ways defines the architecture
+itself and so the digital
+design of the micro architecture like
+the actual digital hardware blocks will
+be developed
+simultaneously with the notion of what
+kind of instructions we want to run on
+those digital blocks
+and
+there are basically when we when we look
+at architectures from the machine
+language perspective we can divide
+architectures into two very broad
+categories
+complex instructions like computers or
+cis computers and reduced instruction
+set computers or risk computers
+so
+risk architectures tend to use fixed
+length machine language instructions and
+the
+architectures that we're going to be
+talking about in this class
+arm and the avr architecture are both
+risk architectures so arm processors
+use 32-bit instructions
+and
+the avr architecture
+mostly uses 16-bit instructions but
+sometimes
+for very complicated commands we'll have
+we'll also use 32-bit instructions but
+most of what we're going to be talking
+about in this
+class we'll focus on the 16-bit
+instructions
+sisk machine language instructions are
+variable length and the most common
+example of cis architectures are the x
+the intel x86 architectures
+a machine language command contains two
+types of information
+[Music]
+the first is a field
+sometimes called the funct field but
+usually called the opcode field that
+specifies the type of instruction
+being executed so the opcode will say
+this is a multiply instruction or this
+is a
+load memory instruction or this is a
+store memory instruction so these op
+codes are basically labels that indicate
+what kind of instruction the processor
+needs to execute
+and in addition to the opcode typically
+the machine language
+instruction contains arguments or the
+operands of the instruction so for
+example if we're adding two numbers
+together we would the op code would say
+this is an add command and then the
+operand part of the machine language
+instruction would tell us exactly which
+two numbers we're adding together and
+where we should put the result
+machine language commands are ultimately
+placed in some kind of executable file
+and so
+when you create an executable file
+when you compile a program
+the executable file is a binary file and
+it literally contains a whole bunch of
+machine language instructions one after
+the other
+okay so i want to conclude this module
+or finish it up by looking a little bit
+more closely at the tool chain and the
+operation of a tool chain can actually
+be divided into four different stages
+the preprocessor the compiler the
+assembler and the linker so you'll see
+that you know while we usually use the
+word compiling to refer to the complete
+process of taking a high level language
+and creating an executable file it
+actually refers to just a very specific
+portion of that process
+so the first thing i want to talk about
+is a preprocessor now preprocessor
+doesn't necessarily exist in all tool
+chains but it is something that does
+exist in c and c plus and it basically
+converts c code to c code which is a
+little bit confusing but i'll show you
+an example
+and
+the reason why a preprocessor exists is
+to basically allow
+more
+a more efficient programming style
+without sacrificing
+without bringing in a lot of overhead
+and so for example you can make things
+that kind of look like functions but
+aren't full function calls and
+they tend to perform a little bit better
+or a little bit faster than um than
+actual function calls and the output of
+a preprocessor is a translation unit and
+so there's a bunch of different
+functionality in the preprocessor so if
+you've worked with c or c plus plus
+macros for example that's
+a structure made possible by the by the
+preprocessor but most people
+are most familiar with
+using the preprocessor to define
+constants
+and to
+include header files into different c or
+c plus plus source files and so
+basically whenever you see a hashtag in
+front of a command
+in a c or c plus plus file that's a
+preprocessor command and so all
+commands will start with hashtags are
+interpreted by the preprocessor and so
+we start with a c
+or c
+source file and then we translate the
+preprocessor
+creates something called a translation
+unit and so for example we can use the
+um the capital word const to represent
+33
+and then you know we can if we have an
+argument here we can add const to it and
+by giving it a name rather than just a
+value of 33 that helps make our program
+more readable
+but the preprocessor will take
+the
+we'll look for all
+occurrences of the keyword const and
+substitute in the value 33. so when we
+look at the translation unit the keyword
+const is gone and it's been replaced by
+33.
+also if we have
+[Music]
+you know in our header file if we have
+any function declarations
+those are
+you know in this case the function
+declaration is removed and the full
+you know source code definition of the
+function is placed in the start of the
+uh in the start of the c file and so
+it again it's a it's a subtlety it only
+exists for c and c plus plus it it
+translates c to c so we haven't really
+even started along the journey to
+um
+creating our machine code just yet
+but it is
+you know an important part of cnc plus
+plus tool chains
+so the next stage is the compiler and
+the purpose of the compiler is to
+convert our high-level language in our
+case our c
+into assembly language that is written
+to an assembly language file now for
+those of you who have compiled c and c
+plus plus
+programs before you probably don't
+remember having assembly language files
+just kind of lying around in your
+development directory and that's because
+they are intermediate and even though
+assembly language is generated it's
+immediately deleted by default by most
+compilers these days you have to sort of
+enable certain options in your compiler
+so
+in order for the assembly language to
+hang around
+and so here's an example
+the compiler operates on our translation
+unit so this is our c code and it
+converts our c code into assembly
+language and this is
+a mips
+assembly language implementation of that
+c translation unit and don't worry about
+understanding what all these commands
+are just yet we are going to get into
+this in a lot of detail as the course
+progresses
+now the assembler
+then is responsible for taking the
+assembly language produced by the
+compiler and translating it into the
+actual machine language instructions
+that will run on the processor
+and the output of an assembler is stored
+in an object what's known as an object
+file and so an object file is a binary
+file that literally contains a whole
+bunch of binary machine language
+instructions
+and an object file can be divided into
+kind of three parts there's what's known
+as the text segment which contains the
+machine language instructions of the
+program there's also something called a
+data segment that is used to initialize
+variables that are stored in memory on
+the microarchitecture
+and then there's a third area
+that contains
+a bunch of information that helps with
+linking
+and
+as a segue into that linking
+is the final stage of the tool chain and
+it is
+what makes it possible to use
+programming libraries now
+reusing other people's code is
+fundamental to programming efficiency
+we've all written programs where we've
+for example
+used printf to print to the screen or
+we've used functions to
+[Music]
+take input in from the keyboard or
+you know generate a little bit of
+graphics on the screen
+and to do all of that we use
+pre-written functions that are stored in
+something called libraries and without
+libraries programming would be
+incredibly inefficient because every
+time anybody wanted to do anything they
+would have to write all of their stuff
+from scratch
+and so
+we make use of lots of standard
+functions as i said you know printing as
+simple as printing out to the screen
+with printf
+and as complex as using gpu accelerated
+machine learning algorithms and so part
+of my research is machine learning and i
+use pre-written machine learning
+functions all the time i don't you know
+write rewrite all of the machine
+learning algorithms that we use for our
+work
+and the machine code for all of these
+pre-written routines are stored in
+special files called libraries
+and the purpose of the linker the final
+stage in our tool chain is to basically
+take the object file that contains the
+machine language of the code that we've
+written
+and connect it to
+machine language instructions that exist
+in libraries in order to produce our
+final executable file that can actually
+run as a completely
+atomic program on our processor
+and
+the result is stored in sometimes we
+refer to these as executable files
+sometimes we refer to them as as binary
+files
+and so again the linker sort of takes
+our object file and then pulls object
+code out of libraries depending on what
+pre-pre-written functions we want to use
+in our code
+so this notion of taking machine
+language code from our executable and
+connecting it with
+machine language code from a library is
+referred to as linking
+and linking can actually be done in two
+different ways we can use what's known
+as static linking and we can also use
+what's known as dynamic linking and so
+first of all static linking
+is where
+all machine language code from a
+particular library is copied over into
+the executable
+this is the type of linking that's done
+for
+very simple microcontrollers so for
+example when we program the avr
+chip
+um
+for the hands-on exercises in this class
+we
+our tool chain will always use static
+linking so if we use a library function
+for example if we take the square root
+of something and we use the square root
+function
+that
+the machine language code for
+implementing the square root will be
+copied into our executable
+it's basically or what we would often
+refer to as a hex file
+um
+when using this particular tool chain
+and then that executable or that hex
+file is completely copied over or loaded
+into the the avr chip
+so the advantages of of static linking
+it's easy to understand it's easy to
+port software between machines because
+everything you need all of the machine
+language instructions are contained in
+your executable um the disadvantage
+is that you can create very big
+executables
+there's really no way to avoid this when
+you're doing firmware development for
+for embedded devices like programming
+our little
+microcontroller but it does sometimes
+come as a surprise you know like if we
+use a whole bunch of library functions
+we might compile and then find out that
+our program doesn't fit on the flash
+memory in our device and it's because
+we've used so many libraries
+in contrast dynamic linking
+doesn't copy in all the machine language
+code from the libraries instead it only
+copies in the locations of the libraries
+and
+the operating system
+then
+is responsible for
+connecting our executable to those
+libraries in real time and so the
+executable will start to run
+and when it hits a library function
+the operating system actually connects
+our program to the machine language in
+the library in real time
+and allows our program to execute that
+code
+this only works for devices that have
+operating systems and so we won't be
+using dynamic linking in our hands-on
+exercises for this course but it's just
+important to know that it
+exists
+the advantages of dynamic linking i
+think are kind of obvious
+smaller executables since we're not
+copying in all of that code
+allows programs to take advantage of
+library upgrades so for example if some
+improvements were made made to a library
+function
+our executable can then jump to the
+upgraded library and hopefully run in
+exactly the same way
+this is more efficient for multitasking
+operating systems as well but the
+disadvantage is is it's harder to
+understand and can cause some software
+installation problems if you're trying
+to run a program
+on a computer that doesn't necessarily
+have all of the
+all of the required libraries

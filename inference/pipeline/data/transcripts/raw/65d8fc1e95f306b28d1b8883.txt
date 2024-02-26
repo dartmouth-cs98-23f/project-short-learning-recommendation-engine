@@ -1,0 +1,814 @@
+in this lesson you are going to
+understand the concept of text mining
+by the end of this lesson you will be
+able to explain text mining execute text
+processing task
+so let's go ahead and understand text
+mining in detail
+let's first understand what text mining
+is text mining is the technique of
+exploring large amounts of unstructured
+text data and analyzing it in order to
+extract patterns from the text to data
+it is aided by software that can
+identify concepts patterns topics
+keywords and other attributes in the
+data it utilizes computational
+techniques to extract and summarize the
+high quality information from
+unstructured textual resources let's
+understand the flow of text mining
+there are five techniques used in text
+mining system
+information extraction or text
+pre-processing
+this is used to examine the unstructured
+text by searching out the important
+words and finding the relationships
+between them
+categorization or text transformation
+attribute generation categorization
+technique labels the text document under
+one or more categories
+classification of text data is done
+based on input output examples with
+categorization
+clustering or attribute selection
+clustering method is used to group text
+documents that have similar content
+clusters are the partitions and each
+cluster will have a number of documents
+with similar content clustering make
+sure that no document will be omitted
+from the search and it derives all the
+documents that have similar content
+visualization technique the process of
+finding relevant information is
+simplified by visualization technique
+this technique uses text flags to
+represent a group of documents or a
+single document and compactness is
+indicated using colors
+visualization technique helps to display
+textual information in a more attractive
+way
+summarization or interpretation or
+evaluation
+summarization technique will help to
+reduce the length of the document and
+summarize the details of the documents
+it makes the document easy to read for
+users and understand the content at the
+moment
+let's understand the significance of
+text mining
+document clustering
+document clustering is an important part
+of text mining it has many applications
+in knowledge management and information
+retrieval clustering makes it easy to
+group similar documents into meaningful
+groups such as in newspapers where
+sections are often grouped as business
+sports politics and so on
+pattern identification
+text mining is the process of
+automatically searching large amount of
+text for text patterns and recognition
+of features
+features such as telephone numbers and
+email addresses can be extracted using
+pattern matches
+product insights
+text mining helps to extract large
+amounts of text for example customer
+reviews about the products
+mining consumer reviews can reveal
+insights like most loved feature most
+hated feature improvements required and
+reviews of competitors products
+security monitoring text mining helps in
+monitoring and extracting information
+from news articles and reports for
+national security purposes
+text mining make sure to use all of your
+available information it is a more
+effective and productive knowledge
+discovery that allows you to make better
+informed decisions automate information
+intensive processes gather business
+critical insights and mitigate
+operational risk
+let's look at the applications of text
+mining
+speech recognition speech recognition is
+the recognition and translation of
+spoken language into text and vice versa
+speech often provides valuable
+information about the topics subjects
+and concepts of multimedia content
+information extraction from speech is
+less complicated yet more accurate and
+precise than multimedia content this
+fact motivates content speech analysis
+for multimedia data mining and retrieval
+where audio and speech processing is a
+key enabling technology
+spam filtering
+spam detection is an important method in
+which textual information contained in
+an email is extracted and used for
+discrimination
+text mining is useful in automatic
+detection of spam emails based on the
+filtering content
+using text mining an email service
+provider such as gmail or yahoo mail
+checks the content of an email and if
+some malicious text is found in the mail
+then that email is marked as spam and
+sent to the spam folder
+analysis
+it is done in order to determine if a
+given sentence expresses positive
+neutral or negative sentiments
+sentiment analysis is one of the most
+popular applications of text analytics
+the primary aspect of sentiment analysis
+includes data analysis of the body of
+the text for understanding the opinion
+expressed by it and other key factors
+comprising modality and mood
+usually the process of sentiment
+analysis works best on text that has a
+subjective context than on that with
+only an objective context
+e-commerce personalization
+text mining is used to suggest products
+that fit into a user's profile
+text mining is increasingly being used
+by e-commerce retailers to learn more
+about the consumers as it is the process
+of analyzing textual information in
+order to identify patterns and gain
+insights
+ecommerce retailers can target specific
+individuals or segments with
+personalized offers and discounts to
+boost sales and increase customer
+loyalty by identifying customer purchase
+patterns and opinions on particular
+products
+let's look at natural language toolkit
+library in detail
+natural language toolkit is a set of
+open source python models that are used
+to apply statistical natural language
+processing on human language data
+let's see how you can do environment
+setup of nltk
+go to windows start and launch python
+interpreter from anaconda prompt and
+enter the following commands
+enter command python to check the
+version of python installed on your
+system
+enter import nltk to link you to the
+nltk library available to download then
+enter
+nltk.download function that will open
+the nltk download window
+check the download directory select all
+packages and click on download
+this will download nltk onto your python
+once you have downloaded the nltk you
+must check the working and functionality
+of it
+in order to test the setup enter the
+following command in python idle
+from nltk
+import brown
+brown dot word parenthesis parenthesis
+the brown is an nltk corpus that shows
+the systematic difference between
+different genres available words
+function will give you the list
+available words in the genre
+the given output shows that we have
+successfully tested the nltk installed
+on python
+let's now understand how you can read a
+specific module from nltk corpora if you
+want to import an entire module from
+nltk corpora use asterisk symbol with
+that module name import command
+enter the command from
+nltk.book import asterisk
+it will load all the items available in
+nltk's book module
+now in order to explore brown corpus
+enter the command nltk.corpus
+import brown
+this will import brown corpus on the
+python
+enter brown dot categories function to
+load the different genres available
+select a genre and assign that genre to
+a variable using the following syntax
+variable name is equal to brown dot
+words
+categories is equal to genre name
+now in order to see the available words
+inside the selected genre just enter the
+defined variable name as a command
+let's understand text extraction and
+pre-processing in detail
+so let's first understand the concept of
+tokenization
+tokenization is the process of removing
+sensitive data and placing unique
+symbols of identification in that place
+in order to retain all the essential
+information concerned with the data by
+its security
+it is a process of breaking running
+streams of text into words and sentences
+it works by segregating words using
+punctuation and spaces
+text extraction and pre-processing
+engrams
+now let's look at what n-gram is and how
+it is helpful in text mining
+n-gram is the simplest model that
+assigns these probabilities to sequences
+of words or sentences
+n-grams are combinations of adjacent
+words or letters of length and in the
+source text
+so engram is very helpful in text mining
+when it is required to extract patterns
+from the text
+as in the given example this is a
+sentence all of these words are
+considered individual words and thus
+represent unigrams
+a 2 gram or bigram is a two-word
+sequence of words like this is
+is a
+or a sentence and a three gram or
+trigram is a three word sequence of
+words like this is a or is a sentence
+let's now understand what stop words are
+and how you can remove
+them stop words are natural language
+words that have negligible meaning such
+as a and and
+or
+the and other similar words
+these words also will take up space in
+the database or increase the processing
+time so it is better to remove such
+words by storing a list of stop words
+you can find the list of stop words in
+the nltk data directory that is stored
+in 16 different languages
+use the following command to list the
+stop words of english language defined
+in nltk corpus
+importing nltk will import the nltk
+corpus for that instance enter from
+nltk.corpus import stopwords will import
+stop words from nltk corpus
+now set the language as english so use
+set function as set under braces stop
+words dot words set genre as english
+stop words are filtered out before
+processing of natural language data as
+they don't reveal much information
+so as you can see in the given example
+before filtering the sentence the
+tokenization of stop word is processed
+in order to remove these stop words and
+the filtering is applied in order to
+filter the sentence based on some
+criteria
+text extraction and pre-processing
+stemming
+stemming is used to reduce a word to
+stem or base word by removing suffixes
+such as helps helping help and helper to
+the root word help
+the stemming process or algorithm is
+generally called a stemmer there are
+various stemming algorithms such as
+porter stemmer lancaster stemmer
+snowball stemmer etc
+use any of the stemmers defined under
+nltk stem corpus in order to perform
+stemming as shown in the example here we
+have used porter stemmer when you
+observe the output you will see that all
+of the words given have been reduced to
+their root word or stem
+text extraction and pre-processing
+limitization
+lemmatization is the method of grouping
+the various inflected types of a word in
+order that they can be analyzed as one
+item it uses vocabulary list or a
+morphological analysis to get the root
+word it uses wordnet database that has
+english words linked together by their
+semantic relationship
+as you can observe the given example the
+different words have been extracted to
+their relevant morphological word using
+limitization
+text extraction and pre-processing pos
+tagging
+let's now look at different part of
+speech tags available in the national
+language toolkit library
+a pos tag is a special label assigned to
+each token or word in a text corpus to
+indicate the part of speech and often
+also other grammatical categories such
+as tense number either plural or
+singular case etc pos tags are used in
+text analysis tools and algorithms and
+also in corpus searches so look at the
+given example
+here alice wrote a program is the source
+text given the pos tags given are alice
+is a noun wrote is a verb a is an
+article and program is an adjective look
+at the given example to understand how
+pos tags are defined so the given
+sentence or paragraph contains different
+words that represent different parts of
+speech
+we will first use tokenization and
+removal of stop words and then allocate
+the different pos tags these are shown
+with different words in the given
+sentence
+pos tags are useful for lemmatization in
+building named entity recognition and
+extracting relationships between words
+text extraction and pre-processing named
+entity recognition
+now let's understand what named entity
+recognition is all about ner seeks to
+extract a real-world entity from the
+text and sorts it into predefined
+categories such as names of people
+organizations locations etc
+many real-world questions can be
+answered with the help of name entity
+recognition
+were specified products mentioned in
+complaints or reviews
+does the tweet contain the name of a
+person does the tweet contain the
+person's address
+as you can see in the given example
+google america larry page etc are the
+names of a person place or an
+organization
+so these are considered named entities
+and have different tags such as person
+organization
+gpe or geopolitical entity etc
+nlp process workflow
+now you have an understanding of all
+nltk tools so now let's understand the
+natural language processing workflow
+step one tokenization it splits text
+into pieces tokens or words and removes
+punctuation step two stop word removal
+it removes commonly used words such as
+the is are etc which are not relevant to
+the analysis
+step three stemming and limitization
+it reduces words to base form in order
+to be analyzed as a single item step 4
+pos tagging it tags words to be part of
+speech such as noun verb adjective etc
+based on the definition and context
+step 5 information retrieval
+it extracts relevant information from
+the source
+mo1 brown corpus
+problem statement the brown university
+standard corpus of present-day american
+english also known popularly as brown
+corpus was compiled in the 1960s as a
+general corpus in the field of corpus
+linguistics it contains 500 samples of
+english language text totaling roughly 1
+million words compiled from works
+published in the united states in 1961.
+we will be working on one of the subset
+data set and perform text processing
+tasks
+let us import the nltk library and read
+the ca underscore 10 corpus
+import nltk
+we will have to make sure that there are
+no slashes in between hence we will use
+the replace function within pandas for
+the same
+let's have a look at the data once
+tokenization after performing sentence
+tokenization on the data we obtain
+similarly after applying sentence
+tokenizer the resulting output shows all
+individual words tokens
+stop word removal let's import the
+stopword library from
+nltk.corpus import stop words
+we also need to ensure that the text is
+in the same case
+nltk has its own list of stop words we
+can check the list of stop words using
+stop words dot words and english inside
+the parenthesis
+map the lowercase string with our list
+of word tokens
+let's remove the stop words using the
+english stop words list in nltk
+we will be using set checking as it is
+faster in python than a list
+by removing all stop words from the text
+we obtain
+often we want to remove the punctuations
+from the documents too since python
+comes with batteries included we have a
+string dot punctuation
+from string import punctuation
+combining the punctuation with the stop
+words from nltk
+removing stop words with punctuation
+stemming and limitization
+we will be using stemming and
+limitization to reduce words to their
+root form for example walks walking walk
+will be reduced to their root word walk
+importing porter stemmer as the stemming
+library
+from
+nltk.stem import porter stemmer
+printing the stem words
+import the wordnet lemmitizer from
+nltk.stem
+printing the root words
+we also need to evaluate the pos tags
+for each token
+create a new word list and store the
+list of word tokens against each of the
+sentence tokens in data 2. for i in
+tokenized
+also we will check if there were any
+stop words in the recently created word
+list
+we will now tag the word tokens
+accordingly using the pos tags and print
+the tagged output
+for our final text processing task we
+will be applying named entity
+recognition to classify named entities
+in text into predefined categories such
+as the names of persons organizations
+locations expressions of times
+quantities monetary values percentages
+etcetera
+now press the tagged sentences under the
+chunk parser
+if we set the parameter binary equals
+true then named entities are just tagged
+as ne
+otherwise the classifier adds category
+labels such as person organization and
+gpe
+create a function named as extract
+entity names along with an empty list
+named as entity names
+we will now extract named entities from
+a nltk chunked expression and store them
+in the empty created above
+again we will set the entity names list
+as an empty list and will extract the
+entity names by iterating over each tree
+in chunked sentences
+great we have seen how to explore and
+examine the corpus using text processing
+techniques let's quickly recap the steps
+we've covered so far
+one import the nltk library to perform
+tokenization three perform stemming and
+allematization
+four remove stop words five perform
+named entity recognition
+structuring sentences syntax
+let's first understand what syntax is
+syntax is the grammatical structure of
+sentences
+in the given example this can be
+interpreted as syntax and it is similar
+to the ones you use while writing codes
+knowing a language includes the power to
+construct phrases and sentences out of
+morphemes and words the part of the
+grammar that represents a speaker's
+knowledge of these structures and their
+formation is called syntax
+phrase structure rules are rules that
+determine what goes into a phrase that
+is constituents of a phrase and how the
+constituents are ordered
+constituent is a word or group of words
+that operate as a unit and can be used
+to frame larger grammatical units
+the given diagram represents that a noun
+phrase is determined when a noun is
+combined with a determiner and the
+determiner can be optional
+a sentence is determined when a noun
+phrase is combined with a verb phrase
+a verb phrase is determined when a verb
+is combined optionally with the noun
+phrase and prepositional phrase and a
+prepositional phrase is determined when
+a preposition is combined with a noun
+phrase
+a tree is a representation of
+syntactic's structure of formulation of
+sentences or strings
+consider the given sentence the factory
+employs 12.8 percent of bradford county
+what can be the syntax for pairing this
+statement let's understand this a tree
+is produced that might help you
+understand that the subject of the
+sentence is the factory
+the predicate is employees and the
+target is 12.8 percent which in turn is
+modified by bradford county
+syntax parses are often a first step
+toward deep information extraction or
+semantic understanding of text
+rendering syntax trees
+download the
+corresponding.exe file to install the
+ghost script rendering engine based on
+your system configuration in order to
+render syntax trees in your notebook
+let's understand how you can set up the
+environment variable
+once you have downloaded and installed
+the file go to the folder where it is
+installed and copy the path of the file
+now go to system properties and under
+advanced properties you will find the
+environment variable button click on
+that to open the pop-up box tab of the
+environment
+now open the bin folder and add the path
+to the bin folder in your environment
+variables
+now you will have to modify the path of
+the environment variable
+use the given code to test the working
+of syntax tree after the setup is
+successfully installed
+structuring sentences chunking and chunk
+parsing
+the process of extraction of phrases
+from unstructured text is called
+chunking instead of using just simple
+tokens which may not represent the
+actual meaning of the text it is
+advisable to use phrases such as indian
+team as a single word instead of indian
+and team as separate words
+the chunking segmentation refers to
+identifying tokens and labeling refers
+to identifying the correct tag
+these chunks correspond to mixed
+patterns in some way to extract patterns
+from chunks we need chunk parsing
+the chunk parsing segment refers to
+identifying strings of tokens and
+labeling refers to identifying the
+correct chunk type
+let's look at the given example you can
+see here that yellow is an adjective dog
+is a noun and the is the determiner
+which are chunked together into a noun
+phrase
+similarly chunk parsing is used to
+extract patterns and to process such
+patterns from multiple chunks while
+using different parsers
+let's take an example and try to
+understand how chunking is performed in
+python let's consider the sentence the
+little mouse ate the fresh cheese
+assigned to a variable named scent
+using the word tokenize function under
+nltk corpora you can find out the
+different tags associated with the
+sentence provided
+so as you can see in the output
+different tags have been allocated
+against each of the words from the given
+sentence using chunking
+np chunk and parser
+you will now create grammar from a noun
+phrase and will mention the tags you
+want in your chunk phrase within the
+function here you have created a regular
+expression matching the string
+the given regular expression indicates
+optional determiner followed by optional
+number of adjective followed by a noun
+you will now have to parse the chunk
+therefore you will create a chunk parser
+and pass your noun phrase string to it
+the parser is now ready you will use the
+parse parenthesis parenthesis within
+your chunk parser to parse your sentence
+the sentence provided is the little
+mouse ate the fresh cheese
+this sentence has been parsed and the
+tokens that match the regular
+expressions are chunked together into
+noun phrases np
+create a verb phrase chunk using regular
+expressions the regular expression has
+been defined as optional personal
+pronoun followed by zero or more verbs
+with any of its type followed by any
+type of adverb
+you'll now create another chunk parser
+and pass the verb phrase string to it
+create another sentence and tokenize it
+add pos tags to it
+so the new sentence is she is walking
+quickly to the mall and the pos tag has
+been allocated from nltk corpora
+now use the new verb phrase parser
+to parse the tokens and run the results
+you can look at the given tree diagram
+which shows a verb parser where a
+pronoun followed by two verbs and an
+adverb are chunked together into a verb
+parse structuring sentences chinking
+chinking is the process of removing a
+sequence of tokens from a chunk how does
+chunking work the whole chunk is removed
+when the sequence of tokens spans an
+entire chunk if the sequence is at the
+start or the end of the chunk the tokens
+are removed from the start and end and a
+smaller chunk is retained
+if the sequence of tokens appears in the
+middle of the chunk these tokens are
+removed leaving two chunks where there
+was only one before
+consider you create a chinking grammar
+string containing three things chunk
+name the regular expression sequence of
+a chunk the regular expression sequence
+of your
+here in the given code we have the chunk
+regular expression as optional personal
+pronoun followed by zero or more
+occurrences of any type of the verb type
+followed by zero or more occurrences of
+any of the adverb types the
+regular expression says that it needs to
+check for the adverb in the extracted
+chunk and remove it from the chunk
+inside the chinking block with open
+curly braces
+and closing curly braces you have
+created one or more adverbs
+you will now create a parser from nltk
+dot
+reg exp parser and pass the
+grammar to it
+now use the new parser to parse
+the tokens sent three and run the
+results
+as you can see the parse tree is
+generated while comparing the syntax
+tree of the parser with that of
+the original chunk you can see that the
+token is quickly adverb chinked out of
+the chunk
+let's understand how to use context-free
+grammar
+a context-free grammar is a four-tuple
+some ntrs where sum is an alphabet and
+each character in sum is called a
+terminal nt is a set and each element in
+nt is called a non-terminal
+r the set of rules is a subset of nt
+times the set of sum u and t s the start
+symbol is one of the symbols in nt
+a context-free grammar generates a
+language l capturing constituency and
+ordering
+in cfg the start symbol is used to
+derive the string you can derive the
+string by repeatedly replacing a
+non-terminal on the right hand side of
+the production until all non-terminals
+have been replaced by terminal symbols
+let's understand the representation of
+context-free grammar through an example
+in context-free grammar a sentence can
+be represented as a noun phrase followed
+by a verb phrase noun phrase can be a
+determiner nominal a nominal can be a
+noun vp represents the verb phrase
+a can be called a determiner flight can
+be called a noun
+consider the string below where you have
+certain rules when you look at the given
+context-free grammar a sentence should
+have a noun phrase followed by a verb
+phrase a verb phrase is a verb followed
+by a noun a verb can either be saul or
+met
+noun phrases can either be john or jim
+and a noun can either be a dog or a cat
+check the possible list of sentences
+that can be generated using the rules
+use the join function to create the
+possible list of sentences you can check
+the different rules of grammar for
+sentence formation using the production
+function it will show you the different
+tags used and the defined context-free
+grammar for the given sentence
+demo 2 structuring sentences
+problem statement a company wants to
+perform text analysis for one of its
+data sets
+you are provided with this data set
+named
+tweets.csv which has tweets of six us
+airlines along with their sentiments
+positive negative and neutral the tweets
+are present in the text column and
+sentiments in airline underscore
+sentiment column
+we will be retrieving all tags starting
+with at the rate in the data set and
+save the output in a file called
+references.txt let us first import the
+pandas library and read the tweets data
+set
+extract the features text and airline
+sentiment
+we will iterate through the data set
+using reg x find the relevant tweets
+now we will import the inter tools
+module it returns efficient iterators
+the result is stored in a file named
+references.txt
+let's extract all noun phrases and save
+them in a file named noun phrases for
+left caret airline
+sentiment rightcarrotreview.txt
+here left carat airline underscore
+sentiment right carrot has three
+different values positive negative and
+neutral so three files will be created
+now we will iterate all the leaf nodes
+and assign them to noun phrases variable
+this means that the functions in itter
+tools operate on iterators to produce
+more complex iterators
+using the map function we will get all
+the noun phrases from the text
+putting it into list
+creating a file name in the name of
+review.txt
+great we have now seen how to explore
+and examine the corpus using text
+processing techniques let's quickly
+recap the steps we've covered so far
+one import the data set two extract noun
+phrases this brings us to the end of
+text mining you are now able to
+explain text mining
+execute test processing tasks
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here
+you

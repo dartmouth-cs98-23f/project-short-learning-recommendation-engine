@@ -1,0 +1,371 @@
+in this presentation we will see about
+the database system architecture we are
+now in part one of the database system
+architecture
+from the last few presentations we
+realized the importance of having dbms
+by organizations because data is crucial
+and the volume of data handled by dbms
+is really fascinating because the data
+that is processed by dbms is not just
+the bit of data or bytes of data they
+range in kilobytes megabytes gigabyte
+terabyte
+petabyte exabyte zettabyte yotabyte and
+whatnot
+in the coming future we may also end up
+in more data volume than what is
+specified on the slide so when a
+database needs to handle this much of
+information obviously the main memory
+cannot handle this though the main
+memory is faster in nature but this main
+memory cannot store the database because
+it's volatile in nature at the same time
+the secondary storage devices like the
+hard disk or the ssds the solid state
+drives will also not be sufficient due
+to the increased volume of data then
+what's the solution for this because
+this contemporary world is handling an
+enormous amount of data so obviously we
+are in the need of storage servers or
+data centers or cloud that can handle
+large volume of data the reason why i am
+projecting this is that i'll give you a
+real time example just see facebook how
+much volume of data it is handling every
+day take another server is a whatsapp
+server which is handling an enormous
+amount of data
+every day every minute every second it
+handles a large volume of data at the
+same time whatever we post it is stored
+in their servers let's say you have
+posted your photo in your facebook
+account and later you have decided that
+you don't want that photo to be posted
+so obviously we will be deleting that
+isn't it so when you delete it's just
+deleted from the view of yours and your
+friends
+is it actually deleted from the facebook
+server
+no it will not so whatever we upload
+everything is stored in the servers and
+think about the complexity of handling
+such high volume of data but still our
+technology and servers are able to
+handle this that's the part of being in
+this contemporary world and coming to
+the dbms architecture this is also
+referred as the database system
+structure
+and what we are going to learn in this
+presentation is the part one of the
+database system architecture at first
+let me show you the architecture diagram
+here is the database system architecture
+if you see the diagram we can see the
+users are at the top level then iv users
+the application programmers the
+sophisticated users and the database
+administrators obviously each users will
+be preferring some set of tools for
+their activities and here is the tool
+level and if you see the architecture
+diagram we have two important components
+the query processor part and the storage
+manager part we will come to this later
+and also if you see the databases are
+actually stored in the disk so in this
+example we are assuming that the
+database is actually stored in the disk
+and that's why this storage is referred
+as the disk storage so in the database
+architecture part 1 and part 2
+presentations we are going to
+exclusively focus on all the individual
+components that constitute this database
+system architecture i mean the
+components in the query processor as
+well as the storage manager in part one
+of database system architecture we are
+going to exclusively focus on the
+storage manager and the disk storage i
+mean we are going to focus on the buffer
+manager the file manager the
+authorization and integrity manager and
+the transaction manager also we are
+going to see about the data indices the
+statistical data and the data dictionary
+so let's see one by one in detail so we
+are clear that we are going to focus on
+the storage manager which is this so we
+are in this part and we are going to
+focus on all these managers before
+seeing the managers one by one let's
+understand why do we need the storage
+manager and what role it plays in the
+database system architecture
+basically this storage manager provides
+the interaction between the low level
+data stored and the application programs
+if you see the architecture diagram
+this storage manager provides the
+interaction between the application
+programs that is from the top level and
+the data stored at the low level so here
+is the actual data that is stored and to
+be precise here is the actual data that
+is stored in the database
+actually this storage manager only
+handles all the queries that are
+submitted to the system what do we mean
+by this if you see the architecture
+diagram the query processor processes
+the queries and this will give the
+request to the next level which is the
+storage manager and that is why the
+third point says that this is also
+having an interaction that is received
+from the query processor to the desk
+storage and also this storage manager is
+having the interaction with the file
+manager you may be asking me a question
+we have already compared file system and
+database system and we understood that
+databases have more advantages over file
+system in effective storing and
+retrieval of data
+even though we are saying that it is a
+database system internally it is made up
+of files only but it's not going to work
+as the regular file system rather it is
+going to work differently why because we
+need to effectively store and retrieve
+the data in database management system
+at the same time the various drawbacks
+that we have seen with the file systems
+needs a solution here though we are
+using internally all files but this is
+not going to work as per the file system
+concept it's going to work as per the
+database system concept and also we know
+that only low level data are stored and
+this low level data is actually the raw
+data that are stored on the disk using
+the file system provided by the
+operating system and obviously whatever
+the interaction that we make see we may
+do some insertion or deletion or
+updation whatever it is coming from the
+front end or from the high level those
+data have to be stored in the database
+to be precise it has to be stored on the
+disk only because this database is on
+the disk only so all the raw data are
+stored on the disk and what format it is
+going to use this is going to use the
+same file system format that is provided
+by the host operating system so we are
+clear that if data are to be stored on
+the disk it uses the file system
+provided by the operating system and
+these raw data are provided from the
+users or from the application layer or
+from the top post layer and what about
+the dml commands what do we mean by dml
+commands these dml statements are the
+statements that deals with the insertion
+of data or deletion of data or updation
+of data or sometimes selection of data
+from the databases we know databases are
+going to store the data and data related
+operations are built by the dml
+statements
+example select insert delete update
+nowadays in the last lecture of this
+chapter we are going to focus on the
+dbms languages at that time you will be
+able to understand what is ddl what is
+dml and other languages also we have a
+separate chapter called sql where we are
+going to exclusively focus on the sql
+the structured query language along with
+ddl dml tcl and dcl operations
+i know things will be unclear but for
+now just understand dml is data related
+so when such commands are received this
+storage manager only translates the
+various dml statements into low-level
+file system commands why because the
+internal organization needs to be
+supported by the operating system and
+this operating system obviously will be
+using some file system and whatever the
+data manipulation language commands that
+we give these things have to be
+translated into the low level file
+system commands in simple terms storage
+manager is responsible for storing
+retrieving and updating the data now we
+will see the various managers that are
+there in the storage manager as per the
+architecture diagram we are sure that
+these are all the four components or
+managers in the storage manager part
+number one the authorization and
+integrity manager number two the
+transaction manager number three the
+file manager and number four the buffer
+manager and also as already stated we
+are going to look at various data
+structures the data files the data
+dictionary and the indices
+we will see one by one now but let's go
+to the architecture diagram at first we
+will focus on the first storage manager
+component the buffer manager and this
+buffer manager is actually responsible
+for fetching the data from the disk
+storage here is the disk storage and
+into the main memory and also this
+buffer manager decides what data to
+cache in the main memory i hope you are
+already aware of cache memory in
+computer systems this memory is mainly
+used for faster access
+so buffer manager takes cares of this at
+the same time this buffer manager is
+very crucial in terms of another
+important operation that is handling the
+size of the data we know the databases
+will be larger than our actual main
+memory so this buffer manager will also
+take care of this memory management and
+coming to the second one the file
+manager we know already this is mainly
+for allocating the space on the disk
+storage we know actually the databases
+are already stored on the disk and we
+may be inserting new data or deleting
+the existing data or updating the
+existing data this file manager is
+responsible for allocating the space on
+the disk storage and also the data
+structures we have a lot of data
+structures followed in the disk storage
+and this file manager is used to
+represent the information stored on the
+disk
+and coming to the next one the
+authorization and integrity manager this
+component or this manager is used to
+test for the satisfaction of all the
+integrity constraints that we enforce on
+the database say for example balance
+should not be less than zero in such
+case if any operation that is carried
+out on the database where the balance is
+going to be zero or lesser than zero
+that operation needs to be aborted that
+should not be permitted because we have
+given an integrity constraint that
+balance should not be less than zero so
+all these integrity constraints are
+handled by this authorization and
+integrity manager at the same time
+authorization of data i mean who can
+access what that is also actually
+handled by this authorization and
+integrity manager and coming to the last
+manager the transaction manager and this
+is the very important part because this
+ensures that the database remains
+consistent despite system failures or
+any hardware or software failures at the
+same time this transaction manager
+ensures that the concurrent operations
+carried out on this database are
+actually not conflicting with each other
+i mean concurrent operations are
+permitted multiple users can access the
+shared data item at the same time
+without conflicting each other so this
+is ensured by the transaction manager
+anyway in the next lecture which is the
+part 2 of the database system
+architecture i will elaborate more on
+this transaction manager we are done
+with the storage managers what are all
+the components that we have seen
+we have seen about the authorization and
+integrity manager the transaction
+manager file manager and buffer manager
+before we sign out let's see the various
+data structures used what are all the
+data structures we are going to focus on
+the data files actually this stores the
+database itself here is the data files
+so here is the actual database that is
+residing
+and coming to the next one which is the
+data dictionary we have already seen
+about metadata that is data about other
+data that is stored so these metadata
+information are stored by the data
+dictionary and coming to the third data
+structure which is indices we know
+obviously data are stored in the
+databases and we need to ensure that the
+data are accessed fast
+storage and retrieval are efficient and
+effective and we are also sure that
+databases are handling large volume of
+data in such cases referring to the
+exact data item that we want say our
+data may be in the first location or it
+may be in the last location but it
+should not be the case that databases
+takes a lot of time to process our
+request it should be as fast as it can
+so in such case indices helps us to
+retrieve the data faster anyway in the
+chapter indexing and hashing i will be
+talking about indices elaborately for
+now just have this this is used to
+provide fast access to our data item and
+if you want an analogy this is like
+index pages in our textbook why do we
+need index pages in our textbook suppose
+we want to refer something we need not
+go sequentially to refer that if you go
+to the index file this index file will
+take us to the exact location what we
+are looking for and the similar concept
+is applied on the databases for faster
+access so what we have seen now we have
+seen the various data structures like
+the data files the data dictionary and
+the indices one thing we have left
+what's that the statistical data
+so this part is mainly storing the
+statistics about the data so this will
+also help us to take some decisions for
+managing the databases
+so what we have learned today in part
+one of database system architecture we
+focused on the storage manager and the
+disk storage and already we have seen
+about the various types of users in one
+of our previous presentations so in the
+next presentation we will focus on the
+remaining part which is the query
+processor
+so i hope the session is informative and
+thank you for watching
+[Music]
+[Applause]
+[Music]
+you

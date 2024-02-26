@@ -1,0 +1,1207 @@
+all right well welcome to cs224 I
+recognize most of your faces from cs223
+thank you for coming to the class on the
+first day uh we'll do an introduction
+today a little bit about the
+administration of the course
+um and then we'll start the lesson with
+the material from chapter one usually
+chapter one is an introduction to the
+whole topic that's what it's going to be
+here today so I can say that it's a good
+uh
+you know overview of the material it's
+not necessarily going to be on the exam
+and there will be a simple homework
+probably from chapter one but it's not
+hard it's more to help you get a
+engineer's perspective about computers
+um
+so while we're waiting
+um I guess I'll introduce myself I'm
+will Sawyer I've taught at bill can for
+10 years I'm an American I do speak
+Turkish but I'm not allowed to in the
+classroom as you know please don't try
+to get me to tell Turkish jokes and be
+funny most of the recent students laugh
+is not because my Turkish is funny it's
+because me speaking Turkish I speak it
+in a funny way so it's not do all of
+course but anyway I think if you uh tune
+into my English it is a little bit fast
+it's natural speed but if you tune into
+my English you'll get the tempo if
+you're having trouble understanding my
+language do raise your hand and say Hojo
+can you please say it again or slow down
+hold you or repeat it a different way
+I'm happy to do that the goal here is
+for you to understand it's not for me to
+get up here and run through you know 50
+slides and give a good performance it's
+for you to learn the goal of being here
+is for you to learn so I'm here to
+assist that learning they call me a
+teacher but I don't think that I teach
+so much as I think you learn so I'm the
+help with the learning process that's my
+job
+we're going to use PowerPoint slides
+quite a bit in this course but there'll
+be times when we do some other things as
+well but the opening lecture today will
+be pretty much from the slides I'd like
+to get a class discussion going I'd like
+to ask questions but I've had a hard
+time finding students responding so when
+there's that awkward silence and hoja
+asks a question please don't be afraid
+to be the first one raise your hand and
+say yeah I think this maybe it's wrong
+maybe it's right but here's my opinion
+here's my idea I'll really appreciate
+that that's what we'd like as a dialogue
+and for you to be thinking I've said it
+many times before but I'll say it again
+because it Bears worth saying you can
+watch a lot of movies and not learn
+anything about how to make movies and so
+if you're here to watch a course go by
+you're probably not going to learn very
+much about computer organization but if
+you're participating as an active
+learner I'm sure that you'll learn much
+more so that's the own says
+let's see if we can find our PowerPoint
+slides and begin
+okay I think everybody knows but if you
+go to the course homepages on our
+Department's site you see every single
+course and this is cs224 so here's the
+home page for cs224 for this semester
+like the homepage for 223 the recent
+announcements will be found here
+anything that's important let's go see
+if there's anything important to learn
+oh my goodness there's already
+announcements oh boy it has begun the
+syllabus shows the readings for each
+week and there's already an assignment
+to read chapter one and follow along it
+supplements the introduction that I'll
+be giving in class and to be prepared
+for each week you should do the reading
+in advance of the class next week we'll
+move into chapter two about Assembly
+Language so it should read ahead and the
+textbook for the course is this one the
+computer organization and design book by
+Patterson and Hennessey it's in the
+fourth edition whenever you get a book
+that's in the fourth fifth sixth seventh
+edition that tells you that it's quite
+popular around the world as a textbook
+this is international student Edition
+very reasonably priced top quality top
+shelf best in best in class as far as
+I'm concerned so we've picked a good one
+for you you need to get this one fourth
+edition there are some still some third
+editions floating around among the
+students but that's not the one we we
+have significantly changed from the
+Third Edition please don't use the Third
+Edition all right so that's our first
+little announcements
+schedules will be posted here for myself
+and the other teacher but currently
+they're not right we've got five Tas but
+there's been a little bit of change
+there as well your class section is
+three so we're here on Friday afternoon
+and the office hours will be posted I'm
+not exactly sure if I'll be available
+these hours on Tuesday so there may be
+some updates but the book has its own
+website if you click here you go to the
+website about the book there are
+resources for students including a
+solved example problems the code from
+the book some extra resources lots of
+stuff here that you can get from this
+book's website
+the objectives of the course let's go
+over what are we trying to achieve in
+cs224 why are you here because it's
+required hold you I have to take it
+that's the only important reason no no
+no no there's a lot of things that we're
+going to be hoping to achieve will we
+achieve everyone in every student no I
+don't think so but the goal will be that
+most students achieve most of these
+objectives so I'll let you study these
+on your own time to see what we're
+trying to get but the main idea here is
+to learn about how computers work
+computer organization how are they
+organized what are the structures from a
+hardware point of view and also from a
+software point of view what are the
+structures so this is a the name of our
+textbook is called computer organization
+and design the hardware software
+interface so it's right at the place
+where software and Hardware meet that's
+the that's the focus of our course so
+it'll be both looking up to the software
+layers and down to the hardware layers
+and right at that interface that's where
+the course is aimed at so you can see
+that after we work on
+instruction set architectures then we
+look at processor units especially
+pipeline then we move into memory and do
+cache and then some bus and I O issues
+and then you're going to gain experience
+in the use of Hardware description
+languages and tools for Designing
+computers to be able to explain in an
+informal interview on a project you know
+what you've worked on and why you did
+what you did and practice the skills of
+project documentation and Technical
+reporting so again you might say one of
+my goals in this course is to turn you
+into an engineer Engineers design they
+document they give oral presentations
+they work in teams they do peer review
+all those will be part of our our
+courses approach
+okay the syllabus of the course shows
+what topics we'll be covering every week
+well this is a really weird week because
+it starts on a Friday so I just put
+Friday on to uh next week but it means
+that with Friday and next week you have
+three class sessions and most of the uh
+topics will only need uh
+integer multiple of weeks so therefore
+if this takes one week for the other two
+sections and we have a week and a half
+it means we're going to finish early so
+and the second lecture in each week
+we'll probably be looking ahead to the
+next week's material so today and the
+Tuesday will be Corso review
+introduction to computer architecture
+next Friday we'll already be moving up
+to here the reason is this this section
+is out of sync with the other two
+sections because you we start today on a
+Friday which makes the week weird anyway
+you can see that we're going to cover
+the material from the textbook including
+some appendices in order of the chapters
+one two three four five six and
+inshallah if time allows chapter 7 by
+the end of the course we've not only
+covered
+processors and pipelining and memory
+hierarchies and I O systems then we're
+moving into multi-processors we'll
+actually look at multi-core chips and
+clusters of processors in order to form
+parallel computers that'll be our end
+Target by the end of the course so this
+gives the topics and the readings the
+schedule for the homeworks on the
+projects will be announced separately on
+other web pages I won't try to integrate
+them here but you can see for each week
+of the semester I've written something
+including look at this one spring break
+week first week of April middle class
+take a vacation maybe the weather's warm
+down in the South let's hope so anyway
+the grading policy everybody's always
+interested in in how will the course be
+graded here's what we're going to do in
+order to pass this course you have to
+show a minimum competence in the exams
+any student that doesn't have a weighted
+average of 30 or greater from the
+midterm and final will not pass no
+matter how wonderful your homeworks and
+projects and quizzes are you must show
+that you understand the material oil in
+a proctored exam where you are
+independently thinking and working so
+we're going to have an exam minimum to
+pass
+and then the activities in the course
+which will account for the percentage of
+the grade are homeworks quizzes projects
+the midterm and the final and you can
+see that the exams together 50 and the
+other things are 50 so it's about half
+and half and then
+from the numerical average uh grades the
+students who meet the above requirements
+will then be given a grade in the range
+from a to F and it depends on as it says
+there the classes overall average the
+distribution your personal performance
+uh your effort your attendance your
+participation in the class so those can
+be factors that affect your personal
+grade
+um yeah there's a bunch of resources
+here like there was on the cs223 website
+I won't go through them now because
+they're not of any value you don't
+really know why we need them and what
+they're for but they'll be useful later
+there's a policy statement about
+homework there will be homework
+assignments posted here as they become
+active when you click the link something
+will happen right now nothing happens
+because the first homework's not posted
+um
+and solutions to previous homeworks will
+be always placed in the library on
+reserve soon after the homework is due
+you can go and get the solutions and
+check your work to see how well you did
+project assignments will be based here
+we generally have two projects the first
+one is an Assembly Language programming
+project the second one is a processor
+design project so I'll be grouping you
+up in groups of four or five and where
+you'll be working together first on this
+in teams then we'll reshuffle the
+project teams and you'll form a new team
+and you'll work with that one sort of
+like in companies they form project
+teams do a project then they reform and
+they form a different team for a
+different project
+uh there's an exam policy statement here
+which says what you need to be aware of
+when you come to our exams in the
+previous year's exams are generally
+posted but then we take them down and
+they're not posted so but you can I'm
+sure find them anyway if you look so
+we'll put up just before the midterm
+we'll put up the last two years midterm
+exams as samples to see what kind of
+questions to expect and then just before
+the final we'll put up the last two
+years final exams to give you an idea of
+what to expect and then as we did in
+cs223 the grades for homeworks quizzes
+projects and exams will be posted on
+links here uh probably by section
+and then at the end the lecture slides
+so the lecture slides will be posted
+here
+all right are there any questions about
+the sort of administrative aspect of the
+course
+um anything that you want to ask about
+how we're going to be running the course
+not the content but the administration
+of the course
+policies and I don't know procedures
+okay
+if you don't have them now maybe they'll
+come to your mind later and you can send
+me an email as you know I try not to do
+too much course Administration in the
+class we want to focus on the material
+of the learning of computer
+organizations so I try to keep the admin
+outside class time this is the biggest
+section of time that we'll give to
+Administration in the whole semester is
+this little introduction here because I
+think the class time should be spent on
+content you can read the announcements
+that's a lot of administration if you
+have questions you can email me and I'll
+respond we have a good group of Tas
+including PhD students and some top
+level Master students and people that
+took this course before and very much
+enjoyed it and they'll look forward to
+you visiting them in their office and
+you probably will want to do that when
+the projects come because you'll need
+their help
+any any questions at all
+okay and oh wait maybe yeah yeah almost
+thing okay then then there aren't any
+all right then let's start the material
+let's begin chapter one and an overview
+of computer organizations
+everybody okay all right let's do that
+okay
+um I co-teached this course with um OS
+John ostirk he teaches section number
+one and number two and I'm teaching
+section number three so it's a
+well-coordinated course if for any
+reason you need to transfer sections
+you'll be getting excellent instruction
+from Ocean in the other two sections if
+for some reason you have to miss and you
+want to get the material live uh you can
+go to the other section and get it but
+there's also the material will be on the
+videotapes which you'll be able to see
+and also the slides are posted on the
+web so there's lots of opportunities
+um for you to get it if you miss it okay
+I don't encourage you to miss I
+encourage you to come to class all the
+time but in case you missed the class
+there's opportunities to see the lecture
+or get the material or even get it live
+in the other section we go first and
+then the other two sections meet next
+week so this if you missed today for
+example simple you could come later
+you'll have that advantage throughout
+the whole semester your section is just
+a little ahead of the other two sections
+so if you miss then you can go to the
+other sections and and hear that same
+material being taught
+okay here's a imposing slide of the
+course Contents I think this is actually
+just taken out of the catalog the
+catalog kind of what is a student
+expected to learn if they get into cs224
+and you can see we're going to have an
+overview and then we're going to talk
+about something real important called
+instruction set architecture Isa and
+we'll spend quite a lot of time maybe
+two three weeks on instruction set
+architecture here the word architecture
+sounds like Hardware here the word
+instruction sounds like software and
+that's exactly it the hardware and the
+software coming together at this level
+we'll look up designing an instruction
+set architecture which essentially means
+designing a processor we'll look at two
+basic uh families of architectural
+approaches complex instruction set
+computers and reduced instruction set
+computers then we'll work down on the
+Assembly Language level and we'll do a
+lot of work at low level software and
+then how to translate those and how to
+startup programs even including
+compilation so we'll look a quick look
+at compilers then we'll move into
+arithmetic and how you do arithmetic in
+the computer so we'll look at computer
+arithmetic what units are needed in
+order to do the computer arithmetic
+including floating Point numbers and
+their implementations so after we've
+gotten the arithmetic then we'll head
+into the full processor design so this
+is for the ALU you know arithmetic logic
+unit once we got that then we'll put it
+together in a full processor design and
+having already surveyed what kind of
+design considerations and the options
+then we'll actually design a processor
+we'll design the data path we'll design
+the control we'll Implement them then
+we'll pipeline it and speed it up we'll
+look at difficulties called hazards and
+issues with pipeline design and then we
+will even look at how to predict
+branches in order to get further
+performance Improvement and how to
+handle exceptions which are all
+sometimes called interrupts then after
+we've done all that you can see that's
+about 70 of the course then we're going
+to work on the other parts of a
+computer's architecture which are memory
+and input output so then we'll spend
+time on the memory hierarchy principles
+and structures of memory uh performance
+dealing with caching dealing with
+virtual memory dealing with segmented
+memory dealing with paging some of those
+topics actually are very important in
+operating system design so that's why we
+require cs224 before taking the
+operating systems course so you'll get a
+good understanding of computer memory
+but not obviously as deep as computer
+processors then we move lastly into
+input output devices performance
+interfacing buses and things like that
+so how to connect peripherals to the
+computer and then lastly in the final
+week we'll be looking at
+multi-processors and multi-computers
+including clusters and multi-chip
+multi-core processors
+all right so
+basically you know everything's on the
+website go there and look your questions
+are answered here's the layout of the
+distribution of the of the points to
+pass you have to make two exams exam
+grades have to be above the minimum and
+you have to have overall course
+performance that's passing
+all right that's um
+let's begin now uh with the question
+um you know what do we mean by a
+computer
+there's different types of computers
+different uses of computers different
+manufacturers so it's a pretty broad
+category when we talk about computer
+don't just think oh I know what a
+computer is it's this thing right here
+you know a desktop or a laptop because
+that's too narrow of a definition yes
+you know what one particular kind of
+computer is but we have desktops laptops
+servers embedded devices which are
+computers lots and lots of different
+kinds of each of these we have different
+uses of computers you realize there's
+computers in automobiles computers in
+portable electronic devices computers in
+uh lots of things different
+manufacturers know they're not all made
+by Intel or just AMD and different
+underlying Technologies and different
+costs it's a really broad category and
+our goal in this course is to expand
+your understanding of computing and
+computers much bigger than perhaps you
+have thought it's not just the thing
+that you can put in your chanta and take
+with you to school and you know read on
+an airplane or a bus the best way to
+learn about computers is to focus on a
+specific instance and learn how it works
+at the same time while teaching general
+principles so you have both a specific
+and deep example and you also have a
+broad set of understanding to apply
+through a computer so what we're going
+to do is learn general principles and
+historical perspectives about how
+computers have evolved as computer
+Architects and computer Engineers have
+brought them to the place we are at
+right now but at the same time we'll be
+looking at a specific instance of one
+computer architecture
+now why would you want to learn this
+stuff I don't really want to it's just
+because it's a required course I hate
+Hardware you know that may be your
+answer I hope I can persuade you to
+Vasquez from that some positive answers
+to that question are the following if
+you want to call yourself a computer
+engineer you have to understand
+computers right if you're a bridge
+engineer you understand Bridges if
+you're a traffic engineer you understand
+traffic you're a chemical engineer you
+understand chemistry so if you're a
+computer engineer you must understand
+the computer deeply widely completely
+and well second thing is you want to
+build software that people can really
+use and if it has terrible performance
+then it won't be used and so your
+software will not be a valued in order
+to satisfy customers needs there must be
+adequate performance people are
+impatient and they push the button they
+want to see some response so if you
+don't understand the relation between
+software and Hardware your performance
+will be probably poor and then the third
+thing is and this happens a lot computer
+Engineers are often called upon to give
+advice or even make a purchasing
+decision should we buy this Hardware or
+should we buy this Hardware how much
+money is it worth to spend to get that
+we have this budget what's the best
+performance we can get to meet our needs
+for that so you have to understand
+Hardware because you're involved in
+purchasing it either advising or
+actually making the decision yourself
+um now both hardware and software are
+going to affect our performance when a
+program runs on a computer of course the
+software's algorithm and it's Big O and
+the efficiency of the code and the
+compilation those will have an effect on
+it but so will the hardware I've listed
+here a number of factors that determine
+the performance first is the algorithm
+and it actually affects the number of
+source level statements and then the
+language and compiler and architecture
+together determine from The Source how
+many machine instructions will be
+executed notice you don't write machine
+instructions so there's already been a
+transformation from Source level down to
+Machine level Source being things like C
+plus plus and Java high level languages
+and then the processor in memory will
+determine how fast each individual
+instruction is executed and the i o and
+the number of cores will determine the
+overall system performance so we've
+actually got one two three four
+different factors in system performance
+and I think you can see that it's like a
+chain if any one of these is the weakest
+link that will limit the performance if
+you have a bad algorithm with a bad Big
+O then you're not going to be able to
+say save it even if you have the world's
+fastest Hardware on the other hand if
+you have the world's greatest algorithm
+but you've got problems here or here or
+here you'll slow it down and you'll
+waste the performance of the algorithm
+so optimizing compilers efficient
+algorithms high performance
+implementation and architectures and
+multi-cores are all ways to make things
+go faster and of course we'll be looking
+at this this and this in this course
+this is other courses you get that in
+algorithms and your software engineering
+and programming courses
+all right now the five components of a
+computer is classically understood are
+the processor which contains both
+control and data path so you see that
+those two here the memory and the input
+and the output so sometimes it's reduced
+to three processor memory Io Io actually
+means both of these processor of course
+means both of these and we've got the
+control which is giving the orders
+that's the brain we've got the data path
+here shown as a kind of a production
+line you know taking care of data and
+actually doing things with the data so
+there's like the body
+notice that memories in the middle
+things from the processor that have to
+go to IO go through memory memory feeds
+or receives from the processor and it
+also feeds and receives from i o input
+as things coming in output is obviously
+things going on these little boxes are
+data okay and you can see that they have
+all different shapes and sizes for Io
+but they're much more regular when
+they're inside the processor they're
+they're the right size for processor to
+be able to handle and so here's a good
+equation data path plus control is the
+processor processor sometimes called CPU
+Central Processing Unit that's an old
+term from my days but you still hear
+people saying CPU but these days a more
+modern word would be processor
+are there any questions about this this
+is probably one of the more important
+slides that we'll see this semester
+because it gives the picture of what is
+a computer
+it's a collection of the processor which
+itself is a collection of two major
+units memory and input output
+it actually shows a kind of a functional
+model of what it might do five classical
+components
+um
+input devices are things like mouse and
+keyboard but many other as well output
+devices are things like displays and
+printers but many more as well memory
+are things like the jump drive that I
+plugged in here disk drives dram static
+Ram CDs all kinds of things can be used
+for storage networks are some of the
+components connected to computers and
+our primary focus in this course as I
+said earlier is going to be the
+processor unit itself that's going to be
+our primary focus we'll have a secondary
+focus on memory and IO but those are
+only the final 30 percent of the course
+we really want to understand deeply the
+processor because it's the you might say
+this the the actor inside the computer
+it's implemented using billions of
+transistors as you know and so it's
+impossible to understand it by looking
+at a low level so we're going to do the
+classic engineering thing we're going to
+use abstraction we're going to take a
+higher level view if that's not high
+enough we'll go to a higher level view
+we'll choose the view level in order to
+get the right trade-off between
+understanding and detail too much detail
+blurs our understanding not enough
+detail also limits our understanding so
+the great thing about abstraction is a
+modeling approach that allows you to
+look at and understand the level that's
+appropriate for your needs so
+abstraction omits unnecessary detail and
+helps us cope with complexity it's a
+very key engineering
+approach or engineering tool to abstract
+and therefore model at the right level
+um
+so there's a lot of abstractions in
+understanding a computer and this course
+is going to deal with quite a few of
+them okay let's just toss out some
+application Software System software
+Assembly Language software machine
+language programs architectural issues
+sequential logic and finance State
+machines combinational logic and
+arithmetic circuits Boolean logic down
+to the bit level transistors use to
+build the logic gates semiconductor and
+silicon used to build the transistors
+properties of atoms and electrons and
+Quantum Dynamics to make the
+semiconductor work okay so did you see
+what there there's a nice stack of
+abstraction and every layer is a way
+that you could look and say I want to
+understand computers I'm going to look
+at Quantum Dynamics and atoms oh my
+goodness or I want to understand
+computers I'm going to look at a few
+billion transistors or I want to
+understand computers I want to just look
+at the application software level huh
+it's a spreadsheet oh computers work
+with numbers computers let me enter my
+words and write my letters that's a very
+high level abstraction it hides all this
+we've been as you know working here at
+the level of sequential logic and
+combinational logic in cs223 and this of
+course the subset of that now we're
+going to start to move up to some of
+these levels here and here and here okay
+so I say our course kind of deals in
+this range right here so I'm overlap
+with 223 and some new stuff for 224.
+you've got plenty of courses that work
+at this level and moving down below here
+transistors semiconductors we're moving
+toward electrical engineering and
+physics okay so that that will be their
+domain to model at that level so we're
+in the middle of this stack with
+software engineering here
+Computer Engineering especially the
+hardware and and computer architecture
+here and then moving into the but this
+is a set of abstract layers each is an
+abstraction built upon the one below
+all right now let's make it into a
+diagram form that was a stack of words
+this is a stack of blocks in a block
+diagram same thing though
+um
+application programs sit on top of an
+operating system they need that
+operating system to operate the
+operating system needs the compiler and
+the firmware which are again software
+okay now below the this Blue Block in
+the middle is the implementation in
+hardware and you can see that I've got
+an instruction set processor I've got an
+i o subsystem to supporting that with
+logic design supporting that with
+circuit design supporting that was
+layout so once you know what you want
+you can implement it going this way and
+this right here instruction set
+architecture that blue box is the top of
+what we call computer architecture so
+computer architecture is both the
+implementation of the hardware
+and the model of what it will do the
+architecture I mean this building has an
+architecture and it also has an
+implementation the architect designed it
+and then after that the building company
+came and built it
+but they didn't just build it randomly
+they built according to a design so that
+the building would have what the
+functionality which is needed to support
+instruction and labs and administration
+and offices and so on
+security Etc in the same way this blue
+layer
+is the key it's the middle of the this
+software depends upon a reliable
+interface here for the instruction set
+architecture the instructions that
+architecture once designed determines
+how you will Implement so actually this
+is going to be a key Focus for our
+courses this middle layer or the
+software touches the hardware
+that's the reason for the choosing this
+textbook the software Hardware interface
+here's a picture of it in a different
+way
+these two guys are acting or dancing or
+sword fighting or whatever they're doing
+and they're on a stage the stage is the
+platform and it's called the instruction
+set you cannot have software if you
+don't have an instruction set because
+the set means we will choose this
+instruction and then we'll follow it
+with this one then we'll follow it with
+this one and so you build a program by
+choosing instructions you put the
+instructions together in an order which
+implements the algorithm that you want
+to have in your program so an
+instruction set is the resources from
+which we will choose the instructions
+that in are needed for your program or
+your program or your program or my
+program so it's the resource so the
+instruction set is the model of the
+computer oh it has a branch oh it has an
+ad oh it has a shift I can build
+programs so the software needs to have
+this much of a view what are is my
+instruction set but the instruction set
+of course is implemented by a Hercules
+which is our Hardware this is the
+implementation of it once you have an
+instruction set that determines the
+hardware you must have in order to
+supply those instructions if you build
+hardware and doesn't have a shift then
+it's not part of your instruction set so
+understand once again this is the key
+layer the software understands it as a
+model depends on it and runs on it but
+it's implemented by Hardware so together
+this is our computer architecture this
+plus this
+are there any questions about this
+concept here
+okay trying to get the idea different
+ways you know pictures block diagram
+words
+key abstraction is the instruction set
+architecture
+okay now here's a verbal definition of
+it let's see if we can work with this
+now and some people are multi-mode
+Learners others have different modes
+this is a verbal way now to try to
+approach the concept
+the ISA instruction set architecture
+sometimes just called the architecture
+because we're not talking about bridges
+or Highway systems or you know buildings
+we're talking about computer
+architecture the ISA or the architecture
+is the abstract interface that's the key
+it's an interface between what the
+hardware and the lowest level of
+software that encompasses all the
+information necessary to write a machine
+language program including the registers
+the instructions the memory the i o and
+everything it is the interface on which
+the lowest level software can run and it
+provides all that that software needs to
+know so it enables various
+implementations which have cost and
+performance differences to run the same
+software
+now that means that if you specify the
+instruction set architecture
+the same software can run on it even if
+you implement it that way or you
+implement it that way
+now what's the classic example of a
+common Isa implemented in two very
+different ways
+that all of us are familiar with every
+time you touch a computer you have an
+example of this
+the programs run no matter whether you
+buy it from
+manufacturer X or manufacturer y
+what are we talking about
+if I open up this computer what will I
+find inside for a processor
+what will I find inside
+will I find Intel inside
+maybe but maybe not
+what else might I find inside
+AMD now do I need to ask the computer oh
+this is an Intel processor okay I got to
+use these programs oh no it's AMD those
+won't work I got to use these programs
+is that a problem
+no why not
+because there's a common instruction set
+architecture
+which the programs run on but the two
+companies have implemented their
+processors in different ways
+exactly what it says here it enables
+implementations of varying costs have
+you been to buy a processor lately in
+those prices am these prices are
+different varying performance been to a
+website lately and seen performance
+claims and performance measurements
+they're not the same they're not
+identical
+they have different number of
+transistors and different layouts and
+different everything internal
+organizations but when it comes to
+dancing on the stage the stage is the
+same your software runs no matter
+whether it's one or the other okay now
+that takes us right back to this one
+here
+take out this and put in a different one
+as long as it does this we don't care
+that's a really key concept
+you can Implement in a different way
+let's go back another slide
+back to this one okay again the
+architecture
+boundary with the software is here so if
+I change all this but this still knew
+this still implements the same
+architecture no problem everything's
+fine
+that's
+actually quite significant isn't it
+what does it mean for a company like
+Intel
+what's the consequence of that
+significant
+statement that we just made what's the
+consequence for a company
+okay let me ask it again your Intel and
+you know that out there there's six
+billion human beings that are running
+you know their code on your architecture
+does that mean that you can never change
+your chips for the rest of your
+company's life
+nothing can change
+doesn't mean that what does it mean
+it sounds like it means we can't have
+innovation
+is that true of course not Intel is a
+very Innovative company so how does
+Intel manage to innovate
+yes
+right right exactly they can make this
+faster cheaper lower power than after a
+while started adding multiple cores Etc
+et cetera the other thing that they've
+done all companies do this they say look
+we're keeping this the same but we're
+going to add a little more and they they
+extend it but they don't change the core
+if they did software would stop running
+oh no it doesn't work what the new Chips
+don't run the code I've been using this
+code for eight years I love my games I
+love my Graphics I love my office set it
+means it doesn't work uh no sorry it
+doesn't work you have to get another
+version of the software no thank you I
+won't buy chips if they force me to
+change all my software I don't want to
+have to have a processor change Force an
+entire software change too at least if I
+can avoid it that would be very
+disruptive to my organization to my
+company I think if you're a bank they
+say we've got a great new server it'll
+be awesome you'll get much better
+performance and your customers will love
+it it's secure and it can't be hacked
+into great how much does it cost what's
+this performance wonderful oh just
+there's one problem none of your current
+software will run on it you'll have to
+rewrite all your programs uh no thanks
+I'll find somebody their vendor see this
+this idea about instruction set
+architecture is very very important we
+don't want to make existing software
+obsolete that would be a horrible thing
+yes
+architectures
+um is it like confliction between
+their instructions that architecture is
+different
+yeah there's been a there's been a
+inevitable pressure on
+yeah okay that's exactly the issue that
+we're talking about it's not pleasant it
+is it's not nice to have to say oh my
+old programs don't work on this new
+architecture very difficult choice to
+say sorry guys we're taking not this
+away we're taking this away and you
+can't dance anymore because the new one
+isn't going to work you have to learn a
+different dance that's not very nice
+yeah companies that do that take big
+business risk and they can sometimes
+lose customers as a consequence of it um
+yeah the only thing you can do in that
+case is make the upgrade painless or as
+little painful as possible
+um otherwise people say that's it I'm
+not dealing with them and go over here
+or not or not upgrade or whatever
+there's there's a number of factors
+we'll talk about in this course
+um about that all right let's move on
+now the combination of that Isa the
+basic instruction set and the operating
+system interface together is called the
+application binary interface so right
+where the operating system has a binary
+interface to the ISA we call that the
+ABI and that's the user portion of the
+instruction set plus the operating
+system interfaces that are used by
+application programmers and it defines a
+standard binary portable across all
+computers in other words the ISA plus
+the operating systems support that is
+used by application programs if you
+piece them together now that can be
+portable and programs can be portable
+across all systems notice it's not just
+the hardware because programs are
+calling on they're running on the
+hardware but they're also calling
+operating system low-level functions for
+support and together that pair is the
+ABI application binary interface
+all right now
+back in 64 which is now what 45 years
+ago
+um three greats amdahl Blau and Brooks
+also famous each in their own right said
+the attributes of a Computing system as
+seen by the programmer notice the
+programmers looking hey look at this
+floor I'm I'm walking on
+um are the instruction set architecture
+what are those attributes well it's the
+structure and the functional behavior of
+the computer as distinct from the
+organization of how the data flows and
+how it's controlled The Logical design
+and the physical implementation distinct
+from different not that in other words
+the high level conceptual structure and
+functional Behavior not the
+implementation this says organization
+it's not that as distinct from any
+different from so back in 45 years ago
+they realized that the instruction set
+architecture is as the programmer sees
+the computer not as the designer sees
+the details okay so the ISA is going to
+include these things as a programmer at
+the low level you need to know
+how much storage have I got how is it
+organized what data types are provided
+for by this machine
+um how do I encode and represent
+instructions uh what is the instruction
+set what are the op codes that I can
+choose from you mean you do have shift I
+mean you do have floating Point
+operations great you mean you don't have
+you know whatever and there will be some
+and there's some that you didn't choose
+to include how do I address the items
+um or the instructions and and and uh
+what exception handling is visible to
+the program exception handling is when
+there's an error or an interrupt or a
+problem some of that's invisible but the
+part that's visible to the programmer
+also can everything is of this list
+that's visible to the programmer is
+called our Isa all right
+um
+now again Maura yesterday
+it's pretty important you can tell
+because I'm staying on it the
+instruction set architecture is a is a
+crucial maybe the most important
+abstraction between the hardware and the
+lowest level of software and the reason
+it's so important is it standardizes
+the interfaces the machine language bit
+patterns it suddenly defines the
+computer without telling all the details
+below it it tells the software here's
+what you have here's what you need to do
+and B to run on this computer the
+advantage is you can have different
+implementations of the same architecture
+Intel then and Intel now you know you
+can upgrade and also Intel versus AMD
+you know once you have an architecture
+and that's not the only example but
+that's the obvious one that we all know
+about once you have an architecture you
+can have different implementations of it
+the disadvantage is and it was raised
+here or is that your name yeah we raised
+it that sometimes it can prevent new
+Innovations because you're staying
+conservative to your code base and you
+don't want to leave anybody behind and
+so it can prevent innovation in some
+ways unless you change the ISA and some
+common instruction set architectures
+isas are as you will know
+ia32 and now IA 64 Intel architecture 32
+that's the one AMD and other
+manufacturers have to follow if they
+want to be running that code powerpc
+architecture mips architecture spark arm
+and many others is there only one
+company making this is there only one
+company making this is there no multiple
+sources with different implementations
+they come compete with each other so
+that's the great thing about an
+architecture it just says here's the
+plan see how you can realize it here's
+the here's the platform you implement
+and some companies will have better
+designers and Implement better than
+others
+all right let's take a really simplified
+instruction set architecture okay
+this is the mips ISA very simplified for
+the computer programmer to understand it
+what does the computer programmer
+understand from this well I've got 32
+registers that I can put data in and
+keep in as temporary storage I've got a
+another one called program counter and a
+high and a low register so the grand
+total seems to be 35 registers
+I've got some instructions loads and
+stores those go to and from memory I've
+got some computational instructions add
+subtract multiply divide I got jumping
+and branching instructions I have some
+floating Point instructions for handling
+real numbers I have some memory
+management and some special instructions
+they have specifics but I don't want to
+show them to you right now so I've got
+these are my instructions these are my
+data storage resources other than main
+memory of course and then the
+instructions come in three formats so
+when I have a 32-bit instruction
+it's either the format where the op code
+is followed by one two three registers
+a source another source and a
+destination and then there's a shift
+amount and a function field or the op
+code is followed by two registers and a
+16-bit immediate field or the op code is
+followed by a very long jump Target
+Field okay so only three basic
+instruction formats
+six instruction categories with some
+members in each category and a view of
+the storage so you might say
+here's where the data can be and here's
+what I can do with the data in the
+instructions and here's what the
+instructions have to look like wow you
+just hold you you scared us with all
+those slides about Isa we thought it was
+going to be core kunch hey it's not too
+bad that's a simple Isa it's what the
+programmer needs to know at the low
+level to run machine instructions to run
+machine instructions I think you all
+know don't you that C plus plus
+instructions don't run on the computer
+Java instructions don't run on the
+computer there's some levels of
+translation to get down to the
+instructions which do run on the
+computer
+you know you know that I'm sure that in
+the cs101 you talked about that
+so
+I think that's a good place to take a
+break so why don't we have a little you
+know 10 minute break here in between the
+two lessons and enjoy you know some
+fresh air and a glass of water or a
+stroll or a candy bar and we'll come
+back in 10 minutes okay so we'll see you
+then

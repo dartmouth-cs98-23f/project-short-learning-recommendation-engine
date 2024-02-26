@@ -1,17 +1,1 @@
-################# BEGINNING RUN: TIME: 2024-02-25 03:07:05.209159 #################
-stdout: Error validating inference output: 1 validation error for VideoContent
-sections.0.content
-  Field required [type=missing, input_value={'title': 'Section 1: Int...'Container Management']}, input_type=dict]
-    For further information visit https://errors.pydantic.dev/2.5/v/missing
-
-sterr: Traceback (most recent call last):
-  File "/home/ubuntu/InferenceTest1/rec/inference/pipeline/inference.py", line 24, in <module>
-    PINECONE_CLIENT = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
-  File "/home/ubuntu/.local/lib/python3.10/site-packages/pinecone/control/pinecone.py", line 95, in __init__
-    self.config = PineconeConfig.build(api_key=api_key, host=host, additional_headers=additional_headers, **kwargs)
-  File "/home/ubuntu/.local/lib/python3.10/site-packages/pinecone/config/pinecone_config.py", line 12, in build
-    return ConfigBuilder.build(api_key=api_key, host=host, additional_headers=additional_headers, **kwargs)
-  File "/home/ubuntu/.local/lib/python3.10/site-packages/pinecone/config/config.py", line 45, in build
-    raise PineconeConfigurationError("You haven't specified an Api-Key.")
-pinecone.exceptions.PineconeConfigurationError: You haven't specified an Api-Key.
-
+################# BEGINNING RUN: TIME: 2024-02-26 03:13:00.097547 #################

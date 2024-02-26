@@ -1,0 +1,1617 @@
+[Music]
+so for uh those of you joining us uh
+we're gonna get started maybe in about a
+minute or two if you're wondering why
+the olympics music is playing um
+it was because
+we thought it'd be funny to have some
+background music so i'm going to leave
+that playing for another minute or so
+just wait for stragglers to join us
+my
+[Music]
+[Music]
+all right
+welcome to uh folks that are joining us
+today
+uh thank you so much for uh meeting us
+in this session this is a session that
+is going to run for an hour uh it's
+called human computer interaction and
+user interface design
+it's hosted by me my name is tony tang
+i'm an associate professor at the
+university of toronto and
+my colleague uh if you want to introduce
+yourself
+hi everyone i'm anastasia kuzminik i'm
+also professor at the university of
+toronto uh doing research in human
+computer interaction
+great and this is so this is the second
+session today for uh infocon 2021 so uh
+hopefully you uh have been we're
+involved yesterday and saw a couple of
+sessions there and uh of course just as
+a reminder to you uh the sessions
+continue on uh through the day today and
+into tomorrow as well basically for the
+whole day so like if you aren't getting
+enough of school right now you can uh
+you can continue to sign in from eight
+to five o'clock uh pacific time uh for
+another eight hours of great content
+from different professors and faculty
+members uh uh
+in i schools across
+uh certainly across
+the
+north america no it also looks across
+the world so that's really really cool
+if you join the session just before this
+one that is called that was called ux
+and ui design careers uh uh hosted by a
+colleague of ours uh mark twydale um
+unfortunately at least i didn't attend
+the previous one because i didn't
+register in time so i don't i'm not sure
+if anastasia did i have no idea how much
+of the content is going to overlap
+however i'm going to throw myself out
+there and just say that i think none of
+the content is going to go overlap uh at
+least not really because ours is going
+to be way way better all right so um
+what's going to happen today is i'm
+going to give just a kind of a 20 minute
+kind of primer if you will on
+what we think about is user experience
+design and
+not really talk about our program per se
+but just kind of give you a hint about
+some of the things that you would be uh
+learning about and thinking about if you
+were part of a high school that had a
+user experience design program
+following that anastasia is going to do
+uh
+can remember if you wrote 27
+27 minute talk ish minute seattle talk
+and i'm gonna show you how um academic
+research informs design and show you how
+our studies might look like um
+and things like that
+great
+so i think we are i i i think we're open
+to questions through so if you've got a
+burning question uh even if it's not
+burning but just kind of like a minor
+twitch uh please uh please please oh pop
+up your hand or type something into chat
+uh i can tell you as an instructor
+during these coveted times it is uh
+excruciating uh talking to my computer
+screen and a bunch of icons so if
+there's something i can talk
+at or respond to that feels a lot lot
+better so please feel free to ask
+questions at any time
+we're more than happy to respond and
+don't worry we'll figure out how to make
+up that time a little bit later okay so
+uh if if there's nothing else i think
+that's basically housekeeping i'm just
+going to get going here and do the thing
+where i say okay let me share my screen
+and fuss around with this until i figure
+it out here so
+um
+screen is sharing we all see that it's
+okay anastasia great okay so
+this is the first thing that i like to
+share at the beginning of many of my
+classes i think this is a hilarious
+example
+so uh this is a story uh actually now
+each year gets older and older but this
+is a story from about six years ago now
+i suppose
+and the headline is ford recalls suvs
+because drivers are accidentally turning
+them off
+and this is the console i'd like you to
+take a look at this and to try and think
+about what's going on here what's going
+on that makes drivers actually
+accidentally turn
+this uh suv off and i will give i don't
+know a virtual high five to the first
+person that can figure this out really
+really quickly so i'm going to give you
+i don't know
+10 seconds of awkward silence if you
+think you've got it feel free to
+populate that in the chat
+in the meantime i'll stare at you
+quietly
+okay that is far more awkward in real
+life than it is uh quietly in my office
+so um i'm gonna assume that you may have
+figured this out or you may not have but
+i'm gonna kind of walk you through
+what's going on here so this is the
+console dash right so this is where you
+would play with your radio and stuff
+like that for a car and one of the
+things that they did in this suv was
+they were being very innovative and
+decided instead of having any sort of
+stick shift control to to go from
+parking to reverse to neutral and so on
+they decided to make them into buttons
+along here so you can see parking uh
+reverse neutral drive and this is the
+sport
+setting not quite sure what the sport
+setting does but that's the sport
+setting right there and underneath
+you'll notice right here this is the
+engine start stop button and so what was
+happening with this vehicle is that the
+start stop button was right there and
+people were essentially when they were
+kind of reaching over they were driving
+they're like oh i need some sport mode
+here they'd reach over hit the button to
+to try to start sport mode but they
+weren't looking because they'd be
+looking up there and or their finger
+would slip and then it would actually
+turn their car off while people were out
+driving the vehicle which is uh if you
+can think about situations where you
+might be wanting to switch into sport
+mode kind of dangerous right
+uh
+and so you know for me as somebody who
+thinks about user experience design who
+thinks about these experiences that
+we're designing for people i actually
+think that for me i'm actually you know
+i'm i'm a little offended by the the the
+title here because i think this um this
+title of this article uh as perhaps
+descriptive as it may be actually um
+ascribes the blame to people who are
+driving the car right it describes blame
+to drivers but to me this is actually a
+design problem so if i were redesigning
+this uh this title what i would say is
+ford recalls suvs because poor user
+experience is creating dangerous
+situations because to me the fault
+should uh lie in the people that
+designed this thing not so much uh the
+people that are driving the cars
+uh so the title of this talk is called
+the primer on user experience design and
+human computer interaction what i'm
+going to do today is spend a lot of time
+talking about these little examples
+these toy examples that i've seen in
+everyday life and talk about how i think
+they kind of help us to understand why
+certain experiences are designed poorly
+and what they say about how we should
+design things
+objects tools or things that people use
+in in better ways
+so to me bad design is absolutely
+everywhere
+and in fact one of the bad things about
+kind of
+doing a program in user experience
+design is that you learn about what good
+design ought to be and so all you see in
+everyday life is how everything is
+terrible um on the left there uh if you
+are a guy that uses uh public uh
+washrooms you'll understand why this is
+a challenge if you are not then i will
+describe the situation essentially this
+would be a very uncomfortable uh urinal
+situation to use uh to pee in um
+particularly if there was somebody else
+who was thinking about peeing next to
+you really needed to go it's just
+ultimately not a lot of space the
+example on the right is also a bathroom
+bathroom example
+this is essentially an automatic faucet
+and essentially it it is it this is a
+situation where they decided to put up a
+sign because it wasn't clear how to use
+this thing right so it tells you that
+it's an automatic faucet it explains you
+that to turn it on you need to walk up
+to the sink um
+uh and to turn it off you walk away from
+the sink so don't worry this thing is
+going to turn itself off i think the
+other thing so you know here's a sign
+that tries to explain how to use the
+thing right um i think the other thing
+that's really interesting about this
+example is that it says black clothing
+does not operate faucets like and
+as a former engineer in a previous
+version of my life i can understand why
+that would be the case but this is just
+horrible right so if i'm wearing black
+clothes like it doesn't work but
+actually if you kind of tease apart the
+language there it doesn't make a lot of
+sense either because to turn on and off
+you walk up and back but the clothes
+don't do that so anyway i think these
+are uh these are examples of of poor uh
+user experience designs
+i'm gonna show you this video that i uh
+that i watch this is munchies this is a
+a food uh a food uh food youtube channel
+that i like to watch anyway i just saw
+this clip the other day i thought it was
+really funny and kind of on point you
+will not be able to hear the audio um
+but what i'd like you to do is focus on
+this person right here and to think
+about what's gonna happen as she tries
+to go through that
+that door there
+okay
+so if you are like me if you are like
+her you have been in these kinds of
+situations before where you're trying to
+go through a door and for some reason it
+doesn't work quite the way you expect
+these are tiny little moments in your
+life but if you accumulate all those
+tiny moments across your life and across
+all the people's lives that will go
+through that door you can kind of start
+to tally up how many instances of
+displeasure this causes and potentially
+how much time this wastes um and
+potentially you know maybe how much food
+is wasted as they kind of exit this
+place so what's happening of course here
+is that as she's trying to leave she
+tries to push the door and it doesn't
+work and uh and and everybody's laughing
+at her and it's really funny but if you
+think about what she's doing what she's
+doing actually makes perfect sense this
+type of handle is the push handle she is
+doing the right thing or at least the
+way that the the the um the object is
+telling her to do it she is doing the
+right thing and so when it doesn't work
+it's kind of weird
+you'll notice on the other side of the
+door that's the side of the door that
+we're sitting on um we actually see this
+handle right here which is a pull handle
+there's no question about it this is the
+pull handle and of course here again is
+a sign
+that is written there that says oh from
+here you need to push and so a couple of
+insights here um one is that often when
+you see a sign it's because the tool
+itself or the object itself is not doing
+a good enough job of explaining exactly
+how the thing ought to be used and so uh
+people that use the environment are like
+oh i guess we gotta explain kind of how
+it's working here or how it's supposed
+to work right
+okay so i feel like i'm definitely doing
+the prof thing of just belaboring these
+kind of ridiculous little examples and
+so if you don't enjoy that then now's
+the time to sign up otherwise i'm gonna
+keep going on these kind of ridiculous
+little symbols uh these little
+ridiculous little examples um this is uh
+in in the in the uh in the sort of
+academic uh uh context this is what we
+call a signifier so the way in which the
+door handle is shaped is a signifier and
+it signifies a particular way of
+interacting with the thing and what we
+would say here is that the design
+problem is that the signifier is
+actually misleading it doesn't actually
+inform the person how to use it properly
+and
+you'll know as a person that goes
+through doors you're not actively
+thinking about this it's almost
+unconscious you're just like oh that
+handle okay this is the kind of thing i
+do um but that's exactly the moment
+where the signifiers matter right so
+choosing the right signifiers in the
+right moment for the right place is a
+really really important problem
+i was going through some old slide decks
+the other day and i realized that uh
+this uh this example which i'd like to
+show
+is now
+truly a classic example from my
+childhood and uh i i i'm curious
+how many people have any idea what this
+is and if you don't it's not a big deal
+i'll walk you through this uh if you do
+then you know exactly what i'm talking
+about okay so this is this used to be
+the back of uh most computers okay and
+this is kind of a little bit hard to uh
+explain without having like a computer
+in front of me but essentially the top
+part of the image that the part that has
+these two little black plugs is kind of
+like upright and then the bottom part of
+the image where there's a green and an
+orange uh icon it's sideways like this
+so you can imagine that the two black
+things are kind of up here and down here
+i'm trying to show this in my little
+video here but my my book is all blurred
+out but anyway black black and then
+green and red
+so these two plugs are called uh ps2 uh
+plugs uh not playstation 2 i can't
+remember what ps2 actually stands for
+but anyway they were for your keyboard
+and for your mouse
+and uh
+they are the exact same plug right so
+our mouse yeah this is back in the data
+wired like wired peripherals and we
+didn't have usb yet right um and so we
+plugged these two things into our
+computer uh part of the problem is that
+usually it's behind the computer so you
+can see the back of the computer but
+anyway even if you could see the uh
+computer um the back of the computer one
+of the problems is you weren't sure
+which one to plug it into right you can
+see one of them is meant for uh the
+mouse one of them is meant for the
+keyboard and what i can tell you is the
+problem with this interface is that it's
+not clear uh whether the green thing
+matches up with this this green thing
+matches up with the top green thing or
+whether it matches up with this green
+thing because you can kind of easily
+imagine that
+two different kind of ways to think
+about this maybe these two icons go like
+that and so they just kind of you know
+flip up like that or it's kind of this
+mirror situation because you've also
+seen that too where this thing matches
+up kind of like that sort of like it's a
+mirror type of a situation
+so these are the kinds of very simple
+versions of the problems that we deal
+with in user experience design and i
+would argue that these two design these
+two solutions that you can see on the
+right addresses this problem this is
+what we call a mapping problem so how do
+how do people map you know one uh
+particular series of things to another
+series of inputs so here's one solution
+if you simply put the icons next to
+the thing that we were supposed to plug
+into that would be very clear what to do
+similarly if you simply kind of use some
+color coding to support that mapping
+that would also help a lot and so these
+are kind of simple concepts that we kind
+of visit and revisit again when we're
+kind of doing user experience design and
+when we're doing human computer
+interaction uh research in the lab
+so
+um i want to invite a response or two on
+what you think this is i can tell you
+that uh this is something i took a
+picture of when i was on a trip so i'm
+interested to hear what people might
+imagine this uh would have been an image
+of i was on a i was on vacation i think
+so anything goes
+jill excellent elevator buttons gold
+star for you and i see moisies uh moises
+uh responded a little earlier
+jill and nicole gold stars for both of
+you these are elevator buttons what is
+okay fine jen you also get a gold star
+um
+let's give it a silver star with that
+olympic theme olympic medal uh our
+silver medal olympic theme okay anyway
+so these are indeed elevator buttons
+what i want to ask you now is to think
+about why
+like what makes this set of elevator
+buttons maybe so special what's so cool
+about what's going on here
+ah yes
+uh okay uh
+i see a response here i'm sorry i'm not
+quite sure how to pronounce that name
+but yes there's braille on here so
+braille is a way of allowing uh helping
+people that can't see that well um to
+read things right and so you can see
+here that there is braille on each of
+these
+on each of these elevator buttons what's
+really neat about it is uh braille is
+basically these uh like little raised
+bumps that you can rate you know run
+your finger over and that allows you to
+kind of like read text that allows you
+to render uh characters and letters and
+stuff like this
+so the reason i took a picture of this
+was it looks kind of cool so this is
+some like hyper
+doodad elevator where when you walk in
+you don't see anything but as the
+elevator door closes this cool like
+projection thing happens on the wall and
+so these like elevator numbers actually
+start to get projected so kind of
+and then you can kind of see
+this is a touch sensitive elevator so
+when you touch things uh it activates
+things so this is okay again maybe about
+five ten years ago so it's really really
+cool
+and so you could in fact like and so
+this whole wall is basically a touch
+sensitive wall
+what is ridiculous about this so uh so
+hopefully at this point you might be
+able to see what the problem here is
+right so it's a touch sensitive wall
+which is super cool on the other hand
+and it's also super cool that they're
+embedding some braille into the
+environment so that people that can't
+see that well right people who have uh
+vision deficit challenges they can also
+use the elevator as well by using
+braille
+but therein lies the challenge of course
+if i am a person that needs to use
+braille to read the elevator to read
+which buttons i'm supposed to press um
+i'm probably activating every single
+button by running my finger over each of
+these over each of these braille buttons
+so this is an instance where i would say
+the heart is in the right place but the
+execution is a little bit lacking to me
+this is uh what i would call sort of an
+obvious problem in hindsight but the
+real problem is that often the designers
+that are actually making the systems
+they often aren't the ones that are
+using them and so often they make
+assumptions about how the systems are
+going to be used and so one of the
+things that we do in user experience
+design research and user experience
+design is we build empathy tools to try
+to understand who our users are and so
+in this case one of the things that you
+would say is like okay well if you were
+to do this a little bit better what you
+would do is you'd you know put on
+goggles that make your vision kind of
+foggy and to try to learn how to read
+braille and to try to experience what
+that elevator would feel like that's
+something we call an empathy tool
+the other technique of course is that we
+use prototyping so we build things we
+mock things up and then we test the
+designs to see if we can uncover new
+problems that we hadn't anticipated
+before so we actually would give it to a
+set of
+uh people to test out uh as a pretend
+elevator we would try to find people
+that we're trying to tackle with this uh
+system so if we were doing it for an
+office space fine find some office
+workers if we were trying to support
+blind users or people that have low
+vision then we would find some of those
+people and have them test out this
+elevator interface and just to see kind
+of how they experience this
+experience this interface
+oops
+so let's move on here
+i think this is a really important idea
+this notion that often designers aren't
+the ones that are using the systems um
+here's an example i think i took this
+screenshot maybe about five years ago or
+something like that uh from my windows
+pc i turned it on one day and then like
+both of these things popped up i'm a
+computer scientist by training so i have
+some sense of what some of this language
+means but i can tell you that even in
+this moment uh so i was like i'll do the
+right thing i'll hit this update now
+button right so like you know as opposed
+to the notify me later except for never
+notify me because i never want to be
+bothered about it i'm so i was doing
+what i thought was the right thing and
+then this thing popped up and it was a
+really interesting moment where i was
+like actually right now i'm not sure
+what i'm supposed to do because what i
+did was i told the system like hey get
+the new drivers and sure fine scan my
+hardware do whatever you're supposed to
+do this is like maintenance stuff right
+and then down here it says okay update
+the system bios
+and my system is going to restart and i
+should close all the open documents and
+exit all the running applications don't
+interrupt the procedure once it begins
+don't just like this sounds really
+really serious and i can tell you as
+somebody who kind of like grew up around
+computers like i said computer
+scientists by training like even this
+gave me a moment even for me this gave
+me a moment to pause so i was like wait
+which of these things should i be doing
+here i'm actually not really really sure
+and then i and then if you think about
+this
+uh
+what would that experience be like for
+somebody who
+isn't a computer scientist who doesn't
+know what all of these words mean like
+what the heck does bios mean or is it
+even pronounced bios name is france bios
+right do not interrupt do not disconnect
+these are really really sounds like
+really serious things and they're scary
+sounding and i think one of the things
+that we want to try to do when we build
+systems for people to use build tools
+for people to use build experiences for
+people to use because we want to make it
+so that it is
+a friction free experience as best we
+can we want to make it so that it is
+smooth we want to make it so that
+they're not scared about the
+consequences of taking one action or
+another
+and so if you
+uh maybe you don't have to imagine maybe
+you've lived this experience if you
+imagine yourself seeing this and you
+have these two options install now or
+remind me later probably what you're
+going to do is hit remind me later and
+if you think about all the reminder me
+later that you've done in your on your
+own computer and i i certainly copped to
+doing it all the time myself um there's
+a ton of things that my computer needs
+to do that i never wanted to interrupt
+me to do because i don't know what the
+consequences might be and so this is the
+reason why so many computers are left
+not updated or vulnerable to you know
+all sorts of malware and stuff like that
+because you know we in practical reason
+um
+uh just ignore these things because
+we're not quite sure what the
+consequences are and i see jen has
+contributed a quick comment uh where
+yeah you understand what a bios is but
+even then this is quite confusing right
+i just another example just because just
+while we're at it um right so i told you
+that once you start to learn this stuff
+everything starts to look terrible but
+even if you haven't learned this stuff
+you can probably see this thing is
+pretty terrible uh this is um i took
+this in washington dc this i believe is
+uh it's like you get a ticket to use the
+subway uh with this machine
+and
+um
+i think if you use this all the time no
+big deal but i can tell you is the first
+time using this thing this is absolutely
+absurd um if you think about how reading
+works in north america normally you
+start reading from up here right top
+left you move right and then you go down
+um
+here the system is actually telling you
+okay look at the instructions and then
+over here there's in the middle there's
+this big loud thing that says this
+machine gives change in coins only right
+super loud right and then there are
+numbers that tell you to look at these
+different things like insert ticket here
+okay that's number one and then also
+insert validation but wait does number
+two mean insert coins uh and then how do
+i use this thing and when do i do this
+oh shoot there's an insert cash button
+over here um
+so maybe like presumably these are
+exclusive and then you can see take
+receipt is down here on the bottom left
+and also don't forget to take your
+change so there's a ton of things that
+are going on here and if you think about
+the engineering that is required to sort
+of make a machine like this happen you
+can kind of understand like different
+pieces parts of it are made at different
+times and stuff like this but really if
+you're thinking about the user
+experience of this machine i mean it's
+awful right like where do i start where
+do i end hopefully the way you do it is
+you start from the top left and kind of
+move to the bottom right and everything
+gets done um but i can tell you that
+this is in my view sort of a hopeless
+interface uh kind of uh in a walk up and
+use kind of situation
+okay
+i'm obviously overstating the case i was
+able to get my ticket and stuff like
+that but of course that takes time that
+takes whatever five minutes of my time
+and that's a real that's a real problem
+uh five minutes of my time means the guy
+behind me is waiting for me and getting
+angry at me
+okay
+so i'm just going to show you a couple
+other examples anastasia i apologize i
+said 20 minutes i think we're going to
+be 25. it's okay so you can uh you don't
+have to okay so anyway i'm just uh i'm
+just having too much fun kind of
+complaining about the world that i live
+in this is okay so i'm realizing now
+this may be a function of you know being
+trained in user experience design it
+could also be a function of the sort of
+being like an old man and just kind of
+complaining about how the way
+how the world is and how it could be
+better right okay so this is a kind of
+device that we're all becoming very
+accustomed with right a self-checkout
+machine
+and i'm like
+you know what i'm a savvy i'm a savvy
+young man uh i can use these things i
+don't need to you know read instructions
+so i come up to this thing and you can
+see here i was buying uh this is a
+carpet shampoo and uh
+it's an extension cable
+that detail is not important for this
+story okay so
+basically i'm like okay so i know how to
+use this thing like you just you know
+you know run the thing over and hit beep
+okay so i like pick up the thing and no
+beep and so i'm like okay that's kind of
+annoying
+so i see this sign says okay please
+press scanning to start beginning your
+transaction okay great and i looked at
+me okay please press start
+this is in canada so we need to have
+start in english and start in french i
+speak english primarily so i hit the
+start button and now i'm like okay good
+i'm good to go and i tried to do it
+again when i try to do it again it still
+doesn't work and then this is the moment
+where i decided to take a picture so you
+can see here that there's a sign here
+that says please press start scanning to
+begin your transaction so i have to
+press this button as well start scanning
+um and you might be saying hey didn't
+you already press start and the answer
+to that question is yes i press start
+two times i started twice before i was
+even allowed to start scanning this is
+again a minor hiccup but enough to kind
+of like you know make me annoyed right
+um so this is uh so the lesson here is
+that signs literally written signs uh
+and i think i said this earlier um are
+often a sign that the customer journey
+is unclear it's not clear what a person
+should do about this
+i'll show you one other example uh this
+is from a while back uh so signifiers in
+science can also be shapes of things
+i'll play the video and just explain
+simply that uh this was me
+uh
+at
+i was on a date so i was trying to like
+you know
+you know make a good impression uh and
+uh she was yeah anyway so i'll just play
+the video
+centered inside everything's good
+[Laughter]
+so once again
+oh
+okay
+so actually that means that you need to
+use two hands to use this thing well
+actually you can push it with this
+you can push this here oh
+nobody can figure that out right
+okay good
+okay so when i said okay that was the
+moment that i realized she thinks i'm an
+income poop and i'm never going out with
+this woman again
+actually uh everything ended fine but
+for the purpose of this story the thing
+i want to point out is that this this
+thing
+is shaped in a in a
+convex way so it kind of it bubbles
+outwards and my argument here is that if
+it was bubbled inwards so sort of the
+shape of the indentation of a cup then
+it would have been much clearer how to
+use this thing okay and uh and and
+here's some other examples where it's
+good here i just wanted to point out
+that you know sometimes we've all
+encountered this kind of thing where
+it's like opt-in opt-out who knows what
+i'm trying to do um and the fact that
+there's a long description you know who
+knows what that means sometimes my
+argument is that we call these things
+dark patterns because they're designed
+intentionally to mislead users so lots
+of interesting stuff in user experience
+design i know you might be thinking
+yourself look i'm not going to make that
+mistake but the thing is that you are
+typically not your user you have your
+own biases and blind spots and you are
+working on a team and so it's important
+to learn about techniques that help you
+to kind of arrive at better designs
+there's a bunch of user experience and
+hci jobs that you can get out there
+and they have all sorts of different
+names so the typical joke is you can
+pick one of these things on the left
+column here and combine it with
+something on the right column
+and boom there you have some sort of
+user experience job right so you can be
+a usability analyst you could be a
+usability engineer or a developer you
+can be an interaction designer or
+usability
+interaction engineer so here's the quick
+summary of my 20 turn 30 minute talk
+design is everywhere objects that you
+use web systems that you make use of
+tools apps
+physical environments libraries signs in
+libraries reports that you build
+good design is hard it's not easy
+poorly designed things have big
+consequences they're annoying to use and
+when you learn good design practices as
+you would in a user experience design
+program you can help
+make better designs so here's a quick
+thing some contact info for me i'm happy
+to answer questions if you want to reach
+out uh and i'm definitely 10 minutes
+over my time so i apologize anastasia
+i'm happy to hand the baton over to you
+okay just give me a second
+can you see my screen
+okay
+um
+okay
+hello everyone um i'm anastasia
+and uh tony
+showed you a lot of examples of that
+design and the reason why we started
+started this session was this part
+because indeed it's our highest priority
+right to learn how to avoid mistakes
+but another facet of our work is
+designing novel technology an
+understanding of what
+is needed so how to develop these truly
+new
+types of devices software
+and other technology often comes from
+academic research and so what i want to
+do today i want to give you a glimpse of
+how it might look like on the example of
+some of my work
+so i'm a researcher in hci as i
+mentioned earlier and my work in each
+day covers a rather broad range of
+research
+from development of different
+interaction techniques through creating
+multi-device ecosystems when we use
+different technology within it uh to
+informing architectural computer vision
+and so on and at some point i became
+fascinated by this idea that we've got
+two
+really intelligent uh powerful entities
+a human and a computer
+and what we're trying to do we're trying
+to put them together to make them uh
+talk to each other
+so that they can accomplish a richer set
+of tasks right and optimize what each is
+capable of
+and yet developing this communication
+between humans and computers um
+is uh really complicated and um it keeps
+being surprisingly challenging
+throughout our whole story of our field
+and if originally
+in 80s when hci was just starting
+um hcis field was mainly concerned with
+how to make computers so that humans can
+understand them
+then now especially with the development
+of machine intelligence the question is
+shifting to how to make humans and
+computers to understand each other
+and so on one hand it becomes
+more and more clear to all of us that
+our ability to create a partnership
+between humans and computers and
+integrate computers into natural
+communication is going to
+define what we as a society are going to
+be able to accomplish
+but on the other hand we learn again and
+again that building this successful
+communication even just between humans
+let alone humans and computers is very
+challenging
+so think about all the complaints we
+have heard during the last year and a
+half about the system supported
+communication and learning right for
+instance learning through zoom
+so in my work i study the mechanisms of
+this mediated communication
+and more specifically i
+explore this dynamic context
+that moderates mediates defines how we
+explore information how we share
+information how we perceive information
+in these different types of
+communication
+so why context and why information
+well because understanding what we as
+humans do and why we do it and
+understanding what's going on with us
+depends on understanding our current
+context
+so for machines to become for computers
+to become human collaborators
+in communication they need to learn how
+to understand and even reproduce this
+context
+and because communication in its core is
+an exchange of information the system's
+ability to work with people
+requires understanding of how
+why
+and when people share and don't share
+because no matter what system's
+performance depends on information and
+for the same information we as humans
+we're ready to share
+or perceive it in one context and we're
+completely against doing it in another
+context
+so uh today i want to talk to you about
+some of the aspects of this design for
+systems that aim to support this
+communication with uh both between uh
+humans uh right so human to human
+communication and human computer
+communication
+and um how to have these systems context
+aware so how to make them so that they
+can adapt their functionality and their
+behavior to the context and why it even
+matters
+so first let's think about what is
+communication and more specifically
+what's the difference between
+interaction and communication
+any thoughts
+it's actually a very complicated
+question
+so i'm gonna just for the sake of time
+i'm just gonna jump in um
+towards the answer so if we think about
+what is interaction communication in
+both cases it's an exchange of
+information
+between several parties right so it's
+always an exchange of information there
+are always at least two parties involved
+but in fact communication is a sub type
+of interaction
+and interaction becomes communication
+when we start thinking that the other
+side has some capacity to act
+independently so when you start thinking
+that the other side can make its own
+choices you suddenly start communicating
+instead of just purely interacting so
+maybe you have seen those funny videos
+when um
+an elevator is a voice intro voice um
+operated and then elevator doesn't
+understand people and people started
+yelling at it talking to it saying that
+is you know making fun of them so that
+is the moment when you shift from
+interaction to communication
+and so now
+with the development of this machine
+machine uh intelligence with machines
+becoming this communication actor
+instead of just an interaction actor now
+we can view these systems as forming a
+continue
+from communicating through technology
+such as zoom for instance skype
+different social networks so when people
+interact to each other through this
+system
+to communicating around technology such
+as monitoring systems large multi-user
+displays collaborative software to
+communicating directly with technology
+such as different conversational agents
+robots and so on like alexa google
+assistant and so on
+and so in my research i look at how
+depending on the place on this continuum
+these systems have different
+contributions that they can make to the
+communication process and so that is how
+we inform design from the research
+perspective to the actual product design
+so let's first look at the interaction
+through these systems
+for example teleconference assistance or
+let's say social networks they're
+designed to be a platform for
+communicating with other people
+but because this communication is
+mediated the users often don't have
+the full picture of who is on the other
+side so for instance who is reading our
+posts who can see and hear us on the
+screen let's say right now i'm on your
+screen i have no idea who's around you
+what's going on there i have no idea how
+you're reacting to what i'm saying right
+so i do not have this full picture
+and so since i do not have it uh and
+people do not have it we create
+something
+some kind of conceptualization of who is
+on the other side
+something that we call the imagined
+audiences
+and of course what we imagine is often
+very different from the reality and you
+could say so what why does it matter
+well it matters first of all because our
+imagined audiences so this these ideas
+of who is on the other side
+um
+determine how and what we communicate to
+the real people out there
+but it also defines our expectations on
+how the information is going to be used
+and perceived so you can think of all
+the uh issues around privacy about our
+sharing about
+misunderstandings and communication the
+efficiency of communication so all of
+that has to be supported by these
+systems
+and so because of that we show for
+instance in
+with my colleagues that the role of
+technologies through which this
+communication is happening so this
+technology is on the left side of the
+continuum the role becomes to gather
+this missing contextual information
+about the audience and to integrate it
+into the communication in a suitable way
+which doesn't necessarily mean of course
+to just spit it out to the user right no
+we need to be smart about it and we can
+develop different features um
+that would support this communication
+based on this contextual information
+for example online forums
+as one of the
+situations of communicating through the
+technology
+how can we integrate the missing
+information about the audience into the
+communication process here
+or for example we can present some
+information about the person right we
+can say how many posts they made
+with response to what message they are
+posting their answer right now we can
+show if they have some special status on
+this forum right for instance if they
+are
+an administrator or something like that
+so that is an example of how this
+information can be um
+embedded into the communication
+information that we can gather
+and then in bad in in in the process
+through the design
+in other examples on social media for
+instance when you can define uh who is
+going to see your post right or let's
+say stories in instagram you can see who
+watched it right
+but if you think about your experience
+of using these systems think about what
+doesn't really translate what is there
+when you're using let's say facebook
+that doesn't really
+that you would want to know about your
+audience but that is not supported
+through the design and let's say
+facebook researchers who are like more
+academic researchers that's that's the
+way how they're thinking about these
+problems right they go there and they
+start exploring what else is that that
+is missing and based on that new
+features are bringing up
+same with zoom right for instance what
+we're doing right now as i said let's
+say i have no idea what's going on with
+you right now there and even if
+everybody would have their videos on
+there is still
+a lot of this context about audience
+that is missing
+okay so when we communicate through the
+system the system needs to um together
+and integrate this information into
+communication and now if we move to the
+uh to the right on the continuum so to
+the middle we would find here the
+systems that are mainly announcing this
+ability of users to access and produce
+the information so these are the systems
+around which we're communicating
+um so the examples of such systems can
+include for instance public displays
+right or
+digital tabletops and they provoke these
+spatial interactions around them
+or it can be software for instance um
+different like my report right or google
+docs
+that you share and so software provides
+the interactions around content that
+they provide
+or help us to create
+so what do you think matters in this
+case
+what should the technology be doing to
+support this type of communication
+so because these systems in the middle
+are mainly augmenting this ability to
+access and produce information their
+main role becomes to provide this
+information in the best most
+contextually suitable form
+and what exactly it means depends a
+little bit on the type of the system for
+example for the um let's say large
+displays right or some physical systems
+this includes being able to adopt for
+let's say collaborative or competitive
+scenarios right or adopt for it for the
+um uh territoriality and praxamics
+around uh around the device so proximix
+is a uh field of the study that is
+concerned with um
+the the way how people organize their
+space their territory
+in the term was suggested and the field
+was started by edward hall who was a
+cultural anthropologist and what he
+suggested is that there this
+four
+circles that exist around people and the
+closest one is this intimate space then
+personal space then social space and
+then public space and depending on your
+relationship with people you're going to
+be standing on the on the appropriate
+distance
+between yourself so why is it why why
+why does it matter to us well for
+example when you're presenting
+information to the situation like let's
+say to an intimate couple right or to
+family you can support this more
+intimate interaction distance between
+people
+but let's say for the work situation you
+have to present information so that it
+would be
+would be within these appropriate
+distances as well
+right
+with software uh
+so that's for physical systems with
+software things become slightly more
+complicated but let's look at the
+example of um software for co-watching
+movies and videos
+so in this case people are communicating
+here
+around the content that this software
+provides right so what do these systems
+do to provide information in a suitable
+format
+any ideas
+anything goes
+on top right what what do you mean on
+top
+overlay on top yeah so the fact that the
+the chat is on the side right so the
+focus is only on the main content for
+sure
+you can see for instance here who paused
+the video right if so if somebody stops
+the video it stops for everyone
+um if uh so so the fact that chat is on
+the side yeah so that that the content
+is is on the left so there are a lot of
+aspects within it but you see here we're
+not focusing as let's say in the forums
+on providing this information about the
+audience instead we're focusing on the
+action right and we're providing
+information in the form in this suitable
+form
+okay so so far we have discussed that
+when we interact through this system
+this system should be gathering and
+integrating this missing context into
+the communication
+when we interact around technologies
+their role is to understand this context
+and provide the information in
+contextual suitable format
+and now let's look at what is happening
+when the interaction is taking place
+communication is taking place with the
+technology
+itself
+and so these systems on the right end of
+the spectrum are built around the idea
+of intelligent agents
+and this includes for instance chatbots
+voice activated assistants different
+types of robots social drones and so on
+and since the communication here happens
+with this intelligent agent the systems
+tend to be heavily anthropomorphized
+what is entropization it's when we start
+attributing life like human-like
+qualities to something that is not
+actually a life
+and in fact that is an evolutionary
+adaptation that is something that
+happens naturally mindlessly with people
+and that helps us
+to make sense of something that is
+complex right so that is the true moment
+when we're moving to the communication
+with the computer system from the pure
+interaction that is the moment when a
+computer stops being a pure tool
+and becomes a communication actor so how
+do you think it would affect the role
+and responsibility
+in this collaboration with humans
+well arguably the the responsibility of
+this technology is done to be a good
+communicator right to be a good
+communicator part department
+which includes both this ability to
+recognize this
+user's communication context and to
+match this context in communication with
+the user so from the system development
+perspective it's two different sites one
+thing is to understand what's going on
+and another thing is to reproduce this
+context in communication
+and this i will show you on the example
+of one of my
+studies with conversational agents to
+show you how this academic research can
+can inform the actual product design
+so the general purpose voice assistance
+such as alexa google assistant or siri
+for example they're becoming more and
+more popular as you might know and so
+more and more users are interacting with
+them on a daily basis
+and these systems in essence rely on
+users voice interactions with a persona
+for an agent
+who is deliberately designed to speak
+and act human-like
+and because of this the voice assistants
+end up being
+integrated in both technological space
+of the user's life so the ecosystem of
+devices in their life
+and at the same time in their social
+space so with whom our users communicate
+on a daily basis
+and so they tend to be antropomorphized
+right so again people start attributing
+this life like qualities and traits
+to these agents
+for example users flirt with them
+which in fact became so common that now
+in popular media people joke and make
+movies about it so maybe you've seen
+there was a movie called her or there
+was an episode on the big bang theory at
+some point about that or as on this
+image on this side right now hey siri
+siri says we need to talk who is this
+alexa person you keep flirting with
+right
+so it became a really
+a real social thing
+and you could say well that's cute but
+so what why does it matter to us
+well it matters because
+entrepreneurization and these processes
+heavily define the interaction style so
+how we talk to this system
+and also users expectations
+trust into the system and even use cases
+with this technology when people adopt
+these systems
+and yet we know very little about what
+happens when entrepreneurization occurs
+right so do we see let's say all agents
+um as the same type of a person in this
+case
+well intuitively probably
+not right but if not does it depend on
+us how we perceive them or on the design
+of the agent so let's say would it
+differ between how i perceive the same
+agent than you right would it depend on
+the user or would we perceive the same
+age in the same way right so we didn't
+know that before
+and so what we did know before is that
+when we talk about
+entrepreneurialization there are kind of
+two sides to it
+one side is that um there is this
+behavioral
+design so that is emotional
+responsiveness the way how whose robots
+for instance the way they move
+now how warm they are in their
+interactions their personality and so on
+and on the other side there is this
+physical or visual aspects of it so
+let's say facial expressions or body
+expressions
+so your roomba vacuum would have only
+behavioral traits only the way it moves
+and then your like a box sculpture for
+instance would have only visual ones
+and so by design of course voice
+assistants are capable of displaying
+mainly these behavioral aspects right
+the way how how they act and talk to you
+but what
+personality and behavioral aspects what
+aspects of this of this talking matter
+to users
+and is there any structure there do we
+think about them in the same way or no
+and so we thought that if there is any
+structure there then these perceptions
+should be consistently different for
+different agents right so let's ask a
+lot of people about how they perceive
+that several agents and see whether
+their parents there
+and we also thought that
+if there is some structure there then
+the way how people think about this
+personality of an agent would also
+define how they visual how users
+visualize these agents so
+how
+users think these agents would look like
+if they were
+humans and
+especially because agents um answer can
+include some visual references like for
+instance series i'd blush if i could
+right or i think it was google's i would
+hug you if i if i would have hands right
+so then uh if there are consistent
+differences with the way how they act
+then there should be consistent
+differences with the way how they are
+visualized as well
+and the only way how we can could look
+at it was to look to compare several uh
+agents
+so we took three agents alexa google
+home and siri and we first asked people
+to
+interact with them
+um to talk for a little bit and then we
+interviewed people so we talked to the
+to the participants and we asked them
+what are the like if these agents would
+be humans what would they be like what
+are their definitive characteristics
+and then as a third step we also ask
+people to create these visualizations
+for each of the agent
+so what did we learn there
+so the main highlight about the the
+perception of the character is that they
+indeed structured
+these perceptions and they're structured
+according uh five categories um
+of personality approachability sentiment
+towards the user professionalism
+intelligence and individuality so all of
+us think about agents in terms of these
+five
+five categories
+and it's indeed different for different
+ages so for example with approachability
+that's about how emotionally distant or
+approachable an agent is right and the
+distance and here includes agents being
+snarky closed off and often they're um
+given in the opposition of users
+willingness to engage with this agent
+and then the other side the approachable
+side is is agents being emotionally warm
+friendly willing to interact like
+feeling more like a friend being
+outgoing and chill
+another example here this sentiment
+towards a user that's about how genuine
+versus disingenuous an agent is towards
+a user and the genuine side is this
+being benevolent caring altruistic
+thoughtful really trying to help you
+and disingenuous side is this being
+inconsiderate indifferent for example
+pretending or about siri one of the
+participants said using her sas as a
+defense mechanism
+and so these behavioral perceptions are
+both structured along these five
+dimensions and are different for
+different agents
+and then we also looked at the visual
+perceptions and so we combined these
+visualizations into collages and we also
+created a cumulative visualization for
+each agent and you can see already on
+the slide that they are quite different
+for
+uh different agents
+and so we again identified there five
+different
+themes where these differences appear
+and for example um people were talking
+about the build like the physical built
+mainly about the height of an age and
+people were talking about the age so
+let's say alexa is generally perceived
+to be older and siri is perceived to be
+younger
+they have different facial expressions
+like let's say google seems stressed and
+they've got a lot of stuff and alexa is
+just maybe a little bit smiling and siri
+would be smiling a lot
+uh and then they also have different
+different clothing right and siri would
+have this daring personality was
+highlighted femininity so she would be
+wearing
+crop tops mini skirts
+heels google would have this
+stereotypically awkward persona and
+alexa would have this cozy and caring
+carrying a character with big sweaters
+warm like jeans running shoes
+and so on
+and so the cool thing about this study
+was that it showed us that indeed
+there is something in the design of
+these agents that defined this very very
+um consistent structure of our
+perception about them
+and so we found that in the design
+itself it was first of all the amount of
+information that this agents provide and
+the level of details there
+um also the interaction style of an
+agent so whether it's prompting you back
+um
+and how responsive it is to your prompts
+whether it's using jokes
+and the third part there was the voice
+characteristics itself right so in this
+case we can see that there are very few
+design aspects that then produce such a
+diverse perception of this agency
+and so they they attacked both
+behavioral perceptions and visual
+perceptions of this agent
+and so the main takeaway from this study
+and for the design is that first of all
+there's this extremely
+rich socially meaningful interpretation
+that comes from users
+uh interpretation of
+actions of this agent right and a lot of
+these interpretations are very um
+biased so there is a lot of social
+stereotyping that is happening there but
+the good news is that these stereotypes
+and these perceptions they're
+consistently dependent on particular
+elements of the system on particular
+design which gives us as design as
+technology designers a stable
+gateway to these perceptions as we
+develop voice based artificial agents
+and with that this is the summary slide
+of my of my talk um
+did i did i make it i almost made it um
+on time so we still have about three
+minutes for talks for a question sorry
+if you have any questions for uh tony or
+for myself would be happy to to answer
+thank you
+great stuff anastasia thank you uh glad
+that at least one of us kept the time so
+you were awesome kudos
+so as anastasia said we are more than
+happy to answer questions for a minute
+or two i do need to hop off myself at 1
+15 so won't be here a whole lot longer
+[Music]
+if
+just
+pause a bit
+i uh just posted the link back to the
+infocon program so uh following our
+session there's a 15 minute break
+and uh then the next session happens at
+the bottom of the hour there so
+you know sorry good morning good
+afternoon good evening wherever you're
+coming in from um the next session will
+be a session called leave from wherever
+you are skills for an evolving
+profession uh and so that's going to be
+given by miriam burgos marion
+philadelphia harris smith chris stewart
+all from the university of southern
+california
+um
+i'm not seeing questions
+uh so
+i'm just gonna you know what give
+everybody back two minutes of their day
+i've just posted there a link to the
+program my contact information
+anastasia's contact information yes
+except that you included there my
+website which is right now um
+outdated for a couple years so i
+actually do have a new website um which
+is going to be posted at the same
+address soon so but please feel free to
+send me an email
+to reach out and i would be happy to
+join
+all right thank you very much for
+attending i hope you have a good rest of
+your day everybody
+thank you see you all

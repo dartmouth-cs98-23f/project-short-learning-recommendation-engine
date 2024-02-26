@@ -1,0 +1,1630 @@
+our second speaker is tim roughgarden
+from stanford university and like i said
+before i'm not you you have access to
+everything about Tim in your program the
+rest of the the three speakers remaining
+are younger than me so I don't remember
+them from my graduate school but I
+suddenly remember each of them from the
+time they were graduate students and Tim
+Roth Gardens see this sort of amazed me
+in its generality it's about it's about
+the price of anarchy I don't know if he
+is going to talk about this if it
+doesn't then you should find out since
+working on the price of Anarchy Tim went
+on to work on the prices of everything
+and more generally study economic
+mechanisms and their efficiency
+efficiency and computational
+perspectives Tim also all two books one
+on an algorithmic game theory and one on
+on the price of Anarchy I guess that's a
+book of his thesis if you like his talk
+like I'm sure we will you should check
+later he's the website where he has many
+more talks video talks of his lectures
+where he explains in much more detail
+the stuff we talked about today please
+welcome Tim after
+check one two okay
+thanks very much Evie so my goal for
+today is to introduce you to a few of
+the many points of contacts between
+theoretical computer science and game
+theory and more broadly economics and
+you know a lot of the times when you're
+preparing a talk
+you kind of know most of what you want
+to say and it's just kind of the
+beginning it's really hard to figure out
+like what goes on the first slide but
+but then when you're giving a talk
+that's it's about computing it's about
+game theory at the Institute for
+Advanced Studies there's kind of like a
+mandate I think about how you have to
+start start to talk so it's so what the
+game theory computing have to do with
+each other
+well for starters there was a single
+individual who have heard of courses
+here at the Institute who played a major
+role in the founding of both and of
+course I'm talking about John von
+Neumann who we've already heard about
+and even you know seen the same picture
+earlier this morning and you know while
+he had worked out a lot of his theory of
+games in the 20s in particular his
+min/max theorem really you know the game
+theory really became a major subject and
+started having a lot of influence in the
+publication of his book in 44 with Oskar
+Morgenstern and just a couple years
+later is when he started supervising the
+development of some of the first the
+world's you know first computers so
+first as a consultant on the ENIAC but
+then also here as also professor Valle I
+mentioned on the IAS machine and so von
+Neumann had some common motivations for
+both of these activities specifically in
+military strategy and technology you
+know but I don't think his his work of
+these two strands really interacted
+directly that much and indeed as the
+20th century unfolded well there was
+tons of progress in theoretical computer
+science and also in theoretical
+economics those two communities really
+didn't interact or communicate much and
+this talk I really mean to contrast that
+with the 21st century where there's been
+a very lively and useful conversation
+between those two fields but before I
+fast forward to the 21st century I do
+want to just point out you know one sort
+of revolutionary idea from each of these
+two communities in the 20th century both
+of which really fundamentally shaped the
+the research that's preceded it
+including what I'll be talking about
+so first on the on the economic side we
+have Nash's theorem so in the von
+Neumann and Morgenstern book in 44
+they're really focusing on two-player
+games of pure competition
+okay also called zero-sum games or when
+there are many players they were
+thinking about how coalition's might
+form and naturally founded non
+cooperative game theory or you can have
+any number of players and each player
+acts as an individual in its own
+self-interest and the games weren't
+necessarily competitive that could be or
+they could have aspects of cooperation
+so this non cooperative formalism really
+enabled game theory to in principle be
+double applied to many more situations
+that had earlier impossible but even
+better than that Nash's theorem in some
+sense gave game theorists and economists
+everything they wanted it gave them a
+universal existence result namely
+knowing nothing at all about whatever
+game you care about just that there's a
+finite set of players and that each can
+take on a finite number of actions this
+game has to have at least one
+equilibrium point
+well Nash called it an equilibrium point
+we now call them Nash equilibria so I'm
+not going to define that formally I
+think you all have an intuitive sense of
+what equilibria look like and that will
+suffice for the talk pretty much you
+have a bunch of agents and given what
+they're doing right now nobody wants to
+move they're all perfectly happy and
+staying where they are now the one the
+one twist may be and in Nash equilibria
+is you need to allow players to
+randomize but if you just think about
+two players playing rock-paper-scissors
+it is clear you want to be able to allow
+players to hedge over various actions
+okay so Nash equilibria a universal
+existence giving economists in some
+sense everything they wanted on the
+computer science side and this is now a
+couple decades later we have the
+invention and development of
+np-completeness by Cooke Karp and Levin
+so this is something obvious and
+basically NP completeness was telling
+computer scientists that were almost
+never going to be able to get what we
+want
+so what a computer scientists want they
+want efficient computation they want
+good algorithms for solving fundamental
+problems what do I mean by fundamental
+problems well we want to be able to
+predict how our proteins going to fold
+so we can do better drug design we want
+to have more efficient scheduling of
+airplanes
+to make better use of airport resources
+we might want to in a big social network
+find meaningful patterns and most
+computational problems of this sort are
+what's called np-complete and for the
+purposes of my talk you should just
+interpret empty completes as meaning
+very difficult to solve computationally
+at least in some general purpose way so
+in other words when a computational
+problem you really care about is
+np-complete you've got to be ready to
+compromise compromise can take many
+forms and computer scientists have many
+decades of experience about different
+ways to do it so for example you can
+resort to heuristics you can solve your
+computational problem not exactly but
+only approximately or you can narrow the
+domain you can focus on small instances
+instances with special structure and so
+forth okay but these do not assuming the
+P not equal to P NP conjecture that avi
+mentioned these do not admit
+general-purpose efficient computation
+procedures and in some sense theoretical
+computer science has evolved completely
+in the long shadow of this widespread
+intractability and we'll see how that
+influences the kinds of contributions
+computer science has made to economics
+so what I want to do for the most of
+this talk now is highlights three I hope
+lustrated but certainly not exhaustive
+examples of points of contact again
+between theoretical CS and economics I'm
+gonna begin with a model which you know
+the one hand is near and dear to my
+heart but I also think it remains it's
+still one of the most vivid
+illustrations about how in hindsight
+it's really obvious that computer
+science and economists had to start
+talking to each other with the coming of
+the 21st century so it's a application
+that involves routing traffic through
+networks
+now the reason computer scientists got
+interested this in the late 90s was
+they're motivated by communication
+networks and of course the late 90s is
+exactly when the internet was exploded
+so you know engineers have been thinking
+about routing data for a long time but
+with the internet really we were for the
+first time thinking about routing
+through networks where you had multiple
+self-interested users like you do in the
+internet and so that really called out
+for game theoretic or economic reasoning
+so that was the motivation but for the
+purposes of this talk
+I encourage you all to just think about
+something you're all probably very
+intimately familiar with which is
+vehicular traffic as you're just driving
+around on roads the fundamental
+principle principles are largely the
+same so let me introduce this model just
+through an example and this is a very
+old example discussed by ICI pigua in
+his book the economics of welfare way
+back in 1920 so in the Bay Area where I
+live between Stanford and San Francisco
+there are two parallel highways there's
+highway 101 and there's highway 280 if
+it's 4:00 in the morning you should
+definitely take Highway 101 it's going
+to be faster when there's no traffic but
+101 is more prone to congestion okay so
+it's more it gets it's more subject to
+congestion effects as it gets traffic so
+we can have a cartoon of that as follows
+okay so here's one of the endpoints
+here's the other these are the two
+highways each edge is labeled with a
+cost function think of this as
+describing the amount of delay incurred
+by traffic as a function of the fraction
+X of the population that's using that
+road at any given time so Highway 280
+let's just say takes an hour no matter
+what no matter how many people are using
+it highway 101 let's just abstract it
+and saying if an X fraction of the
+traffic uses it it takes X hour so if
+half the traffic's on the 101 it's half
+an hour if everybody's on 101 it takes a
+full hour okay so the goal was
+interested in understanding what would
+self-interested drivers do and whether
+or not what they did was a good thing or
+a bad thing
+so let's first understand you know what
+do we expect self-interested drivers
+what do we expect the equilibrium to be
+and then let's ask could we do better if
+we hypothetically could coordinate their
+actions so if you were one of these
+drivers and you think about it for a
+second you realize it's sort of a
+no-brainer
+what you should do the way I've set it
+up so every driver has what's called a
+dominant strategy one action which is
+always at least as good as every other
+and that's to take highway 101 the worst
+case scenario on highway 101 is that
+everybody's using it then it takes an
+hour and that's also the best case
+scenario on highway 280 so there's no
+reason not to take 101 so at equilibrium
+the outcome of selfish behavior we
+expect 101 to be fully fully congested
+everybody's taking an hour to get from s
+to T and that's going to be the only
+equilibrium otherwise people would want
+to
+which back from 280 to 101 so is this
+good or bad so it turns out this is an
+illustration of what an economist would
+call the congestion externality it turns
+out you could do better than this
+equilibrium and that's the and the
+reason it's inefficient is because
+drivers don't take into account the
+extra congestion their presence causes
+for other users of the edge so in fact
+any other traffic pattern when in some
+sense be better than that green one but
+an altruistic dictator if who could
+hypothetically control everybody's
+routes would be wise to split the
+traffic fifty-fifty okay between 101 and
+280 now the drivers on to idiot takes
+them an hour just what it took them
+before but the drivers on 101 get there
+pretty quickly just a half an hour so
+the average commute time has dropped
+from 60 minutes in the green traffic
+pattern to 45 minutes in the red traffic
+pattern okay so that shows you something
+which in hindsight is not surprising you
+let people do whatever they want the
+outcome need not be what's an altruistic
+dictator would have been posed on the
+system and so to measure this cost of
+selfish behavior could sue Pearson pop
+dimitru introduced the colorful phrase
+the price of Anarchy and as a
+mathematical definition that's nothing
+but the old commute I'm the equilibrium
+average delay compared to this optimal
+ie minimum possible delay ie
+60 over 45 ie 4/3
+okay so we'd say the price of Anarchy in
+pig news example is 4 over 3 there's a
+more well-known example of this routing
+network which is sort of you know
+popular it's sort of a good thing to
+know the cocktail party at least if it's
+a sufficiently nerdy cocktail party so
+is there something called braces paradox
+this is from 1968 and so here's our
+initial network so again we have one
+origin one destination two parallel
+routes one an X means the same thing as
+before so one that always takes an hour
+X it takes proportional to the amount of
+traffic that are using it now by
+symmetry at equilibrium the drivers will
+just load balanced ok those there's no
+reason to prefer one route over the
+other so those split 50/50 and the
+commute time will be 90 minutes each way
+so it seems pretty boring where's the
+paradox
+well the paradox emerges you know
+suppose
+Google X announces that the newest
+technology invention is a teleportation
+device
+midpoint of the Bock map and moreover it
+has infinite capacity any number of
+people can use it so what effect does
+this have on the network well suppose
+you're one of these drivers it's a
+no-brainer to use the teleportation
+device okay so if everybody else stays
+the same it used to take you an hour and
+a half now it's gonna take you 30 plus
+zero plus 30 minutes that's an hour
+there's at 60 minutes 30 minutes
+improvement Goris you know you're not
+the only one thinking this way
+so actually you expect everybody to make
+use of this new technology so the new
+equilibrium after adding the teleporter
+has everybody on the zigzag path as a
+consequence the congestion on the upper
+left and lower right edges they're now
+fully congested they take an hour each
+so the commute times actually gone up
+from 90 minutes to 120 and this is
+actually the unique equilibrium in this
+new network it's again the case that the
+zigzag path individually is a no-brainer
+strategy a dominant strategy so this is
+the paradox that when you're dealing
+with selfish individuals when you're
+looking at equilibria you intuitively
+can only add resources make a network
+only better
+and yet the outcome is somehow worse for
+everybody you'll notice that if we think
+about the price of Anarchy in the second
+network so what would be the difference
+between selfish behavior and the
+altruistic dictator it's again four over
+three and that's because and even in
+this new network there's actually no way
+to make use of the new teleportation
+device to improve the traffic okay so
+we'll explain that coincidence of the
+second four over three in a second so
+one thing I'll point out given that it's
+a this is sort of general science
+audience is it braces paradoxes
+innocence I've shown it to you as a
+phenomena in traffic networks but it's
+actually something much more basic the
+same equations that govern the
+equilibria of these traffic networks
+also govern the many other notions of
+equilibria like physical equilibria
+so you can for example and I've had
+classes of mine students of mine do this
+for extra credit you can take a bunch of
+strings and a bunch of springs and you
+can tie these strings and Springs
+together into a physical contraption
+okay and you hang the top of the strings
+and Springs you know from the from some
+heavy weight you know at the bottom of
+the table and then you hang a weight
+from the bottom okay so that stretches
+everything out right the weight exerts
+force
+stretches out the string stretches out
+the springs and if you build that just
+so you can take a pair of scissors snip
+a taut string from the middle of this
+contraption intuitively weakening it and
+yet that weight will levitate further
+off of the ground you can really
+demonstrate this search for braces
+paradox on YouTube you'll get some extra
+credit projects from my graduate courses
+now why does that happen
+one reason so one reason would just be
+it's just braces paradox the equilibrium
+is governed by the exact same equations
+the correspondences in elastic strings
+correspond to these constants 1 0 & 1
+elastic Springs correspond to the X
+travel time corresponds to distance and
+the flow corresponds to force ok so
+cutting the taut string just corresponds
+to deleting the zero edge and recovering
+the original network a way to see it
+directly is that when you cut that taut
+string what really happens is it frees
+up two Springs to carry awaits in
+parallel ok so to share it the force
+that it exerts rather than being forced
+to carry the weights exerted the force
+exerted by the weights in series okay so
+it allows two Springs to share the load
+as opposed to each bearing the fulcrum
+brunt of the exhorted force so that's
+Bryce's paradox now let's try to think
+about you know we've seen these lower
+bounds on how inefficient things could
+be and for letting people do totally
+whatever they want obviously we would
+have loved it if decentralized
+optimization resulted in a fully optimal
+solution
+we're not that surprised to see that
+it's you know less than optimal but
+maybe we're not that discouraged that
+it's pretty close for thirds in these
+networks so if you have you're a
+graduate student looking for something
+to do looking for something to prove you
+could imagine you know a good rule of
+thumb is always to be optimistic so like
+I tell my students always you know
+what's the coolest thing that could be
+true but you haven't it falsified so we
+okay we have two examples price of
+entropy is 4/3 and both maybe it's never
+bigger than 4/3 that's sort of the
+coolest thing that I can figure that
+could be true at this point so that's
+pretty easy to show that that's a little
+bit too good to be true if we just
+modify Piggy's example in a very small
+way so we used to have an X on the
+toplink let's make that X to the D okay
+where D is big d is you know 10 20
+whatever okay some highly nonlinear
+function on top so how does this change
+Pickers example well The Selfish outcome
+is no different than before for exactly
+the same reasoning the worst case here
+remains one the best case here remains
+one so again in the equilibrium we
+expect the top length to be fully
+congested and everybody's cost to be one
+what's different is that now with
+dictatorial control of the network we
+can do far far better how do we do that
+we remove an epsilon fraction of the
+traffic off of the top and reroute them
+on the bottom okay where epsilon is
+small D is big epsilon is small so what
+happens well if you think about it
+almost all the traffic gets from s to T
+almost instantaneously one minus epsilon
+to the D D powers that down to basically
+zero if d is sufficiently big so almost
+everybody gets there instantaneously a
+few martyrs are stuck taking an hour but
+they contribute very little to the
+average so as d grows large and epsilon
+goes small the best possible solution is
+going to zero so the price of Anarchy
+which is the ratio is going to infinity
+so there's no universal upper bound on
+what this price of Anarchy can be even
+in these simplest of routing networks
+okay but so you can't get this you can't
+get to gets discouraged in research you
+just have to sort of take a step back so
+now what do we know is true we know that
+the price of Anarchy is small in these
+networks and we know that it's big in
+this one okay and in general it can be
+arbitrarily big so could it be that
+there are relatively weak conditions on
+a network you could impose that
+guarantee under those conditions the
+price of Anarchy is close to one that
+the outcome of selfish behavior is not
+significantly worse than what could be
+attained with perfect regulation so you
+know looking at these three networks
+again if you were feeling kind of very
+glib you might say well this one's bad
+it has a nonlinear function here are two
+different networks that don't have
+nonlinear functions they're good so
+maybe all you need is to just say
+there's no highly nonlinear functions
+that's sort of the coolest thing I can
+think of right now that would be true
+okay and that actually is true turns out
+so this is a theorem you can actually
+prove so consider any network I should
+say the reason there's something to
+prove is because networks can get really
+big and complicated
+they're not just two nodes in four nodes
+but no matter how complicated a gay they
+get as long as the cost functions have
+this affine form ax plus B a and B can
+be whatever you want for different links
+then you'll never see a worse example
+than the two I just showed you so in
+particular pig is - no - link example
+already realizes the maximum possible
+efficiency loss amongst so these
+so-called selfish routing networks with
+a find cost functions and so again this
+network can be arbitrarily large any
+number of origins and destinations it
+doesn't matter you let people do
+whatever they want and it just won't
+ever drift that much worse than what you
+could do with full centralized control
+so I wasn't planning on proving this
+theorem but maybe just you know you let
+me give you sort of a morally why maybe
+something like this should be true just
+sort of a you know rough proof by
+analogy so instead of routing traffic
+through networks let's think about
+electrical current in an electrical
+network okay between two terminals so
+what do we know about electrical current
+well so we know that on the one hand
+they can be it can be thought of as an
+equilibrium it equalizes the voltage
+drop across any two paths between the
+two terminals on the other hand we also
+know that we can think of electrical
+current is optimizing something
+thompson's principle tells us that it
+minimizes the dissipated energy so
+that's really nice electro currents
+simultaneously in equilibrium and it's
+an optimizer turns out electrical
+current and electrical networks is just
+a special case of traffic equilibria in
+these traffic networks it corresponds to
+networks where every link has a cost
+function of the form ax okay some of the
+x over here - X over there 4x over there
+corresponding the resistances an
+electrical current is just going to be
+correspond to the corresponding traffic
+equilibrium so the two things we know
+about electrical current actually says
+that the price of Anarchy equals 1 if
+all the cost functions have the form ax
+that's what Thompson's principle tells
+us so we've generalized the model a
+little bit we now have a find cost
+functions not just these pure linear
+ones but you might hope that you know we
+know that it's not fully efficient but
+you might hope that it doesn't break
+down too badly
+and indeed traffic equilibria in these
+networks do still minimize some kind of
+energy function some kind of potential
+function
+it just happens to not be exactly the
+right one
+we care about the average traveled
+travel time of the traffic the good news
+is for these a fine cost functions those
+two potential functions don't differ by
+very much so because equilibria exactly
+optimize something that's an almost
+correct function
+they almost optimize the function which
+we really care about the average delay
+so that's sort of a proof by metaphor
+about why some kind of guarantee for
+equilibria should be true for these
+selfish routing networks so just to
+close the loop I said the computer
+scientists were coming from a
+communication network standpoint and to
+reason about communication networks you
+really want to go beyond a find cost
+functions and we know that this theorem
+as stated is false for a fund cost
+functions it's no longer 4/3 but there
+is one aspect of the theorem that
+remains true for any types of cost
+functions which is the structure of the
+worst case example so one way to
+interpret this theorem is look I showed
+you Pickers example I showed you the
+price of Anarchy can be as big as 4 over
+3 this theorem says it can't be any
+bigger than what you already see in this
+trivial to no Tunick Network and that
+statement is actually true whatever the
+cost functions no matter what the cost
+functions you care about go hunting far
+and wide for the worst network you're
+ever going to find the worst network is
+always one of these simple pig-like
+networks to node to link networks ok so
+that's true even if they're not a fine
+cost functions now knowing that you can
+actually compute this price of Anarchy
+this magic number for any class of cost
+functions that you care about it reduces
+it just to a back-of-the-envelope
+calculation so you know if you open up
+page 1 of a typical data networks
+textbook the first order bit of a cost
+function you usually use something like
+a delay function of them mm1 queue so
+here's you think of you as being some
+capacity the maximum amount of traffic
+that a link can support and this is a
+cost function which looks like this so
+there's an asymptote at the capacity the
+delay is very low when you're far from
+the capacity and it shoots up very
+suddenly once you get close to the
+capacity now people who actually manage
+telecommunication networks one of the
+standard heuristics they use to keep
+performance sensible as they look at
+link utilization and park is this is a
+pretty easy thing to measure so you have
+some cable you have some maximum amount
+of traffic that can be going through at
+any one time and you basically you know
+stick your finger in it and you see how
+much is going across
+right now and networks are often managed
+to keep link utilizations bounded away
+from a hundred percent because that's a
+good heuristic or it's been empirically
+observed that that works well for
+keeping network performance good so the
+theory I just described can turn that
+into it into a theorem into a rigorous
+statement so to quantify link
+utilization let me use this parameter
+beta so this is the fraction of a link
+that's unused so beta equal point one
+would mean that all the links of your
+network have link utilization at most
+ninety percent okay so using the theory
+I just mentioned you can compute exactly
+what the worst-case price of Anarchy is
+as a function of this beta as this
+function of your maximum link
+utilization and you know you know we're
+all supposed to be in kind of
+quantitative sciences here and I've got
+you for an hour so I feel like I owe you
+at least one kind of obscure formula so
+here's your obscure formula but this is
+exact this is really the right answer so
+if all I tell you about a network is
+that the link utilization is at most 1
+minus beta so if it's beta
+over-provision and I tell you nothing
+else otherwise the network can be
+arbitrarily large and complicated then
+in fact the worst-case ratio between
+selfish and optimal behavior is exactly
+this so what is this okay well let's let
+one go to zero so beta go to zero so
+that says the link utilization is going
+to 100% this thing is shooting off to
+infinity as beta goes to zero but that
+shouldn't surprise us because right at
+the asymptotes we see that these cost
+functions look a lot like super high
+degree polynomials and we already knew
+that you could have undoubted efficiency
+loss for super high degree polynomials
+on the other extreme as beta goes to 1
+that means your networks basically empty
+so there's basically no problem with
+selfish routing you get a price of
+anarchy of 1 the reason it's nice having
+such a crisp formula is you can plug in
+quite modest values of beta and see what
+you get so if you plug in point 1 so
+again this is just keeping the link
+utilization down to 90% there's still
+mostly used it's 90% or less
+already this ratio drops to something
+close to 2 and again this is a
+worst-case guarantee over all networks
+subject to this link utilization
+guarantee so what did we learn by
+applying the lens of theta or it's
+basically the toolbox of theoretical
+computer science to these routing
+networks so the MA
+it's an age-old economic model okay so
+piggy was discussing it almost a hundred
+years ago in his book it was made
+rigorous by war drop and beckon McGuire
+and Winston in the 50s and there's been
+literally hundreds if not thousands of
+papers written on this model largely in
+transportation but before computer
+scientists started seeing about this
+problem no one was thinking about
+approximation indeed the first
+experience I can remember describing
+this result to an economist was here at
+the Institute I was visiting in 2002
+professor Victor Shin was kind enough to
+introduce me to Eric Maskin who since
+then is one of Nobel Prize in Economics
+and Eric very patiently listened to my
+description and he said it's a very
+natural result I never would have
+thought to prove it
+and I've heard that over and over again
+from economists as I told them about
+this work and so you know I have I've
+sort of wondered you know why is that
+not true especially when I was a
+graduate student and I was terrified of
+you know finding the main result of my
+thesis you know in some 1972 obscure
+econ Journal so I had to tell myself a
+story I needed a narrative why
+conceivably this might be a novel result
+and of course I still might be proved
+wrong in the future but the best i've
+come up with is that you know really
+even though this application had nothing
+to do with computation okay i wasn't
+didn't want an algorithm
+nothing was np-complete still you know
+as a theoretical peter scientist I've
+lived my whole life in the long shadow
+cast by NP completeness and I've
+absorbed the toolbox that we've all
+developed for compromising when you
+can't get what you want and so when
+you're just analyzing equilibria in
+games in the wild they're not going to
+be fully efficient which is what you
+would really want but turning to
+approximation we can nevertheless
+salvage I think some very positive and
+kind of really new insights into
+economic models that are almost 100
+years old I think that's what the seus
+lens gets you in this particular case
+for the second application I want to
+talk about something actually quite
+practical so this will be probably maybe
+one of the more you know immediately
+real-world things that we you know
+really engineering projects that we talk
+about today and so what I want to
+highlight here is how a novel and
+large-scale auction which is being
+designed as we speak
+I want to point out all of the different
+ways in which the high-level aspects of
+that design have been influenced by work
+in computer science so the story here
+starts in 2012 when Congress cost a bill
+passed the bill which is sometimes
+called this spectrum Act okay and the
+point of this bill was to authorize the
+FCC to run design and execute a novel
+type of auction and the goal of the
+option is to sell wireless spectrum
+probably mostly to telecoms for wireless
+broadband use now that by itself is not
+novel so whether whether you may or may
+not have been aware of this but the FCC
+for over 20 years has been running these
+so-called combinatorial auctions to sell
+wireless spectrum to in effect the
+highest bidder whoever could make the
+best use of that technology here's
+what's different this time around what's
+different this time around is the
+spectrum which is most valuable for
+wireless broadband is pretty much all
+already accounted for okay the
+government just doesn't really have any
+free spectrum lying around to give away
+and so on the other hand a lot of the
+people who own that spectrum are
+arguably not using it in particularly
+interesting or valuable ways in fact a
+ton of it is owned by just television
+broadcasters who frankly if they went
+poof overnight not many people would
+notice so we're talking about
+broadcasters on the UHF channels 38 to
+51 okay and regional broadcasters so the
+proposal here which is very interesting
+is to repurpose that spectrum for more
+valuable use so this is actually going
+to be a double auction which means that
+the FCC is responsible for
+simultaneously buying back licenses from
+television broadcasters and turning
+around and selling it to wireless
+telecoms okay for broadband use so what
+they've been running for 20 years are
+so-called forward options so a forward
+auction is like when you're selling your
+house okay you accept bids and then you
+figure out who the winner is and what
+they're going to pay like the highest
+bidder a reverse auction is like when
+you're hiring a contractor
+can you accept bids and then you you
+know you pick one of them okay they're
+gonna provide a service to you like you
+picked the lowest bit of any of the
+contractors so the FCC is has a lot of
+experience with forward auctions selling
+wireless spectrum this will be the first
+time ever that they've run a reverse
+auction they've actually bought by
+spectrum back okay the numbers the
+estimated numbers are fairly eye-popping
+so the the most recent Congressional
+Budget Office estimates that I saw was
+that they would be spending fifteen
+billion dollars buying these licenses
+back from the broadcaster's and are
+hoping to make 40 billion selling them
+to telecoms probably some of you are
+wondering about you know it's pretty big
+spread and as part of the bill passing
+that's already been earmarked really
+won't be surprised to hear so after
+covering auction costs and funding a new
+first responder Network which is really
+totally cheap the bill claims to be
+hoping to have twenty billion of that go
+into budget deficit reduction okay and
+so I said one name was the spectrum axe
+the other name of the real name of the
+bill is the middle-class tax relief and
+Job Creation Act because I mean are you
+really gonna vote against a bill called
+the middle-class tax room okay so the
+numbers are big and to thicken the plot
+further if you design these actions
+auctions badly terrible things can
+happen ok debacles really have occurred
+so one famous one was in New Zealand
+this is quite a while ago 1990 and they
+were just selling licenses to broadcast
+on TV again it was a very simple setup
+they had 10 licenses to broadcast and
+they were basically interchangeable okay
+so you just needed to sell all ten of
+them and for reasons that I still do not
+understand they decided on the option
+format of simultaneous sealed bid second
+price auctions so a second price or
+Vickrey auction in some cases is a
+really good idea okay here it wasn't a
+really good idea but so here's what a
+second price sealed bid auction is it's
+almost equivalent to eBay so you write
+down a bit in an envelope you pass all
+of those to the seller the seller opens
+them up the winner is the obvious one
+the highest bidder
+the price may not be the first one you
+think about the price is actually the
+second highest bid okay so the highest
+bid by one of your competitors all right
+but if you think about it like you know
+in a art auction or on eBay the winner
+doesn't really pay their bid generally
+they pay the lowest bid necessary to
+beat out everybody else which is
+basically the second highest bid overall
+okay so this is a very sensible auction
+in some contests however now I imagine
+that those tennety is going on at once
+and you're somebody who just you just
+want a license okay you don't care which
+of the ten you get okay you have no use
+for two okay
+use one one and they're saying oh yeah
+submit anywhere up to ten bids in these
+ten sealed bid auctions so what should
+you do well you could like pick your
+favorite number like seven and go all in
+for license number seven you could say
+well you know maybe not that many people
+are bidding for these right maybe
+there's only like fifteen or twenty
+people actually bidding and then maybe I
+should bid super low on a bunch of them
+hoping I get one at a bargain it's
+another totally legitimate strategy and
+one rule of thumb is is if you have an
+auction where it's not clear how to play
+there's definitely vulnerable to bad
+results in particular the New Zealand
+government was really hoping to make a
+quarter billion dollars in this auction
+that was the projection they wanted
+making 36 million and to add insult to
+injury I guess for reasons of
+transparency they were required to
+actually publish the winning bids in the
+prices at which things were sold and
+remember this is a second-price auction
+okay so the winner pays not what they
+said they would be willing to pay but
+rather the next highest bid one of these
+licenses the high bid was for a half a
+million so 500 thousand the second
+highest bid was for six not six thousand
+but six okay so someone got a broadcast
+license for six bucks
+now right and then if you scale that up
+to sort of modern-day in the US we're
+also talking about two orders of
+magnitude more money okay so the lesson
+being it's that is people know they need
+to think very very carefully about these
+auction designs so let me tell you so
+this is double auction it's currently
+slated to be run in early 2016
+though all of the details have not been
+announced okay so some of this is
+speculation based on my conversations
+with people and meetings I've been to
+but let me tell you what seems has all
+has you know coagulated as the high
+order bits of the of the auction format
+and so I'm only gonna I'm gonna
+focus mostly on the reverse auction cuz
+that's just the part where you're buying
+licenses from TV broadcasters because
+that's the part which really has to be
+invented from scratch so it looks like
+they're gonna go with a proposal by two
+economist colleagues of mine at Stanford
+Paul Milgram in Elia Segal Illya Segal
+incidentally I also met for the first
+time at the Institute that same visit in
+2002 and so what they proposed is a
+descending clock auction okay and I'll
+give you some more details later but
+first let me just kind of tell you at a
+high level how this works so there's a
+bunch of broadcasters participating in
+this auction and remember what we're
+trying to figure out we're trying to
+figure out which broadcasters we're
+going to buy out and if we buy them outs
+at what prices okay so you're probably
+used to ascending auctions okay but here
+because we're buying out people rather
+than buying goods we start high and we
+go low all right
+so initially so at every every round
+every broadcaster has offered some
+buyout price which they can accept in
+which case I can say yep I'm gonna take
+the money and run you can have the
+license or they can decline all right
+now in any given round if a buyer
+accepts the price that just means they
+proceed to the next round that doesn't
+necessarily mean they're gonna be bought
+out at that price we may ask them again
+next round if they're still willing to
+be bought out at a lower price however
+if a broadcaster ever refuses and says
+no I'm not willing to pay 400 I'm not
+willing to be paid 400 million dollars
+for my license then they're kicked out
+of the auction forever okay and they get
+to keep their license
+and they got no compensation okay so the
+the bidder is still in the auction are
+those who still might get bought out by
+the FCC so what you do is you initially
+start with a huge buyout price for
+everybody
+probably we're talking something like a
+half a billion dollars so that everybody
+in the auction contractually is
+obligated to accept that initial opening
+buyout price but then you know the FCC
+says well you know for the amount of
+spectrum we actually want to sell that's
+overkill we don't need to buy everybody
+out so in the next round we're gonna
+lower some of these buy out prices we're
+gonna try to get we're gonna try to buy
+a bunch of licenses at a at a smaller
+cost and then that just continues so the
+auction keeps lowering prices and
+eventually some of these broadcasters
+refuse and say no I'm not willing to be
+bought out at that lower price so what I
+need to tell you more about is when the
+option stops okay so again you start
+high and you decrease the prices of
+everybody as the auction proceeds so
+intuitively what this auction is
+aspiring to do is it's expiring it's
+aspiring to buy a target amount of
+wireless spectrum as cheaply as possible
+so what would be an example of a target
+amount of spectrum so think of it in
+terms of TV channels and this this
+really is how they think about it so
+we're talking about people broadcasting
+between channels 38 and 51 that's 14
+channels let's say we'd like to free up
+ten of them okay so we're gonna retain
+four channels worth of TV stations but
+10 of those channels will be freed up
+for wireless broadband okay now there's
+a really interesting issue which is that
+these television stations are scattered
+across 14 channels and they're not just
+going to conveniently fall out of a
+particular 10 piece of channels ok these
+buyouts will happen across all 14 so a
+crucial part of this auction design is
+that after you buy out some of the TV
+stations you look at who's left
+who's retaining their license and then
+you're actually going to repack them
+you're gonna give television stations
+who still have their license a new
+channel ok so your favorite TV station
+might go from channel 37 to channel 40
+that's totally possible in this option
+so you take who's left and you repack
+them in a small amount of channels let
+me show you how this works with a
+picture so suppose initially things look
+like this okay so here each circle
+represents a broadcaster
+the circle indicates the radius on which
+they broadcast and the color indicates a
+channel ok so there's three channels in
+this picture you'll notice whenever two
+circles overlap they have different
+colors that's what they don't interfere
+with each other
+okay that's a constraint and anything
+about it if you have all of these TV
+stations there's no way to use fewer
+than three channels because there's
+three different stations here who
+mutually overlap okay so three three
+channels are really necessary to have
+all these broadcasters without
+interference on the other hand you could
+buy out one of the TV broadcasters they
+disappear and at the moment that didn't
+help because we're still using three
+channels but now if we do a channel
+reassignment we can have them all not
+interfere with each other using only two
+channels okay so we just bought someone
+out and we've freed up one channels
+worth of spectrum after a repacking okay
+so that's how this auctions going to
+work it's going to buy out a ton of
+people free up a bunch of space and
+repack the people who are left into a
+small number of channels and then the
+freedom channels will be sold for
+wireless spectrum okay so that's the
+gist of the auction let me tell you a
+little bit about how work in computer
+science has influenced this design and
+implementation so first of all the high
+level design these descending clock
+auctions these are actually a direct
+extension of some previous work by
+computer scientists specifically my
+first ever PhD student Mukunda Rajan
+also with ronique Mehta who at that
+point was at IBM and so the really nice
+property of these auctions is they have
+strong incentive properties so if you're
+one of the bidders in these auctions you
+have very strong incentives to behave
+honestly okay meaning to drop out of the
+auction exactly when the price reaches
+your value for that license okay so
+you're not gonna drop out early and
+you're not going to stay in too long
+ironically again even though these these
+types of mechanisms so these strong
+incentive constraints are inherited by
+the more general proposal of Milgram and
+Segal but the reason we propose these
+mechanisms again it's because we
+actually wanted computationally
+efficient mechanisms we were aware of
+these incentives all of their incentive
+properties but we wanted also
+computational efficiency because of the
+NP completeness intractability barrier
+and we wanted to harness the big toolbox
+of approximate
+algorithms that have come out of
+theoretical computer science turns out
+the definition we came up with is more
+broadly useful for this double auction
+design second connection and this
+involves a colleague of mine at Stanford
+CSU I've shown so I mentioned that's in
+each round of the auction you can
+decrease the buyout price of various
+broadcasters and know where the
+flexibility of the auction is that you
+can decrease different broadcasters by
+different amounts so some you can
+decrease really aggressively and others
+you can leave very high now why might
+you want to treat two different people
+asymmetrically well remember at the end
+of the day whoever you don't buy out has
+to get repacked okay and because some
+television stations interfere with
+others much more than some you're really
+scared about having a very difficult to
+repack television station dropout okay
+that makes your repacking problem really
+hard so if someone's really hard to
+repack he might be much less aggressive
+about decreasing their buyout price
+whereas if someone doesn't interfere
+with anybody then you can decrease their
+price as far as you want you don't
+really care if they drop out and you're
+not gonna be able to buy their license
+from them okay so there's a question of
+how do you do that how do you choose how
+aggressively to decrease these buyout
+prices for different television for
+broadcasting stations and again the
+details have not been announced but what
+has been being proposed and the
+preliminary plans are very directly
+inspired by you know really aspects of
+approximation so heuristic algorithms
+for np-hard problems which you off show
+them was dealing with in a forward
+auction context so exactly the same
+issues of trading off you know how much
+money versus how many conflicts does a
+does a bidder creates that's exactly the
+what these heuristics are meant to
+address and again the motivation here
+was because of the NP completeness of a
+certain optimization problem alright so
+are the computer science toolbox has
+more than just approximation as far as
+ways of coping with NP completeness
+sometimes you really want to solve a
+problem exactly and you're really
+willing to devote tremendous human
+monetary and computational resources for
+doing it and we have an example of such
+an np-complete problem in this very
+auction format I showed you the
+repacking problem okay
+with all of these colored circles
+overlapping with each other that's an
+instantiation of a totally canonical and
+p-complete problem known as graph
+coloring and it's a difficult and B
+complete problem there's really no easy
+way to solve it efficiently on all
+instances so other parts of the toolbox
+are being opened to tackle this part of
+the auction design and this is led by
+Kevin Leighton Brown as computer
+scientist at UBC and an expert in this
+kind of stuff and so he showed how these
+repacking problems can be formulated
+very nicely as instances of
+satisfiability or SATs he showed how you
+know this a huge amount of satsang
+technology in computer science the
+off-the-shelf ones still aren't quite
+good enough to get the performance they
+need in practice so they really want to
+solve sad instances with like tens of
+thousands of variables hundreds of
+thousands of constraints and maybe a
+second or something like that so
+off-the-shelf techniques aren't quite
+good enough but if you encode additional
+domain knowledge about the interference
+constraints in this particular auction
+setting then you can usually get the
+desired performance so just a few
+seconds to solve really reasonable size
+set problems so that's a third
+ingredient from computer science which
+is really kind of a necessary condition
+for this auction format to be
+practically viable okay how much time to
+F
+ten minutes or 15 minutes or something
+okay all right so let me just what do
+you say five is better
+five is better okay five is better I'll
+skip this part I'll just mention this
+briefly at the end okay all right so
+that was the second vignette and so the
+goal of this thing yet was to show you
+how computer science ideas have been
+influencing not only the theory of
+economics but also the practice of
+economics so again the high-level
+auction design even though it's
+motivated by incentive issues the
+precursor actually emerged from work
+inspired by computational efficiency
+considerations you know design and
+greedy heuristics about how to decrease
+prices that's bread-and-butter kind of
+techniques that come out of
+approximation algorithms that come out
+of theoretical computer science and then
+fast relatively fast exact Sat solvers
+was also crucial for the by Villa the
+viability of that format one thing I
+skipped and I'll just mention very
+briefly is that in the forward part of
+the auction there's a lot of folklore
+understanding and economics about which
+auction designs work well which options
+design don't work well so for example
+can you do can you get away with simple
+auctions or do you need much more
+complex auctions with additional
+features such as package bidding and so
+there's a lot of empirical rules of
+thumb but really theoretic computer
+science gives the vocabulary to turn
+those empirical rules of thumb into
+theorems so for example one rule of
+thumb is that when items have
+complementarities so this means you have
+a bunch of items where you don't have a
+lot of value for them individually but
+you do have a lot of value for them in
+concert so think about say a telecom who
+has a business plan which only makes
+sense if it gets coverage all across the
+US and really as business plan Falls to
+pieces if it has just spotty coverage
+all over the nation so now if you have a
+budget independent auctions it's really
+hard to pull off bidding in them because
+you need to simultaneously win in all of
+them if you win in only half of them
+it's a total disaster so that's why
+auctions can be hard when items can be
+confident have complementarities it's
+hard to coordinate the outcomes of
+multiple independent auctions so the
+rule of thumb in the field then is that
+you really need complicated auctions if
+you want to be able to have good outcome
+when you have these complementarities
+among items but again it was not
+previously a theorem it can be made a
+theorem and it builds on a field of
+theoretical Peter science known as
+communication complexity so it's
+historically thought of as a you know a
+pretty hard core part of theoretical
+pure science but it turns out it's
+exactly the right tool for making
+precise these well known rules of thumb
+among practitioners in these kinds of
+commercial auctions okay so let me go
+back to a sort of more theoretical even
+almost sort of philosophical example to
+conclude so let me return to Nash's
+theorem which I mentioned early on in
+the talk I mentioned how in some sense
+this theorem gave game theorists and
+economists who are using game theory
+everything that they wanted in the form
+of a sweeping Universal existence
+theorem and indeed I mean this this
+theorem is so general it honestly it
+spoils you if you work in game theory
+because it just sets the bar so high for
+the applicability of any other result so
+I don't even know anything about your
+game as long as I know it's finite I
+know there's a there's an equilibrium so
+that's great but for many of the usual
+interpretations of a Nash equilibrium
+from any of the reasons why you might
+care about Nash equilibria it's not
+enough to just know that it exists
+ultimately somebody maybe the players
+themselves or maybe some helper a
+designer or a mediator is gonna be
+responsible for figuring out what one of
+these equilibria are okay the players
+have to know what to play either by
+discovering it themselves or by being
+told by some third party okay but some
+boundedly rational agent has to figure
+out what this equilibrium is so what
+we'd really like is we'd like a sort of
+more constructive version of Nash's
+theorem which indicates not just
+existence but how might one figure out
+how to play so Nash's original proof
+actually had two proofs but they were
+both based on fixed point theorems and
+so those have a non constructive nature
+that don't really give any clues about
+about how to have a constructive version
+so this has been a this was a major open
+question for a long time and evidence
+started amassing that maybe there could
+not be
+Universal efficiently efficient
+computation a fish on the computable
+version of Nash's theorem the first
+instance I know of of someone really
+shining a spotlight on this question and
+also sort of raising alarm bells was
+Michael Rabin in a paper in 1957 so a
+computer scientist and the audience will
+already know many reasons why Michael
+Ravens sort of a hero of computer
+science for his work in atomic theory
+randomized algorithms cryptography and
+so on I guess it's probably not that
+many of you know that in 1957 he wrote a
+paper on the intractability of computing
+Nash equilibria but he did so he says
+it's quite obvious that not all games
+can you know captured by the theory
+encompassed in theory can actually be
+realistically played by human beings
+remember 57 is well before we had NP
+completeness 15 years before right so
+what could he have meant by sort of an
+intractable result well we did have
+undecidability in the sense of girdle
+and Turing and that's what Raven meant
+so he exhibited a game okay we're
+actually the there was account it was
+accountably infinite action spaces where
+it was easy to prove the existence of a
+Nash equilibrium but you could also
+prove that there was no decidable
+procedure that would give you that
+equilibrium okay so this showed that
+there could be big gaps between the
+types of existence theorems that could
+be shown and the types of constructive
+existence theorems that could be shown
+then later we did have NP completeness
+and we could prove intractability
+results for finite games like the ones
+that are squarely in the domain of
+Nash's theorem so Gilboa and Zemel
+proved that various decision problems
+around Nash equilibria or np-complete
+and there have a sequence of results
+showing that at least particular
+algorithms for example algorithms that
+attempt to quickly learn Nash equilibria
+are doomed to fail do not in general
+work in a computationally efficient way
+so this sounds like it's right in the
+wheelhouse now of computational
+complexity theory you have a
+computational problem namely given a
+game find a Nash equilibrium we know one
+exists and we're starting to believe
+that may be an efficient algorithm
+doesn't exist and again this is what
+many people in the community basically
+do for a living
+prove these kinds of intractability
+results and the first thing one thinks
+about oh maybe this is another one of
+those NP
+complete problems okay like I mentioned
+earlier but the answer is actually a
+little bit trickier than that
+so megiddo pointed out that's actually
+Nash equilibria are not np-complete at
+least understand the complexity
+assumptions and it's because there's
+almost a sort of type checking error
+between Nash equilibria and typical
+np-complete problems so remember what a
+typical np-complete problem looks like I
+want to know in the facebook graph are
+there a hundred people who are all
+friends with each other this is called a
+clique is there a clique of a hundred
+people in the facebook graph the answer
+might be yes the answer might be no and
+I want an algorithm an algorithm to tell
+me which is which now if I give you a
+game and I tell you to find a Nash
+equilibria it's not a question of
+whether or not there is a Nash
+equilibrium to be found we know the
+answer Nash told us the answer the
+answer is yes the only difficulty only
+difficulty is in finding it okay so
+because of this lack of a binary
+decision problem underlying Nash
+equilibrium computation it is in a
+provable sense not as difficult as
+np-complete problems because there's
+guaranteed existence of a solution so
+Papadimitriou then proposed to have a
+refined version of NP to say okay so
+maybe we can't prove that computing Nash
+equilibria is as hard as all this other
+stuff but maybe we can at least prove
+that it's as hard as all the other
+problems that have guaranteed existence
+because of a fixed point argument okay
+like brower's fixed points and several
+other problems okay so that's a
+refinement of the complexity class NP
+papademetriou decided to call it PP ad
+so allegedly allegedly this stands for
+polynomial parity argument directed
+version
+christos a strata convinced me that he
+was unaware that this was a substring of
+the first five letters of his last name
+when he proposed it but if you believe
+that I've got a bridge to sell you
+so the 94 proposal was to say look if
+computing Nash equilibria is going to be
+intractable and we want to prove its
+complete for some complexity class
+here's a proposal for what that class
+should be okay so that was just a
+proposal there was not a proof of
+intractability it was just really a
+program for in tractability and it took
+more than ten years but it was indeed
+proven okay mid last decade that indeed
+computing a Nash equilibrium is as hard
+as any other problem with guaranteed
+existence coming from a fixed point
+theorem
+okay so formally this is a ppat complete
+problem okay so it's like np-complete
+but with this technical distinction
+because of the guaranteed existence of
+solutions this is a difficult result the
+proofs are real tour de force Duskull
+Optus goldberg papadimitriou chen Deng
+and tang as far as how to interpret this
+I mean this is the way we would in
+theoretical pure science make precise
+what up till now had been sort of more
+of a folklore belief that there cannot
+be a constructive version of Nash's
+theorem that has as sweeping
+universality as the existence okay so
+Nash proved Nash equilibria always exist
+assuming P is different than P P ad that
+cannot be the case that there is
+universal efficient computation of Nash
+equilibria okay that's the meaning of
+this result okay so in particular if you
+want a constructive version of Nash's
+theorem just like with np-complete
+problems you have to make compromises
+and again in theoretical your science we
+have many ideas for how you can
+compromise you have approximation for
+equilibrium computation more
+realistically you probably want to
+narrow the domain okay so you probably
+want to look at games that are either
+not too big or have extra special
+structure where it's easier to
+understand and compute what the Nash
+equilibria might be so what did we get
+from the computational lens applying it
+squarely to the fundamental concept of
+Nash equilibria
+well you know what is what is not a new
+idea is the idea that the Nash
+equilibria has problems okay there's a
+long list of well-known criticisms of
+the Nash equilibrium concept for example
+already the fact that it's not unique
+you can have lots and lots of Nash
+equilibria in different games that
+already makes its predictive power not
+as sweeping as one might like okay so
+there are many criticisms but the
+computational lens has highlighted
+really an orthogonal and I think novel
+type of criticism of the Nash
+equilibrium concept again it doesn't
+mean it should be removed from the
+pedestal of being the fundamental
+equilibrium concept it just means it's
+just sort of advice about when it makes
+sense and when it doesn't make sense and
+the critique is that even with all of
+the setting all the other criticisms
+aside that predictive power is
+diminished by the fact that we can't
+have confidence that down at the
+rational agents or designer can actually
+figure out what one of these Nash
+equilibria is at least not in the
+general case ok so again in specific
+domains you get a positive results but
+you cannot have a general purpose
+constructive version of Nash's theorem
+ok so just to wrap up quickly so I've
+given you a highly non exhaustive but I
+hope representative set of the
+interactions that have been taking place
+on the boundary of computer science and
+economics over the past 15 years and I
+really don't think this is some fad I
+mean the interaction that's happening is
+only accelerating as we speak and I
+think it makes sense these are two
+communities that have a lot to benefit
+from each other and indeed you know
+arguably even need each other to a
+certain degree computer science right
+many of the 21st century applications
+that were struggling with really require
+economic reasoning to make good sense of
+them I tried to highlight this with a
+network routing application but if you
+look at the big data companies you look
+at Microsoft and Google they now have
+positions called chief economist okay up
+toward the top grass of the company so
+this is really I think a well understood
+new thing
+computer science needs economic advice
+in the other direction theoretical
+computer science is really uniquely
+situated to articulate computational
+intractability when it exists and
+whether we like it or not it exists
+pretty broadly in the world whether
+you're trying to run some auction at
+large scale like in the FCC
+auction or whether you're just trying to
+understand whether or not equilibria are
+generally going to be realized in games
+like we saw in the previous application
+with ppat completeness but the good news
+is is because of our long history coping
+with intractability we have a lot of
+ways of getting around it a lot of ways
+to still make progress and get insights
+into fundamental models even when
+there's intractability there so I'll
+leave you with that thanks

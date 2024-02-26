@@ -1,0 +1,660 @@
+hello dr. Ron Eaglin I want to talk to
+you about today is programming for the
+internet so we'll get started okay first
+slide is looking at what we're going to
+cover here so we're going to you know
+what we're going to talk about is oh you
+know how the internet works and why but
+it's important to know how the internet
+works and really the basics of the
+internet how your change to programming
+because it really shapes the way that we
+have to program when we're using the
+internet so we're looking a little bit
+at client-side server-side and then some
+kind of neat things like Ajax and Java
+and mobile devices and utility computing
+in the cloud a lot more to Internet
+programming I'm not going to cover
+everything but I'm going to give you big
+over big basic overview of some of the
+stuff with a little bit of detail so you
+can understand kind of how it looks when
+you get down into the works of it so
+first we got to understand a little
+about the internet when you're
+programming for the internet you're
+really looking at this thing that stands
+between the client and the server and
+what we mean you guys kind understand
+what client and server is okay client is
+most the time you you go the Internet
+through a browser through something and
+you want information now you don't stand
+around and listen for somebody to ask
+you for information from the internet
+that's not what you're doing as a client
+but there are those things out there
+that do that they just sit there and
+wait for requests and those are called
+servers client through the internet
+makes a request to the server and a
+server responds so what we're talking
+about is concept of a synchronous not
+synchronous if I'm having a discussion
+with you it's synchronous we're talking
+back and forth asynchronous means I send
+something up there and then I wait ok
+well what's happening here is you've got
+this server there that's just listening
+for requests ok it's got something
+actually called a listener
+hey is a request coming in I got a
+request and then it figures out what to
+do and it responds to that so it
+responds to the request and it sends
+something back but you know what when
+you have this kind of thing going on it
+creates challenges for the way that you
+program because if you're writing a
+computer program and
+sitting on top of a computer and you
+call a function this function is going
+to come back you don't worry about
+whether it's going to come back you know
+if the computer crashes in the middle of
+the function well maybe you're gonna
+have a problem there and you have some
+error handling to deal with it but in
+the world of the Internet you can send
+requests up there to some server and
+nothing happens the server just ignores
+you and says I'm not going to give
+anything back so we got ways that we got
+to deal with that so you have to have
+some level of fault tolerance and it
+creates strategies for dealing with
+these so let's look at some of this so
+let's first look at the send everything
+approach and I know some people are
+going to take exception the fact that I
+said that Java is a compiled language
+because you say it's an interpreted
+language well you know what in some
+cases it is in some cases it isn't but
+if you're actually having a pre compiled
+language I still consider it a compiled
+language but you have these things
+called interpreted languages JavaScript
+being probably the biggest example of an
+interpreted language and there's other
+ones but you know that's kind of deal
+with the biggies here so in JavaScript
+I send the code to the client okay
+server says give me this page and the
+page has a lot of cool things that it
+wants to do and it has it done in code
+well you can write JavaScript code that
+sends it right back over to the client
+and in this case that the client is a
+web browser it's going to look at that
+JavaScript and it's going to say oh I
+have code I need to execute it's written
+as text I have to interpret it and do
+what it says and that's good old
+JavaScript and learning JavaScript has
+lots of capabilities and if you want to
+learn about JavaScript yes we teach
+classes in JavaScript to teach you to do
+a lot of things but this is the approach
+where you send everything over to the
+client the JavaScript goes to the client
+if I want to look at your JavaScript I
+can look at your JavaScript okay it's
+that's it that's how it works now I have
+other things that can be either compiled
+or precompiled things like flash and
+Java and Silverlight and other things
+that have now in the case of many things
+like flash let's talk about flash a
+little bit you know much browsers just
+don't automatically handle flash being
+sent to them they have something that
+sits inside the browser that says oh
+it's flash code I know what to do with
+flash code and it does all the stuff
+that the flash tells it to do
+okay it's still setting the stuff over
+to the browser in most cases in case the
+bras are still receiving the information
+and having to do something with it
+that's the good old send everything
+approach now what's the downside of this
+well first thing is you're sending
+everything over to the browser
+I mean browser doesn't necessarily need
+everything so this can really slow stuff
+down okay you really want to send to the
+browser because it's coming through an
+internet connection uh you wanna send
+just what the browser needs okay well
+what about some sort of interaction well
+suppose I have I something I want to do
+on my browser that requires a tremendous
+amount of data to be looked at and
+compiled okay well am I just going to
+send all the data to the browser and
+then work from it from there am I going
+to actually try to send it just the data
+that I need so what about the data if
+you try to do with you know especially
+when you have to wrangle down and do it
+lots of data you know you want to get
+that data and it that you need and you
+really want to have the server deal with
+a lot of that details of figuring out
+this needs to go to you this needs to go
+to the browser so what will we do about
+this well let's get a way to to
+communicate back and forth with the
+server so anytime you request a pet a
+webpage you send a request up to the
+server and the server comes back and
+says hey I got that file I'll send it to
+you and it sends it to you and there it
+goes but now you want to ask for more
+detailed information you're actually an
+ask for not just a page a file that's
+sitting on the server but the server's
+got to do something a little bit more
+complex to put everything together
+before it sends it to you and it's got
+ways to do this I'm going to go with the
+two Biggie's HTTP GET HTTP POST and
+you've used both of them if you've ever
+used the internet you've used them both
+and really the difference between the
+two is where's the information that
+you're sending to the server not the
+information coming back from the server
+but the request that you're sending this
+server where is that information that
+really specifies what you want an HTTP
+GET you use the URL of the request an
+HTTP POST you use the body of the
+request
+the big difference being if you know
+what to look for you can
+read all the information you're asking
+for in the HTTP GET in an HTTP POST it's
+hidden from you so let's look at an HTTP
+GET this is an actual web URL I can send
+you this web URL and if you bring this
+web URL upon your browser you're going
+to get exactly the same thing that I get
+if I do it here okay it's not that
+there's some file that's got this big
+massively long name with all this
+gobbledygook in it what you're actually
+doing is you're saying I'm going to send
+some information to do google.com slash
+search ok now if you look at this
+there's a question mark right there that
+question mark delineates everything on
+this side is where I'm sending it and
+everything on this side is what I'm
+sending it so that the server can look
+at all this stuff and it can say oh I
+know what to do with this and really
+what's happening here is it's saying you
+know what site equals IMG HP ok the
+server is going to go I got a key value
+pair I've got a key site and I've got
+some sort of value that's IMG HP so when
+I'm looking for what I want to send back
+I'm going to look for that key site and
+the value and I'm going to figure out
+what to do with it so you have a where
+and you have a lot that you're sending
+over and the what can get really long
+can't be infinitely long okay because
+get requests have some things about them
+that are important like length
+restrictions okay other thing is if
+you're sending sensitive data okay to a
+server probably not a good idea to pop
+it into the get pop it into a get
+request and do it that way because guess
+what anybody can see the URL so sitting
+up there at the top of the browser up in
+the URL bar okay but there's some nice
+things about it like you know it sits in
+the browser history you can cache it it
+gets bookmarked you can bookmark get
+requests I can take that big old loan
+request I have write that back there
+that I just shows you I can bookmark it
+and I can bring it up whenever I want to
+okay so pretty much the guidelines the
+other set of guidelines for using get
+and casada guidelines for using post and
+we like to follow those but let's talk a
+little bit about post so he can't see
+the dad in post what you see in the URL
+bar just looks like the webpage but it's
+still asking for stuff what happens is
+the data from the post is sitting inside
+of the actual document that you're
+sending over so there's actually more
+than your setting than just a URL
+there's actually more stuff in that
+packet that you send to the server than
+just what's in that URL bar okay but
+that gives you some limitations that go
+with it too like you can't you can't
+bookmark a post because there's nothing
+in that URL when you save a bookmark
+you're just saving the URL okay
+well the information that you want to
+send to the server is it in the URL so
+therefore guess what you're not going to
+be able to bookmark it if you do that
+and yes and you send you know you click
+on the bookmark it's just going to go
+there and go I don't have the
+information you actually need okay but
+it says one nice thing about it no
+restrictions on the data length and
+actually not a lot of restrictions on
+that type either so you know you've got
+some pretty neat things that you can do
+there okay you know it's security I can
+take the post data and I can actually
+encrypt it and send it over to the
+server now of course that doesn't mean
+that the server is going to have to be
+able to decrypt that so not you know
+can't be
+if you can't decrypt it and don't send
+an encrypted but if you need security
+just but that encryption algorithm on
+both sides and you're good to go
+so let's look at this what actually is
+happening now we've got we got some
+background here what happens when you go
+through this client that's you write web
+browser whatever doesn't matter whether
+you're on a mobile phone whether you
+know it's the same thing you request to
+pay age okay server sees that request
+and says you know what I got to come up
+with the response I send the response
+back to the client client receives a
+response okay client now says you know
+what I looked at this this is a person
+or it can actually be a piece of suffer
+on the client that does that says ah
+thank you I am going to give you a new
+request it sends a request over to the
+server and then it goes through the
+server and the server receives in
+response okay if you notice what's going
+on here okay the big difference between
+the client and the server servers up
+here listening notice the communication
+really goes to that server client
+doesn't do anything unless the server's
+received a request from that client okay
+so
+isn't pushing stuff to your browser okay
+an action can push stuff your through
+your browser if you're on a specific
+page that allows for you to do that but
+that's code that's sitting there that
+makes that that makes that possible okay
+you're not just going to open up your
+browser and all sudden all the servers
+go oh look he's got his browser up let's
+start throwing stuff atom in how it
+works okay your client isn't listening
+for that type of thing unless you
+actually send a request out so let's
+talk about the Refresh Yuval use
+browsers you do something you click and
+the page refreshes okay now what about
+that refresh every time you refresh a
+page you send everything again it's all
+going you can put requests up there and
+the whole page refreshes you know a lot
+of the times you don't need to refresh
+the whole page you may need to refresh a
+little piece of that page okay that
+brings out a whole new paradigm and
+actually dealing with web programming
+okay suppose you send a request up and
+you only need to refresh a small part of
+the page let's just do that
+let's not refresh the whole page let's
+just refresh the little piece that you
+need okay well how do you do that well
+you got a technology for you to do that
+called Ajax we have a nice pretty name
+for it called asynchronous JavaScript
+and XML okay well why because the
+background technologies that make it
+possible are JavaScript and XML okay so
+it only refreshes a little piece now
+let's take a little look at why this
+might be important to you because if
+you're a web programmer you don't want
+to be clogging up the bandwidth here you
+want to only send information through
+the pipes that you need to send through
+the pipes so let's take an example of
+this okay this is a cascading drop-down
+this is one of the Ajax examples from
+the Microsoft web page and a cascading
+drop-down let's say you know what you
+could send all the mix of all the cars
+to the client and all the models of all
+the mix of all the cars to the clients
+and then all the colors of all the
+models of all the makes to the client so
+you know what that's a lot of data I
+don't want to do that what I want to do
+is I want the user to select to make
+okay and based on the make that he
+selected I want the server send back and
+put into a drop-down just the models
+that go with that
+specific make well Ajax lets me do that
+but what am i doing when I do that this
+is on a web page
+I'm not refreshing the entire page I'm
+only going to refresh that drop-down
+that's it that's all I want I'm done
+good finished okay
+and once you select that model all I
+want to see is what colors are available
+for that make and model like C green so
+that's that's Ajax in a nutshell now of
+course it's not just dropdowns it's all
+sorts of different things you can have a
+web page but that's the guts and
+understanding how it works so next
+language Java not going spend a lot of
+time with Java because Java is a lot of
+things to a lot of people but what Java
+allows you to do is have a full
+programming capability embedded inside
+of webpages and all other types of
+devices its multi-platform it can work
+on all over the place
+well doesn't mean that a Java Java
+program that you write for a browser is
+going to work on a phone unless it maybe
+it's on the phone browser but what means
+it's one language you can do all those
+types of things so job is that great
+thing to try to be everything to
+everybody well it kind of meets a lot of
+that but in some places it doesn't do
+all that it does have one thing that's
+really nice about it which is the good
+old just-in-time compilation hey you
+read about Java you're going to hear
+about just-in-time compilation which
+gets me back to that first slide where
+they say or some people say well no
+child is an interpreted language no it's
+not it is compiled it's just that it's
+just in time compilation okay it does go
+to a machine level code if you do that
+you know machine level code is you can
+send stuff over it's not the raw text of
+the code and you can do stuff with it
+and it can be very fast that way now
+let's talk a little bit about mobile
+devices
+okay so anybody who's been doing
+programming has got to deal with all the
+different kinds of devices that you
+might be dealing with well when you get
+down into the guts of it mobile device
+programming browser programming not
+really different it's got clients it's
+got servers it's got listeners okay that
+part of the programming model doesn't
+change so if you understand how that
+works
+guess what it still works okay however
+the paradigm
+turn on the way you use mobile
+programming is totally different from
+the way somebody who's stuck behind
+machine gate behind a keyboard looking
+at a screen you got thing held in your
+hand it's small it moves around okay
+got to do that so first if you're
+thinking hey I have an app programmer
+well that doesn't mean you're an
+Internet programmer and that programmer
+can be very simple I can have an app
+that I download onto my mind to my phone
+and it's a game and itself itself all
+together everything is in that app
+that's not an Internet program it was
+just downloaded over the Internet
+that doesn't make it an Internet program
+internet programs communicate back and
+forth with other machines over the
+Internet a lot of apps are internet
+programs and the big expectation for
+most apps is that they do have that
+ability to interact with the Internet so
+what you're doing is you're taking
+things that you did do it once in a
+browser okay like interpreting code and
+doing stuff with it and you're now doing
+this on a very small very small device
+so like my little very small device
+right here my Galaxy s3 which you know
+is a pretty awesome phone it's got a
+really big screen but guess what that
+big screen is still a lot tinier than
+one of the other devices that I can show
+you right here which is an iPad this is
+my iPad wait turn around this way so you
+can see it okay and I'm actually
+delivering to you this lecture on a
+computer so I've got all three of the
+primary devices sitting right in front
+of me different to the paradigm well
+yeah now are delivering to something
+small and you're delivering it typically
+not necessarily as a browser thing
+designed for a small mobile device but
+yet you can't have specific web pages
+designed for mobile devices but one
+likely you're probably programming apps
+and apps are specific they do specific
+tasks and that's their actual the nice
+utility of the concept of the app but
+the biggie and the paradigm is the fact
+that it's something that moves around
+you have mobility of user so you have a
+lot of freedom of what you can do also
+you have a lot of things that sit on top
+of this I'm going to go right here and
+I'm going to go ahead and pull this baby
+down here I have okay and you can see
+this I have Wi-Fi connection it's going
+to be all blurry but yeah I have Wi-Fi I
+have GPS I have all these Bluetooth I
+have all these other toys that I can
+play with
+that are part of this phone that a
+totally different operating system in
+this case Android that I'm working with
+the cloud well I understand the cloud
+you got to understand the concept of a
+web service and it's actually not that
+hard ok if you're a typical programmer
+you've wrote classes and classes may
+have methods but the basics of
+programming boils down to you know
+object-oriented program is a way to
+organize functions but we have object or
+ePro grams so we call the methods okay
+basically a piece of code does something
+ok and it sits on the machine and it's
+compiled and it works there and the
+machine calls the functions and you have
+function libraries and all this well the
+cloud takes all of that and exposes it
+to the web that's the basis of the cloud
+all those things that you can do right
+now with a machine become exposed to the
+entire world at large now of course that
+doesn't mean you're just going to go
+ahead and expose all your functions
+you're going to have some level security
+goes there but now here you've got these
+clients or servers because servers call
+the functions on other servers all the
+time and you've got some sort of
+interface that makes them which we call
+the server interface that makes them
+available to the rest of the world and
+we call that stuff web services and we
+put all those web services together and
+we have the cloud and the cloud allows
+us to have something new called utility
+computing I can pay for just the
+services I want I don't have to buy a
+whole bunch of stuff that I'm not going
+to use I can have a lot this so here's
+how this looks to the real world as
+you're doing this here's you the client
+kr maybe over here you're the programmer
+but say to the client and you go to the
+cloud to get stuff and what you know
+about what most people know about it is
+a lot of stuff happens here well that's
+all that stuff that happens in the cloud
+it's all happening right out there in
+the cloud and you don't really worry
+about what it is happening except if
+you're a cloud programmer and then you
+do ok but if we're going to be a cloud
+programmer you're going to take a cloud
+programming classes you're going to
+learn all about cloud programming and
+you're going to deal with a lot of stuff
+so what kind of cloud services do you
+have here well one of the things can
+happen is hosting the software d2l which
+is used at Daytona State College it's
+actually a hosted software the server
+managed d2l okay they're not actually on
+the campus they're actually I think
+they're in Canada so you know that's an
+external hosting but it's a piece of
+software that we use you can store files
+that it documents host meetings you can
+actually beautiful operating system you
+can manage businesses accounting okay
+essentially anything that you could do
+on a computer or anything you can do on
+a mobile device or anything you do on a
+tablet can all be cloud services okay
+can be done the cloud okay you still
+need some sort of device to get the
+stuff back on
+well list right now you do and we don't
+going directly to people's brains but
+who knows what's coming up later but
+it's all right there I mean it's all
+available and actually right now you'll
+see most of stuff is now moving to the
+cloud and you could hear about migrating
+new cloud but cloud is a great thing so
+some of the languages of technology this
+is just okay I was going to do one slide
+I can do 10 slides but I'm just going to
+say what are the technologies that you
+will probably learn if you're dealing
+with this I'm going to learn some
+databases I just listed a few of them
+you're going to probably learn some
+languages these are all languages that
+are very much tied specifically to
+things that we do over the net
+the internet and Internet programming um
+no I listed PHP don't say what about
+Python what about Ruby on Rails ah yeah
+I know they're there great awesome good
+okay just listing some of them
+JavaScript okay there's no one java.net
+entire platform that's you know really
+built for how to do so for the net I
+octave program and c-sharp I got a whole
+bunch of stuff written in VB okay
+there's languages that go behind that
+you can write that stuff in multiple
+languages okay working with databases
+you have T sequel PL sequel two examples
+of that if you want to actually
+interface with databases that's some of
+the stuff that you would learn okay
+there's a lot really there really yes
+put it all together how this all goes
+together well we looked at how the
+internet works and why we care well if
+you're dealing with this kind of concept
+of clients and servers and listeners and
+requests and responses it's a totally
+different architecture really than what
+you have in programming and the fact
+that it's now can be asynchronous
+and you may not get a request not that
+tremendously different though than how
+regular old programming works we looked
+at client and server based programming
+stuff that client pace and everything go
+to the client let them worry about it
+server based program let's talk let's go
+back and forth Ajax
+let's talk only about the things we want
+to talk about Java hey we're going to
+solve all the problems of the entire
+world with one language mobile devices
+oh gosh now they're actually walking
+around with computers in their hands and
+the cloud hey everything is no longer on
+a computer this is state right now okay
+2013 this is all going to change in five
+years okay if you want to be a internet
+developer web programmer that type of
+thing first thing you got to do is you
+go like learning because guess what
+everything that you learn now is going
+to migrate it to the new stuff okay most
+of the time it's awesome because you get
+all these new capabilities and new
+markets and new things that you can do
+it's a very rewarding type of field to
+work into but it also changes a lot and
+you got me when those guys that likes
+programming likes learning likes new
+paradigms if every time something
+changes you don't start grumbling okay
+go into some other field if you do like
+learning you like programming you like
+the new stuff this is it you will never
+get bored about having to learn new
+stuff in this field thank you very much
+hope you enjoyed this lecture on the
+internet and web programming in internet
+programming and all the stuff good
+programming see you later

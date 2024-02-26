@@ -1,0 +1,345 @@
+Thanks to Curiosity Stream for supporting
+PBS Digital Studios.
+Hey, I’m Jabril and welcome to Crash Course AI!
+Language is one of the most impressive things
+humans do.
+It’s how I’m transferring knowledge from
+my brain to yours right this second!
+Languages come in many shapes and sizes, they
+can be spoken or written, and are made up
+of different components like sentences, words,
+and characters that vary across cultures.
+For instance, English has 26 letters and Chinese
+has tens-of-thousands of characters.
+So far, a lot of the problems we’ve been
+solving with AI and machine learning technologies
+have involved processing images, but the most
+common way that most of us interact with computers
+is through language.
+We type questions into search engines, we
+talk to our smartphones to set alarms, and
+sometimes we even get a little help with our
+Spanish homework from Google Translate.
+So today, we’re going to explore the field
+of Natural Language Processing.
+INTRO
+Natural Language Processing, or NLP, mainly
+explores two big ideas.
+First, there’s Natural Language Understanding,
+or how we get meaning out of combinations
+of letters.
+These are AI that filter your spam emails,
+figure out if that Amazon search for “apple”
+was grocery or computer shopping, or instruct
+your self-driving car how to get to a friend’s
+house.
+And second, there’s Natural Language Generation,
+or how to generate language from knowledge.
+These are AI that perform translations, summarize
+documents, or chat with you.
+The key to both problems is understanding
+the meaning of a word, which is tricky because
+words have no meaning on their own.
+We assign meaning to symbols.
+To make things even harder, in many cases,
+language can be ambiguous and the meaning
+of a word depends on the context it’s used
+in
+If I tell you to meet me at the bank, without
+any context, I could mean the river bank or
+the place where I’m grabbing some cash.
+If I say “This fridge is great!”, that’s
+a totally different meaning from “This fridge
+was *great*, it lasted a whole week before
+breaking.”
+So, how did we learn to attach meaning to
+sounds?
+How do we know great [enthusiastic] means
+something different from great [sarcastic]?
+Well, even though there’s nothing inherent
+in the word “cat” that tells us it’s
+soft, purrs, and chases mice… when we were
+kids, someone probably told us “this is
+a cat.”
+Or a gato, māo, billee, qut.
+When we’re solving a natural language processing
+problem, whether it’s natural language understanding
+or natural language generation, we have to
+think about how our AI is going to learn the
+meaning of words and understand our potential
+mistakes.
+Sometimes we can compare words by looking
+at the letters they share.
+This works well if a word has morphology.
+Take the root word “swim” for example.We
+can modify it with rules so if someone’s
+doing it right now, they’re swimming, or
+the person doing the action is the swimmer.
+Drinking, drinker, thinking, thinker, … you
+get the idea.
+But we can’t use morphology for all words,
+like how knowing that a van is a vehicle doesn’t
+let us know that a vandal smashed in a car
+window.
+Many words that are really similar, like cat
+and car, are completely unrelated.
+And on the other hand, cat and Felidae (the word for the scientific family of cats) mean very
+similar things and only share one letter!
+One common way to guess that words have similar
+meaning is using distributional semantics,
+or seeing which words appear in the same sentences
+a lot.
+This is one of many cases where NLP relies
+on insights from the field of linguistics.
+As the linguist John Firth once said, “You
+shall know a word by the company it keeps.”
+But to make computers understand distributional
+semantics, we have to express the concept
+in math.
+One simple technique is to use count vectors.
+A count vector is the number of times a word
+appears in the same article or sentence as
+other common words.
+If two words show up in the same sentence,
+they probably have pretty similar meanings.
+So let’s say we asked an algorithm to compare
+three words, car, cat, and Felidae, using
+count vectors to guess which ones have similar
+meaning.
+We could download the beginning of the Wikipedia
+pages for each word to see which /other/ words
+show up.
+Here’s what we got:
+And a lot of the top words are all the same:
+the, and, of, in.
+These are all function words or stop words,
+which help define the structure of language,
+and help convey precise meaning.
+Like how “an apple” means any apple, but
+“the apple” specifies one in particular.
+But, because they change the meaning of another
+word, they don’t have much meaning by themselves,
+so we’ll remove them for now, and simplify
+plurals and conjugations.
+Let’s try it again:
+Based on this, it looks like cat and Felidae
+mean almost the same thing, because they both
+show up with lots of the same words in their
+Wikipedia articles!
+And neither of them mean the same thing as
+car.
+But this is also a really simplified example.
+One of the problems with count vectors is
+that we have to store a LOT of data.
+To compare a bunch of words using counts like
+this, we’d need a massive list of every
+word we’ve ever seen in the same sentence,
+and that’s unmanageable.
+So, we’d like to learn a representation
+for words that captures all the same relationships
+and similarities as count vectors but is much
+more compact.
+In the unsupervised learning episode, we talked
+about how to compare images by building representations
+of those images.
+We needed a model that could build internal
+representations and that could generate predictions.
+And we can do the same thing for words.
+This is called an encoder-decoder model: the
+encoder tells us what we should think and
+remember about what we just read...
+and the decoder uses that thought to decide
+what we want to say or do.
+We’re going to start with a simple version
+of this framework.
+Let’s create a little game of fill in the
+blank to see what basic pieces we need to
+train an unsupervised learning model.
+This is a simple task called language modeling.
+If I have the sentence:
+I’m kinda hungry, I think I’d like some
+chocolate _____ .
+What are the most likely words that can go
+in that spot?
+And how might we train a model to encode the
+sentence and decode a guess for the blank?
+In this example, I can guess the answer might
+be “cake” or “milk” but probably not
+something like “potatoes,” because I’ve
+never heard of “chocolate potatoes” so
+they probably don’t exist.
+Definitely don’t exist.
+That should not be a thing.
+The group of words that can fill in that blank is an unsupervised cluster that an AI could use.
+So for this sentence, our encoder might only
+need to focus on the word chocolate so the
+decoder has a cluster of “chocolate food
+words” to pull from to fill in the blank.
+Now let’s try a harder example:
+Dianna, a friend of mine from San Diego who
+really loves physics, is having a birthday
+party next week, so I want to find a present
+for ____.
+When I read this sentence, my brain identifies
+and remembers two things: First, that we’re
+talking about Dianna from 27 words ago!
+And second, that my friend Dianna uses the
+pronoun “her.”
+That means we want our encoder to build a
+representation that captures all these pieces
+of information from the sentence, so the decoder
+can choose the right word for the blank.
+And if we keep the sentence going:
+Dianna, a friend of mine from San Diego who
+really loves physics, is having a birthday
+party next week, so I want to find a present
+for her that has to do with _____ .
+Now, I can remember that Dianna likes physics
+from earlier in the sentence.
+So we’d like our encoder to remember that
+too, so that the decoder can use that information
+to guess the answer.
+So we can see how the representation the model
+builds really has to remember key details
+of what we’ve said or heard.
+And there’s a limit to how much a model
+can remember.
+Professor Ray Mooney has famously said that
+we’ll “never fit the whole meaning of
+a sentence into a single vector” and we
+still don’t know if we can.
+Professor Mooney may be right, but that doesn’t
+mean we can’t make something useful.
+So so far we’ve been using words.
+But computers don’t work words quite
+like this.
+So let’s step away from our high level view
+of language modeling and try to predict the
+next word in a sentence anyway with a neural
+network.
+To do this, our data will be lots of sentences
+we collect from things like someone speaking
+or text from books.
+Then, for each word in every sentence, we’ll
+play a game of fill-in-the-blank.
+We’ll train a model to encode up to that
+blank and then predict the word that should
+go there.
+And since we have the whole sentence, we know
+the correct answer.
+First, we need to define the encoder.
+We need a model that can read in the input,
+which in this case is a sentence.
+To do this, we’ll use a type of neural network
+called a Recurrent Neural Network or RNN.
+RNNs have a loop in them that lets them reuse
+a single hidden layer, which gets updated
+as the model reads one word at a time.
+Slowly, the model builds up an understanding
+of the whole sentence, including which words
+came first or last, which words are modifying
+other words, and a whole bunch of other grammatical
+properties that are linked to meaning.
+Now, we can’t just directly put words inside
+a network.
+But we also don’t have features we can easily
+measure and give the model either.
+Unlike images, we can’t even measure pixel
+values.
+So we’re going to ask the model to learn
+the right representation for a word on its
+own (this is where the unsupervised learning
+comes in).
+To do this, we’ll start off by assigning
+each word a random representation -- in this
+case a random list of numbers called a vector.
+Next, our encoder will take in each of those
+representations and combine them into a single
+/shared/ representation for the whole sentence.
+At this point, our representation might be
+gibberish, but in order to train the RNN,
+we need it to make predictions.
+For this particular problem, we’ll consider
+a very simple decoder, a single layer network
+that takes in the sentence representation
+vector, and then outputs a score for every
+possible word in our vocabulary.
+We can then interpret the highest scored word
+as our model’s prediction.
+Then, we can use backpropagation to train
+the RNN, like we’ve done before with neural
+networks in Crash Course AI.
+So by training the model on which word to
+predict next, the model learn weights for
+the encoder RNN and the decoder prediction
+layer.
+Plus, the model changes those random representations
+we gave every word at the beginning.
+Specifically, if two words mean something
+similar, the model makes their vectors more
+similar.
+Using the vectors to help make a plot, we
+can actually visualize word representations.
+For example, earlier we talked about chocolate
+and physics, so let’s look at some word
+representations that researchers at Google
+trained.
+Near “chocolate,” we have lots of foods
+like cocoa and candy:
+By comparison, words with similar representations
+to “physics” are newton and universe.
+This whole process has used unsupervised learning,
+and it’s given us a basic way to learn some
+pretty interesting linguistic representations
+and word clusters.
+But taking in part of a sentence and predicting
+the next word is just the tip of the iceberg
+for NLP.
+If our model took in English and produced
+Spanish, we’d have a translation system.
+Or our model could read questions and produce answers, like Siri or Alexa try to do.
+Or our model could convert instructions into
+actions to control a household robot … Hey
+John Green Bot?
+Just kidding you’re your own robot.
+Nobody controls you.
+But the representations of words that our
+model learns for one kind of task might not
+work for others.
+Like, for example, if we trained John-Green-bot
+based on reading a bunch of cooking recipes,
+he might learn that roses are made of icing
+and placed on cakes.
+But he won’t learn that cake roses are different
+from real roses that have thorns and make
+a pretty bouquet.
+Acquiring, encoding, and using written or
+spoken knowledge to help people is a huge
+and exciting task, because we use language
+for so many things!
+Every time you type or talk to a computer,
+phone or other gadget, NLP is there.
+Now that we understand the basics, next week
+we’ll dive in and build a language model
+together in our second lab! See you then.
+Thank you to CuriosityStream for supporting PBS Digital Studios.
+CuriosityStream is a subscription streaming
+service that offers documentaries and non¬fiction
+titles from a variety of filmmakers, including
+CuriosityStream originals.
+For example, you can stream Dream the Future
+in which host Sigourney Weaver asks the question,
+“What will the future look like?” as she
+examines how new discoveries and research
+will impact our everyday lives in the year
+2050.
+You can learn more at curiositystream.com/crashcourse
+Or click the link in the description.
+Crash Course Ai is produced in association
+with PBS Digital Studios!
+If you want to help keep Crash Course free
+for everyone, forever, you can join our community
+on Patreon.
+And if you want to learn more about how human
+brains process language, check out this episode
+of Crash Course Psychology.

@@ -1,0 +1,312 @@
+ever wondered how large enterprise scale
+systems are designed
+before major software development starts
+we have to choose a suitable
+architecture that will provide us
+with the desired functionality and
+quality attributes
+according to wikipedia an architectural
+pattern is a general
+reusable solution to a commonly
+occurring problem in
+software architecture within a given
+context
+in this video i will briefly explain the
+most important architectural
+patterns used in the enterprise app
+development today
+pattern one layered pattern this is the
+most common architecture pattern that is
+also known as the
+entire architecture here the software
+is divided into units called layers
+there are usually four tiers of layers
+presentation layer
+application layer business logic layer
+and
+data access layer each of the layers has
+a specific role
+and responsibility for example the
+presentation layer is usually
+responsible for handling user interface
+among the advantages of the layered
+pattern is that a lower layer can be
+used by different higher layers
+however this pattern performs poorly in
+the high performance applications
+because it is not efficient to go
+through multiple layers to fulfill a
+business request
+the layered pattern is usually used in
+building general desktop applications
+as well as relatively simple web apps it
+is a good choice for situations with a
+very tight budget
+and time constraints pattern 2
+pipe filter pattern in many enterprise
+apps
+a single event triggers a sequence of
+processing steps
+each performing a specific function for
+example
+let's assume a new customer order
+arrives
+one requirement may be that the message
+is encrypted to prevent eavesdroppers
+from spying on a customer's order
+a second requirement is that the
+messages contain
+authentication information in the form
+of a digital certificate
+to ensure that orders are placed only by
+trusted customers
+to meet these requirements we need to
+transform a stream of complex messages
+into a stream of unique simple plain
+text order messages
+without additional data fields the pipes
+and filters architecture divides a
+larger processing task
+into a sequence of smaller independent
+processing steps
+or filters that are connected by
+channels or
+pipes the pattern is often used in
+compilers
+where the consecutive filters perform
+lexical analysis
+parsing semantic analysis and code
+generation
+pattern three client server pattern
+in the client server architecture there
+are two main components
+the client which is the service
+requester and the server
+which is the service provider although
+both client and server
+may be located within the same system
+they often communicate over a network on
+separate hardware
+the advantage of using the client server
+pattern is an ease of modeling
+a set of services where clients can
+request them
+among the disadvantages of this pattern
+is that the server can be a performance
+bottleneck
+and a single point of failure on top of
+that
+decisions about where to locate
+functionality in the client or in the
+server
+are often complex and costly to change
+after a system has been built
+typical real-world use cases of the
+client server pattern include
+online applications such as email
+document sharing and banking pattern 4
+model view controller pattern the user
+interface is typically the most
+frequently modified portion of an
+interactive application
+how can user interface functionality be
+kept separate from application
+functionality
+and yet still be responsive to user
+input or to changes in the underlying
+applications data
+and how can multiple views of the user
+interface be created
+maintained and coordinated when the
+underlying application data changes
+the solution is to use the model view
+controller pattern
+which separates application
+functionality into three kinds of
+components
+model which contains the core
+functionality and data
+view which displays the information to
+the user
+where more than one view may be defined
+and controller
+which handles the input from the user
+the model view controller pattern is
+commonly used in the web frameworks
+such as django and rails pattern five
+event bus pattern the modern enterprise
+software
+is often built as a distributed system
+that can service asynchronously arriving
+messages
+associated with high volume of events
+the event bus pattern has four major
+components
+event source event listener channel and
+event bus
+sources publish messages to particular
+channels on an event bus
+listeners subscribe to particular
+channels
+listeners are notified of messages that
+are published to a channel to which they
+have subscribed before
+the advantage of using this pattern is
+that new publishers
+subscribers and connections can be added
+easily
+however the scalability might be a
+problem for this pattern
+as all messages travel through the same
+bus
+the event bus pattern is often used in
+android development
+e-commerce applications and notification
+services
+pattern six micro services architecture
+the modern enterprise apps are required
+to support a variety of browsers
+and native mobile clients these days the
+applications
+usually handle client requests by
+executing business logic
+accessing a database exchanging messages
+with other systems
+and returning responses in this regard
+monolithic applications can become too
+large and complex for efficient support
+and deployment
+the solution is to build applications as
+micro services
+each service is independently deployable
+and scalable
+and has its own api boundary different
+services can be written
+in different programming languages
+manage their own database
+and developed by different teams many
+use cases are applicable for a
+microservices architecture
+especially those that involve an
+extensive data pipeline
+pattern 7 broker pattern
+this pattern is used to structure
+distributed systems with decoupled
+components
+these components can interact with each
+other by remote service invocations
+a broker component is responsible for
+the coordination of communication among
+components servers publish their
+capabilities to a broker
+clients request a service from the
+broker and the broker then redirects the
+client to a suitable service from its
+registry
+the broker pattern allows for dynamic
+change addition
+deletion and relocation of objects and
+it makes distribution
+transparent to the developer however
+among the disadvantages of the broker
+pattern is that it requires
+standardization of service descriptions
+this pattern is often used in the
+message broker software
+such as apache activenq apache kafka
+rabbit and q and jboss messaging
+pattern 8 peer-to-peer pattern
+in this pattern individual components
+are known as peers
+peers may function both as a client
+requesting services from other peers
+and as a server providing services to
+other peers
+a peer may act as a client or as a
+server
+or as both and it can change its role
+dynamically with time
+the peer-to-peer pattern supports
+decentralized computing
+and is highly robust in the failure of
+any given node
+besides it is highly scalable in terms
+of resources and
+computing power however there is no
+guarantee about
+quality of service as nodes cooperate
+voluntarily
+on top of that security is difficult to
+ensure
+and the system performance often depends
+on the number of nodes
+this pattern is used in the file sharing
+networks
+such as ganutella and g2 multimedia
+protocols
+such as p2ptv and pdtp
+as well as in cryptocurrency based
+products such as bitcoin
+pattern 9 blackboard pattern
+this pattern is useful for problems for
+which no deterministic solution
+strategies are known
+the blackboard pattern consists of three
+main components
+blackboard which is a structured global
+memory
+containing objects from the solution
+space
+knowledge source which is specialized
+modules with their own representation
+control component which selects
+configures
+and executes modules all the components
+have
+access to the blackboard components may
+produce
+new data objects that are added to the
+blackboard
+components look for particular kinds of
+data on the blackboard
+and may find these by pattern matching
+with the existing knowledge source
+the advantage of using this pattern is
+that extending the structure of the data
+space
+is easy however modifying the structure
+of the data space
+is hard as all applications are affected
+this pattern is often used in speech
+recognition
+protein structure identification and
+summer signals interpretation
+pattern 10 master slave pattern
+this pattern consists of two parties
+master
+and slaves the master component
+distributes the work among
+identical slave components and computes
+a final result from the results which
+the slaves return
+the advantage of using the master slave
+pattern
+is the accuracy in which the execution
+of a service
+is delegated to different slaves with
+different implementations
+however this pattern can only be applied
+to a problem that can be decomposed
+the master slave pattern is usually used
+in database replications
+where the master database is regarded as
+the authoritative source
+and the slave databases are synchronized
+to it
+if you found this video useful i would
+appreciate it if you smash the like
+button
+also make sure to subscribe to the
+coding tech channel and click
+on the notification bell enjoy the rest
+of your day

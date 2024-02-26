@@ -1,0 +1,602 @@
+foreign
+[Music]
+tography broadly is the practice and
+study of techniques for secure
+communication
+in the presence of adversarial Behavior
+so you know do you have information do
+you want to keep it a secret
+how do you keep it a secret
+um is you know is kind of the pipeline
+the way we know something is secure if I
+wanted to you know prove it to you if I
+wanted you to like not just take my word
+for it that if I tell you something is
+secure
+um you'll have to do two things first we
+have to Define an adversary
+um or in combination with an adversary
+we have to Define what's called a
+security model so this is a set of
+basically just mathematical operations
+and these mathematical operations
+rigorously Define everything that the
+adversary is allowed to do so maybe
+they're allowed to look at messages
+before I encrypt them maybe they're
+allowed to to look at you know some
+encrypted messages and then they're
+allowed to see uh the decrypted version
+and there's all sorts of different
+behaviors and scenarios that you can
+Define with math in order to model
+different types of adversaries that
+would model different scenarios where
+you'd want to protect information and so
+once you've made all of these
+mathematical definitions you construct a
+communication protocol so this is a
+mathematic this is a series of
+mathematical operations that model uh
+multiple people talking to each other
+sending messages
+which consists of just bits back and
+forth between each other and once you've
+defined that protocol you mathematically
+prove that the adversary cannot break
+your protocols so you prove that they
+can't learn information basically and so
+the techniques to do this can be can go
+from very simple to just proving it's
+hard to to figure out like the factors
+of a number
+to extremely complicated problems that
+like you know people would study you
+know for like their PHD topics
+um or something so I'm not going to
+really go into any specific construction
+but I do just want you guys to
+understand the process of we
+mathematically construct
+um an adversary that tries to break our
+to that tries to break our code
+and then we prove that they can't break
+it and so just to give
+um an example
+um this is a high level view of what's
+called into end encryption which is how
+you would communicate some with someone
+securely over over a chat application
+like WhatsApp or signal or Facebook
+Messenger so every time you use WhatsApp
+or Facebook messenger and you talk to
+someone this process is occurring with
+these mathematical key exchanges
+encrypting messages sending encrypted
+messages decrypting them with certain
+Keys
+um
+and we start with like a high level
+description of this process and then we
+work our way down getting more and more
+specific with um with the math
+you know I just said you know we have to
+prove uh that our you know our adversary
+which I've called a here so we have to
+prove that adversary a can't break our
+scheme
+and the way that we do these uh these
+mathematical proofs because I'm not
+going to really give you an example
+um
+just because I don't want to like throw
+you know math at you is that
+you use a you use the adversary we made
+this mathematical set of operations that
+we consider to be like enemy Behavior
+and you use it to solve a problem you
+know is hard
+so you have an adversary you have a
+problem that you know for a fact is hard
+or maybe even impossible and you prove
+that if the adversary exists and can do
+damage to your like if it can break your
+code
+you prove that you've actually solved
+the problem you knew that was hard and
+so this is a contradiction we are saying
+that you know I have this problem I know
+is impossible and I have a solution to
+the problem that doesn't make any sense
+so that means that like the abilities
+that I said that this adversary had
+um in order to like solve in order to
+break our encryption to break our code
+um it can't exist
+um
+and so one another way of phrasing this
+is that we assume that whatever
+communication protocol or encryption
+scheme we were making is weak against
+the adversary
+and then assuming that weakness we are
+able to build a solution to a hard
+problem B and kind of the simplest hard
+problem that um I'll give you guys as an
+example
+um is
+determining the factors of number of
+really really big numbers
+um so if I give you a really really big
+number and I ask you to pull out a
+specific like prime factor
+um so a number that divides that number
+um this is a this is a problem that is
+um in in theory hard to solve
+um at least on a normal computer and by
+hard here I just mean it takes a long
+time so
+um unless you have a very special type
+of encryption called information
+theoretic encryption
+um you can eventually break any code or
+any encryption scheme however if it
+takes a really long time uh no one is
+going to break it so it's you know it's
+safe enough for human for like humans
+for human use
+um and how long it might take to break
+it uh might you know allow you to use
+different encryption schemes that are
+maybe faster or slower for different
+purposes so so you know encrypting your
+bank account transactions for example is
+probably more important than like your
+Snapchats with like your friend or maybe
+I don't know what you send to maybe
+you're sending your bank transactions on
+Snapchat but you know maybe don't do
+that
+um but
+if you know we basically want like we
+want harder and harder problems uh to
+solve like and protect more and more
+secure information
+and I know this might seem a little
+abstract to you guys so just um to think
+about it in terms of the Python code
+that we've been working with the past
+two weeks
+um one way to think about this is that
+we use the adversary a like a python
+function so we have a python function
+that is our adversary and if I give that
+adversary some data it will spit back
+the answer to a really really hard
+problem
+um a problem that I know is too hard for
+it to actually solve so I know that this
+that this you know this function uh
+doesn't actually exist it's not real
+um and if I know it's not real then I
+know my system is safe
+and just to like reiterate this idea of
+contradiction
+um you know here's a little Phoenix
+right you know
+if we have a clear contradiction between
+the existence of an adversary and the
+heart and the hardness of a problem one
+of them has to be wrong and if we
+already have a proof for the problem uh
+that's supposed to be hard I know it's I
+know it's the adversary and I know that
+my system is safe
+how does that intersect with machine
+learning so there's two forms that I
+think are good to consider
+um one is more theoretical and one is
+more practical
+so first
+um our cert we can think about doing
+cryptography with machine learning and
+so what I mean by this is you know can I
+use a machine learning problem in a
+crypto in a cryptography scheme so if I
+have a really really hard machine
+learning problem maybe I can use that
+problem to hide information because the
+problem's just too hard to solve and so
+that's a more theoretical problem where
+we're like building you know encryption
+schemes
+um on the other hand more practically
+um machine your machine Learning System
+that you might build for you know any
+reason is using data sets right you're
+you're usually collecting data in like a
+supervised problem or an unsupervised
+problem and that data might need to be
+secured it might be really sensitive
+like maybe you're trying to do like
+cancer diagnoses well if you want to do
+real cancer diagnoses you have to have
+databases from hospitals so hospitals
+have to actually give you like patient
+data
+um and you have to keep that data secure
+you have to make sure no one leaks it
+um otherwise you know you're violating
+basically the Hippocratic Oath that you
+know all that like this hospital is is
+legally obligated and you know morally
+obligated
+um to keep safe
+and so we have this theoretical View and
+this more practical View
+and so you know if you won again doing
+cryptography with machine learning if
+some problems are not easily learnable
+they're really good for cryptography
+and on the other hand if um you know
+maybe the security of a cryptography
+scheme is not exactly clear so maybe
+there's a problem that I think is hard
+and that I'm using for a cryptography
+scheme but I don't really know it's hard
+well the thing that really decides how
+hard it is is whether you can learn
+anything about it so if I have a problem
+I'm not quite sure is hard I could try
+doing machine learning
+on the on the scheme on the problem and
+if it finds anything then I know that
+this problem I was considering was hard
+is actually
+um there's some issues with it
+um so you know I can use cryptography I
+can use machine learning to try and
+build a cryptographic scheme or I can
+use it to try and break one
+um now uh using it to build uh crypto
+cryptographic schemes is very well
+understood
+um one way to think about it is that if
+you have a learning problem if you have
+something you want to do machine
+learning with that is inherently
+unpredictable then it's inherently
+unlearnable and so you know if you can
+construct this learning problem that you
+can't solve then it's good to use for
+cryptography and
+um some examples of this might be like
+learning a like a perfectly like random
+uh function so if I like am just sending
+numbers to random numbers there's no
+pattern in that I can't like I can't
+learn anything so I could use that to
+make certain cryptographic schemes
+um on the other hand I am not really
+even though people regularly publish
+research on this I'm not confident that
+throwing machine learning at um at like
+cryptography schemes you're not sure is
+are secure is necessarily that useful to
+do it kind of breaks you know the
+mathematical rigorousness or the math
+medical rigor that I was saying we need
+earlier because if I throw a neural
+network at a machine at a or at a
+cryptography problem and see if the
+neural network can just like figure it
+out so the neural networks like acting
+as the adversary kind of
+um I don't know really how that network
+works so I don't really have a
+mathematical proof in the sense of a
+proof that I can like read and
+understand for like why my scheme was
+broken the network just kind of figured
+it out
+um but people do you know do try and do
+this and in practice on real schemes
+that are like running on systems this
+can also help you find actually bugs so
+if you have a bug in your scheme
+um you know machine learning might be
+able to pick up some statistical pattern
+you wouldn't see by hand
+and just to give you know a concrete
+example of why this like matters
+um here's um here's a kind of a visual
+of the um Advanced encryption standard
+which like you don't need to know how it
+works I just want you to think that um
+that it's basically like a really really
+good and complicated Cipher for
+substituting letters with other letters
+it's like you know the Enigma machine
+this is like the mathematically secure
+digma machine this one actually works
+um and so
+AES
+um is what is called a block Cipher and
+block ciphers although we have very good
+reason
+um to believe are like very secure and
+even secure against like quantum
+computers
+um we don't actually have proof uh we
+don't really have explicit proofs for
+why these ciphers um are so secure we
+think that it's because they model
+random like basically just a totally
+random function well but there is not a
+proof for this and so you might think
+you know
+maybe if there is something like
+statistically significant in like across
+AES or maybe a specific implementation
+of AES that maybe has a bug in it so it
+doesn't work the way it's supposed to
+you could throw some like machine
+learning at it and see if it picks up
+any patterns
+um and if it does pick up any patterns
+it can help you like bug fix if it's an
+implementation or it could show that
+there's some underlying problem in AES
+that we don't know about and this you
+know if someone actually found this with
+AES it would be like Earth shattering
+because you use AES hundreds of times a
+day you're using AES right now this
+video this video feed that you're
+looking at
+um I think is encrypted with AES I don't
+know if Zoom has fully uh Zoom was in
+the process of encrypting video feeds I
+don't know if they've finished so I
+don't know if it's actually running
+right now but like any time you use an
+encrypted video chat or if you ever go
+to like the http PS version of a site
+where the S stands for secure
+all of that is being done with this
+encryption standard
+um so it would be it would be like quite
+shocking
+um if it if it ever ended up like being
+broken or very reassuring if we actually
+got you know a proof out of it
+on the other hand we can also think
+about uh instead of using ml to like
+either attack or build cryptography we
+can think about also how cryptography
+can help us do ml uh better so machine
+learning often uses sensitive data as I
+said like maybe Hospital data and you
+got to protect it and if anyone is
+interested in this topic more generally
+the keywords you want to search for is
+privacy preserving machine learning
+and so you know why do we even need to
+think about this
+um you know
+um
+so like why do we even need to think
+about this well if you have
+um say like Census Data
+um you and you want to like do some
+machine learning on the Census Data
+um you don't want to lose any of the
+senses you don't want to like
+accidentally leak information about like
+a real person's census right like a
+census record in the U.S census has tons
+of personal information about you right
+it has your name it has your social
+security number it has like
+um your family that lives with you
+um it has tons and tons of information
+in it and you don't want any any of that
+to leak and I have just this little
+picture of um of a census record and so
+you know
+the easiest thing we could maybe do is
+basically jiggle so I just have this
+picture of jello here
+um because I don't really have a good
+visual representation of what we're of
+what this is doing besides like thinking
+of like you know
+making the data like wiggle a little bit
+but you know you can think about it uh
+about this as like if I changed every
+single piece of data just a little bit
+so like I changed everyone's names just
+a little bit I changed everyone's like
+um addresses a little bit I changed
+everyone's like I changed all the data
+just a little bit and on the individual
+level I can't I can't easily leak
+anyone's uh I I can't leak anyone's
+information anymore necessarily so like
+if you looked at one row in the database
+that like this maybe this is training
+data was stored in
+um I can't I can't identify who that
+belonged to eventually because I I
+basically randomized the data a little
+bit and I say a little bit because if
+you're very careful you can make it to
+where the machine learning you would do
+on the original data still works on this
+like jiggled data so even though all the
+data has been changed just a little bit
+you can still compute or you can still
+do machine learning and learn useful
+things about the entire data set and
+those those things you might learn about
+the entire data set and the aggregate
+will be still very accurate to how they
+would have been if I hadn't like jiggled
+any of the data so this is called
+differential privacy and it's like a
+huge research topic it is actually being
+used in the U.S census now so like you
+can find there were Congressional
+hearings about exactly what mathematical
+parameters and how to pick them and you
+know guys from the Census Bureau and
+we're having to like explain to Senators
+why it mattered
+um which there were some pretty funny
+interactions there but you know this is
+something simple you can do and I say
+simple in reality I just mean not
+cryptographic it's not cryptography but
+it's um but it's not it's not not enough
+so even though we can do this
+this differential privacy and like
+compute some things with a data set it
+doesn't actually solve a lot of like
+hard problems
+um that we might care about so you know
+when I do you know when I like jiggle
+all the data a little bit I add noise
+and I get this new secure data set
+um this data set is now locked I can't
+like I can't change any of the data I
+can't figure out if there were
+duplicates I can't clean it so like a
+big part of machine learning is like
+making sure your data is in a
+presentable fashion for like doing the
+machine learning once you've done this
+you cannot go back and clean it the
+whole data is has been randomized to a
+point that like you can't identify
+anything
+um properly so like if I delete you know
+if I delete a row of a spreadsheet after
+I've like you know randomized it I have
+no idea if what I deleted was a
+duplicate or not I don't know like who
+it belonged to and I'm not supposed to
+but you know you could imagine scenarios
+where you would want to like do this
+um like cleaning process so there's two
+things we can do and I know I am running
+close um close on time so I'm going to
+wrap it up soon
+um but you know we have what's called
+secure multi-party computation and not
+going to explain how that works but the
+idea is that you can take something you
+can take two things
+um you know you can take some data you
+can compute something about it
+um that is like supposed to be that is
+supposed to be private and you will get
+an answer back but you did not have to
+make the entire data set like you didn't
+have to jiggle all the data this time so
+like say we have like this scientist uh
+Ria I think I got this um picture from a
+National Institute of Standards and
+Technology
+um article and say like Ria here wants
+to compute something about you know
+these two different hospital databases
+uh but you know she doesn't want to like
+destroy the data so she can like modify
+it if she needs to you can put
+multi-party computation in the middle
+and you are allowed to do that
+um another thing you might want to do is
+you could like compute uh uh do some
+data does some data have duplicates so
+is some data like replicated in two
+different like training sets that are
+maybe really sensitive and you don't
+want to leak anything about them and you
+can do that with a cryptographic
+technique called private intersection or
+private set intersection this was used
+by Apple and their csam system actually
+which they almost put on your phones but
+there were some issues with it and a lot
+of backlash and they canceled the
+project at the last minute but that's
+just an example of like you know it
+being present and you know in real life
+and the system it was being used for was
+a machine Learning System so it's like
+extra extra relevant
+um and then lastly I will say you know
+um even these are like you know
+relatively simple things we want to do
+like Sub sub like out like database
+entries check for duplicates and stuff
+you could imagine you want to do
+something more complicated and for that
+we have this very very powerful thing uh
+called fully homomorphic encryption
+which was discovered
+um formally by this guy named Craig
+Gentry about 11 years ago
+um he's an inspiration to me because he
+did not he was a lawyer and then was
+like I want to do math so then he got a
+PhD in uh in computer science sat in a
+room for like six years and figured this
+out
+um at the age of like 43
+um so he's a cool dude uh it's never too
+late to like figure out something you
+want to do
+um and so fully homomorphic encryption
+is like you know it's the king in some
+sense of cryptography it lets us just
+give it lets us encrypt data give it to
+someone else and they can do arbitrary
+computation they could do arbitrary say
+machine learning on the encrypted data
+and they can give us the results back
+and they have no idea what the results
+are but we do we can decrypt it and so
+this is super cool
+um the only thing I want you to
+understand in terms of how it works is
+you can think of it as taking like one
+addition or multiplication for numbers
+that you knew about and transforming it
+into like hundreds of multiplications or
+hundreds of additions that basically
+hide what the original numbers were it's
+like super super simple overview of how
+it works and for how we could use that
+in machine learning it's basically you
+know throwing the kitchen sink at the
+problem so like say I want to like you
+know do some machine learning on really
+sensitive data I could just encrypt it I
+could then do the machine learning and
+you know the people doing the machine
+learning or like the model itself has no
+idea what the real data was and but the
+machine learning will work basically so
+even though they don't know what it is
+it will work and give useful answers and
+only you who has the you know who has
+the keys to decrypt everything will get
+useful stuff back
+um and so I think I'm going to end it
+there there's many more like you know
+uses of cryptography and ml that I'm
+sure hasn't even been thought of it's
+there's constant Publications but I'm
+going to stop there because I think I'm
+I'm running on time

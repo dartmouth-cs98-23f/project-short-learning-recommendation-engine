@@ -1,0 +1,508 @@
+for most people studying data structures
+and algorithms is not the most exciting
+part of programming and trust me this is
+exactly the feeling that i used to have
+when i first started learning about data
+structures and algorithms to me they
+just seemed so boring and i just
+couldn't quite understand why they are
+even important and this seemed like
+something that i just sort of have to
+learn to get my foot through the door
+and after that i can just forget about
+them and focus on what i'm actually
+excited about like coding tinderbots
+but now that i've actually properly
+learned about these topics and taking
+the time to actually understand not only
+what they are but why they are important
+i've actually completely changed my mind
+i think data reaction algorithms is one
+of the most beautiful parts of
+programming and computer science and in
+this video i want to give you a glimpse
+of this beauty by giving you literally
+the dumbest most simple explanation of
+what data structures are to give you
+sort of an intuitive understanding that
+you can then take into your actual study
+of each particular data structure so you
+can have this sort of framework in your
+mind going into it and hopefully
+hopefully you may even start to
+appreciate the beauty that implementing
+data structures can actually have and
+believe me i remember exactly what it
+was like to not understand anything
+about data structures this video is
+completely language agnostic so
+whichever programming language you've
+learned in the past you can watch this
+video and then at the end as always i
+will give you the exact resources that i
+use in a step-by-step way to go from
+this conceptual high-level understanding
+into mastering all of these topics i'm
+really passionate about this reaction
+algorithms so if you enjoyed this video
+there will be a very similar video
+coming on algorithms as well so if you
+do enjoy this video leave a like down
+below because how many people like this
+video will then sort of tell me whether
+i should make it or not okay so what are
+data structures at an extremely high
+level all a data structure is is a way
+of organizing data so whenever you're
+writing a program the purpose why
+computers exist in the first place is
+that we have some data which can be like
+numbers or maybe it's a string and then
+we have something that we want to do
+with that data to produce some useful
+result it turns out that it really
+matters how we actually organize data in
+a computer's memory and i know that
+right now now this makes any sense and
+that is why i have organized a couple of
+very specific examples which will allow
+you to actually understand it again in
+the dumbest way possible in a way that
+even a literal dumbass like me could
+understand how this work but first let's
+just briefly talk about
+why this idea of organizing data is
+actually so important to the point where
+if you want to get a job studying data
+structures and algorithms is literally
+the most important thing that you need
+to know if you're good at data
+structures and algorithms you will be
+good at writing programs in a logical
+way in a way that makes sense in a way
+that is efficient and what companies
+want to see is that you have that
+fundamental knowledge and those
+principles that you can apply in their
+production code to make the gold really
+good and therefore that you as the
+programmer are worth the money that the
+company is spending on you so data
+structure is a way of organizing data in
+the computer's memory the way the
+computer's memory works in again a
+really dumb sort of simplified way you
+have these memory blocks which are
+called like memory registers all these
+registers hold some kind of value maybe
+this is a two this is a five this is a
+seven and whenever you're writing a
+program you're probably not just doing
+something with one piece of data like
+these two here often you'll have
+something like a collection of data
+that's sort of related to each other in
+some way maybe it's a list of numbers
+like a list of transactions that you
+want to add together or something like
+that so it makes sense to actually
+organize this data close to each other
+in the computer's memory so that it's
+easy for you to access all these
+different pieces of data rather than
+having to define separate variables like
+a equals two or b equals five you can
+just define one variable one data
+structure called a list and this is the
+first data structure that we learned the
+most basic one and then you put all of
+these numbers into this one variable so
+then in the future if you want to access
+the middle element of this list you can
+just go list one from the computer's
+perspective when all of these variables
+are stored close together to each other
+accessing them together and maybe
+looping over them or something is a lot
+easier this is sort of the computer
+equivalent of let's say like when i'm
+making these youtube videos right
+there's multiple pieces of gear that i
+always sort of need and so whenever i
+want to start filming a video it makes
+sense if i've sort of placed all my
+camera gear in the same part of the room
+so all i have to do is go to that part
+of the room grab the gear and start
+filming and storing values in something
+like a list is just a computer
+equivalent of this same principle let's
+talk about a limitation that a very
+simple data structure like a list could
+have the way lists or arrays are usually
+defined in a programming language is
+there a certain amount of memory in this
+case we've just allocated three
+registers of memory to our list here but
+what happens if we now want to add a
+fourth element to the list well you
+might say that well that's easy we just
+sort of added here but what if this
+register in the memory was already taken
+up by a different piece of data maybe we
+already had a string like hello in here
+now we put the eight on top of it so
+this hello gets replaced and maybe we
+had a different part of the programmer
+we'll be using that piece of string and
+now instead of hello it's certainly an
+eight and just everything crashes right
+so the way lists are usually actually
+defined under the hood in the language
+is that if you add an element to a list
+it will actually take this list and move
+it to a completely different part of the
+memory and then allocate more memory to
+it even if you don't understand anything
+about low level programming you might
+see that this is sort of very
+inefficient if you know that you'll be
+constantly adding data to a list every
+time moving into a different location in
+the memory can become very slow so that
+is why you can see that actually if we
+know that the thing we want to do with
+our data is to
+keep adding stuff to it and we know that
+in the future we'll be adding a lot of
+stuff to it it actually doesn't make
+sense to use a list and there might be a
+better way to organize that data again
+for this purpose that we have here and
+in particular for something like this we
+might use something called a linked list
+and what a linked list is instead of
+storing your items just sequentially
+after each other in the memory what
+we're doing is we're defining this node
+structure so we just have two
+places in memory where the first one is
+a piece of data like r2 here and the
+next one is a pointer to a different
+node somewhere else in the memory it
+doesn't matter where it is essentially
+this second item of this node will be
+pointing to the next element which will
+again just be a node and the way this
+actually works is that these memory
+registers are numbered in the computer's
+memory let's say this is a number five
+is number six and then somewhere
+randomly in the memory we have a memory
+register i don't know like 102 and here
+as the second element of this first node
+we just have the memory address where we
+know that the second element will be and
+again for the next one we would have
+maybe a pointer to register 463
+and this one will then know that okay
+the next element of our link deletion
+will be in memory location
+463 and again using our camera example
+here let's say i'm using all my camera
+gear in this part of the room here but
+now there's no space anymore what i
+could do is include like a post-it note
+in that area to see that okay the next
+batch of my gear is going to be in this
+area of my room maybe there's a note
+there that says i don't know under the
+bed or something so that i know where to
+go to find the next part of the gears
+and this way you can essentially just
+keep increasing this chain of values or
+chain of camera gear almost indefinitely
+as long as you actually have a space in
+your memory or space in your room all
+you have to do is just know where the
+very last element of the list is and
+then users have to find an empty
+location anywhere in your memory and
+then add
+another node into your linked list and
+so you can see how we already with this
+very simple requirements we already sort
+of have a need for a slightly more
+complex data structure and from the
+programmer's perspective when you want
+to add something to the list you just
+call the linked list sort of a method
+that's defined inside of the data
+structure to append an element in the
+list and under the hood all of this
+stuff is happening all this sort of
+drama is happening but the programming
+doesn't even need to know anything about
+it but crucially if the designer of this
+program hadn't designed this in the
+correct way it could be causing problems
+like this and causing the whole hardware
+to essentially crash or explode or
+whatever horrible things would happen
+but again obviously even the linked list
+also has downsides let's say what's
+really important in the specific
+application we're developing is for
+example accessing elements in the middle
+of the list like accessing this one
+right here now this specific operation
+is actually a lot easier to do in an
+array or a list like data structure we
+just call list one like this here
+whereas with a link to this we just sort
+of have to loop over the list until we
+arrive at the item that we're looking
+for which is a lot more expensive so as
+you can see again which data structure
+we're using always depends on the
+specific thing we're trying to do and
+sort of the specific things that you can
+see the user of that program needing to
+do a lot of the time and the way all of
+this like the linked list would be
+implemented in an actual programming
+language or python is that you would do
+something like create a class called
+linked list then you would create method
+inside that do all of this magic and
+then there will be a client where all
+they would have to do is call this
+append method and it would simply just
+do all of this magic behind the scenes
+and that is really the beauty of data
+structures and i know that all the
+details of this might be a bit fuzzy for
+you again the point of this video is not
+so that you can understand all these
+details it's just to give you an idea of
+why different data structures even exist
+if my sort of weird way of explaining
+data structures is making sense to you
+at all i would appreciate it if you
+could tap the like button down below in
+the description so let's now move on to
+a couple of slightly more complex
+examples to really drill this in and to
+make sure that you really understand
+what's going on here but first a word
+from our sponsor if you have a business
+or you're working on a project that
+requires e-signature you want to make
+sure that your documents are signed
+securely fast and in a legally binding
+way so if that's you
+you need to listen the sign now api is a
+powerful e-signature tool that allows
+you to embed e-signature on your website
+it's free to test fast to deploy and
+will allow you to not worry about
+document approval cycles and instead
+focus your time on growing your business
+developers particularly love site now's
+easy to use and detailed documentation
+with clear coding examples as well as
+great video tutorials on how to get
+started which makes implementing the api
+extremely easy in any programming
+language the synonym api is available
+through straightforward sdks and allows
+you to complete entire document approval
+cycles from uploading documents to
+tracking signature progress and not only
+that design now api make sure that your
+apps keep running with
+99.99
+uptime and in accordance with all the
+required compliance and security
+requirements so if that is something
+that sounds useful for your app you are
+in luck because they currently have a
+unique offer on the market which gives
+you 250 legally binding e-signatures for
+free so if you don't want to miss out on
+that click the link down below in the
+description to create your free sandbox
+account and start building dynamic
+e-signature workflows today thank you
+for sign now for sponsoring this video
+and now back to the tutorial so in
+practice we obviously have a lot more
+even more complicated requirements for
+things we want to do with data let's say
+you are an airline and you want to sort
+of structure the data about all the
+people who have bought tickets to some
+flights what makes sense for you is
+probably not just to group stuff
+together randomly in the computer's
+memory like for example in the order
+that they bought the tickets because
+what you probably really want to do is
+order them in some sort of priority
+where the people who have bought first
+class tickets are first but then when
+they want to do something with it they
+can see the first class passengers first
+and then the business class passengers
+and then the peasant economy passengers
+like me so it would be very useful for
+these airline operators to have a data
+structure that would allow them to group
+data in a way like this and it turns out
+this is a very common requirement in
+many different computer programs that is
+why a very common data structure that is
+used is something called a priority
+queue for this you would define
+essentially a linked list just like this
+but essentially every time when you're
+adding something to the list but the add
+method wouldn't just be doing this it
+wouldn't just be adding it to the end of
+the list but rather every time we're
+adding a person it would do some sort of
+operations which automatically sort of
+orders the list in the way that the
+airline wants so it orders it in a
+priority order so here what we would
+probably have is instead of just a piece
+of data and the link to the next node in
+the list we would have also a field for
+the priority class of the passenger so
+we would have a node that looks
+something like this where there's three
+values there's the actual person
+probably this would already be something
+like a dictionary with like their name
+and their birthday the price they paid
+or whatever we would just have a value
+that indicates that this is a business
+class passenger and here again we would
+have the pointers or the memory address
+of the next person on the list and then
+every time we're adding a person we
+would have defined inside the data
+structures of app operations that
+automatically perhaps it calls a
+different function to reorder all the
+passengers in such a way that this
+passenger will entity do the correct
+location of the list so as you can see a
+lot of the time even though you might
+think about data structures it's just
+about the structure so where we put the
+data a lot of the time especially these
+more complex data structures are a lot
+more about the operations that we want
+to do with that data and that is really
+the other thing that you should keep in
+mind that when you're defining data
+structures is really not just the
+organization of the data but also the
+operations that we define on that data
+and again the point here is that the
+airline operators or the person who's
+like going through the ticket doesn't
+need to know anything about any of this
+drama that's happening down there in the
+computer memory because the programmer
+the programmer who understands data
+structures has been able to program it
+is in an intelligent way from the
+airline operator's perspective all this
+is just happening like magic when they
+add a new ticket into the pool of ticket
+holders the list is automatically
+organized in the exact priority that
+they want and that is again the magic of
+data structures and this whole principle
+is also something that we often refer to
+as abstraction the most beautiful thing
+about computers and computer science is
+that there's like a million different
+levels of abstraction where at the very
+low level you just have zeros and ones
+inside the computers or even lower these
+teran sisters where electricity is going
+through these logic gates but you don't
+need to know about any of these because
+there are low level programmers who have
+designed these higher level programming
+languages that allow us to do stuff with
+the low level computer without
+understanding all the drama that's
+happening down below and the same thing
+here when as a programmer as a
+high-level program and your most
+important task is to understand the
+language and to understand programming
+concepts like data structures in such a
+way that you can design programs so that
+the people who use these programs don't
+need to know anything about how they
+work thinking just use them you just
+tell them click this button or run this
+function and it will do exactly what
+they want and in reality the
+relationships with pieces of data and
+the things we want to do are even more
+complicated than this where for example
+if you're organizing web page like the
+way google actually organizes their web
+page they have these like very deep
+complicated relationships with like all
+the different web pages so they need
+structures to deal with it again for the
+purposes that they need the data for so
+at the end of the day the reason why
+companies care about all of this the
+reason why you need to know all of this
+as a programmer it's like the equivalent
+of someone who organizes their room like
+a complete mess no one wants to hire
+someone who doesn't know how to organize
+their work effectively and to do stuff
+in an efficient way and so this is the
+analogy of the programmer who just does
+stuff in a way that maybe works but it's
+not the most efficient way to do it and
+for companies especially these large
+enterprises where all these details
+really matter because they're dealing
+with like billions of pieces of data
+they want to hire programmers who can
+organize their code effectively and that
+is really what data structures are all
+about if you want to actually now learn
+these details obviously this video is
+not enough first of all i would
+recommend subscribing to this channel
+because again if enough of you like this
+video i want to make a similar video
+about the other side of these virtual
+algorithms which is algorithms but
+really to learn all of this is not easy
+and to learn it effectively you need a
+good step-by-step plan and a path to
+make sure that you're learning
+everything that you need to know in the
+most efficient way if possible and for
+that i can be for you i mean this video
+where i talk about exactly that i
+describe exactly an exact step-by-step
+plan that you can take from a high level
+overview into all the theoretical
+details if you want to master all these
+topics and learn to pass coding
+interviews you should absolutely watch
+this video right here

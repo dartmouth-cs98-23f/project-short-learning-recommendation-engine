@@ -1,0 +1,70 @@
+{
+  "introduction": "In this video, we explore the new language model called Mistral from Mistral AI, which has recently become a unicorn in Europe. We discuss the architectural differences between the vanilla transformer and the architecture of Mistral. We also examine the sliding window attention, the kv cache, model sharding, and sparse mixture of experts. We provide a code review of the Mistral model and discuss its implementation in the code. The video covers the prompt generation process and how to prefill the kv cache using the tokens of the prompt. We also discuss the importance of understanding the attention mask when working with multiple prompts. The video provides valuable insights into the inner workings of the Mistral model and its implementation in software development.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Mistral",
+      "content": [
+        "Explanation of the vanilla transformer architecture.",
+        "Introduction to the Mistral model and its architecture.",
+        "Overview of the video's content.",
+        "Importance of understanding the Mistral model's implementation."
+      ],
+      "topics": ["Vanilla Transformer Architecture", "Mistral Model Architecture", "Video Overview", "Implementation Understanding"]
+    },
+    {
+      "title": "Section 2: Sliding Window Attention",
+      "content": [
+        "Explanation of the sliding window attention concept.",
+        "Relation to the concept of receptive field in convolutional neural networks.",
+        "Importance of the sliding window attention in the Mistral model.",
+        "Example of how the sliding window attention works."
+      ],
+      "topics": ["Sliding Window Attention", "Receptive Field Concept", "Importance in Mistral Model", "Example Implementation"]
+    },
+    {
+      "title": "Section 3: KV Cache and Rolling Buffer Cache",
+      "content": [
+        "Explanation of the kv cache and its role in the Mistral model.",
+        "Pre-filling the kv cache using the tokens of the prompt.",
+        "Different ways to pre-fill the kv cache.",
+        "Example of how to pre-fill the kv cache."
+      ],
+      "topics": ["KV Cache", "Pre-filling Techniques", "Example Implementation"]
+    },
+    {
+      "title": "Section 4: Model Sharding",
+      "content": [
+        "Explanation of model sharding and its role in the Mistral model.",
+        "Division of the model into groups of layers.",
+        "Checking the embedding corresponding to the token number for each prompt.",
+        "Example of how to implement model sharding."
+      ],
+      "topics": ["Model Sharding", "Layer Division", "Embedding Correspondence Check", "Example Implementation"]
+    },
+    {
+      "title": "Section 5: Sparse Mixture of Experts and Code Review",
+      "content": [
+        "Explanation of the sparse mixture of experts and its role in the Mistral model.",
+        "Selection of the logits of the best two performing experts.",
+        "Example of how to implement the sparse mixture of experts.",
+        "Code review of the Mistral model."
+      ],
+      "topics": ["Sparse Mixture of Experts", "Expert Selection", "Example Implementation", "Code Review"]
+    }
+  ],
+  "topics": ["Sliding Window Attention", "KV Cache", "Model Sharding", "Sparse Mixture of Experts"],
+  "generalTopics": [
+    {
+      "name": "Artificial Intelligence (AI) and Machine Learning",
+      "complexity": 0.69
+    },
+    {
+      "name": "Computer Architecture",
+      "complexity": 0.59
+    },
+    {
+      "name": "Programming Languages and Software Development",
+      "complexity": 0.70
+    }
+  ]
+}

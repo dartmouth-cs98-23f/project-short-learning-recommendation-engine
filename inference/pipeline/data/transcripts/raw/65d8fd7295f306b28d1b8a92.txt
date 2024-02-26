@@ -1,0 +1,212 @@
+Hey guys, I'm Venkat and in this video, we'll 
+discuss how indexes actually work and help  
+improve the performance of our sql queries. We'll 
+discuss how both the index types work - clustered  
+and non-clustered. If you're new to indexes, we've 
+already covered all the basics you need in this  
+sql server tutorial for beginners course. Please 
+check out the videos from parts 35 to 38. I'll  
+include the link in the description of this video. 
+Now, consider this Employees table. EmployeeId is  
+the primary key, so by default a clustered index 
+on the EmployeeId column is created. This means,  
+employee data is sorted by EmployeeId column 
+and physically stored in a series of data pages  
+in a tree-like structure that looks like 
+the following. The nodes at the bottom of  
+the tree are called data pages or leaf nodes 
+and contains the actual data rows in our case  
+employee rows. These employee rows are sorted 
+by EmployeeId column because EmployeeId  
+is the primary key and by default, a clustered 
+index on this column is created. For our example,  
+let's say in this Employees table we have 
+1200 rows and let's assume in each data page  
+we have 200 rows. So, in the first data page we 
+have 1 to 100 rows, in the second 201 to 400,  
+in the third 401 to 600, so on and so forth. The 
+node at the top of the tree is called root node.  
+The nodes between the root node and the leaf 
+nodes are called intermediate levels. The root  
+and the intermediate level nodes contain index 
+rows. Each index row contains a key value,  
+in our case EmployeeId and a pointer to either 
+an intermediate level page in the B-Tree  
+or a data row in the leaf node. So, this tree-like 
+structure has a series of pointers that helps the  
+query engine find data quickly. For example, let's 
+say we want to find employee row with employee id  
+1120. So, the database engine starts at the root 
+node and it picks the index node on the right  
+because the database engine knows it is this node 
+that contains employee ids from 801 to 1200. From  
+there, it picks the leaf node that is present 
+on the extreme right because employee data rows  
+from 1001 to 1200 are present in this leaf node. 
+The data rows in the leaf node are sorted by  
+employee id so it's easy for the database engine 
+to find the employee row with id equals 1120.  
+Notice, in just 3 operations sql server is able to 
+find the data we are looking for. It's making use  
+of the clustered index we have on the table. Let's 
+look at this in action. This piece of sql script  
+at the top creates Employees table with these four 
+columns - Id, Name, Email and Department. First,  
+let's create the table. This second block of code 
+here inserts test data into Employees table. Let's  
+actually execute the script. It's going to take 
+a few seconds to complete and that's because,  
+if you take a look at this code, notice we're 
+using while loop to insert one million rows  
+into this table and if we click on the messages 
+tab, in a few seconds we should see a message  
+saying 100,000 rows inserted, that's because 
+for every hundred thousand rows that we insert,  
+we are logging the message. Let's 
+give it a few seconds to complete.
+There we go, all the 1 million rows are 
+inserted. Now, let's execute this select  
+query. We are trying to find employee whose id is 
+932 000 and before we execute this query, click  
+on this icon right here which includes the actual 
+execution plan. You can also use the keyboard  
+shortcut CTRL + M. There we go, we got the one 
+row that we expected and when I click on the  
+execution plan and when I hover over this, notice 
+the operation is clustered index seek, meaning the  
+database engine is using the clustered index 
+on the EmployeeId column to find the employee  
+row we want. Number of rows read is 1, Actual 
+number of rows for all executions is also 1. Now,  
+number of rows read is the number of rows 
+sql server has to read to produce the query  
+result. In our case EmployeeId is unique, so 
+we expect one row and that is represented by  
+actual number of rows for all executions. With the 
+help of the index, sql server is able to directly  
+read that one specific employee row we want, hence 
+both number of rows read and actual number of rows  
+for all executions is 1. So, the point is if 
+there are thousands or even millions of records,  
+sql server can easily and quickly 
+find the data we are looking for,  
+provided there is an index that 
+can help the query find data.  
+Now, we have a clustered index on the EmployeeId 
+column, so when we search by EmployeeId,  
+sql server can easily and quickly find the data 
+we are looking for, but what if we search by  
+employee name? At the moment, there is no index 
+on the "Name" column. So, there is no easy way for  
+sql server to find the data we are looking for. 
+SQL server has to read every record in the table  
+which is extremely inefficient from performance 
+standpoint. Let's actually look at this in action.  
+Here is the query, we are trying to find the 
+employee by name. Let's execute it. There we go,  
+we have the one row that we expected and I click 
+on the execution plan and hover over this. Notice,  
+the operation is clustered index scan. Since 
+there is no proper index to help this query,  
+the database engine has no other choice than to 
+read every record in the table. This is exactly  
+the reason why number of rows read is 1 million, 
+that is every row in the table and if you take a  
+look at actual number of rows for all executions, 
+the value is 1. How many rows are we expecting in  
+the result? Well, only one row, because there is 
+only one employee whose name is "ABC 932000". So,  
+to produce this one row as the result, sql server 
+has to read all the 1 million rows from the table,  
+because there is no index to help this query. 
+This is called index scan and in general, index  
+scans are bad for performance. This is when we 
+create a non-clustered index on the "Name" column.  
+Actually, sql server is helping us here. Notice, 
+it's actually telling us there is a missing index.  
+To improve the performance of this select query, 
+it's asking us to create a non-clustered index  
+on the "Name" column. Why on the "Name" column? 
+Well, that's because we are looking up employees  
+by name. So, let's actually right click on this 
+and select this option - "Missing Index Details".  
+We actually have the required code here to 
+create non-clustered index. Let's uncomment this.  
+Create non-clustered index, we are creating on the 
+Name column and let's give this index a name "IX"  
+for index, we are creating it on the Employees 
+table and on the Name column. Let's execute this.
+Now, let's execute that same select query 
+again. Click on the "Execution plan" tab  
+and we have several steps here. We'll discuss 
+execution plans in detail in our upcoming videos.  
+For now, just understand, we read the execution 
+plans from right to left and top to bottom. So,  
+we start here and when I hover over this, 
+notice, now the operation is index seek  
+on the non-clustered index. Before we understand 
+this execution plan, let's first understand how  
+non-clustered index is stored in the database. In 
+a non-clustered index, we do not have table data.  
+We have key values and row locators. We created 
+a non-clustered index on the "Name" column. So,  
+the key values, in this case employee names 
+are sorted and stored in alphabetical order.  
+The row locators that are present at the bottom of 
+the tree contain employee names and cluster key of  
+the row, in our example employee id is the cluster 
+key. Why? because employee id is the primary key,  
+by default it is the cluster key. Now, if we look 
+at one of the row locators, notice the names of  
+the employees are sorted in alphabetical order and 
+we also have their respective employee id. Now,  
+if you remember, on the employee id we have the 
+clustered index. Now, when we search employee  
+by name both these indexes, non-clustered index 
+on the Name column and clustered index on the  
+EmployeeId column are going to work together to 
+find the employee that we are looking for. Let's  
+look at the steps involved. First, sql server 
+uses the non-clustered index on the Name column to  
+quickly find this employee entry in the index. In 
+a non-clustered index along with the employee name  
+we also have the cluster key, in our case its 
+employee id. The database engine knows there is  
+clustered index on employee id, so this clustered 
+index is then used to find the respective employee  
+record. Now, let's relate these steps to the 
+execution plan that we have in sql server  
+management studio. Remember, we read the execution 
+plan from right to left and top to bottom. So,  
+we start on the top right here. Notice, the first 
+step is index seek on the non-clustered index.  
+On the Name column, we have non-clustered index 
+and sql server is using it to find an entry for  
+this employee in the index and remember, in the 
+index along with the employee name we also have  
+employee id which is the primary key. Next, 
+this primary key is used to find an entry  
+in the clustered index, that's why we have 
+the operation here as key lookup clustered.
+The value from the cluster index, in our case 
+employee id is then used in an inner join with  
+the Employees table to retrieve the respective 
+employee record. If you're new to these execution  
+plans and wondering why this nested loop or inner 
+join is required, we'll discuss these execution  
+plans in detail in our upcoming videos. Now, 
+on this slide, I have "Estimated Subtree Cost"  
+with and without index. So, for this query - 
+Select * from employees where name equals whatever  
+name we supply, estimated subtree cost without 
+index is 11. something. With index, it is 0.006.  
+Just imagine the impact it can have on performance 
+if we don't have index on the Name column.  
+If you're wondering, how did I get these 
+statistics? Well, in SQL server management studio,  
+on the "Execution plan" tab, if you hover over the 
+"Select" operation, you get the total estimated  
+subtree cost for all these operations. In our 
+upcoming videos in this series, we'll discuss sql  
+server execution plans in detail with examples. 
+That's it in this video. Thank you for listening.

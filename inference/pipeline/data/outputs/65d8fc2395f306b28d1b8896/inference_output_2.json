@@ -1,0 +1,70 @@
+{
+  "introduction": "This chapter of the digital design and computer architecture course covers micro architecture, the implementation of hardware blocks to build a microprocessor. The chapter explores three different micro architectures: single cycle, multicycle, and pipeline processors. Performance analysis is discussed, using program execution time as the ultimate measure of speed. The architectural state of the processor is also introduced, determining what the processor is doing based on the contents of the 32 registers, program counter, and memory. Topics covered in the chapter include arithmetic logic units, multiplexers, instruction memory, data memory, and controller.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Micro Architecture",
+      "content": [
+        "Explanation of micro architecture as the implementation of the architecture and hardware.",
+        "Division of the processor into data path and controller.",
+        "Overview of the three micro architectures: single cycle, multicycle, and pipeline.",
+        "Introduction of performance analysis and program execution time."
+      ],
+      "topics": ["Micro Architecture", "Data Path", "Controller", "Performance Analysis", "Program Execution Time"]
+    },
+    {
+      "title": "Section 2: Single Cycle Processor",
+      "content": [
+        "Explanation of single cycle processors, where all work takes place in one clock cycle.",
+        "Impact of clock cycle length on performance.",
+        "Example of a single cycle processor instruction set.",
+        "Comparison with multicycle and pipeline processors."
+      ],
+      "topics": ["Single Cycle Processors", "Clock Cycle Length", "Instruction Set", "Comparison with Other Architectures"]
+    },
+    {
+      "title": "Section 3: Multicycle Processor",
+      "content": [
+        "Explanation of multicycle processors, where instructions are broken down into multiple simpler steps.",
+        "Reuse of hardware in each step.",
+        "Example of a multicycle processor instruction set.",
+        "Comparison with single cycle and pipeline processors."
+      ],
+      "topics": ["Multicycle Processors", "Instruction Breakdown", "Hardware Reuse", "Comparison with Other Architectures"]
+    },
+    {
+      "title": "Section 4: Pipeline Processor",
+      "content": [
+        "Explanation of pipeline processors, where instructions are overlapped for faster execution.",
+        "Example of a pipeline processor instruction set.",
+        "Comparison with single cycle and multicycle processors.",
+        "Advanced micro architecture techniques in current processors."
+      ],
+      "topics": ["Pipeline Processors", "Instruction Overlap", "Comparison with Other Architectures", "Advanced Micro Architecture Techniques"]
+    },
+    {
+      "title": "Section 5: Architectural State and Implementation",
+      "content": [
+        "Explanation of the architectural state, determining everything the processor is doing.",
+        "Freezing and restoring the architectural state.",
+        "Connection of the architectural state with arithmetic logic units, multiplexers, and controller.",
+        "Overview of the instruction set and memory."
+      ],
+      "topics": ["Architectural State", "Freezing and Restoring", "Connection with Hardware Components", "Instruction Set and Memory"]
+    }
+  ],
+  "topics": ["Micro Architecture", "Single Cycle Processors", "Multicycle Processors", "Pipeline Processors", "Performance Analysis", "Architectural State", "Instruction Set", "Memory"],
+  "generalTopics": [
+    {
+      "name": "Computer Architecture",
+      "complexity": 0.61
+    },
+    {
+      "name": "Performance Analysis",
+      "complexity": 0.61
+    },
+    {
+      "name": "Microarchitecture Techniques",
+      "complexity": 0.61
+    }
+  ]
+}

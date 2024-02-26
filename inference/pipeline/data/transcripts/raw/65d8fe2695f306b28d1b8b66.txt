@@ -1,0 +1,124 @@
+Software architecture is to applications 
+what foundations are to buildings.
+Build it wrong, and no matter how 
+beautiful it looks, it'll crumble.
+In today’s discussion, we’ll unpack 
+some prevalent software architecture  
+patterns that form the backbone of countless 
+applications and platforms we interact with daily.
+Over the next few minutes, we'll explore five 
+key patterns that have shaped the industry.
+Let's start with layered architecture.
+This pattern separates the components 
+of a system into distinct layers,  
+typically the presentation layer, business 
+logic layer, and data access layer.
+For instance, in user interface design, we often 
+see the Model-View-Presenter (MVP) pattern.
+It is a specialized form of layered architecture.
+Here, the Model represents data and 
+business logic, the View displays this data,  
+and the Presenter serves as a bridge to 
+ensure a clean separation of concerns.
+The primary goal of layered architectures is to  
+promote separation so changes in one 
+layer don't negatively impact others.
+This structure provides 
+abstraction and encapsulation,  
+with each layer having a distinct responsibility.
+Next is event-driven architecture.
+This pattern promotes the 
+production and consumption  
+of events between loosely coupled 
+software components and services.
+Components broadcast events 
+when something notable happens,  
+and other components subscribe to 
+specific events they are interested in.
+This allows for highly decoupled architectures.
+One prominent example in this domain is Command 
+Query Responsibility Segregation (CQRS).
+With CQRS, the data write operations (commands) 
+are separated from read operations (queries),  
+and changes are often communicated through events.
+This makes the system inherently event-driven.
+The pub/sub model, where components 
+publish and subscribe to events,  
+is commonly used in such architectures.
+Here, components don't call each other 
+directly; they merely react to published events.
+Moving on to microkernel architecture.
+This pattern emphasizes separating 
+core system functionality into  
+a small microkernel and extended 
+functionality into add-ons or plugins.
+In operating systems, for example, a 
+microkernel might oversee vital tasks  
+like inter-process communication while offloading 
+other system functions to external components.
+An application example is the Eclipse IDE: its 
+core runtime handles the plugin architecture,  
+and features from Java tools to Git 
+integration are delivered as plugins.
+This design prioritizes extensibility, 
+ease of maintenance, and fault isolation.
+Whether it's an OS component or an 
+Eclipse plugin that encounters an issue,  
+the core system remains stable and unaffected.
+Then we have microservices architecture.
+This decomposes an application into a 
+collection of small, loosely coupled services.
+Each service implements 
+specific business capabilities,  
+contains its own data model, 
+and communicates via APIs.
+Netflix, for instance,  
+uses microservices to handle everything 
+from movie recommendations to billing.
+This architecture promotes modularization of 
+functionality so services can be developed,  
+deployed, and scaled independently.
+It increases agility, and allows companies 
+like Netflix to rapidly innovate.
+The trade-off, however, is the added 
+complexity in managing inter-service  
+communication and maintaining data consistency.
+Last but certainly not least, 
+we have monolithic architecture.
+At its core, a monolithic design sees all 
+components of the application — from data  
+access and business logic to the 
+user interface — bundled together  
+into a single codebase and run as a single unit.
+This approach simplifies 
+development and deployment,  
+making it a go-to for many 
+startups and smaller applications.
+However, it's worth noting the 
+rise of the 'modular monolith'.
+This approach retains the benefits of 
+a single deployable unit but emphasizes  
+clear modular boundaries within the codebase.
+This allows for easier 
+maintenance and scalability.
+It's a middle ground which offers the 
+simplicity of a monolith while paving  
+the way for potential future transitions 
+to architectures like microservices.
+Regardless of the approach, many successful 
+platforms start with a monolithic or modular  
+monolithic structure before considering 
+more distributed architectures.
+And there you have it, a quick tour of five 
+foundational software architecture patterns.
+The right choice always depends on our specific 
+challenges, requirements, and contexts.
+So, which pattern resonates with you?  
+Drop a comment below and let us know which 
+architecture pattern intrigues you the most.
+If you like our videos, you may like 
+our system design newsletter as well.
+It covers topics and trends 
+in large-scale system design.
+Trusted by 500,000 readers. 
+Subscribe at blog.bytebytego.com

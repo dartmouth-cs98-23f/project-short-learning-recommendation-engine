@@ -1,0 +1,79 @@
+in the future quantum computers have the
+potential to solve certain problems
+exponentially faster than classical
+computers but which problems can they
+solve exponentially faster and which
+problems would we do just as well to
+solve using a classical computer so
+these are the questions that we're
+really interested in as quantum
+algorithms researchers now to set the
+stage it makes sense to talk a little
+bit about the relationship between
+algorithms and computer hardware more
+generally a computer is a programmable
+machine which obeys the laws of physics
+an algorithm is a recipe for solving a
+problem so an algorithm is a sequence of
+steps that leads you to the solution of
+course if you design an algorithm you
+have to make sure that the machine you
+plan to run it on can execute each of
+those steps generally speaking this is
+not much of a problem because algorithms
+designers like to abstract away the
+machine and work using a basic
+instruction set that can then be mapped
+to the machine afterwards and one of the
+central principles of theoretical
+computer science is that if you use the
+right basic instruction set then any
+real-world machine you could build you
+can run that algorithm on it
+this central tenets of theoretical
+computer science held up for about 50
+years but we now understand that there's
+one exception to this rule and the
+exception is quantum computers quantum
+computers use a fundamentally different
+instruction set than classical computers
+as a result they can run different
+algorithms algorithms you could not run
+on classical computers those algorithms
+make use of quantum effects like
+nonlocality entanglement superposition
+and interference and so when you're
+designing a quantum algorithm your aim
+is to exploit those quantum effects to
+make you get the solution faster
+generally speaking an algorithm might
+start by taking your classical input to
+the problem processing that into a
+quantum state which is a superposition
+of an exponential number of classical
+States you then aim to transform that
+quantum state which encodes the problem
+into a quantum state which encodes the
+solution and from that quantum state you
+measure and you get the solution now of
+course to make this work it's a bit of
+an art and you have to design an
+algorithm which
+follows these these steps for a given
+problem and some of the areas where we
+have such algorithms where we have
+quantum speedups
+include the simulation of quantum
+systems number theoretic problems like
+integer factorization and certain types
+of search problems now one of the
+caveats is that most of these algorithms
+are designed for future quantum
+computers which have many many Cubans
+and right now we're at a moment where
+people are building small and modest
+size quantum computers and so it's an
+exciting research area to understand
+what can we do with those devices before
+we have basically an unlimited number of
+qubits
