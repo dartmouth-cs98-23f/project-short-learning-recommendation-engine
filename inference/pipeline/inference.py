@@ -306,8 +306,8 @@ def upload_to_database(did_fail, final_path):
     max_pool = torch.load(f'{OUTPUT_DIR}/outputs/{current_doc["_id"]}/max_pool.pt').to('cpu').numpy().tolist()
     avg_pool = torch.load(f'{OUTPUT_DIR}/outputs/{current_doc["_id"]}/avg_pool.pt').to('cpu').numpy().tolist()
 
-    metadata_max = {"type": "max_pool", "title": current_doc["title"], "topics": [str(topic) for topic in current_doc["topicId"]], "videoID": str(current_doc["_id"]), "inferenceTopics": [str(topic) for topic in topics], "inferenceComplexities": [str(complexity) for complexity in complexities]}
-    metadata_avg = {"type": "avg_pool", "title": current_doc["title"], "topics": [str(topic) for topic in current_doc["topicId"]], "videoID": str(current_doc["_id"]), "inferenceTopics": [str(topic) for topic in topics], "inferenceComplexities": [str(complexity) for complexity in complexities]}
+    metadata_max = {"mode": "max_pool", "title": current_doc["title"], "topics": [str(topic) for topic in current_doc["topicId"]], "videoID": str(current_doc["_id"]), "inferenceTopics": [str(topic) for topic in topics], "inferenceComplexities": [str(complexity) for complexity in complexities]}
+    metadata_avg = {"mode": "avg_pool", "title": current_doc["title"], "topics": [str(topic) for topic in current_doc["topicId"]], "videoID": str(current_doc["_id"]), "inferenceTopics": [str(topic) for topic in topics], "inferenceComplexities": [str(complexity) for complexity in complexities]}
 
     vectors = [
         {"id": str(current_doc["_id"]), "values": max_pool, "metadata": metadata_max},
