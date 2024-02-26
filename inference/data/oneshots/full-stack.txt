@@ -1,0 +1,70 @@
+{
+  "introduction": "This video guides viewers through building a job board application that aggregates entry-level developer job postings from various APIs. It covers the entire development process, including setting up the front end with React and Material UI, backend server with Express, data storage using Redis, and regular job fetching using a cron job. The project aims at simplifying the job search for entry-level positions by filtering out senior roles, focusing on a practical approach to developing a real-world application.",
+  "sections": [
+    {
+      "title": "Section 1: Project Setup and Initial Planning",
+      "content": [
+        "Introduction to the job board app concept, focusing on entry-level developer positions.",
+        "Decision to aggregate job postings from various APIs to simplify the job search process.",
+        "Outline of the tech stack: React and Material UI for the front end, Express for the backend, Redis for data storage, and node-cron for job fetching.",
+        "Initial setup of the project directory and installation of necessary libraries and frameworks."
+      ],
+      "topics": ["Project Planning", "Tech Stack Overview", "Initial Setup"]
+    },
+    {
+      "title": "Section 2: Frontend Development with React and Material UI",
+      "content": [
+        "Creation of the React app using create-react-app and setup of Material UI.",
+        "Building the front-end structure, including components for job listings and individual job details.",
+        "Introduction to React hooks for state management and API calls.",
+        "Styling of the front end with Material UI components for a user-friendly interface."
+      ],
+      "topics": ["React Setup", "Component Design", "State Management with Hooks"]
+    },
+    {
+      "title": "Section 3: Backend Server and Data Handling",
+      "content": [
+        "Setup of the Express server to handle API requests and serve the front end.",
+        "Introduction to Redis as an in-memory data store for caching job postings.",
+        "Implementation of a node-cron job to fetch new job postings at regular intervals.",
+        "Design of data structure and filtering algorithm to exclude senior-level jobs from the results."
+      ],
+      "topics": ["Express Server Setup", "Redis Data Storage", "Cron Job Implementation"]
+    },
+    {
+      "title": "Section 4: Integrating Job Board APIs",
+      "content": [
+        "Exploration of various job board APIs such as GitHub Jobs and Stack Overflow Jobs.",
+        "Implementation of API calls within the node-cron job to fetch job postings.",
+        "Discussion on handling API pagination and data aggregation.",
+        "Filtering and processing job data to match the application's criteria for entry-level positions."
+      ],
+      "topics": ["API Integration", "Data Fetching", "Pagination Handling"]
+    },
+    {
+      "title": "Section 5: Deployment and Final Touches",
+      "content": [
+        "Review of the completed application and its functionalities.",
+        "Discussion on potential improvements and additional features for future development.",
+        "Steps for deploying the application to a server using nginx and PM2 for process management.",
+        "Final testing and demonstration of the application in action, showcasing its ability to aggregate and display job postings."
+      ],
+      "topics": ["Application Review", "Future Improvements", "Deployment Process"]
+    }
+  ],
+  "topics": ["React", "Express", "Redis", "API Integration", "Deployment"],
+  "generalTopics": [
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.59
+    },
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": 0.61
+    },
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.53
+    }
+  ]
+}
