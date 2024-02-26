@@ -71,7 +71,7 @@ class AlgoliaSearchClient:
         return self.index.search(query)["hits"]
     
     def add_record(self, record):
-        return self.index.save_object(record).wait()
+        return self.index.save_object(record).wait().raw_responses
 
 
 if __name__ == "__main__":

@@ -54,12 +54,12 @@ class DbClient:
         
         return index
     
-    def add_video(self, video_id: str):
+    def add_video(self, video_id: str, embeddings=None):
         """
             Add a video to the Pinecone index.
         """
         index = self.get_index("recommendations")
-        embeddings = self.get_embeddings(video_id)
+        embeddings = embeddings or self.get_embeddings(video_id)
         response = index.upsert(
             vectors = [{
                 "id": video_id,
