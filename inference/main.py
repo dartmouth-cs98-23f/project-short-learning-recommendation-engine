@@ -46,11 +46,11 @@ def run_inference_subprocess(script_path, output_dir):
         run_inference_subprocess(script_path, output_dir)
     else:
         print('Unknown error')
-        print(result.stderr)
-        print(result.stdout)
+        print(proc.stderr)
+        print(proc.stdout)
         run_inference_subprocess(script_path, output_dir)
     
-    return result
+    return proc
 
 if __name__ == "__main__":
     
