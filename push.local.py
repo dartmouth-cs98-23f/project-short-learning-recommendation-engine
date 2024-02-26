@@ -27,6 +27,13 @@ PATH = "inference/data/outputs/101"
 SUMMARY_PATH = f"{PATH}/text"
 EMBEDDINGS_PATH = f"{PATH}/embeddings"
 
+topics = [
+    "Java", "JavaScript", "Python", "Backend", "FrontEnd",
+    "Machine Learning", "Deep Learning", "Data Science", "Data Engineering",
+    "SQL", "NoSQL", "Databases", "Cloud", "AWS", "GCP", "Azure",
+]
+
+search_client.clear_index()
 invalid_count = 0
 for file in os.listdir(SUMMARY_PATH):
     with open(f"{SUMMARY_PATH}/{file}", "r") as f:
@@ -38,10 +45,14 @@ for file in os.listdir(SUMMARY_PATH):
                 Add search data to Algolia
             """
             search_data = {}
-            search_data["text"] = flatten_text(meta)
             search_data["objectID"] = random.randint(0, 100000)
+            search_data["topics"] = [ random.choice(topics) for _ in range(3) ]
             
+            search_client.add_topic_record(search_data)
+            
+            search_data["transcript"] = flatten_text(meta)
             response = search_client.add_record(search_data)
+            
             print(f"RESPONSE:          {response}")
             
             """
@@ -51,14 +62,14 @@ for file in os.listdir(SUMMARY_PATH):
             # load tensors
 
             # get filename withouth extension
-            basename = os.path.splitext(file)[0]
-            with open(f"{EMBEDDINGS_PATH}/max_{basename}.pt", "rb") as f:
-                tensor = torch.load(f, map_location="cpu", weights_only=True)
-                tensor = tensor.numpy().tolist()
-                print(f"TENSOR:            {len(tensor)}")
+            # basename = os.path.splitext(file)[0]
+            # with open(f"{EMBEDDINGS_PATH}/max_{basename}.pt", "rb") as f:
+            #     tensor = torch.load(f, map_location="cpu", weights_only=True)
+            #     tensor = tensor.numpy().tolist()
+            #     print(f"TENSOR:            {len(tensor)}")
                 
-                # add to pinecone
-                response = db_client.add_video(f"{search_data['objectID']}", embeddings=tensor)
+            #     # add to pinecone
+            #     response = db_client.add_video(f"{search_data['objectID']}", embeddings=tensor)
             
             
             

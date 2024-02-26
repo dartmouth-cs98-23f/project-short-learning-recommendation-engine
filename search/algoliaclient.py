@@ -47,16 +47,18 @@ class AlgoliaSearchClient:
         >>> print(response)
         
     """
-    def __init__(self, /, app_id=None, api_key=None, index_name = None):
+    def __init__(self, /, app_id=None, api_key=None, index_name = None, topics_index_name = None):
         
         load_dotenv()
 
         api_key = api_key or os.getenv("ALGOLIA_SEARCH_API_KEY")
         app_id = app_id or os.getenv("ALGOLIA_SEARCH_APP_ID")
         index_name = index_name or os.getenv("ALGOLIA_SEARCH_INDEX_NAME")
+        topics_index_name = os.getenv("ALGOLIA_TOPICS_INDEX_NAME")
         
         self.client = SearchClient.create(app_id, api_key)
         self.index = self.client.init_index(index_name)
+        self.topics_index = self.client.init_index(topics_index_name)
 
     def search(self, query):
         """
@@ -67,11 +69,66 @@ class AlgoliaSearchClient:
             
             query: str
                 Word or sentence to search for
+                
+            Returns
+            -------
+            
+            dict
+                Search results
         """
         return self.index.search(query)["hits"]
     
     def add_record(self, record):
+        """
+            Add new record in the Algolia index.
+            
+            Parameters
+            ----------
+            
+            record: dict
+                Collection of the record to be added.
+                
+            Returns
+            -------
+            
+            Response status
+        """
         return self.index.save_object(record).wait().raw_responses
+    
+    def add_topic_record(self, record):
+        """
+            Add new record in the Algolia index.
+            
+            Parameters
+            ----------
+            
+            record: dict
+                Collection of the record to be added.
+                
+            Returns
+            -------
+            
+            Response status
+        """
+        return self.topics_index.save_object(record).wait().raw_responses
+    
+    
+    
+    def clear_index(self):
+        """
+            Clear the Algolia index.
+            
+            Parameters
+            ----------
+            
+            NONE
+            
+            Returns
+            -------
+            
+            Response status
+        """
+        return self.index.clear_objects().wait().raw_responses
 
 
 if __name__ == "__main__":
