@@ -12,18 +12,12 @@ from pinecone import Pinecone, ServerlessSpec
 
 from database import DbClient
 from search import AlgoliaSearchClient
-<<<<<<< HEAD
 from ranking import VideoRanker
-=======
->>>>>>> main
 
 app = FastAPI()
 db_client = DbClient()
 search_client = AlgoliaSearchClient(index_name="discite-search")
-<<<<<<< HEAD
 ranker = VideoRanker()
-=======
->>>>>>> main
 
 app.get("/")
 def read_root():
