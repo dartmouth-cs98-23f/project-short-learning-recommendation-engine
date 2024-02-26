@@ -1,0 +1,70 @@
+{
+  "introduction": "This video covers the top 5 algorithms for coding interviews, focusing on their practical applications and implementation. The algorithms discussed are the top k elements algorithm, combination sum with backtracking, dynamic programming, breadth-first search and depth-first search, and topological sort.",
+  "sections": [
+    {
+      "title": "Section 1: Top k Elements Algorithm",
+      "content": [
+        "The top k elements algorithm is used to find the k largest or smallest numbers in an array.",
+        "It uses a heap data structure to maintain the k largest numbers and has a time complexity of nlogk.",
+        "The window between left and right is used to store information about the characters present in the array.",
+        "Backtracking is used to find the maximum window size and update the answer."
+      ],
+      "topics": ["Algorithm Applications", "Heap Data Structures", "Backtracking"]
+    },
+    {
+      "title": "Section 2: Combination Sum with Backtracking",
+      "content": [
+        "Combination sum is a problem where you need to find all unique combinations of numbers from a list that add up to a target sum.",
+        "Backtracking is used to explore all possible solutions from scratch and find all combinations that add up to the target sum.",
+        "Dynamic programming can be used to optimize the backtracking process by reducing the number of combinations to explore.",
+        "The code for this problem is provided in the video description."
+      ],
+      "topics": ["Backtracking", "Dynamic Programming", "Code Examples"]
+    },
+    {
+      "title": "Section 3: Dynamic Programming",
+      "content": [
+        "Dynamic programming is a technique used to solve complex problems by breaking them down into smaller subproblems and solving each subproblem only once.",
+        "It is used to optimize the backtracking process in combination sum by reducing the number of combinations to explore.",
+        "The code for this problem is provided in the video description.",
+        "Dynamic programming is a powerful technique for solving problems efficiently."
+      ],
+      "topics": ["Dynamic Programming", "Code Examples", "Efficient Algorithms"]
+    },
+    {
+      "title": "Section 4: Breadth-First Search and Depth-First Search",
+      "content": [
+        "Breadth-First Search (BFS) and Depth-First Search (DFS) are graph traversal algorithms used to explore a graph or tree data structure.",
+        "DFS is implemented using a stack data structure, while BFS is implemented using a queue data structure.",
+        "BFS explores all neighboring vertices first before moving onto unvisited vertices, while DFS explores as far as possible along each branch before backtracking.",
+        "The code for this problem is provided in the video description."
+      ],
+      "topics": ["Graph Traversal Algorithms", "Stack Data Structures", "Queue Data Structures"]
+    },
+    {
+      "title": "Section 5: Topological Sort",
+      "content": [
+        "Topological sort is an algorithm used to sort vertices in a directed graph such that for every directed edge uv, vertex u comes before vertex v in the sorted order.",
+        "It is used to find the shortest path from vertex a to vertex b in a graph.",
+        "Dijkstra's algorithm is a closely related algorithm used to find the shortest path between two vertices in a graph.",
+        "The code for this problem is provided in the video description."
+      ],
+      "topics": ["Directed Graphs", "Shortest Path Algorithms", "Code Examples"]
+    }
+  ],
+  "topics": ["Algorithm Applications", "Data Structures", "Backtracking", "Dynamic Programming", "Graph Traversal Algorithms", "Shortest Path Algorithms"],
+  "generalTopics": [
+    {
+      "name": "Algorithms and Data Structures",
+      "complexity": 0.75
+    },
+    {
+      "name": "Programming Languages and Software Development",
+      "complexity": 0.65
+    },
+    {
+      "name": "Artificial Intelligence and Machine Learning",
+      "complexity": 0.50
+    }
+  ]
+}

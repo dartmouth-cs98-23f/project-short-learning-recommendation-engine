@@ -1,70 +1,70 @@
 {
-  "introduction": "This chapter covers the connection between software and computer architecture, specifically focusing on micro architecture. The course begins with zero and one and moves up to logic design before diving into software and computer architecture. Now, we will explore how to build a microprocessor by putting together hardware blocks that can run machine language instructions. Performance analysis is a key aspect, and we will look at three different micro architectures: single-cycle, multicycle, and pipeline processors. The chapter concludes with a discussion on advanced micro architecture techniques used in current processors.",
+  "introduction": "This video provides an overview of micro architecture in digital design and computer architecture. It covers the concept of building a microprocessor by connecting hardware blocks to run machine language instructions. The chapter discusses performance analysis and three different micro architectures: single cycle, multicycle, and pipeline processors. It also explores advanced micro architecture techniques used in current processors.",
   "sections": [
     {
-      "title": "Section 1: Introduction to Micro Architecture",
+      "title": "Section 1: Micro Architecture Overview",
       "content": [
-        "Explanation of micro architecture as the hardware designer's view of the architecture.",
-        "Division of the processor into data path and controller.",
-        "Discussion of three different micro architectures: single-cycle, multicycle, and pipeline processors.",
-        "Explanation of the architectural state and its importance in micro architecture."
+        "Introduction to micro architecture and its importance in computer design.",
+        "Explanation of the three micro architectures: single cycle, multicycle, and pipeline processors.",
+        "Discussion on performance analysis and measuring speed in microprocessors.",
+        "Overview of advanced micro architecture techniques used in modern processors."
       ],
-      "topics": ["Micro Architecture", "Data Path", "Controller", "Single-Cycle Processor", "Multicycle Processor", "Pipeline Processor", "Architectural State"]
+      "topics": ["Micro Architecture", "Single Cycle Processor", "Multicycle Processor", "Pipeline Processor", "Performance Analysis"]
     },
     {
-      "title": "Section 2: Performance Analysis",
+      "title": "Section 2: Single Cycle Processor",
       "content": [
-        "Definition of performance analysis and its importance in micro architecture.",
-        "Explanation of program execution time as the ultimate measure of performance.",
-        "Discussion of cycles per instruction (CPI) and clock period (TC) in performance analysis.",
-        "Introduction of instruction per cycle (IPC) as the reciprocal of CPI."
+        "Description of a single cycle processor and its advantages and disadvantages.",
+        "Explanation of clock cycles and their impact on performance.",
+        "Comparison of single cycle processors with other micro architectures.",
+        "Example of a single cycle processor implementation."
       ],
-      "topics": ["Performance Analysis", "Program Execution Time", "Cycles per Instruction (CPI)", "Clock Period (TC)", "Instruction per Cycle (IPC)"]
+      "topics": ["Single Cycle Processor", "Clock Cycles", "Performance Comparison", "Implementation Example"]
     },
     {
-      "title": "Section 3: Single-Cycle Processor",
+      "title": "Section 3: Multicycle Processor",
       "content": [
-        "Explanation of single-cycle processors and their key characteristic of having all work done in one clock cycle.",
-        "Discussion of the clock cycle length and its impact on performance.",
-        "Comparison of single-cycle processors with other micro architectures.",
-        "Explanation of how to measure the performance of single-cycle processors."
+        "Introduction to multicycle processors and their advantages over single cycle processors.",
+        "Explanation of breaking down instructions into simpler steps for faster execution.",
+        "Discussion on reusing hardware and its impact on performance.",
+        "Example of a multicycle processor implementation."
       ],
-      "topics": ["Single-Cycle Processors", "Clock Cycle Length", "Performance Comparison", "Performance Measurement"]
+      "topics": ["Multicycle Processor", "Instruction Breakdown", "Hardware Reuse", "Implementation Example"]
     },
     {
-      "title": "Section 4: Multicycle Processor",
+      "title": "Section 4: Pipeline Processor",
       "content": [
-        "Explanation of multicycle processors and their method of breaking up instructions into simpler steps.",
-        "Discussion of reusing hardware and its impact on performance.",
-        "Comparison of multicycle processors with other micro architectures.",
-        "Explanation of how to measure the performance of multicycle processors."
+        "Overview of pipeline processors and their advantages in terms of performance.",
+        "Explanation of overlapping instruction execution for faster processing.",
+        "Discussion on trade-offs between performance and complexity in pipeline processors.",
+        "Example of a pipeline processor implementation."
       ],
-      "topics": ["Multicycle Processors", "Reusable Hardware", "Performance Comparison", "Performance Measurement"]
+      "topics": ["Pipeline Processor", "Instruction Execution Overlap", "Performance vs. Complexity", "Implementation Example"]
     },
     {
-      "title": "Section 5: Pipeline Processor",
+      "title": "Section 5: Advanced Micro Architecture Techniques",
       "content": [
-        "Explanation of pipeline processors and their method of overlapping instruction execution.",
-        "Discussion of how pipeline processors improve performance compared to single-cycle and multicycle processors.",
-        "Comparison of pipeline processors with other micro architectures.",
-        "Explanation of how to measure the performance of pipeline processors."
+        "Introduction to advanced micro architecture techniques used in modern processors.",
+        "Explanation of techniques such as out-of-order execution, speculative execution, and branch prediction.",
+        "Discussion on trade-offs between performance, cost, and power consumption in microprocessors.",
+        "Example of an advanced micro architecture technique implementation."
       ],
-      "topics": ["Pipeline Processors", "Instruction Overlap", "Performance Improvement", "Performance Comparison", "Performance Measurement"]
+      "topics": ["Advanced Micro Architecture Techniques", "Out-of-Order Execution", "Speculative Execution", "Branch Prediction", "Performance vs. Cost vs. Power"]
     }
   ],
-  "topics": ["Micro Architecture", "Performance Analysis", "Single-Cycle Processor", "Multicycle Processor", "Pipeline Processor", "Architectural State"],
+  "topics": ["Micro Architecture", "Single Cycle Processor", "Multicycle Processor", "Pipeline Processor", "Performance Analysis", "Advanced Micro Architecture Techniques"],
   "generalTopics": [
     {
       "name": "Computer Architecture",
       "complexity": 0.61
     },
     {
-      "name": "Micro Architecture",
-      "complexity": 0.61
+      "name": "Performance Analysis",
+      "complexity": 0.59
     },
     {
-      "name": "Performance Analysis",
-      "complexity": 0.61
+      "name": "Advanced Micro Architecture Techniques",
+      "complexity": 0.53
     }
   ]
 }

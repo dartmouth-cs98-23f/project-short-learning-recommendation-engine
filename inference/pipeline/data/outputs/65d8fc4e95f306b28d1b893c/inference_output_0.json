@@ -1,0 +1,70 @@
+{
+  "introduction": "This video aims to clear up some terminology on quantum computers, specifically discussing universal gate-based quantum computers and quantum annealers. It covers the different hardware implementations, algorithms, and the criteria for a good quantum computer.",
+  "sections": [
+    {
+      "title": "Section 1: Universal Gate-Based Quantum Computers",
+      "content": [
+        "Explanation of gate-based quantum computers and their use of superposition and entanglement for computations.",
+        "Discussion on different hardware implementations such as superconducting chips and trapped ions.",
+        "Explanation of the algorithms that can be run on gate-based quantum computers, including Shor's algorithm for factoring large numbers.",
+        "Comparison of gate-based quantum computers with quantum annealers in terms of scope and computational capabilities."
+      ],
+      "topics": ["Quantum Computers", "Superposition and Entanglement", "Superconducting Chips", "Trapped Ions", "Shor's Algorithm"]
+    },
+    {
+      "title": "Section 2: Quantum Annealers",
+      "content": [
+        "Introduction to quantum annealers and their use of superposition and entanglement for optimization problems.",
+        "Explanation of the dilution fridge and its role in cooling the superconducting chip to extremely low temperatures.",
+        "Discussion on the annealing process and how it evolves the quantum problem in a hamiltonian.",
+        "Comparison of quantum annealers with gate-based quantum computers in terms of computational capabilities and limitations."
+      ],
+      "topics": ["Quantum Annealers", "Superposition and Entanglement", "Dilution Fridge", "Annealing Process", "Hamiltonian"]
+    },
+    {
+      "title": "Section 3: Divincenzo Criteria and IBM Quantum Volume",
+      "content": [
+        "Explanation of the divincenzo criteria for a good quantum computer.",
+        "Discussion on the IBM quantum volume and its relation to the number of qubits and gate and measurement errors.",
+        "Comparison of different quantum computers based on the divincenzo criteria and IBM quantum volume.",
+        "Importance of considering the topology or connectedness of the quantum chip in addition to the number of qubits."
+      ],
+      "topics": ["Divincenzo Criteria", "IBM Quantum Volume", "Quantum Volume Definition", "Topology or Connectedness of the Quantum Chip"]
+    },
+    {
+      "title": "Section 4: Algorithm Complexity and Physical Implementations",
+      "content": [
+        "Explanation of the importance of considering the number of transistors in classical computers versus qubits in quantum computers.",
+        "Discussion on the complexity of algorithms in terms of qubits needed for computations.",
+        "Explanation of the importance of air correction qubits and other processed qubits in physical implementations.",
+        "Comparison of different quantum computers based on their algorithm complexity and physical implementations."
+      ],
+      "topics": ["Algorithm Complexity", "Physical Implementations", "Air Correction Qubits", "Processed Qubits"]
+    },
+    {
+      "title": "Section 5: Quantum Computing Breakthroughs and Deep Questions",
+      "content": [
+        "Discussion on the importance of asking deep and serious questions when reading about quantum computing breakthroughs.",
+        "Explanation of the different types of quantum computers and their hardware.",
+        "Discussion on the importance of considering error rates and topology in quantum computing.",
+        "Comparison of different quantum computers based on their hardware and error rates."
+      ],
+      "topics": ["Quantum Computing Breakthroughs", "Deep Questions", "Types of Quantum Computers", "Hardware", "Error Rates", "Topology"]
+    }
+  ],
+  "topics": ["Quantum Computers", "Superposition and Entanglement", "Dilution Fridge", "Annealing Process", "Hamiltonian", "Divincenzo Criteria", "IBM Quantum Volume", "Algorithm Complexity", "Physical Implementations", "Quantum Computing Breakthroughs", "Deep Questions", "Types of Quantum Computers", "Hardware", "Error Rates", "Topology"],
+  "generalTopics": [
+    {
+      "name": "Quantum Computing",
+      "complexity": 0.69
+    },
+    {
+      "name": "Superposition and Entanglement",
+      "complexity": 0.60
+    },
+    {
+      "name": "Algorithm Complexity",
+      "complexity": 0.50
+    }
+  ]
+}

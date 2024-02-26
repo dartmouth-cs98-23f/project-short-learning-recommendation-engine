@@ -1,0 +1,70 @@
+{
+  "introduction": "This video provides a step-by-step guide to creating a simple 3D Blender renderer using C++ and the SDL library. The focus is on rendering 3D vertices and rotating them along the x and y axes. The video explains the concept of weak perspective projection and rotation matrices, and demonstrates how to implement them in code. It also covers the process of defining points and vertices, measuring time, and rendering the final output.",
+  "sections": [
+    {
+      "title": "Section 1: Understanding 3D Rendering",
+      "content": [
+        "Explanation of weak perspective projection and its use in 3D rendering.",
+        "Introduction to rotation matrices and their simplification.",
+        "Discussion on the importance of frame-independent timing in rendering.",
+        "Overview of the renderer class and its private variables."
+      ],
+      "topics": ["3D Rendering", "Perspective Projection", "Rotation Matrices", "Frame-Independent Timing"]
+    },
+    {
+      "title": "Section 2: Defining Points and Vertices",
+      "content": [
+        "Explanation of points and vertices in 3D rendering.",
+        "Definition of private variables like rotation, fov, delta time, and window size.",
+        "Discussion on the use of auto for loops in processing vertices.",
+        "Explanation of the projection function and its role in rendering."
+      ],
+      "topics": ["Points and Vertices", "Private Variables", "Auto For Loops", "Projection Function"]
+    },
+    {
+      "title": "Section 3: Implementing Rotation and Projection",
+      "content": [
+        "Explanation of the rotation function and its implementation.",
+        "Discussion on the conversion of 3D points to 2D points using projection.",
+        "Explanation of the rendering process and its output.",
+        "Overview of the final code implementation."
+      ],
+      "topics": ["Rotation Function", "Projection Conversion", "Rendering Process", "Final Code Implementation"]
+    },
+    {
+      "title": "Section 4: Testing and Debugging",
+      "content": [
+        "Explanation of how to run the renderer and test its output.",
+        "Discussion on debugging techniques for identifying and fixing issues.",
+        "Explanation of how to optimize the renderer for better performance.",
+        "Overview of the final output and its quality."
+      ],
+      "topics": ["Testing and Debugging", "Optimization Techniques", "Final Output Quality"]
+    },
+    {
+      "title": "Section 5: Advanced Topics",
+      "content": [
+        "Discussion on advanced topics related to 3D rendering, such as lighting and texturing.",
+        "Explanation of how to integrate the renderer with other software applications.",
+        "Overview of future improvements and potential extensions to the renderer.",
+        "Final thoughts and recommendations for further learning."
+      ],
+      "topics": ["Advanced Topics", "Integration with Other Applications", "Future Improvements", "Final Thoughts"]
+    }
+  ],
+  "topics": ["3D Rendering", "Perspective Projection", "Rotation Matrices", "Frame-Independent Timing", "Points and Vertices", "Private Variables", "Auto For Loops", "Projection Conversion", "Rendering Process", "Final Code Implementation", "Testing and Debugging", "Optimization Techniques", "Final Output Quality", "Advanced Topics", "Integration with Other Applications", "Future Improvements", "Final Thoughts"],
+  "generalTopics": [
+    {
+      "name": "Programming Languages and Software Development",
+      "complexity": 0.65
+    },
+    {
+      "name": "Computer Graphics and Visualization",
+      "complexity": 0.70
+    },
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.55
+    }
+  ]
+}

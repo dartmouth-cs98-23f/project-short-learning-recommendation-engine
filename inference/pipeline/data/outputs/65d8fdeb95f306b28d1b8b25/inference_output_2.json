@@ -1,0 +1,70 @@
+{
+  "introduction": "In this video, we will discuss the five types of software testing that every software developer should be aware of. The testing pyramid is a concept that suggests the majority of testing should be done at the bottom level, with the number of tests depending on the testing strategy. The video covers unit tests, component tests, integration tests, end-to-end tests, and manual tests.",
+  "sections": [
+    {
+      "title": "Section 1: Unit Tests",
+      "content": [
+        "Unit tests are the foundation of any testing strategy. They test individual functions and methods in the code to ensure they work correctly at the lowest level.",
+        "The number of unit tests required depends on the testing strategy and the goal of the testing.",
+        "MCDC (Mutual Exclusive and Collectively Exhaustive) coverage is a method for determining the minimum number of unit tests needed to cover all possible scenarios.",
+        "Unit tests should be written for every line of code and every decision in the code, such as if statements with multiple conditions."
+      ],
+      "topics": ["Unit Tests", "Testing Strategy", "MCDC Coverage", "Code Coverage"]
+    },
+    {
+      "title": "Section 2: Component Tests",
+      "content": [
+        "Component tests ensure that the application behaves as expected without the interference of other components. They test the individual units that were tested in the previous level when put together.",
+        "Component tests can be run in isolation to test the happy path and the unhappy path of the application.",
+        "Mocking out the database is a common technique used in component tests to test the application's behavior under different conditions.",
+        "Component tests should be run as part of the build process or before a release."
+      ],
+      "topics": ["Component Tests", "Integration Tests", "Database Testing", "Mocking"]
+    },
+    {
+      "title": "Section 3: Integration Tests",
+      "content": [
+        "Integration tests test the interactions between different components of the application. They ensure that all the units that were tested in the previous levels work well together.",
+        "Integration tests can include calls to the database, other APIs, and writing messages for a message queue.",
+        "Integration tests should be run as part of the build process or before a release.",
+        "Integration tests can take a long time to run and may require a full-time automation tester."
+      ],
+      "topics": ["Integration Tests", "Automation Testing", "Database Testing", "API Testing"]
+    },
+    {
+      "title": "Section 4: End-to-End Tests",
+      "content": [
+        "End-to-end tests test the entire application from the user's perspective, ensuring that it meets the business requirements.",
+        "End-to-end tests can be written in Gherkin language, which follows the given when then pattern frameworks such as SpecFlow and Cucumber.",
+        "End-to-end tests can take a long time to run and are typically not run on every build.",
+        "Screenshots can be taken when a test fails to help identify the cause of the failure."
+      ],
+      "topics": ["End-to-End Tests", "Business Requirements", "Gherkin Language", "Screenshots"]
+    },
+    {
+      "title": "Section 5: Manual Tests",
+      "content": [
+        "Manual tests are performed by humans and are usually done when there are not enough testers or when the testing time is limited.",
+        "Manual tests can be time-consuming and may not be as reliable as automated tests.",
+        "Manual tests can be used to test complex scenarios that are difficult to automate.",
+        "Manual tests should be performed as part of a testing plan and should be documented for future reference."
+      ],
+      "topics": ["Manual Tests", "Testing Plan", "Documentation", "Complex Scenarios"]
+    }
+  ],
+  "topics": ["Unit Tests", "Component Tests", "Integration Tests", "End-to-End Tests", "Manual Tests"],
+  "generalTopics": [
+    {
+      "name": "Testing Concepts",
+      "complexity": 0.59
+    },
+    {
+      "name": "Testing Strategies",
+      "complexity": 0.59
+    },
+    {
+      "name": "Testing Tools and Frameworks",
+      "complexity": 0.59
+    }
+  ]
+}

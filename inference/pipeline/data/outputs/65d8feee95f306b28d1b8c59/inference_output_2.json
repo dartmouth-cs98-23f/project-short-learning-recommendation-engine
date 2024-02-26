@@ -1,0 +1,70 @@
+{
+  "introduction": "This video provides an overview of modern cryptography, focusing on the use of symmetric encryption, key exchange, and public-key cryptography. It explains the concept of 'defence in depth' and highlights the importance of using strong encryption to secure communication between computers.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Cryptography",
+      "content": [
+        "Definition of cryptography and its importance in computer security.",
+        "Explanation of the different types of encryption: symmetric and asymmetric.",
+        "Discussion of the history of cryptography and its evolution over time.",
+        "Introduction to the concept of 'defence in depth'."
+      ],
+      "topics": ["Cryptography Definition", "Symmetric vs Asymmetric Encryption", "Cryptography History", "Defence in Depth"]
+    },
+    {
+      "title": "Section 2: Symmetric Encryption",
+      "content": [
+        "Explanation of symmetric encryption and its use cases.",
+        "Discussion of common symmetric encryption algorithms, such as AES and DES.",
+        "Explanation of key exchange and its importance in secure communication.",
+        "Introduction to the concept of one-way functions."
+      ],
+      "topics": ["Symmetric Encryption", "AES and DES Algorithms", "Key Exchange", "One-Way Functions"]
+    },
+    {
+      "title": "Section 3: Asymmetric Encryption",
+      "content": [
+        "Explanation of asymmetric encryption and its use cases.",
+        "Discussion of the RSA algorithm and its importance in public-key cryptography.",
+        "Explanation of digital signatures and their role in secure communication.",
+        "Introduction to the concept of public-key infrastructure (PKI)."
+      ],
+      "topics": ["Asymmetric Encryption", "RSA Algorithm", "Digital Signatures", "Public-Key Infrastructure (PKI)"]
+    },
+    {
+      "title": "Section 4: Defence in Depth",
+      "content": [
+        "Explanation of the concept of 'defence in depth' and its importance in computer security.",
+        "Discussion of how multiple layers of security mechanisms can be used to frustrate attackers.",
+        "Explanation of the use of firewalls, intrusion detection systems, and other security measures.",
+        "Introduction to the concept of security information and event management (SIEM)."
+      ],
+      "topics": ["Defence in Depth", "Multiple Layers of Security", "Firewalls and Intrusion Detection Systems", "Security Information and Event Management (SIEM)"]
+    },
+    {
+      "title": "Section 5: Cryptography in Practice",
+      "content": [
+        "Explanation of how cryptography is used in practice, such as in secure websites, emails, and online transactions.",
+        "Discussion of common cryptographic threats and how they can be mitigated.",
+        "Explanation of the importance of regular cryptographic updates and patches.",
+        "Introduction to the concept of cryptographic standards and their role in ensuring security."
+      ],
+      "topics": ["Cryptography in Practice", "Common Cryptographic Threats", "Cryptographic Updates and Patches", "Cryptographic Standards"]
+    }
+  ],
+  "topics": ["Cryptography Definition", "Symmetric vs Asymmetric Encryption", "Key Exchange", "One-Way Functions", "Defence in Depth", "Firewalls and Intrusion Detection Systems", "Security Information and Event Management (SIEM)", "Cryptography in Practice", "Common Cryptographic Threats", "Cryptographic Updates and Patches", "Cryptographic Standards"],
+  "generalTopics": [
+    {
+      "name": "Computer Security",
+      "complexity": 0.90
+    },
+    {
+      "name": "Cryptography",
+      "complexity": 0.95
+    },
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.80
+    }
+  ]
+}

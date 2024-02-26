@@ -1,70 +1,40 @@
 {
-  "introduction": "This video discusses Instruction Set Architecture (ISA), a fundamental concept in computer architecture. ISA is the set of commands that a processor can perform to execute program instructions. The video covers the implementation of ISA into processor microarchitecture, instruction format, and other related concepts.",
+  "introduction": "This video provides an introduction to instruction set architecture (ISA) and its role in processor design. ISA is defined as the set of commands that a processor can execute to execute program instructions. The video also discusses the instruction format, which defines the layout of machine instructions in terms of operation code, operand, and addressing mode. The instruction format supported by the processor depends on its instruction set architecture.",
   "sections": [
     {
       "title": "Section 1: Introduction to Instruction Set Architecture",
       "content": [
-        "Explanation of ISA as the group of commands that a processor can execute.",
-        "Discussion on how every processor design is based on one specific ISA.",
-        "Example of the Intel 8085 ISA with 246 operation codes and 74 instructions.",
-        "Overview of the microarchitecture design that implements the ISA."
+        "Definition of instruction set architecture.",
+        "Explanation of how ISA works as an interface between hardware and software.",
+        "Example of Intel 8085 instruction set architecture.",
+        "Microarchitecture design and its implementation of ISA."
       ],
-      "topics": ["ISA Definition", "Processor Design", "Example ISA", "Microarchitecture"]
+      "topics": ["Instruction Set Architecture", "Processor Design", "Microarchitecture"]
     },
     {
       "title": "Section 2: Instruction Format",
       "content": [
-        "Explanation of the instruction format that defines the layout of machine instructions.",
-        "Discussion on how the instruction format is supported by the processor based on its ISA.",
-        "Importance of the instruction format in executing high-level program instructions.",
-        "Summary of the instruction format supported by the processor."
+        "Explanation of the instruction format in computer programs.",
+        "Translation of high-level program instructions into low-level machine instructions using compilers.",
+        "Definition of instruction format and its relationship with ISA.",
+        "Summary of the instruction format supported by different processors."
       ],
-      "topics": ["Instruction Format", "Instruction Support by Processor", "Program Execution", "Instruction Format Summary"]
-    },
-    {
-      "title": "Section 3: Other Fundamental Concepts in Processor Architecture",
-      "content": [
-        "Discussion on other important design concepts related to processor architecture.",
-        "Explanation of the correlation between ISA and processor architecture.",
-        "Summary of the concepts covered in the section.",
-        "Relation of the concepts to the video's main topic."
-      ],
-      "topics": ["Processor Architecture Design Concepts", "ISA and Processor Architecture Correlation", "Summary of Concepts", "Concepts Relation to Main Topic"]
-    },
-    {
-      "title": "Section 4: Instruction Set Architecture Implementation in Processor Microarchitecture",
-      "content": [
-        "Explanation of how the ISA is implemented into the processor microarchitecture.",
-        "Discussion on how different processor brands can have different implementations of the same ISA.",
-        "Summary of the implementation concepts.",
-        "Relation of the implementation to the video's main topic."
-      ],
-      "topics": ["ISA Implementation in Microarchitecture", "Processor Brand Differences in Implementation", "Summary of Implementation Concepts", "Implementation Relation to Main Topic"]
-    },
-    {
-      "title": "Section 5: Conclusion",
-      "content": [
-        "Summary of the main points discussed in the video.",
-        "Discussion on the importance of understanding ISA and its implementation in processor architecture.",
-        "Final thoughts on the topic.",
-        "Call to action for viewers to like and subscribe."
-      ],
-      "topics": ["Main Points Summary", "Importance of Understanding ISA", "Final Thoughts", "Call to Action"]
+      "topics": ["Instruction Format", "Compiler Translation", "ISA and Instruction Format"]
     }
   ],
-  "topics": ["ISA", "Processor Architecture", "Instruction Format", "Processor Implementation"],
+  "topics": ["Instruction Set Architecture", "Processor Design", "Instruction Format", "Compiler Translation", "ISA and Instruction Format"],
   "generalTopics": [
     {
       "name": "Computer Architecture",
-      "complexity": 0.59
+      "complexity": 0.61
+    },
+    {
+      "name": "Programming Languages and Software Development",
+      "complexity": 0.61
     },
     {
       "name": "Database Systems and Management",
-      "complexity": 0.45
-    },
-    {
-      "name": "Web Development and Internet Technologies",
-      "complexity": 0.35
+      "complexity": 0.61
     }
   ]
 }

@@ -1,55 +1,70 @@
 {
-  "introduction": "Welcome to a discussion on the basics of computer architecture, specifically focusing on CPU architecture. This video will delve into the history of CPUs, their role in modern computing, and the technologies involved in modern CPU design. It aims to provide a greater appreciation for the capabilities of CPUs and inspire viewers about the possibilities of the future.",
+  "introduction": "This video introduces the fundamentals of computer architecture, focusing on the central processing unit (CPU) and its role in modern computing. It covers the history of CPU design, the binary system, and instruction set architectures (ISAs). The video also highlights the importance of ISAs in modern CPU design and their role in efficient high-performance computation and seamless software experiences across various CPU microarchitectures. The video concludes with a preview of the next part, which will delve deeper into the microarchitecture, instruction cycle, and caching.",
   "sections": [
     {
-      "title": "Section 1: Introduction to CPU Architecture",
+      "title": "Section 1: Introduction to Computer Architecture",
       "content": [
-        "Explanation of the role of CPUs in modern computing.",
-        "Overview of the history of CPUs, including their evolution from vacuum tube-based technologies to modern silicon-based designs.",
-        "Introduction to the concept of instruction set architectures (ISAs) and their importance in modern CPU design.",
-        "Discussion on the various types of instructions and their functions in CPU operations."
+        "Overview of the importance of computer architecture in modern computing.",
+        "Explanation of the central processing unit (CPU) and its role in the computer system.",
+        "Discussion of the evolution of CPU design and its impact on modern computing.",
+        "Introduction to the binary system and its use in computer architecture."
       ],
-      "topics": ["CPU Role in Modern Computing", "Evolution of CPUs", "Instruction Set Architectures (ISAs)", "Types of Instructions"]
+      "topics": ["Computer Architecture", "Central Processing Unit", "Binary System"]
     },
     {
-      "title": "Section 2: The Birth of Digital Computing",
+      "title": "Section 2: Instruction Set Architectures (ISAs)",
       "content": [
-        "Explanation of the first general-purpose digital computer, ENIAC, and its impact on computing history.",
-        "Discussion on the use of vacuum tube technology in early computers and its limitations.",
-        "Introduction to the concept of program control and the four-step instruction cycle.",
-        "Explanation of the role of logic gates and functional blocks in CPU design."
+        "Explanation of the concept of instruction set architectures (ISAs).",
+        "Discussion of the power of abstraction in ISAs and its role in modern CPU design.",
+        "Overview of the different types of ISAs and their functions in modern computing.",
+        "Explanation of the importance of ISAs in efficient high-performance computation and seamless software experiences."
       ],
-      "topics": ["ENIAC and Its Impact", "Vacuum Tube Technology", "Program Control and Instruction Cycle", "Logic Gates and Functional Blocks"]
+      "topics": ["Instruction Set Architectures", "Abstraction in ISAs", "Types of ISAs"]
     },
     {
-      "title": "Section 3: Modern CPU Design",
+      "title": "Section 3: CPU Microarchitecture",
       "content": [
-        "Overview of modern CPU architectures and their focus on energy efficiency and performance.",
-        "Discussion on the role of transistors in modern CPU design and their miniaturization over time.",
-        "Explanation of the concept of abstraction in CPU design and its importance in modern computing.",
-        "Introduction to various CPU architectures, including ARM, x86, and MIPS."
+        "Introduction to CPU microarchitecture and its role in modern computing.",
+        "Explanation of the different components of a CPU microarchitecture.",
+        "Discussion of the instruction cycle and its impact on CPU performance.",
+        "Overview of the front-end and back-end of a CPU and their functions in modern computing."
       ],
-      "topics": ["Modern CPU Architectures", "Transistor Miniaturization", "Abstraction in CPU Design", "Various CPU Architectures"]
+      "topics": ["CPU Microarchitecture", "Instruction Cycle", "Front-End and Back-End of a CPU"]
     },
     {
-      "title": "Section 4: Instruction Set Architectures (ISAs)",
+      "title": "Section 4: Caching in Computing",
       "content": [
-        "Explanation of the role of ISAs in modern CPU design and their implementation independence.",
-        "Discussion on the various types of ISAs and their functions in CPU operations.",
-        "Introduction to the concept of binary representation and its importance in CPU design.",
-        "Explanation of the role of caching in CPU design and its impact on performance."
+        "Explanation of caching in computing and its role in improving system performance.",
+        "Overview of the different types of caching and their functions in modern computing.",
+        "Discussion of the importance of caching in modern CPU design and its impact on system performance.",
+        "Explanation of the role of caching in efficient high-performance computation and seamless software experiences."
       ],
-      "topics": ["ISA Role in Modern CPU Design", "Types of ISAs", "Binary Representation", "Caching in CPU Design"]
+      "topics": ["Caching in Computing", "Types of Caching", "Impact of Caching on System Performance"]
     },
     {
-      "title": "Section 5: Future of CPU Design",
+      "title": "Section 5: Preview of Part 2",
       "content": [
-        "Discussion on the future of CPU design, including emerging technologies such as quantum computing.",
-        "Explanation of the role of AI and machine learning in shaping the future of CPU design.",
-        "Introduction to various CPU architectures and their potential applications in the future.",
-        "Overview of the challenges and opportunities in the field of CPU design."
+        "Overview of the topics covered in part 2 of the series.",
+        "Preview of the microarchitecture, instruction cycle, and caching concepts.",
+        "Explanation of the importance of understanding these concepts in modern CPU design.",
+        "Introduction to the next part of the series and its focus on the details of modern CPU design."
       ],
-      "topics": ["Emerging Technologies in CPU Design", "AI and Machine Learning in CPU Design", "Potential Applications of CPU Architectures", "Challenges and Opportunities in CPU Design"]
+      "topics": ["Microarchitecture", "Instruction Cycle", "Caching in Modern CPU Design"]
     }
   ],
-  "topics": ["CPU Role in Modern Computing", "Evolution of CPUs", "Instruction Set Architectures (ISAs)", "Types of Instructions", "ENIAC and Its Impact", "Vacuum Tube Technology", "Program Control and Instruction Cycle", "Logic Gates and Functional Blocks", "Modern CPU Architectures", "Transistor Miniaturization", "Abstraction in CPU Design", "Various CPU Architectures", "ISA Role in Modern CPU Design", "Types of ISAs", "Binary Representation", "Caching in CPU Design", "Emerging Technologies in CPU Design", "AI and Machine Learning in CPU Design", "Potential Applications of CPU Architectures", "Challenges and Opportunities in CPU Design"]
+  "topics": ["Computer Architecture", "Instruction Set Architectures", "CPU Microarchitecture", "Caching in Computing"],
+  "generalTopics": [
+    {
+      "name": "Computer Architecture",
+      "complexity": 0.59
+    },
+    {
+      "name": "Instruction Set Architectures",
+      "complexity": 0.59
+    },
+    {
+      "name": "CPU Microarchitecture",
+      "complexity": 0.59
+    }
+  ]
+}

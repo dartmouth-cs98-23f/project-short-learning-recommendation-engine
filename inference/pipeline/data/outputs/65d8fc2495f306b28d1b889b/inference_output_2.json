@@ -1,70 +1,70 @@
 {
-  "introduction": "This video provides an overview of computer systems and their design, focusing on the hierarchy of layers and their interfaces. It introduces the concept of computer architecture and its impact on software performance and design. The video will expand on these topics as it progresses.",
+  "introduction": "This video introduces the concept of computer system behavior and how different components need to interact to process digital information. It discusses the hierarchy of these components, known as computer organization, and the interfaces between hardware and software. The focus is on the structure and behavior of the computing system, and how these aspects impact software performance.",
   "sections": [
     {
-      "title": "Section 1: Computer System Layers",
+      "title": "Section 1: Computer Organization",
       "content": [
-        "Explanation of the different layers in a computer system, including hardware, operating system, and application layers.",
-        "Discussion of how these layers interact and communicate with each other.",
-        "Introduction to the concept of computer organization and its importance in computer architecture.",
-        "Explanation of the term 'interface' and its role in computer architecture."
+        "Explanation of computer organization as a hierarchy of layers, including low-level hardware, operating system, and application layers.",
+        "Discussion of partitioning each layer into sections and the challenges associated with implementing these partitions.",
+        "Overview of the primary focus on computer architecture in this context, which describes interfaces between hardware and software.",
+        "Introduction to the concept of an onion-like structure to visualize the layers of a computer system."
       ],
-      "topics": ["Computer System Layers", "Interlayer Communication", "Computer Organization", "Interfaces"]
+      "topics": ["Computer Organization", "Layer Partitioning", "Computer Architecture"]
     },
     {
       "title": "Section 2: Computer Architecture",
       "content": [
-        "Definition of computer architecture and its focus on structure and behavior of the computing system.",
-        "Explanation of the different components of computer architecture, such as the processor, memory, and input/output devices.",
-        "Discussion of how these components interact and communicate with each other.",
-        "Explanation of the term 'interface' in the context of computer architecture."
+        "Explanation of computer architecture as the interfaces between hardware and software components.",
+        "Discussion of shared boundaries in computer architecture, where two separate components exchange information.",
+        "Introduction to the concept of an interface example, where two layers use a component to communicate.",
+        "Overview of the importance of structure and behavior in computer architecture."
       ],
-      "topics": ["Computer Architecture", "Processor", "Memory", "Input/Output Devices"]
+      "topics": ["Computer Architecture", "Shared Boundaries", "Interface Example"]
     },
     {
-      "title": "Section 3: Software Performance and Design",
+      "title": "Section 3: Software Performance and Impact",
       "content": [
-        "Explanation of how computer architecture impacts software performance and design.",
-        "Discussion of different software design patterns and their relationship to computer architecture.",
-        "Explanation of the importance of optimizing software for specific hardware architectures.",
-        "Introduction to the concept of software performance metrics and their role in computer architecture."
+        "Discussion on how computer organization and architecture affect software performance.",
+        "Explanation of how these aspects impact the overall efficiency of a computer system.",
+        "Overview of the importance of understanding computer organization and architecture in software development.",
+        "Introduction to the idea that this series will expand on these concepts as it progresses."
       ],
-      "topics": ["Software Performance and Design", "Software Design Patterns", "Hardware-Software Interaction", "Software Performance Metrics"]
+      "topics": ["Software Performance", "Computer Organization Impact", "Computer Architecture Impact"]
     },
     {
-      "title": "Section 4: Advanced Topics in Computer Architecture",
+      "title": "Section 4: Algorithms and Data Structures",
       "content": [
-        "Explanation of advanced topics in computer architecture, such as parallel processing, virtualization, and distributed systems.",
-        "Discussion of the trade-offs between performance, power consumption, and cost in computer architecture.",
-        "Introduction to the concept of computer networks and their role in computer architecture.",
-        "Explanation of the importance of security in computer architecture."
+        "Explanation of algorithms and data structures as essential components of computer systems.",
+        "Discussion of how algorithms and data structures affect software performance and efficiency.",
+        "Overview of the importance of understanding algorithms and data structures in software development.",
+        "Introduction to how this series will explore these topics in more detail."
       ],
-      "topics": ["Advanced Topics in Computer Architecture", "Parallel Processing", "Virtualization", "Distributed Systems", "Performance vs. Power Consumption", "Computer Networks", "Security"]
+      "topics": ["Algorithms", "Data Structures", "Software Performance"]
     },
     {
-      "title": "Section 5: Future Directions in Computer Architecture",
+      "title": "Section 5: Computer Graphics and Visualization",
       "content": [
-        "Discussion of current trends and future directions in computer architecture.",
-        "Explanation of the role of artificial intelligence and machine learning in shaping computer architecture.",
-        "Introduction to the concept of quantum computing and its potential impact on computer architecture.",
-        "Explanation of the importance of energy efficiency and sustainability in computer architecture."
+        "Explanation of computer graphics and visualization as important aspects of computer systems.",
+        "Discussion of how computer graphics and visualization affect software performance and efficiency.",
+        "Overview of the importance of understanding computer graphics and visualization in software development.",
+        "Introduction to how this series will explore these topics in more detail."
       ],
-      "topics": ["Future Directions in Computer Architecture", "Artificial Intelligence and Machine Learning", "Quantum Computing", "Energy Efficiency and Sustainability"]
+      "topics": ["Computer Graphics", "Visualization", "Software Performance"]
     }
   ],
-  "topics": ["Computer System Layers", "Computer Architecture", "Software Performance and Design", "Advanced Topics in Computer Architecture", "Future Directions in Computer Architecture"],
+  "topics": ["Computer Organization", "Computer Architecture", "Software Performance", "Algorithms", "Data Structures", "Computer Graphics", "Visualization"],
   "generalTopics": [
     {
       "name": "Computer Architecture",
       "complexity": 0.61
     },
     {
-      "name": "Software Performance and Design",
+      "name": "Software Performance",
       "complexity": 0.59
     },
     {
-      "name": "Artificial Intelligence and Machine Learning",
-      "complexity": 0.49
+      "name": "Algorithms and Data Structures",
+      "complexity": 0.53
     }
   ]
 }

@@ -1,0 +1,70 @@
+{
+  "introduction": "This video discusses parallel programming and its various types, including distributed memory, shared memory, and hybrid parallelization. The talk also covers common libraries and application programming interfaces used in parallel computing, such as MPI, OpenMP, OpenACC, and Intel TBB. The presentation also highlights the importance of resource management and the benefits of parallel computing in modern supercomputers and laptops.",
+  "sections": [
+    {
+      "title": "Section 1: Parallel Programming Basics",
+      "content": [
+        "Explanation of parallel programming concepts and their importance in modern computing.",
+        "Introduction to different types of parallel architectures, including distributed memory and shared memory.",
+        "Discussion of common libraries and APIs for parallel computing, such as MPI, OpenMP, and OpenACC.",
+        "Explanation of offloading and its potential benefits for parallel computing."
+      ],
+      "topics": ["Parallel Programming Concepts", "Parallel Architectures", "Parallel Libraries and APIs", "Offloading"]
+    },
+    {
+      "title": "Section 2: Parallel Computing in Engineering Applications",
+      "content": [
+        "Focus on the use of parallel computing in engineering applications, such as finite element computations and machine learning.",
+        "Explanation of how parallel computing can speed up computations and improve performance.",
+        "Discussion of the importance of data management and communication in parallel computing.",
+        "Introduction to popular parallel computing tools and frameworks, such as MPI and OpenMP."
+      ],
+      "topics": ["Engineering Applications", "Parallel Computing Performance", "Data Management and Communication", "Parallel Computing Tools and Frameworks"]
+    },
+    {
+      "title": "Section 3: Hybrid Parallelization and Resource Management",
+      "content": [
+        "Explanation of hybrid parallelization and its potential benefits for modern computing.",
+        "Discussion of resource management techniques, such as task scheduling and load balancing.",
+        "Introduction to popular hybrid parallelization frameworks, such as Intel TBB and OpenMP.",
+        "Explanation of the importance of monitoring and optimizing parallel computing performance."
+      ],
+      "topics": ["Hybrid Parallelization", "Resource Management Techniques", "Parallel Computing Frameworks", "Performance Monitoring and Optimization"]
+    },
+    {
+      "title": "Section 4: Parallel Computing in Laptops and Desktops",
+      "content": [
+        "Explanation of the use of parallel computing in modern laptops and desktops.",
+        "Discussion of the potential benefits of parallel computing for everyday tasks, such as video rendering and image processing.",
+        "Introduction to popular parallel computing libraries and APIs for desktop computing, such as OpenMP and Intel TBB.",
+        "Explanation of the importance of energy efficiency and heat management in parallel computing."
+      ],
+      "topics": ["Parallel Computing in Laptops and Desktops", "Everyday Tasks", "Parallel Computing Libraries and APIs", "Energy Efficiency and Heat Management"]
+    },
+    {
+      "title": "Section 5: Parallel Computing in Future Technologies",
+      "content": [
+        "Discussion of the future of parallel computing and its potential impact on various industries.",
+        "Explanation of emerging technologies, such as quantum computing and AI-based parallel computing.",
+        "Introduction to popular parallel computing frameworks and libraries for future technologies, such as TensorFlow and PyTorch.",
+        "Explanation of the importance of standardization and interoperability in parallel computing."
+      ],
+      "topics": ["Future Technologies", "Emerging Trends", "Parallel Computing Frameworks and Libraries", "Standardization and Interoperability"]
+    }
+  ],
+  "topics": ["Parallel Programming Concepts", "Parallel Architectures", "Parallel Libraries and APIs", "Offloading", "Engineering Applications", "Parallel Computing Performance", "Data Management and Communication", "Parallel Computing Tools and Frameworks", "Hybrid Parallelization", "Resource Management Techniques", "Parallel Computing Frameworks", "Performance Monitoring and Optimization", "Parallel Computing in Laptops and Desktops", "Everyday Tasks", "Parallel Computing Libraries and APIs", "Energy Efficiency and Heat Management", "Future Technologies", "Emerging Trends", "Parallel Computing Frameworks and Libraries", "Standardization and Interoperability"],
+  "generalTopics": [
+    {
+      "name": "Parallel Programming",
+      "complexity": 0.59
+    },
+    {
+      "name": "Engineering Applications",
+      "complexity": 0.61
+    },
+    {
+      "name": "Resource Management",
+      "complexity": 0.55
+    }
+  ]
+}

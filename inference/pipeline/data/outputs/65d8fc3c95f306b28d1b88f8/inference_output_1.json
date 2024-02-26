@@ -1,0 +1,70 @@
+{
+  "introduction": "This video provides an overview of the basic scenario in web development, focusing on the HTTP protocol and the role of DNS, request response pattern, and frameworks in web development. The video also covers more advanced technologies such as WebSockets and real-time communication.",
+  "sections": [
+    {
+      "title": "Section 1: HTTP Protocol and DNS",
+      "content": [
+        "Explanation of HTTP protocol and its role in web communication.",
+        "Introduction to DNS and its function in translating domain names to IP addresses.",
+        "Discussion on the request response pattern and its importance in web development.",
+        "Explanation of the role of frameworks in web development and their impact on the request response pattern."
+      ],
+      "topics": ["HTTP Protocol", "DNS", "Request Response Pattern", "Frameworks"]
+    },
+    {
+      "title": "Section 2: WebSockets and Real-time Communication",
+      "content": [
+        "Introduction to WebSockets and their role in real-time communication.",
+        "Explanation of the difference between WebSockets and traditional request response pattern.",
+        "Discussion on the advantages and use cases of WebSockets in web development.",
+        "Explanation of how WebSockets enable real-time data exchange between the client and server."
+      ],
+      "topics": ["WebSockets", "Real-time Communication", "Advantages of WebSockets", "Real-time Data Exchange"]
+    },
+    {
+      "title": "Section 3: Advanced Topics in Web Development",
+      "content": [
+        "Discussion on more advanced topics in web development such as APIs, databases, and server-side programming.",
+        "Explanation of the role of APIs in web development and their integration with front-end and back-end components.",
+        "Introduction to database systems and their importance in web development.",
+        "Explanation of server-side programming languages and their role in web development."
+      ],
+      "topics": ["APIs", "Databases", "Server-side Programming Languages"]
+    },
+    {
+      "title": "Section 4: Mobile Web Development",
+      "content": [
+        "Explanation of the differences between mobile web development and traditional web development.",
+        "Discussion on the challenges and opportunities in mobile web development.",
+        "Introduction to mobile app development and its role in web development.",
+        "Explanation of the importance of responsive design in mobile web development."
+      ],
+      "topics": ["Mobile Web Development", "Mobile App Development", "Responsive Design"]
+    },
+    {
+      "title": "Section 5: Security and Best Practices in Web Development",
+      "content": [
+        "Discussion on security concerns in web development and best practices to mitigate them.",
+        "Explanation of common web security threats such as SQL injection, cross-site scripting (XSS), and cross-site request forgery (CSRF).",
+        "Introduction to secure coding practices and their importance in web development.",
+        "Explanation of the role of encryption and authentication in web development."
+      ],
+      "topics": ["Web Security", "Secure Coding Practices", "Encryption", "Authentication"]
+    }
+  ],
+  "topics": ["HTTP Protocol", "DNS", "WebSockets", "APIs", "Databases", "Server-side Programming Languages", "Mobile Web Development", "Security"],
+  "generalTopics": [
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.61
+    },
+    {
+      "name": "Frameworks in Web Development",
+      "complexity": 0.61
+    },
+    {
+      "name": "Real-time Communication and WebSockets",
+      "complexity": 0.61
+    }
+  ]
+}

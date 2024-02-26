@@ -1,0 +1,65 @@
+{
+  "introduction": "In this video, we discuss SQL Server, its usage, different editions, advantages, and some basic SQL queries. SQL Server is a relational database management system used for persistence, mining, and reporting of information. It offers structured and efficient data storage for quick retrieval. SQL Server includes tools for data compression, encryption, and efficient permission management. It also has lower cost of ownership compared to other databases.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to SQL Server",
+      "content": [
+        "Explanation of SQL Server's role in application development and data management.",
+        "Discussion on the different SQL Server editions and their features.",
+        "Overview of the benefits of using SQL Server, such as data persistence and efficient retrieval."
+      ],
+      "topics": ["SQL Server in Application Development", "SQL Server Editions", "Benefits of SQL Server"]
+    },
+    {
+      "title": "Section 2: SQL Server Queries",
+      "content": [
+        "Explanation of basic SQL queries for retrieving and filtering data.",
+        "Discussion on query syntax and best practices.",
+        "Example queries for finding customers who purchased items above a certain price or living in a specific city."
+      ],
+      "topics": ["SQL Queries", "Query Syntax", "Example Queries"]
+    },
+    {
+      "title": "Section 3: SQL Server Data Modeling",
+      "content": [
+        "Overview of data modeling in SQL Server.",
+        "Explanation of creating tables and relationships in SQL Server.",
+        "Discussion on data normalization and denormalization."
+      ],
+      "topics": ["SQL Server Data Modeling", "Table Creation", "Relationships", "Data Normalization"]
+    },
+    {
+      "title": "Section 4: SQL Server Security",
+      "content": [
+        "Overview of SQL Server security features.",
+        "Discussion on authentication, authorization, and access control.",
+        "Explanation of encryption and data protection in SQL Server."
+      ],
+      "topics": ["SQL Server Security", "Authentication", "Authorization", "Access Control", "Encryption", "Data Protection"]
+    },
+    {
+      "title": "Section 5: SQL Server Administration",
+      "content": [
+        "Overview of SQL Server administration tasks.",
+        "Discussion on database creation, backup, and restore.",
+        "Explanation of monitoring and troubleshooting SQL Server issues."
+      ],
+      "topics": ["SQL Server Administration", "Database Creation", "Backup and Restore", "Monitoring and Troubleshooting"]
+    }
+  ],
+  "topics": ["SQL Server", "Data Management", "Database Queries", "Data Modeling", "Security", "Administration"],
+  "generalTopics": [
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.61
+    },
+    {
+      "name": "SQL Queries",
+      "complexity": 0.59
+    },
+    {
+      "name": "SQL Server Security",
+      "complexity": 0.60
+    }
+  ]
+}

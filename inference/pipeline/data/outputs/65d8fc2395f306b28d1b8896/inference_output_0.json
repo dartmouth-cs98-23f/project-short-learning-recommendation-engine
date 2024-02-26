@@ -1,70 +1,70 @@
 {
-  "introduction": "In this chapter, we will explore the topic of micro architecture, connecting the concepts of logic design and computer architecture. We will discuss performance analysis, different micro architectures, and advanced micro architecture techniques. The chapter will cover the implementation of a risk 5 processor, focusing on the data path and controller, architectural state, and instruction execution. The video will provide an overview of various risk 5 instructions, such as rtype instructions, memory instructions, and branch instructions, and demonstrate how to build a processor that handles these instructions.",
+  "introduction": "This chapter in the digital design and computer architecture course covers micro architecture, focusing on building hardware blocks to create a microprocessor capable of running machine language instructions. Key concepts discussed include performance analysis, different micro architectures (single cycle, multicycle, pipeline), and the architectural state that determines a processor's functionality. The chapter emphasizes the trade-offs between speed, cost, and power consumption in microprocessor design.",
   "sections": [
     {
       "title": "Section 1: Performance Analysis and Micro Architecture",
       "content": [
-        "Explanation of performance analysis and its importance in micro architecture.",
-        "Discussion of three different micro architectures: single cycle, multicycle, and pipeline processors.",
-        "Comparison of performance and hardware requirements among the three architectures.",
-        "Introduction to program execution time as the ultimate measure of processor speed."
+        "Explanation of performance analysis in micro architecture",
+        "Introduction to different micro architectures: single cycle, multicycle, and pipeline",
+        "Discussion on the trade-offs between speed, cost, and power consumption in each architecture",
+        "Overview of the importance of architectural state in microprocessor design"
       ],
-      "topics": ["Performance Analysis", "Micro Architecture", "Single Cycle Processor", "Multicycle Processor", "Pipeline Processor", "Program Execution Time"]
+      "topics": ["Performance Analysis", "Micro Architecture", "Single Cycle Processor", "Multicycle Processor", "Pipeline Processor", "Architectural State"]
     },
     {
-      "title": "Section 2: Building a Risk 5 Processor",
+      "title": "Section 2: Single Cycle Processor",
       "content": [
-        "Overview of the data path and controller in a risk 5 processor.",
-        "Explanation of the architectural state and its importance in micro architecture.",
-        "Description of the instruction memory and data memory in a risk 5 processor.",
-        "Demonstration of connecting the architectural state with arithmetic logic units and multiplexers to build the data path."
+        "Detailed explanation of single cycle processor architecture",
+        "Explanation of clock cycle length and its impact on performance",
+        "Comparison of single cycle processor with other micro architectures",
+        "Examples of single cycle processors"
       ],
-      "topics": ["Data Path", "Controller", "Architectural State", "Instruction Memory", "Data Memory", "Arithmetic Logic Units", "Multiplexers"]
+      "topics": ["Single Cycle Processor", "Clock Cycle Length", "Comparison with Other Microarchitectures", "Examples"]
     },
     {
-      "title": "Section 3: Instruction Set and Execution",
+      "title": "Section 3: Multicycle Processor",
       "content": [
-        "Introduction to the risk 5 instruction set and its key instructions.",
-        "Explanation of the rtype instructions (add, subtract, or, set less, and), memory instructions (load word, store word), and branch instruction (beq).",
-        "Demonstration of adding other instructions such as had and jump and link.",
-        "Discussion of the importance of choosing the right instruction set and execution strategy for a specific application."
+        "Introduction to multicycle processor architecture",
+        "Explanation of instruction breakdown and its impact on performance",
+        "Comparison of multicycle processor with other micro architectures",
+        "Examples of multicycle processors"
       ],
-      "topics": ["Instruction Set", "rtype Instructions", "Memory Instructions", "Branch Instruction", "Had Instruction", "Jump and Link Instruction", "Instruction Execution Strategy"]
+      "topics": ["Multicycle Processor", "Instruction Breakdown", "Comparison with Other Microarchitectures", "Examples"]
     },
     {
-      "title": "Section 4: Advanced Micro Architecture Techniques",
+      "title": "Section 4: Pipeline Processor",
       "content": [
-        "Overview of advanced micro architecture techniques used in modern processors.",
-        "Discussion of techniques such as out-of-order execution, speculative execution, and memory compression.",
-        "Explanation of how these techniques improve processor performance while minimizing cost and power consumption.",
-        "Comparison of different micro architectures and their trade-offs among performance, cost, and power."
+        "Explanation of pipeline processor architecture",
+        "Discussion on overlapping instruction execution for improved performance",
+        "Comparison of pipeline processor with other micro architectures",
+        "Examples of pipeline processors"
       ],
-      "topics": ["Advanced Micro Architecture Techniques", "Out-of-Order Execution", "Speculative Execution", "Memory Compression", "Performance-Cost-Power Trade-Offs"]
+      "topics": ["Pipeline Processor", "Instruction Execution Overlap", "Comparison with Other Microarchitectures", "Examples"]
     },
     {
-      "title": "Section 5: Conclusion and Future Directions",
+      "title": "Section 5: Advanced Micro Architecture Techniques",
       "content": [
-        "Summary of the key concepts and techniques discussed in the chapter.",
-        "Discussion of the current state of micro architecture and its future directions.",
-        "Exploration of potential research areas and challenges in micro architecture.",
-        "Conclusion on the importance of micro architecture in modern computing systems."
+        "Overview of advanced micro architecture techniques used in modern processors",
+        "Explanation of techniques such as superscaling, speculative execution, and out-of-order execution",
+        "Discussion on their impact on performance, cost, and power consumption",
+        "Examples of processors utilizing these techniques"
       ],
-      "topics": ["Summary", "Current State of Micro Architecture", "Future Directions", "Research Areas", "Challenges", "Conclusion"]
+      "topics": ["Advanced Micro Architecture Techniques", "Superscaling", "Speculative Execution", "Out-of-Order Execution", "Examples"]
     }
   ],
-  "topics": ["Performance Analysis", "Micro Architecture", "Single Cycle Processor", "Multicycle Processor", "Pipeline Processor", "Program Execution Time", "Data Path", "Controller", "Architectural State", "Instruction Memory", "Data Memory", "Arithmetic Logic Units", "Multiplexers", "Instruction Set", "rtype Instructions", "Memory Instructions", "Branch Instruction", "Had Instruction", "Jump and Link Instruction", "Instruction Execution Strategy", "Advanced Micro Architecture Techniques", "Out-of-Order Execution", "Speculative Execution", "Memory Compression", "Performance-Cost-Power Trade-Offs"],
+  "topics": ["Micro Architecture", "Single Cycle Processor", "Multicycle Processor", "Pipeline Processor", "Advanced Micro Architecture Techniques"],
   "generalTopics": [
     {
       "name": "Computer Architecture",
-      "complexity": 0.79
+      "complexity": 0.61
     },
     {
-      "name": "Micro Architecture",
-      "complexity": 0.79
+      "name": "Performance Analysis",
+      "complexity": 0.59
     },
     {
-      "name": "Instruction Execution Strategy",
-      "complexity": 0.79
+      "name": "Advanced Micro Architecture Techniques",
+      "complexity": 0.61
     }
   ]
 }

@@ -1,0 +1,70 @@
+{
+  "introduction": "Tobias Günther teaches Git concepts and best practices, including commit strategies, branching workflows, and conflict resolution. He also discusses rebase and its pros and cons. The video aims to improve Git knowledge and confidence for developers and designers.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Git",
+      "content": [
+        "Overview of Git and its importance in software development.",
+        "Explanation of Git's core concepts such as commits, branches, and merges.",
+        "Discussion of Git's benefits, including version control, collaboration, and productivity.",
+        "Mention of Git's popularity among developers and its role in the software development lifecycle."
+      ],
+      "topics": ["Git Overview", "Core Concepts", "Benefits", "Popularity"]
+    },
+    {
+      "title": "Section 2: Git Commits",
+      "content": [
+        "Explanation of Git commits and their purpose.",
+        "Discussion of commit messages and their importance.",
+        "Presentation of different commit strategies, including the "git flow" approach.",
+        "Introduction of the "git status" command and its role in tracking changes."
+      ],
+      "topics": ["Git Commits", "Commit Messages", "Git Flow", "Git Status"]
+    },
+    {
+      "title": "Section 3: Git Branching",
+      "content": [
+        "Overview of Git branching and its purpose.",
+        "Explanation of different branching strategies, including "git flow" and "feature branches".",
+        "Discussion of merge conflicts and their resolution.",
+        "Presentation of tools like "git rebase" for managing branches and commits."
+      ],
+      "topics": ["Git Branching", "Branching Strategies", "Merge Conflicts", "Git Rebase"]
+    },
+    {
+      "title": "Section 4: Git Workflow",
+      "content": [
+        "Explanation of Git workflow and its importance in software development.",
+        "Presentation of different Git workflows, including "git flow" and "continuous integration".",
+        "Discussion of tools like "Tower" for managing Git workflows and collaborations.",
+        "Introduction of best practices for Git workflow, such as regular commits and branch management."
+      ],
+      "topics": ["Git Workflow", "Git Workflow Tools", "Git Workflow Best Practices"]
+    },
+    {
+      "title": "Section 5: Git Concepts in Action",
+      "content": [
+        "Practical examples of Git concepts in action, including creating a new branch, resolving merge conflicts, and merging branches.",
+        "Discussion of real-world use cases for Git and its role in software development.",
+        "Introduction of advanced Git topics, such as "git submodules" and "git subtrees".",
+        "Recap of key takeaways and next steps for improving Git knowledge and skills."
+      ],
+      "topics": ["Git in Action", "Real-World Use Cases", "Advanced Git Topics", "Improving Git Skills"]
+    }
+  ],
+  "topics": ["Git Overview", "Commit Messages", "Branching Strategies", "Merge Conflicts", "Git Workflow", "Git Workflow Tools", "Git Workflow Best Practices", "Git in Action", "Real-World Use Cases", "Advanced Git Topics", "Improving Git Skills"],
+  "generalTopics": [
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": 0.61
+    },
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.53
+    },
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.59
+    }
+  ]
+}

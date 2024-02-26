@@ -1,0 +1,70 @@
+{
+  "introduction": "This video explains the concept of store now, decrypt later (SNDL) and how quantum computers can potentially break encryption in the future. It also discusses the current threat posed by quantum computing and the need for agencies to transition to supercomputers using the general number field sieve algorithm.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Store Now, Decrypt Later (SNDL)",
+      "content": [
+        "Explanation of the concept of store now, decrypt later (SNDL) and its significance in the context of quantum computing.",
+        "Discussion on the current threat posed by quantum computing and the need for agencies to transition to supercomputers.",
+        "Explanation of the general number field sieve algorithm and its role in modern cryptography.",
+        "Comparison of the computational power required for factoring large numbers on a conventional computer versus a quantum computer."
+      ],
+      "topics": ["Quantum Computing", "Cryptography", "Supercomputers"]
+    },
+    {
+      "title": "Section 2: Simple Example of Factoring Large Numbers",
+      "content": [
+        "Introduction to the concept of factoring large numbers and its significance in cryptography.",
+        "Explanation of the process of factoring a product of two primes using a simple example with no quantum computer required.",
+        "Discussion on the limitations of factoring large numbers with a conventional computer.",
+        "Comparison of the computational power required for factoring large numbers on a conventional computer versus a quantum computer."
+      ],
+      "topics": ["Cryptography", "Factoring Large Numbers", "Quantum Computing"]
+    },
+    {
+      "title": "Section 3: Quantum Computing and Factoring Large Numbers",
+      "content": [
+        "Explanation of how quantum computers can potentially break encryption in the future through Shor's algorithm.",
+        "Discussion on the current threat posed by quantum computing and the need for agencies to transition to supercomputers.",
+        "Explanation of the general number field sieve algorithm and its role in modern cryptography.",
+        "Comparison of the computational power required for factoring large numbers on a conventional computer versus a quantum computer."
+      ],
+      "topics": ["Quantum Computing", "Cryptography", "Supercomputers"]
+    },
+    {
+      "title": "Section 4: Lattice Points and Message Decoding",
+      "content": [
+        "Introduction to the concept of lattices and their significance in cryptography.",
+        "Explanation of the process of decoding a message using a lattice point closest to the message point in a high-dimensional space.",
+        "Discussion on the challenges of decoding messages using lattices, especially with large numbers of dimensions.",
+        "Comparison of the computational power required for decoding messages using lattices on a conventional computer versus a quantum computer."
+      ],
+      "topics": ["Cryptography", "Lattices", "Quantum Computing"]
+    },
+    {
+      "title": "Section 5: Conclusion and Future Implications",
+      "content": [
+        "Summary of the key points discussed in the video.",
+        "Discussion on the future implications of quantum computing on cryptography and data security.",
+        "Explanation of the need for continued research and development in the field of quantum computing and its applications.",
+        "Call to action for viewers to stay informed and engaged in the ongoing debate surrounding quantum computing and its potential impact on society."
+      ],
+      "topics": ["Cryptography", "Quantum Computing", "Data Security"]
+    }
+  ],
+  "topics": ["Cryptography", "Quantum Computing", "Supercomputers", "Lattices"],
+  "generalTopics": [
+    {
+      "name": "Cryptography",
+      "complexity": 0.59
+    },
+    {
+      "name": "Quantum Computing",
+      "complexity": 0.80
+    },
+    {
+      "name": "Supercomputers",
+      "complexity": 0.70
+    }
+  ]
+}

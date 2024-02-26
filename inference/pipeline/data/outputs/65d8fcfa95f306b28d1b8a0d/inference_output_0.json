@@ -1,70 +1,70 @@
 {
-  "introduction": "Welcome to Architecture All Access: CPU Architecture Part Two, where we explore the fascinating world of CPUs and their impact on our lives. This video series is led by Boyd Phelps, an expert in CPU design with over 23 years of experience in the field. In this part, we dive deeper into the architecture of CPUs, focusing on speculative execution, program decoding, and the front and back ends of the pipeline. Join us as we unravel the complexities of CPU design and appreciate the art and science behind it.",
+  "introduction": "This video provides an in-depth look at the architecture of CPUs, focusing on the concepts of speculative execution and out-of-order execution. The speaker explains the history of CPUs and the evolution of computing abstraction layers. The video also covers the front-end and back-end of a CPU pipeline, including instruction decoding and super scalar execution.",
   "sections": [
     {
       "title": "Section 1: Introduction to CPU Architecture",
       "content": [
         "Explanation of CPU architecture and its role in modern computing.",
-        "Overview of the different components of a CPU, including the front and back ends of the pipeline.",
-        "Discussion of the importance of speculative execution and program decoding in CPU design.",
-        "Explanation of the concept of superscalar execution and out-of-order execution in CPU design."
+        "Discussion of the history of CPUs and the evolution of computing abstraction layers.",
+        "Introduction to the concepts of speculative execution and out-of-order execution.",
+        "Overview of the front-end and back-end of a CPU pipeline."
       ],
-      "topics": ["CPU Architecture Overview", "Components of a CPU", "Speculative Execution", "Program Decoding", "Superscalar Execution"]
+      "topics": ["CPU Architecture History", "Computing Abstraction Layers", "Speculative Execution", "Out-of-Order Execution"]
     },
     {
-      "title": "Section 2: Speculative Execution and Program Decoding",
+      "title": "Section 2: Speculative Execution",
       "content": [
-        "In-depth explanation of speculative execution and its role in CPU design.",
-        "Discussion of the prediction algorithm used in speculative execution.",
-        "Explanation of the difference between in-order and out-of-order execution in CPU design.",
-        "Examples of speculative execution and program decoding in action."
+        "Detailed explanation of speculative execution and its role in modern microprocessors.",
+        "Discussion of the prediction algorithm and its learning capabilities.",
+        "Explanation of the stumbling through process in speculative execution.",
+        "Comparison of in-order and out-of-order execution for better performance."
       ],
-      "topics": ["Speculative Execution", "Prediction Algorithm", "In-Order vs. Out-Order Execution", "Examples"]
+      "topics": ["Speculative Execution Algorithm", "Stumbling Through Process", "In-Order vs. Out-Of-Order Execution"]
     },
     {
-      "title": "Section 3: Front-End and Back-End of the Pipeline",
+      "title": "Section 3: Front-End of a CPU Pipeline",
       "content": [
-        "Overview of the front-end and back-end of the CPU pipeline.",
-        "Explanation of the role of the front-end in fetching and decoding instructions.",
-        "Discussion of the different stages in the back-end, including the arithmetic logic unit (ALU) and the memory hierarchy.",
-        "Examples of the front-end and back-end in action."
+        "Overview of the front-end of a CPU pipeline and its purpose.",
+        "Explanation of program order execution and its advantages.",
+        "Discussion of instruction scheduling and its impact on performance.",
+        "Comparison of different instruction scheduling techniques."
       ],
-      "topics": ["CPU Pipeline Overview", "Front-End of the Pipeline", "Back-End of the Pipeline", "ALU and Memory Hierarchy", "Examples"]
+      "topics": ["CPU Pipeline Front-End", "Program Order Execution", "Instruction Scheduling", "Instruction Scheduling Techniques"]
     },
     {
-      "title": "Section 4: Superscalar Execution and Out-of-Order Execution",
+      "title": "Section 4: Back-End of a CPU Pipeline",
       "content": [
-        "Explanation of superscalar execution and its benefits in CPU design.",
-        "Discussion of the different techniques used in superscalar execution, including instruction scheduling and resource sharing.",
-        "Explanation of out-of-order execution and its advantages in CPU design.",
-        "Examples of superscalar and out-of-order execution in action."
+        "Introduction to the back-end of a CPU pipeline and its role in efficient execution.",
+        "Explanation of super scalar execution and its advantages.",
+        "Discussion of out-of-order execution and its impact on performance.",
+        "Comparison of different out-of-order execution techniques."
       ],
-      "topics": ["Superscalar Execution", "Instruction Scheduling", "Resource Sharing", "Out-of-Order Execution", "Examples"]
+      "topics": ["CPU Pipeline Back-End", "Super Scalar Execution", "Out-of-Order Execution", "Out-of-Order Execution Techniques"]
     },
     {
-      "title": "Section 5: Conclusion and Future Directions",
+      "title": "Section 5: Conclusion and Future of CPU Architecture",
       "content": [
-        "Recap of the key concepts covered in the video.",
-        "Discussion of the future directions in CPU design, including new technologies and trends.",
-        "Explanation of the importance of collaboration between different disciplines in CPU design.",
-        "Final thoughts on the fascinating world of CPU architecture."
+        "Recap of the key points discussed in the video.",
+        "Discussion of the future of CPU architecture and its potential advancements.",
+        "Explanation of the creative endeavor involved in CPU design.",
+        "Final thoughts on the importance of CPU architecture in modern computing."
       ],
-      "topics": ["Key Concepts Recap", "Future Directions in CPU Design", "Collaboration between Disciplines", "Final Thoughts"]
+      "topics": ["CPU Architecture Future", "Creative Endeavor in CPU Design", "Importance of CPU Architecture"]
     }
   ],
-  "topics": ["CPU Architecture Overview", "Speculative Execution", "Program Decoding", "Front-End and Back-End of the Pipeline", "Superscalar Execution", "Out-of-Order Execution"],
+  "topics": ["CPU Architecture History", "Computing Abstraction Layers", "Speculative Execution", "Out-of-Order Execution", "CPU Pipeline Front-End", "CPU Pipeline Back-End", "CPU Architecture Future", "Creative Endeavor in CPU Design", "Importance of CPU Architecture"],
   "generalTopics": [
     {
       "name": "Computer Architecture",
-      "complexity": 0.59
+      "complexity": 0.61
     },
     {
-      "name": "Programming Languages and Software Development",
-      "complexity": 0.49
+      "name": "Out-of-Order Execution",
+      "complexity": 0.61
     },
     {
-      "name": "Database Systems and Management",
-      "complexity": 0.39
+      "name": "CPU Pipeline",
+      "complexity": 0.61
     }
   ]
 }

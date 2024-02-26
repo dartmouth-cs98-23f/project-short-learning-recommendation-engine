@@ -1,70 +1,76 @@
 {
-  "introduction": "Welcome to the Architecture All Access CPU Architecture Part One video. In this video, we will discuss the basics of CPU architecture and its future, focusing on the technologies involved in modern CPU design. We will explore the history of CPU architecture, the concepts of computing abstraction layers, and the role of the binary system in computer architecture. We will also cover the different types of instructions and their functions in the instruction set architecture (ISA). Stay tuned for part two of this series, where we will dive deeper into the microarchitecture and the instruction cycle of modern CPUs.",
+  "introduction": "Welcome to Architecture: All Access CPU Architecture Part One. In this video, we'll explore the central processing unit (CPU) and its role in modern computer architecture. We'll discuss the evolution of CPU design, the binary system, computing abstraction layers, and instruction set architectures (ISAs). We'll also introduce the concept of the microarchitecture and its importance in efficient high-performance computation and seamless software experiences.",
   "sections": [
     {
       "title": "Section 1: Introduction to CPU Architecture",
       "content": [
-        "The video begins with an overview of the history of digital computing, from the first general-purpose digital computer, Eniac, to the modern era of semiconductor-based transistors.",
-        "The concept of computing abstraction layers is introduced, explaining how logic gates and functional blocks are organized to perform various operations.",
-        "The binary system is explained, highlighting its efficiency and importance in computer architecture.",
-        "The video briefly touches on the different types of instructions and their functions in the ISA."
+        "Explanation of the central processing unit (CPU) and its role in modern computer architecture.",
+        "Overview of the evolution of CPU design and its impact on modern computing.",
+        "Introduction to the binary system and its use in computer architecture.",
+        "Discussion on the power of computing abstraction layers in modern CPU design."
       ],
-      "topics": ["History of Digital Computing", "Computing Abstraction Layers", "Binary System", "ISA Instructions"]
+      "topics": ["CPU Architecture", "Evolution of CPU Design", "Binary System", "Computing Abstraction Layers"]
     },
     {
-      "title": "Section 2: ISA Instructions",
+      "title": "Section 2: Instruction Set Architectures (ISAs)",
       "content": [
-        "The video delves into the details of ISA instructions, explaining their opcode and operand components, as well as additional bits of data that give the CPU more information.",
-        "The different types of instructions are discussed, including arithmetic, logical, memory, and flow control operations.",
-        "The video highlights the importance of ISA instructions in modern CPU design, as they are the linchpin between software and hardware.",
-        "The video also touches on the role of the ISA in streamlining operations for a particular arrangement of processing elements."
+        "Explanation of instruction set architectures (ISAs) and their role in modern CPU design.",
+        "Overview of the different types of ISAs and their functions.",
+        "Discussion on the importance of ISAs in efficient high-performance computation and seamless software experiences.",
+        "Explanation of the role of ISAs in microarchitecture design."
       ],
-      "topics": ["ISA Instructions", "Arithmetic Operations", "Logical Operations", "Memory Operations", "Flow Control"]
+      "topics": ["Instruction Set Architectures (ISAs)", "Types of ISAs", "Efficient High-Performance Computation", "Microarchitecture Design"]
     },
     {
-      "title": "Section 3: Branching",
+      "title": "Section 3: Microarchitecture and Instruction Cycle",
       "content": [
-        "The video explains the concept of branching in computer architecture, focusing on its role in decision making and conditional execution of instructions.",
-        "The different types of branching instructions are discussed, including jump, call, and return instructions.",
-        "The video highlights the importance of branching in modern CPU design, as it allows for efficient execution of complex programs.",
-        "The video also touches on the role of branching in optimizing CPU performance."
+        "Introduction to microarchitecture and its importance in modern CPU design.",
+        "Explanation of the instruction cycle and its components in modern CPU design.",
+        "Discussion on the role of microarchitecture in optimizing CPU performance.",
+        "Explanation of the different parts and functions of the front and back end of a CPU."
       ],
-      "topics": ["Branching", "Jump Instructions", "Call Instructions", "Return Instructions", "Branching Optimization"]
+      "topics": ["Microarchitecture", "Instruction Cycle", "Optimizing CPU Performance", "Front and Back End of a CPU"]
     },
     {
-      "title": "Section 4: Modern CPU Design",
+      "title": "Section 4: Caching and Memory Management",
       "content": [
-        "The video discusses the modern era of CPU design, focusing on the advancements in semiconductor technology and miniaturization of transistors.",
-        "The video highlights the importance of power consumption and thermal management in modern CPU design.",
-        "The video touches on the role of software in modern CPU design, including the use of virtualization and parallel computing.",
-        "The video also discusses the future of CPU design, including the potential for quantum computing and artificial intelligence acceleration."
+        "Explanation of caching and its role in modern CPU design.",
+        "Discussion on the different types of caching and their functions.",
+        "Overview of memory management and its importance in modern CPU design.",
+        "Explanation of the role of caching and memory management in microarchitecture design."
       ],
-      "topics": ["Modern CPU Design", "Semiconductor Technology", "Power Consumption", "Thermal Management", "Software in Modern CPU Design", "Future of CPU Design"]
+      "topics": ["Caching", "Types of Caching", "Memory Management", "Microarchitecture Design"]
     },
     {
-      "title": "Section 5: Conclusion",
+      "title": "Section 5: Conclusion and Future Developments",
       "content": [
-        "The video concludes with a summary of the key concepts covered in the series, highlighting the importance of understanding CPU architecture for modern software development.",
-        "The video touches on the role of computer architecture in shaping our lives and the future of technology.",
-        "The video encourages viewers to explore the field further and stay up-to-date with the latest developments in CPU architecture.",
-        "The video also provides resources for further learning, including links to relevant articles and books."
+        "Summary of the key concepts discussed in the video.",
+        "Explanation of the current state of CPU architecture and its future developments.",
+        "Discussion on the ongoing challenges and opportunities in modern CPU design.",
+        "Overview of the importance of continued research and innovation in CPU architecture."
       ],
-      "topics": ["Summary of Key Concepts", "Role of Computer Architecture in Shaping Our Lives", "Future of Technology", "Further Learning Resources"]
+      "topics": ["Summary of Key Concepts", "Current State of CPU Architecture", "Future Developments", "Importance of Continued Research and Innovation"]
     }
   ],
-  "topics": ["History of Digital Computing", "Computing Abstraction Layers", "Binary System", "ISA Instructions", "Branching", "Modern CPU Design", "Conclusion", "Summary of Key Concepts", "Role of Computer Architecture in Shaping Our Lives", "Future of Technology", "Further Learning Resources"],
+  "topics": [
+    "CPU Architecture",
+    "Instruction Set Architectures (ISAs)",
+    "Microarchitecture",
+    "Caching and Memory Management",
+    "Summary of Key Concepts"
+  ],
   "generalTopics": [
     {
       "name": "Computer Architecture",
-      "complexity": 0.69
+      "complexity": 0.61
     },
     {
-      "name": "ISA Instructions",
-      "complexity": 0.69
+      "name": "Instruction Set Architectures (ISAs)",
+      "complexity": 0.61
     },
     {
-      "name": "Modern CPU Design",
-      "complexity": 0.69
+      "name": "Microarchitecture",
+      "complexity": 0.61
     }
   ]
 }

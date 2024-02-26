@@ -1,0 +1,70 @@
+{
+  "introduction": "In this talk, the speaker discusses algorithmic game theory, a field that focuses on research at the intersection of computer science, game theory, and economic theory, particularly motivated by the internet. The speaker covers three different lines of work: government-regulated auctions, computational mechanism analysis, and a sabbatical project in Uganda for building a cell phone-based mobile market for agricultural commodities. The talk aims to provide a high-level overview of these topics and their importance in the field of algorithmic game theory.",
+  "sections": [
+    {
+      "title": "Section 1: Government-Regulated Auctions",
+      "content": [
+        "Explanation of government-regulated auctions as a mechanism for repacking TV stations on a national scale.",
+        "Description of the auction process, where the government lowers prices for participating stations until they can be accommodated back to their original positions.",
+        "Discussion of the willingness of other participants and the first-price auction mechanism.",
+        "Explanation of the practicality of the auction design and the use of powerful algorithms to analyze its performance."
+      ],
+      "topics": ["Auction Design", "Algorithmic Analysis", "National Repacking"]
+    },
+    {
+      "title": "Section 2: Computational Mechanism Analysis",
+      "content": [
+        "Introduction to computational mechanism analysis as a method for finding the exact equilibria of compactly represented games.",
+        "Explanation of the use of powerful techniques for finding exact equilibria, such as technology from maybe five years ago.",
+        "Discussion of the application of computational mechanism analysis in various contexts, such as finding the optimal reserve price parameter for sponsored search auctions.",
+        "Explanation of the importance of computational mechanism analysis in understanding the efficiency and revenue generation of different mechanisms."
+      ],
+      "topics": ["Game Theory", "Compact Representation", "Optimal Reserve Price"]
+    },
+    {
+      "title": "Section 3: Sabbatical Project in Uganda",
+      "content": [
+        "Presentation of a sabbatical project in Uganda for building a cell phone-based mobile market for agricultural commodities.",
+        "Description of the application of economic theory to development problems, such as allowing subsistence farmers to sell surplus produce to traders in the cities using a craigslist that runs over SMS.",
+        "Explanation of the importance of the project in addressing agricultural commodity markets and providing a platform for farmers to improve their livelihoods.",
+        "Discussion of the challenges and future directions for the project."
+      ],
+      "topics": ["Economic Theory in Development", "Mobile Market", "Farmers' Livelihoods"]
+    },
+    {
+      "title": "Section 4: Algorithmic Game Theory and the Internet",
+      "content": [
+        "Explanation of the role of algorithmic game theory in research at the interface of computer science, game theory, and economic theory, particularly motivated by the internet.",
+        "Discussion of the design of new mechanisms, analysis of existing mechanisms, and the study of specific examples, such as sponsored search auctions and computational mechanism analysis.",
+        "Explanation of the importance of algorithmic game theory in understanding the behavior of online markets and the development of efficient algorithms for game theory.",
+        "Presentation of recent work in the field and the potential for future research."
+      ],
+      "topics": ["Internet Motivation", "Design of New Mechanisms", "Efficient Algorithms"]
+    },
+    {
+      "title": "Section 5: Computational Complexity and Algorithmic Game Theory",
+      "content": [
+        "Explanation of the relationship between computational complexity and algorithmic game theory.",
+        "Discussion of the use of powerful algorithms to analyze the performance of mechanisms, such as in government-regulated auctions and computational mechanism analysis.",
+        "Explanation of the importance of computational complexity in understanding the efficiency and scalability of different mechanisms.",
+        "Presentation of recent work in the field and the potential for future research."
+      ],
+      "topics": ["Computational Complexity", "Performance Analysis", "Efficiency and Scalability"]
+    }
+  ],
+  "topics": ["Auction Design", "Game Theory", "Compact Representation", "Mobile Market", "Economic Theory in Development", "Internet Motivation", "Computational Complexity"],
+  "generalTopics": [
+    {
+      "name": "Algorithmic Game Theory",
+      "complexity": 0.61
+    },
+    {
+      "name": "Computational Mechanism Analysis",
+      "complexity": 0.61
+    },
+    {
+      "name": "Sabbatical Project in Uganda",
+      "complexity": 0.59
+    }
+  ]
+}

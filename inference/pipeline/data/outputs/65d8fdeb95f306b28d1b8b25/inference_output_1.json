@@ -1,0 +1,70 @@
+{
+  "introduction": "In this video, we will discuss the five different types of software testing that a software developer should be aware of, starting from unit tests at the base of the testing pyramid to manual tests at the top. We will cover the importance of each level and the specific tests that should be included to ensure the application is functioning correctly.",
+  "sections": [
+    {
+      "title": "Section 1: Unit Tests",
+      "content": [
+        "Unit tests are the foundation of any testing strategy.",
+        "They should cover all methods and functions in the code.",
+        "The number of unit tests depends on the testing strategy.",
+        "MCDC coverage is a useful tool for ensuring comprehensive unit testing."
+      ],
+      "topics": ["Unit Tests", "Testing Strategy", "MCDC Coverage"]
+    },
+    {
+      "title": "Section 2: Component Tests",
+      "content": [
+        "Component tests ensure the application behaves as expected without interference from other components.",
+        "Mocking the database is essential for component testing.",
+        "Happy path and unhappy path testing should be included.",
+        "Integration tests are a natural environment test that should be run as part of the build process."
+      ],
+      "topics": ["Component Tests", "Natural Environment Testing", "Integration Tests"]
+    },
+    {
+      "title": "Section 3: Integration Tests",
+      "content": [
+        "Integration tests test the interactions between components.",
+        "Calling APIs and checking database responses are common integration tests.",
+        "Other APIs and message queue calls should also be tested.",
+        "End-to-end tests can take a long time to run and typically aren't run on every build."
+      ],
+      "topics": ["Integration Tests", "API Calls", "Message Queue Calls"]
+    },
+    {
+      "title": "Section 4: End-to-End Tests",
+      "content": [
+        "End-to-end tests ensure the application meets business requirements.",
+        "Gherkin language is commonly used for these tests.",
+        "Performance testing, regression testing, and security testing can also be included.",
+        "These tests can take a long time to run and should be run overnight."
+      ],
+      "topics": ["End-to-End Tests", "Business Requirements", "Gherkin Language"]
+    },
+    {
+      "title": "Section 5: Manual Tests",
+      "content": [
+        "Manual tests are used when automation is not feasible or time-consuming.",
+        "These tests should be run by a dedicated tester.",
+        "Screenshots can be helpful for debugging failed tests.",
+        "A vicious cycle of not having enough time to test can be avoided by automating as much as possible."
+      ],
+      "topics": ["Manual Tests", "Dedicated Testers", "Screenshots"]
+    }
+  ],
+  "topics": ["Unit Tests", "Component Tests", "Integration Tests", "End-to-End Tests", "Manual Tests"],
+  "generalTopics": [
+    {
+      "name": "Testing Pyramid",
+      "complexity": 0.59
+    },
+    {
+      "name": "Software Engineering",
+      "complexity": 0.61
+    },
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.53
+    }
+  ]
+}

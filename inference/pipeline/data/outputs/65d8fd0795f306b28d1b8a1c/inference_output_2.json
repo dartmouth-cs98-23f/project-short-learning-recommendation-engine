@@ -1,0 +1,70 @@
+{
+  "introduction": "This video introduces the Computer Science 224 course, focusing on computer organizations and architectures. The course aims to provide a broad understanding of computers and their evolution, as well as the abstractions necessary for engineers to model and design computer systems. The instructor, Will Sawyer, will cover topics such as instruction set architecture, assembly language, machine language, and various programming languages.",
+  "sections": [
+    {
+      "title": "Section 1: Course Introduction and Overview",
+      "content": [
+        "The course covers an introduction to computer organizations and architectures.",
+        "The objectives of the course include understanding computer systems, their evolution, and the abstractions required for modeling and designing them.",
+        "The course will cover topics such as instruction set architecture, assembly language, machine language, and various programming languages.",
+        "The course is designed to help students develop a deep understanding of computer systems and their underlying principles."
+      ],
+      "topics": ["Course Introduction", "Course Overview", "Objectives", "Topics Covered"]
+    },
+    {
+      "title": "Section 2: Instruction Set Architecture (ISA)",
+      "content": [
+        "ISA is a crucial abstraction between hardware and software at the lowest level.",
+        "There are three basic instruction formats and six instruction categories in ISA.",
+        "ISA defines the view of storage, what data can be stored, and how it can be manipulated.",
+        "Understanding ISA is essential for engineers to model and design computer systems."
+      ],
+      "topics": ["ISA", "Instruction Formats", "Instruction Categories", "Storage View"]
+    },
+    {
+      "title": "Section 3: Assembly Language and Machine Language",
+      "content": [
+        "Assembly language is a low-level programming language used for writing machine code.",
+        "Machine language is the language used by computers to execute instructions.",
+        "Assembly language is easier to read and write than machine language but less portable.",
+        "Machine language is more portable but harder to read and write."
+      ],
+      "topics": ["Assembly Language", "Machine Language", "Portability"]
+    },
+    {
+      "title": "Section 4: Programming Languages and Software Development",
+      "content": [
+        "There are various programming languages used for software development.",
+        "Programming languages provide abstractions that simplify software development.",
+        "Programming languages have different strengths and weaknesses.",
+        "Understanding programming languages is essential for software development."
+      ],
+      "topics": ["Programming Languages", "Abstractions", "Strengths and Weaknesses", "Software Development"]
+    },
+    {
+      "title": "Section 5: Computer Architecture and Engineering",
+      "content": [
+        "Computer architecture and engineering are intertwined.",
+        "Computer architects design the hardware components of a computer system.",
+        "Computer engineers design the software components of a computer system.",
+        "Computer architecture and engineering work together to create efficient and reliable computer systems."
+      ],
+      "topics": ["Computer Architecture", "Computer Engineering", "Hardware Components", "Software Components"]
+    }
+  ],
+  "topics": ["Computer Organizations", "Architecture", "Abstractions", "Programming Languages", "Software Development", "ISA", "Instruction Formats", "Instruction Categories", "Storage View", "Assembly Language", "Machine Language", "Computer Architecture", "Computer Engineering"],
+  "generalTopics": [
+    {
+      "name": "Computer Architecture",
+      "complexity": 0.61
+    },
+    {
+      "name": "Programming Languages",
+      "complexity": 0.59
+    },
+    {
+      "name": "Software Development",
+      "complexity": 0.61
+    }
+  ]
+}

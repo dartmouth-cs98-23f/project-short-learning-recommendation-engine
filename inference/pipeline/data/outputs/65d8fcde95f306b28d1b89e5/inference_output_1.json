@@ -1,78 +1,71 @@
 {
-  "introduction": "Welcome to Architecture: All Access CPU Architecture Part One. In this video, we'll explore the basics of CPU architecture, its future, and the technologies involved in modern CPU design. We'll delve into the history of computers, the binary system, computing abstraction layers, instruction set architectures, and the importance of understanding CPU microarchitecture.",
+  "introduction": "Welcome to Architecture: All Access CPU Architecture Part One. This video series delves into the intricacies of computer architecture, focusing on the central processing unit (CPU) and its role in modern computing. The series covers the history of CPU design, the binary system, computing abstraction layers, and instruction set architectures (ISAs). In this first part, we explore the birth of digital computing, the four-step instruction cycle, and the evolution of ISAs.",
+  
   "sections": [
     {
       "title": "Section 1: Introduction to CPU Architecture",
       "content": [
-        "Explanation of CPU architecture and its role in modern computing.",
-        "Discussion on the evolution of CPU design, from vacuum tube-based computers to modern processors.",
-        "Overview of the key concepts and technologies involved in CPU architecture.",
-        "Introducing the importance of understanding CPU microarchitecture."
+        "Overview of computer architecture and its importance in modern computing.",
+        "Explanation of the central processing unit (CPU) and its role in the system.",
+        "Discussion on the history of CPU design, from the Eniac to modern processors.",
+        "Introduction to the four-step instruction cycle and its significance in CPU design."
       ],
-      "topics": ["CPU Architecture", "Computer Evolution", "Key Concepts and Technologies", "CPU Microarchitecture"]
+      "topics": ["CPU Architecture Overview", "Eniac and Early Computers", "Instruction Cycle", "Modern CPU Design"]
     },
     {
-      "title": "Section 2: The Binary System and Computing Abstraction Layers",
+      "title": "Section 2: The Binary System and Abstraction Layers",
       "content": [
-        "Explanation of the binary system and its use in computer representation.",
-        "Discussion on the concept of computing abstraction layers and their importance in modern CPU design.",
-        "Overview of logic gates and functional blocks in CPU design.",
-        "Explanation of instruction set architectures (ISAs) and their role in CPU microarchitecture."
+        "Explanation of the binary system and its use in digital computing.",
+        "Discussion on computing abstraction layers and their role in modern CPU design.",
+        "Introduction to functional blocks and their implementation in modern CPUs.",
+        "Explanation of instruction set architectures (ISAs) and their importance in CPU design."
       ],
-      "topics": ["Binary System", "Computing Abstraction Layers", "Logic Gates and Functional Blocks", "Instruction Set Architectures (ISAs)"]
+      "topics": ["Binary System", "Abstraction Layers", "Functional Blocks", "Instruction Set Architectures (ISAs)"]
     },
     {
-      "title": "Section 3: Modern CPU Design and Instruction Set Architectures (ISAs)",
+      "title": "Section 3: The Evolution of Instruction Set Architectures (ISAs)",
       "content": [
-        "In-depth discussion on modern CPU design and the role of ISAs in modern computing.",
-        "Explanation of the various types of ISAs and their functions.",
-        "Overview of the most common ISA instructions and their use in CPU microarchitecture.",
-        "Discussion on the challenges and opportunities in modern CPU design."
+        "Overview of the evolution of ISAs from the 4004 to modern processors.",
+        "Discussion on the role of ISAs in modern CPU design and their implementation.",
+        "Explanation of the power of ISAs in modern computing.",
+        "Introduction to the importance of ISAs in software development and compatibility."
       ],
-      "topics": ["Modern CPU Design", "Instruction Set Architectures (ISAs)", "ISA Instructions", "Challenges and Opportunities"]
+      "topics": ["ISA Evolution", "Modern ISAs", "ISA Implementation", "ISA Compatibility"]
     },
     {
-      "title": "Section 4: Branching and Control Flow in CPU Design",
+      "title": "Section 4: CPU Design and Abstraction",
       "content": [
-        "Explanation of branching and control flow in CPU design.",
-        "Overview of different types of branching and their use in CPU microarchitecture.",
-        "Discussion on the importance of efficient control flow in modern CPU design.",
-        "Explanation of the role of caching in CPU design and its impact on performance."
+        "Explanation of the role of abstraction in modern CPU design.",
+        "Discussion on the importance of abstraction in modern computing.",
+        "Introduction to the concept of abstraction in computer architecture.",
+        "Explanation of the role of abstraction in modern software development."
       ],
-      "topics": ["Branching and Control Flow", "Different Types of Branching", "Efficient Control Flow", "Caching in CPU Design"]
+      "topics": ["Abstraction in CPU Design", "Abstraction in Modern Computing", "Abstraction in Computer Architecture", "Abstraction in Software Development"]
     },
     {
       "title": "Section 5: Conclusion and Future of CPU Architecture",
       "content": [
-        "Summary of the key concepts and technologies covered in the video.",
-        "Discussion on the future of CPU architecture and its potential impact on modern computing.",
-        "Overview of the challenges and opportunities in modern CPU design.",
-        "Conclusion and next steps for further learning in CPU architecture."
+        "Summary of the key concepts covered in the series.",
+        "Discussion on the future of CPU architecture and its impact on modern computing.",
+        "Introduction to the importance of modern CPU design in various industries.",
+        "Explanation of the role of modern CPU design in shaping the future of computing."
       ],
-      "topics": ["Summary of Key Concepts", "Future of CPU Architecture", "Challenges and Opportunities", "Conclusion and Next Steps"]
+      "topics": ["Summary of Key Concepts", "Future of CPU Architecture", "Impact on Various Industries", "Shaping the Future of Computing"]
     }
   ],
-  "topics": [
-    "CPU Architecture",
-    "Binary System",
-    "Computing Abstraction Layers",
-    "Instruction Set Architectures (ISAs)",
-    "Branching and Control Flow",
-    "Modern CPU Design",
-    "Caching in CPU Design"
-  ],
+  "topics": ["CPU Architecture Overview", "Eniac and Early Computers", "Instruction Cycle", "Modern CPU Design", "Binary System", "Abstraction Layers", "Functional Blocks", "Instruction Set Architectures (ISAs)", "Abstraction in CPU Design", "Abstraction in Modern Computing", "Abstraction in Computer Architecture", "Abstraction in Software Development", "Summary of Key Concepts", "Future of CPU Architecture", "Impact on Various Industries", "Shaping the Future of Computing"],
   "generalTopics": [
     {
       "name": "Computer Architecture",
       "complexity": 0.61
     },
     {
-      "name": "Modern CPU Design",
-      "complexity": 0.60
+      "name": "Modern Computing",
+      "complexity": 0.61
     },
     {
-      "name": "Instruction Set Architectures (ISAs)",
-      "complexity": 0.60
+      "name": "ISA Evolution",
+      "complexity": 0.61
     }
   ]
 }
