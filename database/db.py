@@ -16,7 +16,7 @@ class DbClient:
         # load .env file
         load_dotenv()
 
-        print("PINECONE_API_KEY: ", os.getenv("PINECONE_API_KEY"))
+        # print("PINECONE_API_KEY: ", os.getenv("PINECONE_API_KEY"))
 
         # get PINECONE_API_KEY from .env file
         PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")

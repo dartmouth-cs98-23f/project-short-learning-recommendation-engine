@@ -54,7 +54,7 @@ class AlgoliaSearchClient:
         api_key = api_key or os.getenv("ALGOLIA_SEARCH_API_KEY")
         app_id = app_id or os.getenv("ALGOLIA_SEARCH_APP_ID")
         index_name = index_name or os.getenv("ALGOLIA_SEARCH_INDEX_NAME")
-        topics_index_name = os.getenv("ALGOLIA_TOPICS_INDEX_NAME")
+        topics_index_name = os.getenv("ALGOLIA_SEARCH_TOPICS_INDEX_NAME")
         
         self.client = SearchClient.create(app_id, api_key)
         self.index = self.client.init_index(index_name)
@@ -95,6 +95,23 @@ class AlgoliaSearchClient:
         """
         return self.index.save_object(record).wait().raw_responses
     
+    def add_records(self, records):
+        """
+            Add new records (bulk) to the Algolia index.
+            
+            Parameters
+            ----------
+            
+            record: dict
+                Collection of the record to be added.
+                
+            Returns
+            -------
+            
+            Response status
+        """
+        return self.index.save_objects(records).wait().raw_responses
+    
     def add_topic_record(self, record):
         """
             Add new record in the Algolia index.
@@ -112,7 +129,22 @@ class AlgoliaSearchClient:
         """
         return self.topics_index.save_object(record).wait().raw_responses
     
-    
+    def add_topic_records(self, records):
+        """
+            Add new records (bulk) to the Algolia index.
+            
+            Parameters
+            ----------
+            
+            record: dict
+                Collection of the record to be added.
+                
+            Returns
+            -------
+            
+            Response status
+        """
+        return self.topics_index.save_objects(records).wait().raw_responses
     
     def clear_index(self):
         """
