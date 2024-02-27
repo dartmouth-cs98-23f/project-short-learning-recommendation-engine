@@ -1,0 +1,45 @@
+# Let's assign multiplier weights to each topic based on their relevance to the role of a Frontend engineer.
+# The weights are subjective and based on general knowledge of what skills and knowledge areas are typically most relevant to frontend development.
+
+weights = {
+    "1": 0.5,  # Algorithms and Data Structures are foundational but not as central in day-to-day frontend work.
+    "2": 0.4,  # Sorting algorithms have limited direct application in frontend development.
+    "3": 0.3,  # Graph theory is more relevant for backend or systems design for a frontend engineer.
+    "4": 0.6,  # Data structures are crucial for efficient data handling on the client side.
+    "5": 0.3,  # Dynamic programming is more of a computer science concept with limited direct application in frontend.
+    "6": 0.4,  # Complexity analysis is useful for optimizing frontend performance but not a daily task.
+    "7": 0.5,  # AI and ML can be relevant for advanced frontend applications, but not a core skill.
+    "9": 0.3,  # Reinforcement learning is less relevant for frontend development.
+    "10": 0.5,  # Natural language processing can be relevant for search functionalities or chatbots in web apps.
+    "11": 0.5,  # Computer vision has growing relevance in web applications but isn't a core skill.
+    "12": 0.4,  # Deep learning is more backend-oriented but relevant for frontend engineers working on advanced projects.
+    "13": 0.2,  # Computer Architecture is not directly relevant to frontend development.
+    "14": 0.2,  # Processor design is largely irrelevant for frontend work.
+    "15": 0.3,  # Memory systems can influence performance optimization but are not a focus area.
+    "16": 0.3,  # Parallel computing concepts can be useful for web workers but not a core area.
+    "17": 0.2,  # Microarchitecture is not relevant for frontend developers.
+    "18": 0.2,  # Computer organization has little direct application to frontend development.
+    "19": 0.6,  # Data Science and Analytics are increasingly important for frontend for user analytics.
+    "20": 0.6,  # Statistical methods are important for analyzing user data in frontend applications.
+    "21": 0.5,  # Machine learning in analytics is useful for personalized user experiences.
+    "22": 0.8,  # Data visualization is a core skill for presenting data in user interfaces.
+    "23": 0.5,  # Big data processing has relevance for frontend engineers dealing with large datasets in web applications.
+    "24": 0.5,  # Predictive modeling can be relevant for frontend applications that adapt to user behavior.
+    "25": 0.4,  # Database Systems and Management knowledge is useful but more backend-oriented.
+    "26": 0.4,  # Relational databases knowledge helps with understanding data flow and structure.
+    "27": 0.4,  # NoSQL databases are relevant for frontend developers working with certain types of web apps.
+    "28": 0.4,  # SQL programming is less relevant directly but useful for understanding backend interactions.
+    "29": 0.4,  # Database design knowledge is useful but not a core skill for frontend.
+    "30": 0.3,  # Transaction management is more relevant for backend development.
+    "31": 0.7,  # Human-Computer Interaction (HCI) is crucial for designing user-friendly interfaces.
+    "32": 0.9,  # User interface design is a core part of frontend development.
+    "33": 0.9,  # User experience (UX) principles are central to frontend development.
+    "34": 0.7,  # Usability studies are important for testing and improving user interfaces.
+    "35": 0.7,  # Interaction design is key for creating engaging and effective web interfaces.
+    "36": 0.7,  # Accessible design is essential for creating inclusive web applications.
+    "37": 0.6,  # Programming Languages and Software Development are foundational to all coding work.
+    "38": 0.7,  # Object-oriented programming is widely used in frontend development.
+    "39": 0.6,  # Functional programming concepts are increasingly popular in frontend frameworks.
+    "40": 0.7,  # Software testing is crucial for developing reliable and bug-free frontend applications.
+    "41": 0.8,  # Web development frameworks are essential tools for modern frontend development.
+    "42": 0.7,  # Version control systems are fundamental for all software development,
