@@ -26,7 +26,7 @@ from pymongo import MongoClient
 
 import numpy as np
 
-db_client = DbClient()
+# db_client = DbClient()
 search_client = AlgoliaSearchClient(index_name="discite-search")
 
 # connect to MongoDB
@@ -46,6 +46,12 @@ added_records = 0
 
 topic_records = []
 transcript_records = []
+
+# load topicssemantic.json
+# with open("topicssemantic.json", "r") as f:
+#     topics = json.load(f)
+    
+# print(f"{topics = }")
 
 # iterate over collections in 'inference_summary' collection
 for inference_summary in db.inference_summary.find():
@@ -68,7 +74,7 @@ for inference_summary in db.inference_summary.find():
     
     search_data = {
         "objectID": f"{id}",                    # stringify
-        "topics": summary.get("topics", []),
+        "topics": [item["name"] for item in summary.get("generalTopics", []) ],
         "complexity": complexity,
         "uploader": video_metadata.get("uploader", ""),
     }
