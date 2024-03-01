@@ -52,6 +52,7 @@ transcript_records = []
 #     topics = json.load(f)
     
 # print(f"{topics = }")
+search_client.clear_objects()
 
 # iterate over collections in 'inference_summary' collection
 for inference_summary in db.inference_summary.find():
