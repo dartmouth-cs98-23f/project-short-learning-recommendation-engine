@@ -1,0 +1,76 @@
+{
+  "introduction": "This video provides a basic introduction to database management systems (DBMS). It covers the definition, functionalities, and properties of a database, as well as a simplified illustration of a database system environment and an example of a university database.",
+  "sections": [
+    {
+      "title": "Section 1: Basic Definitions",
+      "content": [
+        "A database is a collection of related data.",
+        "Data is any raw facts or unprocessed facts.",
+        "Metadata is the database definition or the complete description of a database.",
+        "DBMS is a system or a collection of programs that enables users to create and maintain the database."
+      ],
+      "topics": ["Database Definition", "Data Definition", "Metadata Definition", "DBMS Definition"]
+    },
+    {
+      "title": "Section 2: Functionalities",
+      "content": [
+        "Users can define the database.",
+        "Users can manipulate the database.",
+        "Users can share the database.",
+        "Changes in the real world are reflected in the database."
+      ],
+      "topics": ["Database Definition", "Data Definition", "Metadata Definition", "DBMS Definition"]
+    },
+    {
+      "title": "Section 3: Properties of a Database",
+      "content": [
+        "A database is logically coherent.",
+        "A database is designed and built for a specific purpose.",
+        "A database is a collection of data with inherent meaning.",
+        "A database is designed to store and manipulate data."
+      ],
+      "topics": ["Database Definition", "Data Definition", "Metadata Definition", "DBMS Definition"]
+    },
+    {
+      "title": "Section 4: Illustration of a Database System Environment",
+      "content": [
+        "Users write queries.",
+        "Queries are processed by the dbms software.",
+        "The dbms software accesses the store database.",
+        "The dbms software also accesses the metadata."
+      ],
+      "topics": ["Database Definition", "Data Definition", "Metadata Definition", "DBMS Definition"]
+    },
+    {
+      "title": "Section 5: Example of a University Database",
+      "content": [
+        "Three tables are created: student, course, and grade report.",
+        "Each record has specific data elements.",
+        "Data types are specified for each data element.",
+        "Constraints can be added to the data."
+      ],
+      "topics": ["Database Definition", "Data Definition", "Metadata Definition", "DBMS Definition"]
+    }
+  ],
+  "topics": [
+    "Database Management Systems",
+    "Database Definition",
+    "Data Definition",
+    "Metadata Definition",
+    "DBMS Definition"
+  ],
+  "generalTopics": [
+    {
+      "name": "Database Management Systems",
+      "complexity": 0.61
+    },
+    {
+      "name": "Data Definition",
+      "complexity": 0.61
+    },
+    {
+      "name": "Metadata Definition",
+      "complexity": 0.61
+    }
+  ]
+}

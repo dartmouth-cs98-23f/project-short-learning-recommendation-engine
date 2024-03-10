@@ -1,0 +1,70 @@
+{
+  "introduction": "This computer science video discusses the concept of defence in depth, a strategy used in computer security to prevent attacks. It covers the basics of cryptography, including symmetric encryption, key exchange, and asymmetric encryption. The video also explains the use of one-way functions and the difference between symmetric and asymmetric encryption. The video concludes by emphasizing the importance of cryptography in secure communication on the internet.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Defence in Depth",
+      "content": [
+        "Explanation of the concept of defence in depth in computer security.",
+        "Comparison of the concept to the design of castles and their security measures.",
+        "Discussion of the importance of multiple layers of security mechanisms in modern computer systems.",
+        "Overview of the video's focus on cryptography as a key component of defence in depth."
+      ],
+      "topics": ["Defence in Depth", "Computer Security", "Cryptography"]
+    },
+    {
+      "title": "Section 2: Basics of Cryptography",
+      "content": [
+        "Introduction to the term 'cryptography' and its roots in 'secret writing'.",
+        "Explanation of the process of encryption and decryption using ciphers.",
+        "Discussion of the use of permutation ciphers, such as the columnar transposition cipher.",
+        "Introduction to the Enigma machine and its role in World War II encryption."
+      ],
+      "topics": ["Cryptography", "Encryption and Decryption", "Permutation Ciphers"]
+    },
+    {
+      "title": "Section 3: Key Exchange and Symmetric Encryption",
+      "content": [
+        "Explanation of key exchange algorithms, such as Diffie-Hellman.",
+        "Discussion of one-way functions, such as modular exponentiation.",
+        "Introduction to symmetric encryption algorithms, such as AES.",
+        "Comparison of the security provided by symmetric and asymmetric encryption."
+      ],
+      "topics": ["Key Exchange", "Symmetric Encryption", "One-Way Functions"]
+    },
+    {
+      "title": "Section 4: Asymmetric Encryption and Public Key Cryptography",
+      "content": [
+        "Explanation of asymmetric encryption and its use of public and private keys.",
+        "Discussion of the RSA encryption algorithm and its inventors.",
+        "Introduction to digital signatures and their use in secure communication.",
+        "Comparison of the security provided by symmetric and asymmetric encryption."
+      ],
+      "topics": ["Asymmetric Encryption", "Public Key Cryptography", "Digital Signatures"]
+    },
+    {
+      "title": "Section 5: Cryptography in Modern Communication",
+      "content": [
+        "Explanation of how cryptography is used in secure internet communication.",
+        "Discussion of the use of SSL/TLS for secure web browsing.",
+        "Introduction to the concept of secure email and its use of encryption.",
+        "Comparison of the security provided by different encryption techniques."
+      ],
+      "topics": ["Modern Communication", "SSL/TLS", "Secure Email"]
+    }
+  ],
+  "topics": ["Defence in Depth", "Cryptography", "Key Exchange", "Asymmetric Encryption", "Digital Signatures"],
+  "generalTopics": [
+    {
+      "name": "Computer Security",
+      "complexity": 0.69
+    },
+    {
+      "name": "Cryptography",
+      "complexity": 0.79
+    },
+    {
+      "name": "Asymmetric Encryption",
+      "complexity": 0.69
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "introduction": "This video provides an overview of SQL Server and its various features and functionalities. It covers the different SQL Server editions, advantages of using SQL Server instances, and execution of queries and insert statements. The video also demonstrates how to find customers who have purchased items with a price greater than 250 rupees and those living in New York. Additionally, it explains how to order results by different columns and update customer information.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to SQL Server",
+      "content": [
+        "Explanation of SQL Server and its role in application development.",
+        "Discussion of SQL Server editions and their features.",
+        "Overview of SQL Server instances and their benefits.",
+        "Presentation of SQL Server's data compression and encryption features."
+      ],
+      "topics": ["SQL Server Overview", "SQL Server Editions", "SQL Server Instances", "Data Compression and Encryption"]
+    },
+    {
+      "title": "Section 2: Executing Queries and Insert Statements",
+      "content": [
+        "Explanation of SQL Server queries and their syntax.",
+        "Example of finding customers who have purchased items with a price greater than 250 rupees.",
+        "Demonstration of finding customers living in New York.",
+        "Presentation of order by and update statements."
+      ],
+      "topics": ["SQL Server Queries", "Insert Statements", "Order by and Update Statements"]
+    }
+  ],
+  "topics": ["SQL Server", "Queries", "Insert Statements", "Order by and Update Statements"],
+  "generalTopics": [
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.61
+    },
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": 0.61
+    },
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.61
+    }
+  ]
+}

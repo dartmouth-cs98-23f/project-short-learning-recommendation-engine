@@ -1,0 +1,1164 @@
+[Music]
+hello everybody and welcome back I'm
+going to apologize right now for this
+long introduction but what I'm trying to
+do in this video is teach you software
+design at a very fundamental level so
+I've heard you guys loud and clear a lot
+of you are sick of the beginner
+tutorials you're sick of people assuming
+you know nothing and you want to get
+more into the intermediate and advanced
+level you want to figure out how do I
+design software how do I look at some
+system some program and come up with
+some kind of plan some kind of
+implementation approach or strategy that
+is exactly what I'm gonna be showing you
+here so on the left hand side of my
+screen you can see that we have this
+kind of mock software system that I've
+just come up with this completely random
+example that I just wrote up before this
+video and what we're gonna be doing is
+looking at this block of text here which
+you can really think of as the client
+you can think of is this is what the
+client wants this is what the person
+you're writing code for wants how do you
+take simply these four paragraphs here
+and translate that into a fully
+functioning software system that is
+exactly what we're gonna be doing here
+so we're gonna look through this we're
+gonna go through the process of picking
+up valuable information and then what
+we're gonna do is actually draw up a
+class diagram that has what our plan is
+going to be when we start implementing
+this and that leads me to my next point
+which is planning when you want to get
+out of that intermediate or you want to
+move from kind of intermediate to more
+advanced you already know how to program
+the next step is thinking about
+designing programs designing software
+it's not enough to be good at
+programming what you need to do is
+actually be able to think about the kind
+of overarching architecture of the
+program that you're writing you want to
+think of okay how are these objects
+these classes this system going to
+interact with other things and how can I
+think about all of these things before I
+actually start writing code that is what
+we are going to be doing here so without
+further ado let's go ahead and get
+started I'm gonna read through this
+design problem here there will be a link
+in the description if you prefer to read
+through that yourself I would encourage
+all of you before I go ahead and start
+doing all of this for you and showing it
+to you that you think about how you
+might design something that looks like
+this and if you were immediate thought
+as I have no idea then while this video
+is going to be perfect for you because
+I'm going to
+show you exactly how we can do this so
+let's go ahead and read through this so
+the problem I've had here is a design
+problem tech with Tim school of
+programmers so I just kind of made this
+name up I thought it would make sense I
+assume a lot of you guys are students or
+you were at one point a student so I
+think this will relate to a lot of you
+and the idea here is that the tech with
+Tim school of programmers needs a new
+system to track all of its students
+professors and courses so think of this
+as some kind of like you know mini
+University or something and they want a
+system or a database or something like
+that where they can track all of this
+information maybe they can ask some type
+of questions about a student they can
+check grades they can see who's teaching
+a course that's what this really is so
+we'll go through the details here but it
+wants to keep track of what courses are
+offered who teaches each course and
+which students are enrolled in those
+courses it what else would like to be
+able to track the grades of each of its
+students across all courses for each
+student and professor the school needs
+to know their address phone number and H
+so immediately even in just this first
+paragraph this has told us a lot we need
+a system right because we're just
+thinking about what is it that we
+actually need from the system these are
+really the requirements that are being
+listed out here and this system needs to
+keep track of students it needs to keep
+track of professors and it needs to keep
+track of courses what else doesn't need
+to keep track of well for each person we
+need their address their phone number
+their name and their age so let's keep
+that in mind we'll read through the rest
+and then we'll distill all of this ok so
+each course has a maximum and minimum
+number of students that they can enroll
+if the minimum number of students is not
+reached then the course will be canceled
+each course is taught by at least one
+professor but sometimes may be taught by
+many so in some situations there may be
+more than one professor that teaches the
+course all right professors are salaried
+employees at the tech with Tim School of
+programmers and therefore we need to
+keep track of how much they make each
+year if a professor teaches more than
+four courses in a semester they are
+granted a one-time bonus of $20,000 all
+right
+students can both can be both local or
+international students and full or
+part-time a student is considered a
+part-time student if they are enrolled
+in less than one or two courses during
+any given semester so actually sorry
+this should say if they are enrolled in
+one or two courses during any given
+semester so essentially you are
+part-time if you were taking two or less
+courses in a semester the maximum amount
+of courses a student may be enrolled in
+at one time is six students receive
+grades from each course these grades are
+numeric in in the range of 0 to 100 any
+students that have an above-average
+grade across our have an average grade
+sorry across all enrolled courses that
+are lower than 60% is said to be on
+academic probation so I apologize for
+butchering butchering some of that
+speech there but the idea here is we
+have this system it's fairly simple we
+need to keep track of students
+professors those students grades across
+all of the courses there's a few small
+nuances within that but this should be
+something that we're gonna be able to
+design and hopefully in the next you
+know 30 45 minutes with me explaining
+everything that I'm doing
+so given this block right given this
+text what we need to do now is translate
+this into a program and the first thing
+that I want to do is start thinking
+about all the information that I
+actually need to track and all of the
+potential classes I'm going to have in
+my UML class diagram so we're gonna
+design this using an object-oriented
+style which is very common and what most
+people kind of do and this doesn't
+necessarily mean that what I'm gonna
+design here will be the final
+implementation that we actually program
+up this is just kind of the thing that
+is you know our design this is what we
+thought this is our plan it's totally
+fine if we decide to deviate from this
+later
+especially if other things come up but
+we should at least have some kind of
+idea of what we want to do then we can
+follow about when we actually start
+coding so what I'm gonna do is have two
+windows here one on the left one on the
+right and I'm going to start listing
+first of all all of the classes that I
+think we should actually have based on
+the information I've seen here and this
+is kind of the first step think about
+all of the objects you might have in a
+system all of the main components that
+might have information within them so
+the first thing I'm gonna list here is
+students right we will probably have a
+student class because we're gonna have
+multiple students the next thing we're
+probably gonna have is well professors
+now I don't know if that's how you spell
+professors but and we'll put that there
+so we're gonna have a student class and
+a professor class because we're gonna
+need both a student and a professor and
+this
+has different information contained in
+it than the professor dis awesome
+alright so student professor next thing
+we need is probably a course right we're
+gonna have different courses those are
+gonna be taught by professors and those
+are gonna be taught by students and
+after reading this are not taught by
+students or I students will be enrolled
+in that course and after reading this
+first paragraph that is kind of what
+I've grabbed from that so I've said okay
+we need to keep track of students
+professors and courses all we need to
+see what courses are offered who teaches
+the course who's enrolled keep track of
+grades okay so that mate brings me to
+grades so now I need to keep track of
+greats how am I gonna do that well we'll
+keep moving and then we'll think about
+how that's gonna happen so each course
+has a maximum and minimum number of
+students that can enroll if the minimum
+number of students has not reached in
+that course will be canceled each course
+is taught by at least one professor but
+sometimes taught by many okay so that
+doesn't give me any more classes I don't
+think right now at least and let's keep
+going professors are salaried employees
+at Tech with Tim schooled programmer and
+therefore we need to keep track of how
+much they make a year okay that doesn't
+says say anything to me students can be
+both local or international a student is
+considered a part-time student if
+they're enrolled there one or two
+courses during any given semester that
+the duh duh okay and now after reading
+all of this what I've determined is we
+have student we have professor we have
+course the only thing we're really
+missing here is a way of keeping track
+of who is enrolled in what course and
+what grades each of these students have
+so what I'm actually going to do is I'm
+going to make a class called enroll now
+this is gonna seem weird but what this
+enroll class is going to do for us and
+it will make more sense as we go through
+this video is essentially link our
+students and our courses so essentially
+we have a way to say ok this course is
+taught by this professor and this
+student is enrolled in this course the
+reason I want this enroll is because
+this enroll will essentially tell me if
+first of all if this course is active
+right you know is there enough people in
+this course that this student this
+enrollment was successful that's
+something we could keep track of on the
+in rural class and it can keep track of
+the grade that the student had in the
+course we need some way to keep track of
+all of the grades for all of the courses
+for all of the students and this enroll
+class could be a way to do this now keep
+in mind that I might change this as we
+go through and
+I start drawing things out it might make
+more sense to do something else but this
+is my initial idea and this is where I'm
+starting from this is my starting ground
+and this is what I'm thinking about
+right now and this is what you should
+think about when you are reading some
+requirements that look something like
+this
+okay so I've settled on these four
+classes for right now these could change
+again I'm trying to walk you through the
+process as fully as we can so you really
+understand and these are the four
+classes that I think I'm gonna need
+student-professor course and this enroll
+one is gonna link those courses and
+those students together and store some
+information and it may be like the date
+we enrolled in the course something like
+that okay so now that I have that what
+I'm gonna do is I'm gonna spread these
+out and I'm gonna start listing
+information that I need to keep track of
+for students professors and so on so now
+what I'm gonna do is start looking at
+what information do I need for students
+so down here it says a student can be
+both local or international full or
+part-time so the first thing I'm gonna
+say is we'll say local and that will be
+a boolean value that's either gonna be
+true or false is this student local or
+are they not and in fact what I actually
+might make this is just international
+international I think that's right and
+this will just tell me if the students
+international or not and that will tell
+me if they're local right because it's a
+true or false value so we'll keep that
+as an attribute of my student class
+that's some type of information we're
+gonna need to know and then it says the
+student can either be full or part-time
+okay so we could consider that to be an
+attribute of the student whether they're
+full or part-time but how is that
+attribute derived that is derived based
+on the number of courses that they're
+enrolled in during a given semester so
+instead of making this an attribute what
+I'm actually gonna do is say well
+something that I need on my student is
+gonna be a method and the method is
+gonna say is part-time and this will
+simply return a boolean and what this
+will do is it will look at this student
+and tell me how many courses are
+enrolled in and if it is greater than
+the threshold of the part-time student
+then they will not be a part-time
+student right that is what this method
+will do so things that we start thinking
+about is how are we gonna implement this
+kind of attribute well we're gonna do
+that using a method so we can determine
+if a student is full or part-time okay
+so the maximum an amount
+courses a student may be enrolled in is
+six students receive grades okay and
+then what else does it say here if the
+average grade is lower than 60% they're
+on academic probation
+so this one is derived from their grades
+so again since it is a derived attribute
+it's not simply just something that's
+going to sit there what I need to do is
+have a method that tells me hey are they
+on probation so we'll say is on
+probation like that alright so we'll put
+that there and then this will be boolean
+and what these methods are intending to
+do is to look at attributes on the
+student evaluate them and then give us
+an answer to give us these kind of
+attitudes right are they part-time or
+are they on probation okay so now that
+we have that let's move to Professor
+don't worry there's a lot more stuff
+that I'm gonna add in here but I want to
+talk about that later so professor what
+do we need here well a professor we need
+to keep track of their salaries so first
+thing we'll say is salary and this will
+be a number right we're an int or
+whatever you want to call it well
+actually probably would be a float
+because they could have a decimal point
+salary so we'll put a salad right there
+what else do we need for a professor
+well there's nothing else on here that
+it really says we need other than their
+age name phone number etc which we'll
+get to in a second so for that I'm gonna
+leave it there now of course what do we
+need for a course well it doesn't
+specifically say there's anything we
+really need for a course but what I'm
+gonna have for a course of course
+is the name I'm gonna have the course
+code because that's something that we're
+probably gonna need the name will be a
+string the code will be a string as well
+actually and then what else do we need
+we need be minimum and maximum amount of
+students in the course we'll save min
+students that'll be an int and we'll say
+max students and that will be an int and
+then what I'm actually gonna have is
+well we need to determine is this course
+active or is it canceled so is this
+going on do we have enough students in
+this course for it to happen so what are
+we gonna do we're gonna add a method
+that says is active or will say is
+canceled just because that goes more
+with the requirements that we have there
+so we'll say is canceled boolean and
+what this will do is look at all of the
+students enrolled in this course and
+tell us if there is enough so
+it's canceled or it's not canceled right
+I hope that makes sense okay so we have
+student we have professor we have course
+another thing that I'm thinking we might
+want to do is have something like the
+start time for this course it doesn't
+necessarily say that we need that but if
+I'm thinking about my program in the
+future it probably makes sense to have
+something like start time right like
+when did this course start what you
+might want to keep track of it so we'll
+say start and we'll say that's a date
+and then while we're at that we might as
+well put an end as well and we'll say
+that that's gonna be a date - so
+hopefully you get the idea that what I'm
+doing is just going through and picking
+out all the necessary information and
+just listing it out so I can see it
+before I actually start drawing anything
+so we have student professor course and
+then we have enroll okay so enroll what
+do I need for enroll well this is gonna
+keep track of how my students are
+enrolled in courses so for enroll what
+I'm gonna do is I'm simply gonna say
+date so we'll literally say the date is
+gonna be a date so this is when this
+happened so when did they enroll we're
+gonna need what students enrolled what
+course enrolled and then we're also
+going to need B grade that the student
+got in that course this for me is pretty
+much gonna keep track of hey this
+student is enrolled in this course and
+this is the grade that they received in
+this course and that will be a float and
+then anything else that we might want to
+keep track of that's specific between a
+student and a course but doesn't make
+sense to go in just the student or just
+the course would be information we put
+in enroll and for now I don't think of
+anything so I'm gonna leave it like this
+and this is kind of the core information
+I need except for this address phone
+number name and age now the reason I've
+left this out is because these are gonna
+require some more classes notice that
+for both a student and a professor we
+have some shared functionality here we
+have some shared attributes we have the
+address the phone number the name and
+the age so what I'm actually going to do
+is I'm gonna make another class here I'm
+gonna call it person and what this
+person class is gonna represent is a
+base class for both the student and the
+professor so the student the professor
+have some shared things that we want to
+know about them so let's put that into a
+base class that I'm gonna call person so
+inside of person what I'm gonna do here
+is
+say okay what do we need well we need
+the name so actually we're gonna have to
+say first name oops if we could type
+here so first name that'll be a string
+we're gonna say last name that will be a
+string as well what else do we need we
+need the age of this person so do I do
+age int like that I'm gonna ask you as a
+question here I can't really because
+it's not an interactive environment but
+think about if this age makes sense to
+put here does it make sense to have an
+attribute called age because we want to
+keep track of the age right it says we
+need the age in this person class so
+think about it for a second okay I'm
+assuming you've thought about it and I'm
+gonna tell you right now that it makes
+no sense to put an attribute called age
+which is an int the reason you never put
+an attribute called age on something is
+because an age changes and guess what an
+age is derived from your birthdate so on
+the current date versus your birth date
+that determines your age so rather than
+keeping track of the age we want to keep
+track of the date of birth which will
+tell us the age right we can very easily
+find the age if we have the date of
+birth so this is gonna be a date so that
+was a little bit of a trick I put in
+there just to see if I could fool you
+guys okay next thing we need is a phone
+number so let's say phone number if we
+can do this like this so phone number
+and that is gonna be a what is this I
+guess we could call it I'm gonna call it
+a string just because we can have like
+the plus one - yada yada yada
+there might be a specific attribute we
+could use for that but a string it's
+fine I think you guys get that all right
+now we need B address so what is it in
+address comprised of though is my
+question here these address really an
+attribute that I can put can I just put
+a dress like that well the answer is yes
+you can do that but what I usually like
+to do just to make things easier for
+myself in the future is make a separate
+class called
+address and it stores all of the
+information in separate fields about the
+address so this way I can very easily
+grab information from the address I can
+sort by people that are living in a
+certain area it just makes things a lot
+easier especially if you're thinking
+about a database structure in the future
+if you have a bunch of attributes that
+could be squished in one separate out
+into individual fields
+let's look at this address what is an
+address well we need a country we need
+kind of a state or a province I'll just
+call it a state but like it could be a
+province that might make more sense
+we're going to need a street
+we'll need a street number so we could
+call this the street address and that
+could be one thanks we need country
+states we're going to need a city we
+need the street address and then we need
+a postal code or zip code or something
+like that so let's just go postal code
+now these country this is gonna be a
+string almost all of these are gonna be
+strings actually this is gonna be a
+string this is gonna be a string I think
+almost all of these are gonna be strings
+and the postal code will be a string as
+well so those string and street address
+needs to be one word okay so now we have
+information relate to an address if we
+wanted to add some more information
+about address like maybe you wanted to
+get really specific and go long gets you
+latitude something like that you could
+technically add that to this class and
+now what we kind of have and let me go
+over here and make this a bit bigger is
+all of the information that we needed
+out of this problem right here I've kind
+of taken it out I've read through
+everything we needed to and I've said
+the information I need to store is the
+following I need an address that has all
+of this I need a person that has all
+that I need a student a professor a
+course and in enroll class that stores
+the date and the grid awesome now the
+next thing to consider is what we call
+associations so I've listed all the
+attributes specific to these classes but
+these classes can associate with each
+other in fact you know the address is
+going to belong to a person right each
+person needs to have an address a
+student is going to be enrolled in a
+course through this enroll class a
+professor is going to be teaching a
+course so how do we go about and do that
+well this is where we use associations
+now associations are different from
+attributes they are a way of linking two
+objects together and the next part of
+what we're gonna do here is pretty much
+determine how we want to associate all
+of these objects and once we draw that
+out and we have the association's don't
+be focused on the implementation in code
+just be focused on how these objects
+interact with each other because if we
+can understand
+and that we can very easily implement
+that into code later on using whatever
+programming language we want and that's
+why you'll notice you know I'm not using
+STR like I've normally would in Python
+I'm just writing things that are
+descriptive enough that anybody in any
+programming language could look at this
+and translate this into some kind of
+working implementation so let's keep
+this on the side of our screen here I'll
+make it a little bit smaller and I'm
+gonna pop up actually one note and start
+doing some drawing so let me grab my
+drawing tab and I'll be right back
+alright so I've shut off my camera here
+just to give us the most amount of
+screen real estate as possible and what
+I'm gonna do is I'm gonna start I'm
+gonna start by apologizing for my
+drawing skills because they are very
+poor but I'm actually going to draw what
+we've just kind of done on the left hand
+side of the screen here and put it into
+a visual picture so we can actually see
+what's going on so I want to draw all of
+these classes and I'll tell you what all
+of the things that I'm drawing mean and
+then what we'll do is actually link them
+up just using a lines so essentially I'm
+gonna draw all these little boxes that
+look like this you know I'm gonna write
+here this is a person and then I'll put
+in all of the associations for that
+person then we'll have another class
+over here and what a line like this
+means is an association so essentially
+this person interacts with this other
+class and what we can do is put little
+numbers and symbols on this Association
+to tell us what this Association is is
+this a one-to-one Association which
+means one class links to one other class
+or does this mean this one class could
+look to many other classes is there a
+limitation on the amount it can link to
+well that's what we're gonna put here
+and the idea is that you can write two
+numbers so if you write one number what
+this states is that is the amount of
+associations so when I write one this is
+saying that this person class one of it
+can link to many which is what the
+Asterix stands for of whatever this
+class over here might be if I write
+something like 1 dot dot - so say let's
+replace this with 1 dot dot - what this
+means is that we could have one or two
+person classes if I write one dot dot
+asterisks this says the minimum we can
+have is 1 the maximum we can have is
+infinite if I write just in asterisks
+which is just my crappy star like this
+this means we can have as many or as
+little of whatever is on this side as we
+want so I hope that makes sense it will
+make more sense as we go through this
+but I just wanted to give you a little
+definition for we go too far all right
+so let's delete that let's get back into
+this so the first class and I'm actually
+gonna draw is my person class now
+remember my person class is gonna be a
+base class so let me just up this pen
+size a little bit to make a little bit
+easier so let's draw a class like this
+I'm gonna try very hard to keep this
+neat enough that you can read but it is
+hard to do with the drawing tablet so
+we're gonna say that's person and what
+does a person have on it first name last
+name date of birth phone number now just
+to keep this video shorter I'm gonna
+avoid writing the actual type of what
+these are so I'm not gonna write string
+and all that I'm just gonna write the
+actual name of the attribute so we'll
+say here this is first name okay so what
+I do a little - like this what I'm
+saying is this is an attribute so I'm
+essentially saying this is some piece of
+information that is contained within
+this class so I'm saying first name I'm
+gonna say a last name like that what
+else do we need date of birth okay
+date of birth next we need a phone
+number okay so let's go there all right
+I don't think that's too bad thank you
+guys can kind of read that so there we
+go person first name last name date of
+birth the phone number
+okay now this a member is the base class
+for my student and for my professor so
+in order to illustrate that what I'm
+gonna do is I'm gonna draw two more
+classes underneath this and I'm gonna
+show you kind of a fancy arrow that we
+can use to illustrate that this is a
+base class and this is a generalization
+so I'm going to draw my two classes here
+this is gonna be one for my student so
+I'll say actually student will go on the
+other side sorry actually maybe not
+let's just leave student here student
+and this will be professor like that
+okay so we have our student and we have
+our professor now let's write what we
+need inside of here so for our professor
+we just had the salary and for our
+students we had what is it international
+okay so international
+and then we had two methods on our
+student now usually you do a method
+using a plus sign what this says
+essentially is this is a public method
+everyone else can see this there might
+be more methods on the student or on the
+professor in the future but if they are
+not public we don't write them down
+because we're just interested in what
+you know all of these classes how
+they're gonna interact together and what
+they can see on each other so we have
+student and we'll say is part time put
+some brackets and we'll say on probation
+I'm just gonna write probation just to
+make it a little bit shorter will write
+probation and we'll have two brackets
+again if you can't read any of this look
+on the side that's why I typed it out
+now to illustrate that these are
+actually going to be a generalization so
+that this is the base class for those
+two other classes what you do is you
+simply do an arrow like this that is not
+filled in and you just do a little line
+to these two classes so what this says
+essentially is that this student and
+this professor are derived from this
+person class so they are children class
+of this base class person now what this
+means is essentially that they have all
+of these same attributes and
+functionality as this person class so
+any associations that are made between
+person and some other class will apply
+to both of these classes because they
+are a generalization of this class
+they're just a specific instance of a
+person right I hope that makes sense so
+let's say we had a teaching assistant
+then all we would do is just go like
+this and now all we have to add is
+anything specific to the teaching
+assistant if we want them to be a
+derived classroom person so that is as
+easy as that is and this is a very
+common thing when you're designing
+systems to have a base class that
+represents kind of the core
+functionality and then have specific
+instances or specific classes underneath
+that that have the additional
+functionality you need so we have
+persons student professor what do we
+need next we need an address now who
+hasn't addressed well a student and a
+professor both have an address so what
+I'm gonna do up here is I'm gonna draw
+my address like this and just butcher
+all of this once again okay so address
+like that and let's go here and let's
+write what we need for the address
+we have a country okay we have a city we
+have a state which I forgot and then I'm
+just gonna put dot dot dot you get the
+point we have a street address and a
+postal code I don't think I need to go
+through all of it I think you guys get
+the point now what I'm gonna do is
+actually draw our first Association so
+what I just did down here is called a
+generalization now that means that these
+things are not associated they are
+actually like the same thing right like
+a student is a person and a professor is
+a person so that is why they are called
+a generalization when we do this kind of
+arrow like that now what in association
+is is a solid line between two classes
+that says hey every time I make one of
+these classes I can potentially have
+this one linked up to it in some way and
+now what I do is I define the
+multiplicity is what it's called of my
+association so essentially how many of
+these things can be associated together
+well it turns out that one person can
+actually have multiple addresses right
+that is very possible that they have
+multiple addresses so what I'm gonna do
+is I'm gonna say one person here because
+an address can only belong to one person
+will say one address is unique to one
+person although in theory that's not
+correct you could have brothers or
+something that have the same address but
+for our system we're going to assume
+that this address object maybe there'll
+be one that's exactly the same that's
+totally fine but they will only belong
+to one person they will not be attached
+to two different people in other words
+we won't have person one here in person
+to here pointing to the same address
+that won't ever happen they will be two
+unique objects so we're gonna say one
+and then here I'm actually going to say
+asterisks and what I'm gonna do is say
+one dot dot which essentially says that
+one person must have at least one
+address but they can have as many as
+they want so the lower bound is one the
+upper bound is infinite which means this
+person could have infinite amount of
+addresses we don't know where they're
+gonna live or how many addresses they
+have and they have to have at least one
+or they have to at least tell us about
+one for us to enter them into the system
+so when you see something like this this
+says that as soon as I make a person I
+must create an address that is
+associated with that person and
+same thing over here on address this
+says whenever I make an address I must
+have a person that is associated with
+that address as easy as it is that is
+the first Association we need and in
+fact we're actually getting close to
+finish this program so we have our
+person our student our professor and our
+address the next thing we need is a
+course now I'm running out of screen
+real estate a bit so I'm gonna just do
+the course over here which is kind of on
+the edge of my drawing tablet so it's
+hard to write accurately but will write
+course and then what do we have for a
+course well we actually had a bunch I'll
+just write a few of this straightforward
+ones here so we had name we had code we
+had min so I'm just gonna short these
+min max and then I'll just write we had
+a start and end I'll just write the
+method is canceled for now but again you
+guys get the point that is the
+information we would have had so is
+cancelled with two brackets okay now
+what do we need well guess what we have
+professors that are teaching courses so
+we need to have an association between
+our professor and our course so that we
+know that this professor is teaching
+this course right so what I'm gonna do
+is simply draw a line from professor to
+course I'm gonna say course we'll put
+one like that and then on professor how
+many professors teach a course well it
+said at least one professor teaches a
+course but sometimes there may be many
+so I'm gonna write one dot dot asterisks
+like that which essentially says one
+course is associated with one or many
+professors and every time we make a
+professor we must have it associated
+with a course wait I don't know if that
+sounds correct whenever we have a
+professor it must be teaching a course
+that's not necessarily true
+we could have a professor that doesn't
+teach a course that is a possibility of
+our system so what I'm gonna do now is
+on course go zero dot dot one which
+essentially says we can have one
+professor teaching this course but we
+also might not have any professor sorry
+all the way around a professor might
+teach a course but they also might not
+teach a course and in fact now that I'm
+looking at it does only one course make
+sense
+because what this
+then is a professor can only teach at
+most one course no that's actually wrong
+so what I need to do is change this over
+here now to be a star because it could
+have a professor could be teaching a
+course it could be teaching many courses
+it might not be teaching any at all so
+let's erase this and let's change this
+to a star now I know that just was like
+a big you know run around in circles and
+me doing everything except the right
+answer but the point here is that that's
+what you want to think about I'm
+bringing you through these scenarios so
+that you can understand how you approach
+a problem like this and how you think
+about those kind of edge cases when you
+make your associations on here you want
+to be very careful to design for
+flexibility if you think the system in
+the future might do what you're limiting
+it to be able to do maybe don't limit it
+to do that it's better to have a system
+that is more flexible than to be super
+robust and super defined to the
+requirements because the requirements do
+change and part of designing is
+designing for scalability and
+flexibility all right so the next class
+we have is enroll and this actually
+happens to be the last class but this is
+actually one of the more complicated
+ones and this is what I'm gonna call an
+association class so I'm gonna draw it
+over here and I'm gonna call this and
+roll so let's say enroll like that and
+inside of here we're gonna have a date
+and what else are we gonna have we're
+gonna have the grade the student
+received from the course okay so this is
+gonna be what we call an association
+class now an association class is a
+little bit different than a regular
+class because what it does is link to
+other classes together which means this
+never exists on its own it always has an
+association between a course and a
+student and the whole point of it is to
+link a course and a student together so
+we draw it a little bit differently than
+we draw most regular classes so what I'm
+gonna do here is draw an association
+between my student and my course it's
+getting a little bit messy now I
+apologize for that but we do have an
+association now between the student and
+the course and let's pick the
+multiplicity and then I will talk about
+how enroll actually operates here so the
+multiplicity could be that a student can
+be enroll enrolled in
+multiple courses and a course can have
+multiple students in it so what I'm
+gonna say here is first of all on this
+side we're gonna put many because a
+course can have many students enrolled
+in it it might have zero
+I might have infinite right it might
+have maximum then what we need to have
+next is okay well how many courses can a
+student be enrolled in well they can be
+enrolled in zero so they could
+technically be enrolled in zero courses
+let me redraw that because I kind of
+butchered it and a maximum is six so the
+maximum amount of courses that can be
+enrolled in is six so essentially what
+I've said is that the lower bound is
+zero the maximum is six which means that
+can be in any range in between that and
+based on the amount of courses they're
+enrolled in well that is gonna tell us
+if they are part-time or if they are
+full-time right that is how we're gonna
+drive that now this is where the
+Association class comes in so what I'm
+actually gonna do is draw a dotted line
+and I'll redraw that again just to make
+it more clear actually over here between
+this Association and the in rural class
+what this says is this Association is
+really enroll hitting course and student
+hitting enroll right so this is just
+like this enroll class has an
+association between course and students
+and we use that to be able to determine
+what courses a student is enrolled in
+that that is the idea behind this
+intermediate class it stores an
+association with course it stores an
+association with student and then it
+also stores some attributes on it that
+are very useful for example date this
+tells us that whenever we create an
+association between student and course
+we must pick a date that this happened
+at so we know when the student enrolled
+in this course right that makes a lot of
+sense and you can now determine say if a
+student was late to enroll in the course
+because on course if you look over here
+we have the start and the end date
+left-hand side of my screen and we can
+compare the date that they enrolled in
+to the start and the end then we have
+great well that tells us what grade they
+got in this enrolled course and since
+there's an association between course
+and enroll and student and enroll what
+we can actually have is we can have the
+professor update the grade of a student
+so think about how this works right if I
+need to update the grade of a student
+well the professor has an association to
+course the course has an association to
+enroll and enroll has an association to
+all of the students right so in this way
+what I can do is I can have the
+professor look at the course look at all
+of the students enrolled and then go
+into this enroll class and modify the
+grade this way the professor does not
+actually get to look at any of the
+personal information of the student to
+upgrade it it's great all it has to do
+is look at this enroll Association class
+and say hey all I need to do here is
+change the grade and then that will
+automatically update for the course and
+for the student and what's great about
+this is well since every single student
+is associated to the course with an
+enroll class if I want it to do
+something like get the average grade of
+the course all I would do is look at all
+the associations between student and one
+specific course look at that enroll
+class and then grab all of those grades
+so this is the kind of system that I
+designed and that we were trying to
+design from the beginning something that
+is flexible and that can do a bunch of
+operations that may not have been
+defined yet but that we probably want to
+do in the future so that is pretty much
+it for this design I need to erase this
+one line here I don't think that was
+supposed to be there but this is our
+finalized design and I apologize that is
+super messy but the point of this video
+is not to be like you know the most
+perfect the most robust it's to teach
+you the process of looking at a software
+system and designing it from the ground
+up starting from scratch extracting the
+necessary information translating that
+information and then drawing a somewhat
+you know kind of plan drawing a design
+that we can actually go ahead now and
+implement because if you think about it
+now all you have to do if you want to
+make this system is look at this and
+start implementing what I've defined and
+if you actually look at this as not very
+complicated right we've broken
+everything down into classes which you
+can write we've broken it down into
+methods and we've broken it down into
+attributes so you don't even really have
+to think now when you go about
+programming this you just have to look
+at this design and follow it and if
+there's something that needs to be
+changed
+make that change accordingly right if we
+want to implement person all I do is
+make a class called person add a
+constructor that has these four
+arguments and there we go I've made
+person
+all right I want student and professor
+let's have them extend the person class
+let's go okay add an international
+attribute add these two methods is
+part-time is on probation professor
+let's add a salary there we go Oh
+associations okay great let's handle
+these associations let's make a private
+field in each of these that stores the
+association between address or something
+like that right and that is as easy as
+it is to do now the last thing I will
+say here just because some people might
+be confused on how these associations
+are implemented when you have a
+one-to-one Association you can think of
+that just like another attribute so let
+me actually I don't want to erase all of
+this but let me just do something like
+up here in this little area essentially
+let's say person has a one-to-one
+association with address so imagine that
+this is actually one what that means is
+on the person class we have another
+attribute called address I don't need to
+write it because the association's infer
+that and what this is really equal to is
+an address object right it's equal to
+some instance of address and then that
+way if we want to access the address of
+a person I just call person dot address
+now this is the exact same thing on
+address so let me erase this if this is
+one-to-one then on side of address right
+this has an attribute that says person
+so this just says person right and then
+it points to a person object and there
+you go that way the address if it wanted
+to see the person it could the person
+wants to see the address they can write
+that is how a one-to-one Association
+happens now sometimes you might not
+store it on the address side it really
+depends but now let's say we have this
+one-to-many right then what we would do
+is on here we'd have another attribute
+it would be called addresses like that
+and it would just be equal to a list
+that stored all of the addresses inside
+of it that's as easy as it is and that
+is what I'm talking about when I say
+Association it's just a link between
+these two objects you implement that
+link however you want but usually it's
+done just with another attribute
+or with something in the actual class
+itself and that is how you can link
+these different things together so with
+that being said that has been this video
+I know this is not you know the most I
+don't want to say educational but this
+is really just the way of teaching you
+about how to think about this it's just
+the way of training your brain to look
+at information break it down and throw
+it into some kind of design that you can
+then go ahead and implement so like I
+said at the beginning if you want to see
+the code for this leave a like subscribe
+to the channel comment spam me let me
+know and I will try my best to make a
+video where we implement this exact
+design so that being said I hope you
+enjoyed if you did leave it like
+subscribe and I will see you in the next
+YouTube video

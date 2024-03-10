@@ -1,0 +1,1257 @@
+hello everyone and welcome to BrainPOP
+webinar brain talk webinar is an online
+platform where scientists and
+researchers have the opportunity to
+share and present the research world
+that is related to machine learning and
+computational science
+student at the University of Oslo and it
+gives me great pleasure to culture this
+webinar with sajjad Ahmadi from the
+University of Oslo and my magnify from a
+similar research laboratory
+uh today we have an interesting
+presentation after the presentation we
+will have a question and answer session
+and audiences can post their questions
+on YouTube live stream
+um today's presentation is given by
+Walter rutila Walter udella is currently
+in his second year of pursuing a PhD in
+computer science at University of
+Helsinki his research focuses on
+exploring the potential of quantum
+Computing in data management and
+database optimization he is also
+interested in applying category Theory
+to establish a link between Quantum
+Computing and databases to date he has
+published several papers including
+studies on the application of category
+Theory to multi-model databases in one
+of his recent papers he identifies
+several database issues that can be
+resolved using Quantum Computing
+techniques hello Walter the floor is
+yours we are looking forward to your
+presentation
+thank you very much and especially
+thanks for researchers who kindly
+invited me me to give this presentation
+uh yeah my name is Walter watila hello
+everyone
+um I'm supervised by Professor jiangle
+who is the professor responsible of
+databases at the University of Tennessee
+and also supervised by Professor
+yukakunur Milan who is responsible of
+quantum Computing at our University and
+um yeah the title of this this talk is a
+sequel query classification with a
+Quantum natural language processing
+approach and Quantum natural language
+processing uses
+um Quantum machine learning and actually
+I'm I am quite regular very center also
+at the Nordic AI meet where where
+um
+and this this presentation is now the
+extended version of of that torque that
+I gave at the Nordic AI me 2022 last
+fall
+um so but I don't assume that you are
+really familiar with with Quantum
+Computing and I don't um I will not uh
+precisely Define what Quantum Computing
+is quite a large topic but I want to
+give a bit of intuition how how we
+approach problems in the in Quantum
+Computing so let's let's let's check out
+uh let's see this this kind of graph
+where we have two points b and a and we
+would like to find the shortest path
+from point B to the point a a and now in
+this graph you all already see that's
+the Gray Line there
+um and if you approach this this type of
+problem classically you you usually use
+somehow like Loop over the nodes and
+edges and you you do comparisons and and
+and and and and this type of like
+element by by element
+approach but I want to approach this
+with first with with ants
+and and let's assume that these ants
+leave at point B where they have their
+their nest and then we allow these ants
+to use only the edge keys so they can
+work only on on the edges here and then
+what we do we put some sugar to The
+Point Circle to the point a
+and then um what happened is that these
+ants start to go around the graph and if
+we wait maybe relatively long time we
+will find out that these these ants have
+found the shortest path
+from their from the food to back to
+their nest and they will walk on on this
+path so we can basically view the
+solution by studying the ants and this
+this type of algorithms or this end
+behavior has inspired this and Colony
+optimization algorith thinks that you
+must be aware of
+so and now I want to connect this to the
+to the quantum Computing so we also need
+to think a bit differently when we start
+to solve problems with quantum computers
+so now well we are busy people and we
+don't don't have time to wait the ants
+Define the best route so what we people
+decide to do we we build a quantum
+computer and we want to solve the
+problem a lot faster
+so uh so the the so the key key idea
+here is that instead of using ants we
+use some quantum mechanical elements
+like electrons or photons and we assign
+these electrons and for example
+electrons we assign this to the to the
+nodes and maybe you know like the
+electrons can have this kind of
+speed value which is going to be
+pointing at least to upwards and and
+downwards so these electrons will be in
+this kind of superposition state in the
+beginning
+and then besides that we have this
+quantum mechanical elements at each node
+we also introduce certain interactions
+between them so now in this graph these
+interactions are described by this black
+arrows
+um and we can do so that
+um when the when the nodes are nearby
+then also the interaction between them
+is is stronger
+and now if we have uh encoded this
+program correctly and then we just wait
+a few microseconds and then we come back
+and see the results we will find out
+that approximately for example in this
+case these spins will be pointing
+upwards on the notes which show us the
+the shortest path so so so
+this is now very roughly the idea how we
+can how we can approach like a quantum
+mechanical um problems so as a as a key
+points here that I want to deliver you
+now in this with this beginning example
+is that we have certain elements that
+can be in multiple States simultaneously
+and this is called superposition then we
+have these interactions between the
+elements and these interactions have
+certain value or rate and this is called
+entanglement and then also when we
+perform operations uh we need and when
+we perform these operations we kind of
+perform them do the whole system
+simultaneously so we do not really have
+this kind of idea that we can pick an
+element and do something to that
+use it whole at once and then then
+finally there is the measurement or the
+the when we read the solution
+from the from this system
+um yeah this this doesn't describe
+Quantum Computing very formally but I
+think this delivers the the idea that
+that we need to think a lot differently
+and then uh the question is like could
+we utilize this this type of systems as
+a machine learning model or as a
+subroutine in a machine learning model
+and and yes the answer is definitely yes
+so
+um
+and I want to motivate this a bit also
+like why should a message learning
+researcher be interested in quantum the
+Computing so I want to first like show
+my first impression that that um I
+didn't really know like how machine
+learning could help Quantum Computing
+um but then usually we have this this
+this this idea that Quantum Computing
+will provide some almost like a magical
+speed ups and computational power to do
+massive learning and any kind of
+computational tasks but what I actually
+blame here and what is also other
+researchers are researchers are
+proposing is that this this view is a
+bit wrong or at least this this will be
+very future
+so and I want to change this with the
+with with this idea that that
+machine learning can be really
+integrated as a part of quantum
+Computing and then on the other hand
+Quantum Computing can offer us new ways
+to build and design and execute machine
+learning models and also maybe they
+could use cost functions which are which
+are hard to simulate classically
+and what is in the heart of this all is
+that both machine learning and Quantum
+composition are based on linear algebra
+and probability Theory so actually this
+former formalism that these both are
+relying on this it's very similar
+and now what can we do with the with the
+quantum Computing when we are
+considering it from machine learning
+pairs
+perspective so first of all like Quantum
+circuits for more machine learning model
+class and this will be also apparent you
+will see my work as an as an as an
+example where we will develop a machine
+learning model where it is circuits form
+this model class
+and then we can basically drink these
+circuits with the gradient based methods
+and you will also see an example of of a
+method that we can use to drain these
+circuits and then then there is this
+problem that our data is usually
+classical so we cannot just immediately
+map it into a quantum computer so we
+need to have some kind of data encoding
+um that we can we have that we can we
+can actually process the data with a
+quantum computer and this is very very
+key a key Challenge and in in this work
+I will I I will introduce a
+um basically a bit none
+non-conventional encoding method and
+then finally there is always this
+question about like
+um do we actually have a Quantum
+advantage in in machine in want to
+message learning like will will this
+Quantum Computing will will it make
+these things faster at or or early at
+near-term scale and an answer is is yes
+if you just understand this Quantum
+advantages at at the right way or or
+your access you accept to accept it in a
+certain sense but I will not talk about
+this and I haven't really I'm not really
+familiar about about this this topic but
+you should be able to find a lot of
+material about this that so let's let's
+see the outline of this actual
+presentation so first I will talk about
+how we encode these SQL queries into
+Quantum circuits so this will be the
+basically the data encoding part
+and then we use this uh we we drain
+these parameters in these circuits to
+predict metrics about these SQL queries
+which is basically this this this
+training phase and then finally we I
+will assure you the some of the first
+initial results and and outcomes of of
+this framework
+so uh yeah so let me uh first introduce
+the actual problem here so so we have
+um so I'm a part of database research
+group and we deal still very much with
+relational databases and this there is
+now relational database which has
+information about cats and also some
+information about customers
+and now how this relational database
+usually works from the user's
+perspective is that users have these
+simple queries and then
+um they they send them to the database
+and they database executes them and then
+we get the results which are basically
+tables containing tuples
+and now the classical problem is how
+should we execute these queries how
+should we optimize them
+and in order that we can optimize these
+queries we should be able to estimate
+like how many records how many doubles
+these results result in tables contain
+we would also know some query execution
+times and be able to estimate the cost
+which is a value defined by the date
+database and all of these estimations
+affect on the query optimization
+resource allocation and transaction
+scheduling
+so as as as the previous slide suggested
+like this this is very in the core of
+the database research
+um so so and this is one of the most
+researched problems in database field
+and there is a lot of there are a lot of
+um very well working classical
+algorithms that basically are able to
+solve this problem in many ways uh so
+there's the classical machine learning
+and then these kind of rule-based
+methods and they give usually good
+estimates estimates and predictions
+and now what we are doing in our work is
+that we want to extend this field with a
+Quantum Computing based methods
+and the in this work we formalize the
+problem as a classification properly
+so what does this concretely mean is
+that when we have this fixed query we
+ask like will this query be executed
+[Music]
+in in interval for example 100 to 200
+milliseconds or will this query content
+like
+um 100 to 200 doubles
+so let's let's take a look at how we
+encode these uh queries into quantums
+circuits so first of all this is based
+on the quantum natural language
+processing qnlp
+and there they have seen that uh well
+natural language has this grammatical
+representation and then they have
+noticed they have defined a mapping from
+this grammatical representation to to
+Quantum circuits and now what we noticed
+that yeah SQL queries also can be
+expressed with with grammars very well
+defined grammar so why why wouldn't we
+use this similar kind of mapping with a
+different rule
+rules to map these SQL queries to to
+again to these circuits and there is
+also other application for for music so
+so those are the the researchers have
+basically found grammar that describes
+music Snippets and develops similar kind
+of framework for for those and some of
+the packages that are concretely use
+here are our land back which is a
+Quantum MLP packets then I use some
+category theoretical package
+Quantum Computing software packages and
+then this Google's Jax which is
+basically just speeds up the learning
+process
+and now if you go activate to the actual
+encoding process it starts so that we
+have this fixed equal queries and then
+what the database does it basically
+produces this context-free grammar
+diagram which is which is now visible
+here
+um it contains a lot of information but
+if we focus to this we see that
+um we see we can we can we can pick part
+of this this this diagram for example
+this select clause and what we do do
+this select Clause here when we
+represent it with the context-free
+grammar we can define a mapping uh to to
+the outer grammar which simplifies this
+a bit so so we see that we have more
+boxes on this left hand side than on the
+right hand side and also to tie this
+naming changes a bit and what is nice
+here that this functor that is in the
+middle that we use to map this it has
+very nice category theoretical precise
+definition and and it's actually also
+relatively easy to implement with this
+uh with this um category theoretical
+packages the package that I mentioned
+earlier
+so we performed this this type of
+mapping for for each of these uh these
+these diagrams and and then what we
+obtain is we obtain a bit of different
+type of uh diagram which is called Break
+group grammar diagram and now the key
+Point here is that that this this uh
+this is a display group grammar diagram
+is a simpler it contains basically less
+boxes and and the type in here is a bit
+simpler uh but anyway we still we still
+claim that when we use this functor this
+certain since this this this grammar
+this diagram here encodes the same
+information about the query
+and now what we can do here like you see
+like this black group grammar diagram
+has these caps
+and what we can do intuitively easily is
+that we can make these caps straight so
+we just raise the boxes up and we
+perform this to the whole diagram and
+then we get basically this group grammar
+diagram without caps
+and this is also a functorial process
+and it's it's it keeps the diagram the
+same and then finally now from this
+record of grammar diagram it doesn't
+have caps we can map it to the quantum
+circuit so that it also the quantum
+circuit has parameters
+and this is also a functor and actually
+it's maybe a class of functors because
+it has a certain para parameters that we
+can modify and produce different kind of
+circuits
+another so so as a summary we we start
+from this SQL queries and with with this
+functorial transformation we get this
+parameterized Quantum uh certain
+circuits and now we want a bit like
+focus on this this circuits so what are
+what are quantum circuits so
+um so this is a lot different from the
+from the classical con
+Computing so first of all in this case
+you can you need to read the circuits
+from from bottom to up so time flows up
+and upwards we start from the initial
+state zero and this one wire that goes
+through here is basically a keep it and
+then we model this Cube it has the state
+usually it starts from zero State and
+then this state gets modified then we
+apply Gates and these gates are like
+functions that modify the the state the
+input State and then the output
+difference state
+and then finally when we have applied
+all the gates that we have wanted to
+apply the the master it and the
+measurement result is is is always well
+in single compute case it's it's always
+zero or one so so
+uh so so that's the whole process
+basically and then what I want to point
+out here are these two type of gates
+where we have actually now
+parameters so and these um uh these the
+key thing here now is that we want to be
+able to optimize these parameters in a
+way that that
+that when we run this circuit on a
+quantum computer it it will the result
+that we get from the quantum computer
+will say uh some prediction about this
+this this query that we use we
+originally used to to create this circle
+um so now we have the circuit
+construction so let's go to the to the
+training phase
+uh so basically this is a work where I
+needed to construct my my own data set
+because because all the classical data
+sets that database researchers use they
+are pretty large and the queries are
+relatively long and they would produce a
+solar circuits that we cannot execute
+them on on any existing Hardware so I
+made a training data test data and
+validation data and
+so that I composed I graded these SQL
+queries random or a postgres database
+with with certain data and then I
+collected basically just 450 training
+points which are like a query ID and
+time how long it took to execute the SQL
+query in a database or then query ID and
+cardinality so the query how many tuples
+we get when we execute and then I did
+the same for the collected the test data
+and validation data
+and then also I performed this encoding
+process for this for this SQL queries so
+I took the same very simple SQL queries
+and produced this training circuits test
+circuits and circuits and validation
+circuits with the previously described
+monitorial in and encoding
+and now we have the whole setup ready so
+we can start the actual training phase
+and this optimization is is done with
+the simultaneous spiritual place and
+stochastic approximation algorithm spsa
+and uh and and this algorithm basically
+approximates the the gradient that these
+circles have so we start so that we take
+these training circuits and validation
+circuits
+then we do a bit of modification to to
+previous research so that we do not pick
+all the training circuits initially but
+just the sub subset of them and we
+notice that when we when we this kind of
+incrementally increase the number of
+circuits we actually obtain a better uh
+results
+so and then we okay we focus the subset
+of these circuits and the image we
+initialize the parameters firstly
+initialize them randomly and then in the
+coming epoxy basically use the or in the
+when we add more circuits we used
+previously found good good parameters
+but initially we use random and then we
+measure the circuits and do a certain
+post selection process
+and then we calculate this basic
+cross-entropy loss between these
+training and validation data and based
+on these losses the spsa algorithm
+basically are just these parameters in
+these circuits and also adjust this
+hyper parameters in the in the in the
+algorithm
+and we now we run this
+certain
+number of times
+and now uh when we have executed this
+this optimization phase and we have
+found a sufficiently good parameter
+values the question is how does this
+optimized circuit work as a classifier
+so let's let's see like that we have now
+we have the SQL query we have translated
+that one into a circuit and then we have
+these parameters we pick parameters and
+substitute them in the circuit and then
+we get something which looks like this
+and now in this case
+um we can run this on a quantum computer
+and we actually need to run it multiple
+times as we do so that when we run it we
+only select those results where
+or basically when you run this type of
+circuit on quantum computer you will get
+a bit string which contains
+uh some some value for this first fire
+and then some values for these other
+wires so basically we get a
+six character long bead string here
+only select we only consider those bits
+strings where all these uh five
+last
+bits are are zero and then then we find
+such bit string when we are running this
+we will
+um we will see the first one and then
+um and then this when we run this
+sufficiently many times this will give
+us a distribution over zeros and ones
+depending on the first first while your
+first qubit here
+and we use this first this this uh this
+result if we get more ones than zeros
+then this this result will get
+classified as a one and other case as a
+zero
+so let's take a look at some initial
+results that we have got
+so basically the the most reasonable
+field where we can compare this is a
+comes from the quantum NLP and the
+quantum NLP they have had two kind of
+cases the meaning classification case
+and relative prediction classification
+case these are a bit different from NLP
+perspective but but the key Point here
+is that in their work the training error
+has been somewhere around 17 and test
+error around 20 and in this second case
+this one has been
+9.4 and then here like around 20 28
+on on test error so so this gives us
+some some some some comparison and this
+has been basically a binary
+classification case
+and and in our work uh I would say that
+these our results are very much in line
+with this results from Quantum MLP so so
+basically it seems that this this this
+type of quantum machine learning model
+is able to also do other other things
+than just classify sentences
+and uh in um so what are these figures
+describing is the is is is that
+incremental training process where we
+start with a small number of circuits
+then we'll add more training data
+um and then when we add more training
+data we see that uh also the the
+accuracy of the model gets gets better
+and finally when when we use
+um all the Training trade data or we do
+not even need to use all the training
+data which is maybe a bit surprising and
+I don't think that we have really good
+answer like why this happens and this is
+very uh interesting to you but anyway we
+will read this this this about uh 80
+accuracy here
+and then it's something about 90
+accuracy on the uh on on this training
+data and and 80 on test data and then
+similarly if we see this cardinality
+classification we obtain really similar
+results
+so so anyway we we read
+um pretty similar level as this Quantum
+NLP has has reached
+uh all those in in our case we have this
+uh
+[Music]
+over 600 queries whereas the quantum NLP
+has used about 100 sentences so so
+there's a so we are a bit scaling this
+this up compared to their their work
+and then there's the question like
+binary classification is is maybe a bit
+like uh still a relatively simple class
+problem so what what if we want to do
+like multi-class classification so so so
+the same framework allows us to do
+multi-class classification very simple
+way but in this case they actually the
+it is it is a lot harder and and and we
+are still working on on on finding a
+good
+to build these circuits and drain them
+but anyway we see that uh that that
+there is probably some some learning
+happening here so that we read
+in four class classification we we read
+an accuracy which is maybe around
+between 40 and 50 and then also uh
+similarly here for this
+uh for the cardinalities
+but uh but I think I I think there is a
+lot of a lot of things to try out in
+this multi-class classification case and
+and this is still a bit of open uh
+problem
+um so and then uh we have this question
+like can we say that the model really
+works and and and can we like um
+uh basically can we
+can we study if there are some problems
+in this Quantum uh company model and can
+we can we be able to make it a bit more
+explainable so so for for this I think
+one of the one of the good things that
+uh Quantum Computing can offer for
+machine learning is that Quantum
+Computing has a lot of this kind of
+tools to actually measure measure uh
+measure like quantum mechanical
+properties of of these models that can
+be used to to explain this this material
+a learning model uh but I but actually I
+think maybe this this year
+expressibility is something that also is
+studied in classical machine
+learning but in Quantum Computing this
+gets a very nice visual interpretation
+so so if if you think that we have a
+single qubit and a single qubit uh the
+single quantum mechanical element it can
+be described with a with a sphere and
+now if we think that we have this single
+qubit and we apply just a single
+operation with a single parameter what
+we obtain in this case is that that we
+actually
+reads we can only reads points that are
+on the circle
+here on the red circle around the sphere
+so so so this describes that if you
+develop the model it has kind of two
+little operations and two two little
+parameters you can actually detect that
+we can never reach
+sufficiently many many points on the
+sphere and then and then on the on the
+opposite end we have this case that if
+we add uh basically three gates three
+operations and three para parameters we
+reach the state where we can actually
+reach any point on the sphere and then
+we have all the combinations between
+these two
+so so this is a one metric that we can
+use to describe this this Quantum
+message learning model and then there is
+the second one which is a lot more
+quantum mechanical
+measurement that that we can use and
+this is entangling capability and this
+can be done explained roughly so that if
+we think that we have two two queue bits
+so we have two quantum mechanical
+elements and then as I described we
+previously we can introduce these
+interactions between these these
+elements
+and and in the one end we have the case
+where there is no interaction uh there's
+no entanglement and these Cupids do not
+interact with each other any any way and
+in this case we can assign a value zero
+to this entangling capability
+and then on the on on the opposite end
+because of quantum mechanical postulates
+and because of quantum mechanics there
+is a fully fully entangled system which
+is called a bell state
+and we cannot entangle these two qubits
+more than than this this much
+and and then we have everything between
+that so so so so this is also a method
+that we can calculate from from each
+circuit that we have and now what I have
+done is that I have calculated this this
+these measurements uh this this Matrix
+for for this uh specific uh SQL
+classification Quantum message learning
+model
+and and in the expressibility case this
+expressibility can be also visualized as
+a as a this this type of histogram
+um and basically this histogram as I as
+I see it is that that it tells us that
+we are able to express
+Express like
+necessarily all the states on the on the
+sphere all although it it seems like
+that we have a bit of like more here in
+in the middle which which would mean
+that the points tend to gather around
+around the equator of the sphere
+uh but but anyway it seems like that
+that at least there isn't any problem
+and and also we can calculate very
+specific uh value
+which is called um
+it's called
+this coolback Library against Val value
+which is also used in classical machine
+learning and in and in this this case
+it's
+0.017 and the previous research in this
+paper found that the favorable
+explicitive value
+would be somewhere below 0.02 so this
+also indicates that that at least there
+shouldn't be any any serious problem
+with expressibility
+and then if you also see this entangling
+capability
+in this case I have calculated for it
+for each circuit
+um so that
+um
+so that yeah all the circuits are are
+here and then the entirely capability
+values are plotted here and we see that
+it goes somewhere uh usually somewhere
+around 0.5 and 0.6
+mostly and the previous research the
+same paper uh pointed out that that the
+favor favorable intangling capability
+value would be somewhere between 0.4 and
+0.7
+so also this suggests that that uh that
+at least it doesn't look like there is
+any any problem with with this
+and also why we would like to know these
+values is that that if these values are
+too high then it indicates that this
+Quantum machine learning model is is
+probably expensive to to train and and
+we don't want that but on and on the
+other end we also want that it is
+capable to express and it it's capable
+to learn so we want to know we want to
+be sure that these values aren't too too
+low either
+um so yeah and then I went to some uh
+summarize a bit about our our quantum
+computer for for databases research so
+so so this is a definitely a small but
+growing uh field in database research
+and this this work is a part of a paper
+which is currently under a review so so
+the paper uh is is here and then just on
+this week uh this Monday I also
+represented other work at the workshop
+at ICD 23 conference which was about
+optimizing a virtual machine and task
+allocations in Cloud infrastructure
+infra structures trans sustainability
+perspective using Quantum annealers and
+Quantum annealers are a bit different
+type of quantum Computing paradigm
+and then we are going to have a Quantum
+we are going to have a tutorial about
+want to machine learning at Sigma
+conference and then also we will
+organize the international workshop on
+Quantum data science and management at
+bldb and also the submission is is open
+for this workshop and you are also
+welcome to to submit your your work here
+and then there is a lot of future work
+that we can we can we can do on on this
+topic so first of all as I mentioned
+already uh we would like to increase
+accuracy for this multi-class
+classification and this necessarily
+contains two aspects so that we then we
+are searching for correct circuits
+because we can modify these circuits we
+have three parameters that produce
+different types of circuits and then
+also we would like to find the correct
+hyper parameter values for this spsa
+algorithm
+and then there is this question like how
+large queries can be predict and and
+um
+because some of the modern queries are
+very long
+and then we think that this
+grammar-based approach must not be the
+only way to encode this circuits so what
+kind of circuits would work the best for
+for example one interesting idea that we
+are we have is the idea that we could
+use the query optimization plan
+um
+and because that is usually also it has
+also tree structure so we would be able
+to map that three structure to a circuit
+and then optimize that and also maybe
+gain gain some interest in results from
+there and then we might be also able to
+to keep these circuits uh shorter
+um and then there are also uh many other
+gradient-based optimization approaches
+beside this yeah spsa and also the
+quantum machine Learning Community is is
+exploring this quite widely
+and then partly really
+related to this this previous point is
+that we can we can use this Penny Lane
+and key skit and use use their
+methods and utilize their noise models
+and then also we would like to run this
+on on actual real Quantum Computing
+Hardware So currently we are just using
+the simulators
+so as a as a conclusion
+so this work develops a Quantum machine
+learning based method to predict a
+matrix for SQL queries in relational
+databases and this method can be
+basically divided into two phases so
+first is this encoding phase where we
+encode the SQL queries into circuits and
+then later we optimize the circuit
+parameters to predict these metrics
+and I think the results are really
+promising and at least the binary
+classification resource restarts are in
+line with the previous results obtained
+in the quantum NLP
+uh so thank you very much
+[Music]
+thank you Walter for the very
+interesting presentation I have wrote
+down so many questions but I will just
+uh yeah go with a few and then if
+someone else has any more questions
+one thing that I didn't really get or
+near when you talked about this training
+phase like the other training where you
+put the data between training and
+validation and test drive
+then you sense that you calculate the
+cross entropy between
+the training data and the validation
+data
+right or at least that's what I
+understood but I didn't get that part
+if you can go to that slide where you
+show the training
+[Music]
+yes this one yes
+yeah
+so yeah so so what the exact thing right
+like how do you calculate the loss
+between the two days data sets because
+usually everybody understand it because
+entryways that usually have some ground
+truth labels and you compare them to the
+probabilities of your model right but
+you only use like one data set but I
+don't understand how do you do data sets
+to calculate the loss
+oh yeah yeah so so yeah so that so uh
+yeah it's maybe a bit unclear here but
+uh but basically the the thing is that
+we measure these circuits and when we
+measure the circuits uh basically maybe
+this slide describes that so we have a
+circuit and we measure it and then we
+get the result from this circuit and
+then we compare this result with the
+training data and with the validation
+data and we come we call it calculate
+that that uh
+posts from those from that
+okay so are you in a sense also using
+like the validation data in some sort in
+the training yeah yeah yeah yeah it
+seems like yeah yeah this yeah this spsa
+algorithm is also using the validation
+data there okay yeah because that's a
+little bit different like today it's
+standard thing you know yeah this is
+probably yeah yeah but this this was
+actually I think this was how the also
+some other work was was was using that
+and also they I think the the algorithm
+where they were
+where they developed this I think they
+actually I think recommended to using
+this validation data that
+is that but anyway like during the in
+during the training phase this
+validation data like
+uh it's it's it's like also evaluated
+also compared with it and I I think and
+that should affect you then yes and then
+you said something about expressibility
+and the this factor that should be less
+than 0.2
+yes
+so uh you said you calculate the KL
+Divergence
+between what distributions exactly is it
+between like the distribution that we
+show and some
+like template distribution or what's the
+other distribution yeah yeah so yeah
+that's a very good question yeah so the
+other distribution that that uh that are
+used to calculate is is called hard
+distribution
+and this and this hard distribution is
+is basically this uh this this
+distribution that uh that this if we
+just basically equally sample points
+from the sphere
+okay
+yes please
+um yeah yeah yeah I mean that's that's
+the that's the other distribution okay
+yeah so I
+roughly like a uniform Distribution on
+this field yes I see yeah yeah exactly
+yeah yeah nice yeah I have some other
+questions but this other mind have any
+other questions yeah can I start with
+the very basic question from a beginning
+slide uh you have when you were
+introducing the quantum the quantum
+models you have mentioned that it was at
+least my understanding uh in Quantum
+models we replace the nodes the neurons
+with superpositions and we know that it
+is up down
+spines in electron Quantum systems like
+electrons and they are very much
+interacting with together they have
+repulsion they have attraction but in
+neurons we have neural interaction in
+some models but how can you please it
+described about this complex system how
+you deal with these interactions how we
+can we are going to cancel it in your
+model or you have some assumptions for
+it
+um yeah yeah that's a that's a good
+question and I think like that it's
+maybe also related to the to the heart
+there at some level like because the
+because the interactions are actually
+realized at the hardware level so at the
+at algorithmic design we just
+we just like decide that there should be
+interaction here with and it should have
+this this strength
+um but
+and then then we we basically map it to
+the quantum computer and then I'm not
+exactly sure like how this how this
+Hardware actually realizes there yeah
+the the interaction or the entanglement
+there but anyway it is it is at at least
+usually these these quantum computers
+they they have a circle like a topology
+or they they have this these Cupids are
+like nodes in a graph and then these
+edges describe
+um those like kind of pads yeah ads that
+we can use to create these interactions
+so so so at the current devices we are
+not able to create interaction between
+the every qubit
+[Music]
+you know yeah usually so usually they
+are a bit isolated and and we can only
+like maybe make an interaction between
+certain Cupids and then the qubits
+nearby that one so great
+um but they but but yeah I think I think
+it's like uh it's more Hardware harder
+base interactions there are a couple of
+questions posted in the channel uh that
+one of them is about uh you can we say
+that the sequence are same as epochs in
+usual machine learning models I remember
+in one of your Styles yeah it's a good
+question you were describing about the
+more sequence the better results in one
+of your slides
+yes this question uh
+uh wanted to know that how the secret or
+sequence work can we say can we replace
+it in machine usual machine models but
+if folks we say the more epoxy better
+results for example
+um
+yeah I think like these circuits are
+maybe more like a like a training
+like it like a data points or
+um so then then there is the the
+actually the the training algorithm has
+uh has epochs and
+we we run it certainly like number of
+those those ebooks and then
+um so I would say that it's more like
+the the circuit
+a circuit is more like a like a data
+point data point yeah and then yeah and
+I think like usually when we like
+increase the training data
+also the results get better so I think
+this I think basically these these
+figures still they'll they'll tell that
+type of story very clear answer yeah
+yeah thank you and also the other
+question is uh uh can you describe about
+uh a bit about the programming language
+and available platforms like platform I
+mean I'm not sure what platform is here
+but maybe he means like tensorflow and
+pythource that we have in machine
+learning models in Quantum models do we
+have any available platforms or any
+special
+programming language yeah
+yeah yeah that's a very interesting
+question yeah so that
+um
+yeah so I basically I use
+um well I use these platforms so so this
+Lambic is the Quantum natural language
+processing platform uh
+that it is especially developed for for
+for for for it it it implements almost
+exactly this this this process that I I
+explained here and
+and it is also a platform that very
+nicely like integrates with this this
+scroll pie so this is a like a category
+theoretical
+um you can model
+a lot of things with with category
+Theory and you can use this this package
+to to to to to basically Implement those
+those models and what is nice that that
+this um this disco pie and the Lambeck
+they are very like tightly integrated so
+that you can it's easy to use them
+together and then also this this ticket
+is is kind of on the background so that
+this Lineback and disco pie can be
+easily connected with with this ticket
+and this this ticket is kind of the
+um like the layer
+[Music]
+that is
+well I I would say that it's kind of the
+layer that the user sees and writes the
+quantum algorithms and then they get
+sent to the quantum uh computer there's
+a well there's a lot of things going on
+also after you submit your circuit the
+ticket but anyway this is kind of the
+the convection to the quantum computer
+and then the other package also it's a
+which I really like is this Penny Lane
+and Penny Lane is especially like for
+Quantum machine
+learning
+and they have been developing in the
+sense that it it is very easy to connect
+with different machine learning with
+different National learning tools like
+pythons and tensorflow and and this Jax
+and
+and
+um yeah probably something else also and
+they also allow you to connect like
+different Quantum Hardware so you can
+use IBM Amazon
+um
+Google search and and all these most
+popular ones
+great thanks for your answers uh I'm
+done with my questions as there are
+other questions I have in my notes but
+if Maureen has had any question again uh
+back to God easy he can continue or not
+yes I have one question uh so can you
+explain uh a little more about the
+classification of execution times and
+classification of cardinalities I did
+not completely understand like what uh
+the difference was uh and what was
+actually being classified
+um yeah sure so um so actually they they
+aren't very different problems now now
+after running all of these they they are
+actually very very similar
+um
+but of course the the queries are a bit
+different but but there isn't very much
+like like a difference in the structure
+um what slide could describe that best
+so basically I think like the
+the the the idea is that the
+um we have the queries and then uh if
+you think like yeah so so so we have the
+query and then
+um
+um before you execute it in a database
+now with this platform you can do so
+that yeah before executing it you can
+turn it into a servoid then you can pick
+the parameters that you have optimized
+and you can put the parameters inside
+the circuit and then you can run this
+circuit multiple times and then finally
+you will get the basically the the
+result from the circuit from in the
+binary classification case you get it
+from this one qubit here and this one
+qubit is basically zero or one and then
+depending on how you have defined how
+you have constructed the the draining
+data there is some like a threshold I
+think in the in a in my my work it is 33
+000 tuples so if the
+SQL query has less than 33 000 tuples it
+will be classified to zero and otherwise
+it will be classified to one
+and then that that tells us that it that
+it has list or or more than that it's
+it's from from database perspective it's
+it's a pretty like toy example
+but but but if you think like that you
+add you bits here
+so the the number of classes grows
+exponentially so your accuracy also
+grows exponentially and then
+um then if you have like two to the
+power of uh five or two to the power 10
+classes you get quite quite good
+accuracy but also maybe this is maybe I
+don't know if it works in those cases
+yet
+all right thank you
+um this answer is my question oh yeah
+great thanks
+I have one last question
+yeah yeah
+in terms of training uh how much
+training time and like compute does it
+take is it easy to train these systems
+or do like
+spend like several days training them or
+years it's a Well I don't know I think
+I'm not very like uh well I'm not really
+like at that type of like machine
+learning specialist so I have my
+background in mathematics so I don't
+know if I do the training like the most
+efficient way but it takes a long time
+and it takes especially it takes a long
+time because it's very slow to simulate
+this circles
+so so so we are sure that at least
+quantum computers are good at good at
+running these circuits so it's it's it's
+very slow to run circuits even even if
+they're smaller
+Circle it's it's still that takes quite
+a long time so yeah yeah it is quite
+long process and and
+um and a big difference
+like it can take days yeah basically yes
+yes
+yeah so it's most likely that it's the
+simulation of the quantum computer
+that's taking time rather than the
+training
+yeah
+uh yes I think so yeah yeah yeah yeah
+yeah yeah yeah yeah yeah I think
+actually the spsa algorithm is pretty
+like efficient on the training and it
+doesn't really like
+um it yeah it doesn't need that it
+doesn't need to evaluate the circle with
+very many times but it's still every
+evaluation of a circle it is a really
+expensive
+yeah uh thank you I think we've had
+enough questions uh thank you again for
+your very interesting presentation and
+thank you for such presentation
+and yeah see you on the next one
+yeah right now bye now

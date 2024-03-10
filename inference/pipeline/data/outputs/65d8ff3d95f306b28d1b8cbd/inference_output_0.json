@@ -1,0 +1,70 @@
+{
+  "introduction": "This video explains the concept of store now, decrypt later (SNDL) and how quantum computing can break encryption in a decade. It highlights the threat of quantum computing on widely deployed public key algorithms and the need for agencies to transition to supercomputers with the general number field sieve algorithm. The video also demonstrates how quantum computers can factor large prime numbers much faster than conventional computers using a simple example and a more complex one. It concludes by discussing the challenges of decoding messages using quantum computers and the importance of having good vectors to find the closest lattice point to the message point in a thousand dimensions.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Store Now, Decrypt Later",
+      "content": [
+        "Explanation of the concept of store now, decrypt later (SNDL) and its potential impact on encryption.",
+        "Discussion on the threat of quantum computing on public key algorithms.",
+        "Mention of the need for agencies to transition to supercomputers with the general number field sieve algorithm.",
+        "Overview of the video's demonstration of quantum computing's ability to factor large prime numbers."
+      ],
+      "topics": ["SNDL", "Quantum Computing", "Public Key Algorithms", "Supercomputers"]
+    },
+    {
+      "title": "Section 2: Simple Example of Quantum Computing",
+      "content": [
+        "Presentation of a simple example demonstrating how quantum computing can factor large prime numbers.",
+        "Explanation of the mathematics behind the example using lattices.",
+        "Discussion on the difficulty of decoding messages using quantum computers.",
+        "Mention of the need for good vectors to find the closest lattice point to the message point in a thousand dimensions."
+      ],
+      "topics": ["Quantum Computing", "Lattices", "Message Decoding", "Vector Space"]
+    },
+    {
+      "title": "Section 3: Complex Example of Quantum Computing",
+      "content": [
+        "Presentation of a more complex example demonstrating how quantum computers can factor large prime numbers.",
+        "Explanation of the mathematics behind the example using quantum mechanics.",
+        "Discussion on the challenges of implementing quantum computing on a large scale.",
+        "Mention of the potential impact of quantum computing on various industries, such as cryptography and drug discovery."
+      ],
+      "topics": ["Quantum Mechanics", "Large-Scale Quantum Computing", "Cryptography", "Drug Discovery"]
+    },
+    {
+      "title": "Section 4: Implications of Quantum Computing",
+      "content": [
+        "Discussion on the potential implications of quantum computing on various industries and fields.",
+        "Explanation of the need for continued research and development in quantum computing.",
+        "Mention of the challenges faced by quantum computing, such as error correction and scalability.",
+        "Overview of the importance of understanding and adapting to the potential impact of quantum computing."
+      ],
+      "topics": ["Industrial Applications", "Quantum Research and Development", "Error Correction", "Scalability"]
+    },
+    {
+      "title": "Section 5: Conclusion",
+      "content": [
+        "Summary of the key points discussed in the video.",
+        "Emphasis on the need for continued research and development in quantum computing.",
+        "Discussion on the potential impact of quantum computing on various industries and fields.",
+        "Call to action for viewers to stay informed and adapt to the potential impact of quantum computing."
+      ],
+      "topics": ["Summary", "Quantum Research and Development", "Industrial Applications", "Call to Action"]
+    }
+  ],
+  "topics": ["Quantum Computing", "Lattices", "Message Decoding", "Vector Space", "Industrial Applications", "Quantum Research and Development", "Error Correction", "Scalability", "Summary", "Call to Action"],
+  "generalTopics": [
+    {
+      "name": "Quantum Computing",
+      "complexity": 0.85
+    },
+    {
+      "name": "Cryptography",
+      "complexity": 0.80
+    },
+    {
+      "name": "Drug Discovery",
+      "complexity": 0.75
+    }
+  ]
+}

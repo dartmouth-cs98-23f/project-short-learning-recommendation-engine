@@ -1,0 +1,70 @@
+{
+  "introduction": "This video discusses parallel programming paradigms and various libraries and APIs used for parallel computing. It covers different types of parallel architectures, including distributed memory and shared memory systems, and introduces programming interfaces such as MPI, OpenMP, OpenACC, and Intel TBB. The video also discusses offloading techniques and hybrid parallelization. The speaker provides examples using RE, a common engineering application, and emphasizes the importance of understanding parallel computing for modern supercomputers and laptops with multiple cores.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Parallel Programming",
+      "content": [
+        "Explanation of parallel programming and its importance in modern computing.",
+        "Overview of different types of parallel architectures, including distributed memory and shared memory systems.",
+        "Introduction to programming interfaces such as MPI, OpenMP, OpenACC, and Intel TBB.",
+        "Discussion of offloading techniques and hybrid parallelization."
+      ],
+      "topics": ["Parallel Programming", "Distributed Memory", "Shared Memory", "Programming Interfaces"]
+    },
+    {
+      "title": "Section 2: Parallel Architectures",
+      "content": [
+        "Detailed explanation of distributed memory and shared memory systems.",
+        "Comparison of performance and use cases for each architecture.",
+        "Discussion of offloading techniques and hybrid parallelization.",
+        "Examples using RE, a common engineering application."
+      ],
+      "topics": ["Distributed Memory", "Shared Memory", "Offloading Techniques", "Hybrid Parallelization", "RE Example"]
+    },
+    {
+      "title": "Section 3: Programming Interfaces",
+      "content": [
+        "Overview of MPI, OpenMP, OpenACC, and Intel TBB.",
+        "Explanation of how to use these interfaces for parallel programming.",
+        "Discussion of best practices and common pitfalls when using these interfaces.",
+        "Examples using RE, a common engineering application."
+      ],
+      "topics": ["MPI", "OpenMP", "OpenACC", "Intel TBB", "Best Practices", "Common Pitfalls", "RE Example"]
+    },
+    {
+      "title": "Section 4: Offloading Techniques and Hybrid Parallelization",
+      "content": [
+        "Explanation of offloading techniques and their benefits.",
+        "Discussion of hybrid parallelization and its advantages.",
+        "Examples using RE, a common engineering application.",
+        "Best practices and common pitfalls when using offloading techniques and hybrid parallelization."
+      ],
+      "topics": ["Offloading Techniques", "Hybrid Parallelization", "Best Practices", "Common Pitfalls", "RE Example"]
+    },
+    {
+      "title": "Section 5: Conclusion and Resources",
+      "content": [
+        "Summary of key takeaways from the video.",
+        "Recommended resources for further learning about parallel computing.",
+        "Discussion of the importance of understanding parallel computing for modern computing systems.",
+        "Examples using RE, a common engineering application."
+      ],
+      "topics": ["Summary", "Recommended Resources", "Importance of Understanding Parallel Computing", "RE Example"]
+    }
+  ],
+  "topics": ["Parallel Programming", "Distributed Memory", "Shared Memory", "Programming Interfaces", "Offloading Techniques", "Hybrid Parallelization", "Best Practices", "Common Pitfalls", "RE Example"],
+  "generalTopics": [
+    {
+      "name": "Parallel Programming",
+      "complexity": 0.59
+    },
+    {
+      "name": "Programming Interfaces",
+      "complexity": 0.59
+    },
+    {
+      "name": "Offloading Techniques and Hybrid Parallelization",
+      "complexity": 0.59
+    }
+  ]
+}

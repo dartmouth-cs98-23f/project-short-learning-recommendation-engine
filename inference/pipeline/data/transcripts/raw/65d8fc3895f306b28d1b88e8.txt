@@ -1,0 +1,257 @@
+in order to understand what a software
+tester or quality assurance analyst does
+you first need to understand the process
+by which the software is conceptualized
+developed and maintained
+this process is known as software
+development lifecycle or the sdlc
+there are seven key points to
+understanding the software development
+life cycle
+phase one planning
+phase two requirement analysis
+phase three design
+phase four implementation and coding
+phase five testing phase 6 deployment
+and phase 7 maintenance
+[Music]
+so it all starts with this guy the
+customer
+he's the guy that has the business idea
+for our invoice application and the
+money to get it started
+he's going to reach out to multiple
+different tech companies until he finds
+one that he likes
+finally he's going to meet our company's
+product owner or our project manager
+they're going to discuss terms of their
+agreement sign a deal and accept the
+project
+this will move us into the next phase
+planning the requirements
+together the customer and the product
+owner will outline the requirements of
+the application
+let's imagine that the requirements that
+they've both agreed upon are as follows
+one user registration
+two
+login
+three
+log out
+four
+the dashboard landing page
+and so on and so forth
+throughout this course we'll be running
+multiple iterations of the sdlc to which
+new requirements and new features will
+be added
+now that we have the outlined
+requirements let's take them and move on
+to the requirement analysis phase
+here's our team operations developers
+product owners and testers
+we'll all meet up at an office for a few
+hours and define each outlined
+requirement and give more planning
+details
+let's start with requirement number one
+user registration we'll need a username
+input field a password field a check box
+to accept the terms and conditions
+a submit button
+and the ability to save the user into
+our database
+then we'll move to requirement number
+two the login
+we'll need a login page to allow
+returning users to log back into our
+system
+for this we need another username input
+field
+a password field along with another
+submit button
+from this we'll need to read the user's
+information out of the database and log
+them into our system
+requirement number three will require a
+logout button usually located around the
+same area where the user was logging in
+from when they press the logout button
+it should clear their session out of the
+browser to prevent other people from
+returning and logging back into their
+account
+finally requirement number four the
+dashboard this will essentially be the
+home page of our application
+after a new user is registered they
+should be redirected to the dashboard
+also when the user logs in with the
+returning account they should be
+redirected to the dashboard
+for our first sdlc i will keep the
+requirements easy in upcoming videos
+we'll dive further in with much harder
+customer requirements
+once all of the requirements have been
+analyzed by the team and defined
+the product owner will take all the
+defined requirements and create tickets
+in a project management system
+from here we'll move into the design
+phase of the sdlc
+the design phase takes all the
+requirements and starts to plan the
+product
+the design phase may include the
+business rules
+the user interface layouts
+color schemes
+what programming languages to use
+frameworks
+system server design
+database relationships
+architect of the application
+mobile aspects
+supported browsers
+and much more
+next we'll discuss the implementation
+and the coding of the application
+the implementation and coding phase is
+where everything starts to become fun
+the operations team will set up the
+physical hardware for the servers the
+developers will start writing the code
+the designers will continue planning the
+user interface
+and the testers will analyze the
+requirements and start building test
+cases for their test plans
+even in this stage testers are
+incredibly valuable they start to
+imagine the usability of the application
+and see how everything flows together
+sometimes while writing test cases they
+can discover things don't make sense and
+help redesign fundamental flaws in the
+early stages of the application
+next up we'll be discussing one of the
+most important phases which is the
+testing phase
+so why is the testing phase so important
+imagine that the developer has finished
+coding some of our new features in our
+requirements we found that when the user
+logs out
+that it's not actually clearing the
+session in the browser
+and that another
+person can walk up to their computer
+click the login button or click the
+refresh on the page and they gain access
+to their account
+get access to all of their money and
+start making payments on various things
+they'd be huge and expensive terrible
+bug that would get released if we didn't
+have testers to test these types of
+things beforehand
+so what does a tester actually do during
+the testing phase
+[Music]
+now that we have the servers all set up
+and the database is set up developers
+have finished coding they've given us an
+application an actual website that we
+can log into now
+now we can start testing and executing
+our test cases from the test plans that
+we've created
+validate that all of the requirements
+have been met
+make sure all the functionality is
+working as expected
+find as many bugs as we possibly can
+which could be color scheme is incorrect
+or there's a user interface bug
+somewhere the critical issue people not
+being able to log out maybe the users
+can't even register there's so many
+mistakes that developer can make and do
+make frequently
+so as we're testing we start to find
+bugs and what we'll do is we'll report
+them into a bug tracking system which is
+then assigned to a developer
+they'll go in and they'll fix the bug
+fix the issue and assign it back to us
+this is called a bug of life cycle you
+may have noticed that i've mentioned
+test cases test plans
+and bugs
+in the upcoming videos we'll go into the
+bug life cycle
+iterating with developers
+and how to write test plans and test
+cases
+up next we'll talk about the deployment
+phase
+the deployment phase the operations team
+will end up mirroring the staging or
+development environment systems that
+we've been testing in and get them ready
+for production meaning that they'll
+install new hardware brand new servers
+have everything scalable for production
+this includes setting up the links
+setting up the databases for real users
+syncing up with the development teams
+and release managers
+once they've completed all of these
+tasks our application will go live to
+real users
+this brings us to the final phase of the
+sdlc
+maintenance
+so imagine that we've released and our
+application became so successful we're
+just getting millions of users logging
+in and registering and using this
+application
+so we need to maintain
+the servers in the environment they need
+to monitor the load the stress
+everything coming on the servers by so
+many users logging in and using it it
+doesn't bring down the system maybe we
+need to make larger servers larger
+databases maybe we need to get faster
+computers there's a lot of stuff that
+goes under in the maintenance phase
+there will be bugs found in production
+it's called production support
+frequently users will email with their
+issues and you can stop and investigate
+what they're complaining about or what
+their issue is
+figure it out
+write up a bug
+get it resolved and do another
+deployment to production with issues
+fixed
+so to summarize we've discussed planning
+requirement analysis design
+implementation and coding testing
+deployment and maintenance
+all right awesome that wraps up the
+video on the sdlc
+one last thing to say is once we're in
+the maintenance phase new features will
+come through new requirements will come
+through and we'll restart the whole
+process again and be able to get new
+stuff added into our existing
+application
+[Music]

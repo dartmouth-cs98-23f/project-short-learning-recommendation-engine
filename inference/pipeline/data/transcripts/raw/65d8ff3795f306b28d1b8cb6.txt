@@ -1,0 +1,127 @@
+today I'm going to talk to you about
+Quantum Computing applications in
+machine learning this is a very exciting
+area of quantum Computing research and
+lots of classical machine learning
+developers are understandably excited
+about the potential applications within
+their own field
+so to get started let's talk about a
+classical machine learning problem that
+is one that's very common linear
+classification
+so if we start with two sets of data
+that we want to classify into two
+separate categories let's draw them here
+we're just going to have
+Three Dots and three crosses all on a
+single linear plane here if we arrange
+if the data is arranged like this it can
+be pretty easy to classify this into two
+discrete groups we can draw a single
+line in the middle here and now we've
+classified them
+but this can be a lot harder if our data
+is more complex
+for example if our data is arranged like
+this
+perhaps with the crosses in the middle
+now there isn't a single line that we
+can draw
+um on this plane to classify the data
+into two discrete groups
+so in order to solve this problem and
+classify this data what we need to do is
+we need to map this data into a higher
+dimensional space which we're going to
+call a feature space
+then if we've mapped the data for
+example like this
+we can now see because we've mapped this
+data into a high dimensional space there
+is now a much easier way to classify
+this
+so how do we do this step of uh
+transferring our data mapping it into a
+higher dimensional feature space to do
+this we can use kernel functions
+kernel functions work by taking some
+underlying features of the original data
+set and using that to map those data
+points into this High dimensional
+feature space
+kernel functions are incredibly powerful
+and Incredibly versatile but they do
+face problems sometimes they just give
+poor results
+um and also the compute runtime can
+explode as the complexity of the data
+sets increase
+if you're a if you're an experienced
+machine learning developer perhaps
+you've seen this already if you're
+dealing with data that has very strong
+correlations or perhaps if you're
+dealing with time series forecasting
+where the data is very complex and at a
+high frequency
+but quantum computers have the potential
+to
+um provide an advantage in this space
+they can be useful because quantum
+computers
+can access much uh more complex and
+higher dimensional feature spaces than
+their classical counterparts can
+and they can do this because
+quantum computers can we can encode our
+data into Quantum circuits and the
+resulting kernel functions could be very
+difficult or even impossible to
+replicate on a classical machine as well
+as this those kind of functions also can
+perform better
+uh in 2021
+IBM researchers
+um actually proved that Quantum kernels
+can provide an exponential speed up over
+their classical counterparts for certain
+uh classes of classification problems
+um as well as this there is a lot of
+research going into improving Quantum
+kernels with structured data and kernel
+alignment so as you can see this field
+is incredibly exciting there's a lot of
+research going on in this space
+um and you can use kiss kit runtime
+to easily build a Quantum machine
+learning algorithms with built-in tools
+such as the sampler primitive which
+Primitives are unique to uh the IBM's
+kisket runtime these are essentially
+predefined programs that help us to
+optimize workflows and execute them
+efficiently on Quantum systems
+let's take for example our linear
+classification problem let's say we have
+our data and we've encoded it into a
+Quantum circuit
+we can then use the sampler primitive
+to obtain quasi-probabilities indicating
+the relationships between the the
+different data points and these
+relationships can constitute our kernel
+Matrix
+and that kernel Matrix can then be
+evaluated and used in even a classical
+support Vector machine
+to predict new classification labels
+so if you're ready to get started
+learning more about Quantum machine
+learning you can check out the links in
+the description for more information
+about kisket runtime as well as a
+Quantum machine learning course that's
+available on the kiskit textbook I hope
+you've enjoyed this content thank you
+very much for watching

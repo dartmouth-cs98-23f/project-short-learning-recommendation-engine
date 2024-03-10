@@ -1,0 +1,612 @@
+hey what's going on guys so technology
+has so many different areas as you know
+and when it comes to programming there's
+so many different languages to learn and
+it can be it can be quite overwhelming
+especially for beginners um so what i
+wanted to do in this video was was
+basically a crash course of programming
+languages and just go through a lot of
+the modern languages and talk about what
+they're good for you know how they work
+and also look at things like low level
+versus high level and what that means
+talk about compiled versus interpreted
+languages statically typed versus
+dynamically typed so it's going to be a
+little more than like a top 10
+programming language video um and i
+think that it'll help a lot of beginners
+and even for people that are looking to
+learn a second or third language i think
+it can give you some good insight so i'm
+going to jump into some slides just so i
+can better convey the information so
+hopefully you guys enjoy it and let's
+get into it
+[Music]
+all right guys so before we get into
+specific programming languages we should
+first talk about low level verse high
+level and when i say level i'm really
+talking about the comparison between the
+language or the code that we write and
+the machine and what the machine
+understands because your your computer
+doesn't directly understand javascript
+or c-sharp or java or anything like that
+it has to be compiled into something
+that the cpu understands
+so when i say levels i'm basically
+talking about how close to the hardware
+the language is and how much abstraction
+there is between them so you can almost
+think of the hardware as the lowest
+level up from that we have machine
+language or machine code which is the
+absolute lowest level of code which
+consists of instructions that are used
+to control the machine's cpu or central
+processing unit and these instructions
+are strictly numeric and they're in the
+form of zeros and ones which is called
+binary machine code can also be
+represented as hexadecimal so it's
+easier for humans to read but ultimately
+machines only process zeros and ones
+because those it represents an
+electrical state that's either on or off
+all right now programmers don't write
+machine code at least anymore
+i guess you could but it would be very
+tedious and very error prone and i don't
+think there's many companies hiring
+senior machine code developers
+all right so the next level we have up
+from that i should see the the next
+language we have is called assembly
+language or asm or just assembly and
+assembly uses numbers symbols and
+abbreviations as opposed to just ones
+and zeros like binary machine code and
+assembly code isn't actually compiled
+like some of the higher level languages
+it's converted or assembled into
+executable machine code by something
+called an assembler compiling which i'll
+talk about soon is a much more
+complicated task than assembling a lot
+more goes into it and you can learn
+assembly language there's youtube videos
+there's even udemy courses that you can
+take to learn assembly language and i do
+think it's interesting because you
+really start to understand how software
+works with the cpu and works with your
+computer's hardware
+assembly is typically used today to
+develop software or firmware for
+embedded systems
+now from here we have the next level
+which consists of a bunch of general
+purpose languages that are that are
+pretty common now in some cases you'll
+see charts like this that refer to these
+as high level languages languages like c
+c plus plus however that's when you're
+comparing it to the whole chart to
+machine language assembly language and
+so on these languages are lower than
+something like python or java or ruby
+which we'll talk about later
+so let's take a look at c c is the
+lowest level general purpose language
+the only thing lower than c is assembly
+and machine code
+and c was created in the early 70s by
+dennis ritchie and was actually derived
+from another language called b
+and c was used in the development of the
+unix operating system it's a procedural
+language as opposed to an
+object-oriented one and it's lower level
+than many other languages so you do have
+to manage some some hardware resources
+such as memory allocation and i'll talk
+a little bit more about that in the next
+slide so c is very powerful it's used
+for things like operating systems the
+windows kernel for instance is built
+with c it's also used to build compilers
+for other languages it's used for
+drivers database systems and many other
+powerful programs
+and c is also a compiled language
+so before we move to the next language
+let's talk about compiled versus
+interpreted languages so a compile
+language requires a piece of software
+called a compiler which will compile the
+code that you write with a language like
+c
+down to instructions that the machine
+understands so the compiled program is
+not human readable it's meant for them
+the machine and it's executed by the cpu
+now usually with lower level compiled
+languages such as c you have to manage
+your memory so memory allocation cpu
+usage
+you have more access to the hardware but
+of course it's more difficult to work
+with
+with an interpreted language the source
+code is not directly compiled to machine
+code there's more abstraction to it and
+a program called an interpreter reads
+and executes the code in some languages
+like python and ruby are first compiled
+into
+some sort of byte code which are binary
+instructions that are executed by a
+virtual machine such as the python
+virtual machine technically they do have
+a compile step but they're not being
+compiled directly to machine code like
+with with a lower level language like c
+so we usually refer to those as
+interpreted or scripting languages now
+interpreted languages are typically
+easier to work with and allow you to
+write code faster so there's a fast
+write time however there's more
+abstraction than with a compile language
+where your code is simply compiled
+directly into machine code and executed
+so this makes programs faster at runtime
+for compile languages and of course this
+isn't all you're going to look at when
+choosing a language it's just good to
+know the difference so the next language
+we're going to look at is c plus plus
+which is another lower level language
+that was created in the 80s and it's
+actually a superset of c meaning that it
+is essentially c but it has a bunch of
+extra tools so c plus plus is actually
+object oriented which is a coding
+paradigm based on the concepts of
+objects and like i was talking about in
+the last slide both c and c plus plus
+there's no what's called garbage
+collection which means that you have to
+manually allocate and free memory within
+your code so c plus plus is an
+incredibly powerful language it's used
+to build things like aaa gaming titles
+operating systems it's used in vr
+robotics scientific computing and stuff
+like that so
+if you're interested in those types of
+uh that part of technology then c plus
+plus might be
+something to look into
+all right so rust or rustling is a
+relatively new low level and high
+performance language that provides
+higher level capabilities and it
+provides protection to keep you from
+making mistakes with memory allocation
+so that there is no garbage collection
+but
+there is protection built in more so
+than something like c or c plus plus and
+rust can be used for game engines
+operating systems browser components
+vr and much more and it can be used to
+create web servers and used in the back
+end for for web development you can
+create apis and microservices with rust
+it has some frameworks like rocket
+which will help you build web
+applications and one area that i think
+rust is is thriving in and will continue
+to thrive in is web assembly so
+webassembly is a new type of byte code
+that can be run in modern browsers and
+it provides very high performance within
+the browser much higher than than what
+javascript can give us so there's a few
+languages that can be compiled into
+webassembly including c plus plus and
+rust and i think webassembly is going to
+be huge in the future for things like
+gaming and video tools within the
+browser so learning rust may be a really
+good idea if you're into that kind of
+thing
+all right so we're going to move to some
+higher even higher level languages which
+are most of which are interpreted so
+they're not quite as fast in terms of
+the the software you build but they're
+generally easier to learn and extremely
+popular in the industry
+since this channel is focused mostly on
+web development these are probably the
+language that you're going to be
+choosing from also i do want to mention
+that there are other lower level
+languages that are you know on this
+level here such as pascal but i i don't
+want to make this video too long so i'm
+not going to talk about every single
+language in existence
+so next we're going to look at java so
+java is a high-level class-based
+object-oriented programming language
+everything and you create create in java
+is essentially an object or part of an
+object and objects are defined by
+classes that have variables which are
+also called properties and functions
+also called methods so java is a what's
+called a write once run anywhere
+language meaning that compiled java code
+can run on all platforms that support
+java without the need to recompile so
+java code is typically compiled into
+bytecode that can run on what's called
+the jvm or the java virtual machine and
+i'm sure that you guys have installed
+all of installed the jvm on your
+computer at one point or another
+so java is used for a lot of different
+things including graphical you know
+desktop applications enterprise
+applications java's still pretty popular
+in big business
+it's also used for web servers and apis
+it's used for mobile app development
+specifically android apps google uses
+java for many of its products minecraft
+was created with java and companies like
+spotify linkedin amazon all use it in
+one form or another
+java is also statically typed so this is
+something else that i wanted to talk a
+little bit about before moving forward
+so every general purpose language that
+we've talked about up up to this point
+is statically typed and what that means
+is that the type checking is performed
+at
+compile time and we have to explicitly
+define types for our data within our
+code so for our variables and our
+function returns
+if something is a string we need to
+define it as a string and it can't
+change into a boolean or some other type
+now dynamic languages such as javascript
+and python
+which we'll get to soon do not require
+us to define types explicitly as type
+checking is done at runtime so it
+basically assumes the type automatically
+or dynamically
+as far as which is better there's
+trade-offs with dynamic languages you
+don't have to
+worry about you know typing everything
+so it's less code however statically
+typed languages can be less prone to
+errors and can be more robust so just
+keep that in mind moving along and i
+know that i have a lot of javascript
+developers as viewers and you can just
+think of you know javascript versus
+typescript because typescript is
+javascript with static typing
+all right so
+i wanted to mention kotlin right after
+java because it also uses the java
+virtual machine the jvm and it's it's
+also used for android apps in fact most
+modern native android apps are built
+with kotlin uh if you're looking to
+learn kotlin or java i'd probably
+suggest kotlin because of its popularity
+and
+and most people say that it's easier
+easier than java i don't really have any
+experience with kotlin but it can be
+used as an object-oriented language or
+procedural code in addition to mobile
+development it can be used for web
+servers data science and and much more
+so as far as who uses kotlin you have
+cache app vmware plan grid these are
+some examples of of services or
+companies products that use kotlin
+so next we're going to look at c sharp
+which is another compiled and statically
+typed language and unlike c and c plus
+plus it is fully managed in terms of
+garbage collection i know all the
+different c languages can be confusing
+but c sharp is higher level than the
+others it is object oriented much like
+java in fact a lot of the syntax is or
+looks similar to java in my opinion i've
+used both i would most likely suggest c
+sharp over java though you have the net
+framework which c sharp can use you can
+also use the visual basic language as
+well as f-sharp with the.net framework
+c-sharp is typically called a compiled
+language but it's compiled it isn't
+compiled directly to machine code it's
+compiled into something called il or
+c-sharp intermediate language and
+c-sharp also uses the clr or common
+language runtime environment so it is
+compiled there's just a little more
+abstraction to the process c-sharp is
+used for desktop applications especially
+windows apps microsoft did create
+c-sharp and net
+so they're great tools for building on
+windows c-sharp is also used for web
+development you have the asp.net
+mvc framework it can also be used for
+gaming along with unity and mobile apps
+along with xamarin i think csharpen.net
+is an excellent choice for a tech stack
+for for many different purposes
+microsoft's visual studio ide is used to
+build c-sharp apps
+but c-sharp is also one of the languages
+that it was built with including vb.net
+so next we're going to look at go or
+golang which is an extremely powerful
+open source language supported by google
+it's it's a compiled statically typed
+language used for
+a lot of different things and it's
+really known for being very fast and
+scalable and it has a very robust
+standard library as well
+many parts of go are inspired by other
+languages for example it borrows static
+typing and run time efficiency from c
+and its readability and usability from
+python and javascript so one thing i see
+over and over when it comes to go
+programming is like i said it has a very
+robust standard library and
+when talking about web development
+usually you use a back end framework
+with with these types of languages if
+you want to build some kind of rest api
+or something but with go you actually
+don't need a framework for something
+like that in many cases
+there are frameworks available but like
+i said it just has a great standard
+library that comes with it as far as
+examples of what it's used for you have
+back-end apis and microservices
+distributed network services and
+cloud-native development some companies
+that use go are obviously google
+uber dropbox and many more
+all right so next we're going to get
+into python which is extremely popular
+right now and is very diverse in its
+uses so python is a dynamic language or
+dynamically typed interpreted language
+also called a scripting language
+and although it does first get compiled
+into something called bytecode that then
+is executed by the interpreter so python
+is is the preferred language of many
+developers in many different areas it's
+amazing when it comes to machine
+learning and ai as well as data science
+automation and web development as far as
+web development which is you know kind
+of my area um python has some really
+great frameworks django and flask i
+think are two of the two of my top i'd
+say probably my top
+five to seven uh somewhere in that range
+especially django django's probably in
+my top three
+frameworks of all time but python is not
+a c syntax language so it looks
+different than something like c or java
+or javascript we don't use curly braces
+and we don't use semicolons for
+termination instead we use indentation
+so it looks more like plain english than
+many other languages some companies that
+use python are nasa intel ibm spotify
+and many other massive companies
+okay so ruby is a highly portable
+dynamically typed language that's used
+for many purposes it's an interpreted
+languages but like python it's first
+compiled to bytecode and then
+interpreted by a virtual machine i've
+used both python and ruby in my career
+and there seems to be a lot of
+similarities they're both relatively
+easy to learn they're high level
+interpreted languages python is is uh
+faster than ruby in general
+but there's a lot of there's a lot of
+similarities ruby also doesn't use curly
+braces we have the indentation syntax
+and the creator of ruby yukahiro
+matsumoto or mats he actually said that
+one of his goals when creating ruby was
+to make it a pretty language a
+good-looking language that was easy to
+to read and write so it's it almost
+looks like english so ruby's used for
+building desktop applications automation
+tools and web development usually when
+we talk about ruby and web development
+which we're talking about ruby on rails
+which is a popular framework that i
+personally love and and worked with for
+a little over a year and it's a very
+opinionated framework and offers a ton
+of tools which makes it great for rapid
+development so you can basically
+scaffold up a crud application that uses
+a database in literally
+a minute or two it's it has lost some
+popularity over the last few years but
+it's still a great framework some
+companies that use ruby in one way or
+another are twitter dribble and groupon
+all right so now we're at the language
+that is very popular among my viewers
+and very popular in general because
+javascript is the language of the
+browser so if you're a web developer
+you're you're going to know at least
+some javascript and it used to be i'd
+say like
+maybe like 10 years ago when javascript
+was first created it was used to build
+little interactive widgets on the page
+given you know some dynamic properties
+but over the years
+with the introduction of front-end
+frameworks like react it's used for a
+hell of a lot more and we can build very
+powerful single page applications that
+that runs strictly on the client and
+then in addition to that we have node.js
+which allows us to run javascript on the
+server and use it just like we would any
+of these other backend languages
+and many full stack developers including
+myself prefer node.js over other backend
+solutions because they like to have the
+same language on the back end as they do
+on the front end node.js is also
+extremely fast and
+at least for for a lot of different
+tasks it's very fast and it has a great
+ecosystem with npm which is the node
+package manager so javascript is an
+interpreted scripting language that by
+default is dynamic but if you want you
+can use typescript which is a superset
+of javascript that adds static typing
+so front-end javascript is used by just
+about every company that that does
+anything in the browser and node.js or
+backend javascript is used by companies
+like nasa paypal medium and netflix
+we also have technologies like react
+native that lets us use javascript to
+build mobile applications and then we
+have electron as well as some other
+frameworks that allow us to use
+javascript to build desktop applications
+in fact vs code is built with javascript
+as well as some other popular desktop
+apps such as postman and slack so
+javascript is absolutely everywhere
+which is another reason that i love it
+all right so next we're going to look at
+php which is actually the first language
+that i really learned java was the first
+language that i ever used but i stopped
+when i decided to go into web dev
+because php was so popular at the time
+so php is a dynamic scripting language
+that is used to build static and dynamic
+websites and web apps and what's really
+cool about php and makes it very
+practical for web developers is that you
+can embed php directly into
+directly with html and that makes it
+easy to add functionality to websites
+without having to call external files
+so php can be used as a procedural
+language or as an object oriented
+language the syntax can sometimes be
+pretty messy i think that it gets a lot
+of flack for that so i do prefer to use
+it in an object-oriented way i think
+that makes it much cleaner there are
+some great frameworks web frameworks for
+php such as laravel and there's all
+types of open source tools like
+wordpress which is a blogging platform
+or a cms so php is great for making
+things fast which makes it really
+popular in the freelancing community as
+well as small businesses there's quite
+uh quite a bit of hate online towards
+php but it's getting better part of the
+reason of that is i think php is getting
+better now with version eight and it's
+usually from people that never really
+worked with it or haven't worked with it
+for a while or have never worked as a
+freelancer or outside of a big company
+on a team because again php is great for
+just building things fast and getting
+getting products out there
+all right so swift is a general purpose
+compiled language developed by apple and
+is mostly used to develop applications
+for ios ipad os mac os and any other
+device that apple creates it's
+relatively easy to learn and it's
+extremely fast iphone applications used
+to be created mostly with a language
+called objective c
+but most are built with swift these days
+and i believe apple has stated that
+swift is about 2.5
+times faster than objective c so if
+you're looking or thinking of going into
+native ios apps or mac os swift is is
+one of your main choices like i said
+swift is very fast and it's compiled
+into it's first compiled into something
+called swift intermediate language and
+then into machine code from what i
+understand and companies like uber
+robinhood and lyft
+all use swift in their tech
+stacks all right so obviously there's
+other programming languages out there
+but i think that these are some of the
+most popular ones at least at this time
+and as you can see they're all very
+different so what i would suggest is
+just look at what you want to do in tech
+and find the language that best suits
+you you may have to try a few languages
+but that's fine even if you learn let's
+say the basics in ruby if you switch to
+python there'll be a lot that you can
+grasp very quickly because of what you
+learned in ruby and a lot of it comes
+down to syntax but
+i also wanted you to just get familiar
+with what high-level languages are and
+low-level and static and dynamic typing
+and all that good stuff so i hope you
+learned something from this video and
+thanks for watching and i'll see you
+next time

@@ -1,0 +1,70 @@
+{
+  "introduction": "In this video, the speaker discusses the importance of choosing the right database for a growing business. They highlight key considerations such as the existing database's limitations, the need for a different database, and the importance of benchmarking and testing before migration. They also touch on the trade-offs involved in different database types and the importance of understanding the architecture and limitations of the database.",
+  "sections": [
+    {
+      "title": "Section 1: Understanding the Current Database",
+      "content": [
+        "Examining the existing database's architecture and limitations.",
+        "Identifying performance issues such as high latency or working set overflow.",
+        "Exploring potential fixes to the application architecture, such as adding caching or sharding.",
+        "Considering the need for read replicas to offload read load."
+      ],
+      "topics": ["Database Architecture", "Database Limitations", "Performance Issues"]
+    },
+    {
+      "title": "Section 2: Choosing the Right Database",
+      "content": [
+        "Exploring different database types and their trade-offs.",
+        "Considering the industry-specific requirements for database selection.",
+        "Evaluating the database's design constraints and limitations.",
+        "Reading the database manual and understanding the real limits."
+      ],
+      "topics": ["Database Types", "Industry-Specific Requirements", "Design Constraints"]
+    },
+    {
+      "title": "Section 3: Benchmarking and Testing",
+      "content": [
+        "Importance of benchmarking and testing before migrating to a new database.",
+        "Measuring p99 of everything and trying to replicate real workload.",
+        "Testing risky operational tasks like failing over a node or data corruption during network partitions.",
+        "Paying attention to outliers and considering up or downsharding if applicable."
+      ],
+      "topics": ["Benchmarking", "Testing", "Outliers", "Sharding"]
+    },
+    {
+      "title": "Section 4: Migration Planning",
+      "content": [
+        "Writing a detailed step-by-step migration plan.",
+        "Reviewing the plan thoroughly with peers.",
+        "Migrating a small service first and learning from the experience.",
+        "Carefully planning the migration to minimize risks and potential downtime."
+      ],
+      "topics": ["Migration Planning", "Peer Review", "Small Service Migration"]
+    },
+    {
+      "title": "Section 5: Database Selection Best Practices",
+      "content": [
+        "Preferring established and battle-tested databases.",
+        "Understanding the trade-offs involved in different database types.",
+        "Joining chat rooms and asking questions to learn more about a particular database.",
+        "Reading GitHub issues and learning as much as possible about the candidate."
+      ],
+      "topics": ["Established Databases", "Trade-Offs", "Chat Rooms", "GitHub Issues"]
+    }
+  ],
+  "topics": ["Database Architecture", "Database Limitations", "Benchmarking", "Migration Planning", "Established Databases"],
+  "generalTopics": [
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.61
+    },
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.59
+    },
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": 0.55
+    }
+  ]
+}

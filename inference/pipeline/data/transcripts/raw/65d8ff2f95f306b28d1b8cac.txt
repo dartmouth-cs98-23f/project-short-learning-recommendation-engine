@@ -1,0 +1,1004 @@
+All right.
+Good afternoon.
+Come on, guys.
+I need some energy.
+I know this is before the break.
+All right.
+Much better. Much better.
+Hope you're having a great time
+here.
+This summit.
+Yes, yes,
+yes, you are.
+I know you are.
+Anyway, you've heard that we have launched
+the era of quantum utility, right?
+So in addition to bringing useful quantum
+computing to the world,
+we are committed to, focused on,
+and have also made
+great progress
+in making the world quantum safe.
+So what does making the world
+quantum safe really mean?
+What it means is that we are going to work
+collaboratively
+with our clients across industries
+and partners across the ecosystem
+to chart a course for the development
+and deployment of quantum
+technologies in a responsible manner.
+What does
+then, therefore responsible
+quantum computing mean?
+It is simply expressed as
+having an intention
+to develop and deploy
+quantum technologies in the most
+inclusive
+as well as accountable
+and transparent manner.
+That's what responsible quantum computing
+really means.
+Now, in order to guide us through this,
+we have come up with five principles
+that we wish apply to see
+whether anyone is following
+responsible quantum computing or not.
+The first is you choose your use cases in
+such a way that they do create
+positive societal impact.
+The second: anticipate
+potential side effects,
+if you will, unanticipated side effects
+of even these positive use cases.
+The third is represent the
+capabilities as well as the limitations
+of quantum computing.
+In other words, don't overhype. Right?
+And the fourth is
+we want to be intentional
+about being consistent and transparent
+in making decisions.
+And finally,
+we want to build an inclusive ecosystem
+that represents
+the diversity of the world at large.
+All right.
+Now, while we believe
+in these principles,
+and we are committed to doing this,
+we fully recognize that others outside
+may not be. One such classical case
+where this may happen
+is with the application of quantum
+computing to break encryption.
+Now, let
+me double click into that
+and talk a little bit more.
+As quantum technology advances,
+we find that
+the standard problem
+of prime factorization,
+which is what modern day
+cryptography depends
+upon, becomes a solvable problem
+with a quantum computer.
+So when a cryptographically relevant
+quantum
+computer becomes available in the future,
+one can apply Shor's algorithm
+to solve the problem
+of prime factorization
+in a matter of hours.
+What that means is
+there are two key things that it leads to.
+One is that the cryptography
+that we rely on
+for all our digital communications, right,
+including the cell phone,
+including the WhatsApp that you have
+and text messages you send,
+is all likely to be vulnerable
+or even be broken.
+That is a reality
+of the existential threat.
+The second is even more concerning,
+if you will, in that
+there is this notion of harvest
+now and decrypt later.
+What that means is bad actors
+can exfiltrate data today
+with absolutely no means of decryption,
+but they'll sit on it for several years.
+And then when your quantum computer
+of sufficient scale and capacity
+available, they can apply that to decrypt
+the data that they exfiltrated today.
+Both of these are problems
+that need to be solved.
+So what is being done to solve them?
+In 2016, NIST
+announced a competition
+inviting submission of algorithms
+that cannot be broken by quantum computer
+as well as classical computers.
+We submitted a set of algorithms
+for that, along with others,
+and there were 80 plus submissions.
+Fast forward to last July.
+Four algorithms were selected around
+which standards
+are going to be built,
+and three of them came from IBM.
+We didn't stop there.
+We continue to come up with new algorithms
+that are somewhat
+special purpose
+and submitted three more for consideration
+called Oil
+and Vinegar, Mayo and SQI Sign.
+Right?
+So we have continued
+our work in that progress.
+Now, while we have been doing this,
+the US Federal government
+and some key agencies have continued
+to publish certain guidelines.
+So NSA published the
+CNSA 2.0 guidelines that called for
+national security agencies
+to be quantum safe by 2034.
+They laid out a very clear schedule
+as to when what needs to happen
+in order to achieve that.
+The US President issued Executive Order
+and national security memorandums
+that called for government agencies
+to become quantum safe and also asked them
+to submit an annual inventory
+of cryptography on an annual basis.
+Now, in anticipation of this
+and responding to this,
+we created a quantum safe roadmap
+and also a set of technologies
+to support our clients in their migration
+or journey towards becoming quantum safe.
+And we announced this in May of this year.
+Subsequently,
+we also released a technology
+capability
+called IBM Quantum Safe Explorer.
+I'll talk about that
+in a minute
+and even show you a demonstration of that.
+We released that in October.
+So we are working diligently
+to provide technology capabilities
+that will enable our clients
+to not just to start this journey,
+but continue this journey
+and also maintain
+the level of cryptography
+on an ongoing basis.
+Right? Now, all of these have been done
+not a backroom lab situation or scenario,
+but in our work
+with existing clients, right?
+There are a number of clients here
+who have been part
+of our initial set of clients,
+and I will call them
+a couple of them, I would say, as
+they move forward at the appropriate time.
+So the bottom line is, these were
+capabilities and ideas
+that were tested in the field
+and our response of solutions
+was that it was a reaction to that. Now,
+earlier
+I talked about working in collaboration
+with industries and industry consortiums
+and ecosystem partners.
+Right? Consisting with that,
+in 2020 we announced the Open Quantum Safe
+Consortium.
+Right?
+We have been
+an active participant of that.
+And it has it has,
+you know, pushed the boundaries on open
+quantum safe quite a bit.
+Next,
+we are an active participant in the NCCoE,
+as it's called, the National Cybersecurity
+Center of Excellence.
+And we were also the first
+to announce an industry
+consortia in the telco space
+called the Post Quantum Telco Network.
+And we announce that in collaboration
+with GSMA and Vodafone.
+And a shout out to Luke Ibbetson
+from Vodafone,
+who is here
+who has been a tremendous partner,
+not just in driving this,
+but in collaborating with us.
+Thank you, Luke.
+And we
+are also a partner or a leader I should say
+driving two of the four workgroups
+in the Post Quantum Cryptography Coalition
+led by MITRE.
+I also wish to share with you
+that we are close to announcing
+a couple of other consortiums
+in the payment space with Nacha, in North
+America and Emerging Payments Association
+in the Australia Space.
+So we are expanding from telco into
+financial services and payments as well.
+This is the industry play
+that we have been sort of talking about.
+Now. I started with what is responsible
+quantum
+computing, called out
+what the potential risky use cases
+there is with respect to Shor's algorithm
+being applied
+and breaking cryptography and laid out
+what has been done, you know,
+in the last few years to get prepared
+for addressing that challenge.
+Now to go a little bit deeper
+into the specific
+technologies that we have developed,
+approaches and technologies
+that will help clients
+migrate through their journey
+to becoming quantum safe.
+Now, again, all of this was
+based on the work that we have done
+over the past year or so, year
+plus in a way with various clients,
+and we learned a lot from that.
+So we created a three stage approach.
+One of the common problems
+that we saw first was that almost
+all of the clients
+didn't know comprehensively and completely
+where all cryptography
+is being used within their enterprise.
+I'm not talking fingers at anyone,
+but I'm pointing out the reality that
+keeping track of every little cryptography usage
+within the enterprise
+is not part of what people do now,
+and they don't have a good handle on that.
+So discovery of cryptography
+and creating that inventory
+of where cryptography is being used
+becomes a very important step.
+And that is step one.
+And we have a tool called IBM Quantum Safe
+Explorer
+that helps identify that or discover that.
+And as I indicated earlier, I will have
+a demo of that for you shortly.
+The second stage is having discovered
+what you have,
+you have to augment that with what other
+cryptography
+that may exist that you observe
+in the actual execution of the system,
+in the network.
+So observe, it's about observing
+the dynamic cryptography exchange
+by looking at traffic
+that goes across your network
+and using that information
+wisely to prioritize.
+What do you go after first
+and how do you sequence
+your operations of remediation
+such that you are quite effective?
+I talked about the harvest now
+and decrypt later
+problem. For example,
+if you know what your critical assets are,
+crown jewels, as they're called,
+if you know what your crown jewels are,
+you want to protect them first.
+And that's prioritization.
+Plus, observe is also about observability
+so that it is not a once and done
+kind of a solution.
+But you can apply the capabilities
+of observe
+to really observe on an ongoing basis
+so you can continue
+to manage the problem
+in real time as well.
+The tool that supports
+that is IBM Quantum Safe
+Advisor and I will show you
+a short demo of that as well.
+The last piece is around transformation.
+So having discovered and prioritized
+the work that needs to be done,
+how do you go about beginning
+the transformation of your cryptography
+in the application and infrastructure
+to support what you need to do?
+That is what transformation is all about.
+And we have a tool
+called Quantum Safe Remediator,
+which is a collection of codified
+best practices and patterns
+that we have observed in the field
+and recorded that
+and that you can apply today
+so you don't have to wait for standards
+to be announced sometime
+next year or published, I should say,
+sometimes next year around
+the four selected algorithms.
+You can begin that work today
+to prevent yourself from being caught
+in this harvest now, decrypt later issue.
+Now, earlier I talked about calling out
+certain clients and thanking them.
+Here is where I'd like to
+call out
+the excellent support that we have had,
+and we learned together in this exercise,
+is Customs and Border Protection.
+They have been extremely supportive
+and they actually exercise...
+I know you know, CTO, Sunil and Doug
+Mace are here in the audience
+and the team is there.
+So a shout out to you guys.
+Thank you for your support.
+They exercise all three of these, right?
+In a limited manner, of course,
+but they have gained a lot from this.
+So did we. Right.
+So this how we experiment in the field
+as well as learn from that
+and begin to sharpen this product. Right.
+So now let me move over
+and begin
+to show you a demo of the Explorer
+as well as the Advisor.
+So I start off with the Explorer,
+and I indicated
+that the Explorer
+is about discovering cryptography
+and it discovers cryptography
+and static code; it discovers cryptography
+in your software programs
+and some object code as well.
+And it creates an inventory.
+And this inventory is created in the form
+of a cryptographic building materials.
+It is a standard that we have created
+that is going to be part of the detector
+on the X 1.6 version.
+And if I remember right,
+and it's going to be published
+as a standard for folks to use.
+So it's critical
+that we create this inventory
+in the standard form that others
+and other tools can also consume.
+So what it does is it has three
+modes of operation.
+One is a VS code developer view,
+which is what I'm going to show
+to illustrate the capability of this tool.
+The second is a command line
+interface that you can use
+because if you are a large enterprise,
+you're not going to go have a developer
+go through every single
+one of the modules.
+You want to run a batch program
+that points to the GitHub repository
+and say, go rip through that,
+find out all the cryptography
+and create an inventory place.
+That's what the command line interface
+really interface accomplishes.
+The third is, okay, I've done this now
+how do I manage this on an ongoing basis
+For that they provide an API interface
+that you can integrate into your CICD pipeline
+so that every time somebody does a commit,
+an automatic scan occurs
+and you have a report of what you need
+to get from a cryptography standpoint.
+So it is not
+just about discovering it once,
+but also about managing it
+on an ongoing basis.
+So simply, if I go and scan
+this program called Fund Portfolio
+Analysis,
+you will see on the lower right
+hand side some stats begin to appear.
+And let me make this window a little
+bit so that you can see.
+So now
+it has completed the scan and
+there you go.
+It discovered 32 artifacts.
+This program had both C++ and Java code.
+We currently support five languages
+C, C++, Java,
+Python, Dart,
+and it can also scan jar files.
+We are currently working on C# and
+next in line is Node.js and ABAP.
+So you have the ability to add languages
+at a regular basis
+depending on the client's need.
+So we discovered this number of artifacts
+and let me just highlight
+the ones in Java, right?
+So you have seven a library
+called Bouncy Castle
+and 12 from another library
+called CryptoUtils, right?
+This is what you discovered.
+You can go in and see what
+where is this coming from?
+All of a sudden you find that
+there is code that pops up in the window
+above you and some red highlight appears
+this is exactly the line
+where this cryptography
+is used within that program.
+So we are able to pinpoint
+down to the line
+where this cryptography is being used.
+So in case you need to know
+more about that or you are looking
+for remediating it,
+you know, it's taking you directly
+to the area where you need to focus on.
+In addition,
+you can also go in and say,
+I did talk about
+I did talk about C bomb
+or an inventory being created.
+And do you see that the C bomb
+gets created here as a JSON file,
+which is nothing but
+a JSON expression
+of what the inventory looks like.
+So what we have done here is
+we scanned a software program,
+identified all the cryptographic usage,
+and there is a number of other stats
+that I am not showing
+you and other features,
+but just to get the point across
+that we have the ability
+to scan languages,
+extract cryptographic usage, document
+it and create the inventory
+which is required for the C-SAW
+in the organization
+to get a comprehensive view
+of where our cryptography is being used.
+That's what this accomplished.
+Now, one thing
+I'd like for you to remember is this
+point I
+called out about 12 different artifacts
+that are being used in Java,
+sorry, 19 being used in Java and 12
+coming from a library called CryptoUtils.
+Okay, let's hang onto that thought
+and then let me go back to this slide.
+Can we go back to the slide
+please, to talk about what Advisor is.
+So I talked about
+Explorer being the static view
+that complemented with the dynamic view
+that comes from advisor
+is what completes the picture.
+So the comprehensive picture
+comes from adding the static view
+and the dynamic view. Advisor
+takes data from six different sources
+and puts them together in an intelligent
+manner for you to draw insights out of.
+The six sources are standard
+network scanning information
+that you currently have from your network
+monitoring tool, whether it be Nessus,
+Tenable Nessus or Qualys or Rapid7
+or whatever you know your network
+scanning tool may generate.
+So we know that the data that you know,
+running across your network.
+The second is your configuration
+management database or CMDB database.
+The third is the asset database that you have
+that calls out all the assets
+that you have, including the endpoints.
+And the fourth one
+is the provisioning database.
+So we know what's being provisioned
+where. And two other sources,
+which are the C bomb file
+from the scanning that we just completed
+and additional metadata that this Explorer
+tool creates about all the other goodies
+that that I didn't show you.
+So these six things put together is
+what gives you a comprehensive view.
+Now, what problem does this solve?
+This solves the problem of a C-SAW
+not having a comprehensive view
+of what's happening in cryptography
+across that enterprise. Now
+With that thought in mind,
+let's switch over to the Advisor demo.
+Let me make this a little bit bigger.
+All right.
+Good enough for now.
+Right away,
+you have a dashboard where you can show
+your selected set of metrics
+that you would like to track.
+And that's
+what is shown on the top, right?
+So you see a number of metrics.
+What is my cipher suite strength?
+How many endpoints
+am I managing,
+and what are the various TLS
+protocols that I'm running?
+What version of them am I running
+and how many different libraries
+are being used by my developers?
+All these are interesting things,
+and this graph that is half visible
+is about the cryptographic posture.
+How many violations
+did the enterprise encounter
+in the month of January,
+February and March?
+So you see a significant drop month
+after month after month.
+And the story here is that
+they started implementing
+policies to manage cryptography
+in the December-January time frame.
+And slowly
+you find that people are adopting it
+following it and it is decreasing now
+to a stage where you are now at a very
+small number in the month of November.
+So the idea is the CSAW has a view of
+what's happening across the enterprise,
+can create policies that will help address
+the hot areas that they want to address.
+One of them could be I don't want any more
+use of TLS 1.0 or 1.1,
+or they may say, Here
+are the set of libraries that are allowed.
+Any other usage need should not be
+permitted, so on and so forth.
+And on that point,
+I do want to call out that this fund
+portfolio analysis application
+that we just scanned appears
+here in a compliance violation
+for applications.
+If we drill down and look at that,
+you'll find that there are 12 instances
+occurring and these are the 12 instances
+that we saw in the CryptoUtils
+that Explorer called out
+saying there are seven from Bouncy Castle
+12 from CryptoUtils
+and the policy states that Bouncy
+Castle is the recommended library.
+The crypto is that the used is not
+therefore it is trapped
+as an exception here.
+And not only that
+you can take action on it and say
+go create a ticket
+and send it to the ticketing system
+and make sure that
+we are able to manage that in real time.
+Real life demo.
+As you see
+anyway,
+you'll be able to create the ticket
+and send it to the user and
+they can be
+they can take care of handling that.
+So the bottom line is Advisor
+gives you the dynamic view and together
+you have a comprehensive
+view of what's been happening in the
+in the enterprise.
+Now, we didn't do this
+in isolation.
+We did that,
+you know, working over the past year
+with a dozen clients in six
+or plus in six or seven industries.
+And these and these clients,
+as I called out CBP,
+we delivered tangible quantum safe solutions
+across going across to discover,
+observe and transform stages.
+That's what this is about.
+Now, talking of
+clients, I'd like to invite
+for the next session here.
+This is a client panel discussion
+session,
+and leading off that discussion is
+the IBM Quantum Safe public sector leader
+Charles Robinson.
+Charles.
+Thank you.
+Good afternoon.
+My name is Charles
+Robinson and I work for the IBM team.
+And I've spent 30 years
+working in the intelligence community
+and in DOD,
+in the national security community,
+and we have a treat today.
+We're privileged to have
+a gentleman who spent most of his career
+working for one of the largest
+telecommunications
+companies in the world.
+And I want to introduce to you today,
+Brian Miles.
+Brian.
+Hey, Charles.
+Hi, Brian. How are you? Good.
+So I prepared some questions for you.
+And I want to start with
+something fairly simple.
+Okay.
+Introduce yourself in your role at AT&T.
+Yeah. So my name's Brian Miles.
+I worked at AT&T
+for a couple of decades now.
+I've been in cybersecurity
+for about six years and
+I spent about five years
+working on the quantum security aspects,
+trying to learn quantum.
+And really that started off as a little
+like kind of almost a little side project.
+And the last couple of years
+I've been working on that full time now,
+and I'm leading the crypto agility
+and crypto inventory efforts within AT&T.
+Awesome.
+So what does it mean for AT&T
+to be committed to
+security innovation
+alongside the technology progress?
+And how does quantum safe
+figure into that responsibility?
+Yeah, so
+there's a
+as far as commitment,
+I see commitment starting to show up,
+I think across a lot of companies
+a lot of enterprises,
+especially ones
+with critical infrastructure.
+The federal government
+has issued a number of memorandums
+and joint statements
+and some other guidance.
+That's I think helping with that.
+For example, the NSA, CISA
+and NIST
+just published some joint guidance on
+quantum readiness and kind of the path
+or the steps you need to take
+for your your migration to post quantum
+cryptography.
+Outstanding.
+I know we have some individuals
+in the audience from CISA,
+and so we appreciate
+you guys getting the word out.
+What led you to start
+your journey in quantum
+safe cryptography now?
+Yeah, so there's a number of reasons.
+It's going to take many years.
+This is a huge problem.
+There's going to be it's
+just going to take a lot of work.
+So it's going to take a long time.
+If you just look at SHA-1 as an example
+you know, that was an algorithm
+known to be vulnerable for a long time
+and it took over a decade.
+And for that to finally get deprecated
+and kind of worked out of common use.
+So that's definitely one big reason.
+It's also going to take a village.
+You know, it's not a small team within
+a company is going to be able to do this.
+You know, it's going to affect a lot of,
+you know, your network infrastructure,
+your your applications
+if you have IoT devices.
+I mean, there's
+a lot of different things to consider.
+So it's going to take involvement
+from a lot of people across enterprise.
+So that's going to take some time.
+That's also a reason to get started, now.
+It's getting costly.
+So some recent reports somewhere
+in the neighborhood of $170, $180
+is the cost per record breached.
+You know, that in itself
+doesn't sound like much.
+And I'll start multiplying
+that by the millions of potential records
+that could be breached by a
+cryptographically relevant
+quantum computer,
+and that starts to become a big number.
+We don't
+know exactly when it's going to manifest
+itself.
+You know, what's the timeline?
+Is it five years out, you know, this
+cryptography relevant on quantum computer
+or is it 15 years out or 10 years out.
+You know, we just don't really know.
+There's a lot of indications
+suggesting that maybe,
+you know, more in the 5 to 10 year range,
+but we don't really know.
+But that's another reason to start now.
+And then finally, the whole harvest
+now decrypt later problem.
+You know, that's the first quantum attack.
+It's a two part attack.
+That first is happening now
+and it's been happening.
+At least there are some indications it's been happening
+for a number of years now.
+So it's it's not all
+data has a shelf life.
+It's very important
+to start securing the more sensitive data
+and the data with the long shelf
+life sooner versus later.
+Outstanding. And I agree,
+you know,
+it's best to start now sooner
+rather than later.
+So what opportunities do you see
+in terms of cybersecurity modernization,
+cryptographic agility
+in crypto, bill of materials, etc.,
+that AT&T is planning for and ultimately
+executing on quantum safe
+they're trying to transition?
+Yeah.
+So as far as opportunities, one
+I guess right off the top,
+the opportunity to transform a,
+you know, cybersecurity infrastructure is,
+you know, it's decades old at this point.
+We've kind of kept adding to it
+and adding more features and
+different types of security to it.
+But, you know, original concept is decades
+old at this point.
+So that's definitely an opportunity.
+Quantum is providing that impetus
+to make those changes.
+Having a good visibility
+of your crypto
+estate is another key point.
+You know, putting this the C bomb
+or the cryptographic
+inventory in place
+and just getting a good visibility into
+where
+all your cryptography is at, who owns it.
+And you know what exact cryptography is
+being used across
+an enterprise is a big thing.
+And you quantum
+is providing an opportunity for that.
+There's been a lot of work towards looking
+more at risk and risk quantification,
+I think around business general,
+but specifically around quantum
+I've seen here lately.
+So being able to use
+a risk centric approach to prioritize
+your work efforts, I think that's another
+opportunity
+that's coming out of this whole
+program or problem.
+So I wanted to ask you,
+how do you see AT&T
+and the entire industry making progress
+in this space in the coming years?
+So, you
+know, those opportunities,
+Of course, crypto inventory is a big one.
+I see a lot of
+security solutions
+that are starting to emerge.
+There's a lot of vendors out there and
+there's some you know, there's a number of
+different technologies that are starting
+to kind of bubble up as being,
+you know, getting to the point
+of being commercially viable.
+So those are good things,
+you know, the opportunity
+to build crypto agility
+into the our I.T infrastructure,
+that's a big, you know, big deal.
+I think that, you know,
+one of the things I think comes out of
+that is not only
+from a security perspective, but
+we've seen a lot of companies
+carry this technical debt
+just over the years of
+just not having the I.T.
+budgets
+to deal with some things that you know,
+maybe some older
+systems in that. So I think
+this presents some great opportunities
+to get rid of some of the technical debt,
+you know, retire
+some of that older technical debt
+and hopefully crypto agility
+and having that agility in place
+and automation helps minimize
+future technical debt.
+I love that concept of
+technical debt.
+Most of the systems that we use in
+this country
+has been layered upon for many years.
+And so this is an inflection
+point opportunity
+to change the security posture
+of those systems.
+I love that concept.
+So finally, I want to ask you,
+what advice do you have for others
+who are starting to think about their own
+quantum safe readiness and
+transformation plans?
+Yeah, So just I think one of the things
+that helped, frankly, helped us,
+I guess, get a good foothold is awareness.
+I think just awareness across
+an enterprise is a big thing.
+There's starting to be some awareness, but
+just, you know, a lot of companies
+I talked to a lot of different people.
+It seems like awareness is still lacking
+and a lot, a lot of ways.
+I mean, obviously here we're good,
+but you get outside of this room
+and there just isn't awareness.
+There needs to be.
+So I think awareness is a key thing
+and that's not just of leadership.
+You know, it's also different stakeholders
+within the enterprise, you know, people
+over different business units and things
+like that, and also the workforce.
+You know, it's going to take a village.
+So making sure your workforce
+is up to speed understands what's coming
+and why it's coming.
+I think those are all things.
+And, you know, one of the benefits that
+can come out of just awareness alone is
+as just in the normal cycle of things.
+These tech refresh cycles
+have an awareness across the company.
+You know, maybe somebody says,
+I got to replace this platform over here.
+I should look at a quantum, you know,
+secure or a quantum safe replacement.
+As I work to upgrade that.
+So I think those are all good things.
+Mitigation, strategy and having a roadmap,
+the mitigation strategy
+being more of the kind of,
+I guess, the North Star kind
+of having here's where we're at today,
+here's what we want to get to, can use
+that as your guiding North Star
+to make sure you're focused
+on the right things.
+And then the roadmap.
+You know, this is going to be spread out
+over a number of years.
+It's going to take a long time
+to make all these changes.
+So just mapping it out year by year,
+kind of having a good roadmap
+where you go and as we saw with
+IBM earlier today. And then
+the C bomb,
+you know, we talked about the inventory
+in the crypto bill of materials.
+If you don't know who owns it,
+what cryptography is being used
+and where it's at, you know, it really
+it limits your ability to really move
+forward in a post quantum world.
+So that's absolutely paramount.
+And then finally, supply chain.
+You know, there's
+I think pretty much all companies
+have a lot of suppliers, right?
+So if you're not working to secure
+your supply chain, you kind of miss it.
+You know, that's a big segment of your
+security profile, security posture.
+So I think it's really, really important
+to start having the conversation
+with your suppliers
+and ask you'll just ask, you know,
+to see their quantum roadmap
+to give you some visibility
+as to whether they're prepared
+or not prepared kind of thing.
+Yeah, Ray mentioned
+that we work with many clients
+from a quantum safe perspective and
+we're appreciative
+to have the kinds of partnerships
+that can make the impact.
+And I want to thank you, Brian,
+for working with us
+and we really appreciate
+the partnership with IBM and AT&T
+over the years. Brian Miles.
+Thanks. So
+so I'll close.
+and I want to thank Ray Harihankar
+for that illuminating technology
+brief on the quantum safe
+technology capabilities.
+The one thing I will share with you
+is a concept that my colleague John
+Buselli has often said to me,
+and that is don't panic, just plan.
+Although there may be a complex,
+transformational journey
+coming down the path,
+you have partnerships
+and capabilities that can help.
+And with that,
+I just want to thank you for your time.

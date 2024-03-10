@@ -1,0 +1,89 @@
+[Music]
+so what is git and why is it so popular
+git is the most popular version control
+system in the world
+a version control system records the
+changes made to our code over time
+in a special database called repository
+we can look at our project history and
+see
+who has made what changes when and why
+and if we screw something up we can
+easily revert our project back to an
+earlier state
+without a version control system we'll
+have to constantly store
+copies of the entire project in various
+folders
+this is very slow and doesn't scale at
+all especially if multiple people have
+to work on the same project
+you would have to constantly toss around
+the latest code via email or some other
+mechanisms
+and then manually merge the changes so
+in a nutshell
+with a version control system we can
+track our project history and work
+together
+now version control systems fall into
+two categories
+centralized and distributed in a
+centralized system
+all team members connect to a central
+server to get the latest copy of the
+code
+and to share their changes with others
+subversion and microsoft team foundation
+server
+are examples of centralized version
+control systems
+the problem with the centralized
+architecture is the single point of
+failure
+if the server goes offline we cannot
+collaborate or save snapshots of our
+project
+so we have to wait until the server
+comes back online
+in distributed systems we don't have
+these problems every team member has a
+copy of the project with its history on
+their machine
+so we can save snapshots of our project
+locally on our machine
+if the central server is offline we can
+synchronize our work directly with
+others
+git and mercurial are examples of
+distributed version control systems
+out of all these git is the most popular
+version control system in the world
+because it's free open source super fast
+and scalable
+operations like branching and merging
+are slow and painful in
+other version control systems like
+subversion or tfs
+but they're very fast and git we'll talk
+about this later
+so git is almost everywhere more than 90
+of software projects in the world use
+get
+that's why almost every job description
+for a software developer mentions git
+so if you're looking for a job as a
+software developer git is one of the
+skills you must have on your resume
+you should know it inside out you should
+know how it works and how to use it to
+track your project history
+and collaborate with others effectively
+if you want to learn git
+i have a one hour tutorial here on my
+channel the link is below this video
+if you enjoyed this video please give it
+a like and subscribe to my channel for
+more videos like this
+[Music]
+you

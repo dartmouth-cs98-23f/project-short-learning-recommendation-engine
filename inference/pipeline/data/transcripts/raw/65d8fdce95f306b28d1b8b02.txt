@@ -1,0 +1,239 @@
+Most Software Engineers have a degree in Engineering
+or Science. Do you know why? There are 2 main
+reasons for this. One, Engineers can generally
+think logically. Two, Engineers are good at
+Math. One of the major reasons I was able
+to get a job at Google without a Computer
+Science degree is because I am above average
+at Math. Now, I can not teach you all the
+Math I know in a short video. You anyway don’t
+need most of it to become a Programmer. Let
+me do this. I’ll share 5 essential Math
+Skills that will get you 80% there. The rest
+of 20%, you can learn on the go as you encounter
+new problems.
+But why do programmers even need Math? Imagine that
+you are a Software Engineer at Google. And
+you are given a critical problem to solve.
+Many Google users are not able to access the
+website because of an overloaded server. This
+problem is getting worse with every passing
+minute because the client side is configured
+to do an automatic retry after one second
+for every failed call. You talk to a Senior
+engineer on your team and she recommends using
+“Exponential Backoff” for retries. What
+does “exponential” mean, you ask her.
+She points you to the documentation. If your
+basic math skills are not good, it might take
+you a long time to understand and implement
+the “exponential” piece of the algorithm
+even after reading the documentation. And
+in the meantime, the entire internet traffic
+will see a huge drop because for many people,
+No google means no internet.
+Now if that example doesn’t convince you,
+here's an even more important reason to learn
+Math. Most tech companies conduct coding interviews
+to see if you are a good fit for the role.
+And whether you like it or not, they ask algorithmic
+style questions in these interviews. At the
+end of the interview, the interviewer usually
+asks you the time and space complexity of
+your solution. In order to answer these questions
+and actually get the job, you need to know
+some basic Math concepts. Many people who
+come from non-CS and non-Engineering backgrounds
+have a hard time answering these questions.
+So, I have chosen the top 5 Math Skills for
+today keeping these interviews in mind.
+Now, I know that there’s a sizable number
+of you who pretty much hate coding interviews
+and don’t want to go through them. And I
+completely respect your position. But for
+the vast majority of us, we don’t have the
+luxury to give up on our dreams just because
+we don't like one step of the process. This video
+is for those people. Let’s learn some Math.
+To learn the first concept, we need to start
+with an exercise. Here a piece of code that
+contains a for loop nested inside another
+for loop. What is the time complexity of this
+code? In other words, how many times would
+this code print “Hello, World!” for any
+arbitrary value of N. This video is going to be interactive. So, you can pause this video and leave the answer in the comments.
+If your answer is O(N^2) or N^2 times, then
+you would benefit a lot from what I am about
+to tell you. Most people who answer N^2 do
+it because they confuse the code I gave you
+with this other piece of code. They see a
+nested for loop inside another and immediately
+jump to the N^2 which is the wrong answer
+in this case. To understand why that is, let’s
+think from the first principles. Looking at
+the code, it’s obvious that the outside
+for loop runs N times. Each time this outside
+loop runs, we go inside and run this nested
+loop K times. We don’t know what that K
+is at this time but we will find that out
+shortly. So we print a total of K “Hello,
+World!” statements everytime we go inside
+the outer “for loop” which itself happens
+N times. So, in total we print K*N “Hello,
+World!” statements. Now, if you look at this other easier and more popular piece of code, the internal loop
+also runs N times. So, K*N in this case is
+equal to N^2. But, that’s not the case in
+the code I gave you. What I want you to take
+away from this is that whenever you have A
+that happens x times. And whenever A happens,
+B happens y times. B will happen a total of
+x*y times.
+Now, to know the value of K in the last exercise,
+we need to know the second concept. So,
+here is a question for you. You are given
+a stick that is 32 meters in length. You break it
+into 2 halves. You throw the right piece away
+and break the left piece into 2 halves again.
+You throw away the right half and keep breaking
+the left piece until you have a stick of length
+1m left. How many times did you break the
+stick in total? You can pause the video and
+leave the answer down below. If you answered
+5, then you are right. Here’s an interesting
+observation about the answer. If you take
+2 which is the number of pieces you break
+stick into every time and you take 5 which
+is your answer. And you multiply 2 to itself
+5 times, you get 32 which is the original
+length of the stick. In other words, 2 to
+the power of 5 is 32. Whenever you have an
+equation like this, 5 is called logarithm
+of 32. Technically, it’s logarithm to the
+base 2 but in computer science, people usually
+think in terms of logarithm to the base 2.
+So, we can just call it logarithm or log here
+for our purpose. But it’s important to know
+that in Math, people usually mean logarithm
+to base 10 when they say log. I recommend
+you to read a little bit more about logarithm
+on your own. Anyway, in the generic case,
+if 2 to the power x is N. Then, x is called
+the logarithm of N. So in the stick example, you broke the stick a total of log32 times, which is 5. 
+Going back to the example with 2 for loops, if you look closely
+at the internal for loop, it does exactly
+the opposite of the stick breaking example.
+You start with a stick of length 1. When you
+do j = j*2 or in other words double the length,
+you are bringing a stick of the same length
+from somewhere and you are attaching it to the original
+stick. And you keep doing it until you reach
+the length N. So, how many times do you have
+to double the length of the stick this way until you reach the length of N. Looking at stick example I gave you, It’s going to be log(N)
+and that’s the K we were looking for. So,
+the total number of times you print “Hello,
+World!” in this case is N*K, which is Nlog(N). If you
+have some experience with algorithms, I’m
+sure you already seen that the stick breaking example is very similar
+to Binary Search algorithm.
+Logarithm also appears in some other algorithms like Sorting 
+and some Heap related problems.
+Before I can explain what exponential means
+in “exponential backoff”, we have to understand
+the third concept of the day. For that,
+I have another question for you. How many
+3 digit numbers can you make by using digits
+1,2 and 3 given that you can use each digit
+only once? You can pause the video and leave
+the answer in the comments. If you answered
+6, then you are right. But what if I asked
+the same question for 9 digit numbers using
+digits 1 to 9 without repetition? To answer
+this question, you would need to know what
+a Factorial is. Let’s see what factorial
+is using the 3 digit problem. We will call
+first digit A, second one B and the third
+one C. Let’s pick the first digit of this
+number. For that we can use any digit from
+1, 2 and 3. So, we have 3 options here. Let’s
+say we pick 2 here. For the second digit,
+we have only 2 options left because we can
+use one digit only once. Let’s say we pick
+3 for the second digit. Now, for the last digit, we have only
+one option left which is 1. So, A can have 3 values. For each A, B can have 2 values.
+And for each B, C can have 1 value. Can you
+see that we can use the first concept that
+we learnt today here? So, the total 3 digit
+numbers would be a multiplication of 3, 2
+and 1 which is 6. For a 9 digit number using
+digits 1 to 9, the answer would be the multiplication
+of all the numbers from 1 to 9. And this multiplication
+is called 9 factorial and is written like this.
+Factorial is nothing but a multiplication
+of all numbers from 1 to that number including
+the number itself. Factorial appears in many
+algorithms like finding subsets of a set and
+permutations of numbers etc.
+Now that we have that out of the way, let’s
+talk about the fourth concept which is “Exponentials”.
+For that, we need to go back to the 3 digit
+numbers example. Let me change the question
+a little bit for you. How many 3 digit numbers
+can you make using 1, 2 and 3 if you can
+use a digit more than once? I would love
+to see your answer in the comments. If we
+go back to the example I gave for the
+factorials, you will see that now we have 3
+options for A, B and C. And that’s why total
+such 3 digit numbers now would be 3 into 3
+into 3 which is 3 to the power 3. And this
+is called exponentiation or exponential. Let’s try to understand
+exponential backoff based on what we know
+now. In the “exponential backoff” algorithm,
+you will
+do the first retry for the failed request
+after x seconds. If the request fails again,
+you increase the wait time for retry by let’s
+say, 2 times. If it fails again, you increase
+the wait time 2 times again. And you keep
+doing it. If you look closely, the wait time
+for retrying the failed request is increasing
+exponentially here. Hence, the name “exponential
+backoff”. One of the main characteristics
+of something that is exponential is that it
+increases or decreases really fast. For example,
+the spread of Covid was exponential because
+one person can infect let’s say 3 people,
+each of those 3 infect 3 more and so on. Exponential
+growth is a powerful concept for life in general
+and it can be life changing for new programmers.
+That’s because in the beginning, most programmers
+have this nagging feeling that they are not
+growing fast enough. Many get demotivated
+and give up as a result.
+But, here’s a graph showing the power of
+exponentiation from the book Atomic Habits
+by James Clear. If you just improve 1 percent
+each day for 365 days, you will be 38 times
+better at the end of the year. And if you
+build bad habits and become just 1% worse
+each day, you will lose 97% of what you have
+today in one year. That’s exponentiation
+in action for you, my friend.
+Another concept you need to know about is
+Modulus. For positive numbers, modulus or
+mode is the same as what you would normally
+call remainder in division of 2 numbers. Modulus
+operator is written as a percentage sign.
+So, 27 mod 5 is 2 which is the same as the
+remainder when you divide 27 by 5. For negative
+numbers, there’s a small difference between
+mod and remainder which I recommend you read
+up yourself. Some popular interview problems
+that use mod are “Find greatest common divisor
+of 2 numbers” and “Fizzbuzz”.
+So now you know the Math you need to become
+a programmer. Next, you need a simple well
+defined step by step path to learn programming.
+If you want to know the path that I recommend,
+watch this video. My name is Sahil and I will
+see you in the next one.

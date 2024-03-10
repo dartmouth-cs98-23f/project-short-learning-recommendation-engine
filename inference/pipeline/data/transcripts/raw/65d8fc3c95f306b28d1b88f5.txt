@@ -1,0 +1,352 @@
+hello everyone this is vishali in
+previous session we discuss about risk
+management topic with example I have
+mentioned complete software engineering
+subject playlist Link in below
+description box
+now in today's session we will discuss
+the next important topic that is
+software configuration management as per
+your exam point of view this is one of
+the most important topic let's start the
+session
+in this session we will discuss about
+sem their importance process repository
+their functions and tools at the end we
+will discuss some important questions
+that have asked in previous year
+question paper
+let's see all these points one by one
+now the first thing is what exactly SCM
+SCM stands for software configuration
+management C while developing a
+particular software project you must use
+software development life cycle there
+are various phases like requirement
+Gathering and planning analysis design
+implementation testing maintenance
+Etc
+now while developing a particular
+project there are various changes that
+occur at each phase of sdlc the changes
+related to the customer requirements
+changes in software team or the
+organization changes in government
+policies and roles or sometimes changes
+in Project schedule
+now to handle and monitor all these
+changes for that purpose software
+configuration management process is used
+as per the definition SCM is processed
+for systematically manage organize and
+control all the changes in documents
+codes and other entities in sdlc to
+monitor all these changes are necessary
+because it affect on your programming
+code your project planning then your
+testing data and other database
+to handle all these configuration items
+there are different SCM tools are
+available like puppet config Hub then
+solstack ansible git bitbucket Docker
+these tools are used by the
+configuration manager to handling all
+the configuration data
+the primary goal of SCM is to increase
+productivity with minimal mistakes
+now the next topic is importance of SCM
+and the main importance is configuration
+manager ensure that all the changes
+occur in software project are properly
+planned tested and integrated into the
+final product
+it also helps software team members to
+collaborate and coordinated their work
+let's take one example Suppose there are
+new WhatsApp updates are available so at
+that time you update your WhatsApp from
+the Google Play Store
+so at that time there are new features
+are available right so this SCM process
+manage and track different versions of
+particular software system
+they also ensure that everyone working
+from the same version of software system
+also help in deployment phase of
+software development life cycle they
+maintain environment on the client side
+while developing a particular product
+basically it improve quality and
+reliability of Software System it also
+increase efficiency and reduce the risk
+of errors in particular software project
+so this is the importance of SCM in
+software engineering
+now the next topic is SCM process as per
+your exam point of view this is one of
+the most important topic there are total
+value steps in SCM process like
+identification Version Control Change
+Control configuration audit and
+Reporting this sem processor handled by
+the project manager configuration
+manager developer and the end user
+now let's discuss SCM process in detail
+now the first step of sem process is
+planning and identification here
+configuration manager identify the scope
+and objective of particular software
+project
+for that purpose they arrange meeting
+group discussion brainstorming session
+with your software team and different
+stakeholders
+configuration manager identify different
+test cases requirements different models
+and schedule time of particular project
+they also identify software
+configuration items means which type of
+Hardware resources software resources
+and human resources are used in
+particular project
+basically they maintain a details of why
+when and what changes will be occur in
+particular project and by whom this all
+changes are performed they identify and
+analyze all these details they also
+mention proper naming convention to each
+and every file see here instead of
+naming a file login.php you should give
+a file name login
+v1.2 PHP here v1.2 stands for version
+number of file C
+every time new features are added in
+particular project so also change the
+name of that particular file that is
+version 1 add new features that is
+version 2. again add new features that
+is version 3 in this way so mention
+proper naming convention to each and
+every files and the folders
+now the second step is Version Control
+process or Baseline see SCM process
+handle different versions of
+configuration objects and the particular
+product
+see here in this diagram suppose
+developer 1 work on WhatsApp
+v1.1 file that is first version of file
+now developer to add some extra features
+in particular product now they mention a
+file name WhatsApp v1.2 means second
+version similarly developer 2 developer
+3 Edit that particular file also add
+some extra feature in that file now
+developer 3 give the file name WhatsApp
+v1.3 Miss third version of that file now
+this last updated file stored into this
+repository and multiple stakeholders use
+this latest or updated version of file
+so this process are handled by the
+configuration manager in SCM process
+they control the alter modification and
+storing all this latest version file
+into the Repository
+now the next step is Change Control
+process see there are various changes
+that occur at each phase of sdlc the
+changes related to the add or edit
+various configuration item changes
+related to the user permission or
+sometimes changes related to the
+client's requirements right now when
+there are changes are available so what
+is the process see here suppose customer
+want video call this new feature in
+particular project right so this changes
+is there now software team said this
+particular changes to the software
+configuration manager now software
+configuration manager check that overall
+impact of that particular change in your
+project
+after that they approve those changes or
+denied those changes if particular
+changes affect on your project or there
+is a wrong impact on your project so
+configuration manager denied doe changes
+okay otherwise they approve it
+if configuration manager approve those
+changes so Implement all the necessary
+changes by the software developer and
+mention all these changes into the
+document so this is called as Change
+Control process so basically all the
+changes are approved by the software
+configuration manager
+now the next step is configuration audit
+process so basically configuration
+manager here identify that all the
+changes are properly developed or not
+they check that or they audit that all
+the completeness correctness and
+consistency of modified or changeable
+items in software configuration process
+they also mentioned that what is new in
+each version and why the changes are
+necessary they audit and verify all this
+complete process and maintain a document
+accordingly
+now the last step is review and Status
+reporting process basically
+configuration manager takes some
+technical review of each and every
+module in particular project
+they take a review on application
+workflow Miss complete workflow of your
+process from start to end various
+process and models configuration items
+means related to software and Hardware
+resources are properly used or not and
+all the changing requests of the client
+they take a review of this thing and
+mention all these details in documents
+now this status report provided to the
+developer tester end users customers and
+stakeholders they check that your
+complete project is developed as per the
+customer requirements
+they also mentioned some user manual
+installation process guide configuration
+guide and do's and don'ts guide see here
+suppose when you buy a washing machine
+so at that time there is a user manual
+is there this user manual mention
+everything how to install washing
+machine then how to use washing machine
+do's and don'ts related to the washing
+machine right so this is called as
+review and status report this is
+developed by the configuration manager
+this is the last step of SCM process
+now the next topic is SCM repository
+basically SCM repository is a set of all
+Control process and data structure which
+allows software team to manage all the
+changes in effective manner
+see here
+in this particular diagram this is a SCM
+repository there are total six tools are
+used like versioning dependency tracking
+change management requirement tracing
+configuration management and audit
+Trails these are the six tools are used
+in SCM Repository they manage Version
+Control change control and Release
+Control process
+now these are the different functions of
+SCM Repository
+now let's discuss these functions and
+tools in detail
+now why SCM repository is used in
+particular SCM process basically SCM
+repository is centralized database all
+the changes are performed and after that
+store this changes or updated version
+file into the SCM repository okay the
+first function is data sharing means
+this sem repository ensure that all this
+information are consistently and
+accurately shared with all the
+stakeholders then information sharing
+multiple user access latest version of
+file from this repository then tool
+integration here SCM repository use
+different tools for Version Control
+Change Control purpose
+data integration here one or more
+resources Miss different software
+resources Hardware resources then
+different programming languages database
+framework so integration of all those
+things while developing a particular
+product is necessary so they maintain
+this thing next one is a methodology and
+foreign enforcement here they Define
+entity relationship model means while
+developing a particular project there
+are different modules are there right
+and now there is a inter relationship
+between each and every model
+and also there is some authorization
+process let's take an example of college
+management system there are suppose
+three modules student teacher and hod
+module so this all three modules are
+interrelated with each other
+student model used by the user student
+teacher model used by the teacher hod
+model used by the hod also right so this
+is called as entity relationship model
+means which type of modules are there
+what is their functionality and used by
+the which stakeholders this is called as
+methodology enforcement the next one is
+the document standardization means
+everything have mentioned in document in
+particular standard approach so this is
+a SCM repository function
+now the next is SCM repository tools the
+first tool is versioning see as we
+discussed earlier there are various
+versions of particular product and
+particular project so this versioning
+tool mention all the version numbers of
+particular file as per their creation
+date
+next one is the dependency tracking and
+change management see as per the
+customer requirement there are various
+changes are occur in particular project
+so they manage and track all the changes
+in relationship between all the objects
+and their models for that purpose they
+use uml diagram next one is a
+requirement tracing see there are two
+types of tracing first is a forward
+tracing and second one is a backward
+tracing forward tracing means first
+design a particular product then develop
+a particular product and after that
+deliver to the customer and take a
+feedback from the customer this is
+called as forward tracing now backward
+tracing means after developing a
+particular product check that which is
+developed as per the customer
+requirements or not this is called as
+backward tracing next one is a
+configuration management so here this
+repository tool track a complete series
+of configuration means they maintain all
+the version of particular product
+every version there are new features and
+new specifications are there
+then audit Trails so audit Trails
+establish all the information of when
+why and why whom all these changes are
+occur they mention all these details in
+particular database
+now as per your exam point of view these
+questions are important first which are
+the layers of SCM process explain each
+in detail here you have to explain SCM
+process for 8 marks then what is SCM
+explain Change Control mechanism for 7
+marks then what is software SCM
+repository explain their features of
+tool set for 8 marks and explain SCM
+repository features for 7 marks so you
+have to prepare this topic completely
+for 7 to 8 marks
+so thank you keep learning

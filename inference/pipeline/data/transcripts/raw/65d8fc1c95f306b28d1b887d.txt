@@ -1,0 +1,146 @@
+Welcome to whiteboard programming where we
+simplify programming with easy to understand
+whiteboard videos and today I'll be sharing
+with the difference between types of neural
+networks, to be specific, the difference between
+ann cnn and rnn... so let's get started!
+1.
+Artificial Neural Network (or ANN) Well, it
+is a group where we have multiple perceptrons
+or neurons at each layer and is also known
+as a Feed-Forward Neural network because inputs
+are processed only in the forward direction.
+This type of neural networks are one of the
+simplest variants of neural networks as They
+pass information in one direction, through
+various input nodes, until it makes it to
+the output node.
+This type of neural network may or may not
+have hidden node layers, making their functioning
+more interpretable.
+Some of the advantages of Artificial Neural
+Network (or ANN) include
+1.
+they store information on the entire network
+2.
+they have the ability to work with incomplete
+knowledge
+3.
+they offer fault tolerance and have distributed
+memory
+4.
+they offer us the ability to work with incomplete
+knowledge
+Likewise, the disadvantages include,
+1.
+they have huge hardware dependency
+2.
+they sometimes have unexplained behavior which
+can leave us tormeneted with results
+3.
+there is no specific rule for determining
+the structure of artificial neural networks
+and appropriate network structure is achieved
+through experience and trial and error
+Next one on the list, 2.
+Convolutional Neural Network (CNN) Now, they
+are one of the most popular models used today.
+This type of neural network computational
+model uses a variation of multilayer perceptrons
+and contains one or more convolutional layers
+that can be either entirely connected or pooled.
+Further, these convolutional layers create
+feature maps that record a region of the image
+which is ultimately broken into rectangles
+and sent out for nonlinear processing.
+Some of the advantages of convolutional Neural
+Network (or CNN) include
+1.
+They offer very high accuracy in image recognition
+problems
+2.
+They are capable of automatically detecting
+important features without any human supervision
+3.
+Weight sharing
+Likewise, the disadvantages include:
+1.
+CNNs do not encode the position and orientation
+of object
+2.
+They lack the ability to be spatially invariant
+to the input data
+3.
+A lot of training data is required in order
+for it to work efficiently
+Next one on the list, 3.
+Recurrent Neural Network (or RNNs) Now, these
+are a lot more complex than the ones we discussed
+so far.
+They save the output of processing nodes and
+feed the result back into the model (and hence
+they did not pass the information in one direction
+only).
+This is how the model is said to learn to
+predict the outcome of a layer.
+Here, each node in the RNN model acts as a
+memory cell, continuing the computation and
+implementation of operations and if the network’s
+prediction is incorrect, then the system self-learns
+and continues working towards the correct
+prediction during backpropagation.
+Some of the advantages of Recurrent Neural
+Network (or RNNs) include
+1.
+An RNN remembers each and every information
+through time.
+It is useful in time series prediction only
+because of the feature to remember previous
+inputs as well, this is called Long Short
+Term Memory
+2.
+A Recurrent neural network are even used with
+convolutional layers to extend the effective
+pixel neighborhood
+Likewise, some disadvantages include:
+1.
+They have gradient vanishing and exploding
+problems
+2.
+Training an RNN is a very difficult task
+3.
+It cannot process very long sequences if using
+tanh or relu as an activation function
+Next, let's summarize the difference between
+ann cnn and rnn in a tabular format,
+1.
+ANNs operate on tabular or text data, whereas
+CNNs operate on image data and RNNs operate
+on sequence data 2.
+Parameter sharing is not possible in ANNs,
+whereas it is possible in CNNs and RNNs 3.
+ANNs and CNNs operate on fixed length input,
+whereas RNNs don't 4.
+recurrent connections are not possible in
+ANNs and CNNs whereas in RNNs, they can be
+achieved 5.
+Spatial relationships are only possible in
+CNNs, and not in ANNs and RNNs 6.
+ANN is considered to be less powerful than
+CNN, RNN whereas CNN is considered to be more
+powerful than ANN, RNN and in terms of performance,
+RNN includes less feature compatibility when
+compared to CNN 7.
+The main advantages of ANNs include Having
+fault tolerance, and the ability to work with
+incomplete knowledge whereas in CNNs, there
+is High accuracy in image recognition problems,
+and it offers Weight sharing further, an RNN
+remembers each and every information and offers
+Time series prediction With that, I hope this
+video was helpful to you and served value...
+If you love my content, feel free to smash
+that like button and if you haven't already
+subscribed to the channel, please do as it
+keeps me motivated and helps me create more
+content like this for you!

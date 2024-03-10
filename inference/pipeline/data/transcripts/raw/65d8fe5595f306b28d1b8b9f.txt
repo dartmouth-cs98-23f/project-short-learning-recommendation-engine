@@ -1,0 +1,1506 @@
+all right what's going on everybody it's
+you bro hope you're doing well and in
+this video i'm going to help you get
+started with html so sit back relax and
+enjoy the show
+if you wouldn't mind please like comment
+and subscribe one like equals one prayer
+for the youtube algorithm
+i'm gonna tell you why you should learn
+html html is an acronym for hypertext
+markup language it's the most basic
+building block of the web it allows you
+to add change and remove website content
+and that's a good thing to know it's
+mandatory to know for web developers if
+you would like to enter that career
+field it's useful for software
+developers marketing and sales
+professionals if you need to edit a
+listing for your company business owners
+you could make your own website and
+freelancers people would pay good money
+for a good website heck you might as
+well add html to your resume can't hurt
+and learning html is super easy this
+full course is only going to be about an
+hour anybody can learn html even you yes
+whoever's watching this video learn html
+it's super easy what do you have to lose
+building a website is a lot like
+building a house first we need a solid
+foundation and we need to build a
+skeletal structure that's where html
+comes in it's the most basic building
+block of the web then after that we can
+add css css is cascading style sheets
+with css we can style color and change
+the appearance of a webpage and lastly
+there's javascript javascript adds
+functionality to a webpage so in a house
+this could be like plumbing heating and
+air conditioning and electricity so it
+adds functionality and when you combine
+these three levels you have a good
+functioning webpage but you need to
+start somewhere so that's why you're
+gonna learn html first what will you
+need you'll need a web browser use
+whatever web browser that you like just
+please do not use internet explorer and
+we'll also need a text editor to write
+html code you can use vs code sublime
+text heck you can even use notepad but i
+prefer vs code so i'll show you where to
+download that head to
+code.visualstudio.com and download the
+correct version for your operating
+system i'm running windows so i'm going
+to install the windows version then i
+will open when done
+accept the agreement
+yes i actually did read it that fast i
+would recommend creating a desktop icon
+and make sure add to path is selected
+next and install and then you might as
+well launch this bad boy so finish we
+are now within vs code the first thing i
+recommend is to download the live server
+extension so that after saving an html
+document we can immediately refresh a
+web page so underneath the search box
+for extensions we are looking for live
+server and install this version then
+after downloading the live server
+extension we will create a new folder
+under the explorer tab open folder
+wherever you want create a new folder
+i'll create this on my desktop just for
+convenience i'm going to create a new
+folder i'll name this website
+or whatever you want doesn't matter
+then select folder and within our
+website folder we're going to create a
+new file name this index.html
+whatever file you would like to be the
+home page of your website you'll want to
+name that as
+index.html when a connection is made to
+a website without a specific file in the
+url most servers by default will return
+the
+index.html file as a landing page so
+this index.html file will be the home
+page the landing page of our website at
+the top of our document we're going to
+type this within angle brackets
+exclamation point doc type html
+html documents should start with this
+declaration to be compliant with basic
+html standards it lets a visitor's web
+browser know that this is an html5
+document and following this text will
+create a pair of html tags tags are the
+keywords within angle brackets that a
+web page uses to define how your web
+browser will format and display content
+and usually these come in pairs so we'll
+need an opening html tag and a closing
+html tag all of our html code will be
+within these html tags so the html
+element represents the root of an html
+document and there's two major sections
+head and body so let's create a pair of
+head tags head represents information
+about a web page and there is also body
+as well so create a pair of body tags
+the body is what you would like to
+display to a user the head is
+information about the web page one thing
+that we can add to the head of our
+document is a title so we'll need a pair
+of title tags
+and let's create a title for our website
+my
+first website and then let's save let's
+open this document so i'm going to right
+click open with live server so the title
+of this web page is my first website and
+you may have noticed that this web
+browser was opened with edge so you can
+actually change that to a different web
+browser and here's how go to file
+preferences
+settings
+underneath extensions head to
+live server config
+custom browser and select a web browser
+of your choosing so right click open
+with live server and we are now using a
+different web browser so i'm just going
+to put my web browser and vs code side
+by side
+now let's add some text to the body of
+our webpage type whatever you want i
+like pizza
+then i'm going to save
+there we go we added some text to the
+body of our html document and we can
+also use a pair of header tags so
+surround some text with h1 this is the
+largest header tag and then make sure to
+close it afterwards okay so then we have
+h2 which is smaller
+we have h3
+h4
+h5
+and the last one is h6
+so if you need some sort of title for
+your web page you can always play some
+text within a pair of h1 header tags
+before i discuss p tags we should
+discuss what elements are elements
+embody the opening tag any content
+within and the closing tag so for
+example this is a opening title tag and
+a closing title tag and all of these
+together including any content within is
+known as the title element so that's the
+difference between tags and elements
+tags make up a portion of elements and
+with that out of the way we can move on
+to paragraph elements paragraph elements
+are made up of p tags we need an opening
+p tag and a closing piece egg and we can
+type some text within these paragraph
+tags
+this is some sample text browsers
+automatically add a blank line of before
+and after any paragraph elements also if
+you need some longer sample text there
+is a shortcut type lorem then tab
+and that will create some sample text
+for you and let's create another
+paragraph element so we need an opening
+p tag and a closing p tag i would like
+some more sample text i will type lorem
+then tab and we now have two paragraph
+elements if you need a paragraph of
+information to display with blank lines
+before and after you can always surround
+some text within a pair of p tags now
+there's also a br element and these do
+not need closing tags it's only an
+opening tag wherever you would like to
+add a line break just add a br element
+so let's say i would like to space out
+these header tags well i can add a line
+break between each of these
+if you ever need a line break just use a
+vr element and like i said there's no
+closing tag with these elements there's
+also an hr element and i do not mean
+human resources i mean horizontal rule
+if you ever need to divide your page
+section by section you can always add a
+horizontal rule let's say that we have a
+title to this webpage i'll create an h1
+header tag this is my website
+and then i'm just going to close this
+what if i would like to divide this
+webpage section by section i can always
+add a horizontal rule by using an hr
+element and there is no closing tag with
+this element you just type hr with an
+angle brackets and this will divide a
+section of your webpage and add a
+horizontal rule which looks pretty nice
+so that is the hr element and the last
+thing we're going to discuss for this
+topic is comments comments will not be
+displayed within the body of your
+document it's more or less a note for
+yourself or other developers to create a
+comment we need an angle bracket
+exclamation point then two dashes and
+this will create the ending of your
+comment which is an arrow pointing to
+the right so anything between these two
+arrows will be a comment i'll leave a
+comment for i don't know myself
+this is the best website ever
+so as you can see this will not be
+displayed within my webpage it's
+basically used as a note for yourself or
+for other people looking over this html
+document so yeah those are comments well
+everybody that is the basics of html so
+yeah if you liked this video please give
+this video a thumbs up leave a random
+comment down below and subscribe if
+you'd like to become a fellow bro
+hey what's going on everybody it's you
+bro hope you're doing well and in this
+video i'm going to show you how we can
+have some fun with hyperlinks and html
+so sit back relax and enjoy the show
+if you find this video helpful please
+remember to like comment and subscribe
+your support will help keep this channel
+running
+sup people so hyperlinks we can apply a
+hyperlink to text buttons images
+elements of that nature whatever you
+would like to turn into a hyperlink
+surround with a pair of a tags
+there's an opening a tag and a closing a
+tag and within the opening a tag there
+is an href attribute that you can set to
+a url of your choosing so if i want this
+hyperlink to take me to google then i
+will fill out the url for google
+so after saving if i click on this link
+it takes me to google easy enough right
+now there is a target attribute you can
+open a web page in a new tab or window
+by setting this to underscore blank
+so this should open in a new tab or
+window
+but the default is self
+so that this will open in the same
+window there is a title a title is a
+small pop-up box that will appear when
+you hover your cursor over this link we
+could write a message like this
+takes you to google
+and that box should appear after you
+hover your cursor over this hyperlink
+this takes you to google let's say you
+have another webpage and you would like
+this link to take you to your second
+page let's change the text
+uh go to page two i'm going to create
+another html file real quick i'll go to
+new file let's call this page two dot
+html
+if you need to generate the necessary
+body of an html document if you're using
+vs code you can type exclamation point
+and then tab
+and let's write a message
+this is page two
+if i set the href attribute equal to the
+relative file path of whatever page i
+would like to go to then this hyperlink
+will take me there so these files are
+right next to each other i only have to
+list the file name so i would like this
+hyperlink to take me to page2.htm
+so if i click on this hyperlink
+it will take me to my other html file
+this is useful if you have a navigation
+bar so depending on the link that
+somebody clicks on your navigation bar
+that can take you to a different page
+and lastly you can send an email to
+somebody within the href attribute type
+mail to colon then some email address
+let's say fake123 gmail.com
+let's say email me instead
+and then when you click on this link it
+will begin the process of sending an
+email
+but we won't actually complete it so
+yeah everybody those are hyperlinks you
+can apply hyperlinks to text buttons
+images which we'll have some practice
+with in the future so yeah those are
+hyperlinks and html
+all right people here's how to add an
+image to a web page find or download an
+image of your choosing i just so happen
+to have a picture of shrek within your
+folder containing your index.html file
+you're going to move or paste that image
+within the same folder and within the
+body element we're going to create a new
+element an image element within angle
+brackets type img for image this is a
+self-closing tag and many elements have
+different attributes that we can change
+we need to change the source attribute
+of this image element the source
+attribute is src and we will set this
+equal to within double quotes the name
+of our image mine is shrek.png and then
+save
+what i like to do if i'm working with
+the webpage that has a lot of images i
+like to create a separate folder for my
+images this isn't necessary but if your
+image is located within a separate
+folder we need to find the file path
+relative to your index.html file so i'm
+going to create a new folder and let's
+name this images it will contain all the
+images from my webpage then i will move
+my image to my images folder so we can
+no longer locate this image we need to
+find the file path relative to the
+index.html file to look within my images
+folder i will precede the image name
+with
+forward slash the name of the folder
+images slash the name of the image and
+there it is personally if i'm working
+with a lot of images i like to place all
+of my images within one folder if you
+decide to do that as well you just need
+to precede the file name with the name
+of the folder that it's in here's my
+image but it's fairly massive we can
+change the width and height attributes
+if we need to i will change the height
+attribute height equals maybe 200 and
+that's a lot smaller maybe 300 that's a
+little bit better the height and the
+width will scale proportionately with
+each other but you can change them
+individually let's change the width
+width equals
+let's say 100
+what we get is an extra skinnyshrek and
+if i change this to maybe 600 well shrek
+is extra thick now so i will just only
+change the height attribute so that the
+width attribute scales proportionately
+now if somebody is visually impaired
+they may be using a screen reader to
+navigate a web page it would be good
+practice to add some alternative text
+that is read out loud by a screen reader
+so that is the alt attribute within
+double quotes i'll type a brief
+description of this image
+this is a picture of shrek so when you
+add an image it's considered good
+practice to add some alternative text
+you can also add a title too a title
+will be a small pop-up box that appears
+when you hover your cursor over an image
+to add a title set the title attribute
+equal to some text
+uh shrek is
+shrek see
+and then i'm going to save hover my
+cursor over the image and we can see a
+small pop-up box that has my title shrek
+is shreksy we can also turn an image
+into a hyperlink to turn this image into
+a hyperlink we need to surround our
+image element with an opening and
+closing a tag
+so open and close within the opening a
+tag there is an href attribute that we
+can set to a url of our choosing i think
+i'll set this hyperlink to the wikipedia
+page for shrek so just type in the url
+between these double quotes save then if
+i were to click on my image this will
+take me to the wikipedia page for shrek
+or some other url depending on what you
+type here so yeah that's how to add an
+image to a web page within the body
+element you need to add an image element
+and then set the source equal to the
+image name if you found this video
+helpful please remember to smash that
+like button leave a random comment down
+below and subscribe if you'd like to
+become a fellow bro
+if you do need an mp3 file to work with
+for this video i recommend heading to
+the youtube audio library and then you
+can search and download a song of your
+choosing so after you find an mp3 file
+you can use a wav file too just drag and
+drop it to your folder containing your
+index.html file and then we can head to
+vs code now to add audio to our web page
+we need an audio element
+so within angle brackets audio and list
+the source equal to the name of your mp3
+or wav file we're going to need some
+controls so this is a boolean attribute
+we don't need to set the sql to anything
+it's either true or false and to set it
+equal to true you just type the name of
+the attribute so within the audio
+element type controls and up top here we
+have our controls for our mp3 file with
+these controls we can play some audio
+file of our choosing
+[Music]
+we can fast forward
+[Music]
+and we can mute here's a couple other
+boolean attributes we can have our audio
+autoplay by using the autoplay boolean
+attribute
+if you would like this to be muted
+originally type muted so this is playing
+but you can't hear it because it's muted
+if you need this to loop just type loop
+yep and it's looping you can have backup
+audio files just in case your web
+browser doesn't support a given format
+so if you would like some backup audio
+files we're going to change this around
+a little bit so let's get rid of our
+source and we'll create an audio closing
+tag
+and we will create multiple nested
+source elements
+type source
+source equals the name of one audio file
+you would like to use primarily if you
+have a backup let's say we have the same
+song as a wav file you can do that too
+if for some reason the browser using
+doesn't support these first two audio
+files you can always display a message
+this browser does not support
+html5
+audio so yeah everybody that's how to
+add audio to a web page you just have to
+use this audio element and set the
+source equal to an audio file of your
+choosing and there's a bunch of boolean
+attributes that you can add to if you
+would like some controls if you need to
+set this to autoplay if you need it
+muted and if you need it to loop so yeah
+that's how to add audio to a webpage if
+you found this video helpful please be
+sure to smash that like button leave a
+random comment down below and subscribe
+if you'd like to become a fellow bro
+all right welcome back everybody in this
+video i'm going to show you all how we
+can add a video to a web page you'll
+need a video of one of these file types
+when i was in tokyo some number of years
+ago i saw a real-life mario kart racing
+down the street so what i'm going to do
+is place this mp4 file next to my
+index.html file and then within vs code
+we need a video element
+and we will list the src attribute equal
+to the name of our file that we're
+working with
+and in my case it's racing.mp4 now this
+video is massive so let's change the
+width of this using the width attribute
+width equals what about
+500
+that's a lot better but we'll need some
+controls to actually play this video i'm
+clicking on this and nothing's happening
+controls is a boolean attribute we only
+have to list the attribute name to add
+controls
+there we go we now have some controls
+[Music]
+now if you want this to play maybe in
+the background and you do not want
+controls you can always set this to
+autoplay
+[Music]
+so i'm going to add the controls back if
+you need this muted just add the muted
+boolean attribute
+so it's playing but we can't hear
+anything
+and if you need this to loop just add
+the loop boolean attribute and this
+should loop
+yeah there it is here's another thing
+that we can try let's get rid of our
+source attribute and we're going to
+create a video closing tag
+and we will create nested sources within
+our video element
+source src equals our video file so just
+in case your browser doesn't support an
+mp4 video file you can always create
+another source
+let's say that we have a web m file as a
+backup just in case that this browser
+doesn't support an mp4 file and if for
+some reason that no other sources work
+you can always add a note
+this browser does not support
+html5
+audio so you can write it either way but
+if you have multiple sources you can
+always have backups just in case this
+primary source doesn't work so yeah
+everybody that's how to add a video to a
+webpage if you found this video helpful
+please be sure to smash that like button
+leave a random comment down below and
+subscribe if you'd like to become a
+fellow bro
+all right welcome back everybody so in
+this video i'm going to show you all a
+few useful text formatting tags that you
+may be interested in we'll need some
+sample text to work with this is normal
+text we'll create additional lines of
+text so i'm going to surround this text
+with a pair of paragraph tags just so
+that when we add additional text they
+will be added to a new line let's copy
+this line and paste it nine additional
+times let's say
+there we go first set of text formatting
+tags that i'll show you is bold any text
+that you need to bold just surround that
+text with a pair of b tags we need an
+opening b tag and a closing beats egg
+this is normal text and you can see that
+the word normal is bold uh let's change
+that to bold just so that it's more
+descriptive of what it does
+okay so any text you need bold just
+surround with a pair of b tags the next
+set of tags is italic surround any text
+that you need italic with a pair of eye
+tags this is italic text we have big
+this is big text
+we have small
+this is small text sub for subscript
+this is subscript text superscript
+the tag name is sup like you're saying
+sup to somebody
+this is superscript text we have
+inserted inserted is just underlined
+ins for inserted
+this is inserted text
+there is deleted deleted will create a
+line through some text
+this is deleted text and there's one
+more it looks like i miscounted there's
+also marked
+so we use a pair of mark tags
+any text that is marked is highlighted
+so yeah those are a few text formatting
+tags that i thought you should know if
+you found this video helpful please be
+sure to smash that like button leave a
+random comment down below and subscribe
+if you'd like to become a fellow bro
+hey welcome back in this video i'm going
+to show you all how we can create lists
+in html there's three lists we're going
+to talk about unordered ordered and
+description lists let's begin with
+unordered lists to create an unordered
+list we need a pair of ul tags for an
+unordered list and between these ul tags
+we can create individual list items and
+we use a pair of li tags for each item
+we would like to add to our list so
+what's an example of an unordered list
+one thing that comes to mind is a
+shopping list like a grocery list
+because well i'm kind of hungry right
+now it's breakfast time let's say that
+we're going to bake a pizza and we need
+a list of ingredients we need pizza
+dough so add an item between this pair
+of li tags and we now have one bulleted
+item within our unordered list and let's
+create another item so we can just copy
+and paste this pair of li tags and
+create a new list item
+what about tomato sauce
+and then maybe cheese
+and toppings
+point being to create an unordered list
+you need a pair of ul tags and with each
+list item you would like to add to your
+unordered list you just place within a
+pair of li tags for list item an ordered
+list is very similar except we use ol
+tags so we need an opening ol tag and a
+closing ol tag so by default each list
+item is going to be numbered so let's
+say that we have a to-do list
+to add a list item we need to use a pair
+of li tags perhaps this is a schedule of
+what we have to do in the morning we
+have to eat breakfast
+that could be one list item
+so to add another item we need another
+pair of li tags
+then maybe we need to take a shower
+so each of these is numbered and they're
+in ascending order
+and then we want to what about
+leave for work okay so yeah that is an
+ordered list the order of the list items
+does matter and we can change the type
+too within the opening oil tag there is
+a type attribute we can set each list
+item to a number a letter or roman
+numerals if i would instead like letters
+i can just set the type equal to a and
+our list items are now marked with the
+letter and we have description lists we
+need a pair of dl tags for description
+lists
+and instead of using an li tag for each
+list item we use a pair of dt tags for
+description term and dd tags for
+description definition so for a term
+that is dt and then we add a definition
+to this term let's say we have a list of
+web dev languages for a term we need an
+opening dt tag and a closing dt tag
+and then we can add a definition to this
+term so that would be dd description
+definition between the opening and
+closing dd tags we can add a definition
+to this term
+let's say that this adds
+structure to a web page
+and then to create another term and
+definition pair we can just copy this
+let's add css this adds style to a web
+page
+then javascript
+this adds
+functionality to a webpage with
+description lists each list item is a
+pair of terms and definitions the last
+thing i'm going to show you you can
+create a nested list within a list so
+let's say i would like to add a sub list
+of individual toppings to our unordered
+list within the list item we just create
+a new list let's say that i would like
+another unordered list so i need a pair
+of ul tags
+and what are some toppings we can place
+on our pizza so we need a list item
+what about pepperoni
+so we have a sub list going if you take
+a look on the webpage right now oh then
+maybe
+what about mushrooms next i like
+mushrooms
+and
+peppers i guess all right people those
+are how to create lists there's three
+types unordered ordered and description
+lists just use a pair of appropriate
+tags depending on the list you want to
+use so yeah everybody that's how to
+create different lists in html if you
+found this video helpful please remember
+to smash that like button leave a random
+comment down below and subscribe if
+you'd like to become a fellow bro
+hey it's you bro hope you're doing well
+and in this video i'm going to show you
+all how we can create a table using html
+so sit back relax and enjoy the show
+everyone i'm going to show you all how
+we can create a table using html let's
+say that we have a store not an online
+store but a brick and mortar store and
+our job is to create a table of the
+hours of operation for our store
+which we can best represent with the
+table on our website so to create a
+table we'll use a pair of table tags
+there's an opening table tag and a
+closing table tag to add a row to our
+table we can use a pair of tr tags for
+table row and let's say that we'll have
+two rows one for the days of the week
+and the other for the hours of operation
+so within this first row let's add some
+headers using th tags for table header
+and i'll list the days of the week so we
+have sunday through saturday so to add
+another header just use another pair of
+th tags
+sunday
+monday
+tuesday
+you get the rest
+table headers are inherently bold if we
+would like to add some data to the
+second row we'll add that between the tr
+tags for the second row
+so we would like some data which is td
+we need an opening td tag and a closing
+td tag for each cell let's pretend that
+our store is open monday through friday
+nine to five and closed on the weekends
+saturday and sunday this first cell is
+for the first day sunday the first
+column
+so we are closed this day let's copy our
+table data element and copy it this will
+be for the second row monday and we are
+open nine to five and let's fill this in
+for the days monday through friday
+and then saturday we are closed
+all right let's color in these cells
+i'll make the first row a dark gray
+color so to change the color of the
+first row within the opening tr tag for
+the first row there is a bg color
+attribute which means background color
+and i will set the sequel to gray and
+our second row let's make this light
+gray so within the opening tr tag for
+the second row let's set the bg color
+attribute equal to a different color
+like light gray pick whatever color you
+want it doesn't necessarily have to be
+gray so within the opening table tag i
+will set the bg color equal to what
+about black
+cool these cells are left aligned we can
+center them to center the cells within a
+row within the opening tr tag there is
+an align attribute and let's set this
+equal to center and the text is now
+centered and lastly let's make all of
+these cells the same size this wednesday
+cell is taking up a lot of space let's
+set the width equal to maybe 100 pixels
+and i will just copy this
+and with the opening table element i
+will set this equal to the width of each
+cell times the number of cells that we
+have so if each cell has a width of 100
+and there's seven cells i will set the
+width equal to 700.
+and well there we go all of these cells
+are now aligned so yeah that's how to
+create a table in html just use a pair
+of table tags for each row add a pair of
+tr tags if you need a row to function as
+a header such as the days of the week
+use th tags if you're filling in data
+for a cell use td tags for table data so
+yeah that's how to create a table in
+html if you found this video helpful
+please be sure to smash that like button
+leave a random comment down below and
+subscribe if you'd like to become a
+fellow bro
+hey uh what's going on everybody in this
+video i'm going to show you how we can
+add color to a webpage so sit back relax
+and enjoy the show
+all right now here's how we can add
+color to a web page we'll be talking a
+little bit about css but we'll cover
+this more in depth in the css series i
+thought this would be a good place for
+us to introduce colors because we'll be
+able to color things like buttons and
+forms and whatnot here's how to add some
+color to a webpage within the opening
+tag of an element of your choosing
+there is a style attribute and within
+double quotes we can add css properties
+for my website i would like to change
+the background color to black because i
+think it would look cool so within
+double quotes list the css property you
+would like to change background color
+after the colon you can either add a
+color name rgb values or hexadecimal
+values let's just say the color black
+there we go we can no longer see my
+website let's change the font color of
+these individual h1 header tags again
+it's the same process as before
+style equals
+within double quotes list the css
+property you would like to add
+i would like to add color this time to
+change the font color and i will pick
+red there we go this time let's use rgb
+values
+so again style attribute equals the css
+property would like to change
+to instead use an rgb value type rgb
+parenthesis then i would recommend
+looking up a color picker
+and you can pick a color of whatever you
+would like uh what about blue
+perhaps that shade of blue so rgb values
+are in a group of three a triad
+so i will copy these three numbers and
+paste them within the parentheses of rgb
+and the second h1 header tag is now that
+specific shade of blue i tend to prefer
+to use rgb values or hexadecimal values
+over color names because you have more
+variety now let's use hexadecimal values
+style equals the css property
+of color
+so hexadecimal values always start with
+a hashtag
+what about green
+so we'll have red blue and green and i
+will copy this number they are in groups
+of six and well yeah it's green now cool
+right okay now let's change both the
+font color and the background color of
+this paragraph within the opening tag of
+this paragraph element
+we will set the style attribute equal
+to any css properties within double
+quotes
+let's change the background color first
+background
+dash color
+colon space
+i'll set this to
+dark gray which is
+2 2 2
+2 2 2 then to add multiple css
+properties separate each with a
+semicolon and this time i will change
+just the color and i'll use the same
+shade of green all right well there we
+go so yeah everybody that's how to add
+some colors to your webpage there's more
+advanced things we can do when we reach
+the video series on css but what you can
+do for now within the opening tag of an
+element of your choosing set the style
+attribute equal
+to whatever css properties you would
+like to add within quotes so yeah that's
+how to add color to webpage if you found
+this video helpful please be sure to
+smash that like button leave random
+comments down below and subscribe if
+you'd like to become a fellow bro
+hey welcome back in this video i'm going
+to explain the span and div tags let's
+begin with span span adds markup to text
+or portion of a document anything that i
+surround with a pair of spam tags i can
+apply markup or some effect to so in my
+example document i have a header and
+three paragraphs what if i would like
+this specific sentence to be i don't
+know red well what i could do is
+surround this sentence in my document
+with a pair of spam tags
+so i need an opening spam tag and a
+closing spam tag
+and that sentence ends right here and
+within the span tag i can change some of
+the attributes of this sentence um so i
+would like to change maybe the style
+i'll set the style color equal to red
+now you probably do want this closing
+tag if you do not have this closing tag
+your span will take up this entire
+section
+so basically that's what span is it adds
+markup to text or a portion of a
+document div is very similar except it
+divides a division of a document so what
+if i would like to change the background
+color of these three paragraphs well
+what we learned in the last video on
+colors is that we could set the style
+background
+color equal to some shade of gray maybe
+this value this does work and i could
+just copy this and paste it for each of
+these paragraphs
+or another way of doing this is that i
+can surround these three paragraphs with
+a pair of div tags
+so we need an opening div tag
+and a closing div tag
+and then i will apply this style
+attribute to the opening div tag
+and it will apply
+this attribute to anything between these
+div tags so yeah that's basically what
+the span and div tags do span adds
+markup to text or portion of a document
+div defines a division of a document so
+yeah that's span and div in html
+yeah let's begin so meta tags the meta
+element represents various kinds of
+metadata that cannot be expressed using
+the title base link style and script
+elements metadata is data about data we
+can add metadata to the head of our
+document and this tells the web browser
+what our web page is about with the meta
+tags we place them within the head not
+the body so we can tell the web browser
+some information about our web page meta
+tags are self closing we do not need a
+closing tag meta tags do have a name
+attribute that we can set to one of many
+settings let's say we would like to add
+a description to this webpage and the
+web browser is going to read this
+description after setting the name equal
+to description i can set the content
+equal to a brief description of my
+webpage
+uh perhaps free
+html tutorial for beginners
+okay so that's one example of a meta tag
+so let's create another so meta again
+these are self-closing tags and i can
+add some keywords for search engine
+optimization
+so name keywords
+content
+and i'll explain my web page in just a
+few keywords uh perhaps html separate
+each of these with a comma
+tutorial
+beginners
+that'd be good we can add a author
+meta name
+equals author
+content equals and then type your name
+so if somebody is viewing your web page
+on a mobile device you can have your web
+page scale to their mobile device by
+adding this meta tag name equals
+viewport
+content
+equals
+and this will set the width of our web
+page
+equal to device dash width
+then comma we can set the initial
+scale
+equal to 1.0 so by adding this meta tag
+if you were to view this webpage on a
+mobile device this web page will scale
+proportionately with that mobile device
+another meta tag is a char set
+we can tell a web browser what sort of
+character encoding that we're using
+so authors are encouraged to use utf-8
+for unicode
+so if you want to use basic ascii
+encoding you would write ascii here
+although that's discouraged authors are
+encouraged to use utf-8 for unicode
+all right and the last thing i'm going
+to show you is that we can set our web
+page to automatically refresh after a
+given amount of seconds
+so meta
+http
+dash equiv is the attribute name
+equals
+refresh
+and the content equals how many seconds
+you would like to wait to have your
+browser refresh
+uh perhaps 30.
+okay so i'm going to open this with live
+server so if i set this to 30 seconds
+it's not going to be that visible you're
+gonna have to wait until we see this
+refresh let's set this to something more
+drastic like two seconds let's crank
+this up yep see it's refreshing every
+two seconds uh but let's set that back
+to 30. two seconds was just an example
+so yeah those are meta tags they
+represent metadata
+is data about data by adding meta tags
+we can tell a web browser information
+about our website such as a brief
+description keywords author we can set
+the viewport for mobile devices you can
+set a refresh rate stuff like that and
+then be sure to add meta tags to the
+head element of your document so yeah
+those are meta tags if you found this
+video helpful please remember to smash
+that like button leave a random comment
+down below and subscribe if you'd like
+to become a fellow bro
+hey what's going on everybody it's you
+bro hope you're doing well and in this
+video i'm going to explain how we can
+use iframes to embed web pages and other
+documents within your website so sit
+back relax and enjoy the show
+hey welcome back iframes the iframe
+element is used to embed content from
+another source into an html document
+they're commonly used for advertisements
+and they're easily abused with many
+hacking techniques so basically using an
+iframe we can embed another web page
+within our webpage or we could embed our
+current html document with another html
+document here's how we can create an
+iframe this is a self-closing tag and we
+set the source equal to this can be an
+external website such as a url or we can
+place a relative file path to a file of
+our choosing so this doesn't work with
+many websites and i'll demonstrate that
+so let's set the source equal to
+google.com and then save and reload so
+google.com refused to connect that's
+because a lot of major websites have
+disabled the use of iframes since we're
+embedding another web page within our
+webpage a common hacking technique is
+that you can have this embedded webpage
+take up the entire frame of your html
+document your website could pose as
+another website and that could be
+considered dangerous let's say that you
+embed a banking website like bank of
+america so if somebody visits your
+website it's actually a facade and
+somebody will type in their banking
+information like their login credentials
+and you could capture that so a lot of
+major websites have disabled the use of
+iframes so you cannot pose as their
+website one website that i checked that
+does work is bing
+so let's switch our url to that save and
+reload
+yeah see we have embedded the home page
+of bing but let's change the width and
+height attributes because this is fairly
+small let's say the width is
+750 pixels and for the height let's say
+maybe 250.
+so save and reload
+cool yeah we have embedded bing within
+our webpage and you can use this
+normally
+bro
+code
+now let's embed another document so
+let's create a new file
+let's pretend that this is an
+advertisement we would like to display
+within our webpage i'll name this
+add.html so if you're using vs code to
+generate an html document a plain one
+type exclamation point then hit tab
+so let's say something
+i'll use an h1 header tag
+this is an advertisement
+and then close it uh let's change the
+background color too using the style
+attribute
+and i will pick the background color
+property and set this to maybe i don't
+know that color uh then let's change the
+width and height for the height maybe
+100
+then make sure to change your source as
+well so we need to list the relative
+file path since these files are right
+next to each other i only have to list
+the file name
+add.html save reload
+cool and there is my fake advertisement
+embedded pages do have a border this is
+how to remove that set the style
+attribute
+equal to the border css property and set
+this to zero so i'm going to save reload
+and this no longer has that border so
+yeah everybody those are iframes they're
+used to embed content from another
+source into an html document they're
+useful for advertisements and they're
+easily abused with a lot of hacking
+techniques so yeah those are iframes if
+you learn something new be sure to smash
+that like button drop a random comment
+down below and subscribe if you'd like
+to become a fellow bro
+what's going on everybody it's you bro
+hope you're doing well and in this video
+i'm going to show you how you can create
+a button using html so sit back relax
+and enjoy the show
+hey in this video i'm going to show you
+how we can create buttons using html
+we'll need a pair of button tags there's
+an opening button tag and a closing
+button tag here's our button to add some
+text between the button tags we can add
+whatever text we want to the button like
+click me
+you can set this up as a hyperlink when
+you click on the button to do so just
+surround your button element with a pair
+of a tags
+there's an opening a tag and a closing a
+tag
+and i will set the href attribute of the
+opening button tag to a url or relative
+file path of my choosing to make this
+simple let's set the url to google.com
+and then when i click on this button it
+takes me to google you can disable a
+button by adding a disabled boolean
+attribute to the opening button tag and
+we can no longer click on this button
+if you know a little bit of css you can
+add some css properties directly to a
+button by setting the style attribute
+equal to and list some css properties of
+your choosing let's change the
+background color
+you can pick a color name
+you can use rgb values
+or you can use hexadecimal values
+i think i'll set this to a dark gray
+color so maybe
+6 3s
+for rgb values and hexadecimal values
+you can always use a color picker online
+so if you would like to add multiple css
+properties separate each css property
+with a semicolon and next i will change
+the color that's the font color and
+maybe i'll pick green one color i like
+is zero zero ff zero zero that's just a
+bright green color you can also round
+these borders too by using the border
+radius property so again separate each
+css property with a semicolon
+and i will set the border radius
+property to 5 pixels just around the
+corners
+okay cool
+that's a pretty fancy looking button if
+i do say so myself and yep it still
+takes us to google just by us using html
+this adds structure to a webpage but it
+doesn't necessarily add functionality
+that's where a language like javascript
+comes in when we click on a button we
+can have this button execute some
+function from a javascript file i'll
+show you how we can create a very simple
+javascript program but of course we'll
+cover this more in the javascript series
+so let's get rid of this hyperlink
+and have our button do something else
+there is an on
+click attribute that we can set to a
+javascript function
+so we just place the name of the
+function between a set of double quotes
+we haven't created a javascript function
+yet but let's say that we'll have a
+javascript function named do something
+and then follow that name with a set of
+parentheses and let's create a paragraph
+element
+and we will say hello and then close it
+with this paragraph element i'm going to
+set the id attribute equal to let's say
+test here's how we can code a very
+simple javascript program you're going
+to create a pair of script tags there's
+an opening script tag and a closing
+script tag
+and within the script i will say
+function
+do something
+parentheses curly braces
+so this function will perform some
+subsection of code so when we click on
+our button what do we want this program
+to do we will take document dot
+get
+element
+by id
+parentheses
+list the id of our paragraph element
+test
+dot
+inner
+html
+and i will set the sequel to
+goodbye
+then add a semicolon at the end okay so
+when we click on this button it's going
+to execute this function do something
+and then perform whatever code is
+between this set of curly braces
+so you may need to save
+refresh your web page and if done
+correctly when you click on this button
+it will change this text
+from hello
+to goodbye
+so that is a very small javascript
+program so there is an on click
+attribute that you can set equal to a
+javascript function but of course we'll
+cover more about javascript well in the
+javascript playlist but that's one way
+in which you can add functionality to a
+button in this video we were more
+focused on actually creating the button
+itself so yeah if this video helped you
+out you can help me out by smashing that
+like button leave a random comment down
+below and subscribe if you'd like to
+become a fellow bro
+hey everyone i'm going to try and
+explain everything i can about forms in
+about eight minutes to create a form
+element we'll need a pair of form tags
+there's an opening form tag and a
+closing form tag and depending on the
+user input that you need there is an
+input element and you can set the type
+attribute to whatever you need let's say
+we need some text from a user like a
+first name within our form there is a
+text box where we can enter in some user
+information so we should probably let
+the user know what we want them to type
+in i will precede this input element
+with a label
+let's say first name and a user can type
+in their first name now it is considered
+good practice to fill out a for
+attribute within the label and set this
+to whatever you want let's say fname and
+within the associated input elements i
+will set the id also equal to fname
+whatever's within the four attribute
+this does a couple things one if i was
+to click on this label this will select
+my input box it's also helpful for
+people that are using screen readers so
+that they can easily navigate your form
+there is also a name attribute when we
+submit this data what sort of name do we
+want to give that data think of it like
+a variable i will also name this fname
+as well within the input element there
+is a placeholder to display some default
+text to a user by setting the
+placeholder attribute equal to some text
+like spongebob so if i was to click
+within this input field and type
+something that will get rid of my
+placeholder let's create an input field
+for a last name and really we can just
+copy this and make a few changes to it
+so copy both the label and the input
+element uh let's change this from first
+name to last name
+change four as well to lname
+id will be lname and let's make name l
+name as well
+and the placeholder how about square
+pants
+these labels and input elements will
+appear on the same line to separate them
+and treat them as block level elements i
+will add each of these pairs to their
+own div element
+perhaps i'll add a line break as well
+okay now with forms there are built-in
+buttons too
+we will set the input type equal to
+reset so if i were to type in some text
+and click reset that will reset
+whatever's within my form and there is a
+submit button as well
+i will set the type equal to submit so
+currently our data doesn't have any
+place to go to so if i were to click the
+submit button this data is not going to
+go anywhere so if i need to send this
+data to a page i will list that page
+within the action attribute of my
+opening form element
+so we'll need the help of a dynamic
+programming language php for example
+we're not going to focus on
+functionality in this video but rather
+the structure of a form so if i need to
+send this to
+a php page i will list that php page
+within the action attribute there is
+also an associated method attribute two
+common values are get and post
+get is considered insecure it's going to
+append your data to the url of your web
+page so for example if i set the method
+to get and type in some information
+and click submit it's going to append my
+data to the end of my url so it's going
+to add a question mark then all of my
+data if you need to submit some secure
+information like a password do not use
+get i would say that this is useful for
+things like search boxes if a user needs
+to navigate your web page for maybe some
+sort of keyword so it's better to use
+post to submit some secure information
+but this isn't going to do anything
+obviously because we do not have a
+server set up now there is a required
+boolean attribute you can add if
+somebody needs to submit some
+information they are required to fill
+out any input elements that have this
+boolean attribute of required so if i
+just attempt to submit this without
+typing in anything there is a small
+pop-up box that says please fill out
+this field all right i'm going to go
+kind of quick through these next input
+elements just because i think we have
+the hang of the general context of input
+elements so next we have password fields
+you set the type equal to password so if
+somebody types in characters they will
+be hidden if you need to set a max size
+of your password there is a max length
+attribute let's set this to maybe 12 so
+we can type in no more than 12
+characters for a password and you can
+also add that required boolean attribute
+too
+for an email element set the type equal
+to email
+in order to submit an email we need an
+at character within our email otherwise
+we cannot submit this information and
+perhaps i'll add a placeholder as well
+placeholder equals s
+pants
+at gmail.com
+so there is our placeholder for a
+telephone number you're going to set the
+type equal to tell
+and i do have a placeholder as well if
+you need the user to type in a date like
+a birth date there is a type date which
+includes an interactive calendar to
+select a date
+a user can type in a number if you set
+the type equal to number let's say that
+the user is buying something from a
+store there are some arrows where they
+can increase or decrease the quantity
+but we should probably place some limits
+they can type in basically whatever
+number they want they want negative one
+billion items
+so we can set the min and the max i'll
+set the min equal to 0 and of the max
+equal to what about 99
+and you can also set a default value too
+i'll set the default value equal to 1.
+next we have radio buttons with radio
+buttons we can only select one radio
+button from any one group perhaps we'll
+have the user select a title are they a
+mr a miss or a doctor
+so i'm going to create a pair of labels
+and input for each option that we have
+so we will have a mr option
+miss
+and
+phd okay i will set the input type equal
+to radio and then do that with each of
+these pairs
+so we can select more than one because
+these are all not within the same group
+to set them all within the same group we
+will all have them have the same
+matching name
+let's say that the name will be title
+so therefore we can only select one now
+since they're all within the same group
+and that's kind of the idea behind radio
+buttons you can only select one and we
+will set an associated value of let's
+say mister for the first value
+misses for the second
+and doctor for the last one
+then i'm just going to precede all of
+these with a separate label
+uh let's say title
+and i will set the four attribute equal
+to title and within each of these radio
+button labels when i click on one of
+these labels i also want to be able to
+select one of these radio buttons so i
+will set the for attribute equal to a
+unique id so let's say mister
+the id will be mister
+and repeat the same steps
+okay so when we click on these labels we
+should be able to select our radio
+buttons
+nice with drop down menus instead of a
+type we are going to use a pair of
+select tags so there's an opening select
+tag and a closing select tag and we list
+individual options within the select
+element
+we'll give our user three options from
+this drop down menu they can pay with a
+visa a mastercard or a gift card
+and i will give each of these a value
+okay we now have a payment field and the
+user can select an option from this drop
+down menu
+and the last input type i will explain
+in this video is the checkbox type so
+let's say we have a subscribe button and
+you can go ahead and smash that
+subscribe button so just set the type
+equal to checkbox for well a checkbox
+well yeah everybody that's how to create
+an html form there's still some more
+advanced input types we did not cover
+but these are the very basics i would
+say if you found this video helpful
+please remember to smash that like
+button leave a random comment down below
+and subscribe if you'd like to become a
+fellow bro
+you

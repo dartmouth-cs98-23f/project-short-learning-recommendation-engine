@@ -5,11 +5,11 @@ import json
 # Valid general topic names
 valid_general_topics = [
     "Algorithms and Data Structures",
-    "Artificial Intelligence (AI) and Machine Learning",
+    "Artificial Intelligence and Machine Learning",
     "Computer Architecture",
     "Data Science and Analytics",
     "Database Systems and Management",
-    "Human-Computer Interaction (HCI)",
+    "Human-Computer Interaction",
     "Programming Languages and Software Development",
     "Software Engineering and System Design",
     "Web Development and Internet Technologies",
@@ -50,5 +50,3 @@ def validate_inference_output(path):
     except Exception as e:
         print(f"Error validating inference output: {e}")
         return False
-
-validate_inference_output('inference/pipeline/test.json')

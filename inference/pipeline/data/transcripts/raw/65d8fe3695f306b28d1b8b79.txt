@@ -1,0 +1,298 @@
+hello everyone welcome to simply learn's
+youtube channel in this session we will
+learn about stacks and cues in data
+structures
+but before we begin make sure that you
+have subscribed to our youtube channel
+and don't forget to hit that bell icon
+to never miss an update from simply
+learn now without further ado let's get
+started with the agenda for today's
+discussion
+so at first we will discuss what exactly
+is a stack followed by that we will go
+through some of the examples on stack
+then we will learn the application of
+stacks followed by that we will enter
+into what is q
+then we will understand some of the
+basic examples of queue then we will
+understand the types of queue and we
+will go through the applications of
+queue and finally we will wrap up this
+session by understanding the fundamental
+differences between stacks and queues i
+hope i made myself clear with the agenda
+now let's get started with our first
+topic that is what is a stack
+so to define stack in a more generalized
+way we can consider stack as a linear
+data structure that follows lifo order
+or
+lost in first out order or another way
+of putting it down is first come last
+out order
+so some of the basic operations that can
+be performed on stack are insertion and
+deletion and that can be done only at
+the end which is called as the top of
+the stack
+now let us understand the basic
+operations on stack so the three
+fundamental operations that can be
+applied onto a data structure like stack
+are push pop and peak so the push
+operation involves inserting a new
+element from the top of the stack the
+pop operation involves removing the
+element from the top of the stack and
+finally the peak operation which returns
+the topmost element from the stack
+without removing the element from the
+stack
+now we shall go through some generalized
+examples of stack
+so some of the generalized examples of
+stack are you can see a stack of books
+here and a stack of utensils stack of
+coins and stack of dollars of bills
+now let us go through a practical
+example based on stack and data
+structures we shall be using c
+programming language for this particular
+example
+so you can see that on my screen i have
+an example for stack data structure
+don't worry about the code this code
+will be attached in the description box
+below and you can always have access to
+it and you can run the same code in your
+personal system so that you have a
+deeper and better understanding of the
+program now let's quickly run this
+program
+so there you go you can see the program
+is getting executed now
+so you can see that the program got
+successfully executed and the elements
+are being inserted into the stack
+now the elements are a b
+and finally the elements are popped back
+again that is b a and the last element
+that is popped away from the stack is a
+and you can see that the stack is
+currently empty so top is pointing to -1
+now with that let's get back to the
+presentation again
+now let us understand some of the
+applications of stack
+so one of the applications of stack is
+function call or recursion the recursive
+function call is also known as the
+called stack whenever a function is
+called then the function goes to the top
+of the stack
+now another important application of
+stack is expression conversion there are
+three types of notations that is prefix
+notation inflectionation and postfix
+notation so these particular notations
+can be taken care by using stacks in
+real time
+now the next one is checking parenthesis
+stack is used to check if the given
+parenthesis are balanced or not
+sometimes if you forget to add a
+parenthesis then the compiler will throw
+an error so using stack this can be
+found if there are balanced parenthesis
+used in your program or not balanced
+parenthesis means opening and closing
+brackets are of the same type that means
+if you have two open flower brackets
+then you need to have two closed flower
+brackets it should not be an equal it
+should be completely equal to complete
+the code segment
+now another application of stack is
+expression evaluation stack can be used
+to evaluate the expressions as you can
+see here we have an expression that is 6
+plus 2 star 3 minus 12 divided by 4.
+now this particular expression will be
+evaluated based on the precedency table
+so the stack is used to check the
+precedence and then the expression gets
+evaluated into the result which is 21
+right over here
+now another application is the tower of
+hanoi tower of hanoi is a mathematical
+puzzle which consists of three rods and
+n number of discs of different diameters
+all the discs are placed on one rod one
+over the other and in ascending order of
+size similarly into a cone-shaped tower
+now we will enter into the next segment
+where we will discuss about queues so
+what exactly is a queue a queue is a
+linear data structure that follows the
+fifo order that is the first and first
+out
+whereas stack followed first in last out
+so this is one of the fundamental
+difference between stacks and queues so
+we'll be discussing those in the next
+section
+for now let's continue with the
+operations on queue the queue is an
+ordered list in which insertion is done
+at one end that is called rear and
+deletion is done at another end which is
+called front the operations on queue are
+enqueue operation that adds a new item
+to the queue if the queue is complete
+then there is an overflow condition
+dq operation is the operation which
+deletes an item from the queue and if
+the queue is empty then there is an
+underflow condition through it as an
+exception
+now let us understand some of the basic
+examples of q you can consider the
+patients at hospital registration and
+you can also consider an example of
+customers making use of atm
+now let us understand the types of queue
+so there are basically three types of
+queues those are circular queues doubly
+ended queues and priority queues
+now let us understand the circular queue
+in a circular queue the last element
+points to the first element to form a
+circular link
+circular queue is also known as ring
+buffer insertion is done at the rear and
+deletion is done at the front as
+discussed before
+now we will go through the doubly ended
+queue in doubly ended queue both
+insertion and deletion can be done at
+both rear and front of the queue
+now the last one the priority queue in
+the priority queue the notes have same
+predefined priority insertion can be
+done as the arrival of the notes node
+having the least priority will be the
+first node removed from the queue now we
+will go through a general practical
+example of queues and then we will go
+through the applications of queues now
+on my screen you can see an example for
+queues don't worry about the code this
+code will be attached in the description
+box below and you can always have access
+to it and learn executing this on your
+own system so without further ado let's
+start to execute this code
+so you can see that the code got
+successfully executed and the terminal
+is asking for us to give an operation so
+the first one is to insert an element
+into the queue second one is to delete
+an element and the third one is to
+display the elements in the queue and
+the fourth one is the quote let's insert
+so now let us insert an element into the
+queue that is 10.
+now let's try to display the elements in
+the queue for that i need to select the
+option number three
+and there you go the queue has element
+number 10. now let's try to delete that
+element for that we might have to choose
+the second option
+so you can see that the element got
+deleted from the queue and the element
+deleted from the queue is 10
+and
+you have another choice now so let's try
+to quit it now so that i need to select
+the option for because we have seen how
+to insert view and delete the element
+let's not make further delay and let's
+quickly enter into the next part of our
+session that is the application of
+queues
+so the first application of queue is
+breadth first search breadth first
+search or bfs traverses a graph in a
+breadth what direction and uses a queue
+to remember the next node to start a
+search
+the second application is level order
+traversal entry level order traversal
+processes all the nodes of a tree by
+depth first the root then the children
+of the source
+next one is first come first serve cpu
+scheduling first come first serve fcfs
+is an operating system algorithm that
+works on queued requests and implements
+them according to their arrival
+now the fibonacci
+fibonacci heap is a data structure that
+implements priority queue operations
+consisting of the collection of heap
+order trees
+now our last segment that is the
+comparison between stack and queue
+so at first both stack and queue are
+linear data structures and stack follows
+last in first out whereas q follows
+first in and first out
+and when you are considering stack the
+insertion takes place at the top
+and deletion takes place from the top as
+well
+whereas when it comes to stack the
+insertion starts from rear but deletion
+or elimination of the element from the
+queue starts from the front
+in stacks the insert operation is called
+as push
+and deletion process is called as pop in
+queues the insertion is called as
+enqueue and deletion is called as dq
+in stacks you mainly maintain one
+pointer to access the list that is
+called top which always points to the
+last element present in the list in
+queues we maintain two different
+pointers the first one is the front
+pointer which always points to the front
+element or the first element inserted in
+the list and the next one is the rare
+pointer which always points to the rare
+or the last element inserted into the
+list
+stack is used in solving problems that
+work on recursion whereas q is used in
+solving problems having sequential
+processing so these are the fundamental
+differences between stacks and queues
+with that we have come to an end of this
+tutorial on stacks and queues if you
+have any queries regarding the topics
+discussed in this particular tutorial or
+if you are in need of the course
+executed in this particular tutorial
+then please feel free to let us know in
+the comment sections below and our team
+of experts will be happy to resolve all
+your queries until next time thank you
+stay safe and keep learning
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

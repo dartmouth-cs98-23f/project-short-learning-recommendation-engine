@@ -1,0 +1,70 @@
+{
+  "introduction": "Tobias Günther teaches Git concepts and best practices, including branching strategies, merge conflicts, and commit staging. He emphasizes the importance of understanding the project's requirements and workflow for effective Git usage.",
+  "sections": [
+    {
+      "title": "Section 1: Git Basics",
+      "content": [
+        "Introduction to Git and its concepts.",
+        "Explanation of Git commands and their functions.",
+        "Discussion on Git workflow and best practices.",
+        "Overview of Git branches and their uses."
+      ],
+      "topics": ["Git Basics", "Git Commands", "Git Workflow", "Git Branches"]
+    },
+    {
+      "title": "Section 2: Branching Strategies",
+      "content": [
+        "Explanation of different branching strategies.",
+        "Discussion on when to use each strategy.",
+        "Best practices for branching and merging.",
+        "Examples of branching workflows in real-world projects."
+      ],
+      "topics": ["Branching Strategies", "Git Flow", "Feature Branches", "Release Branches"]
+    },
+    {
+      "title": "Section 3: Merge Conflicts",
+      "content": [
+        "Explanation of merge conflicts and their causes.",
+        "Best practices for resolving merge conflicts.",
+        "Discussion on interactive rebase and its uses.",
+        "Examples of merge conflict resolution techniques."
+      ],
+      "topics": ["Merge Conflicts", "Interactive Rebase", "Conflict Resolution Techniques"]
+    },
+    {
+      "title": "Section 4: Staging and Committing",
+      "content": [
+        "Explanation of staging and committing in Git.",
+        "Best practices for staging and committing changes.",
+        "Discussion on commit messages and their importance.",
+        "Examples of staging and committing workflows."
+      ],
+      "topics": ["Staging and Committing", "Commit Messages", "Git Workflow"]
+    },
+    {
+      "title": "Section 5: Git Tools and Integrations",
+      "content": [
+        "Introduction to Git tools like Tower and their uses.",
+        "Discussion on integrating Git with other tools and platforms.",
+        "Examples of Git workflows in popular development environments.",
+        "Best practices for managing Git in teams."
+      ],
+      "topics": ["Git Tools", "Team Collaboration", "Integrations", "Best Practices"]
+    }
+  ],
+  "topics": ["Git Basics", "Branching Strategies", "Merge Conflicts", "Staging and Committing", "Git Tools and Integrations"],
+  "generalTopics": [
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": 0.61
+    },
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.53
+    },
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.59
+    }
+  ]
+}

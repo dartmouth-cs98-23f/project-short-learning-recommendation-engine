@@ -1,17 +1,4 @@
-################# BEGINNING RUN: TIME: 2024-02-25 03:07:03.202658 #################
-stdout: Error validating inference output: 1 validation error for VideoContent
-sections.0.content
-  Field required [type=missing, input_value={'title': 'Section 1: Int...'Container Management']}, input_type=dict]
-    For further information visit https://errors.pydantic.dev/2.5/v/missing
+################# BEGINNING RUN: TIME: 2024-02-26 03:12:57.993166 #################
+stdout: Connected to MongoDB: {'version': '6.0.13', 'gitVersion': '3b13907f9bdf6bd3264d67140d6c215d51bbd20c', 'modules': ['enterprise'], 'allocator': 'tcmalloc', 'javascriptEngine': 'mozjs', 'sysInfo': 'deprecated', 'versionArray': [6, 0, 13, 0], 'bits': 64, 'debug': False, 'maxBsonObjectSize': 16777216, 'storageEngines': ['devnull', 'ephemeralForTest', 'inMemory', 'queryable_wt', 'wiredTiger'], 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1708917179, 6), 'signature': {'hash': b'\x12\x13,\xf0\xf2\xb6\xc5\xe7\xa9\xaeq\xa0~I\x8b\xa3\xcb\x82|\xd4', 'keyId': 7301958274562129922}}, 'operationTime': Timestamp(1708917179, 6)}
 
-sterr: Traceback (most recent call last):
-  File "/home/ubuntu/InferenceTest1/rec/inference/pipeline/inference.py", line 24, in <module>
-    PINECONE_CLIENT = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
-  File "/home/ubuntu/.local/lib/python3.10/site-packages/pinecone/control/pinecone.py", line 95, in __init__
-    self.config = PineconeConfig.build(api_key=api_key, host=host, additional_headers=additional_headers, **kwargs)
-  File "/home/ubuntu/.local/lib/python3.10/site-packages/pinecone/config/pinecone_config.py", line 12, in build
-    return ConfigBuilder.build(api_key=api_key, host=host, additional_headers=additional_headers, **kwargs)
-  File "/home/ubuntu/.local/lib/python3.10/site-packages/pinecone/config/config.py", line 45, in build
-    raise PineconeConfigurationError("You haven't specified an Api-Key.")
-pinecone.exceptions.PineconeConfigurationError: You haven't specified an Api-Key.
-
+sterr: 

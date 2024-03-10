@@ -1,0 +1,290 @@
+Your eyes see in 2D, the retina is a two dimensional
+surface of cells that activate when photons
+hit them. Whether those photons are bouncing
+off of a physical object, or being produced
+by your display there isn’t too much of
+a difference to the neural circuitry that
+makes up your vision system. So the brain
+is already doing the hard part. It takes a
+2 dimensional image as input, and on the other
+end you somehow have a near instant understanding
+of the 3 dimensional objects you are seeing.
+We can create objects by constructing them
+out of many triangles. To create an accurate
+2d representation, we need to project each
+of these triangles onto a flat plane from
+the perspective of a viewer.
+It can be helpful to think of a computer screen
+as a window, where light bounces off an object,
+through the window and into your eye.
+So to generate an image it’s almost as if
+we need to do the reverse operation. If you
+shot a ray from your eye through each section
+of the window, what color would you hit?
+And this is the basic idea behind 3D graphics.
+Each pixel of the display is like a little
+window, and the more pixels the clearer the
+image. And it is up to our graphics engine
+to figure out what color of light would be
+passing through that pixel as if the game
+world actually existed on the other side.
+The method I’ve explained, where rays are
+projected into the world and collide with
+objects, is the foundation behind ray tracing.
+Ray tracing has only recently made its debut
+into video games with the release of newer
+graphics cards containing dedicated ray tracing
+hardware.
+On the other hand CPU-based ray tracing has
+been around for a long time and has been used
+extensively within the movie and animation
+industries, but is much too slow to be used
+in real-time applications.
+A single frame in Toy story 4 could take anywhere
+between 60 to 160 hours to render using CPU
+based ray tracing.
+Ray tracing is known as image-order rendering,
+since each pixel is first considered, and
+then on a per pixel basis we find all the
+objects that could influence it.
+The alternative is object-order rendering
+which is much faster and what we have been
+using. This is where we draw each object,
+one after the other. This approach maps much
+better to the gpu, since we can apply the
+same instructions, but on different vertices
+in parallel.
+So we could find the location for each projected
+position within a vertex shader by calculating
+the line and plane intersection, and this
+would work just fine! But a much more effective
+way to do this is with a matrix transformation!
+First though, I’ll start by explaining orthographic
+projection.
+In the previous tutorial I talked about vulkan’s
+canonical viewing volume. Only the objects
+that are within this 2 by 2 by 1 region will
+be displayed.
+Note that the positive y axis points down,
+and positive z axis points into the screen.
+An orthographic projection is a generalization
+of the view volume that keeps the view direction
+and orientation fixed, but allows the view
+volume to be an axis-aligned box with any
+dimensions and at any location we want.
+An orthographic projection is a generalization
+of the view volume that allows us to specify
+whatever dimensions and whatever location
+we want, but maintains the overall shape of
+the view volume, and keeps the view direction
+and orientation fixed.
+The orthographic view volume is defined by
+6 bounding planes, the left and right along
+the x axis, the top and bottom along the y
+axis, and the near and far along the z axis.
+So these 6 values, left bottom near, and right,
+top, far, define the orthographic viewing
+volume
+So to construct an orthographic projection
+matrix we need to solve the following problem:
+how do you transform the orthographic view
+volume to vulkan’s canonical view volume?
+And the good news is we already know how to
+do this. We can combine two basic transformations,
+first translate the box so that the center
+of the near plane is at the origin. And then
+follow that with a scale transformation so
+the boxes have the same dimensions.
+So the numerator will be the canonical view
+volume’s dimensions, and the denominator
+will be the dimensions of the orthographic
+view volume.
+If we multiply the matrices and simplify,
+we get the orthographic projection matrix.
+Note that this matrix differs slightly from
+most other online resources. The canonical
+openGL view volume is a cube, with a z range
+of -1 to 1. Additionally openGL uses a left
+handed coordinate system and looks down the
+negative z axis, but we’re using a right
+handed coordinate system and looking down
+the positive z axis. So just keep this in
+mind if you are following other resources
+with different conventions.
+And that’s it. By applying this transformation
+to our objects, the objects that are within
+the region occupied by the orthographic view
+volume, will be scaled and moved into the
+region covered by canonical view volume, and
+therefore the objects will be displayed!
+But the orthographic view volume doesn’t
+apply perspective, to do that we require a
+viewing volume that is not box shaped, but
+a shape known as a square frustum
+A frustum is the shape that captures a viewer’s
+line of sight as if they were looking through
+a rectangular window.
+So what we want is a perspective matrix that
+transforms the frustum and any object it contains
+into the orthographic view volume.
+Doing so would apply perspective to all objects
+within this space. The further away an object
+is, the smaller it will appear!
+To properly apply perspective, we need to
+project each point onto the viewing plane.
+For example, to calculate the apparent height
+of an object on the screen, we can use the
+property that the side lengths of two similar
+triangles are proportional to each other.
+We can rearrange this equation to show that
+an object's apparent height on screen is equal
+to distance to the screen over the distance
+to the object, multiplied by the object's
+true height. This equally applies for the
+x direction when calculating an object's apparent
+width on the screen.
+Also note, that just as with the other viewing
+volumes, anything outside of the frustum will
+be clipped.
+Ok so what we would like to do is come up
+with some 4 by 4 matrix, that when applied
+to a position vector, the resulting x and
+y values equal the projected xs and ys coordinates
+on the viewing plane.
+But there is a problem. We have a division
+by the z component, in the solution’s x
+and y components, and a 4 by 4 matrix that
+can move a z value from here to a division
+here, simply does not exist. It is just not
+possible with matrix multiplication alone.
+But what’s that, it is homogeneous coordinates
+to the rescue! We have one more trick up our
+sleeve. So far the 4th component of all position
+vectors has been fixed, with w always equal
+to 1, to allow for matrix multiplication to
+implement translations.
+We will now additionally define w to be the
+denominator of the x y and z components. This
+means that the homogeneous vector [x, y, z,
+w] corresponds to the point at [x/w, y/w,
+z/w].
+This also means that vector [1, 2, 3, 1],
+is equal to the vector [10, 20, 30, 10] and
+also equal to [2, 4, 6, 2]. These all represent
+the exact same position at 1, 2, 3.
+This division is automatically applied on
+the gl_Position variable output from the vertex
+shader and has always been occurring. If I
+go into the vertex shader and update the homogeneous
+coordinate value to 2 and run my code, my
+object becomes half the size because we now
+divide each position component by 2.
+Therefore if the solution’s w component
+is equal to z, it will be possible to calculate
+the projected coordinates of x and y onto
+the viewing plane
+With this knowledge, we can start to construct
+the perspective matrix transformation.
+The first two rows have the distance to the
+viewing plane on the main diagonal, and zeroes
+elsewhere. This will have the effect of scaling
+the x and y components by the distance to
+the near plane. Next the final row must be
+0, 0, 1, 0 to take the z component from the
+input vector, and move it to the w component
+of the solution vector.
+All that’s remaining is the third row, and
+an easy mistake to make is to think this can
+also just be 0, 0, 1, 0, to copy the z depth
+value into the solution. The problem is, every
+component will be divided by w including this
+one.
+z over z is just 1 and now we’ve lost our
+depth information and won’t know which objects
+should be drawn in front of others.
+So rewind, and in reality we need the solutions
+z component to equal z squared, since z squared
+over z is equal to z. But in our matrix we
+only have two remaining unknown values to
+use. If we multiply this out we get the equation
+m1 times z plus m1 equals z squared. This
+is a quadratic equation, meaning it has at
+most two real solutions and can’t be true
+for other z values.
+Therefore we add two constraints that this
+equation is only true when z equals n or z
+equals f. This means that the transformation
+will not change the z values for points on
+the near and far planes, but all other z values
+will be warped non-linearly.
+This results in two equations that we can
+use to solve for m1 and m2. M1 times n + m2
+equals n squared, and m1 times f plus m2 equals
+f squared
+Solving these equations
+We get m1 is equal to f + n, and m2 is equal
+to negative fn.
+Let’s plug this in and the solution’s
+z component becomes f + n times z - fn.
+So let's take a minute to go over what this
+really means. We wanted to have a one to one
+linear relationship between the input z value
+and output z value.
+But the best we could do is make this true
+for points at the near depth and far depth.
+The z depth values on the near and far planes
+remain unchanged, but the relationship is
+no longer linear.
+However this is still useful because the relative
+ordering of the z values between the near
+and far planes is preserved! This means we
+can still use z to determine the order of
+objects within our scene.
+An advantage to having the z depth values
+be non-linear is that calculations at the
+near plane will be higher precision then calculations
+at the far plane, reducing observable Z fighting.
+Z fighting, also known as stitching or depth
+fighting, occurs when two surfaces are very
+close together.
+This visual artifact is caused by the rounding
+errors of floating point calculations and
+can be avoided by reducing the distance between
+the near and far planes.
+Now back to the perspective matrix, if you
+apply the perspective transform followed by
+the orthographic projection transform, the
+combined result is known as the perspective
+projection transformation.
+And this is what we’ve been after. This
+matrix will transform objects contained by
+the viewing frustum, into the canonical view
+volume, and in doing so will make the objects
+appear in perspective.
+We define the perspective projection matrix
+with the same values as used by the orthographic
+view volume, the 6 values r, l, b, t, n and
+f. But it’s often more convenient to use
+a simpler system where we assume the frustum
+is aligned along the z axis, meaning that
+we are looking through the center of the window.
+This implies that l = -r, and t = -b, which
+can further simplify the matrix
+Finally, it is common to specify a vertical
+field of view rather than the values for the
+bottom and the right planes.
+The vertical field of view is the angle from
+the bottom to the top of the near plane relative
+to the viewer's line of sight. If we also
+know the aspect ratio of the window, we can
+easily calculate values for the bottom right
+corner with some basic trigonometry.
+So the bottom value is equal to the near plane
+distance times tan theta over two. And the
+right value is equal to the windows aspect
+ratio, times the bottom.
+Plug this in and simplify, and we get the
+final form of the perspective projection matrix.
+If you enjoy computer graphics content like
+this, please consider subscribing.
+Thanks for watching and keep on coding, cheers!

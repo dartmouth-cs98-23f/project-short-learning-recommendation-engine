@@ -1,0 +1,197 @@
+foreign
+welcome back algebra is one of the broad
+areas of mathematics we would have come
+across various algebra branches let's
+take abstract algebra where the abstract
+algebra is to study the algebraic
+structures such as groups Rings fields
+and abstract algebra has its wide
+application area in the field of
+cryptography coming to linear algebra
+linear algebra deals with the linear
+equations linear mappings and is used in
+the application area like the weather
+forecasting coming to Boolean algebra
+these Boolean algebra deals with the
+variables that are with the truth values
+true or false and Boolean algebra has
+its widespread applications in the areas
+of digital circuitry designed in
+personal computers pocket calculators CD
+players cell phones and other electronic
+products one such algebra that we are
+going to focus in today's presentation
+is the relational algebra and in today's
+presentation we are going to focus on
+the basics of relational algebra while
+waiting let's step into the topic of the
+day the relational algebra and
+relational algebra is basically a
+procedural query language what do we
+mean by this it means we need to
+instruct what to do how to do we are
+expecting the result from the database
+and the result is going to be a table or
+a relation and in order to get that
+result the table or the relation we need
+to instruct what is required and how to
+retrieve that data or how to retrieve
+the result and that is why we refer
+relational algebra as a procedural query
+language if you are directly watching
+this lecture I request you to navigate
+to chapter 1 of this playlist and find
+the lecture database languages where I
+have explained about the database
+languages the procedural query language
+and the non-procedural query language
+with examples for now just understand
+relational algebra is a procedural query
+language and what it actually does
+basically a relational algebra is a set
+of operations on relations this is like
+the normal algebraic operation where
+it's going to take input and it's going
+to produce the output likewise here also
+relational algebra is basically a set of
+operations on relations so it's going to
+work on the relation and does the
+operation and gives the result as a
+relation only and that's why we say
+relational algebra is basically a set of
+operations and to be precise it is like
+a set of algebraic operations these
+algebraic operations like the addition
+subtraction all these take some values
+as the input and does the operation and
+produces the output likewise here also
+relational algebra is going to take
+relations as input does the operation
+and generates the output which is also a
+relation in simple terms relational
+algebra is a set of operations which
+takes one or more relations as input and
+produces a relation as an output so so
+that's what the next Point says the
+input is going to be one or more
+relations and the output is going to be
+a relation and why one or more relations
+there are certain relational algebra
+operators which are unary operators
+where it takes only one relation as an
+input there are certain relational
+algebra operators with takes two or more
+inputs so they are binary or ternary so
+what I mean to say is in a nutshell it
+takes one or more relations as an input
+and produces another relation as an
+output and why do we need to study this
+relational algebra because it provides a
+theoretical foundation for relational
+databases we know the power of
+relational databases in this
+contemporary world when we want to work
+on the relational database or when we
+want to know the foundations of the
+relational database it's always
+recommended to have a sound knowledge on
+relational algebra because it provides a
+theoretical foundation for the
+relational databases the well-known dbms
+language that is widely used in today's
+world is the structured query language
+SQL and when you want to become
+proficient with SQL knowing relational
+algebra will give an additional
+advantage and not only that when we have
+a sound knowledge in the relational
+algebra obviously it allows us to
+understand database operations in more
+detail and also it motivates us to write
+optimized queries we know databases are
+going to respond to queries when we
+Supply a query to the database database
+accepts the query does the operation and
+gives the result if we want to get that
+output there may be multiple ways if we
+want an output from the database I mean
+a relation or a table there can be
+multiple queries where these queries
+gives the same output but giving an
+optimized query is always good because
+your databases will not take more time
+or more memory to execute that query so
+what I mean to say is instead of giving
+a query to the database if we give an
+optimized query the database will
+respond easily because this optimized
+queries will be having lower cost cost
+is one of the factors that are used to
+measure the query optimization in simple
+terms relational algebra helps us to
+write optimized queries and also it
+helps us to understand the database
+operations in more detail what's
+happening at the back end how queries
+are processed how query execution plans
+are generated how the plans are executed
+all these things no worries in the
+coming lectures we are going to focus on
+query optimization techniques at the
+time I will explain you how query
+optimization is actually taken care by
+database we are done with the basics of
+relational algebra before we move on to
+the next slide just revisit what is
+relational algebra it is a set of
+operations what are the operations that
+relational algebra contains that's what
+we are going to see now basically the
+relational algebra operations are
+classified into two categories number
+one the fundamental operations and
+number two the additional operations
+let's just focus on the names of the
+operations in this lecture in the coming
+lectures we are going to focus on all
+the operations one by one in detail with
+required examples for now let's just
+know the operation names talking about
+the fundamental operations there are six
+fundamental operations as far as
+relational algebra is concerned the
+first operation is select the second
+operation is Project the third one is
+Union the fourth one is the set
+difference fifth one is the Cartesian
+product and the last fundamental
+operation in relational algebra the
+sixth one is the rename operation
+these six operations are the fundamental
+operations in relational algebra and
+coming to the additional operations we
+have various additional operations in
+relational algebra they are the set
+intersection operation the assignment
+operation the inner join where in inner
+joint we are going to focus on the
+natural join equi join and Theta join
+but our emphasis in this subject will be
+more on natural joint and the next
+additional operation is the division
+operation and the last additional
+operation that we are going to focus on
+in this subject is the outer join where
+we are going to see three forms of Auto
+join the left outer join the right outer
+join and the full outer join so we have
+seen about the various fundamental and
+additional operations in the coming
+lectures we are going to focus on all
+the operations one by one with examples
+and that's it guys I hope you guys
+enjoyed this presentation and thank you
+for watching
+[Music]
+[Applause]
+[Music]

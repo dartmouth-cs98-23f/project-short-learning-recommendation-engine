@@ -1,0 +1,70 @@
+{
+  "introduction": "This video provides an overview of the Zig programming language, its features, and its use cases. Zig is a high-performance system programming language that offers minimalism, speed, and low-level memory control. It has a unique comp time keyword and integrates well with C and C++ code bases. The video covers memory management, error handling, testing, and building executables. Zig is designed to be portable and can target different architectures, making it a versatile choice for developers.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Zig",
+      "content": [
+        "Zig was created by Andrew Kelly in 2016 and has quickly become one of the most desired new languages in the world.",
+        "Zig is a memory-safe language that doesn't have any hidden memory allocations, making the code far more explicit and portable.",
+        "Zig has no hidden control flow, operator overloading, or exceptions. It uses a unique comp time keyword for runtime optimization.",
+        "Zig can be easily integrated into a C or C++ code base and supports cross-compilation out of the box with LLVM."
+      ],
+      "topics": ["Zig History", "Memory Safety", "Control Flow", "Integration with C/C++"]
+    },
+    {
+      "title": "Section 2: Memory Management in Zig",
+      "content": [
+        "Zig uses built-in page allocators from the standard library for memory management.",
+        "Zig allows for easy swapping out of allocators to target different architectures like x86, ARM, WebAssembly, and bare metal.",
+        "The defer keyword automatically deinitializes the list when it goes out of scope, preventing memory leaks.",
+        "Zig supports multiple variables being bundled into a struct and accessed on that namespace with dot notation."
+      ],
+      "topics": ["Memory Management Techniques", "Allocator Swapping", "Memory Leak Prevention", "Struct Access"]
+    },
+    {
+      "title": "Section 3: Error Handling in Zig",
+      "content": [
+        "Zig uses explicit error handling with the try keyword to catch and return errors automatically.",
+        "Zig's built-in testing framework allows for code evaluation outside of the main program.",
+        "Zig's built-in testing framework can be run with the zig test command.",
+        "Zig's built-in testing framework can be used to optimize for speed, size, or safety."
+      ],
+      "topics": ["Explicit Error Handling", "Testing Framework", "Test Command", "Optimization"]
+    },
+    {
+      "title": "Section 4: Building Executables in Zig",
+      "content": [
+        "Zig has a built-in testing framework that allows for code evaluation outside of the main program.",
+        "Zig can be easily integrated into a C or C++ code base and supports cross-compilation out of the box with LLVM.",
+        "Zig's built-in testing framework can be used to optimize for speed, size, or safety.",
+        "Zig's built-in testing framework can be used to build executables with the zig build command."
+      ],
+      "topics": ["Integration with C/C++", "Cross-Compilation with LLVM", "Optimization", "Executable Building"]
+    },
+    {
+      "title": "Section 5: Advanced Topics in Zig",
+      "content": [
+        "Zig supports multiple variables being bundled into a struct and accessed on that namespace with dot notation.",
+        "Zig has a unique comp time keyword that makes it trivial to run kodak compile time instead of runtime.",
+        "Zig has no hidden control flow, operator overloading, or exceptions.",
+        "Zig has a built-in testing framework that allows for code evaluation outside of the main program."
+      ],
+      "topics": ["Struct Access", "Comp Time Keyword", "No Hidden Control Flow", "Testing Framework"]
+    }
+  ],
+  "topics": ["Memory Management", "Error Handling", "Testing Framework", "Executable Building", "Struct Access", "Comp Time Keyword", "No Hidden Control Flow"],
+  "generalTopics": [
+    {
+      "name": "Programming Languages and Software Development",
+      "complexity": 0.68
+    },
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.61
+    },
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.59
+    }
+  ]
+}

@@ -1,0 +1,309 @@
+hey everyone welcome back and today
+let's do something a little bit
+different let's talk about the top six
+coding interview concepts that you need
+for interviews and by top six i mean the
+top six most common at least in my
+experience i think some people might
+disagree with a couple of these but
+overall these are definitely not
+controversial i think generally speaking
+these are six of the most common uh you
+know things that come up in interviews
+and spoiler alert dynamic programming is
+not gonna show up on my list for how
+difficult dynamic programming is and how
+much it's talked about it actually
+doesn't show up that much in interviews
+i think it's kind of funny people spend
+so much time studying that because they
+think it's really difficult and they
+feel like it's definitely going to show
+up in their interview well chances are
+it's actually not going to show up in
+your interview there's a lot of
+companies that have actually banned
+asking dynamic programming questions and
+even the ones that do ask it don't ask
+it super frequently so i think your time
+would be better invested studying some
+of these other more common
+patterns and concepts and definitely
+feel free to let me know if you'd like
+to see more videos like this or maybe
+other videos i've seen a lot of
+suggestions for people asking about my
+google interview experience and other
+videos like that so feel free to suggest
+it but okay now let's get into the top
+six list let's start with number six and
+that is going to be a data structure
+called a heap you may or may not be
+familiar with heaps but they are a very
+common data structure that comes up
+there's some problems where actually the
+entire problem itself is just using a
+heap like okay you know there's some
+operation you're trying to do maybe
+you're trying to get the minimum value
+or the maximum value or one problem that
+comes up very frequently is the top k
+values or something like that and that's
+really what a heap is designed to do
+because with a heap there's two
+variations a minimum heap and a maximum
+heap if you were doing a minimum heap
+for example you could get the minimum
+value from the heap in big o of one time
+which is very efficient but when it
+comes to actually popping that minimum
+value or adding a value to a heap that
+is done in log n time which is also very
+efficient one thing about the heap that
+i see a lot of people get wrong and even
+i've had interviews where the
+interviewer didn't know this and it was
+kind of an awkward situation because i
+was trying to explain my solution but
+it's that if you're building a heap you
+have 10 values or n values let's say and
+you're building a heap you can build
+that heap in big o of n time as long as
+you have all the values available from
+the start you can build the heap and big
+of and time but if you're actually
+manually adding each value to the heap
+you don't have them available all at
+once but you have to like you know go
+through some kind of data stream to add
+each value to the heap then that will
+take n log n time because adding a value
+to a heap is log n if you have to do
+that n times that's how you're going to
+get that time complexity but heaps
+actually also show up in a lot of
+standard algorithms like graph
+algorithms shortest path algorithms and
+things like that so i think it's a very
+very good data structure to definitely
+understand because
+the implementation is a little bit
+complex but usually you don't have to
+implement a heap you can just use it and
+it's very easy to use this data
+structure okay next up is sliding window
+when i actually first learned this
+algorithm i didn't even know it was a
+standard algorithm i was just doing some
+leak code problems i couldn't figure out
+the problem so i looked at the solution
+and saw okay there's this algorithm
+where you use two pointers to iterate
+through a array and i remember thinking
+wow this is a really clever technique if
+only i had known that it's actually a
+very standard algorithm it would
+actually have been easier to understand
+because this is the type of algorithm
+you can memorize and then apply it in
+many many different places the idea is
+usually that you know to solve some
+problem you have to iterate through a
+array n times so if you have to do that
+n times the overall time complexity
+becomes n squared but there's a lot of
+problems where you can have two pointers
+and then use them kind of intelligently
+and in that way you only end up
+iterating through the entire array once
+well twice if you count the two pointers
+but that's still big o of n time you
+don't have to do nested for loops with a
+sliding window you just keep track of
+two pointers you
+increment them in an intelligent way and
+then you get a very efficient algorithm
+we've done a ton of sliding window
+problems on this channel so definitely
+take a look at the sliding window
+playlist if you want to see some
+examples the next algorithm is going to
+be binary search i think every cs major
+will learn this algorithm and usually
+think it's pretty simple at least
+conceptually right the whole idea comes
+from you know if you were guessing a
+number between one and a hundred and you
+got some kind of feedback right like if
+you got the wrong answer you knew if it
+was too high or too low of course if you
+were guessing between 1 and 100 you
+would guess 50 because if it was too big
+then you would eliminate all the numbers
+that are smaller than 50. if it's too
+small then you'd eliminate all the
+values larger than 50 and then just
+continue to do that just take the
+halfway point between whatever you're
+trying to determine so in that sense
+it's a very simple algorithm usually
+binary search problems are really
+obvious that you're supposed to use
+binary search you're given some kind of
+array and you have to search for a value
+usually you can search for that value in
+big o of n time which you might think is
+efficient but if there's a more
+efficient algorithm using binary search
+login is actually a lot more efficient
+than big o of n which is why binary
+search is
+you know an important algorithm but
+there's also a lot of problems that are
+easy once you know that you're supposed
+to use binary search but it's not
+obvious that you are supposed to use
+mine research sometimes there's a lot of
+data structures involved there's a lot
+of things going on you might think it's
+a sliding window problem but in
+actuality it's a binary search problem
+so i think that's kind of the hard part
+about binary search sometimes even
+identifying the problem needs binary
+search we've also solved a lot of binary
+search problems on this channel if you
+want to take a look at the playlist for
+that okay next up is going to be
+actually two algorithms that are very
+similar depth first search and breadth
+first search these are two incredibly
+common algorithms probably the most
+common algorithms you'll use in coding
+interviews because they can be applied
+in so many different places they can be
+applied to trees but they can also be
+applied to general graphs whether it's a
+2d matrix type graph or a graph of nodes
+and edges and dfs and bfs are actually
+the building blocks for more complex
+algorithms things like jixtra's
+algorithm shortest path kruskal's prim's
+algorithm bellman ford right most graph
+algorithms build on top of dfs and bfs
+so if you have a very good understanding
+of dfs and bfs you can actually solve a
+very large number of problems not just
+graphs but also trees and even more and
+i would say if you can get to the point
+where you can write a dfs algorithm or
+bfs in your sleep you're going to be in
+very good shape for coding interviews
+because these are very standard
+algorithms once you've written them so
+many times it becomes like second nature
+but when you're a beginner these
+algorithms can be pretty daunting to
+learn we do have a trees playlist and a
+graph playlist on the channel if you
+want to practice some dfs or bfs okay
+next up is recursion recursion was super
+difficult for me when i learned it back
+in college but now it's actually very
+intuitive just like dfs and bfs
+recursion is applied in so many places
+and it's also used in graphs as well as
+many other categories like backtracking
+sometimes with dynamic programming if
+you're talking about the memoization
+solution and in so many other ways
+recursion is just a huge category i
+don't know how you would even prepare
+for coding interviews if you didn't know
+recursion and i definitely recommend
+getting pretty proficient with recursion
+you definitely want to have a good
+understanding of the base case the
+recursive step and just the general idea
+of what's going on with the recursion
+you should understand that recursion
+does take extra memory to do it's not
+free you should understand how what's
+going on with the call stack as you do
+recursive algorithms and i think this
+category is probably one of the most
+difficult for people to learn i think
+recursion is the reason why people think
+graphs are hard trees are hard
+backtracking is hard it's usually
+because they don't have a very good
+understanding of recursion okay last up
+the number one pattern i think you
+should understand for coding interviews
+is definitely hashmaps it's the most
+simple thing on this list probably but
+it's also the most common there are so
+many problems that can literally just be
+solved by using a hashmap the famous
+problem is probably twosome because
+instead of iterating through the entire
+array to search for a matching value
+with twosome you can just literally use
+a hash map that's the entire problem if
+you use a hashmap then you solve it
+efficiently and the important thing to
+know about a hashmap is basically that
+every operation that you do on it pretty
+much any operation at least can be done
+in big o of one time in constant time
+now technically that's not true
+in that technically it's amorotized
+because there's a lot of different ways
+to implement a hashmap under the hood
+but basically on average it'll take big
+o of one time and usually 99 of the time
+in real interviews people will just say
+okay yeah it takes big o of one time to
+do that in a hashmap you don't really
+need to get too technical with it adding
+removing and searching for values in a
+hashmap is very efficient and even in a
+lot of the other categories i was
+talking about dfs recursion and sliding
+window hash maps actually come in handy
+for those as well so even if the hashmap
+itself won't solve the entire problem
+hash maps are always used as utility
+data structures to do things efficiently
+if you don't have a good understanding
+of hash maps or know how efficient they
+are then pretty much any coding
+interview problem is going to be
+challenging for you so those are the top
+six coding interview concepts i think
+you should be preparing for let me know
+if you think there's anything that i
+missed or there's anything that you
+disagree with of course i could have
+made this list a lot longer but i like
+to be concise and i think if you are
+preparing for your coding interviews and
+you don't feel like you have a really
+good understanding of the six things
+that i talked about here definitely
+recommend studying that before you get
+into more complex things like dynamic
+programming or getting into those really
+advanced and obscure algorithms like kmp
+pattern matching or maybe kruskal's
+algorithm which most likely you're
+probably not going to see in a real
+coding interview you're more likely to
+see the things that i talked about here
+as always thank you so much for watching
+don't forget to like and subscribe if
+you found this helpful it really helps
+the channel a lot consider checking out
+my patreon if you'd like to further
+support the channel and hopefully i'll
+see you pretty soon thanks for watching

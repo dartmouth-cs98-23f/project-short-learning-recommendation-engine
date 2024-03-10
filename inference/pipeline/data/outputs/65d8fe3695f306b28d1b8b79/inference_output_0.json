@@ -1,0 +1,70 @@
+{
+  "introduction": "This video provides a detailed discussion on stacks and queues as linear data structures. It covers their generalized definitions, practical examples, and operations such as insertion, deletion, and circular queue. The video also highlights the differences between stacks and queues, their applications in solving problems, and their usage in programming languages and software development.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Stacks and Queues",
+      "content": [
+        "Explanation of stacks and queues as linear data structures.",
+        "Differentiation between stacks and queues based on their order.",
+        "Practical examples of stacks and queues.",
+        "Overview of the operations on stacks and queues."
+      ],
+      "topics": ["Stack and Queue Definitions", "Stack and Queue Operations", "Practical Examples"]
+    },
+    {
+      "title": "Section 2: Stacks",
+      "content": [
+        "Stack as a linear data structure following the LIFO order.",
+        "Insertion and deletion operations on stacks.",
+        "Examples of stacks in programming and data structures.",
+        "Applications of stacks in solving problems."
+      ],
+      "topics": ["Stack Definition", "Stack Operations", "Applications of Stacks"]
+    },
+    {
+      "title": "Section 3: Queues",
+      "content": [
+        "Queue as a linear data structure following the FIFO order.",
+        "Insertion and deletion operations on queues.",
+        "Examples of queues in programming and data structures.",
+        "Applications of queues in solving problems."
+      ],
+      "topics": ["Queue Definition", "Queue Operations", "Applications of Queues"]
+    },
+    {
+      "title": "Section 4: Circular Queues",
+      "content": [
+        "Circular queue as a special type of queue where the last element points to the first element.",
+        "Insertion and deletion operations on circular queues.",
+        "Examples of circular queues in programming and data structures.",
+        "Applications of circular queues in solving problems."
+      ],
+      "topics": ["Circular Queue Definition", "Circular Queue Operations", "Applications of Circular Queues"]
+    },
+    {
+      "title": "Section 5: Priority Queues",
+      "content": [
+        "Priority queue as a special type of queue where elements are assigned priorities.",
+        "Insertion and deletion operations on priority queues.",
+        "Examples of priority queues in programming and data structures.",
+        "Applications of priority queues in solving problems."
+      ],
+      "topics": ["Priority Queue Definition", "Priority Queue Operations", "Applications of Priority Queues"]
+    }
+  ],
+  "topics": ["Stack and Queue Operations", "Applications of Stacks and Queues", "Priority Queue Operations"],
+  "generalTopics": [
+    {
+      "name": "Programming Languages and Software Development",
+      "complexity": 0.61
+    },
+    {
+      "name": "Algorithms and Data Structures",
+      "complexity": 0.59
+    },
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.53
+    }
+  ]
+}

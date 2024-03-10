@@ -1,0 +1,70 @@
+{
+  "introduction": "In this video, we will discuss the five different types of software testing that every software developer should be familiar with. These testing levels form a pyramid, with unit tests at the base and manual tests at the top. We will explore each level in detail, discussing their importance, the tests to write, and the topics covered.",
+  "sections": [
+    {
+      "title": "Section 1: Unit Tests",
+      "content": [
+        "Unit tests are the foundation of any testing pyramid. They test individual functions and methods in your code to ensure they work correctly.",
+        "The number of unit tests you need depends on your testing strategy. You should aim to test every line of code in your methods.",
+        "MCDC coverage requires at least eight different unit tests to cover all scenarios in an if statement with three different conditions.",
+        "Unit tests should be run as part of the build process or before a release."
+      ],
+      "topics": ["Unit Testing", "Testing Strategy", "MCDC Coverage", "Build Process"]
+    },
+    {
+      "title": "Section 2: Component Tests",
+      "content": [
+        "Component tests ensure that your application functions correctly without interference from other components. They mock out the database to test both happy and unhappy paths.",
+        "Integration tests are generally run as part of the build process or before a release.",
+        "Component tests should test all units from the previous level to ensure they work well together.",
+        "Mocking out the database is essential for component tests."
+      ],
+      "topics": ["Component Testing", "Mocking Out the Database", "Happy and Unhappy Paths", "Integration Tests"]
+    },
+    {
+      "title": "Section 3: Integration Tests",
+      "content": [
+        "Integration tests test the interactions between components in your application. They ensure that all units from the previous levels work together correctly.",
+        "Integration tests should test calling APIs and interacting with the database.",
+        "Testing things like message queues and other external services is also important.",
+        "Integration tests are generally run as part of the build process or before a release."
+      ],
+      "topics": ["Integration Testing", "Testing Interactions between Components", "APIs", "Message Queues"]
+    },
+    {
+      "title": "Section 4: End-to-End Tests",
+      "content": [
+        "End-to-end tests ensure that your application meets business requirements. They test the entire application from start to finish.",
+        "End-to-end tests are usually written in Gherkin language and follow the given when then pattern.",
+        "Frameworks such as Spec Flow and Cucumber allow you to execute code in this format while still having tests understandable by business stakeholders.",
+        "End-to-end tests can take a long time to run and are not run on every build. You need someone working full time on automation tests."
+      ],
+      "topics": ["End-to-End Testing", "Gherkin Language", "Business Requirements", "Automation Tests"]
+    },
+    {
+      "title": "Section 5: Manual Tests",
+      "content": [
+        "Manual tests are performed by humans and are typically used when automation is not feasible or cost-effective.",
+        "Manual tests should be run as part of the build process or before a release.",
+        "It's essential to have the majority of your tests automated to avoid the vicious cycle of not having enough time to test your application before each release.",
+        "Finding bugs in manual testing can be more challenging than in automated tests."
+      ],
+      "topics": ["Manual Testing", "Automation Tests", "Vicious Cycle", "Finding Bugs"]
+    }
+  ],
+  "topics": ["Unit Testing", "Component Testing", "Integration Testing", "End-to-End Testing", "Manual Testing"],
+  "generalTopics": [
+    {
+      "name": "Software Testing",
+      "complexity": 0.61
+    },
+    {
+      "name": "Testing Pyramid",
+      "complexity": 0.59
+    },
+    {
+      "name": "Automation Tests",
+      "complexity": 0.59
+    }
+  ]
+}

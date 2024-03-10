@@ -1,0 +1,901 @@
+what is going on guys welcome back in
+this video today we're going to learn
+how to do parallel Computing using Cuda
+which is nvidia's parallel Computing
+platform and toolkit so let us get right
+into it
+[Music]
+alright so Cuda is as I already
+mentioned nvidia's parallel Computing
+platform and it is super important in
+machine learning because in machine
+learning a lot of the tasks are actually
+just linear algebra Matrix
+multiplications Matrix operations Vector
+operations things like that and Cuda is
+optimized for exactly that and in this
+video today I want to show you how it
+works I want to give you a very simple
+uh introduction example of a
+parallelized Hello World which is not
+very useful but you can see how it
+basically works and then we're going to
+implement something more advanced which
+is a matrix Vector multiplication first
+in core c and then in Cuda to see the
+performance difference there now to get
+started what you need is you need to
+have Cuda and the Cuda toolkit installed
+on your system the easiest way to do
+that is to just follow the instructions
+here in the documentation so you have
+instructions for Linux you have
+instructions for Windows and probably
+also for Mac you will hopefully find all
+three of them in the description down
+below so you can just follow the
+installation here I think though on
+Linux it's quite simple at least if you
+have the basic NVIDIA drivers installed
+and of course you need to have an Nvidia
+GPU for that you cannot do this with an
+AMD GPU but I think if I just run this
+command here I should be able to see
+where I'm running the compiler from yeah
+Nvidia Cuda toolkit so this is what you
+have to install but if you want to make
+sure everything works correctly just
+follow the installation instructions
+here now I need to mention that this
+video is going to be quite advanced in
+terms of it requires you to already have
+some C knowledge it requires you to
+already
+no basic programming concept so this is
+not an introduction video for someone
+who is never coded in C never coded in C
+plus plus or anything like that if you
+only know python you can still watch
+this to get some inspiration to see how
+it works but don't expect to to
+understand everything here because I'm
+going to just use Concepts or apply
+Concepts like malloc so allocation of
+memory freeing memory and stuff like
+that without explaining how it works and
+why it needs to be done
+so once you have everything set up we're
+going to go into the directory that
+we're going to be working in today so in
+my case it's this one it says python
+even though it's not going to be python
+today
+uh and we're going to start with a basic
+hello world example so
+Cuda is uh basically just C or C plus
+plus code but it's actually Cuda code so
+it's uh very similar the language is
+almost the same but you have some
+additional functions and data types and
+stuff like that and we're going to start
+now by creating a file called hello
+underscore Cuda dot C but we're not
+going to create a C file we're going to
+create a CU file a CU file is
+essentially a Cuda file instead of a
+just core c file and here now we're
+going to start by writing an ordinary
+hello world program in C but then we're
+going to change it so that it can be
+parallelized with Cuda so we're going to
+start by including
+include and then we're going to include
+stdio dot h and then we're going to
+define a function hello world
+and this function will just printf
+hello world
+or actually wanted to say hello Cuda
+so let's call this hello Cuda
+backslash n for line break and that is
+basically the function then we have our
+main function here which takes some
+parameters Maybe rxc
+and then also Arc B and then we have the
+return zero at the end and then we call
+our function hello Cuda
+and that is basically our C program now
+what we can do now in Cuda or maybe let
+me show you that this actually works and
+see for those of you who are not so
+familiar with c
+uh move this to this and now I can just
+compile it and the ordinary way to
+compile a c uh program is to say GCC or
+whatever compiler you want to use hello
+Cuda and then hello Cuda is the output
+and then I can just run Helen Cuda
+so this is an ordinary C program now now
+let's move it back to
+a Cuda file
+let's go into it and change the code so
+that it can be parallelized
+um
+and what we're going to do here is we're
+going to make this void function here
+we're going to make it a global function
+so global
+underscore underscore Global underscore
+underscore void hello Cuda and then when
+we call this function we're going to
+actually specify three angle brackets
+opening and closing and in here we're
+going to specify the grid shape and the
+block shape the basic idea of Cuda is
+that you have multiple blocks that are
+aligned in a grid and then you have in
+those blocks multiple threads now maybe
+I can give you again a not so good
+visualization here I'm only going to use
+my mouse so this is not going to look uh
+too great but you have basically a grid
+in your GPU you can say
+uh and in this grid you have different
+blocks so we can maybe split this up if
+this is now two by two
+so we have this two by two grid we have
+block zero zero we have block
+uh zero one we have block one zero and
+we have block one one now those blocks
+themselves contain threats so these
+different blocks are again split up here
+um maybe we should use a different color
+for this they have a structure
+themselves so maybe the block itself is
+also a two by two block every single
+block is a two by two block and in those
+blocks we have now the threat 0 0 and
+then zero one and one zero and one one
+and we have the same everywhere so zero
+zero zero one
+one zero one one in all these blocks we
+have threats and they can have whatever
+shape you want now I'm going to explain
+why this is useful later on for now it's
+not really useful for now it's just
+something that we need to know and I'm
+going to now specify that I want to have
+uh one block and one thread in this
+block so this would be one one
+um and what we can do now is we can
+compile this but we can compile this
+with uh the Nvidia compiler so with the
+Cuda compiler nvcc hello Cuda dot CU and
+then we can say output hello Cuda
+and now when I run this we will see
+everything is oh actually I forgot
+something important to actually see the
+output we need to call a function which
+is Cuda device
+synchronize to actually get the output
+here as well
+because otherwise everything is
+happening on the device so we compile
+again
+we run again and we can see Hello Cuda
+here
+so that's quite simple now I can also
+say I want to have
+two blocks with one thread each this
+would also work but then you can see
+what happens is I run this two times
+and I can then change this again and I
+can say I want to have basically I can
+say either two blocks in one thread I
+can also say one block with two threads
+the result would be the same in this
+case I can also say I want to have two
+blocks and two threads
+so in this case I would get
+four times hello Cuda that's the basic
+idea of how this works now why is this
+important why is this useful we can
+access inside of this function here
+certain values and I'm going to print
+them here for you so that you can see
+how this works we can have a block index
+X
+which is going to be a number we can
+have a block index Y which is also going
+to be a number we can have a threat
+index X
+which is also going to be a number and
+we can have a threat index y obviously
+which is again also going to be a number
+and let's add a backslash n here
+we can just get these values by
+accessing block idx dot X lock idx dot y
+threat idx dot X and threat idx dot Y
+and those are important because
+basically what we can do now is we can
+compile we can run
+and due to the shape that I provided we
+only have X values because I said I want
+to have two blocks and I didn't say I
+want to have uh two times two blocks
+with two times two threads I just have
+two blocks two threads so we're only
+using the x-axis but you can see that
+every time uh the GPU runs the code it
+runs it on a certain block and on a
+certain thread so we have block zero
+thread one block zero thread zero and so
+on and so forth which means that if I
+can say certain blocks of the GPU are
+responsible for certain blocks of a
+matrix calculation this is very
+compatible because a matrix has a
+certain uh shape a certain grit shape
+and the GPU has a certain grid shape and
+then I can just
+parallelize the operations in this grit
+shape sort of way so this is what we're
+going to do now with a matrix Vector
+multiplication and we're going to start
+by implementing this Matrix Vector
+multiplication in core c so to can
+follow the thought process if you're not
+familiar with Cuda and then we're going
+to do the same thing in Cuda so that we
+can see what changes and we can see also
+why it is faster so I'm going to start
+here in new file which is going to be
+Matrix underscore Vector dot C
+and this file here what we're going to
+do is we're going to import so we're
+going to include
+[Music]
+um
+stdio.h by the way excuse my slow typing
+I'm still getting used to my new
+keyboard I change the layout
+so I'm typing a little bit slower than
+usual but we import these two uh
+libraries here and then we say void
+Matrix vector
+uh product let's say
+and what we want to get here as an input
+is we want to have first of all a flow a
+float pointer
+to a matrix a
+want to have a float pointer to a matrix
+V to a vector V1
+and to a vector V2
+and want to have the Matrix size which
+is going to be an integer the basic idea
+is that we're going to have
+an N by n Matrix an n-sized Vector we're
+going to multiply the two and we're
+going to store the result in an N sized
+vector vector 2. again I'm not going to
+explain basic uh Matrix Vector
+multiplication I'm not going to explain
+what a pointer is I expect you to either
+know that or to not care about it if you
+watch this video
+um so we're going to Define this
+function now and we're going to do it in
+a very simple way we're going to have a
+loop and I
+from 0 I being less than the Matrix size
+and then I plus plus so we're basically
+just going
+through the rows
+so we're going through row 0 1 2 3 and
+so on
+and in there what we want to do is we
+want to have we want to keep track of a
+sum which starts at zero and then we're
+going to go through the columns
+int J equals zero
+J less than Matrix size we can do this
+again here because
+um
+because we have an N by n Matrix so the
+Matrix size is going to be the size of
+the row or the the amount of rows and
+the amount of columns and then J plus
+plus
+and all we want to do now basically is
+we want to say sum plus equals and we
+want to add whatever the value or we
+want to multiply whatever the value is
+at the current position so we take I the
+current row but we take it times The
+Matrix size because we want to go
+through the
+um so basically if you're the second row
+you want to not just go with two you
+want to go with
+um because we don't have a
+multi-dimensional array here we have a
+long array we have the flattened version
+of The Matrix basically and because of
+that we don't want to just go to row two
+we want to go to Row 2 but this means
+going uh two times The Matrix size plus
+whatever position we're at column wise
+so I times Matrix size
+plus J so basically maybe I can sketch
+this for those of you who cannot really
+follow we basically have
+[Music]
+um
+why can I not draw now
+let me try again
+okay now it works
+basically what we have is we have
+um
+we have a matrix
+let's say we have a three by three
+Matrix now
+and what I have in C is not the three by
+three Matrix I have a nine
+an array of size nine basically so we
+have nine positions here whatever and
+what I want to do is I want to go to I
+being 0 I being 1 I being 2 but I being
+2 basically means going
+6 and then also whatever I need so I
+have to go six positions to basically
+pass the first two rows that's the
+reason why we do that so I times Matrix
+size plus J how many uh which column in
+that row
+we take this value and we multiply it by
+Vector one and then just
+uh the position there
+and then in the end what we do is we say
+V2
+at respective row is going to be equal
+to the sum that is the result for this
+particular row this is just a basic
+matrix multiplication Matrix Vector
+multiplication
+um then we are going to have our main
+function which is going to take an INT
+Arc C character Part B actually we are
+not using that but I'm just gonna put it
+there
+um and then we're going to return zero
+in the end and what we want to do now is
+we want to just Define everything so we
+want to set everything up we want to
+have a float pointer a a float pointer
+uh V1 and V2
+then we want to define a matrix size now
+we're going to start with a matrix size
+of three just so we can see that the
+calculation is accurate and then we're
+going to go with 40 000 which is a good
+value I figured uh to show the
+performance difference between this
+version and the Cuda version so Matrix
+size is going to be three we're going to
+say a The Matrix is going to
+be typecasted here to a float pointer
+we're going to allocate so we're going
+to use malloc
+to allocate The Matrix size times The
+Matrix size because we have an N by n
+Matrix so Matrix size times Matrix size
+times the size of whatever a flow is on
+the system
+um so we can copy this we can do the
+same thing with V1 V2
+but this time of course uh we're going
+to just use one Matrix size because the
+vector size is going to be the same size
+as the as the Matrix but it's not going
+to be multi-dimensional so if we have a
+10 by 10 matrix we're going to have a 10
+sized Vector that's the basic idea so
+Matrix size times float size and then uh
+we're just going to initialize our uh
+Matrix in our Vector with some basic
+values so we're going to say 4 and I
+equals zero I being less than Matrix
+size
+and then I plus plus
+inside of this we're going to run a
+second Loop maybe I can just copy this
+one here
+but it's going to have a
+J
+and basically the idea is let me open my
+paint again uh what we want to do here
+is we want to if we have the Matrix
+like this I mean just you know let's do
+it like this 3.3 it's not the most
+beautiful Matrix one a half to zero one
+two three four and so on whatever the
+size is and for the vector that we're
+going to use we want to have also zero
+one two three and so on that's the basic
+idea of what we want to do here for the
+initialization you can also just use
+random initialization but I didn't want
+to deal with the whole Randomness and
+see now because I have to come up with
+uh some some seed That Is Random and
+stuff like that but we're going to just
+do it like that now we're going to say
+uh Matrix a i times Matrix size again so
+we just do the same thing that I
+explained Above So Matrix size plus J
+and the value of this is going to be
+exactly
+loads and then uh
+basically what's inside of the bracket
+so I times Matrix size
+plus Jake so the position is going to be
+also the value
+um and then for the vector we're going
+to do a similar thing I'm going to copy
+this here I'm going to paste it here
+um we're gonna just say Vector one
+position I is going to be equal to float
+type casting of I
+and that is the same idea then we
+perform the Matrix Vector product for
+this we pass again a B1 V2 Matrix size
+then as a result of that in V2 we will
+have the result of the multiplication
+stored and then we can say four
+int I equals zero
+I being less than Matrix size
+I plus plus
+we can just print the result vector
+so percent point to f
+backslash n
+and we want to have uh V2
+I
+and finally we free the resources so
+free a
+free V1
+maybe two
+and that should actually be it so GCC
+Matrix vector
+Dash o Matrix vector
+let's see if we get the proper values
+yes those are the correct results so now
+we can also go ahead and change the
+Matrix size to 40
+000 and
+I can compile this I can run this but
+this will take some time I think around
+eight seconds something like that I hope
+this doesn't mess up the recording but
+it shouldn't actually
+but it takes some time as you can see to
+do the calculation then we get the
+output and this is now what we're going
+to also Implement in Cuda and you're
+going to see why Cuda is so powerful for
+tasks like that so I'm going to start
+here with a new file Matrix vector.cu
+here we're going to now just include
+stdio.h we're going to Define again a
+global
+void which is going to be a matrix
+Vector products it takes again a float
+pointer to a matrix a a float pointer
+to a vector B1
+load pointer to a vector V2 and a matrix
+size integer
+and now what we want to do again
+remember we have the block index we have
+the threat index we want the individual
+threads to be responsible for parts of
+the calculation so that all of them can
+work at the same time in the GPU and
+deliver the result faster and for this
+we're going to say okay the row that I'm
+currently working at the row that this
+particular function call is going to be
+working at will be determined by the
+block index
+x times the block dimension
+of X I'm going to explain here in a
+second why we do this
+plus thread index
+X and this is now exactly the same thing
+that we had before remember we had the
+same when I explained to you why we why
+we have the flattened array and why we
+have the Matrix and why we go through I
+times Matrix size this is exactly the
+same thing so we have I
+times Matrix size here
+so basically a column size plus J this
+is what we had multiple times in the
+last code and this is the same pattern
+now we take the row the block index X
+which is the row uh or
+yeah and then we have the block
+Dimension I mean actually we're flipping
+this I think it's actually the column it
+doesn't matter it works anyway because
+it's squared uh but we have basically
+the block index X the position times how
+large is that uh Dimension this x
+Dimension so in this case The Matrix
+size as you can see and then we have the
+thread index in that row or column
+whatever you want to think about here
+and this is the J that we have before so
+it's the same pattern uh it's not
+different and we're going to do the same
+thing now with the column
+uh I think it should actually also work
+when you reverse it
+I think so but we're going to keep it
+like that because I don't want to mess
+up my prepared code here since it's
+squared it doesn't actually matter
+but we have row and column now and we
+determine by the index of the block that
+we're currently currently at and by the
+threat index we determine
+what part of the calculation we're going
+to focus on and to limit this we're not
+going to actually use all of the threads
+we're going to just say if the column
+that we're working at is zero
+and the row that we're working at is
+less than the Matrix size
+because of course we can also go uh we
+can also have if we have for example a
+block size of 10 but we only have a
+matrix size of eight we can go beyond
+the boundary and in this case of course
+we don't want to go beyond the Matrix to
+do calculations
+so if that is the case we're going to
+start with a float sum equal to zero
+again
+and we're going to iterate
+for this particular column that we're in
+we're going to iterate through the rows
+so I equals zero
+I being less than
+The Matrix size
+I plus plus
+and then we want to say sum plus equal
+so the code is quite similar again we
+have a rho times
+Matrix size
+Plus
+I
+and then I think my naming is kind of
+confusing I'm not sure if I shouldn't
+reverse it
+I'm gonna I'm gonna keep it like that
+but maybe we're going to change it later
+on V1
+I and basically a calculation is the
+same we focus on one column or one row
+and we go through the fields of that
+column row whatever you want to focus on
+here and we do the multiplications there
+and at the end we have a sum and this
+sum is what we set and now here row is
+definitely correct because we have in
+the vector rows and here we want to say
+that this is the sum
+so the calculation now is basically the
+same the only difference is that we
+focus on specific we don't have two
+Loops here we focus on a specific part
+of the Matrix based on the Block index
+and on the threat index so every thread
+and block is going to have a different
+responsibility which means that we don't
+have to do all the work in one thread we
+can split up the work and different
+threads will produce different results
+in this Vector in the GPU that's the
+basic idea and now we're going to take
+that and we're going to use that in the
+main function now this is going to be a
+little bit trickier than before because
+there is something
+um that we need to do here which we
+didn't have to do before which is we
+need to communicate uh between the
+device and the host now the host is just
+my CPU my basic program running on the
+on the computer here and the device is
+the GPU the device is this GPU this
+parallel Computing uh device and we need
+to transfer information back and forth
+all the time to get the actual
+um to to be able to pass values to the
+GPU and to get the results from the GPU
+to then display it on the host that's
+the basic idea so what we need to do is
+we need to define a float pointer a
+again but we also need to define a float
+pointer a underscore GPU
+and the same is true we're going to do
+that now here in three separate rows V1
+and V1 GPU V2 and V2 GPU so we want to
+have the equivalent one time on the host
+and one time on the device
+uh then we're going to again Define The
+Matrix size this is something we only
+need once forty thousand
+actually let's start with three first so
+that we can see again if this works
+properly and then we're going to say
+Dimension 3 which is a
+a data type here and we're going to
+define a block shape
+now the block shape is the shape of the
+block itself and basically the block
+shape let me again open up my favorite
+tool here the block shape is if we have
+again
+this is the overall shape so we have
+maybe two times two two times two blocks
+this whole thing here this two times two
+structure will be the grid shape that's
+what we're going to refer as the grid
+shape
+uh in that grid shape we have multiple
+blocks one two three four blocks and
+inside of those blocks we have maybe a
+different shape maybe something like
+this
+uh four times four grid this here is
+going to be the block shape so the shape
+of the block itself
+um
+just so that you don't confuse it so the
+block shape is not the shape of the
+blocks how they are aligned but the
+shape of the blocks inside of the blocks
+I hope this is not too confusing
+um and this is going to be in our case
+32 times 32 2. in other words in each
+block we have 32 times 32 threats that's
+what this basically says and then we
+also have
+uh the grit shape so how many blocks do
+we have and this is important we need to
+calculate this based on the Matrix size
+so we have three scenarios here we have
+a matrix size that is perfectly
+compatible with the block size so we
+have for example a size of 32 and we
+have a shape of 16. so we have basically
+uh we need two times two to fill up the
+space and it it fits perfectly or we
+have something that's not precisely
+compatible so maybe we have a matrix
+size of 30 and a block shape of 16. in
+this case we would have we would have to
+use still two by two but we have some
+remainder and then we have also the case
+where the division would result in zero
+and in this case we would have to just
+force a one so if we have for example a
+matrix size of 10 and we have a block
+shape of 16 times 16. in this case we
+would have one block even though it's
+too much
+so for this I came up with this
+calculation here
+maximum of 1.0 so to force a minimum of
+one
+um and then seal
+float
+actually like this so type casting float
+Matrix size
+divided by float
+and then block shape
+dot X
+um
+yeah that's that's it so basically we're
+we're taking the Matrix size dividing it
+by the block shape to calculate how many
+blocks we need we seal the number
+because we always want to have you know
+you cannot have 5.6 blocks in this case
+you would need six blocks
+and in the case we get a zero out of
+this division we go with 1.0 as a
+minimum value here that we force and we
+can then basically just copy this
+and the same thing is done with Y for
+the y-axis
+all right so this is our grid shape this
+is our block shape now
+um and what we do now is we allocate the
+space again so this is basically the
+same as before so I can actually copy
+this from our previous script that we
+just wrote or that script program that
+we just wrote so
+this part is the same we allocate a the
+1v2 on the host on the machine and we
+also fill it up with the values here so
+we're going to copy that this is going
+to be the exact same thing
+um yeah just allocating locally and
+initializing again with zero one two
+three and so on for the Matrix and for
+the vector now the new thing is we need
+to also allocate now on the device this
+is allocating on the host but we need to
+also allocate space for the GPU pointers
+here and for that we need to use a
+function called cuda malloc
+so Cuda melloc will I'm going to use
+your avoid pointer pointer and a
+underscore GPU this is going to allocate
+the size on or the space on the GPU on
+the device
+and the size is the same Matrix size
+times Matrix size times size of float
+and then we can copy this for
+V1 V2 and we need to remove a matrix
+size here because those are the vectors
+but this is how you do that so now we
+have a space allocated for those
+variables now what we need to do is we
+need to take these or actually just a
+and V1 because this is just an empty
+result Vector but we need to take the
+Matrix and the vector that we want to
+use for the calculation and we need to
+copy them to the device so what we need
+to do after the allocation is we need to
+say Cuda mem copy
+and we need to store in a GPU a so we
+need to transfer a to the a GPU
+and the size that we use for this is
+Matrix size times Matrix size
+times size off float again
+and we need to pass the keyword here
+Cuda mem copy post to device
+same is done for V1
+all right
+and that's basically it we take the
+local
+Matrix and Vector from the host and we
+transmit it to the device to the GPU
+then what we do is we perform the
+calculation on the GPU now we have all
+the data on the GPU we perform the
+calculation on the GPU by calling Matrix
+Vector product and here now remember the
+angle brackets
+we passed a grit shape
+and we pass the block shape
+and then we call it on a underscore GPU
+V1 GPU
+and V2 GPU we didn't transfer V2 but we
+still have V2 GPU and we still allocated
+it here so the result is stored there we
+also need to pass the Matrix size and
+then what we need to do is since the
+result is now in B2 GPU to get it on our
+system on the host system we need to
+transfer it back so we do another Cuda
+mem copy
+and we transfer from or into V2 from V2
+GPU
+Matrix size times size of float
+and here now we use Cuda mem copy
+device
+to host
+and now all we need to do is we need to
+save 4 and I equals zero
+I being less than Matrix size
+I plus plus
+we print
+0.2 F backslash n
+V2
+I
+and that is basically it what we need to
+do in the end of course is also free
+a
+oh now I copy it
+what did I do now hopefully I didn't
+mess up anything free a
+free V1 V2 and important we also need to
+do Cuda free
+a GPU
+and then the same thing with
+V1 B2
+and then in the end of course return
+zero
+that is basically it so let me maybe
+recap again we have this Matrix Vector
+product we decide what we're going to
+focus on here
+um so which threat is going to do which
+part of the work here we allocate a agpu
+V1 V1 GPU V2 V2 GPU so one
+um variable here one pointer on the host
+system one on the device system then we
+Define a matrix size we Define a block
+shape we calculate based on that the
+grid shape we allocate on the host we
+initialize on the host we allocate on
+the device we transmit to the device we
+do the calculation we transmit the
+result to the host and we print it on
+the host and we free all the resources
+that we allocated now let's see if that
+works
+if we didn't mess up anything so nbcc
+Matrix vector.cu and then Matrix Vector
+underscore Cuda
+then point slash Matrix Vector
+underscore Cuda and the results are
+correct so let us go ahead now and
+change this to
+uh forty thousand
+and let's
+compile this
+run this
+and there you go so now what we can do
+is we can time the two different uh
+versions We can time the Matrix Vector
+which is the C version the core c
+version
+and we can see that this takes around
+seven eight seconds something like that
+8.1 seconds and if I go and say Matrix
+Vector Cuda
+this one
+only takes 4.55 seconds so it is a
+massive speed up and this is a simple
+example now I know it might be a little
+bit confusing to some of you who are not
+familiar with C or Cuda but in the
+context of Cuda programming this is a
+very very simple example this is not
+complex but this type of
+um this type of parallel Computing makes
+machine learning much faster because
+again as I mentioned machine learning is
+a lot of linear algebra Matrix
+multiplications Matrix operations and by
+focusing or by mapping the grid
+structure of the blocks and the threads
+to the grid structure of the Matrix you
+can do everything in parallel and you
+can you have this new sort of Paradigm
+of programming and it makes everything
+much faster and much better and this is
+now C you can also do this with C plus
+plus and I think there's also an
+interface in Python maybe I will make a
+video about that once I get familiar
+with that
+but this is how you do Cuda programming
+to speed up
+um to speed up tasks to Speed Up
+Programs with parallel Computing so
+that's it for this video today I hope
+you enjoyed it and hope you learned
+something if so let me know by hitting a
+like button and leaving a comment in the
+comment section down below and of course
+don't forget to subscribe to this
+Channel and hit the notification Bell to
+not miss a single future video for free
+other than that thank you much for
+watching see you next video and bye

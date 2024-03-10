@@ -1,0 +1,70 @@
+{
+  "introduction": "This video provides guidance on choosing the right programming language for various jobs in the tech industry, focusing on game development, mobile development, artificial intelligence and machine learning, devOps, and AR/VR development. The video emphasizes the importance of considering your interests and career goals when selecting a language.",
+  "sections": [
+    {
+      "title": "Section 1: Game Development",
+      "content": [
+        "Unreal Engine and Unity are popular game engines used in the industry.",
+        "C and C++ are recommended for Unreal Engine, while C# is used for Unity.",
+        "C# also has its origin in C and has a similar syntax.",
+        "The choice of language depends on the specific requirements of the game development project."
+      ],
+      "topics": ["Game Development", "Unreal Engine", "Unity", "C", "C++", "C#"]
+    },
+    {
+      "title": "Section 2: Mobile Development",
+      "content": [
+        "Kotlin and Swift are the primary languages for mobile app development.",
+        "Kotlin is an improvement over Java syntax with built-in null safety.",
+        "Swift is the language of choice for iOS development.",
+        "JavaScript is used for web app development, while React and Node.js are popular libraries."
+      ],
+      "topics": ["Mobile Development", "Kotlin", "Swift", "JavaScript", "React", "Node.js"]
+    },
+    {
+      "title": "Section 3: Artificial Intelligence and Machine Learning",
+      "content": [
+        "JavaScript with Node.js is a popular choice for backend development.",
+        "Python with Django or Flask is another option for backend development.",
+        "Rust is a newer language with safety and memory management features.",
+        "The choice of language depends on the specific requirements of the AI/ML project."
+      ],
+      "topics": ["Artificial Intelligence", "Machine Learning", "JavaScript", "Node.js", "Python", "Django", "Flask", "Rust"]
+    },
+    {
+      "title": "Section 4: DevOps",
+      "content": [
+        "Python is a popular scripting language among devOps engineers.",
+        "Golang is gaining popularity in devOps due to its efficiency and scalability.",
+        "Bash scripting is also necessary for devOps tasks.",
+        "The choice of language depends on the specific requirements of the devOps project."
+      ],
+      "topics": ["DevOps", "Python", "Golang", "Bash scripting"]
+    },
+    {
+      "title": "Section 5: AR/VR Development",
+      "content": [
+        "Swift UI is the primary language for AR/VR development on Apple devices.",
+        "The launch of Apple Vision Pro may change the landscape of AR/VR development.",
+        "The choice of language depends on the specific requirements of the AR/VR project.",
+        "Rust achieves safety and memory management through its own system and borrowing mechanism."
+      ],
+      "topics": ["AR/VR Development", "Swift UI", "Apple Vision Pro", "Rust"]
+    }
+  ],
+  "topics": ["Game Development", "Mobile Development", "Artificial Intelligence and Machine Learning", "DevOps", "AR/VR Development"],
+  "generalTopics": [
+    {
+      "name": "Programming Languages and Software Development",
+      "complexity": 0.61
+    },
+    {
+      "name": "Game Development",
+      "complexity": 0.59
+    },
+    {
+      "name": "Mobile Development",
+      "complexity": 0.59
+    }
+  ]
+}

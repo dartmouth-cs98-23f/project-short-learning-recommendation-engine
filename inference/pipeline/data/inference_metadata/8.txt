@@ -1,0 +1,23 @@
+################# BEGINNING RUN: TIME: 2024-02-26 06:03:53.034005 #################
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.25.2
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+Processing document: 65d8fc2595f306b28d1b889c
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.54it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.18it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.05it/s]
+Model loaded on cuda:0, Memory: 13.99 GB
+
+########################################
+# ID: 65d8fc2595f306b28d1b889c #
+###########################################
+
+Runtime so far: 0.06 minutes
+Cleaning transcript yt_id: RBSUwFGa6Fk
+Transcript /home/ubuntu/InferenceTest1/rec/inference/pipeline/data/transcripts/raw/65d8fc2595f306b28d1b889c.txt already downloaded
+[nltk_data] Downloading package stopwords to /home/ubuntu/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+Run 1/3
+Tokens: 7548

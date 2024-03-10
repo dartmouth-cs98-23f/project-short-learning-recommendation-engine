@@ -1,0 +1,70 @@
+{
+  "introduction": "In this video, we will discuss data schema design for a product page with a discussion forum and product reviews. The data schema design will be for an RDBMS, and we will create tables for product, images, reviews, and category. The video will cover the primary key, data structures, normalization, and other important concepts related to data schema design.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Data Schema Design",
+      "content": [
+        "Explanation of data schema design and its importance in understanding requirements from a functional perspective.",
+        "Overview of the RDBMS data schema design for the product page with a discussion forum and product reviews.",
+        "Introduction to the key concepts covered in the video, such as primary key, data structures, normalization, and other important topics.",
+        "Discussion on the importance of keeping the design simple and not overcomplicating it."
+      ],
+      "topics": ["Data Schema Design", "RDBMS", "Primary Key", "Data Structures", "Normalization"]
+    },
+    {
+      "title": "Section 2: Creating the Product Table",
+      "content": [
+        "Explanation of the product table and its structure, including the product id and product name.",
+        "Discussion on the use of a unique product key as the primary key.",
+        "Explanation of the product key and its importance in the data schema design.",
+        "Example of entering a few rows in the product table."
+      ],
+      "topics": ["Product Table", "Product Id", "Product Name", "Primary Key", "Product Key Example"]
+    },
+    {
+      "title": "Section 3: Creating the Images Table",
+      "content": [
+        "Explanation of the images table and its structure, including the image id and product id.",
+        "Discussion on the use of a cloud storage service such as S3 for image storage.",
+        "Explanation of the product key as a reference to the product id in the images table.",
+        "Example of entering a few rows in the images table."
+      ],
+      "topics": ["Images Table", "Image Id", "Product Id", "Cloud Storage", "Product Key Example"]
+    },
+    {
+      "title": "Section 4: Creating the Reviews Table",
+      "content": [
+        "Explanation of the reviews table and its structure, including the review id, product id, star rating, and description.",
+        "Discussion on the use of a reply id or boolean to indicate pending replies.",
+        "Explanation of the importance of handling reviews and replies.",
+        "Example of entering a few rows in the reviews table."
+      ],
+      "topics": ["Reviews Table", "Review Id", "Product Id", "Star Rating", "Description", "Reply Id", "Boolean"]
+    },
+    {
+      "title": "Section 5: Creating the Category Table",
+      "content": [
+        "Explanation of the category table and its structure, including the category id and product id.",
+        "Discussion on the use of the category id for filtering and sorting products.",
+        "Explanation of the importance of handling reviews and replies.",
+        "Example of entering a few rows in the category table."
+      ],
+      "topics": ["Category Table", "Category Id", "Product Id", "Filtering", "Sorting"]
+    }
+  ],
+  "topics": ["Product Table", "Images Table", "Reviews Table", "Category Table", "Primary Key", "Data Structures", "Normalization", "Cloud Storage"],
+  "generalTopics": [
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.65
+    },
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": 0.60
+    },
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.55
+    }
+  ]
+}

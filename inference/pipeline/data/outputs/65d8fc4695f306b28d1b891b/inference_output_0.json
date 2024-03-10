@@ -1,0 +1,70 @@
+{
+  "introduction": "Tim Rothman talks about the Price of Anarchy, focusing on the computational complexity of finding the worst-case price of anarchy in a network with a given beta value. He also discusses the use of heuristics and approximation strategies to solve computational problems.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to the Price of Anarchy",
+      "content": [
+        "Explanation of the Price of Anarchy concept and its importance in network optimization.",
+        "Discussion of the computational complexity of finding the worst-case price of anarchy.",
+        "Introduction to the use of heuristics and approximation strategies in computational problem-solving.",
+        "Mention of the New Zealand government's failed auction as an example of the importance of heuristics."
+      ],
+      "topics": ["Price of Anarchy", "Computational Complexity", "Heuristics", "Approximation Strategies"]
+    },
+    {
+      "title": "Section 2: Computational Complexity and the Price of Anarchy",
+      "content": [
+        "Explanation of the computational complexity of finding the worst-case price of anarchy.",
+        "Discussion of the relationship between the computational complexity and the beta value.",
+        "Explanation of how the theory can be used to compute the worst-case price of anarchy as a function of the beta value.",
+        "Mention of the importance of finding the exact solution in some cases."
+      ],
+      "topics": ["Computational Complexity", "Beta Value", "Worst-case Price of Anarchy", "Exact Solution"]
+    },
+    {
+      "title": "Section 3: Heuristics and Approximation Strategies",
+      "content": [
+        "Explanation of heuristics and approximation strategies in computational problem-solving.",
+        "Discussion of the use of heuristics in auction problems and their effectiveness in reducing bad results.",
+        "Mention of the New Zealand government's use of heuristics in their failed auction.",
+        "Explanation of the motivation for using heuristics in computational problem-solving."
+      ],
+      "topics": ["Heuristics", "Approximation Strategies", "Auction Problems", "Motivation"]
+    },
+    {
+      "title": "Section 4: The Role of Economic Reasoning in Computational Problem-solving",
+      "content": [
+        "Explanation of the role of economic reasoning in computational problem-solving.",
+        "Discussion of the difficulty of finding Nash equilibria and the computational complexity of Nash equilibrium computation.",
+        "Explanation of the refined version of NP proposed by Papadimitriou.",
+        "Mention of the importance of understanding computational intractability in practice."
+      ],
+      "topics": ["Economic Reasoning", "Nash Equilibria", "Computational Complexity", "Intractability"]
+    },
+    {
+      "title": "Section 5: Conclusion and Future Directions",
+      "content": [
+        "Summary of the main points discussed in the talk.",
+        "Discussion of the importance of finding exact solutions in some cases.",
+        "Explanation of the role of heuristics and approximation strategies in computational problem-solving.",
+        "Mention of the importance of understanding computational intractability in practice."
+      ],
+      "topics": ["Summary", "Exact Solutions", "Heuristics", "Intractability"]
+    }
+  ],
+  "topics": ["Computational Complexity", "Heuristics", "Approximation Strategies", "Economic Reasoning", "Intractability"],
+  "generalTopics": [
+    {
+      "name": "Computational Intractability",
+      "complexity": 0.69
+    },
+    {
+      "name": "Economic Reasoning in Computational Problem-solving",
+      "complexity": 0.69
+    },
+    {
+      "name": "Heuristics and Approximation Strategies",
+      "complexity": 0.59
+    }
+  ]
+}

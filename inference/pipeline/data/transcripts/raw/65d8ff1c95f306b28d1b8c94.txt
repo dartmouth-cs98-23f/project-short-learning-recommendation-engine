@@ -1,0 +1,97 @@
+In my previous video, I talked about what quantum 
+computing is and what makes it special. But as  
+a developer, I'm sure you want to know how to 
+actually write a piece of code that would run  
+on a common computer. But before we dive into 
+that, let's just do a little bit of a quick  
+recap. Instead of the classical bits of 0s and 1s, 
+quantum computers use qubits. A qubit can be a 0,  
+a 1, or any linear combination of the two. 
+And that is what we called a superposition.  
+We can also entangle multiple qubits. So their
+states become strongly correlated.  In order  
+to change the states of qubits, we apply 
+a series of gates, similar to the classical  
+logic gates. And in the end, we want to measure 
+these qubits so we can get the results.  
+So how do we take all these concepts into 
+code? And the answer is simple. We use a  
+quantum software development kit. In 
+this video, we will be using Qiskit.  
+Which is the most widely used quantum SDK today.  
+Qiskit is based on Python, which is fairly simple 
+to learn, even if you've never used it before.  
+So let's write a simple program in his Qiskit. In this program, we will use two qubits.  
+We will put one into superposition, entangle it with the other, and then  
+do a measurement of both of them. And 
+of course, all that is done using gates.  
+So let's start by importing quantum circuit from 
+Qiskit. We then can create a quantum circuit 
+with two quantum registers 
+and two classical registers.  
+The quantum registers are used for quantum  
+computation. One for each qubit. And the classical 
+registers are used to store the measured results.  
+We need a classical registers because 
+even though the physical world is quantum,  
+the majority of the classical 
+world is still classical.  
+And the classical registers allow us to bring 
+quantum information back into the classical world.  
+So the next thing we want to do is 
+apply some gates. And in this program,  
+we're going to apply two gates. The 
+first one is the Hadamard gate 
+on qubit 0. The Hadamard gate puts 
+the qubit into a superposition between 0  
+and 1. That means it now has an equal 
+chance of being measured a 0 or 1.  
+The next gate we need is the control 
+not gate,  or "cx" for short.  
+The control not gate is a conditional two qubits gate. It has a control qubit
+and the target qubit.
+Without superposition, the control 
+not gate is fairly simple to understand.  
+That is, it is as if the state of the control qubit is 
+1, then you flip the state of the target qubit.  
+And that's why it's called control not.  
+And because the states of least two 
+qubits are now strongly correlated,  
+we now say they are entangled. So the 
+last thing we want to do is actually do  
+measurements so we can get the outputs. And we 
+do this by calling the measure all function.  
+And there you have it. We just wrote a simple 
+quantum program using Qiskit. Now, if you take  
+this program and run it a bunch of times on an 
+ideal quantum computer, you'll find out that  
+there's a 50% chance of the outputs being 00 and 
+50% chance of it being 11. But you would never  
+be a 01 or 10. The 50/50 of the first 
+qubit comes from the superposition. And while  
+we didn't explicitly change the state of the 
+second qubit, it got changed anyway because  
+it is entangled with the first qubit. 
+So it changes with the first qubit.  
+So in this program, we created a quantum 
+circuit which operates at the same level  
+as classical assembly language and allows you 
+to efficiently manipulate the qubits directly.  
+However, if you're not fond of 
+playing with low level circuits,  
+Qiskit also offers a number of higher 
+level algorithms. For example, Qiskit has  
+a package focusing on machine learning that has 
+a number of pre-built classes. You can take a  
+quantum kernel class, use it to train and test 
+data. You can then take this trained quantum  
+kernel and pass it into a classical algorithm 
+such as the support vector classification  
+from scikit-learn. Then you can then 
+accelerate your classical application.  
+Thanks for watching. If you have any questions, 
+please leave them in the comments below.  
+Also, please remember to Like this 
+video and Subscribe to our channel  
+so we can continue to bring you 
+content that matters to you.

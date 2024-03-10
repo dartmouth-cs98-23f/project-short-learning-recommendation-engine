@@ -1,0 +1,70 @@
+{
+  "introduction": "This video provides a comprehensive overview of computer graphics, focusing on its fundamentals. It covers the components of computer graphics, including modeling, rendering, and viewing, as well as the framework for interacting with graphics. The goal is to serve as a foundation for understanding and implementing computer graphics in various applications.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Computer Graphics",
+      "content": [
+        "Computer graphics is the use of computers to create and manipulate pictures on a display device.",
+        "Computer graphics comprises of software techniques to create, store, and manipulate images.",
+        "Computer graphics covers a wide range of topics and has relied on contributions from many disciplines, including computer science.",
+        "The goal of this lecture is to introduce the basic concept of computer graphics and serve as a foundation for understanding and implementing computer graphics."
+      ],
+      "topics": ["Computer Graphics Fundamentals", "Computer Graphics Software", "Computer Graphics Applications"]
+    },
+    {
+      "title": "Section 2: Components of Computer Graphics",
+      "content": [
+        "Modeling is defining objects in terms of primitives, coordinates, and characteristic modeling.",
+        "Rendering is applying physical base procedures to generate photorealistic images from scenes using lighting and shading.",
+        "Viewing is displaying images from various viewpoints on various devices.",
+        "The framework for interacting with graphics consists of input and output devices, graphic system, application program, and application model."
+      ],
+      "topics": ["Computer Graphics Modeling", "Computer Graphics Rendering", "Computer Graphics Viewing", "Computer Graphics Interaction Framework"]
+    },
+    {
+      "title": "Section 3: Computer Graphics Applications",
+      "content": [
+        "Computer graphics is used in various applications, including computer-aided design (CAD), computer-aided manufacturing (CAM), computer-aided engineering (CAE), and computer-aided drawing (CAD).",
+        "Computer graphics is also used in gaming, animation, and virtual reality (VR) and augmented reality (AR) applications.",
+        "Computer graphics is widely used in education to teach concepts and fundamentals in an easy-to-understand and learn more using computer graphics.",
+        "Computer graphics is used in training specialized systems for designing, modifying, and creating various parts of machines and the whole machine itself."
+      ],
+      "topics": ["Computer Graphics Applications in Design", "Computer Graphics Applications in Gaming", "Computer Graphics Applications in Education", "Computer Graphics Applications in Training"]
+    },
+    {
+      "title": "Section 4: Computer Graphics and Human-Computer Interaction",
+      "content": [
+        "Computer graphics is used to create graphical user interfaces (GUIs) that help in creating a user-friendly environment where working is easy and present using computer.",
+        "Computer graphics is used to create icons, popup menus, graphical objects, and other visual elements that help in creating a more intuitive and interactive interface.",
+        "Computer graphics is used to create animations and visual effects that provide feedback and enhance the user experience.",
+        "Computer graphics is used to create visualizations and simulations that help in understanding complex concepts and processes."
+      ],
+      "topics": ["Computer Graphics in GUI Design", "Computer Graphics in Visual Elements", "Computer Graphics in Animation and Visual Effects", "Computer Graphics in Visualizations and Simulations"]
+    },
+    {
+      "title": "Section 5: Computer Graphics and Programming Languages",
+      "content": [
+        "Computer graphics can be implemented using various programming languages, such as C++, Python, Java, and JavaScript.",
+        "Programming languages provide a way to interact with computer graphics libraries and frameworks, such as OpenGL, DirectX, and WebGL.",
+        "Programming languages can be used to create custom graphics algorithms and techniques, such as ray tracing and anti-aliasing.",
+        "Programming languages can be used to create interactive and dynamic graphics, such as games and simulations."
+      ],
+      "topics": ["Computer Graphics and Programming Languages", "Interacting with Computer Graphics Libraries and Frameworks", "Custom Graphics Algorithms and Techniques", "Interactive and Dynamic Graphics"]
+    }
+  ],
+  "topics": ["Computer Graphics Fundamentals", "Computer Graphics Components", "Computer Graphics Applications", "Computer Graphics and Human-Computer Interaction", "Computer Graphics and Programming Languages"],
+  "generalTopics": [
+    {
+      "name": "Computer Graphics Fundamentals",
+      "complexity": 0.61
+    },
+    {
+      "name": "Computer Graphics Components",
+      "complexity": 0.59
+    },
+    {
+      "name": "Computer Graphics Applications",
+      "complexity": 0.60
+    }
+  ]
+}

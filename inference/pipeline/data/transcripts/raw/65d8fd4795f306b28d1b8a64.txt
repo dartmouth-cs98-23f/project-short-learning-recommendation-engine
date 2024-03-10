@@ -1,0 +1,1855 @@
+before we get started
+i wanted to begin uh just with one of my
+favorite
+examples of practical analytics and how
+it
+influences our everyday life i've spent
+a lot of time traveling for my work and
+i've really grown to appreciate the
+simple meaningful
+actionable predictive analytics that
+uber provides
+if you don't know what uber is it's a
+ride-sharing system and it's kind of
+like
+being able to call a taxi from your
+phone
+except it's more than that because when
+you make a request from uber
+they know your gps location of your
+device they also know the gps location
+of drivers who are around you and uber
+uses your gps location
+and the gps location of the drivers
+around you
+to estimate how long they think it'll
+take to get
+now available as an apple watch
+application so what you're seeing here
+is a picture of my watch yesterday
+and at that time uber said it would take
+five minutes to get a driver to me and
+it was all based on
+predictive analytics of my location the
+location of the drivers around me
+the routes between me and those drivers
+the travel time uh the time of day
+um and and perhaps past uh travel
+times of those routes and all of that
+information is kind of put together into
+a simple
+this simple number five minutes and this
+is great because it's super actionable
+if i am happy with that number i go
+ahead and hit that request and a driver
+shows up
+in about five minutes if i'm not happy
+with that number maybe it's too big
+maybe i just cancel my request and call
+a cab and i've done that before
+and it's just a great example of how
+uber is taking all of this data about me
+and the drivers
+compiling into a very simple actionable
+number that's delivered right
+right to my watch and it's not just uber
+we live in a world where predictive
+analytics is pervasive
+so when you log into amazon or netflix
+these this is what amazon and netflix
+thinks that i want to watch based on the
+the viewing patterns of the account
+that i use and it's interesting i think
+it's pretty obvious probably to
+many people that's not necessarily me
+who's watching these videos
+um what what's going on here is amazon
+is taking the
+the buying and viewing patterns of me
+and comparing them with
+users who have similar viewing patterns
+and making suggestions based on those
+patterns
+and what's happened what
+happens here is my kids log in on the
+weekends and they watch all sorts of
+cartoons
+and amazon and netflix both think i have
+a strong interest in watching a
+ragtag group of cartoon puppies solve
+problems that's what paw patrol is
+but the truth is i'm not really
+interested in these predictive analytics
+and
+it's an interesting thing to think about
+is what are the assumptions that we make
+about the underlying data
+as we use predictive analytics and i
+think we'll ponder some of these
+questions about what it means for health
+care a little bit later in the
+presentation
+we're going to uh have another quick
+poll question so
+how important are predictive analytics
+for the future of health care
+not at all important low importance
+neutral moderately important extremely
+important
+or unsure or not applicable hey eric
+well we're having everyone respond to
+those i'd like to apologize to everybody
+the audio we had a couple of audio
+issues we think we've got those sorted
+out
+we said we this is new software for us
+so we appreciate your patience with us
+all right let's go ahead and share the
+results of our poll
+but we're showing 75 extremely important
+yes that's why they joined the webinar
+today i was gonna say it sounds like a
+little bit of uh
+selection bias but it is i think it is
+important and we'll talk about
+how we can lower the barrier to uh doing
+predictive analytics in healthcare
+all right we're just getting back to uh
+share that screen all right as we move
+into
+healthcare let's so first of all let's
+just
+high level predictive analytics is about
+using pattern recognition just like we
+talked about
+with the amazon and netflix examples
+there's patterns in that data that
+they're using to predict future events
+we can apply that to healthcare but it's
+really important
+that predicting something to understand
+that predicting something is not good
+enough
+you must have the data to act and
+intervene
+and especially in healthcare the
+organizational wherewithal to intervene
+it it's one thing to predict what videos
+i might
+want to view next or what things i might
+want to buy next
+it's a different thing to start
+recommending care based on predictive
+analytics so in healthcare
+the stakes are higher but the rewards
+are potentially much greater and it's
+important for an organizational to buy
+into that
+to that risk balance and also to
+ensure that the analytics are
+incorporated in an appropriate way into
+the very complex operations of a
+healthcare organization so
+definitely a different game
+at this point i wanted to talk just
+outlay some definitions and we have a
+few uh definition slides here
+um in the presentation and i just wanted
+to kind of clarify these as we as we
+move along because i'll be using some
+jargon in the presentation and i think
+it's good to get everybody on the same
+page about what that means
+so we often hear machine learning and
+predictive analytics in the same breath
+and sometimes even mentioned
+synonymously so machine learning
+explores the study and construction of
+algorithms that can learn from and make
+predictions on data
+then within the field of analytics using
+machine learning is a method used to
+devise
+models that lend themselves to
+prediction this is predictive analytics
+so the way that i like to think about it
+is that machine learning is a technique
+that's used in predictive analytics
+there are other other ways to do
+predictive analytics but
+machine learning is by far the most
+pervasive
+popular and growing method right now for
+predictive analytics that's why you
+often hear them mentioned in the same
+breath
+predictive analytics isn't completely
+new to health care
+so when going all the way back to 1987
+the charleston index is actually a
+predictive algorithm
+it's designed to predict the mortality
+of a patient with multiple comorbidities
+and the charleston index was done by a
+group that took data from
+numerous patients classified their
+conditions into comorbid conditions
+and they used a fairly narrow set of
+data so it's fairly easy to get set of
+administrative data
+then they counted those comorbid
+conditions and ranked them based on
+their severity
+and they they combined that combined
+comorbidity score
+with other information about the
+patients such as their age to develop a
+relative risk that that patient
+was going to die in the next 10 years so
+it is a predictor of mortality
+and it's actually gained widespread
+popularity we hear a lot about
+charleston index still today the lace
+index
+is another example of predictive
+analytics and lace is meant to predict
+readmissions and the lace group took
+data from all across the country
+and developed a model that predicts
+readmissions based on
+length of stay acuity
+comorbidities and er utilization that's
+what lace stands for
+and the um the group basically took data
+from
+a large number of different
+organizations contributing their data
+and they develop this model that uses
+those uh
+inputs to determine the patient's risk
+of readmission
+and it also has gained widespread
+popularity and we hear of a lot of
+organizations
+that are implementing waste the
+interesting thing about these models
+is that while they're very good because
+they allow
+organizations without a deep machine
+learning capability to do predictive
+analytics
+and to do it on a smaller easier to get
+set of data
+there are problems with these models and
+and we're showing here
+two issues that have come up with these
+models so and these are just two of many
+so what you see in the top headline is
+the top
+citation is that patient they were using
+lace to predict readmissions for chf
+patients congestive heart failure
+patients
+and the next one they were trying to use
+lace to predict
+readmissions for older uk populations
+and what
+what they found at both of the
+conclusions it said that lace was not a
+good predictor for both of these
+specific populations and part of the
+reason for that is that
+when the lace model was created they
+were using data from
+all different kinds of patients from all
+across the country and we know for
+example that
+the factors that drive an appendectomy
+readmission are quite different than the
+factors
+that drive a congestive heart failure
+re-emission in the lace model all of
+those are mixed together
+and as soon as you start looking in
+specifically and using lace to try to
+predict a specific population
+you lose your predictive value so these
+general models while they're helpful to
+get people started
+they lose their predictive value as we
+start to look more and more into
+specific populations and anybody who's
+working in healthcare today
+knows that that's we're doing a lot of
+that we're looking at looking into
+how do we care for this specific
+population so those models don't hold up
+so well for that use case
+so what's happened since these models
+came out in 2010
+first we talked about on the last slide
+the limitations on those models while
+they're good to get started they
+they lack in their ability to predict
+specific populations
+next data availability has has grown a
+lot since 2010
+we've been lucky enough to be a part of
+organizations that are investing
+in data warehouses after the big
+investment in electronic health records
+a lot more data became available and the
+premise of the
+index models is that they're they're
+using a narrow set of data
+but now organizations just have access
+to much deeper repositories of data
+again we've been lucky enough to be a
+part of that and see that
+see that play out there's also
+more advanced analytics capabilities so
+the basic
+understanding of how to use data to
+improve business process
+and to improve care has been
+taking has taken a larger part of our
+national focus as well
+organizations are routinely using data
+to improve health care and they're
+starting to ask that next level of
+questions so we
+typically start with retrospective
+analytics so what
+where have we gone wrong in the past and
+how can we fix that moving forward
+now organizations are asking more mature
+questions about help me get ahead of my
+problems and predictive analytics are
+of course a big part of that
+and finally we we have much better
+machine learning tools
+since then so even in that relatively
+short amount of time there's been a a
+huge explosion of open source tools of
+online education that help to spread
+this
+machine learning and how to do machine
+learning and so those better tools
+are also part of this increased interest
+in machine learning
+based predictive analytics
+so we're going to ask another poll
+question
+what's the biggest barrier to
+implementing predictive
+analytics we're lacking the right people
+or skills
+we don't have the right data or
+technical tools and infrastructure
+we don't have the executive support or
+budget
+past efforts have failed to show results
+other or
+unsure or not applicable right we'll
+give some time for folks to respond to
+the poll
+and we'd like to remind everyone we have
+had a few questions
+about the slides we'd like to remind
+everyone that we will be sending out an
+email
+after the event with links to the
+recorded on-demand webinar as well as
+the slides as well so let's go ahead and
+look
+at our results
+okay it looks like organizations the top
+two responses are people or skills
+and the right data or technical tools
+and hopefully those
+those points are well addressed uh
+within the rest of the presentation
+and executive support or budget is also
+a very
+a very big factor and will hopefully
+have some
+information that can help convince
+executives that this is a good thing to
+do as well
+so the main message of all of this
+presentation is that predictive
+analytics
+is easy it's at least easier and part of
+part of that's due to the explosion of
+tools
+but what organizations are truly
+struggling with is
+making predictive analytics routine
+pervasive
+and actionable and that's what we want
+to talk about today is how do we take
+predictive analytics and make it
+something that's easier to do
+and routine for an organization
+the typical current state of predictive
+analytics is still
+um not necessarily optimized for
+operationalization
+what happens is you've got data
+scientists and they may have access and
+they have read access to a data
+repository
+and the first thing that they do when
+they
+the first thing that they do when they
+have a predictive model that they want
+to develop
+is they write a really big query against
+that data source because they need they
+need to get all of the data points they
+think they're going to need
+to make a prediction and they know
+they're going to have to manipulate that
+data so they write this really big sql
+query
+then they bring it into their tool of
+choice it could be excel
+it could be sas it could be r but the
+idea is that they get all that data into
+their tool
+because that's where they feel
+comfortable manipulating data
+and then they do that data manipulation
+to get that data in a state that's ready
+to be used in a predictive model
+and again they're using a tool outside
+of their analytics environment to do
+this
+then they apply the tools and algorithms
+so examples sas
+week r and python all of these tools are
+tools that are available to take those
+take that data and turn it into a
+predictive model
+and then once they've developed a
+predictive model there's a big question
+mark
+uh two questions usually number one is
+how do we move this into production
+and then number two is how do we
+actually get it to improve care
+how do we get it to actually enhance a
+decision so that's a big
+oftentimes a big question and we've seen
+that a bunch of times where
+a good predictive model is developed but
+it's never really deployed
+and the point today we'd like to just
+talk about three
+recommendations and the way we'll be
+structuring the rest of the presentation
+is about
+these three recommendations number one
+fully leverage your analytics
+environment we'll talk about what that
+means but in a nutshell
+don't do a lot of data manipulation
+outside of your analytics environment
+because then it becomes a silo
+and very difficult to reuse
+standardized tools and methods and use
+pred and create production quality code
+that you feel comfortable putting into
+production if you develop a good model
+the logical next step is going to be to
+put in production so having
+really good code to to do that is very
+important and also to have standard
+methods um
+with your team
+and this one is last but it should
+really be first because it's the most
+important
+of all of these points is to deploy your
+models with a strategy for intervention
+make sure you know who's going to use
+the data to change what they're doing or
+to help make a decision
+and and how that's going to be presented
+with them that's
+the the most important point of all this
+and we'll talk about what that
+what that looks like a little bit later
+in the presentation
+so when let's talk about fully
+leveraging your analytics environment
+here's another piece of jargon in in
+predictive analytics
+a feature is simply an input parameter
+just think of it as an input to one of
+your data models
+and in machine learning we just we call
+it a feature so when you hear me use the
+word feature
+just think of these are the inputs to
+the model that i'm trying to generate a
+prediction from
+and this definition is from wikipedia
+and let's think about what an analytics
+environment is an analytics environment
+or data warehouse
+you can think of as almost like a chock
+full of features you've got a bunch of
+data there but it's not always just
+sitting there in raw format
+you've got things like clinical
+registries you have comorbidity models
+you have calculations on readmissions
+and length of stay and other calculated
+fields so all of these make
+great feature inputs to models but
+it's really important to understand that
+read-only access
+is not enough data scientists and the
+folks who are generating predictive
+models
+need to be able to create their own
+features in the analytics environment
+we'll make a strong case for that here
+to illustrate the point we're going to
+explore a poly pharmacy feature and this
+is a feature that we developed
+as an input to one of our models our
+data scientist was developing a model
+one of our data scientists was
+developing a model for predicting
+complications
+in diabetic patients and
+if you don't know what polypharmacy is
+the new york times here
+represents it as the ever-mounting pile
+of pills
+quite simply put it's a number of
+medications that a patient is on
+at any given point in time and there's
+well there's good examples in the
+literature
+of polypharmacy being a good predictor
+of specific outcomes
+so this data scientist wanted to use a
+polypharmacy feature
+in his model and when he looked at the
+medication data though it was a little
+bit messy and i'm sure
+given the number of data architects and
+analysts we have on the call
+this shouldn't come as a surprise that
+there's messy data underneath the hood
+in the
+data warehouse environment and what what
+you see on the left-hand side
+is the medica table of medications and
+for every patient
+medication pair there's a start date and
+an end date the date that a patient
+started a specific medication
+and the date they ended up
+as you can see on the far right hand
+side
+that there's several nulls so the end
+date is not known in cases and it's
+actually missing data
+that can actually be very damaging to a
+predictive model so how do we clean that
+up we've got to understand
+what's going on to create those null
+values in some cases
+the patient died before the end date
+and in other cases the patient took a
+one-time dose
+where they were not um
+the m date wasn't put in because there
+was a single dose of the medication
+and finally there's yet another case
+where the patient just hasn't reached
+the end date yet they're still on the
+medication
+so understanding all of those business
+rules helped our data scientists
+to fill in appropriate missing end dates
+and create what you see on the right
+hand side here
+which is what an input to a predictive
+model
+looks like it's very clean and it gives
+us that polypharmacy count so for every
+patient encounter for any point in time
+we can easily tell how many medications
+a patient was on
+and this is an example of what we call
+feature engineering
+feature engineering is the process of
+transforming raw data
+into features that better represent the
+underlying problem to the predictive
+models
+resulting in improved model accuracy and
+feature engineering in our opinion
+is one of the most challenging and
+interesting parts
+of developing predictive models
+it's also recognized by by folks out
+there
+on on the internet that much of the
+success of machine learning is actually
+success in engineering features that a
+learner can understand
+so feature engineering is an absolutely
+critical part
+to data science and predictive analytics
+we
+we can't underscore that point enough
+other examples of feature engineering
+and i'm sure the data architects and
+data analysts on the phone will
+recognize how
+some of these things sound really simple
+but they're actually a little bit more
+complicated to put together than you
+might think
+so the number of er visits in the last
+year fairly simple
+the number of line days that a patient
+is on sometimes the underlying data
+presents a challenge in calculating that
+the number and types of comorbid
+conditions how do you classify those
+comorbid conditions
+almost any input to a predictive model
+will need to be engineered in some way
+and the ability for data scientists to
+engineer features
+is critical to the success of predictive
+analytics and a machine learning
+strategy
+and remember the point of this section
+is to fully leverage your analytics
+environment and one of the main reasons
+why we say that
+is because the analytics environment is
+the best place
+to engineer features the data scientists
+have to have to be able to promote
+efficient reuse of the engineered
+features that's one
+great example so that if we go back to
+that polypharmacy example
+that polypharmacy table is now sitting
+in the data warehouse and available for
+other models to use
+so by using the analytics environment to
+do our feature engineering and not doing
+it in a
+siloed tool we're promoting reuse of all
+that great work
+secondly the data warehouse has standard
+tools to operationalize and run these on
+a nightly basis
+we call it etl or extract transform and
+load
+and that those tools are very valuable
+in productionalizing that code it
+becomes much easier
+to productionalize than in a script in a
+in one of the machine learning languages
+so going back to our three key
+recommendations remember the first was
+to fully leverage the analytics
+environment
+and the next is to standardize tools and
+methods using production quality code
+as you start to put forth a data science
+machine learning predictive analytics
+strategy
+you need lots of smart people to do this
+this shouldn't be a surprise
+and the two roles that i want to talk
+today are they're similar but different
+roles
+so the data scientist formulates
+hypotheses about
+features driving a predictive model the
+data scientist is the one
+who's talking to clinicians and trying
+to understand the underlying causes
+of uh what what is trying to be
+predicted
+the data scientist is doing what we call
+experiments and trying various models
+to determine the best approach for
+prediction
+and the data scientist is assessing the
+model output
+and looking at the accuracy and trying
+to decide on what the best
+approach is the machine learning
+engineer like i said it's a similar but
+different so the machine learning
+engineer has to have a lot of knowledge
+of data science
+but one of the the challenging things is
+to find somebody who has
+a knowledge of data science and a
+knowledge of
+software engineering best practices
+because remember we're talking about
+generating
+production quality code and one of the
+biggest impacts we've had on our group
+was when we hired levi who's got a great
+machine learning engineer
+um approach he understands the data
+science
+and he also has a knowledge of software
+engineering best practices and that's
+really helped us
+to scale and we'll talk about what we
+mean by scale but a machine learning
+engineer
+is a wonderful thing to have and we'll
+talk about the fruits of our
+machine learning engineering efforts a
+little bit later
+so in order to talk about what kind of
+code you need
+i think it's good to talk a little bit
+about the predictive analytics processes
+and what is it that a data scientist is
+doing that we want to try to
+operationalize
+and there's two pieces to this one is a
+development process and let's use the
+example of a readmission prediction
+let's say we're trying to develop a
+model
+to predict readmissions
+the data scientist is going to first of
+all identify
+which patients were readmitted and which
+patients weren't that's important to
+understand what the outcomes were and
+then
+they're going to gather 30 to 40 feature
+inputs and this is where hypothesis
+generation takes over
+they're gonna they're hypothesizing what
+are the 30 or 40
+most likely things to drive readmissions
+and that data set the 30 to 40 input
+features
+and the outcome is then split into two
+pieces
+one we call the training set and one we
+call the test set
+and the training set is what we crunch
+all the numbers on and that's where our
+model is generated from
+the test set is how we use is what we
+use to measure the performance of that
+model
+so it's important to hold back some data
+so we can see how well our prediction
+would have done
+on predicting the the items in the test
+set and so
+the data scientist is running multiple
+algorithms on that training set they're
+looking at
+lots of different combinations of
+features and lots of different
+algorithms
+and for each one of those they're
+measuring the performance and deciding
+what the best model is and it's an
+iterative process so i've drawn this
+arrow
+going back to the beginning sometimes
+you need to go back to square one
+but eventually you get to the what you
+see in the orange box where you've got a
+best algorithm
+and a list a smaller list of important
+features usually around 10 or so
+once you've developed your model you can
+then store those parameters for
+later use again the development process
+is where the really intense computation
+we're looking at millions of records um
+and and crunching numbers and looking
+for patterns in those and extracting the
+patterns
+but once we get to a model the next step
+is to
+run the model and running the model is
+what occurs
+every day multiple times a day much less
+computationally intensive
+using the output of the development
+process now if we're going to do a
+readmission prediction
+we don't need to crunch numbers on
+millions of patients of data
+billions of patients of data we've done
+that in the development process now
+it's a matter of looking at who are the
+patients who just came in
+let's get those 10 important features on
+those and run it one record at a time
+calculate that prediction
+and output it to the data warehouse so
+running the model
+much less computationally intensive but
+this is the part that gets put in
+production and is run every day
+um either as part of an etl process or
+part of a web service we'll talk about
+the different ways
+that it can be deployed these are just
+the two different things that the
+machine learning code should be able to
+address
+in the development process it's
+important to standardize
+on on pieces of that and running the
+model that's where we want to have
+really robust tested code so we
+can put it in production
+so why do you what you know i want to
+address why you would want a code base a
+software to help you do this there's a
+lot of tools out there to make it really
+easy to write some of these scripts
+but it's important to focus the data
+science
+on the model development and not
+necessarily writing the code
+the code is something that's
+standardizable
+and the data scientist part the
+questions that they're asking
+what features do i use for input how do
+i model those features in the database
+how do i compare the performance of
+these two different models that's the
+real value add of a data scientist not
+necessarily writing code
+or possibly reinventing the wheel that
+somebody in their department may have
+already done
+so having a standard code base also
+allows a team of data scientists
+to standardize their methodologies it's
+a real problem if your data scientists
+are
+using two different pieces of software
+to create their models
+and even more of a problem if they're
+measuring the performance of their
+models in different ways
+how are you ever going to know what the
+best model is if we're using different
+yard sticks
+so that standardization piece is
+important here too to have an
+organizational code base that data
+scientists can use so that they're using
+the same methods
+and then finally the point that i've
+made a bunch of times and i probably
+won't make
+much more than this is that putting
+models into production
+really requires that production quality
+code we don't want to put anything that
+might break into production
+and as we were developing our machine
+learning code base
+we thought it was really important to
+adhere
+to software development best practices
+and software development best practices
+are used in the software development
+world to solve a lot of these same
+problems so
+how do we create a robust reusable code
+base
+one of the first things that we did was
+use version control and version control
+is used by software developers
+it allows multiple developers to
+contribute code to a single repository
+and by keeping it as a single repository
+many people can be editing
+the same code base at the same time and
+then there's tools to make sure that
+people
+don't step on each other's toes and when
+there is a conflict that it can be
+resolved so it's really important for
+teams of data scientists to have version
+control
+with their code base
+the other thing that's very important
+for this is unit testing and unit
+testing has been used
+in the software development world uh
+many many
+for many many years and the idea of unit
+testing is that as
+software becomes more modular and more
+reused it becomes
+a lot easier to accidentally break
+software
+and a good software code base is
+efficient and it is reusing code
+but you've got to make sure that as you
+make changes your
+your changes are not resulting in
+unexpected consequences so unit testing
+basically does testing of almost of all
+of the functions
+in your software to make sure that the
+output is as expected so if i make a
+change to the software
+and and that change i'm not sure how
+it's going to affect the rest of the
+software if i run the unit tests and
+they all run
+i can be fairly confident that i haven't
+broken anything downstream
+so these are some of the software
+development best practices
+that are that are required for having a
+good code base
+there's also things like documentation
+how do we get people to find
+all of the functionality available in
+the software and
+continuous integration these are all all
+best practices that
+that we use in the development of our
+machine learning code base
+so if you're going to if you're going to
+embark on developing a machine learning
+code
+base and please stay on for the entire
+presentation because
+we have good reasons why you might not
+want to develop your own
+but if you are there's a few technology
+choices out there
+one is are an r is a language that's
+been
+involved that's been deployed and deeply
+entrenched in healthcare
+i'm sure most of the analysts and
+statisticians are at least familiar with
+are on the call um it has been around
+for a long time
+and because of it being an analytics
+environment
+it is more familiar to analysts and
+statisticians
+python is another uh language that's out
+there
+it's a fully functional software
+development language
+um the language itself isn't new but a
+lot of the tools that have been
+developed for machine learning
+are newer and there's a lot lots of
+momentum behind python
+as a matter of fact a lot of the online
+learning
+based in machine learning uses python as
+the language in which
+a lot of the new data scientists are
+being trained and python is more
+familiar
+to software developers and data analysts
+because it is kind of a full-featured
+software programming language azure ml
+is a cloud-based solution from microsoft
+because it's cloud-based
+it's very easy to set up and deploy
+there's no
+installation required you can just kind
+of create a azure ml account and start
+creating
+models in the cloud because it's
+cloud-based and because we're in
+healthcare
+the adoption of azure ml is a little bit
+less than than you might expect and
+you have read some stories about
+organizations that are leveraging azure
+ml
+for predictive analytics and healthcare
+and they have to de-identify and scrub
+their data before they put in an address
+to do their models
+and even the example that i read they
+were working with dates and they had to
+mask the dates
+and a date is actually an input to your
+predictive model to me that
+that's a little bit risky to start
+manipulating dates to mask the data if
+you want to get a good predictive model
+so for that reason i think azure ml
+hasn't seen the widespread adoption in
+healthcare that you might expect and
+that we've seen
+in other industries there's plenty of
+other choices but i think the industry
+right now
+is standardizing on r and python and
+that's where we put our efforts we have
+developed software in both r and python
+to do our machine learning code base and
+the reason why we chose both is r is
+probably more popular right now
+there's support from major vendors like
+sql server microsoft sql server
+python is more of the up and coming
+approach so we want to be ready for both
+of those
+and our clients have different
+preferences as well so we we address
+both of them
+so our code base includes tools for data
+ingestion
+so we've been talking a lot about how do
+we leverage the analytics environment
+with our machine learning code well
+we've
+got to be able to very quickly and
+easily get data out of that environment
+into our code base
+so we have routines that load data from
+the database or a flat
+file date and time is important in
+machine learning so
+we have tools that allow us to uh expand
+date times into
+things like day of the week week of the
+year make that really easy
+missing values can really complicate and
+and
+make predictions not very good so how we
+have a couple of routines for dealing
+with those in different ways and
+by all means the the way that you deal
+with missing values is different for
+different
+models and different use cases so we
+want to provide functions for that
+we also provide a large tool set around
+the model development this is all the
+number quenching that we talked about in
+that
+in that workflow of a data scientist so
+splitting that data
+between test and training doing feature
+selection how do we
+get from 40 features down to 10 features
+and then of course the machine learning
+algorithms themselves
+what are we running on the data random
+forest is a very popular algorithm
+lasso is a regression based uh method
+and then mixed models are coming that
+those help us deal with longitudinal
+data and healthcare
+easier and k-means clustering which we
+will be
+using uh extensively next year in our
+code base as well
+and then all of the tools to evaluate
+that performance and help the data
+scientists decide
+what's my best model
+in addition to the development tools we
+have analysis tools so how do we
+generate
+a performance report for the models that
+we're creating
+and then tools like to help identify
+with trend identification
+and be able to perform risk adjusted
+comparisons are part of the analysis
+suite in our code base
+the great thing about the the software
+is that it's really helped us to scale
+people and when i when we think about
+what are the big challenges and data
+scientists and this has come up over and
+over again
+the big challenges is that feature
+engineering piece and how do we how do
+we represent
+the data and it turns out data
+architects have great domain knowledge
+of how to do that they've been
+moving data and healthcare and analyzing
+data and
+developing the routine to get data into
+different uh transforming data into
+usable formats for for years
+they're also often looking for
+opportunities to advance
+their career and skills and what we
+found is that given the right tools
+data architects make incredible feature
+engineers given their
+years and years of experience in
+manipulating data
+we're just applying them to a different
+problem and it works really well
+and then what our code has done is it
+has allowed data architects to easily
+get started
+in actually running predictive analytics
+algorithms
+and this is a quote from one of our data
+architects who was
+using our software to create a
+predictive model in one of his products
+and this is peter monaco and he said one
+awesome thing about the output from the
+r package you put together
+is the output aligns perfectly with
+creating patient stratification
+algorithms
+the fact that i feel comfortable running
+this stuff speaks to how easy you've
+made it
+thanks again levi and he's thanking levi
+who's gonna you're gonna hear from a
+little bit
+but this is great it allowed peter to do
+what he does really well get the data in
+a good format
+and lower the barrier for him to
+actually run these algorithms and do
+some of the work that a data scientist
+does
+so we see it very promising for helping
+us to scale
+our our machine learning efforts across
+a large number of people in the
+organization
+so now it comes time to put models in
+production and we're going to talk first
+about how we move them into production
+from a technical standpoint
+and then how do we move them into a into
+a
+an application or view that can actually
+change business process or
+or better yet provide better care for
+patients
+so modality number one is to
+put the model into production leveraging
+the etl process and this is appropriate
+if
+the prediction is not based on highly
+dynamic data
+or if the intervention strategy is okay
+with some level of latency so
+an example of this would be a
+readmission prediction typically
+readmission algorithms are not based on
+highly dynamic data
+they are based on data that's not
+changing super fast so if we're pulling
+data on a nightly basis
+or every 12 hours a readmission
+algorithm is generally going to be okay
+with that
+and in this case we just put the machine
+learning code
+in the middle of the etl process so
+we've got etl to load the data sources
+we've got etl that data scientists or
+data architects create
+that load those engineered features the
+inputs to the predicted model
+and then we run that code that can
+easily grab those features from the
+database
+and output a prediction to the database
+our machine learning code
+can also write these predictions to the
+database and this is how we've
+deployed several models it's easy and it
+just wraps right up with the etl process
+modality number two is when the data is
+more dynamic so an example of this would
+be
+sepsis early detection where we're
+looking at changes in vital signs
+and the intervention strategy we can't
+wait up to 24 hours to intervene when
+sepsis happens it's something we need to
+intervene faster on so in this case we
+can deploy
+the uh predictive algorithm as a web
+service and the web service is receiving
+real-time features so those changes and
+vital signs are those vital signs
+that's going to come in in a very from a
+very dynamic setting
+and we might still be using some
+historic features like what
+what are the demographics what's the age
+of the patient that we can pull from the
+edw
+and then the web service will be
+combining that live input with that
+historic data
+to run that machine learning code and
+then output the model back into the
+into the application so this is
+definitely designed for more
+dynamic situations and more dynamic
+predictions
+so going back to this point of deploying
+with a strategy for intervention
+this is the real i would call this the
+most important point of the presentation
+so the idea here is how do we deploy
+and get these predictions to actually
+impact care and we're going to talk
+about a little case study
+that we did with one of our clients on
+central line associated bloodstream
+infections or clabsis
+approximately 41 000 patients actually
+end up with this condition
+41 000 patients in the u.s per year that
+should read
+and actually one in four patients that
+get a clab c will die
+so it's a very serious condition and
+organizations are really struggling to
+keep up with this there's great
+guidelines out there evidence-based
+guidelines
+for how to how to care for patients such
+that we
+reduce the likelihood of a clabsi and we
+work with a client to develop
+retrospective and analytics to look at
+their compliance
+and it really helped highlight some
+problems and they got really good
+at using the data to find problem areas
+and then developing interventions to fix
+those so they developed the muscle
+memory of using data
+to improve their care and business
+processes then
+they said okay take us to the next step
+now we don't want to know
+where we failed we want to know what's
+coming next who are the patients at high
+risk
+for clabsi so that we can intervene with
+them
+and and so they came to levi and levi
+and his team
+developed a predictive algorithm that's
+based on 16 features
+that predicts the likelihood that a
+patient's going to develop epilepsy
+we'll see what that looks like in a
+minute it's important that
+every model that we develop in every
+model that we deploy
+comes with a performance report and this
+performance report is not a highly
+technical report
+and the idea here is that we're trying
+to briefly summarize
+what we're trying to predict the
+variables that were considered in that
+are the future inputs
+that were considered in developing that
+model
+what model we chose and the accuracy of
+that model and this report is not used
+for technical people but this report is
+used for business or clinical people
+to help them understand that algorithm
+the communication about
+what an algorithm does is extremely
+critical
+to the adoption of that model when
+discussing models with clinicians
+clinicians will adopt predictive
+analytics
+in so far as they understand it if they
+don't understand what's going on
+it's going to be a much harder
+conversation because if you think about
+what clinicians do
+they're running predictive algorithms in
+their head all day they're looking at
+large amounts of patient data and
+boiling that down to hypotheses or
+conclusions about those patients
+what we try to do with machine learning
+is standardize that typically doctors
+don't do that all in the same way so we
+help them
+to standardize it and if they understand
+how we're doing it and it's close to
+what they're doing they're much more
+likely
+to adopt it
+the other thing point that we should
+make when talking about deploying
+predictive models
+is that complexity comes at a price and
+it comes at an extreme price sometimes
+so a regression model can often strike a
+balance between predictive value and
+interpretability
+regression models are one way to do
+predictive analytics and there are
+more sophisticated machine learning
+algorithms that are much harder to
+explain
+so if you have two models a regression
+model
+and a more advanced model that might
+have marginally better
+uh accuracy the regression model still
+may be the
+more favorable model to deploy because
+it's easier to explain
+and in our code we use a process called
+regularization
+that that penalized complexity so there
+the lasso algorithm is a regression
+algorithm that
+actually has built into it the ability
+for the model itself to tune itself into
+create a favor a more simple model and
+the way that wikipedia says it is
+that enhance the prediction enhances the
+prediction accuracy
+and the interpretability of the model so
+super super important
+complexity comes at a price especially
+in the clinical setting for
+organizations that are new
+to predictive analytics
+and what does it all look like now this
+is the this is the punch line this is
+what
+this is what predictive analytics looks
+like when it's put in front of
+clinicians and they're
+giving them the ability to make
+decisions based on this data this is
+like the
+uber telling me five minutes to a car on
+my watch
+and what you see here is a unit
+scoreboard for
+our client who was doing uh cloud season
+i have to say
+this was all generated on scrubbed the
+identified data set
+so but it actually fairly accurately
+reflects what the client was seeing in
+their environment so i just want to make
+it clear that this is all the identified
+data
+but what you see here is in the green
+box
+there are 12 patients who are active
+risk for clabsi on this unit and the
+unit reviews this
+dashboard multiple times per day
+and what you see below in this list of
+patients here
+is that the name of the patient again
+scrubbed
+and the probability that they actually
+have epilepsy and the highest risk
+patients are at the top here so the
+the eye goes immediately to the patients
+who are at the highest risk this
+this top patient has a 64 chance of
+developing
+a central line associated blood stream
+infection
+and the important thing here is not to
+just give that number
+but what goes on in this far right hand
+column
+this far right hand column shows the
+risk factors that are driving that
+prediction
+so and moreover it's not just
+the risk factors it's what we call
+modifiable risk factors so
+the patient's age is often a risk factor
+in their
+their development of a classy however
+there's not much a clinician can do
+about that
+so what we do is we show the factors
+that the clinician can actually change
+or modify
+to to get that patient to a lesser risk
+state
+and in many cases it is the number of
+days that they've been on a central line
+the number of uh the placement of that
+line there's all sorts of factors that
+drive it and what the clinicians do is
+they look at this
+as a whole and decide what can i do to
+reduce that patient's chance of
+developing a cloud suit
+we are really excited about this it's
+been deployed
+in our in a production environment one
+of our clients and we're working with
+them to understand
+term how will this affect the the clabsi
+rate
+for for their patients but this is just
+one example
+of what it means to put predictive
+analytics in the hands of clinicians who
+can make
+decisions uh of care based on this
+the models we've built to date this is
+just a listing of them um
+klabsy is just one of many models we
+wanted to focus on one
+high impact example but as you can see
+we have a lot of algorithms that we've
+built to date that are driving
+decisions across the country and um
+lots more in development and lots and
+lots of ideas so
+this highlights i think the need for us
+to scale our machine learning
+and predictive capability there's only
+so much that one team can use and that's
+part of our strategy
+is to use that software that we've
+developed to make it easier for
+lots of people in the organization to to
+be able to do this
+so we've got one more poll question
+what are the top three important data
+sources to your organization in making
+predictions
+clinical emr data claims data patient
+outcomes data
+financial data non-medical patient data
+patient satisfaction data or unsure or
+not applicable
+all right we've got that poll question
+up eric and like everybody know this is
+a multiple selection so please select
+uh up to three if applicable we'll leave
+this open for a minute
+we'd like to remind everyone to please
+type in your questions or comments in
+the chat pane
+of your control panel got a lot coming
+in here that's great
+all right let's go ahead and share the
+results
+this is great okay patient outcomes data
+that's that's great
+um that's something that we're seeing a
+large trend in the in the industry as
+well
+clinical emr and claims of course are
+very popular um
+the patient outcomes data is definitely
+a hot topic especially
+patient reported outcomes how do we how
+do we better measure those outcomes
+and of course that's what we're trying
+to predict is outcomes in most cases so
+thank you for taking the time to respond
+to the polls they're very they're very
+insightful
+so just to reiterate our three
+recommendations fully leverage your
+analytics environment do the data
+manipulation in the data warehouse
+it's easier to reuse it and it's easier
+to operationalize
+standardize using uh production quality
+code so
+having your group using the same
+repository
+increases economy of scale and it allows
+you to deploy
+the ability to do predictive analytics
+to more people
+and then finally deploying with a
+strategy for intervention always think
+about how
+the data is going to be used to make
+decisions and before i cut over to levi
+i just want to talk briefly about what
+the future holds here
+what we see of course is that the
+clinical workflow engine is still the
+ehr clinicians spend most of their time
+in in the electronic health record and
+that's where the insights are going to
+be delivered to them
+that influence their care decisions and
+in today's world we hear a lot about
+smart on fire
+this is a technology that allows the ehr
+workflow to be augmented
+through web applications and fire is an
+interface that's
+designed to sit over the ehr and make it
+easy to pull live data
+from the ehr and develop web and mobile
+applications
+that again augment the workflow of the
+ehr
+where we see the analytics environment
+taking place is really
+providing a lot of power to this
+idea of putting new applications in the
+clinical workflow
+and the the data warehouse really
+becomes the analytics engine that's
+driving a lot of the data
+that shows up in that workflow so the
+data warehouse has
+a host of different data sources that
+are driving models
+we've like i said i referred it to the
+beginning as a
+feature a chock full of features we've
+got registry definitions
+we've got text processing nlp algorithms
+we've got
+all of these predictive algorithms that
+we're generating creating almost like an
+algorithm library
+and then we want to expose that through
+an api such that
+the real-time data from the ehr
+through the fire interface can be
+combined with all of that analytic data
+and then deliver that to the web and
+mobile applications and really
+not only augment their workflow but
+augment the data that they're seeing and
+make it based on
+a larger repository of highly valuable
+analytic data
+so i'm going to cut over to levi now
+levi's going to share with you some
+exciting news
+about our software that we've developed
+we have decided to open source our
+software
+and levi will walk you through how you
+can get to our code repository
+and and download the software and use it
+for your
+your team or yourself hi everyone great
+job eric
+so eric just got a fantastic overview of
+best practices in predictive analytics
+so you might ask yourself well how can
+we take it from here how can we actually
+do what you guys have described in our
+organization
+and that's why we're so excited to open
+source this r package we've been working
+on so it's called
+hd tools is overall project and as you
+can see here we're at httools.org
+so if you want to get started today
+simply type that into your browser
+and the idea is that this enables you to
+create models on your data
+with very simple examples so if we click
+in
+to the documentation for hdr tools
+it very basically describes why it's so
+great for healthcare
+how to install the package how to get
+started with example
+and so let's take some scenario that you
+might be interested in so say you have a
+great data set put together
+you know say diabetic data and you're
+wanting to predict say readmissions
+so you can ask yourself well how does
+this tool help me do that
+so if we ship if we hop over to our
+studio
+after you've installed the package what
+you do
+is you type okay well library hdr tools
+so in r
+you often load packages in that bring
+you know certain types of functionality
+and then you simply type the question
+mark htr tools
+and that will bring up the examples
+associated with our package
+so nice built-in documentation you can
+immediately use to create a model
+so once you have a data set you click on
+this a lots of development or random
+forest development link and that will
+give you
+both the descriptions of the arguments
+to the function
+as well as the example code
+so what you can do is scroll down and
+you can play with a built-in data set
+but let's say okay well you have your
+data set already ready to go
+and so what you do is just basically
+grab this example code
+and open up a new script
+drop it in and hit run
+and what it basically will do will tell
+you for this particular data set
+how well your model did so you have a
+lasso model which eric had mentioned
+and you see the auc is .86 so that's a
+measure of the accuracy
+you know say for predicting 30-day
+re-admit flag
+and then you have a random forest
+example as well that had an ac
+of 0.82 and so you're able to quickly
+see okay well for this particular data
+set
+we had this particular model that did
+really well and so if that's a random
+fourth model
+you simply use the documentation to go
+and deploy that model
+and you can see the links there so as
+you have your data put together
+please visit the website reach out
+let us know what you're working on and
+how we can improve these tools because
+we really want to build a place where we
+can all collaborate and build something
+that helps everyone in healthcare thanks
+levi so again the the url to go to if
+you want to download
+uh the software is hcrtools.org
+sorry sorry sorry hctools.org that was
+my mistake
+we will be renaming uh and redirecting
+the urls at some point
+to a more marketing friendly name our
+marketing team has informed us that
+this is the kind of name that you get
+when you get a bunch of data scientists
+into a room to name a product uh so we
+will be we will be renaming it
+eventually but
+hctools.org please go there and give us
+your feedback on the software if you
+want to download it and play with it
+make it uh make it part of something
+that you
+you use in your organization we're happy
+to uh answer questions and
+and provide that tool for you
+all right that's great thanks eric and
+we're we're about ready for our q a time
+we've got some
+good questions in but while we have
+those questions in we do have a final uh
+poll question for you while these
+webinars are intended to be educational
+we've had many requests for more
+information about health catalyst
+who we are what we do if you are
+interested in having someone from the
+catalyst reach out to you
+to schedule a demonstration of any of
+our solutions please answer this poll
+question now
+and while you're answering that we'll go
+right to the first
+questioning question that we have you've
+had a lot of questions
+about why uh people are not yet using
+predictive analytics in health care
+why health care seems to be behind other
+industries whether it may be contrast
+contract risk or other or other uh
+reasons so that's a great question and i
+think a lot of it comes down to
+the risk reward it is it is riskier to
+start
+and i think that we are very risk-averse
+of course
+for good reason uh risk-averse industry
+and you know
+i look at the predictive analytics that
+are delivered to me in netflix
+you know they're the wrong analytics i
+don't care about those cartoons that are
+being suggested to me
+and all of that has to do with
+assumptions that we're making on the
+data
+and i think healthcare of course still
+has a lot of issues to work out with
+trust in the data and and the
+underlying quality of the data so
+organizations i think who are wary to
+use predictive analytics
+may also be wary of their underlying
+data quality data governance is a topic
+that we hear
+about a lot lately and helping to
+helping organizations to
+actually improve the quality of their
+data as part of a data strategy is going
+to be very important
+for the increased adoption of these of
+this technology and these algorithms
+are we do have time to check for two
+more questions next question is are
+what are the system requirements to use
+the hc tools the hdr tool set that
+you've got
+yeah that's a great question so if you
+have our installed on your machine
+you can simply visit hctools.org and
+follow the quick install guide
+it's just a few simple commands and that
+should get you up and running
+all right we have another question can
+you integrate our models developed
+outside your organization or alzheimer's
+catalyst
+absolutely the co the code base is
+designed to run
+it's designed to allow you to develop
+your own models so
+you as long as you get your feature
+inputs in such a way that the
+software can address it um the software
+will help you develop your own models
+and
+either you know make those available to
+somebody publicly or
+just leave them in your own environment
+the tool definitely supports
+running and creating models with from
+health catalyst
+as well as creating your own our next
+question is there an api that you have
+to deploy
+no no api is necessary so basically
+install
+our package and you can use the built-in
+documentation or the documentation
+on the web page you see here and it will
+have some
+built-in data actually that you can use
+to start with those examples run right
+out of the box
+and then you can use those examples to
+tailor them to
+your specific data and your tables and
+databases etc
+okay we have time for one last question
+and that is
+can you please share some of your
+experience in terms of demonstrating the
+value of predictive analytics
+absolutely so as whenever we
+develop models and deploy them with a
+customer
+one of the things that we track is
+outcomes
+and we have in each of our applications
+we have
+tools to track the variation in those
+outcomes
+and we look for that's another area
+where where data scientists and analysts
+are very helpful
+is helping to understand that trend and
+is that trend actually going down
+after since the uh implementation of
+that predictive model
+so we we do have ways to measure that
+the other
+the other thing that we do is we make
+sure that as we're deploying them
+that there's an organizational
+understanding of how to use them
+that's actually very critical in
+creating that
+all right well we are at the top of the
+hour there is one last thing is asking
+if you're not using the help catalyst
+uh data warehouse and bi platform can i
+still utilize these models
+yeah for sure so it's very flexible so
+if you have csv files or
+a database you can connect to any of
+those but
+we want to be clear you can use the
+software the
+models specific readmission models do
+not come with the software the mod the
+software is just for running and
+creating those algorithms
+all right well thank you so much eric
+thanks levi
+i'd like to let everyone know shortly
+after this webinar you will receive an
+email with links to the recording of the
+webinar
+the presentation slide we'll have the
+link to hctools.org
+and also an audio download also please
+look forward to the transcript
+notification
+that will send you once it's ready and
+also the special invitations to the
+upcoming webinars in the predictive
+analytics webinar series
+on behalf of eric just levi thatcher as
+well as the rest of us here at help
+catalyst
+thank you for joining us today this
+webinar is now concluded
+thank you please stand by

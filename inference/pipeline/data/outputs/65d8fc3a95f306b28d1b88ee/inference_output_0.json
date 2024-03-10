@@ -1,0 +1,80 @@
+{
+  "introduction": "This video introduces eight design patterns every developer should know, focusing on creational, structural, and behavioral patterns. The factory pattern is covered first, followed by the singleton pattern, observer pattern, strategy pattern, adapter pattern, and facade pattern. The video also touches on more complex patterns like binary search trees and linked lists.",
+  "sections": [
+    {
+      "title": "Section 1: Factory Pattern",
+      "content": [
+        "Explanation of the factory pattern and its purpose.",
+        "Instantiation of a burger builder and adding ingredients.",
+        "Chaining methods and building the final product.",
+        "Example usage with protocol buffers."
+      ],
+      "topics": ["Factory Pattern", "Burger Builder", "Protocol Buffers"]
+    },
+    {
+      "title": "Section 2: Singleton Pattern",
+      "content": [
+        "Definition of the singleton pattern and its usage.",
+        "Example of a singleton class with a logged-in value.",
+        "Modifying the first instance and printing the logged-in value for both instances.",
+        "Use case for sharing events among multiple components."
+      ],
+      "topics": ["Singleton Pattern", "Logged-in Value", "Event Sharing"]
+    },
+    {
+      "title": "Section 3: Observer Pattern",
+      "content": [
+        "Introduction to the observer pattern and its purpose.",
+        "Implementation with a YouTube channel class and subscribers.",
+        "Definition of the subscriber interface and its usage.",
+        "Example usage with more complex objects like binary search trees."
+      ],
+      "topics": ["Observer Pattern", "YouTube Channel", "Binary Search Trees"]
+    },
+    {
+      "title": "Section 4: Strategy Pattern",
+      "content": [
+        "Explanation of the strategy pattern and its usage.",
+        "Creation of filter strategies for arrays.",
+        "Example implementation with the values object and testing.",
+        "Portability and open closed principle."
+      ],
+      "topics": ["Strategy Pattern", "Arrays", "Filter Strategies", "Portability"]
+    },
+    {
+      "title": "Section 5: Adapter Pattern",
+      "content": [
+        "Definition of the adapter pattern and its usage.",
+        "Example usage with micro USB cables and USB adapters.",
+        "Overriding the plug USB method if needed.",
+        "Importance of hiding complexity from programmers."
+      ],
+      "topics": ["Adapter Pattern", "Micro USB Cables", "USB Adapters", "Complexity Hiding"]
+    },
+    {
+      "title": "Section 6: Facade Pattern",
+      "content": [
+        "Explanation of the facade pattern and its purpose.",
+        "Example usage with HTTP clients and abstracting low-level details.",
+        "Abstraction of arrays and dynamic resizing.",
+        "Importance of hiding complexity from programmers."
+      ],
+      "topics": ["Facade Pattern", "HTTP Clients", "Arrays", "Complexity Hiding"]
+    }
+  ],
+  "topics": ["Design Patterns", "Factory Pattern", "Singleton Pattern", "Observer Pattern", "Strategy Pattern", "Adapter Pattern", "Facade Pattern"],
+  "generalTopics": [
+    {
+      "name": "Programming Languages and Software Development",
+      "complexity": 0.59
+    },
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": 0.59
+    },
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.59
+    }
+  ]
+}

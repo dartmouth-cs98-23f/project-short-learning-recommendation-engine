@@ -1,0 +1,505 @@
+alright so sounds like my mic is live so
+thank you for sticking around this
+afternoon again so I'm Harlan Harris my
+day job is I work for the Education
+Advisory Board we build enterprise
+software and do best practices research
+for colleges and universities and as
+Jared mentioned I'm also co-founder of
+data community DC and the data science
+DC meet up if you are on town you should
+definitely check us out my academic
+background is in machine learning and in
+cognitive science i'm not a software
+architect by training but i have worked
+closely with software architects and a
+number of project projects and so i'm
+going to talk today about some things
+that I have learned so i'm going to talk
+about architecture and i'm going to talk
+about choices so first of all what is
+software architecture what do I mean I'm
+just going to steal from wikipedia it's
+the high level structure of a software
+system particularly a complicated
+software system as well as the sort of
+processes and things around it and in
+terms of choices what I mean is what
+technologies are you going to use what
+are the boundaries between each of those
+technologies what do the piece different
+pieces do and also importantly who's
+responsible for building each of the
+pieces of these technologies and in
+order to make good architectural choices
+you have to ask good questions and so
+I'm today going to walk through some
+questions that I found to be helpful
+when making choices about software
+architecture and particularly when it
+involves are so a bunch of questions
+first question is is a data product at
+all so some of you may have read this
+book data jujitsu by DJ Patil who is now
+a DC resident he also has the
+second-rate title of chief data
+scientist of the United States but
+anyway he wrote this great little 18
+page ebook about data products however
+it doesn't really define a data product
+to my mind and so particularly when
+working in our not all of our work is
+data products and so if you're do well
+keynote quit unexpectedly I have never
+seen that all right I'll be right back
+hahahaha should have used PowerPoint our
+mark down okay uh see where am I hey
+we're back okay right so if you're doing
+an analysis it doesn't have what an
+architect architect might describe as a
+maintenance phase that maybe you don't
+have to worry about this stuff so if
+you're writing a report in a suite or
+something or a one-off shiny app then
+you know tune out for the next 17
+minutes but if you do have a maintenance
+phase then I think you need to ask these
+questions and make some of these choices
+so next question is how many users are
+you writing this application for so if
+you have something small maybe used just
+by a few or a few dozen people inside of
+an organization you might make a
+different choice there's some really
+great options for this so half the
+people in last two days have talked
+about shiny killer tool for hosting
+relatively simple reactive web apps it
+does scale well particularly if you pay
+our studio for their server product you
+can also roll your own with our Apache
+or some other things I've seen less
+about our Apache and rook in recent
+years I don't know sort of why that is
+but it's definitely an option you can
+also roll your own servers and Python
+and so forth if you'd like next question
+where does the model end and the rest of
+the application begin so in some
+circumstances your model might be the
+entire application and again something
+like shiny might be a really great
+approach for solving that problem but on
+other circumstances your model might
+just be a small piece of a big system
+and this brings to mind sort of a recent
+trend in systems architecture called
+micro services this is sort of an
+updated take on the services oriented
+architecture trend of about ten years or
+so ago and the idea is pretty simple if
+you're building a little piece of a big
+system you think about building a little
+standalone web service that interacts
+with the other pieces in a sort of
+well-defined well architected way and
+other other pieces of the system then
+end up rendering the web pages and the
+charts and graphs and so forth so you
+know sorry not ggplot it's going to be
+JavaScript but the model itself might be
+remain in our but not necessarily maybe
+you don't actually need to have our in
+the loop in in particular in the
+prediction loop so if you're fitting a
+regression model and your results is
+just some coefficients or you're
+building just a really simple decision
+tree maybe you don't actually need to
+bother somebody I can't remember who
+said once that much of the time you can
+turn your model into just a few lines of
+sequel and be done with it right sequel
+the logic is just a simple decision tree
+and so maybe all you need to do is throw
+your coefficients over the wall not
+always a good idea but there are
+exceptions a slightly more powerful
+approach is p FML predictive model
+markup language this gives you a little
+more control over things like feature
+engineering and there are some
+interesting options there too next
+question how often at what temp oh do
+you need to make predictions do you need
+to make predictions on a daily basis or
+do you need to make predictions in the
+next say 20 milliseconds and so
+architectural you're going to make a
+really different choice depending on
+this so that is Anna batcher on-demand
+process or equivalently how far in
+advance do you know what entities you
+need to predict a note on the sort of on
+demand thing so the performance of
+different algorithms varies a lot in
+terms of how quickly the latency can be
+if you have a new example so things like
+k-nearest neighbor is really expensive
+to make new predictions if you have to
+do that really fast things like support
+vector machines could be kind of slow as
+well even random forests are doing a
+really simple thing but a fair number of
+times if this is really important to you
+there's some interesting techniques that
+I've learned about recently such as
+lattice regression that actually turned
+types of prediction model into like a
+linear interpolation of look-up tables
+and this can be incredibly fast so that
+was prediction there the next question
+is fitting how frequently do you need to
+fit a model so you know if you're doing
+this on an annual basis this is probably
+somebody sitting down there
+taking a week they're trying to figure
+out what all the bit the best type of
+parameters are and the best architecture
+and everything else that's a very
+different story from a daily fit this is
+probably something you're doing
+automatically but you can have
+monitoring processes that are going to
+tell you what your daily
+cross-validation score is or something
+and if you're doing this on an ongoing
+basis so every time an input comes in
+your shifting your coefficients or
+something then you're probably using
+some sort of specialized online
+algorithm the architectural choices here
+are depend a lot on the frequency of
+fitting this of course is related to the
+concept of concept rift or comeria drift
+so how fast is the world that you care
+about change if you're thinking about
+quarterly retail sales that kind of
+world changes pretty slowly and you're
+maybe fitting on an annual basis if
+you're doing high-frequency finance or
+twitter trends or something then the
+world is changing pretty quick next
+question how many models are you
+building are you building one model are
+you building one per product line are
+you building one per user so potentially
+a very large number of models and so
+these questions are actually sort of
+begging the question of how much design
+or how much feature engineering are you
+actually doing for the models that your
+building or equivalently at what
+granularity do you need to apply domain
+knowledge to be effective so recall that
+substantive expertise in a domain is a
+critical part at being effective in data
+science and so having an architecture
+that lets you apply your domain
+knowledge at the right times and the
+right level of granularity is really
+critical to building a good model in
+production there's also all the
+nitty-gritty of writing software so you
+know what happens if you have a model
+and it breaks so stops making
+predictions you definitely need to know
+about that you know even worse what
+happens if it starts only making stupid
+predictions and you don't find out for a
+month what happens to you if that's the
+case
+so this is a quote from Russell belkin
+in a recent talk about building data
+products stuff they've known you should
+definitely read this blog post so the
+quote is there's only one right answer
+and starting point for a data product
+understanding how you will evaluate
+performance and building evaluation
+tools good advice okay so I'm going to
+talk about kind of like one and a half
+examples of architectures that I've been
+involved with the first one here I'm
+going to be really vague so I don't
+actually have permission to identify the
+product of the domain but I can tell you
+a lot about the architecture and so the
+situation is I had created a multi-part
+model in our used a bunch of packages
+and techniques that would have been
+incredibly difficult to rewrite in
+another platform the productions of the
+model it was actually this sort of quasi
+Bayesian thing were forecasts for
+thousands of entities but fortunately
+that set of entities was known and
+bounded and didn't change that quickly
+so we decided that the right thing to do
+is to annotate a database and to update
+those annotations frequently so I'm
+going to tell you more about that
+decision incidentally I did extract the
+sort of framework for this architecture
+and put it on github so if you want to
+check that out please do note however
+this is a few years old I might make
+some different sort of decisions on the
+details if i were to redo this now but
+it's a good starting point I think so to
+answer my own questions absolutely a
+data product expected maintenance and
+upgrades over time hundreds to thousands
+of users but really a small component of
+several different applications really
+importantly because of the complexity of
+the algorithm that was already sort of
+developed in our we wanted to keep our
+in the loop predictions however not
+super frequent so relatively small
+number of entities the world didn't
+change that quickly so if the entity was
+known to have changed we updated sort of
+daily otherwise or sorry hourly
+otherwise we'd updated once or twice a
+day fitting also pretty slow so once a
+quarter twice a year or something like
+that the key is no real time prediction
+so using a database to meet
+and not a huge number of separate models
+and so this is an architectural diagram
+lots of boxes and arrows don't worry
+about it the key point is that the
+prediction system was on a clock and it
+pulls in business data from a database
+makes predictions pushes the results
+back into the database and then all the
+systems the architectures on the left
+are the applications on the left are not
+actually touching are at any point in
+the processes of getting the UI in front
+of users so our was in production but it
+was not in the real-time part of the
+loop also worth noting a little bit
+about what I actually stored in the
+database so this is sort of the content
+was the ID or the foreign key of the
+entity so that it could be joined a time
+stamp which is really handy for making
+sure that your predictions I have not
+gotten stale and then also the results
+of this this forecast process which as I
+mentioned het was a bayesian so it had a
+posterior distribution so I scored the
+expected value as well as the CDF the
+CDF is great because it allows you to
+read off prediction interval so you can
+say you know I expect the outcome to be
+between the 10th and 90th percentile and
+that gives the user is some range of
+understanding of how confident you are
+and as a tangent it's actually really
+good idea to be in precise when you know
+that you're in precise and it builds
+trust so if your model can do you know
+the little sort of shrug emoticon right
+then people will trust it more when it's
+actually confident so to the extent that
+you can build that and that's a big plus
+so for math to nitty gritty really
+quickly here configuration this is
+pretty easy in our it's an interpreted
+language you just source a file that
+assigns some things two variables one
+thing that we learned it's handy to
+separate model configuration from
+environment configuration so you might
+want to change the model configuration
+but the ops guys they want to
+configuration of what database they're
+pointing to and some other things and
+it's good to have those separate so
+they're not like playing with your model
+parameters logging is also easy there a
+couple good packages log for our was at
+John miles white package
+was easy to pipe to a monitoring system
+the standard our air handling try catch
+and and so forth gives you the tools to
+catch and log errors and also to exit
+with fatal errors in a way that you get
+to know what happened this is kind of
+cool so when you're making this decision
+to keep our out of the real time loop
+and in particular not to build a UI
+around your our system it's awfully
+handy still to have a web page and a
+particular webpage around the status of
+the system so you can use ours built-in
+web service that was developed for help
+pages to do other things so this is what
+sort of broken our apache use and so you
+can connect to that web server the code
+is in the github repo and basically you
+just create an HTML block and you paste
+in stuff that is interesting so accounts
+of how many entities you've scored
+whether the many errors or weird
+situations you know things out of bounds
+what the uptime is stuff like that
+really handy avoids having to like dive
+into the logging system to get some just
+you know what is the status of the
+system right now but that type of
+application or that type of system
+doesn't scale well if you need to serve
+lots of predictions very quickly testing
+we identified three classes of tests and
+other people earlier talked about tests
+that which is a great package there's
+also various types of the standard model
+fitting testing that you do boast on
+sort of historical data as well as maybe
+recent stuff to look you know for stuff
+out of the boundaries of what you'd
+expected that's you know on the data
+scientist side of things also did a
+process for this project of data flow
+testing so working with QA staff where
+they would go into the database and like
+you know wiggle some things and you
+would watch the the data flow through
+the process the prediction the score get
+happened and right back to the database
+look at the log files and so forth
+important to validate that that process
+all works and then post deployment
+testing or monitoring so right it's
+really important to store at least a
+sample of your predictions so that once
+you know time catches up with your
+predictions you can see how well you did
+and make changes as necessary
+uh just a note the first time we did
+this deployment figuring all this stuff
+out was a giant pain in the ass because
+none of the tech people had any idea of
+what to do when faced with an
+application with no interface and very
+limited amount of sort of direct testing
+that they could do and you know who's to
+say what the right answer is also they
+don't really like that anyway but what
+we got through that so that was that
+application I also want to give a shout
+out here to Jeremy Stanley who gave a
+really nice talk about a somewhat
+related architecture that they use at
+sail through at mls month just up the
+street unlike my use case that I just
+talked about their world does change
+quickly so they actually refit their
+models on a daily basis automatically if
+you're interested in that definitely
+check out the youtube video later so in
+my few remaining minutes I'm going to
+tell you a little bit about my current
+project at EAB this is a model of
+student success that is the likelihood
+of individual students at our customer
+organizations to graduate and it's used
+by academic advisors for triage as part
+of a big workflow tool so to answer my
+own questions again data product so
+importantly one model per customer with
+customizations so the model is fit only
+rarely and so we do want the ability to
+apply our domain knowledge but the
+outcomes change slowly so basically
+people only graduate once or twice a
+year so we don't need to fit very often
+but we do need to score on demand and
+particularly to help with hypotheticals
+so what might happen if a student
+switched majors we want a platform that
+can provide a score or a likelihood in
+that sort of hypothetical situation and
+we also as part of these decisions
+wanted a platform that could support
+other data products in the future using
+the same architecture so you know
+potentially multiply these numbers by
+something else to look at what we might
+be able to do down the road and just
+fairly recently figured up finish out
+this decision process looking at
+technologies and boundaries and so forth
+we did this fairly complicated decision
+rubric looking at a couple of different
+types of costs and performance and
+flexibility
+looking at operational complexity for
+solutions that included a vendor looking
+at what their support would be what
+direction they move we look at a half
+dozen or so different systems or
+architectures some were you know more
+are some involved actually switching to
+an entirely different language and we
+came up with an answer which in this
+case was a new york company y hat their
+science ops product allows very rapid
+deployment of models in our or python to
+a cluster with load balancing and a high
+performance api and for us it really hit
+the sweet spot of sort of scalable
+scoring the ease of deploying many
+models and in particular it draws that
+who does what architectural line really
+well and really consistent with our sort
+of vision and so the architecture here
+the key thing is that we want the data
+scientists to own the data science stack
+which means that we're responsible for
+modeling in our Python and getting those
+models up and running as a robust
+service but the actual user facing
+applications are written by other people
+and will rely on sort of the tool of
+science ops to bridge that gap since
+there are Joe's here earlier folks from
+revolution our second choice was there
+deploy our product which does a very
+analogous thing of sort of hosting
+models on the cloud with an API there
+was the limitation of our only we want
+some flexibility going forward also
+getting that that who does what line
+right is tricky and at least the way we
+were reading it their system has a
+little bit more of a throw out things
+over the wall feel where the expectation
+or the design is the developers on the
+application side create the API for
+themselves and for us we really wanted
+to draw a clean line and you know so we
+made that decision accordingly so you
+might be asking how's that working out
+for me and so the system is not yet in
+production so I don't actually know this
+said go to the Earl conference in Boston
+this is effective applications of the
+our language I'll be talking about my
+experiences up there later this year so
+thank you
+you

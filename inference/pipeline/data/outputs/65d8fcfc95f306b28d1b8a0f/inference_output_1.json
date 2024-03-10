@@ -1,0 +1,70 @@
+{
+  "introduction": "This video provides an introduction to computer architecture, focusing on the differences between architecture and microarchitecture. It explains how the IBM 360 was the first true instruction set architecture and how it introduced various tradeoffs in design, such as different storage sizes, data paths, and cache sizes. The video also highlights the distinction between different instruction set architectures, like IBM's PowerPC and x86, which cannot run each other's compiled code.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Computer Architecture",
+      "content": [
+        "Explanation of computer architecture as a unification of products with specialized performance characteristics.",
+        "Discussion of the IBM 360 as the first true instruction set architecture.",
+        "Explanation of the differences between architecture and microarchitecture.",
+        "Overview of the design tradeoffs in modern processors."
+      ],
+      "topics": ["Computer Architecture", "Instruction Set Architecture", "Microarchitecture"]
+    },
+    {
+      "title": "Section 2: IBM 360 and Its Impact",
+      "content": [
+        "Details on the IBM 360's storage, data path, and cache sizes.",
+        "Comparison of the low-end and high-end models.",
+        "Explanation of how the IBM 360 changed the design landscape.",
+        "Highlighting the tradeoffs between cost, power, and performance."
+      ],
+      "topics": ["IBM 360", "Storage", "Data Path", "Cache Sizes", "Cost", "Power", "Performance"]
+    },
+    {
+      "title": "Section 3: Instruction Set Architecture vs. Microarchitecture",
+      "content": [
+        "Explanation of the differences between instruction set architecture and microarchitecture.",
+        "Discussion of how the microarchitecture can change even within the same instruction set architecture.",
+        "Examples of processors with different microarchitectures and clock frequencies.",
+        "Comparison of processors with different instruction set architectures."
+      ],
+      "topics": ["Instruction Set Architecture", "Microarchitecture", "Clock Frequency"]
+    },
+    {
+      "title": "Section 4: Architecture vs. Instruction Set Architecture",
+      "content": [
+        "Explanation of how the architecture supports 64-bit and floating-point operations.",
+        "Discussion of different data paths and their impact on operation performance.",
+        "Comparison of processors with different instruction sets.",
+        "Explanation of how the instruction set architecture is a software programming design constraint."
+      ],
+      "topics": ["Architecture", "Floating-Point Operations", "Data Paths", "Instruction Set"]
+    },
+    {
+      "title": "Section 5: Design Tradeoffs and Considerations",
+      "content": [
+        "Overview of the design tradeoffs in modern processors.",
+        "Explanation of how the microarchitecture and instruction set architecture can affect each other.",
+        "Discussion of processors with similar microarchitectures but different instruction sets.",
+        "Comparison of processors with different clock frequencies and instruction sets."
+      ],
+      "topics": ["Design Tradeoffs", "Microarchitecture", "Instruction Set", "Clock Frequency"]
+    }
+  ],
+  "topics": ["Computer Architecture", "Instruction Set Architecture", "Microarchitecture", "Storage", "Data Path", "Floating-Point Operations", "Design Tradeoffs"],
+  "generalTopics": [
+    {
+      "name": "Computer Architecture",
+      "complexity": 0.61
+    },
+    {
+      "name": "Instruction Set Architecture",
+      "complexity": 0.61
+    },
+    {
+      "name": "Microarchitecture",
+      "complexity": 0.61
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+I heard you liked factories so I made
+you a factory inside a factory which
+inherits from an abstract Factory so it
+can create new factories but enough
+about programming in Java
+in this video we will learn about eight
+design patterns every developer should
+know in 1994 the gang of four released
+the holy book design patterns
+introducing 23 object-oriented design
+patterns falling into one of three
+buckets creational patterns structural
+patterns and behavioral patterns while
+some argue that it stated the fact that
+a 30 year old book is still being
+discussed definitely means something
+especially in a world where JavaScript
+Frameworks are going out of style faster
+than you can say JavaScript was a
+mistake anyways let's start with our
+first creational pattern the factory
+imagine that you want a burger but you
+don't want to have to worry about
+getting all the ingredients and putting
+them together so instead you just order
+a burger well we can do the same thing
+with code if it takes a list of
+ingredients to create a burger we can
+instead use a factory which will
+instantiate the burger for us and return
+it to us whether it's a cheeseburger a
+deluxe cheeseburger or even a vegan
+burger all we have to do is tell the
+factory what kind of burger we want just
+like you would do at a restaurant but be
+careful because this way you'll never
+know what's inside the Special Sauce we
+added a secret ingredient
+now alternatively if you want a little
+more control over how the sausage is
+made you can go with the builder pattern
+the idea is that if we want to make a
+burger we don't immediately have to pass
+in all the parameters we can use a
+burger Builder instead we'll have an
+individual method for adding each
+ingredient whether it's a bun Patty or
+cheese each one will return a reference
+to the Builder and finally we'll have a
+build method which will return the final
+product then we can instantiate a burger
+Builder add the Buns that we want the
+Patty that we want and the cheese that
+we want and we can chain these methods
+because remember each one will return a
+reference to the Builder finally we can
+build it and we have the exact burger
+that we want I've used this pattern a
+lot at Google with protocol buffers next
+we have the Singleton pattern and I'm
+not talking about my dating life a
+Singleton is just a class that can only
+have a single instance of it that's
+instantiated it has many use cases for
+example maintaining a single copy of our
+application stay we would start by
+having a static instance variable let's
+say in our app we want to know if a user
+is logged in or not but we won't use the
+Constructor to actually instantiate the
+application State we'll use a static
+method called get app stay which will
+first check if there's already an
+existing instance of our application
+stay if not we'll instantiate one if
+there already is though we'll just
+return the existing instance we'll never
+create more than one so now if we get
+our app State for the first time the
+logged in value will initially be false
+but if we get the app State again this
+will actually still be the first
+instance so if we modify the first
+instance and then print the logged in
+value for both of them they will both
+now be true this pattern can be useful
+so that multiple components in your app
+will have a a shared source of truth but
+how can all the components listen for
+updates in real time well that's where
+the Observer comes in our first
+behavioral pattern I prefer to call it
+the pub sub pattern it's widely used
+Beyond just object-oriented programming
+including in distributed systems let's
+take YouTube for example every time I
+upload a video all of my subscribers get
+a notification including you because
+you're subscribed right but in this case
+the YouTube channel is the subject AKA
+publisher which will be the source of
+events such as a new video being
+uploaded we might want multiple
+observers AKA subscribers to all be
+notified when these events happen in
+real time one way to implement this
+pattern is to have a YouTube channel
+class which maintains a list of its
+subscribers when a new user subscribes
+we add them to the list of subscribers
+when an event occurs we go through that
+list of subscribers and send the event
+data to each of them with a notification
+but we also have to define the
+subscriber interface which you can do
+with an abstract class or an interface
+different subscribers might implement
+this interface differently but for a
+YouTube user let's say that we just want
+to print the notification that was
+received so then we can create a YouTube
+channel add a few subscribers and we
+only have to call notify once and all of
+the subscribers will receive the
+notification this is also extensible
+enough that a subscriber could be
+subscribed to multiple channels an
+iterator is a pretty simple pattern that
+defines how the values in an object can
+be iterated through in Python just
+defining an array and then iterating
+through it with the in keyword uses the
+built-in list iterator this way we don't
+even have to index the array now for
+more complex objects like binary search
+trees or linked lists we can Define our
+own we can take a list node which just
+has a value and a next pointer and then
+a linked list which has a head pointer
+and a current pointer we can first
+Define the iterator with the inner
+function which will just set the current
+pointer to the head and then return a
+reference to the linked list to get the
+next value in the sequence we defined
+the next function if our current pointer
+is non-null we can get the value and
+then return it and also shift the
+current pointer but if we reach the end
+of the linked list we can send a signal
+that we're going to stop iterating to
+test it out we can just initialize the
+linked list and iterate through it with
+the in keyword this is a much more
+simple interface than having to actually
+update pointers ourselves now if you
+want to modify or extend the behavior of
+a class without directly changing it you
+can go with the strategy pattern for
+example we can filter an array by
+removing positive values or we could
+filter it by removing all odd values
+these are two strategies but maybe in
+the future we want to add more and we
+want to follow the open closed principle
+well we can define a filter strategy
+create an implementation which will
+remove all negative values and an
+implementation which will remove all odd
+values and then at run time we can pass
+this strategy into our values object and
+to test it out all we have to do is pass
+in the strategy into our filter method
+and we'll get our desired result this
+way we can add additional strategies
+without modifying our values class next
+we have the adapter our first structural
+pattern it's analogous to the real world
+where we have a screw that's too small
+to fit into a hole so instead we use an
+adapter which makes this screw
+compatible with the hole
+or maybe an example that you're more
+familiar with we have a USB cable and a
+USB port we can plug in the USB cable
+which will directly fit into the port
+but instead if we have a micro USB cable
+it's not compatible so instead we need a
+micro to USB adapter which extends from
+the USB clasp but is composed of a micro
+USB cable which will be plugged into the
+adapter we can override the plug USB
+method from our parent class if needed
+but it's not in this case and then we
+can plug our micro USB cable into the
+adapter and then plug it into the port
+and it works just like a regular USB
+cable and our last pattern is the facade
+according to the dictionary a facade is
+an outward appearance that is maintained
+to conceal a Less Pleasant or credible
+reality in the program programming world
+the outward appearance is the class or
+interface we interact with as
+programmers and the Less Pleasant
+reality is hopefully the complexity that
+is hidden from us so a facade is simply
+a rapper class that can be used to
+abstract lower level details that we
+don't want to have to worry about I'm
+surprised it even qualifies as a design
+pattern but some common examples might
+include HTTP clients that abstract away
+low-level Network details or even arrays
+yes a dynamic array like vectors in C
+plus plus or arraylists in Java are
+constantly being resized under the hood
+thankfully as programmers we rarely have
+to think about memory allocation though
+if you're interested to learn more check
+out my newly released object-oriented
+design interview course we tackle some
+popular interview questions I've
+included video less since written
+articles and code for four languages and
+I'll be sure to add additional lessons
+in the future thanks for watching and
+make sure to subscribe please

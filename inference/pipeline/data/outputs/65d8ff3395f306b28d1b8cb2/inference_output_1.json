@@ -1,0 +1,70 @@
+{
+  "introduction": "This video discusses the security challenges faced by critical infrastructures, such as hospitals, electrical plants, and public transportation, when transmitting sensitive information over the internet. It introduces the concept of public key cryptography and its role in ensuring secure communication. The video also covers quantum key distribution as an applied encryption method based on quantum physics.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Public Key Cryptography",
+      "content": [
+        "Explanation of public key cryptography and its importance in secure communication.",
+        "Description of the two keys involved in the process: public and private.",
+        "Discussion on how the security of the method relies on the secrecy of the private key.",
+        "Explanation of the mathematical algorithms used to create the public and private keys."
+      ],
+      "topics": ["Public Key Cryptography", "Security in Communication", "Mathematical Algorithms"]
+    },
+    {
+      "title": "Section 2: Breaking RSA Cryptography",
+      "content": [
+        "Explanation of the RSA algorithm and its popularity in public key cryptography.",
+        "Discussion on the computational power required to factorize large numbers with more than 600 digits.",
+        "Explanation of the current limitations in breaking RSA cryptography.",
+        "Introduction to quantum computers and their potential to break codes."
+      ],
+      "topics": ["RSA Algorithm", "Factorization of Large Numbers", "Quantum Computers"]
+    },
+    {
+      "title": "Section 3: Quantum Key Distribution for Secure Communication",
+      "content": [
+        "Introduction to quantum key distribution as an applied encryption method.",
+        "Explanation of how quantum random number generators create a secure key.",
+        "Discussion on the vulnerability of the method to interception and eavesdropping.",
+        "Explanation of the process of discarding compromised keys and generating new ones."
+      ],
+      "topics": ["Quantum Key Distribution", "Secure Communication", "Key Generation"]
+    },
+    {
+      "title": "Section 4: Comparison of Public Key Cryptography and Quantum Key Distribution",
+      "content": [
+        "Explanation of the differences between public key cryptography and quantum key distribution.",
+        "Discussion on the security benefits of quantum key distribution compared to public key cryptography.",
+        "Explanation of the current limitations in implementing quantum key distribution.",
+        "Introduction to the potential future applications of quantum key distribution."
+      ],
+      "topics": ["Public Key Cryptography vs Quantum Key Distribution", "Security Benefits", "Limitations and Future Applications"]
+    },
+    {
+      "title": "Section 5: Conclusion and Implications",
+      "content": [
+        "Summary of the key points discussed in the video.",
+        "Explanation of the importance of secure communication for critical infrastructures.",
+        "Discussion on the potential impact of quantum computers on cryptography.",
+        "Conclusion on the need for continued research and development in secure communication methods."
+      ],
+      "topics": ["Secure Communication", "Critical Infrastructures", "Quantum Computers"]
+    }
+  ],
+  "topics": ["Public Key Cryptography", "Quantum Key Distribution", "Security in Communication"],
+  "generalTopics": [
+    {
+      "name": "Security in Communication",
+      "complexity": 0.61
+    },
+    {
+      "name": "Critical Infrastructures",
+      "complexity": 0.49
+    },
+    {
+      "name": "Quantum Computing",
+      "complexity": 0.80
+    }
+  ]
+}

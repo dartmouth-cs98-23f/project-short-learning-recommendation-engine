@@ -1,0 +1,398 @@
+Every website can be split up into two
+parts, the front end and the backend.
+The front end is all the visual stuff
+you see on the webpage and the backend is
+what saves and manages your data. For
+example, if you are on amazon.com,
+the backend would store your
+order history, your profile.
+It would load search results
+and much more. In this video,
+we're going to take a look
+at the technologies that
+are used in the backend of a
+website and in another video we
+explore the front end technologies.
+As an example, let's say that we're
+on amazon.com and we do some shopping,
+and now we're ready to make an order.
+When I click place order, what happens,
+we're going to start from the ground up.
+Any computer that's
+connected to the internet,
+including your computer and my computer,
+can send a message across the internet
+to another computer that's also connected
+to the internet.
+So to simplify things,
+Amazon has a computer in their
+office building somewhere,
+and our computer is going to send a
+message continuing our order to that
+Amazon computer. In this scenario,
+the computer that is sending the
+message is called the client,
+and the computer that is receiving
+the message is called the server.
+But before this happens, computers,
+they can't receive messages
+from the internet by default.
+We have to program them to be able
+to receive messages. To do that,
+we need a backend programming language.
+Almost every programming language has
+a feature that turns a computer into a
+server and allows it to receive messages.
+Popular backend programming languages
+are JavaScript, sometimes called node js,
+Python, Ruby, and Java. However,
+using a backend programming language by
+itself is actually really difficult and
+requires a huge amount of code.
+So there are two tools that we use to
+help with this. A backend framework and a
+package manager,
+a backend framework helps us create a
+server much easier and with a lot less
+code.
+Each backend programming language has a
+few different frameworks to choose from,
+but the most popular ones are
+Express JS for JavaScript, Python,
+Django, Rubion Rails, and
+Java Spring. In the backend,
+we also use a lot of code that other
+people have written called packages to do
+common tasks like doing
+calculations, talking to a database,
+and setting up user
+login and authentication.
+We typically use a lot of
+packages in our backend,
+and in order to install and
+manage all these packages,
+we use something called a package manager.
+Each language has its own package manager.
+The most popular ones are NPM
+for JavaScript, PIP for Python,
+bundler for Ruby, and Maven for Java.
+These are all the technologies we
+need to create our backend server.
+The next problem we have is
+we need somewhere to save
+the data for our website.
+Going back to our Amazon example,
+data could mean our user data,
+like the login information,
+order, history,
+as well as data for all the products
+that are being sold on Amazon,
+the descriptions, the ratings, and the.
+Reviews. To do this, we use a database.
+A database helps us store and manage data.
+It's just a piece of software that
+usually runs on a different computer,
+and we have to do some setups so that
+our backend can communicate with the
+database. The most popular
+databases are MySQL, Postgres,
+and MongoDB. All right, so
+if you're just starting out,
+this is basically all
+you need for the backend.
+You can build most of your projects
+with just a server and a database.
+For example, here's how our
+Amazon scenario could work.
+When the customer places
+an order in the front end,
+the front end sends a message
+containing the order to the backend.
+The backend then saves the order to a
+database and sends back a message to the
+front end confirming that
+the order was created.
+The message that the front end sends
+to the backend is known as a request,
+and the message that the backend sends
+back is known as a response. This is
+called a request response cycle,
+and this is generally how web
+applications work. Here's another example.
+Let's say that you're
+in the Amazon warehouse.
+The warehouse might have a different
+front end that sends a request to the
+backend to get our order.
+The backend then gets our order from
+the database and sends it back to the
+warehouse front end, and then they
+go ahead and prepare our order.
+Now that we've seen the overall flow,
+we're going to dive deeper and take
+a look at what's inside a request.
+Here's a simplified example of a
+request to create an Amazon order.
+If we read over it, we can see that
+it's actually really easy to understand.
+We have the items that we ordered,
+the quantities and some other information
+about our Amazon order. At the top,
+we have the type of the
+request, the domain name,
+and the URL path. This describes where
+this request is going and what type of
+request This is. First of all, Amazon.
+The company has bought the
+domain name amazon.com,
+and they configured it so that any
+request going to amazon.com will be
+redirected to that server
+in their office building.
+So that's why we're sending
+this request to amazon.com.
+The type and the URL path. Identify
+what kind of request this is.
+So in this example, this is a post
+request to slash orders. In the backend,
+we use our programming language and
+backend framework to define what types of
+requests are allowed and how we should
+handle these requests. For example,
+we can allow a post slash orders request,
+and whenever we get a
+post slash orders request,
+we will create an order using our
+programming language and save it to our
+database. We can also allow a get
+slash order request, and in this case,
+we will retrieve the order history
+from the database and send it back as a
+response. Another example is a delete
+slash order request where we will cancel
+the order.
+So this list of all the different types
+of requests that the backend allows is
+called an a API application
+programming interface.
+The API is one of the most important
+concepts in backend programming.
+If you send a request that
+is not allowed by the api,
+the backend will respond with an error.
+So we mentioned earlier that we can
+identify requests using a type and a URL
+path. There are several types we
+can choose from, such as post get,
+put and delete, and the URL
+path can be anything we want.
+So why in this example do
+we choose post slash orders?
+This is just a naming
+convention for our requests,
+and this naming convention is called
+rest representational state transfer.
+In rest, the type of the
+request has a special meaning.
+So post means to create
+something, and in this case,
+post slash orders means to create an
+order, get means to get something,
+and delete means to delete something
+and so on. An API that uses the
+REST naming convention
+is called a REST api.
+REST is the most common convention
+that we use for our APIs,
+but there are several other
+conventions that we could use.
+One of them is called GraphQL,
+which uses Post slash GraphQL
+for all of our requests,
+and another one is called rpc,
+which uses post and a
+more detailed D URL path,
+like post slash create order or
+post slash get order history.
+So that is what a request is when
+an API is and what rest means. Now,
+let's talk about infrastructure nowadays.
+Instead of company's purchasing their
+own computers to run their websites,
+they rent computers from
+a cloud computing company.
+The biggest cloud computing companies
+are aws, Amazon Web Services,
+gcp, Google Cloud platform,
+and Microsoft Azure.
+The basic idea of cloud computing is
+you're renting a bunch of computers.
+This is also known as IAS infrastructure
+as a service. Behind the scenes,
+AWS has a giant powerful
+computer, and inside its software,
+it's running many smaller computers,
+and we're actually renting one
+of these smaller computers,
+and these smaller computers
+only exist in these software,
+so we call them virtual machines
+or VMs. So to run our website,
+we rent a VM from AWS to run our backend,
+and we also rent another
+VM to run our database.
+Another problem we have to solve is
+what if our website gets really popular
+during the holiday season and we start
+getting a lot of requests and internet
+traffic that our server can't
+handle. With cloud computing,
+we can set up multiple VMs running these
+same backend code and then set up a
+special VM in front of these
+called a load balancer,
+and the load balancer will distribute
+requests evenly across our VMs.
+Once a holiday season is over,
+we can just shut off our VMs when we
+don't need them. This is a lot easier than
+having to buy physical computers
+where if the holiday season is over,
+you still have the physical
+computers that you paid for,
+but we still have another problem.
+We now have a lot of VMs that
+we need to create and set up,
+and it takes a lot of time and effort.
+Cloud computing companies offer another
+service called a PAs a platform As a
+service, a PAs just lets
+us upload our backend code.
+It will set up all the VMs
+including the load balancer,
+and integrate everything for us.
+The three most popular paths are
+Elastic Beanstalk for AWS App Engine for
+GCP and App Service for Microsoft Azure.
+The next concept we're going
+to look at is microservices.
+For our Amazon example,
+let's say that our backend contains code
+that saves an order to the database,
+charges the user's credit card,
+and sends an email confirmation.
+In the real world,
+this backend can be
+millions of lines of code.
+So we split this up into three code bases.
+Then each of these code bases
+will have their own backend,
+each with the load balancer and
+sometimes their own database.
+Then when we need to send an email,
+our orders backend will send a
+request to the email backend,
+which will send the email.
+So splitting up our backend into
+separate backends like this is called
+microservices, and it helps keep our
+code base smaller and more focused.
+Each microservice does not have to
+use the same programming language and
+database.
+One microservice can be using JavaScript
+and MongoDB while another microservice
+can be using Python and MySQL.
+Now, to make this even easier,
+there are companies out there like
+Twilio who have already created an email
+service.
+So Twilio provides a backend and an API
+for sending emails. So instead of us
+creating our own email microservice,
+our backend can just send
+requests to Twilio's backend.
+When a company provides a backend and an
+API that outside applications can use,
+this is called a SaaS,
+software as a service.
+Pretty much everything you do in
+the backend that's complicated.
+This probably a SaaS company out there
+that already provides that service,
+and you can just use that service instead
+of building your own microservice.
+So these three concepts we just looked
+at, infrastructure as a service,
+platforms as a service,
+and software as a service are the
+three foundations of cloud computing.
+These days,
+most companies use cloud computing to run
+the backend for their websites instead
+of buying and managing physical servers
+themselves. In this last section,
+I want to introduce some additional
+technologies you might see in the backend.
+Previously, we mentioned the
+databases, MySQL, Postgres,
+and MongoDB. These are sometimes called
+primary databases because they're the
+main database that our
+website uses. Generally,
+we start our backend with a server and
+a primary database and then bring in
+these additional
+technologies if we need to,
+if we allow our users to upload images.
+A primary database is not
+good for storing images,
+so we would use a blob store like aws, s3,
+and a CDN like CloudFront to store
+and load user uploaded images
+if we want to allow text search.
+Primary databases are
+very slow at text search,
+so we would bring in a search
+database like Elastic Search.
+If our website is getting a lot of traffic
+and we need to take some stress off
+our primary database, we would add a
+cache like Redis to improve performance.
+If.
+We want to do data science,
+we don't want to do the data
+analysis using our primary database.
+It's busy running our website.
+So we would copy all of our data into
+an analytical database like Snowflake,
+which is really good for doing
+data science on the side.
+If you want to schedule a
+task for later. For example,
+Amazon might want to email their users
+before their Amazon Prime subscription
+renews.
+We would use a job queue like Rabbit MQ
+to schedule this task for the future,
+and there's a bunch more technologies
+like these out there that are made to
+solve specific problems.
+So these are all the backend technologies
+that we covered in this video.
+If you're just starting out,
+you mostly just need to know
+how to use cloud computing,
+a backend framework in a primary database.
+These other technologies are
+things that you may or may not use.
+You would add them to your backend
+depending on what kind of website and
+features you're trying to
+make. Thanks for watching.
+My name is Simon from Super simple.dev.
+I want to make a tech
+career possible for anyone.
+If you have any questions or comments,
+please leave them down below and
+I'll see you in the next one.

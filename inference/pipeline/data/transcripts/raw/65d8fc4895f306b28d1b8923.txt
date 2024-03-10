@@ -1,0 +1,1308 @@
+all right thanks for being here nice to
+be midway through Midway
+I'll be talking about pragmatic
+algorithm game algorithmic game theory
+which is a talk I gave at the acmec
+conference I adapted a little bit for
+you guys but uh just a bit so so let me
+start by saying what what algorithmic
+game theory means particularly to that
+Community
+um so there was this famous book uh this
+edited book called algorithmic game
+theory that ended up uh being sort of an
+early Point around which this field
+gelled and it described itself as being
+research it described this topic of
+algorithmic Game Theory as being about
+research at the interface of computer
+science game theory and economic theory
+largely motivated by the internet so if
+you look at the kind of work that that
+was proposed not just in that book but
+in work that has called itself
+algorithmic gain Theory afterwards
+um it seems that this community is
+particularly interested in the design of
+new mechanisms particularly but not only
+auctions and Market mechanisms trying to
+analyze existing mechanisms and figure
+out something about what they do
+particularly prominent example is
+sponsored search where the mechanism
+kind of predates a formalized design
+approach but then there's a question
+about what what happens in it and
+equilibrium computation which of course
+is a kind of of both a very fundamental
+computational problem and a kind of
+Bedrock tool that you would want to use
+in a lot of this kind of analysis
+so typically this community has gone for
+very general settings and attacked them
+theoretically as indeed we're all kind
+of familiar both in economics and
+computer science
+um and uh I think they've added a lot
+over the traditional economic kinds of
+analysis
+um yielding um both impossibility and
+optimality results which maybe aren't
+that uh different from what economists
+would expect to see the same kinds of
+things economists have proven for years
+but added to that kind of
+um repertoire also that the perspective
+of approximation and uh I I think really
+kind of move the ball down the field a
+bit from the perspective of
+approximation showing you know for
+example that they can achieve something
+close to Optimal Revenue with a simple
+mechanism or something like that
+and so so broadly speaking this is what
+I mean when I say algorithm and Game
+Theory this kind of field
+um mostly within CS but but very much in
+communication with economics
+um
+unfortunately I think this field
+struggles uh of course as any
+theoretical discipline does
+um with obtaining
+um the same kinds of clean theoretical
+results that address a complex and
+realistic problems so there tends to be
+this sort of boundary of analytic
+tractability Beyond which it's it's hard
+to go and this approximation framework
+makes it possible maybe to go further
+than one might expect but but
+nevertheless there there sometimes is
+this experience of hitting a wall and
+going to uh to something more pregnant
+more practical
+so the perspective that I'm going to
+Advocate today is what I'm calling a
+pragmatic approach to algorithmic Game
+Theory and what I want to argue uh you
+know what I did argue to that Community
+what I'm what I want to argue to those
+of you here who see yourself as part of
+that Community is that it's possible to
+get more traction on realistic problems
+that one should be interested in by
+leveraging 100 or both of two kinds of
+pragmatism and the first is to care
+about getting good performance only on
+problems of interest rather than in
+relatively unconstrained settings so to
+try to drill into much narrower and but
+nevertheless useful categories of
+problems
+and the second is to
+achieve success in statistical rather
+than analytical terms and so so this
+means to to adopt a kind of data-driven
+approach in one's work where the
+problems of Interest might be defined
+implicitly by a data set that that gives
+examples of the kinds of problems one
+cares about and or there may be
+data-driven measures of performance so
+we might be scored on some kind of
+average measure of performance over a
+data set rather than simply
+approving a theorem that says something
+about how close to optimality we've come
+um so all of this you can sort of see as
+a sort of machine learning perspective
+about how to do
+um work at the boundary of economics and
+community and computer science
+so
+um in this talk I'm going to talk about
+work that I've done with collaborators
+that attacks problems that are kind of
+core algorithmic Game Theory problems
+um in the sense that they're the same
+problems that the algorithmic game
+theory Community has been itself
+interested in a more theoretical vein
+but but that's pragmatic in both of
+these ways and before launching in let
+me just say the obvious that I I
+certainly don't mean to give the
+impression that I've invented the notion
+of being pragmatic about algorithmic
+Game Theory there are many others uh in
+in this computer science economics
+Community who do the same and indeed I
+think one reason that I'm really happy
+to be at this Workshop is I think that
+most of you here seem to have this kind
+of sensibility about the work that you
+do so I hope that makes you a receptive
+audience and probably the only way I
+could really piss you off and lose you
+would be if I gave you the impression
+that I was the only one doing this so
+let me let me reassure you that that's
+not what I think
+um so so in particular I'm going to talk
+about three different lines of work uh
+you can see them up at the Top If you
+have good eyes
+um the the first one I'll talk about is
+repurposing uh radio spectrum via what's
+called an incentive auction uh which is
+something the FCC is in the progress of
+doing as they do these kind of slides
+along the way I'm just going to kind of
+call out my collaborators so my PhD
+student Alexandra frechette is my main
+collaborator here and Frank Hunter
+holder who's lingshu and Steve ramage
+contributed in to some of the tools that
+I used in this work
+so you guys have probably heard about
+the incentive auction but let me just
+say just a little bit about it so the
+FCC had this great idea of having an
+auction that had something to do with
+incentives well no that's not quite it
+um but but the FCC
+um
+yeah what a great name right I don't
+know but uh but but anyway that's what
+they call it so what can I do about that
+um the FC the FCC wants to basically
+sell off radio spectrum to uh mobile
+phone companies as they do
+um the problem that they face is that
+they've kind of already sold all of it
+there just isn't really good radio
+spectrum to sell anymore and people
+still want to watch cat videos on their
+phones while they're on the subway so so
+we've got a problem and the solution to
+this problem
+um is to take radio spectrum that's
+being used for something else and
+repurpose it for use uh in uh in Mobile
+phones because that's the use that
+people now care about and in particular
+it turns out that television you know
+back in the day when when broadcast
+television started up it got given
+really awesome radio spectrum because
+that it was kind of the the big game in
+town and now broadcast television is not
+that important to people people are much
+more interested in in getting Television
+over cable or satellite or you know even
+over the Internet so so it seems like
+maybe there's there's some economic
+efficiency gains to be had here by by
+taking back some of that spectrum and
+and selling it off to uh to mobile phone
+companies where it can be used more
+productively of course the catch here is
+it's not I'm not a lawyer I'm I don't
+fully understand the legal side of these
+things about whether this is necessary
+or just a good idea but it's at the very
+least a good idea not to just confiscate
+this spectrum from the the television
+stations and and give it back to to the
+mobile phone companies in order to make
+this all go down in a sensible way uh it
+turns out that what one needs to do is
+to buy the the radio spectrum back from
+the television stations uh in order to
+be able to then sell it off to the
+mobile phone companies so this gives
+rise to the question of how you would go
+about doing that how are you going to
+buy back
+um the the right to broadcast from a
+whole bunch of different television
+stations all of which operate you know
+at particular powers on particular
+Channel bills in particular from
+particular antennas in given regions of
+the country in this crazy Patchwork all
+over the United States and you know one
+by one get different ones of them to
+sell back their their right to broadcast
+and somehow assemble this into something
+that that a mobile phone company would
+be interested in buying so so that's the
+the kind of underlying optimization
+problem that that is going to form the
+allocation problem for for this
+incentive option
+so
+um so I can tell you this this auction
+is now approved and ready to go you can
+see this is the report and order that
+the Federal Communications Commission
+um just put out uh announcing that this
+was going to happen and giving some
+details about how it's going to happen
+uh you can see it was just a little over
+a month ago that this happened so this
+is a really current thing uh the the
+reported order makes really entertaining
+reading I recommend that you sit down
+with it it's uh 488 pages long and it's
+written almost entirely by lawyers so
+um so I think it's great I mean you know
+you here at a business school presumably
+do this kind of thing all the time so
+you know that should be fun for you
+um but uh you know in case you're not
+going to read it let me just tell you a
+little bit about what it would say uh
+yeah I can sort of put in one slide with
+the 488 Pages safe from your point of
+view as economists
+um essentially there are going to be two
+different auctions that will happen in a
+linked way so there'll be a reverse
+um or descending price auction for
+broadcasters and in the reverse auction
+essentially what's going to happen is
+stations will be offered some very high
+reserve price to stop being television
+stations and instead to be people with
+bags of money and they'll they'll say
+yes I would take your large bag of money
+in exchange for not being a television
+station anymore and the FCC will look at
+all of these offers to stop broadcasting
+and and determine that it would be
+possible to get rid of a whole bunch of
+spectrum if that were true it would be
+possible to take all of the TV stations
+that go up to channel 52 and change that
+to TV stations that only go up to
+channel 30 and then they could take that
+radio spectrum that was used for
+channels 31 up to 52
+except for channel 37 if you're one of
+the people who understands how these
+things work
+um turns out there's something special
+going on there radio telescopes need to
+operate on channel 37.
+um and uh and you take that big block
+and then you can sell that off to the
+cell phone companies because what cell
+phones need is a big contiguous block of
+spectrum they they can't operate on
+little corners of spectrum in different
+geographical regions so so then you do
+that but then you've probably gotten too
+many people who are willing to accept
+big amounts of money so then you start
+lowering the amount of money that you're
+offering everybody and as the this
+amount of money that you're offering
+goes down at some point high value
+participants might say I'm not so happy
+anymore to accept your reduced amount of
+money I would rather go back to being a
+television station and they they would
+go back on the air you'd you'd confirm
+that it's still possible to put them
+somewhere
+and uh and you kind of keep doing this
+until everybody uh you know either is is
+being paid nothing or is indispensable
+to you and can't be put back on the air
+I'll show you that uh schematically in a
+minute you know why why do you have to
+go through the government to make this
+happen
+um the real reason is
+um let's say I'm a television station
+um in let's say right now I'm channel
+13. so or let's make me a UHF station
+and Sam Channel 15. um you know that's
+not a piece of spectrum that's going to
+get given to the radio uh to the uh the
+telecoms but instead what could happen
+is
+um you could take this and take somebody
+else who is in a useful piece of
+spectrum and kind of stick him into my
+spot on this ability to move around
+stations uh is something that only the
+government can do and fundamentally
+that's needed to get big contiguous
+blocks of usable Spectrum so so the
+government is telling the top the TV
+stations you know this is a one-time
+chance for you to participate in this
+auction and I think that's a pretty
+plausible thing to say because this
+repacking is uh you know it really has
+to happen on a national scale to be
+useful
+um and you know the government only can
+do this you know they're going to cause
+slightly different interference on the
+stations that get repacked they can only
+do this because they've been given
+Authority by a law so this can't really
+happen just just on the side
+um so this is the reverse auction the
+forward auction is then taking this
+stuff and selling it off to the um to
+the cell phone companies so so here
+we're going to have different licenses
+uh in every region and the prices for
+these licenses are going to increase
+until
+um uh supply and demand meet so you're
+going to have just a much more
+straightforward kind of ascending
+auction
+this is not absolutely trivial but this
+is kind of the sort of thing that the
+FCC has been doing for a long time
+um all right so so we have this reverse
+auction we have a forward auction and
+then we have we have some kind of link
+between them uh so we have we have some
+amount of Revenue that we need to
+achieve to to make everybody happy about
+what what just happened and if that
+hasn't happened then basically we
+um we decided that we were trying to
+clear too much spectrum and so then we
+we reduce the amount of spectrum that
+we're trying to clear and that will have
+the effect of both lowering the prices
+that we have to pay because we have to
+buy out fewer TVs stations and
+increasing the the per unit prices that
+we will end up charging telecoms because
+the supply will have gotten scarcer and
+so the prices will continue to rise and
+so so essentially what we'll do is we'll
+we'll just change the amount of spectrum
+that we have to clear and then keep
+running the auction you might notice
+that these two prices are not directly
+related to each other right so so this
+is not a double-sided Market
+um or if it's a double-sided Market it's
+very indirectly a double-sided Market
+because kind of what's happening is the
+government is you know doing this one
+auction with everybody and getting all
+these goods and then kind of glomming
+them together and turning them into
+something else and selling them to
+somebody else so the government gets to
+keep whatever the difference is and they
+the Congressional budget office has
+projected that that difference is 25
+billion dollars
+so so the government's take is is a
+bunch of money
+so let me tell you a little bit more
+about the reverse auction which is going
+to be my focus I found in talking to
+people that there seems to be a lot of
+misunderstanding about how this auction
+works and so
+um maybe you guys all understand it but
+I made a very sophisticated PowerPoint
+animation to explain how this works
+and and I say this both jokingly and not
+um I say it jokingly in the sense that
+when you see it you're going to be
+disappointed but but I say it seriously
+in the sense that it took me forever to
+make
+this so let's see
+um so so it turns out that rather than
+talking about uh buying our television
+stations which turns out for various
+reasons to be a little hard to think
+about
+um abstractly I'm going to switch to a
+problem that I think you have more
+experience with which is the problem of
+uh Airline over booking right so so you
+go to the uh your airline of choice and
+they say you know sorry remember that
+ticket we sold you for the flight that
+you're on well it doesn't really
+correspond to a seat on our plane
+um in fact you know it turns out there's
+this law that for some reason we can
+sell you things that don't exist and if
+you don't show up for the flight that we
+keep your money but if we don't have a
+seat for you that's just too bad for you
+and now we're gonna see what happens so
+so let's think about the part of what
+happens and and in fact what really
+happens is they just screw you in your
+strand in Chicago but let's imagine
+something slightly more reasonable that
+involves an auction so so the way this
+is going to work is uh and and for
+reasons that have to do with this FCC
+action I'm I'm going to ask that
+passengers either fly in the cabin
+they're assigned to or they have to give
+up their seat I'm not going to allow
+passengers in first class to move to
+economy class I'll explain afterwards
+why that's important
+so the feasibility constraint that I'm
+going to have as an airline is that the
+number of passengers in each cabin is
+less than or equal to the number of
+seats I have because I can't fly with
+people standing up
+um someday they'll do that but not yet
+um and I'll use a descending clock
+auction to set compensations and the way
+to think about this is I start with a
+plan that's big enough to hold everybody
+so so these dots which I individually
+placed with my mouse are the people and
+this is my plan right so this by analogy
+is the current state of affairs with
+with television stations they're all
+kind of all the television stations have
+somewhere to broadcast
+the problem is we're going to get rid of
+a bunch of the spots right we're gonna
+this is clearing a bunch of spectrum
+we're going to lose a bunch of the seats
+and now we have people without seats
+um and and this is where the airline
+decides hey we could send a smaller plan
+and save ourselves some money
+so uh the airline offers compensation so
+we say to everybody we'll give you a
+thousand dollars if um
+uh if you just elect not to fly and
+we'll we'll fly you tomorrow morning and
+everybody gets to make a choice about
+whether that sounds good to them or not
+and so some people say no I'm going to
+hold on to my seat I'm not going to take
+your thousand dollars and they're
+they're on the plane and some people say
+a thousand dollars would be great why
+not I'll do it and and they kind of go
+off to the side here and and so here's
+our state of affairs with a thousand
+dollars the thing to notice now is that
+I've got a lot of empty seats so as an
+airline I think Hmm these guys you know
+don't don't seem to Value money all that
+highly I made a bit of a mistake
+offering them a thousand dollars so let
+me let me change my offer so you say to
+everybody remember what that thing I
+said about a thousand dollars really I
+was lying it's only eight hundred
+dollars how do you feel about that
+and uh and some of them say well you
+know turns out I only did it because you
+said a thousand dollars in fact I want
+to go back on your stupid plane
+and uh and so now some of them move back
+and and in fact In First Class
+um let's say they all move back so so
+what's going to happen in this auction
+then is these guys now these blue dots
+have nowhere they can go on the plane
+because I'm not going to let them go to
+a different class and so that means
+they've accepted an offer for eight
+hundred dollars but I can't make them
+any subsequent offers because I can't
+back that offer up with anything if I
+was to offer them 700 and they said I
+won't take your offer I would be in the
+embarrassing situation of not being able
+to do anything so so I have to freeze
+them at the last offer they accepted
+these other guys though I can still do
+without so for them I lowered the price
+and then some of them move back and then
+I lower the price again and then some of
+them move back and until something
+freezes again and now the green guys are
+frozen because again there are no spots
+for them so I freeze them at a different
+price the blue guys are just gluttons
+for punishment that's why they're flying
+an economy class so we just keep on
+hitting them with lower and lower prices
+and some of them move back like the
+suckers they are they'll even take 300
+and eventually two hundred dollars a
+couple of them move back and these guys
+get Frozen and so so this is how the
+auction works so basically we're going
+to keep on
+lowering prices on people as long as
+it's possible to accommodate them back
+where they were before and then
+basically the the willingness of other
+people to eventually
+um participate in the auction or quit is
+what's going to drive the prices for you
+okay so so what does this correspond to
+in reality you might think this
+corresponds to sort of good spectrum and
+medium spectrum and bad Spectrum but
+that's that's really not true what I
+want this instead to correspond to is
+different places so there's nothing
+special about first class you know it
+might have been the first class got a
+worse price than business glass what's
+really special is that you can only go
+back to the place that you originally
+were and and that they're just different
+constraints in different places so let's
+say first class was really New York
+economy class sorry guys it's the
+Midwest
+um and uh and so we just had different
+feasibility constraints in different
+places right so so it might be that New
+York kind of walks up early because
+there are a lot of constraints in the
+New York Region where prices are just
+falling and falling in Chicago because
+you have lots of open space out here
+um now now here's the the thing about
+the real problem the feasibility
+constraints in fact are a crazy jumbled
+mess right so so this is a picture of
+the feasibility constraints it might be
+a picture made by Nick actually I'm not
+sure did you make this picture
+thanks for the picture Nick I never
+thanked you properly I want to take this
+opportunity
+um so yeah okay that that was special
+okay so so this is uh this is a
+visualization of the real constraint
+graph and and what you can see from this
+is just kind of that it sucks right
+there's just lots of lines everywhere
+um but but in particular what you can
+sort of Imagine from this picture is you
+know every dot is a station right and a
+line is these two stations somehow
+constrain each other on what what
+channels they're allowed to be on
+um and and because there's just not a
+lot of nice kind of symmetric cliques in
+this graph everything has just got weird
+stuff hanging off the side and that
+means that it then my nice story about
+kind of everyone in economy class is the
+same and everyone in business class is
+the same is not going to be true in this
+graph the question of whether you can
+personally go back is going to be a a
+personalized choice for everybody
+the point means there exists a
+constraint between those two stations
+that either they can't be on the same
+channel they can't be on adjacent
+channels they can't be on certain same
+or adjacent channels but they're allowed
+to be on other ones or some combination
+of those sorts of constraints
+um and and there are many channels so so
+you know typically we're not going to
+clear all the Spectrum so is there any
+two channels linked by an edge can still
+both be accommodated but you know
+eventually they're going to start to
+constrain each other as I reduce the set
+of available channels
+so so here's another visualization of
+this graph which uh is maybe a little
+bit easier to think about because
+this one has the advantage that it looks
+like the United States but the
+disadvantage that you can't see just how
+awful the New York Region really is
+um it's really awful it has some nodes
+with degrees above 200 so so there's
+some really really densely connected
+parts of this graph
+um this just sort of blows it out in a
+way that gives you a better sense of the
+connectivity of the graph
+um so so there's this underlying
+computational problem if I want to do
+this kind of Airline algorithm the way I
+showed it to you this descending clock
+auction which is asking for a given set
+of people that I think are going to
+participate in the auction that have
+currently accepted going off air and
+another set of people that I have to
+repack because they've exited the
+auction or they never participated is it
+possible for me to also not take you for
+every given person is it possible for me
+to put you back on the air and somehow
+readjust the stations I give to
+everybody so the the whole thing works
+and if so I get to lower your price and
+if not then you're Frozen and I have to
+take the last price you accepted in a
+sense you're not participating in the
+auction anymore
+and and so this is this computational
+problem that I'm going to have to answer
+every time I want to consider lowering a
+price for every single station so I'm
+going to have to do this you know kind
+of on the order of 2000 times every time
+I take the clock
+and uh you know bad news this is the
+part where computer scientists come and
+bum you out because uh this is an NP
+complete problem
+um which the theorists will tell you
+means that you should go shoot yourself
+in the corner because nothing can be
+dealt with Chicago somebody can shoot
+you for you you don't have to do it
+yourself
+um but you should be very sad uh the
+pragmatic truth is just because the
+problem is NP complete doesn't mean you
+can never solve it it just means you
+can't be confident that you can always
+solve it so so it turns out there are a
+whole kind of research communities
+within CS about finding practical ways
+of solving NP complete problems and they
+work all the time you know Google
+wouldn't be making a self-driving car if
+it weren't possible to solve NP complete
+problems with decent reliability all the
+time
+um you just can't do it absolutely all
+the time that's why the car will
+sometimes crash
+sorry
+or something
+um
+so uh so so here we've got a graph graph
+coloring problem with 130 000 um
+pairwise relationships between stations
+something on the order of a couple of
+million uh actual constraints which uh
+speak about individual channels
+um and the FCC was initially pretty
+skeptical about whether this problem
+could be solved at a national scale and
+they were doing a bunch of pretty hacky
+things to try to make the problem
+smaller
+um in the end uh we're solving this
+problem
+um exactly and at a national scale using
+some tools from empirical algorithmic so
+I'll tell you a little bit about how
+we're doing that basically the the bunch
+of tricks that we've got are to use a
+satin coding automatic algorithm
+configuration and algorithm portfolio so
+I'll tell you kind of a slide about what
+each of those things is so okay
+um so so what do we do with this thing
+um well how many of you know what
+propositional satisfiability is
+hooray for you okay you guys can get a
+coffee I mean they spend like 30 seconds
+telling the rest of you what
+propositional satisfiability is this is
+this is one of the awesome problems in
+computer science right this is uh this
+is part of the bread and butter of
+computer science this is like the you
+know Corno
+whatever it is Chrono something
+something what is that what is it is it
+it's like Chrono competition or
+something yeah that's why I'm a computer
+scientist anyway
+um so yeah please edit that part out of
+the video we don't know about going on
+Milton Friedman would be so unimpressed
+with me
+um
+okay so so basically satisfiability is
+what is actually the first problem that
+was shown to be NP completers and the
+the first little kind of set of problems
+and uh it's really easy to think about
+because it's so simple and that means
+that there are some really powerful
+algorithms that work with it because the
+the problem itself is so simple that you
+can really wrestle with it in great
+detail so it's sort of a pure
+combinatorial problem it says I've got a
+set of variables and each variable can
+be true or false then I can make
+literals which are the variables that
+either the variables themselves or the
+negations of the variables I can make
+Clauses which are disjunctions of
+literals so a clause is something like a
+or b or not C right so it's it's a
+disjunction of either variables or
+negated variables and then I make a
+formula which is a conjunction of
+Clauses so I end up with something that
+looks like a or b or not C and D or e or
+not a so I make this whole string of
+propositional variables connected with
+answers or knots in this particular way
+and the question that I then ask is is
+there some way of assigning values to
+each variable from true or false that
+make this whole logic formula evaluate
+to true
+and you know your first impulse might be
+well sure that sounds really easy you
+know I just I can just come up with true
+and false values and then I I know I
+know all about logic right I know how to
+evaluate this thing and figure out
+whether it's true or false and indeed
+it's very easy to to come up with some
+assignment of uh true and false values
+to all the variables look at it in the
+formula figure out if it's true or false
+but then you might notice well if I've
+got n variables there are two to the N
+assignments of of truth values to those
+variables and I could try each of them
+and test it but is there some more
+principled way of figuring out which of
+those two to the end things I have to
+try or do I have to do all of them well
+if you can answer that question then
+there's a million dollars waiting for
+you at the clay Mathematics Institute
+because that would involve answering the
+question of whether p is equal to NP and
+so we don't know but so far we haven't
+found a way so so far more or less you
+have to try everything
+so this is sort of the combinatory the
+the combination lock of combinatorial
+problems you just sort of have to to
+grind through everything or sort of in
+the worst case it seems like you have to
+but in practice maybe there's a lot of
+structure in your problem right if I
+gave you something like
+um a or not a and all kinds of other
+stuff maybe you could look at that and
+say well that's got a contradiction in
+it that first Clause simply can't be
+satisfied so I don't need to grind
+through all the other stuff I can just
+spot that contradiction that's a very
+simple example of the fact that you
+don't always have to grind through
+everything and and there are much richer
+reasons why you might not have to grind
+through everything so that that's this
+kind of empirical algorithms framework
+you can't do it for for the worst case
+input but you can do it for everything
+else
+so how do we formulate this FTC problem
+as a sad problem
+um I'll just do this kind of at a high
+level but basically we say every station
+has to broadcast on one of its allowable
+channels that gives me a constraint that
+looks like this
+um so so one of these at least one of
+these variables has to be set to true
+the variable which says this day
+broadcast on this channel
+um so the disjunction of all these
+variables has to be true which means at
+least one of them has to be true each
+station only gets to broadcast on one
+channel
+um that means and the negation of each
+pair of values that station could take
+uh disjoint so so at least one of them
+has to be false at least one of every
+pair has to be false so far those two
+things just say every station gets one
+channel that doesn't seem like I've done
+something very complicated yet
+um but the interference thing is the
+hard part so then I take all of these
+pairwise interference constraints and I
+I throw them all in so I say you can't
+be on Channel 17 while I'm on channel
+18. and I do that two and a half million
+times for all of the pairwise
+interference constraints and I just
+throw them all in there too and then I
+give this thing to a SAT solver with it
+all of its Glory of tens of thousands of
+variables and two and a half million
+constraints and
+it turns out as a side note that most of
+the Clauses have only two variables in
+them you'll notice only this first kind
+of clause that I gave at the top has
+more than two variables in them and
+that's a really powerful thing for a SAT
+solver because when one of the variable
+when one of the literals gets set to
+false I can infer that the second one
+has to get set to true or the whole
+thing's not going to work and that's
+that's how I can see the contradiction
+doesn't work because if one of them gets
+said to false the other one uh
+actually the contribution does work
+doesn't it
+never mind anyway
+um
+other things don't work
+um yeah maybe I don't have a one
+variable example but uh but anyway when
+one of these things gets set to false
+the other one has to be true and then I
+know how this thing gets set and it
+might appear in other formulas and so
+then I can plug in its values in those
+other formulas and that can cause other
+things to get forced and I can get these
+chains in something that's called Unit
+propagation where I go grinding through
+without having to do search setting all
+kinds of variables and that's kind of a
+powerful thing so so basically we get
+this crazy thing you might think on the
+face of it it's so ridiculously big
+right I've got like tens of thousands of
+variables and in the worst case I think
+this thing is exponential in the number
+of variables so how could this possibly
+work
+um the trick we're going to use is
+something that my research group has
+been working on pretty hard for about a
+decade which is called algorithm
+configuration and the idea is that
+um it it turns out the heuristic
+algorithms which is what we're talking
+about here algorithms that that don't
+come with a worst case performance
+guarantee but that sort of embody things
+that seem like they should be good ideas
+which is what a heuristic is
+um tend to have a lot of parameters as
+you're building this kind of algorithm
+you tend to face a choice about you know
+how much pre-processing should I do
+should I Branch this way or that way
+which variable should I consider first
+and the authors of these these
+algorithms can and typically do expose
+those choices to the end user as
+parameters so they can be changed at
+runtime so something that you might do
+if you know that you have a given
+distribution of problems that you need
+to attack is to set those parameters in
+a way that works particularly well for
+your problem so that you effectively
+custom design an algorithm that will
+work well just for you and so so that
+seems good except if you've got
+something like 100 parameters you know
+setting these things by hand by
+repeatedly running the algorithm and
+having it take many hours and then
+seeing how it did is a pretty hard thing
+to do so we've been working on what we
+call Meta algorithms algorithms that
+take other algorithms as input run those
+other algorithms many times essentially
+do a statistical experiment design on
+these algorithms figure out kind of
+what's going on with them and uh and
+explore the space and eventually find
+some parameter configuration that works
+really well you might be skeptical that
+such a thing could be make made
+practical it's it's beyond the scope of
+this talk to say much about how that
+works so I'll say one thing but suffice
+it to say that this really does work
+pretty well
+um
+so kind of intuitively how do we do it
+um Let me give the example of a single
+parameter which is small enough that I
+can draw it on the board here so so
+let's say I have a parameter X which
+affects the performance of my algorithm
+and I have a parameter y that I want to
+minimize think of why as something like
+the log of runtime so I'm trying to make
+an algorithm that that whose runtime is
+minimized on the same instances so I'm
+running this over and over again on the
+same problems
+um so let's let's imagine that this red
+line in the graph here is the true
+performance of the algorithm as a
+function of x
+um and of course I don't know that if I
+knew that I would just minimize that but
+I don't get to ever observe that what I
+get to do is run the algorithm at
+particular points and observe its run
+time at that point so these blue circles
+are places where I actually observed the
+runtime of the algorithm
+um then what I do is I fit a a
+regression model to all of this I use a
+fancy kind of non-parametric regression
+in this case I'm using something called
+gaussian process regression the
+advantage of gaussian processes is they
+give me uncertainty estimates well
+they're non-parametric so they're
+arbitrarily Wiggly which is important to
+me and they give me uncertainty
+estimates which are small at points that
+I've observed because I I know what's
+going on there and they get bigger as I
+get away from points that I observe so
+so these um these gray ellipses are the
+uncertainty estimates at every point and
+so what you'll see is you know right at
+the Blue Points the uncertainty
+estimates are small and as they get away
+they're big and then what I do is I try
+to find a point that looks like would be
+good to evaluate a point that I haven't
+seen yet that looks like it might be
+better than anything that I've seen
+before and what would it take to maybe
+be better
+you want to both be pretty low on the
+line and also have pretty high
+uncertainty and so so that Criterion is
+called expected Improvement what's the
+what's the amount of improvement that I
+could gain conditional on being better
+than the point that I've got now
+um so the green line that I'm showing
+you is a scaled version of expected
+Improvement on this line and you can see
+a good place to evaluate would be right
+here according to the line
+and because I have high uncertainty at
+that point because these two points are
+pretty far apart and also the line is
+pretty small so here's a point that kind
+of makes a good trade-off between the
+height of the line and the amount of
+uncertainty so I would then do another
+experiment right there and I would learn
+that in fact it's not as good as the as
+the point to its left but then I would
+update my uncertainty estimates that I'd
+have another point and then I would end
+up my second choice would be to go here
+which really is a minimum or close to a
+minimum and I learned something good and
+I kind of keep going so so that's how
+this sort of uh search Guided by a
+learned model in real time kind of can
+work so so this is uh this thing we have
+called sequential model based algorithm
+configuration or smack that's how it
+works
+okay so so that that's that's the idea
+of algorithm configuration and then I
+have the idea of making an algorithm
+portfolio which essentially says
+different solvers have different areas
+of strength and weakness so why should I
+have to commit just like a financial
+portfolio why should I buy only one
+stock why should I have only one
+algorithm in my back pocket why not have
+access to many uncorrelated algorithms
+and thereby leverage the fact that that
+the men of the the average of men's is
+different than the the men of the
+average
+um
+so uh so basically we leveraged this
+idea too we built something called
+sadzilla which is a portfolio of sat
+solvers this is a pictorial
+representation of what it does
+um and uh
+it's destroying Tokyo in this picture
+and uh basically this has become just
+kind of a dominantly successful strategy
+in the sap Community whatever that is
+um so so basically we took all of these
+things together and and we built a uh a
+SAT solver for the fcc's problem so so
+I'm going to kind of conclude here by
+showing you experimentally what did this
+do on the fcc's problem and uh here's uh
+so I need to show you uh how this graph
+works so this is uh the run time so
+basically I'm given some some
+distribution of instances that that
+arose in simulations of the auction that
+really you know to our best knowledge
+reflect what might happen in the fcc's
+auction and I've got
+um problems of up to
+1133 stations
+um which means tens of thousands of
+variables in the Statin coding on the
+full USA interference graph
+um so I take those problems and then I
+run various sat solvers on them so in
+the upper left-hand Corner these are the
+names of different and sat solvers that
+I ran and I'm showing you a cumulative
+density function here which says the
+probability of the basically the
+fraction of instances that got solved
+within every amount of time so looking
+for example at this blue line which is a
+solver called clasp you know after uh 10
+to the zero seconds after one second and
+it solved nothing after about two
+seconds it was starting to solve things
+after 10 seconds it solved a little bit
+more than 10 percent of the instances
+and and so on and then we ran it for
+five minutes we ran everything for five
+minutes so after five minutes we just
+stopped them because you know we're not
+made of time here we have to stop it at
+some point and uh and you see that the
+best of the solvers got maybe 45 percent
+of the instances solved which is already
+kind of good I mean something I should
+point out is that if you don't solve
+something you can just call it
+impossible you can just freeze that
+station and that basically costs you
+money but but that's okay right there's
+nothing that goes wrong from an
+incentive point of view if somebody gets
+frozen early you just pay them too much
+and as a computer scientist there's
+something really beautiful about that
+because there's a trade-off between how
+well you can solve the problem and how
+much you have to pay people so you can
+really go to the FCC and say if I can
+give you one percent you know better sat
+solving ability I'm going to save you
+100 million dollars and you know
+normally in the sac Community you don't
+get to say things like that so that's
+pretty cool
+normally you can say if I can you know
+do one percent better I can write a
+paper in the South Community okay so so
+basically we added a specially
+configured version of clasp uh we built
+a specially configured version of clasp
+why do we pick class which looks like
+the worst thing here basically because
+it was designed by its authors to expose
+a lot of parameters so it was designed
+to work really well with this
+configuration kind of approach and so
+it's really suited to this
+um and and we built something that
+worked dramatically better
+um so this is now solving about 75
+percent of the instances within five
+minutes and so that's already looking
+pretty good we then
+um basically did both a bunch of
+engineering and added some kind of
+portfolio ideas to this and built
+something that we call sat FC which for
+feasibility checking which is this red
+line and this is the thing that that
+we've made available to the FCC
+um and and you can see this is
+stochastically dominating everything
+else by by pretty healthy down partly
+just by by dealing with very easy
+instances very quickly there are a lot
+of very easy instances
+um but we're now solving
+um just about everything all but about
+two percent of the instances uh within
+an eight hour cutoff
+um and so so this already gives you some
+sense that there's there's only so much
+to be gained by parallelization here
+there are only 2 000 stations that need
+to be checked around
+um so what does this look like most of
+the problems were satisfiable the blue
+bars here are points where it was
+satisfiable the red bars are points
+where it was unsat the gray bars are
+points where we timed down and didn't
+know and you can see we timed out in
+about one percent of the instances
+um so this is the last slide that I'll
+give you
+um so far I've talked about a situation
+where we have people either going off
+the air or staying on the air in
+practice those of you who are old enough
+to remember televisions as compared to
+computers and particularly televisions
+that you actually accessed on the air
+might be aware of the fact that there's
+something called UHF and VHF there are
+different kinds of Television spectrum
+and you might remember that VHF is kind
+of bad relative to UHF right it's sort
+of a grainier picture it's not quite as
+good and so it is now we really have
+both of those kinds of spectrum UHF is
+the stuff that we actually want to sell
+to the telecoms that's more appropriate
+for them so one thing that we might be
+able to do is say
+um the UHF stations could instead of
+going off the air maybe we should pay
+them a lower amount to accept a lower
+quality good to accept VHF Spectrum
+instead of UHF spectrum and uh and and
+then you know that's another way of
+freeing up UHF Spectrum so maybe we
+should give them these multiple options
+this is tricky and you know then of
+course I can do cascading things like I
+can buy out a VHF station thereby making
+some VHF Spectrum available and then I
+can get a UHF guy to move into that and
+if those two moves are cheaper than
+getting that one guy to go off air maybe
+that's a better thing to do so so we
+what we and in fact there's not just VHF
+but there's upper VHF and lower VHF
+which are themselves different so
+there's really three bands of spectrum
+to care about
+um
+so it the problem is doing a design on
+this kind of space involves multi-minded
+bidders it involves bidders who have
+values for now multiple things rather
+than just going off air and and that
+makes the auction design much more
+complex because as all of us know here
+auction design for multi-minded bidders
+is is much uh more difficult to think
+about than for single-minded bidders
+except in this kind of Glorious Point
+case of vcg so
+um so this has been an area of active
+study for the the groups working with
+the FCC right now there are a whole
+variety of different proposals on the
+table
+um I I'm happy to kind of talk to you
+about some of the ideas here I've in the
+end ended up proposing something which
+I'm kind of excited about but I'm out of
+time now so I'm not going to tell you
+now what that is
+um
+instead
+I will just conclude if my computer
+worked the way I thought it did I'll
+just conclude here so uh so there we go
+so I guess I've told you about uh the
+way the FCC incentive action works if
+you're interested uh let me say sort of
+one sentence about what these other
+things are and I'm happy to talk with
+you about them on the coffee break
+um so one of them is this idea of what I
+call computational mechanism analysis
+which basically means using computers to
+analyze existing mechanisms by solving
+exactly for their equilibria on samples
+from evaluation distribution of Interest
+so we can think about something like
+sponsored search auctions and ask
+um you know how efficient is some given
+mechanism or how much revenue would it
+give me on expectation given different
+settings of a reserve price parameter or
+something like that so that's what I
+call computational mechanism analysis it
+basically works on the fact that that
+they're now as of maybe five years ago
+exists some really powerful techniques
+for finding the exact equilibria of
+compactly represented games so that
+might be a technology that would be
+interested think to some of you so I
+just want to throw that out there the
+last thing is about a kind of sabbatical
+project that I worked on in Uganda for
+building a cell phone based mobile
+market for agricultural Commodities
+allowing subsistence Farmers to sell
+Surplus produce to traders in the cities
+using a kind of Craigslist that runs
+over SMS which is effectively a kind of
+double auction so if you're curious
+about the application of economic theory
+to development problems I'm happy to
+talk about that too so thanks for your
+attention and let's all have lunch
+cheers
