@@ -52,11 +52,14 @@ transcript_records = []
 #     topics = json.load(f)
     
 # print(f"{topics = }")
-search_client.clear_objects()
+# search_client.clear_objects()
+search_client.clear()
+
 
 # iterate over collections in 'inference_summary' collection
 for inference_summary in db.inference_summary.find():
     # print(inference_summary)
+    # break
     
     id = inference_summary["_id"]
     summary = inference_summary["inferenceSummary"]
@@ -64,8 +67,9 @@ for inference_summary in db.inference_summary.find():
     # print(f"{id}: {summary}")
     
     # get corresponding record from "video_metadata" collection
-    video_metadata = db.video_metadata.find_one({ "_id": id })
+    video_metadata = db.video_metadata.find_one({ "_id": id }) or {}
     # print(f"\n\n{video_metadata = }\n\n")
+    # break
     
     try:
         complexity = np.mean(video_metadata.get("inferenceComplexities", [ 0 ]))
@@ -86,6 +90,8 @@ for inference_summary in db.inference_summary.find():
         **search_data,
         "transcript": flatten_text(summary)
     })
+    
+    print(f"FOUND: {len(topic_records)}", end="\r")
     
 try:
     print(f"ADDING: {len(topic_records)} records")

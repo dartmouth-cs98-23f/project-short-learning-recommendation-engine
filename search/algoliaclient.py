@@ -146,7 +146,7 @@ class AlgoliaSearchClient:
         """
         return self.topics_index.save_objects(records).wait().raw_responses
     
-    def clear_index(self):
+    def clear_transcripts(self):
         """
             Clear the Algolia index.
             
@@ -161,6 +161,46 @@ class AlgoliaSearchClient:
             Response status
         """
         return self.index.clear_objects().wait().raw_responses
+    
+    def clear_topics(self):
+        """
+            Clear the Algolia index.
+            
+            Parameters
+            ----------
+            
+            NONE
+            
+            Returns
+            -------
+            
+            Response status
+        """
+        return self.topics_index.clear_objects().wait().raw_responses
+    
+    def clear(self):
+        """
+            Clear the Algolia index.
+            
+            Parameters
+            ----------
+            
+            NONE
+            
+            Returns
+            -------
+            
+            Response status
+        """
+        try:
+            
+            self.index.clear_objects().wait().raw_responses
+            self.topics_index.clear_objects().wait().raw_responses
+            
+            print(f"CLEARED INDEXES: {self.index.index_name}, {self.topics_index.index_name}")
+            
+        except Exception as e:
+            print(f"ERROR: {e}")
 
 
 if __name__ == "__main__":
