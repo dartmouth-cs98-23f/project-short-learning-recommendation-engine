@@ -1,0 +1,82 @@
+{
+  "introduction": "This video provides a step-by-step guide on how to use SQL or 'Sequel' for data reporting and analysis. It assumes no prior knowledge of SQL and uses all free tools. The video covers the basics of SQL, including querying data from databases, normalization, and using aggregate functions. The speaker emphasizes the importance of SQL in business and its ability to extract valuable insights from data.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to SQL",
+      "content": [
+        "Explanation of SQL and its role in data reporting and analysis.",
+        "Discussion on the importance of SQL in businesses.",
+        "Overview of the video's objectives.",
+        "Introduction to the SQL Server Management Studio."
+      ],
+      "topics": ["SQL Basics", "Data Reporting and Analysis", "Business Importance"]
+    },
+    {
+      "title": "Section 2: Installing SQL Server",
+      "content": [
+        "Explanation of the SQL Server installation process.",
+        "Discussion on the different installation options.",
+        "Overview of the SQL Server Management Studio.",
+        "Explanation of the concept of normalization."
+      ],
+      "topics": ["SQL Server Installation", "Normalization", "SQL Server Management Studio"]
+    },
+    {
+      "title": "Section 3: Querying Data",
+      "content": [
+        "Explanation of SQL queries and their components.",
+        "Discussion on selecting data from tables.",
+        "Introduction to aggregate functions.",
+        "Example query to retrieve order data."
+      ],
+      "topics": ["SQL Queries", "Aggregate Functions", "Order Data Retrieval"]
+    },
+    {
+      "title": "Section 4: Filtering and Sorting Data",
+      "content": [
+        "Explanation of filtering and sorting data in SQL.",
+        "Discussion on using WHERE and OR clauses.",
+        "Introduction to GROUP BY and HAVING clauses.",
+        "Example query to filter and sort order data."
+      ],
+      "topics": ["Filtering and Sorting", "WHERE and OR Clauses", "GROUP BY and HAVING Clauses"]
+    },
+    {
+      "title": "Section 5: Advanced SQL Concepts",
+      "content": [
+        "Explanation of subqueries and joins in SQL.",
+        "Discussion on using UNION and INTERSECT operators.",
+        "Introduction to stored procedures and views.",
+        "Example query to retrieve data from multiple tables."
+      ],
+      "topics": ["Subqueries and Joins", "UNION and INTERSECT Operators", "Stored Procedures and Views"]
+    }
+  ],
+  "topics": [
+    "SQL Basics",
+    "Data Reporting and Analysis",
+    "Business Importance",
+    "SQL Server Installation",
+    "Normalization",
+    "SQL Queries",
+    "Aggregate Functions",
+    "Filtering and Sorting",
+    "Subqueries and Joins",
+    "UNION and INTERSECT Operators",
+    "Stored Procedures and Views"
+  ],
+  "generalTopics": [
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.61
+    },
+    {
+      "name": "Data Science and Analytics",
+      "complexity": 0.59
+    },
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.59
+    }
+  ]
+}

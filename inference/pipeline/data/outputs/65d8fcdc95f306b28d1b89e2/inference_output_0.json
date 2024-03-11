@@ -1,0 +1,70 @@
+{
+  "introduction": "This video introduces the concept of Multi Cycle Design, an approach to data path design that aims to improve performance and resource utilization. The design is based on analyzing the delays involved in the flow of information along the data path for R-class instructions and addressing the imbalance in the frequency of occurrence of certain types of instructions in a program.",
+  "sections": [
+    {
+      "title": "Section 1: Single Cycle Design and its Problems",
+      "content": [
+        "Explanation of Single Cycle Design and its limitations in terms of performance and resource utilization.",
+        "Observation of delays in the flow of information along the data path for R-class instructions.",
+        "Discussion on the difficulty in achieving optimal clock period for different types of instructions.",
+        "Explanation of how the CPI of individual instructions can be calculated and how it affects the total time a program takes to execute."
+      ],
+      "topics": ["Single Cycle Design", "Performance Issues", "Resource Utilization", "Delay Analysis"]
+    },
+    {
+      "title": "Section 2: Multi Cycle Design Overview",
+      "content": [
+        "Introduction to Multi Cycle Design as an alternative to Single Cycle Design.",
+        "Explanation of how Multi Cycle Design aims to improve performance and resource utilization.",
+        "Overview of the key components involved in Multi Cycle Design, such as registers, multiplexers, and memory.",
+        "Discussion on how Multi Cycle Design addresses the limitations of Single Cycle Design."
+      ],
+      "topics": ["Multi Cycle Design", "Improved Performance", "Resource Utilization", "Key Components"]
+    },
+    {
+      "title": "Section 3: Delay Analysis in Multi Cycle Design",
+      "content": [
+        "Explanation of how delays are analyzed in Multi Cycle Design, focusing on R-class instructions.",
+        "Discussion on the differences between Single Cycle Design and Multi Cycle Design in terms of delays.",
+        "Explanation of how clock period can be improved in Multi Cycle Design by addressing delays in the flow of information.",
+        "Overview of the techniques used to optimize clock period in Multi Cycle Design."
+      ],
+      "topics": ["Delay Analysis", "R-class Instructions", "Clock Period Optimization", "Techniques"]
+    },
+    {
+      "title": "Section 4: Resource Utilization in Multi Cycle Design",
+      "content": [
+        "Explanation of how resource utilization is improved in Multi Cycle Design by sharing components such as memories and ALUs.",
+        "Discussion on the trade-offs involved in resource sharing, including the overhead of sharing and the potential losses in performance.",
+        "Explanation of how to calculate the optimal balance between time and cost in Multi Cycle Design.",
+        "Overview of the key components involved in resource sharing in Multi Cycle Design."
+      ],
+      "topics": ["Resource Utilization", "Shared Components", "Trade-offs", "Calculation"]
+    },
+    {
+      "title": "Section 5: Control Design in Multi Cycle Design",
+      "content": [
+        "Explanation of the key components involved in control design for Multi Cycle Design, such as registers and multiplexers.",
+        "Discussion on how control design affects the performance and resource utilization of Multi Cycle Design.",
+        "Explanation of how to optimize control design for Multi Cycle Design, including the use of registers and multiplexers.",
+        "Overview of the techniques used to balance time and cost in control design for Multi Cycle Design."
+      ],
+      "topics": ["Control Design", "Registers", "Multiplexers", "Optimization Techniques"]
+    }
+  ],
+  "topics": ["Single Cycle Design", "Multi Cycle Design", "Delay Analysis", "Resource Utilization", "Control Design"],
+  "generalTopics": [
+    {
+      "name": "Computer Architecture",
+      "complexity": 0.61
+    },
+    {
+      "name": "Data Science and Analytics",
+      "complexity": 0.53
+    },
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.49
+    }
+  ]
+}

@@ -1,0 +1,684 @@
+hi welcome to what's next a seminar
+series presented by ibm research in
+which we spend time with our researchers
+learning about the exciting work that
+they do
+i'm shaheen parks an innovation
+strategist and i'm excited to be here
+today with dr micah takeda who will be
+discussing quantum error correction with
+us
+dr takita is a research staff member at
+ibm quantum with expertise in
+experimental quantum computation
+she joined ibm in 2015 from princeton
+university after completing her phd in
+electrical engineering
+dr taquita specializes in the control
+characterization and benchmarking of
+multi-qubit quantum
+systems today michael will discuss her
+work in taking quantum error correction
+from theoretical to practical
+application
+she'll first give us a very quick
+tutorial in what error correction means
+in this context and then talk with us
+about innovations on both the hardware
+and software side that are enabling
+practical experimentation
+she'll then take us through some
+experimental results and show us how
+these relate to ibm's quantum roadmap
+with that i'll hand it over to micah
+thank you shaheen for introduction
+today i will tell you about how to make
+quantum error correction more practical
+so here's an overview of my talk
+first
+why do we need quantum error correction
+quantum systems are inherently noisy and
+we need a way to deal with these noises
+the way classical computers also use
+some type of error correction i'll
+discuss some similarities and
+differences when working with quantum
+systems
+i will then introduce you to a popular
+quantum era correction code a surface
+code that is ideal for near-term to
+realize with current hardware technology
+and tell you more on the innovations ibm
+has made in co-designing new heavy
+hexagon code that is more practical when
+building the hardware
+the main focus of this talk will be on
+the progress we have made in
+superconducting qubits at ibm and recent
+demonstration of the decos 2 error
+detection code that we have done using
+one of ibm's 27 qubit falcon processor
+finally to wrap up the talk i'd like to
+discuss how ibm quantum hardware roadmap
+aligns with future work on quantum air
+correction faulty quantum systems
+require some type of error correction
+but first what do i mean by faulty
+quantum systems are inherently noisy and
+easily influenced by environmental
+fluctuation
+some typical errors in quantum systems
+are qubit decoherence
+which is a loss of quantum information
+so here is a blocked sphere representing
+single qubit with zero state on the
+north pole and one in the south pole
+t1 relaxation time is decay from one to
+zero state as you see here in a big blue
+arrow
+qubits only have zero and one state but
+can also be in a superposition state
+where phase of the state also carry
+information
+t5 dephasing time is randomization of
+the phase phi as you see here in green
+arrow and these two t1 and t5
+contributes to t2 coherence times
+both t1 relaxation time and t2 coherence
+times have improved over the years
+as you may have heard how recently we
+have reached average of about 300
+microsecond t1 and t2 on a large 27
+cubic falcon processor
+nonetheless this is still a large source
+of air in our systems
+other errors in the systems are gate
+errors that could come from poor
+calibration state preparation and
+measurement errors crosstalk errors and
+leakage errors that takes your qubit out
+of the computational basis to name a few
+so quantum systems are faulty and to
+build a universal quantum computer to
+solve large and complex problems
+we will need some type of quantum error
+question
+so let's start from reviewing how
+classical error correction works
+in a classical system each physical bit
+0n1 can be encoded into many zeros and
+ones in this example seven copies
+when there is some noise some of the
+bits can flip from zero to one and one
+to zero in this example the third and
+the six bits in red have flipped but as
+long as less than half of the copies
+experience a bit flip you can look at
+the bit string and simply do a majority
+vote to decode back into the correct
+state
+here the code distance d
+roughly indicates the amount of noise
+tolerance and as you see here you can
+expect a lower logical error pl as you
+increase the distance d with some error
+rate p which is between 0 to 1.
+so that was classical error correction
+now how about quantum error correction
+can we do the same
+similar to classical error correction
+quantum error correction relies on
+encoding dealing with some noise and
+decoding
+but key differences are that we can't
+copy an unknown quantum state as proved
+in no cloning theorem
+but as you see in this example rather
+than making a copy of psi you can encode
+psi logical into a state like 0 0 0 plus
+1 1 1 and use that as your logical qubit
+another difference is that
+when you measure a qubit it can destroy
+entanglement
+and end the computation
+so to get around this we can use another
+ancillar qubit that we use to measure a
+parity of data qubits
+so let's talk a bit more about parity
+measurement next
+the circuit shown here in the left
+of the slide is a sample circuit that
+will provide a parity of the two qubits
+used
+using a third on silicubit
+and the left plot is to illustrate what
+parity measurements are and the right
+table
+is an example where we can use the
+parity to detect errors
+parity of the bit string could be even
+or odd and we can find this by measuring
+the z z operator
+zc parity measurements can have either
+plus one or minus one eigenvalues which
+corresponds to even or odd parity
+in this circuit measuring zero on down
+silicubit corresponds to plus one
+eigenvalue or even state and measuring
+one corresponds to minus one eigenvalue
+or odd state
+if you follow the colors here the zero
+the white and the green input showed
+zero zero and one one which have even
+parities when you run this circuit and
+probe using the third on silicubit what
+you measure is zero that tells you that
+it has an even parity
+the red and the blue
+one zero and zero one states have odd
+parities which are confirmed when
+running through this circuit that leads
+to ancillar qubit being one which
+corresponds to negative eigenvalue
+using the circuit by projecting parity
+onto the third on silicubit it allows
+you to measure the parity of the input
+qubits without destroying the
+entanglement if present
+so this looks like a good way to detect
+bit flip errors
+qubits unlike classical bits can have
+face flip errors along with big flip
+errors so let's consider an example
+where you can detect both types of
+errors
+to the right is a toy model where a bell
+state 0 0 plus 1 1 is our target state
+by measuring both zz and xx operators
+you can measure both types of errors
+and you can simultaneously measure these
+two operators since they commute
+the target state without any error will
+have plus one eigenvalue for both z z
+and xx operators
+but if you have a bit flip error an x
+error
+it will have minus one eigenvalue for zz
+operator and plus one for xx operator
+now with the phase flip error z air it
+will be plus one for z z but minus one
+for x x
+and finally if you have both bit and
+face flip air a y error
+that will lead to -1 eigenvalues for
+both zz and xx operators
+my colleagues at ibm did an experimental
+demonstration on this parity checks back
+in 2015 using four superconducting
+qubits
+and note that this example stabilizes a
+single state but does not protect a code
+space to protect the logical qubit
+so let's look at an example of how we
+can encode a logical qubit and protect
+it
+surface code is a very popular code
+where you only need to have nearest
+neighboring coupling with relatively
+high threshold
+so i will get back to the concept of
+threshold in a bit but let's look at the
+layout first
+this is a picture of decals 5 surface
+code which can detect and correct any
+two errors
+and black qubits are called the data
+qubits
+and blue squares denote that the four
+black data qubits on its corners are
+checked for their bit parity and the
+pink squares check for their phase
+parity
+you detect errors by running these
+parity checks both bit and phase
+parities over and over and based on the
+outcome of the parity measurement we can
+keep track of what errors happen on
+which qubit
+so i won't go into details on how
+logical gates are implemented on this
+code but we'll give you an example using
+a smaller distance to code later on
+so i mentioned
+how one of the appeals of working with
+surface code is that it has a relatively
+high threshold
+so what does that mean
+here i have a simulation plot of logical
+air at different distances
+while you sweep the air of a physical
+qubits you use to encode a logical qubit
+so let's focus on the two curves the
+black where it has smallest number of
+qubits with smallest distance three and
+the magenta curve with more qubits with
+distance 13.
+so when the physical air is high
+above the threshold where it's shown in
+purple line larger than the larger the
+distance with more qubits result in
+higher logical air
+but below this purple line
+at the low physical air as you increase
+the distance you can get lower and lower
+logical air
+so you see the benefit in using more
+qubits to encode a logical qubit if you
+have low enough physical errors
+the surface code is an attractive choice
+especially for the superconducting
+cubist community due to these properties
+which is the reason ibm had followed the
+path in building this lattice in the
+past although what we had found was that
+the surface code requiring four nearest
+neighbors to run the parity checks are
+difficult to make
+so the main difficulties come from one
+frequency crowding that leads to
+collisions that make it harder or even
+impossible to tune up gates
+and two crosstalk because there are so
+many qubits coupled to each one
+so ibm has been developing larger and
+larger superconducting qubit system in
+the recent years but we have modified
+the connectivity so that it is in a
+heavy hexagon lattice
+and in this lattice there are at most
+three nearest neighbors on each cubits
+and a lot of them the black and the
+orange qubits in this picture only have
+two nearest neighbors
+this change in qubit layout increases
+the yield of fabricating a
+collision-free device
+so
+now we don't have the nice square
+lattice that you can map surface code to
+but the theorists from ibm came up with
+the new hybrid code called the heavy
+hexagon code that you can encode logical
+qubits similarly to how it was done in
+surface code
+and the threshold for one type of error
+is around point four five percent which
+is not much lower than the surface code
+so now that you have a bit of background
+in quantum error correcting code i'm
+going to start describing the details of
+experimental demonstrations that is now
+possible because of improvements in
+coherence lower gate errors frequency
+collision reduction due to the lattice
+design and most importantly improvement
+in measurement
+this example code is called the 4-1-2
+error detection code where you encode
+one logical qubits into four physical
+qubits which is a distance to code
+since the arbitrary error you can
+correct is d minus one over two which is
+half this is not an error correcting
+code but an error detecting code so in
+this code we have four data qubits and
+three ancilla qubits
+similar color scheme as before pink
+square denotes that the four orange data
+qubits in its corner are checked for
+their first parties using the pink on
+silicubits and these two blue qubits are
+also used as flat qubits for phase
+parity checks
+blue rectangles check for the bit parity
+using the blue qubits again this time as
+z parity and silicubits
+this code can be mapped onto a section
+of ibm's 27 qubit falcon processor
+and the parity checks or the stabilizers
+that we will measure are weight four
+extracts and two weight two z-checks
+logical gates and states are defined
+here
+and you can apply these logical gates to
+the state
+to the right
+and in the surface code example i
+mentioned how we repeat the parity
+checks over and over to keep detecting
+errors to do this we need to keep
+measuring and reusing the ancilla qubits
+as you run more and more parity checks
+suncilla qubits are initialized each
+time after the measurements and this is
+done by applying a conditional reset
+using fpga to determine the state of the
+qubit and apply a bit flip depending on
+the outcome of the measurement
+this is a very difficult task when
+trying to run very fast in similar times
+as what your gates are running
+the ibm team has designed a quantum
+device that allows us to measure and
+reset with high fidelity in less than
+800 nanoseconds using state-of-the-art
+control electronics
+so how about other errors
+this device has sub 1 percent error for
+both two qubit and measurement reset
+errors
+in combining all the gates measurement
+and reset times necessary to run these
+parity checks the time it takes to run
+one z check is around 1.7 microsecond
+and extracts takes about 2.9
+microseconds
+in this slide you'll see an air plot
+against time or rounds
+and rounds are defined in the circuit
+drawn in the right
+where one pink region and one blue
+corresponds to one round of error
+detection
+so earlier in the talk i discussed
+several errors that can be present on a
+quantum system here to compare how well
+we can preserve our encoded state let's
+first consider air that arises from t1
+relaxation time
+a qubit when prepared in one state
+decays to zero state with average
+lifetime t1
+and seven qubits we use for this
+experiment has t1 times ranging from 96
+to 193 microseconds which is shown in
+yellow lesion region in the plot
+and longer you try keeping the qubit in
+one state it is more likely for the
+qubit to experience the bit flip error
+now the distance two four one two code
+encodes one logical qubits into four
+physical qubits and as you see in the
+circuit here
+the first part is how we encode the
+qubit
+and pink part of the circuit is how you
+detect phase errors and finally blue
+checks for bit flip errors
+after initializing the state you repeat
+this pink and blue block n times that's
+the number of round you see in the x
+axis to the left
+and finally measuring the data qubits to
+set to see if the state of your
+measurement
+at the end is the same logical state as
+what you have prepared
+so in this circuit there are two types
+of air sensitive events one
+when there is an error on flat qubits
+and second when the two subsequent
+measurements of the same stabilizer are
+different
+and we post select if there's any in any
+air event
+here in blue i am plotting
+error after preparing a logical minus
+state and running the error detection
+circuit n times
+as you see
+encoding logical qubit air is much lower
+than the air from physical qubit t1
+and when you zoom in and fit to a model
+we can obtain lifetime tau which is
+around 980 rounds at 986 rounds
+and this corresponds to about 4.5
+milliseconds when converting to unit of
+time much much longer than physical t1
+times
+finally what we need to note is that
+since this is an error detection code we
+are throwing out data when we detect an
+error as you see in this acceptance
+probability plot in red
+as you run more and more rounds there
+are less and less accepted results
+throwing out more and more data
+in our recent paper calibrated decoders
+for experimental quantum error
+correction which has been accepted to
+prl we evaluate a new decoding technique
+and consider partial post selection that
+will allow us to keep more data than
+doing full post selection as shown in
+the example here
+but if you really want to have a
+scalable error correction code you need
+at least distance 3 total of 23 qubits
+in a heavy hexagon lattice to correct an
+arbitrary error
+and that is the next experimental
+demonstration we did which can also be
+implemented on a falcon processor in our
+new paper matching and maximum
+likelihood decoding of a multi-round
+subsystem quantum error correction
+experiment
+so here's a summary
+of what we talked about today i just
+showed you d equals 2 quantum error
+detection demonstration on ibm falcon
+processor where we saw a benefit of
+logical encoding
+using the same device we can map a d
+equals 3 error correction code which i
+didn't discuss today but we have
+demonstrated in our new paper
+i hope you have a better idea of why we
+are continuing to build larger devices
+in a heavy hexagon lattice which
+provides more practical layout with
+higher yield of collision-free device
+and jumping to the very bottom of the
+slide you can see ibm's current progress
+on the hardware roadmap we are on track
+to our target systems
+and note that as the number of qubits
+increased in each generation you can map
+a larger distance code
+so as we increase the number of qubits
+we need to work on lowering physical
+error rates bringing them to well below
+the threshold so as we encode a logical
+qubit into a larger number of qubits we
+can achieve negligible logical air rates
+that we can use to solving more complex
+problems
+thank you for your attention
+micah thank you i have questions for you
+that run the gamut from very detailed to
+big picture so
+get ready
+to start out with when you were talking
+about the change in hardware structure
+you mentioned that the newer structure
+results in fewer collisions could you
+talk with us about frequency collisions
+and what that means yeah
+so at ibm we've been working with fixed
+frequency transport qubits so that means
+that we have a fixed frequency qubits
+that we don't modify the frequencies of
+the qubits and we always have an always
+on coupling between the neighboring
+qubits so say if the two qubits are
+coupled when the both qubits have the
+same frequency
+you know that could be a problem so say
+in controlling one of them you know it
+could actually couple to the second
+qubit and also in transmog qubits
+there's not only this zero one state
+that we use for qubit state but there
+are also higher transition that you have
+to worry about so those are there are a
+lot of not just a zero one frequency but
+there are a lot of other frequency
+um to the specific qubit that you want
+to avoid having coupled to so by
+changing this the lattice you know from
+the square lattice to heavy hexagon
+lattice each qubit is coupled to much to
+less qubits so by having less qubits
+neighboring them
+you have less uh chance of having a
+collision so that actually leads to
+having a better yield and fabricating a
+good collision-free device
+so it's not that
+qubits are colliding less frequently
+rather that the frequency
+collisions are happening less often
+right so it's from the beginning
+once you make a device the cubic
+frequency that we don't change it so
+it's a defined um
+parameter so you know once you make the
+device if there's a collision you can't
+really use that so then you have to try
+making a new device with different
+frequencies and you want to
+make it so that there are no collisions
+got it thank you for the clarification
+you also mentioned that the newer falcon
+devices have achieved higher coherences
+what relationship does that have to the
+error correction demos that you're
+working on yeah it's a great question so
+with higher coherences you know it also
+relates to lowering um a lot of
+physical qubit error rates so i
+mentioned about how with the
+quantum era correction demonstration we
+want to have lower and lower physical
+errors so by having a long coherence you
+could achieve lower air rates so if you
+you know and also there are times that
+the qubits are just going to be idling
+and just by having that longer coherence
+you know you don't have to have the
+gates as fast as you can you know just
+you know it's the same if you have the
+gates with the same length if you have a
+twice as long coherence you know the
+errors that's going to accumulate during
+that same period of time is going to be
+less so that is going to directly
+translate into how the qubit and logical
+cubic performance will be so the
+coherence is another really important
+factor yes got it
+so
+when we think about
+what's in the wings what are the next
+steps towards improving logical qubit
+performance
+yeah so you know again the logical the
+physical area that has to go down we
+also want to improve the measurement
+capabilities right now the measurements
+are pretty long
+um and also in our systems and
+superconducting qubits as i mentioned
+about higher higher states that's not
+just a zero one state in um just one
+qubits
+but you do have some leaked states that
+could that could be there so we we want
+those errors to go away so we need to
+reduce a lot of errors not just gate
+errors but also measurement errors and
+those leakage errors but also you know
+as you grow to larger lattice you know
+you could try to implement these these
+new logical
+logical qubits but also we do want to
+think
+not just this you know
+just in large just making
+larger and larger devices but we also
+want to come up with a way to have a
+more efficient error correction so in
+the theory aside there's a lot of
+progress that's been made that not just
+in the planar code so we also want to
+start considering how this could be done
+in a hardware
+got it so let's jump it up it sounds
+like error correction is something that
+we all take for granted in classical
+computing but it's a reality and an
+important problem to be solved would you
+say that quantum error correction is
+critical to the future of quantum
+computing yeah absolutely so
+quantum air correction by having that
+ability to correct for some errors
+you know qubits are
+quantum systems are always going to be
+noisy
+so we need some way to correct for those
+errors especially if you want something
+accurate also if you want in theory if
+there are if you have a full-time and
+quantum computer say then that
+definitely could give you an advantage
+say an exponential advantage um that
+doesn't necessarily mean that you know
+without error correction you can't do
+anything right but you know with with
+with the proof that we have now within
+theory you do need error correction for
+these really complex problems but even
+without there are a lot of things that
+you might be able to try in the in the
+near term where you know we now have a
+device that is
+over 100 cubits 127 cubic eagle device
+was just deployed last year and it's
+very exciting it's it's something that
+uh you know we can't simulate anymore in
+the you know if we can't simulate
+efficiently in a classical computer so
+you know with with that device with you
+know if you if we could have a slightly
+lower errors
+and then maybe apply some mitigation
+method even without quantum error
+correction we might be able to see some
+advantage and that's a very it's a very
+exciting time it sounds like and it
+sounds like error correction is a an
+important piece in the puzzle yes
+fantastic
+well micah this has been extremely
+informative and so interesting to learn
+about thank you so much for taking the
+time to share your work with us today
+and i want to go ahead and say thank you
+to our audience as well
+we'll be back next month with an ai
+themed session on using grammar rules
+and graphs for molecular generation so
+stay tuned see you soon
+you

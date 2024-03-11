@@ -1,0 +1,103 @@
+let's talk about how to choose a
+database in a system design interview
+in these interviews you will often have
+to choose what database to use and these
+databases are split into SQL and nosql
+types and they each have their own
+strengths and weaknesses and should be
+chosen appropriately based on the use
+case
+first let's define both SQL and nosql
+databases SQL stands for structured
+query language SQL databases are table
+based while nosql are document key value
+graph or wide column stores SQL
+databases are vertically scalable while
+nosql databases are horizontally
+scalable let's start with the strengths
+of SQL databases first SQL databases are
+relational databases which means that
+they allow easy querying on
+relationships between data among
+multiple tables table relationships are
+really important for effectively
+organizing and structuring a lot of
+different data second the data is well
+structured and the room for potential
+error is therefore reduced this is
+because SQL schemas require the data
+model and format of the data to be known
+before storing anything third SQL
+databases are acid compliant this means
+that transactions are Atomic consistent
+isolated and durable
+SQL transactions are groups of
+statements that are executed atomically
+this means that they are either all
+executed or not executed at all if any
+statement in the group fails with all
+these strengths SQL sounds great so what
+are its weaknesses
+well first structured data might mean
+fewer errors but it also means that
+columns and tables have to be created
+ahead of time so SQL databases take more
+time to set up compared to nosql
+databases they're also not effective for
+storing and querying unstructured data
+where the format is unknown
+second SQL databases are difficult to
+scale horizontally because of their
+relational nature for read heavy systems
+it's straightforward to provision
+multiple read-only replicas but for
+write heavy systems usually the only
+option is to vertically scale the
+database up which is generally more
+expensive than provisioning additional
+servers now let's talk about the
+benefits of nosql databases first nosql
+databases are more flexible and simpler
+to set up because they do not support
+table relationships and data is usually
+stored in documents or as key value
+pairs they're a better choice for
+storing unstructured data second because
+they're better at handling unstructured
+data they can also Shard this data
+across different data stores allowing
+for distributed databases this makes
+horizontal scaling much easier and very
+large amounts of data can be stored
+without having to purchase a single
+expensive server but nosql databases
+also have their weaknesses first nosql
+databases are typically designed for
+distributed use cases and write heavy
+systems can be supported by having
+multiple right shards for the same data
+partition this is called peer-to-peer
+replication however the trade-off is a
+loss of strong consistency after a right
+to a shard in a distributed nosql
+cluster there's a small delay before
+that update can be propagated to other
+replicas during this time reading from a
+replica can result in accessing stale
+data this weakness of the data
+eventually being up to date is called
+eventual consistency eventual
+consistency isn't exactly a fault of
+just nosql databases but of distributed
+databases in general A Single Shard
+nosql database can be strongly
+consistent but to fully take advantage
+of the scalability benefits of nosql the
+database should really be set up as a
+distributed cluster and that's it for
+today's video on databases to learn more
+check out the exponent article Linked In
+the description below good luck with
+your interviews and thanks for watching
+foreign
+foreign foreign foreign

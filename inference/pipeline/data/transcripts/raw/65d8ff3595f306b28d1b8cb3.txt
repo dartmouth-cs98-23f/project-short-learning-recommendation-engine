@@ -1,0 +1,212 @@
+An emerging technology in
+computing is quantum computing.
+This is computing based
+on quantum physics
+rather than being based
+on classical physics that
+uses 1s and 0s.
+This is not an upgrade to your
+existing computing system,
+but a type of computing that's
+used alongside of our existing
+computers.
+This is an entirely new way
+of performing calculations.
+With our traditional
+computers, we
+use classical mechanics,
+which uses bits.
+Those bits are 0s
+and 1s, and we can
+apply algorithms
+towards those 1s and 0s
+to come up with a solution
+to a particular problem.
+With quantum computing,
+we no longer have bits.
+We have something called
+quantum bits, or qubits.
+These bits are not 1s,
+and they're not 0s,
+but instead, they
+exist somewhere
+in the middle between 1 and 0.
+They are effectively a 0
+and a 1 at the same time,
+and therein lies some of
+the complexities surrounding
+quantum mechanics.
+Let's compare classical
+computing to quantum computing.
+In our classical
+computing, we might
+want to perform a binary
+calculation with four
+separate bits, and we can take
+any combination of those four
+bits to come up with a value.
+For example, we can combine all
+of the different permutations
+of those four bits,
+and we can look
+at every combination
+of those four bits
+to come up with 16
+separate unique values.
+With quantum computing,
+we can represent all 16
+of those individual classic
+bits as four individual qubits
+because all of those are
+both 0 and 1 simultaneously.
+So if it only takes
+four individual qubits
+to represent 16
+values, we can start
+to scale this up very quickly.
+For example, if we had
+eight different qubits,
+that would represent 256 values.
+If we had 16 qubits, that
+represents 65,536 values.
+And if we look at
+32 qubits, we now
+have over 4 billion values that
+are represented by a relatively
+small number of qubits.
+It's the scalability
+that provides
+some of the biggest potential
+advantages for quantum
+computing.
+This could, for
+example, allow us
+to search through
+enormous amounts of data
+in a very short period of time.
+This would change
+medical technology,
+it might allow us to
+change the way we're
+able to predict
+the weather, this
+could have an impact in
+astrophysics, and so much more.
+One place that
+quantum computing has
+a direct effect on
+technology with this scaling
+is cryptography.
+Today, we use very
+large prime numbers
+to be able to create the
+complexity required to keep
+all of our data encrypted.
+But what if you had a
+quantum computer that
+was able to perform these very
+large calculations in a very
+short period of time?
+This would
+effectively render all
+of our existing
+cryptography useless
+because our quantum computers
+would be able to brute force
+all of our encrypted
+data very, very quickly.
+A description of how this could
+be done with quantum computing
+was created by Peter Shor.
+He created what's called
+Shor's algorithm in 1994,
+where he looked at how we
+were using prime numbers
+and came up with a way
+that you could greatly
+shorten the process of
+being able to factor
+this information.
+This could take processes
+that would effectively
+take longer than the
+lifetime of the universe
+and make them
+something very feasible
+to use with quantum computing.
+Fortunately, researchers are
+already looking at new ways
+to provide cryptography in this
+new world of quantum computing.
+One of the ways to
+do this is with NTRU.
+This is a new way of
+performing encryption
+with quantum computing that
+instead of using very large
+prime numbers uses a
+closest vector problem.
+This is a problem that is still
+difficult for quantum computing
+to calculate and would
+be a very viable way
+to provide encryption.
+Researchers are also
+putting together
+other ideas that will help
+us maintain the privacy
+and encryption
+technologies we need, even
+in this newer generation
+of quantum computing.
+One interesting characteristic
+of quantum computing
+is that if you examine
+the quantum bits,
+you will effectively be
+changing those quantum bits.
+This means that we can send
+information over a quantum
+network, and on the
+other side, we're
+able to tell if anyone was
+monitoring that conversation.
+This is especially
+useful if you want
+to distribute encryption keys.
+You might want to use Quantum
+Key Distribution, or QKD.
+This allows us to send
+our encryption keys
+across the network
+to the other side
+without the worry
+of someone being
+able to intercept that key
+somewhere in the middle.
+We would send that
+random string of qubits,
+which was effectively
+our encryption key,
+across that quantum
+network channel.
+Once the key is received, both
+sides can verify that key,
+and if it's
+identical, then no one
+viewed that key during
+the transmission process.
+However, if someone was to
+monitor that conversation,
+it would change
+the keys that were
+received on the other
+side, and those two keys
+would not verify.
+This greatly changes the
+processes and procedures
+we use for encryption,
+and we'll want
+to keep a close eye
+on quantum computing
+as this technology matures.

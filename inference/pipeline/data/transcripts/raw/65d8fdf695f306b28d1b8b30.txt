@@ -1,0 +1,469 @@
+this is a web app this is a web app this
+thing here also a web app dude why am i
+doing this again i built the same app 10
+times with 10 different frameworks using
+10 different programming languages it
+was a horrible experience but i learned
+a lot and i figured out which full stack
+framework is the greatest of all time
+which will be revealed in dramatic
+fashion at the end of this video to
+maximize the watch time on this journey
+you will meet 10 different server side
+frameworks like rails django laravel
+spring.net next js phoenix rocket gin
+vapor and ktor i realize that's 11 but
+you don't need to be good at math to be
+a programmer this video was insanely
+difficult because each one of these
+frameworks uses a different programming
+language for each one of them we will
+look at the overall developer experience
+including things like setup routing
+database integration and the overall
+architecture now before we get started
+here's a warning the framework you
+choose by the end of this video is going
+to dictate your life for the next 10
+years as you grow your startup into a
+deca unicorn if your startup fails it's
+100 because you didn't choose the right
+framework reminds me of when my dad made
+me choose which of my pet calves to
+slaughter with my own hands for my sixth
+birthday now before we look at the code
+let's first answer the question of what
+does a web framework actually do there
+are three main things you should know
+first they provide an abstraction over
+your relational database they typically
+have a built-in object relational mapper
+that can migrate code from your
+preferred programming language into sql
+code that can be used by the database
+second they provide routing that can map
+a url in the browser to code that you
+want to run on the server and third they
+provide a way to dynamically insert data
+from your database directly into html
+for the ui together these three elements
+make up the model view controller
+architecture or mvc which is by far the
+most common approach when building a
+full stack web app the first framework
+we'll look at is ruby on rails made
+famous for building some of the biggest
+companies in the world like shopify
+airbnb and github rails was
+revolutionary when it came out because
+it dramatically simplified web
+development compared to other approaches
+of the day it's still very popular in
+2022 and is kind of a rebel in the web
+development space it has adjacent
+libraries like hotwire stimulus and
+turbo that take an html centric approach
+to building web apps which goes against
+the approach you might see in front-end
+frameworks like react angular and vue to
+get started with rails you'll first need
+to have ruby installed then install the
+rails gem and run rails new i'm
+developing this app on a fresh install
+of wm linux and i did run into some
+issues with the initial setup these were
+errors that could easily be solved with
+a google search but the initial setup
+was a little more error prone than other
+frameworks once you get the project set
+up though the rail cli is extremely
+powerful not only does it do things like
+serve the application with rail server
+but it can also generate a ton of code
+for you automatically with commands like
+scaffold now if we look in the file
+explorer you'll notice a bunch of
+different folders here and that's
+because rails is a battery's included
+framework it handles your relational
+database testing logging and a bunch of
+other stuff it might look pretty
+overwhelming at first your main
+application code is contained in the app
+directory where you'll find folders for
+models views and controllers the first
+thing we'll look at is routing and the
+routes.rb file from this file we can map
+urls to actions in a controller
+resources create all the routes we would
+need for a basic red feature
+automatically it's kind of magical but
+what it's actually doing is setting up a
+mapping between urls in the browser and
+controller actions now when the user
+visits a url it will trigger one of
+these actions on the server that action
+might go and retrieve some data from
+your database the logic for that data is
+contained in the model but before we can
+use the data in the database we need to
+run a migration which will take the code
+in the model and sync it up with the
+actual database and all the data is
+managed with an object relational mapper
+called activerecord and then finally you
+have a view which is an
+html.erp file erb stands for embedded
+ruby and it allows you to render your
+data dynamically inside an html file
+overall this provides a very nice
+separation of concerns and rails is very
+opinionated which means you can achieve
+a lot of functionality with very little
+code the scaffold not only retrieves
+items from the database but it also
+provides ui to create and update that
+data as well but too much magic can also
+be a bad thing depending on who you ask
+and ruby is not the most popular
+language in the world but python is what
+if there is a way we could build web
+apps like this with python and that's
+where django comes in it's also
+extremely popular and has been used to
+build massive sites like spotify and
+bitbucket when you generate a new django
+app you'll notice the file structure is
+far less overwhelming than rails but at
+the same time it's still very much a
+battery's included framework in addition
+your code tends to be a lot more
+explicit for example we have this manage
+py file that contains the code for the
+actual command line interface to
+generate things in the project we could
+use it to serve the app locally or
+generate an app to represent a feature
+of the website it also follows the mvc
+architecture with routes being defined
+in the urls.py file and controllers are
+represented as python functions in the
+views.py file a route points to one of
+these functions which itself might want
+to access data from one of our models a
+model is a python class that represents
+the structure of data in an sql database
+aka the object relational mapper and
+finally we have our html templates that
+allow you to embed python directly into
+the code that's pretty cool but one
+extra superpower of django is that it
+has an admin feature built into it
+directly as you define models in your
+application you can register them with
+the admin app to easily manage all of
+your data in the browser this is really
+useful and not something that you'd want
+to roll out on your own python's great
+null but the original server-side
+language of the web was php there have
+been countless php frameworks over the
+years and high-level tools like
+wordpress but the most popular one today
+is laravel the php framework for web
+artisans to use it you'll first want to
+install php and a tool called composer
+when i generated my initial app it took
+a long time and downloaded a lot of
+packages and as you can see the initial
+project has a lot of batteries included
+even more so than rails if we look at
+routes you can see it not only handles
+web routes but also api routes and
+channels for real-time communication
+with websockets now if we go into the
+app code you'll notice it's already been
+configured with things like user
+authentication via providers a provider
+is like a shared service that you can
+use anywhere in the application in the
+http directory we will find our
+controllers and just like rails we have
+a class that contains a bunch of
+different methods that can access data
+and render a specific template now our
+database models use a tool called
+eloquent orm which is based on the same
+active record pattern as rails now when
+it comes to views php is a language
+that's designed to work with html out of
+the box larvale makes it even easier by
+building on top of php with blade
+templates another cool point about the
+ecosystem is that they put a lot of
+thought into how to integrate front end
+frameworks like react and vue it has an
+adjacent tool called inertia that can
+bridge the gap between front end and
+back end frameworks the next framework
+we'll look at is next.js which allows us
+to build a full stack application
+entirely with javascript now in the
+javascript world there's a million
+different options we could have chosen
+here like nuxjs angular universal
+sveltkit sjs adonis and many others
+maybe i'll make a top 10 video just for
+those to get started with next we run
+npx create next app and that will
+generate a starter project now the one
+thing you'll notice about next right off
+the bat is that it doesn't provide any
+integration for your database there are
+a million different solutions to choose
+from but one of my personal favorites is
+prisma so i'm going to add prisma to
+this project the fact that next.js
+doesn't have a database out of the box
+is a good thing in my opinion the
+javascript ecosystem is just way too
+crazy it's nice to start with a very
+good minimal framework and then add
+whatever database integration you want
+on top of it now that we have a database
+integrated let's take a look at the
+pages directory one thing that's
+different about next is that routing is
+handled with the file system each file
+defined in the pages directory defines a
+different url in the browser dynamic
+routes can be created by wrapping the
+file name in brackets now each one of
+these files exports a react component to
+define the ui or view this is actually
+really convenient because many other
+frameworks will ultimately want to have
+some kind of front-end framework having
+react fundamentally integrated into the
+framework can streamline your
+productivity big time now things get
+more complex when you think about data
+fetching normally in a react app you're
+thinking about client-side code but in
+next.js you can also run server-side
+code with functions like get server-side
+props this function will run on the
+server with node.js and as you can see
+inside of it we're using prisma to fetch
+some items from the database these items
+can be delivered as props to the react
+component where they're rendered in the
+ui both your server side and client-side
+code is tightly coupled together which
+may feel like a bad separation of
+concerns but generally speaking it
+actually works very well overall next.js
+feels very minimal compared to other
+frameworks in this list but it does a
+ton of stuff behind the scenes to
+simplify the annoying parts of web
+development now speaking of simple we're
+going to do the polar opposite and see
+what java has to offer even though java
+is a boilerplate driven language for
+writing instant legacy code the spring
+framework actually makes it very
+enjoyable to work with the first thing
+you'll notice when building with it is
+that it's kind of like a create your own
+adventure story it has a generator that
+allows you to start with a framework and
+you can even use kotlin or groovy if
+you'd like then you choose all the
+different dependencies that you want to
+add to this project now even though java
+does have a lot of boilerplate the code
+pretty much writes itself and in my
+opinion it feels a lot more robust
+compared to the dynamic languages that
+we've looked at so far you'll find the
+source code way down in this deeply
+nested folder and it also follows the
+mvc pattern the controller is a class
+and a route is defined using a decorator
+on each one of its methods spring relies
+on a lot of meta programming to keep
+your code nice and simple it feels very
+much like angular and the javascript
+world the database models are based on
+code with the java persistence api then
+we can use that data in templates using
+time leaf where you add these attributes
+to your html to define where your data
+should go to be honest though i didn't
+have a very good time using time leaf
+and that brings me to java's arch
+nemesis c-sharp and the.net framework or
+asp.net it's an open source project
+maintained by microsoft and obviously
+feels very microsofty but is extremely
+popular and reliable it's evolved very
+nicely over the years and has modern
+supporting libraries like blazer that
+allow you to build client-side apps
+using webassembly and c-sharp to use it
+install the.net sdk then generate a new
+mvc application i really like the
+initial project structure everything is
+clearly named and it's not too
+overwhelming and you get all the awesome
+tooling and static typing like you do in
+java when it comes to routing the urls
+are inferred from the class names and
+your controllers here we have an animals
+controller which gives us the animal's
+url then we have methods in that class
+that then represent the next url segment
+the method can take an argument to
+create a dynamic url to represent our
+data we have a model that is managed by
+an orm called the entity core framework
+and then finally we have our views which
+are written in cshtml at the top of one
+of these files you'll notice a model
+where we can access our data and we can
+also declare additional data here in c
+sharp like a title it's more verbose
+than other templating languages but you
+get full intellisense inside of it which
+is really helpful overall net is really
+impressive the only real drawback is
+that you have to sell your soul to the
+big giant tech corporation if you want
+to take the righteous path another
+awesome framework to check out is
+phoenix which is based on the elixir
+programming language it's a functional
+language that feels much different than
+most of the object-oriented languages
+that we've looked at throughout the
+video don't worry a 100 second video is
+coming soon install it then generate a
+new project like ruby on rails it has a
+very powerful cli that can automatically
+scaffold an entire crud application for
+you routing is also very similar to
+rails where we have resources that map
+all the necessary cred urls to the
+controller in the controller we have
+functions namespaced under a module that
+access data and render the appropriate
+template the model uses an object
+relational mapper called ecto and
+templates use embedded elixir which
+again feels very similar to rails
+however phoenix has a huge advantage in
+performance because elixir is a compiled
+language as an added bonus every app has
+a built-in live dashboard to closely
+monitor performance and that brings us
+to another high performance framework
+worth checking out jin which is powered
+by the go language it easily wins the
+best logo award to get started we're not
+going to use a fancy cli but instead
+create a go project from scratch jin is
+a minimal http framework and is not
+concerned with the model view controller
+architecture we'll have to figure that
+out on our own it also doesn't contain
+an orm for the database so for that
+we'll bring in another package called
+gorm the nice thing about this approach
+is that we don't really need to follow
+the nbc conventions of a framework which
+is probably overkill for many
+applications instead we can write some
+very focused functions and do things in
+a way that makes sense for our exact
+business needs like in this app we just
+have two routes that need to retrieve
+some data from a database which itself
+is modeled with a struct using the orm
+then go has its own built-in templating
+language so we can simply create a
+couple of template files here in the
+project and interpolate the values that
+we retrieve from the database the end
+result is a much smaller code base with
+a lot more low-level control however as
+this application grows bigger it's going
+to get harder and harder so you really
+kind of have to know what you're doing
+and that brings us to our next language
+rust and the web framework rocket as far
+as i know the rust ecosystem doesn't
+have a full-blown mvc framework like
+rails and to be honest i found it very
+difficult to build a basic application
+my approach was to use rocket for http
+and routing then combine it with diesel
+which is a rust-based orm and then
+finally a templating language to use the
+data in html called ascama i think this
+is a reasonable approach but i didn't
+quite get to a full working demo with
+rust it's a systems language that gives
+you low level control over memory which
+the average web application developer
+doesn't really need i quickly realized
+that it would take more time and
+dedication than i'm willing to give for
+the tail end of a silly youtube video
+however there is one rust-based library
+that i want to bring to your attention
+called you it's a component-based
+framework for building web apps with
+webassembly and it's coming to a
+fireship tutorial near you soon and that
+brings us to the final framework in this
+list vapor which is based on the swift
+programming language this is the only
+app that i built on my mac because i
+found that anything with swift just
+works better on a mac it provides you
+with a project structure that looks like
+this it's well organized with
+controllers models and routes routes
+point to methods in the controller which
+can access data from a model it uses an
+orm called fluent which uses classes
+along with decorators to model your data
+swift is a very well-designed language
+and i found it very enjoyable to work
+with for stuff like this the code is
+concise and readable yet statically
+typed with awesome tooling like you
+would get in java or c-sharp i also like
+how it embraces async of weight when
+fetching data from your models for
+templating it has an engine called leaf
+which also felt very modern and
+practical now that we look at vapor i
+want to also mention ktor which is a
+kotlin-based web application framework
+it's a lot more minimal than something
+like spring but also something worth
+checking out and with that we've looked
+at 10 full stack frameworks now i'm
+ready to show you the best full stack
+framework in the world you're looking at
+your own reflection in the mirror yes it
+was you all along without you the
+framework would be nothing actually no
+no that's that's just dumb ruby on rails
+is by far the best framework nothing
+else even comes close it's like the
+magic jordan of web frameworks thanks
+for watching and i will see you in the
+next one

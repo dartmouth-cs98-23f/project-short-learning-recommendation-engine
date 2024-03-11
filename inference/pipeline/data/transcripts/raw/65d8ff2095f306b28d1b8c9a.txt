@@ -1,0 +1,185 @@
+[Music]
+well congratulations you've almost made
+it
+almost welcome to our
+last lecture lecture eight in which we
+are going to talk about quantum error
+correction how to deal with quantum
+noise how to
+recover quantum states and protect our
+precious quantum computations or quantum
+communication
+it's been long journey we started with
+four introductory lectures where i
+introduced some basic stuff for
+you to understand why quantum
+information processing is
+uh more powerful so we talk about
+quantum interference we talk about
+quantum entanglement
+and then we we we could see how quantum
+interference and quantum entanglement
+play a significant role
+in making quantum communication secure
+or computation more powerful
+but we also observed that the reason
+we do not have for example quantum
+computers yet is because
+quantum systems or quantum interference
+in particular is
+is quite fragile right so you
+expose it to any interaction with the
+environment the environment may learn
+about the state of the system and
+quantum interference is gone
+um so we took some time to describe
+the system environment kind of
+interaction so that
+is the dynamics of open quantum systems
+our quantum computers or quantum
+communication devices are open quantum
+system because
+even though we can control them to some
+extent they're embedded in
+some sort of environment which upon
+which we do not have complete control
+so um it's it's not quite right to
+describe the evolution of
+open quantum system as a as a unitary
+evolution we know that you can take two
+approaches here right so you can
+think about the unit evolution of the
+whole when you include the environment
+that's the so-called stein spring
+representation
+but you can also look at the system
+alone and
+analyze the evolution of of such system
+in the presence of vine
+of the environment but not necessarily
+just including the environment
+in in your equation so that's the
+crowd's representation
+now we have the tools so we can now move
+on
+and discuss how we can
+deal with quantum errors so whenever
+remember we call kraus operators quantum
+errors
+um but um
+the question really is so given a system
+that
+undergoes some sort of
+evolution described by a completely
+positive map
+is it possible to recover
+the original state of the system so i
+would like you to have
+this kind of uh scenario in mind so
+compare
+the two cases the case where we have a
+system let's say it's a cube it is
+you can always choose the simplest
+possible quantum system so we have a
+qubit
+this qubit undergoes the coherence so
+interacts with the environment
+and as a result the state of the qubit
+is modified in
+in some way now is there
+a way to diminish the impact
+of the environment and here we are
+going to borrow ideas from classical
+theory of information so we are going to
+use the concept of error correcting
+codes
+so instead of this kind of scenario we
+are going to
+encode the state of the qubit
+into a number of qubits so we are going
+to bring a few more qubits
+and take our original qubit
+and we are going to perform a unitary
+operation
+maps unknown state of the qubit
+into a set of
+cubits that will form our encoded qubit
+so this mathematically speaking we are
+just going to
+pick up a two-dimensional hilbert space
+um
+and we are going to embed it in a higher
+dimensional hilbert space
+rotate somehow that's isometry right so
+that
+that's going to be the an encoding part
+and then all the qubits go to
+the coherence area so arrows will appear
+and then at this point you may be a
+little bit um
+confused you say okay well now the
+errors will appear on many qubits
+well yes but
+if you just take quantum state of one
+qubit
+and somehow spread this state
+number of qubits then the error on one
+qubit may not perhaps be so significant
+it may be possible to recover it under
+certain conditions and indeed
+we will see that under certain
+conditions
+it is possible to recover to reverse
+this completely positive map so the
+first one
+the errors are induced by the
+environment
+which you cannot control but
+as long as you can find out roughly what
+happened
+then you can then just um apply another
+completely positive map
+in this case we don't have the
+environment but we just bring
+extra even more qubits or some other
+quantum systems auxiliary qubits are a
+system that we call ancilla a kind of a
+helper to
+help us to perform in a controlled way
+another
+completely positive map so that's going
+to be error recovery
+and then once hopefully we managed to
+recover the original state
+of all those qubits then we just simply
+decode the quantum state so we just
+map the state into the
+qubit and hopefully we'll have something
+that is very close to the original
+so i would like you to have this
+scenario
+in mind and of course you know in the
+lecture we will go through
+all the details and i'm going to tell
+you how to encode
+how to um construct the recovery
+procedure
+and how we are going to
+what kind of conditions have to be
+satisfied for this to be possible in the
+first place
+then we'll say a few words about quantum
+computation that
+protects about a way of computing that
+you protect not only quantum state but
+also the whole process of computation so
+you would like to have your
+evolving state modified by your quantum
+logic case protected at
+all time well so this will
+essentially this will actually um
+conclude our basic introduction to
+quantum information processing it should
+give you some sort of
+simple but complete
+picture of how things work

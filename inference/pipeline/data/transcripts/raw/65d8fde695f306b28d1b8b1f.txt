@@ -1,0 +1,203 @@
+without data structures you can't solve
+algorithms and without algorithms you
+can't pass a programming interview now
+the problem is if you open a data
+structures and algorithms text book
+it is really mathy and if you're like me
+and you got a C in eighth grade math
+it's gonna scare you a lot the good news
+is once you understand data structures
+they're not actually that complicated so
+I wanted to explain the five most
+important data structures in this video
+in the way I understand them which means
+as little technical jargon as possible
+and just try to simplify it for you guys
+just starting out let's go
+first off let's talk about what a data
+structure is consider having a single
+data item like the price of a stock now
+that price on its own is not going to
+mean much but if we put it together with
+a bunch of stock prices let's say the
+price is over an entire day well then it
+becomes more meaningful we call date
+items that we grouped together like this
+compound data we have to store this data
+in some kind of a data structure and
+choosing the right one is really
+important no data structure is perfect
+all them are good and bad at different
+things the way we measure how good a
+data structure is doing a specific thing
+like adding a new item retrieving an
+item sorting or searching is called the
+Big O notation this is pretty much a
+measure of how well in operation scales
+so if you have ten items and then you
+add a million more how much longer will
+each operation take okay let's talk
+about the first data structure which is
+the linked list the atomic unit of the
+linked list is something called a node
+which contains a value and a pointer the
+value is something as simple as a number
+like 12 and that pointer will simply
+connect you to the next node in the
+chain
+hence the linked part of linked lists
+the first node in the list is known as
+the head while the last one that doesn't
+have a next pointer is known as the tail
+pros and cons of the linked list it's
+really good at adding new nodes and
+deleting nodes because we can just
+change where the next pointer is
+pointing
+however it's not too good at retrieving
+notes even when we know that index or
+searching because each node is only
+aware of the node next to it data
+structure number two is going to be the
+array you might already be familiar with
+arrays because they're super common in
+all programming languages the array is
+quite literally a continuous block of
+cells in the computer memory by keeping
+track of its memory location let's say
+the location is 1000 it can instantly
+compute the location of any item inside
+of it for example let's say we want to
+get index number 5 we just add 5 to a
+thousand
+get a thousand and 5 then we can pull
+that value directly out as a result of
+this you can probably imagine arrays are
+really good at retrieving items however
+consider this your array keeps growing
+in size
+and you start running into other things
+in memory for this reason adding isn't
+always too efficient because we might
+have to move our array to a new place so
+it fits luckily this happens under the
+hood in high-level languages like
+JavaScript and Python but in lower-level
+languages you have to declare the size
+of your array in advance okay the third
+data structure and this one is super
+important is known as the hash table you
+might be familiar with it because it's
+an object in JavaScript or a dict
+or dictionary in Python I think
+dictionary is a great word because you
+basically give the hash table word or a
+key and it will retrieve the definition
+or the value for you under the hood it
+actually works a lot like an array the
+key actually gets run through a function
+called the hashing function and that
+will spit out a memory location for you
+the way it's different is these memory
+locations don't have to be next to each
+other they can be anywhere so you don't
+have the same problem with the
+increasing size however there is a
+different problem depending on the
+hashing algorithm you use two keys could
+hash to the same memory location this is
+what's known as the collision and there
+are different ways to resolve this but
+again it's all happening under the hood
+needless to say the hash tables really
+good at both retrieving and adding but
+the collisions can be a problem okay
+fourth data structure this is a double
+is the stack and the queue I'm grouping
+them together because they're pretty
+similar and they're both kind of built
+on top of arrays with a few additional
+features the stack is a blast in first
+out data structure think of a stack of
+cafeteria trays the last one you put on
+the top is the first one you have to
+take off when we add an item to the top
+it's called pushing and then we pop off
+the top every language keeps track of
+the functions that have been called with
+something called the call stack stacks
+are also super important for an
+algorithm called depth-first search
+which you're gonna run into a lot the
+queue on the other hand is first in
+first add just like any hue or line
+let's say a line to board a plane at the
+airport adding an item to the end is
+called in queueing and removing it from
+the front is D queuing queues are used
+for a really important algorithm called
+breadth-first search over all stacks and
+queues are really efficient but have
+limited use cases compared to other data
+structures finally we're gonna talk
+about graphs and trees this one is so
+big if
+an entire field of computer science
+called graph theory what a graph is is
+basically kind of similar to a linked
+list where you have nodes that are
+pointing to other nodes except in this
+case the pointers are called edges they
+just could also have weights or numbers
+assigned to them imagine two cities New
+York and Boston the road between them is
+the edge and the length of the road can
+be the weight of that edge complicated
+relationships like social media networks
+are also stored as graphs there's a
+special kind of a hierarchical graph
+called a tree in which the data expands
+out in one direction we can use these to
+represent a lot of things - like a
+family tree or even an HTML tree with
+nested elements there's an even more
+specific tree called a binary search
+tree this tree has really specific rules
+but these rules allow us to do things
+like searching really really efficiently
+the rules are as follows each node can
+only have maximum two children left and
+right the left has to be less than the
+node and the right has to be more with
+these rules in place we can traverse
+through our tree and always kind of know
+where an element is so if I had a five
+at the top and I was looking for seven I
+would know it's either to the right or
+not in my tree at all
+unfortunately BST is not the perfect
+data structure either if you add
+elements in a weird order it can get
+very unbalanced or one-sided and you
+lose a lot of the advantages you get
+with your search optimization there are
+self balancing trees but that's getting
+into more advanced data structures so
+we'll leave those out of here all right
+guys these five data structures will
+give you a really great foundation to
+start solving algorithms this video is
+not sponsored but I would recommend
+checking out code Wars first followed by
+leet code when you get a little bit
+better Lee code has programming
+interview questions from actual tech
+companies so it's really good to
+eventually get there anyway guys I hope
+you liked this video and if you could
+leave it a like it's free for you so
+that would really help me out and if you
+want to see more short no BS tutorials
+then please subscribe alright I will
+catch you guys soon
+[Music]

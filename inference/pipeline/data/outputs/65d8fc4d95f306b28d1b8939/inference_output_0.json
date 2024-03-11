@@ -1,0 +1,70 @@
+{
+  "introduction": "This video discusses the importance of encryption protocols in online retail and how quantum mechanics can help keep secrets safe. It then explains the concept of quantum key distribution and quantum cryptography, and their potential applications.",
+  "sections": [
+    {
+      "title": "Section 1: Importance of Encryption in Online Retail",
+      "content": [
+        "Explanation of the need for encryption in online retail to protect sensitive data and prevent fraudulent charges.",
+        "Overview of current cryptographic codes used online, such as public key systems like RSA.",
+        "Discussion on the potential vulnerability of these systems to quantum computers and the development of post-quantum cryptography.",
+        "Explanation of the concept of quantum key distribution and its role in secure communication."
+      ],
+      "topics": ["Encryption in Online Retail", "Public Key Systems", "Quantum Computing", "Quantum Key Distribution"]
+    },
+    {
+      "title": "Section 2: Quantum Key Distribution and Quantum Cryptography",
+      "content": [
+        "Introduction to quantum key distribution and its use for secure communication between two parties.",
+        "Explanation of how quantum mechanics is used to keep the key safe from eavesdropping.",
+        "Discussion on the difference between quantum key distribution and quantum cryptography.",
+        "Overview of the theory of quantum cryptography and its potential applications."
+      ],
+      "topics": ["Quantum Key Distribution", "Quantum Cryptography", "Quantum Mechanics", "Theory of Quantum Cryptography"]
+    },
+    {
+      "title": "Section 3: Applications of Quantum Cryptography",
+      "content": [
+        "Explanation of the potential applications of quantum cryptography, such as secure communication in finance and national security.",
+        "Discussion on the current state of quantum cryptography and its adoption in various industries.",
+        "Overview of the challenges and limitations of quantum cryptography.",
+        "Explanation of the potential impact of quantum cryptography on the future of secure communication."
+      ],
+      "topics": ["Applications of Quantum Cryptography", "Current State of Quantum Cryptography", "Challenges and Limitations", "Future Impact"]
+    },
+    {
+      "title": "Section 4: Introduction to Post-Quantum Cryptography",
+      "content": [
+        "Explanation of the concept of post-quantum cryptography and its importance in the face of quantum computers.",
+        "Overview of the different types of post-quantum cryptography.",
+        "Discussion on the challenges and limitations of post-quantum cryptography.",
+        "Explanation of the potential impact of post-quantum cryptography on the future of secure communication."
+      ],
+      "topics": ["Post-Quantum Cryptography", "Types of Post-Quantum Cryptography", "Challenges and Limitations", "Future Impact"]
+    },
+    {
+      "title": "Section 5: Quantum Computing and Cryptography",
+      "content": [
+        "Explanation of the relationship between quantum computing and cryptography.",
+        "Discussion on the potential vulnerability of current cryptographic systems to quantum computers.",
+        "Overview of the development of quantum-resistant cryptography.",
+        "Explanation of the current state of quantum computing and its potential impact on cryptography."
+      ],
+      "topics": ["Quantum Computing and Cryptography", "Vulnerability of Current Cryptographic Systems", "Development of Quantum-Resistant Cryptography", "Current State of Quantum Computing"]
+    }
+  ],
+  "topics": ["Encryption in Online Retail", "Public Key Systems", "Quantum Key Distribution", "Quantum Cryptography", "Post-Quantum Cryptography", "Quantum Computing and Cryptography"],
+  "generalTopics": [
+    {
+      "name": "Quantum Computing",
+      "complexity": 0.70
+    },
+    {
+      "name": "Cryptography",
+      "complexity": 0.60
+    },
+    {
+      "name": "Security",
+      "complexity": 0.50
+    }
+  ]
+}

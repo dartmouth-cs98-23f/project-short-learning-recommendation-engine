@@ -1,0 +1,243 @@
+hello everybody and welcome to another
+lecture on computer architecture
+today i want to talk to you about
+quantum computing
+something that is well not state of the
+art it is more like beyond state of the
+art
+it is into still in the development
+phase so it's not even clear if it's
+going to work
+but let me try to explain to you what is
+going on and why it would be phenomenal
+if it really works
+so the first thing i want to actually uh
+i want to tell you what it is
+actually based on what do we have
+is um that
+in a normal computer we have let's say
+an and gate in which every bit
+there it enters and it has the bit can
+have two values it's either
+one or it is zero and that is then
+linked to a physical property so for
+instance the zero is zero volts
+and the one is five volts or maybe
+uh the zero is that the capacitor is
+charged
+and uh one is that the capacitor is
+empty or the other way around
+whatever but with quantum computing
+there is something
+strange going on because the bits
+that we put at the input cannot have
+either one of the two values but it can
+have two values
+at the same time and that is something
+very strange but that comes from
+quantum mechanics so the idea is
+that you have an object of physical
+property that can have
+various states so we can for instance
+take here
+the classic example is that you can have
+here an electron spin
+and as you know well maybe not but the
+electron spin it can either rotate in
+one direction let's say here
+counterclockwise or this is this is
+clockwise
+and the other one would be
+counterclockwise and we could for
+instance say well
+we can just say that counterclockwise
+would be zero and clockwise would be one
+so maybe we call this one here on the
+left we call it
+uh then one and the other one on the
+right
+and we call it a zero and then we're
+going to make some kind of they arrive
+at our end gate and we're going to do
+some kind of
+well boolean logic with that but the
+thing is
+that in quantum mechanics
+the electron state is not defined
+spin up or spin down is not defined
+until it is measured
+and it is not so that the
+state of the spin is not known to us but
+it is a certain state it
+is up or down but only it's not observed
+by me
+no that would be classical mechanics
+classical physics but in quantum physics
+it is like this that no the state
+is not defined until it is measured
+until it is so-called
+observed so then before you observe it
+it is like you know mr schroedinger's
+cat
+it is both the cat of mr uh
+both that that and the life at the same
+time at the same time the same way
+the spin of the electron is both up and
+down
+at the same time and that means that uh
+and when we start observing it then the
+spin so-called it
+the wave function as we call it it
+collapses so only when we observe it
+the spin becomes up or down
+and if you think this concept is strange
+i would like to remind you of mr
+the famous talk of mr feynman
+where he said if you think you
+understand quantum mechanics
+you don't understand quantum mechanics
+and this is how weird actually this you
+can make these weird
+phrases and actually being right on top
+i really recommend you to watch if
+you're interested into these kind of
+things
+the lecture series of mr richard feynman
+it's in black and white very
+old-fashioned
+but the quality i think is not been
+surpassed by any
+uh any person from physics
+since that time so this black and white
+videos are perfect and
+there he says i think the lectures are
+called the character of physical nature
+or something like this
+but anyway there he says nobody
+understands quantum
+mechanics that is mr feynman saying that
+so in quantum mechanics the state is not
+defined until we observe it
+and until the time the state is in
+the wave function is in a superposition
+state so it is both
+spin up and spin down at the same time
+when we use
+electrons so how can we use this now to
+make a quantum
+computer well we take these
+two things so let me put it back here
+let me say it like this
+so we have generally we have a wave
+function
+that that a bit a at the entrance of
+our gate it would be both
+in the spin up and the spin down state
+because we didn't observe it yet but
+we're
+already going to do calculations with
+this wave function
+before observing it so we apply the wave
+function to our gate
+and then we are doing simultaneously the
+calculations
+with the spin up state as well as the
+spin down state
+so one bit of information actually i
+should say this
+one bit arriving at your gate actually
+has
+two bits of processing
+information now how does we then
+do this if we take two bits then we have
+four calculations doing at the same time
+and if we have 100 bits
+then we do 2 to the power 100
+calculations
+at the same time because we didn't
+collapse the wave function yet
+and to give you an idea then just a
+simple computer of
+100 bits so maybe we would have
+something like this i think this is the
+ibm quantum computing machine
+and you can see well it's quite complex
+maybe this has 100 bits i guess this
+entire thing has to be cooled down to
+liquid helium or something like this
+because it looks to me that this one
+will be embedded into
+into some kind of cooling vessel because
+of this
+you can see this thermal shields that
+are there and then
+the electronic wires that come here
+through here and through loops
+so that the thermal conductivity is not
+so high and here at the bottom
+then the calculation is done at very low
+temperature because then you have
+apparently you can do this quantum
+states
+well you can imagine that this thing
+must cost a fortune
+but if you have 100 bits then you can do
+2 to the power
+100 calculations in simultaneous
+simultaneously and to give you an idea
+that is about 2 to the power 100 is
+about 10 to the power 30.
+so if you do one calculation per second
+effectively you're doing 10 to the power
+30
+calculations per second and that is then
+about
+10 to the power 20 10 gigahertz scores
+in parallel
+so you can get the idea as if you have
+10 to the power 20
+very strong computers working uh in
+in parallel i don't think that there are
+so many computers in the world
+and actually in the this would be it's
+like
+astronomical amounts of processing power
+if you just have 100 bits
+to be honest i'm quite skeptical but i'm
+just explaining to you
+how it works to be honest i'm quite
+skeptical because
+obviously nature didn't do this and
+and the advantages would be very well in
+nature
+imagine that you're a lion or
+actually you're the prey of the lion it
+would be if you have such
+calculating power in your brain or
+somehow
+then of course you would be able to
+predict let's say the future for the
+next uh
+one or two hours uh with high precision
+so you could be
+able to either avoid the lion or as
+when you're the lion you could easily
+catch your prey so i'm very skeptical
+that it works
+but this is the principle of
+of how it works so that is quantum
+computing it might be
+that this will then be the end of
+things like bitcoin or blockchain in
+general
+cryptography because you can instantly
+calculate
+all the possible cryptographic
+possibilities
+so decrypting is actually then a
+piece of cake so see you in the next
+lecture well i will talk about
+a clockless computer so i will actually
+talk about your brain which doesn't have
+a clock as you know see you in the next
+lecture

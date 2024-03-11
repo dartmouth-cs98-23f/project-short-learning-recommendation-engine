@@ -1,0 +1,212 @@
+moving on from the last video the next
+topic is number theory number theory is
+simply the study of integers which seems
+easy and even unnecessary
+I mean integers are just 0 1 to negative
+10 negative 49 and so on no decimals or
+anything like that but it's far from
+easy 90% of what I research for this
+video just couldn't be thrown in because
+it was really advanced but one big
+application of this field is
+cryptography whenever you buy something
+online or input your password into a
+website you can think number theory for
+helping keep those secure most of us
+learned many basic concepts of number
+theory starting in elementary school for
+example you know 28 is divisible by 7
+and why is that because you can multiply
+7 by another integer to get 28 you also
+know that the greatest common factor of
+let's say 24 and 40 is 8 because 8 is
+the biggest number that goes into both
+but what if you were asked if 24 times 9
+plus 40 times 7 is divisible by 8 well
+this is really saying is there some
+integer that I can multiply by 8 to get
+that number and you should be able to
+recognize that if you divide both sides
+by 8 which is the same as dividing each
+term by 8 you can cancel certain terms
+like the 24 and the 8 and the 40 and the
+8 leaving integers on top and ones on
+the bottom and this definitely leads to
+an integer in our case at 62 but we
+really didn't care about that we just
+wanted to find out if this side was
+divisible by 8 and now we know that it
+is why that worked is because the 24 and
+40 were both divisible by 8 it did not
+matter what these two numbers were in
+fact 24 times any integer plus 40 times
+any other integer is always divisible by
+8 and now you can see why this is a
+linear combination of two numbers in
+this case it's 24 and 40 now here's
+something you probably don't know yet
+what is the smallest positive integer
+you can get from this if we set em to
+negative 1 and end to 1 then do the
+addition we get 16 but if we set em to 2
+and end to negative 1 we get 8 which is
+our smallest one now so 16 won't be our
+answer maybe we set em to 5 and n 2
+negative 3 then we get 0
+but we are only looking for the smallest
+positive integer therefore zero and
+negatives don't count now the answer to
+this is actually 8 you won't find
+anything smaller than that the smallest
+positive integer will actually always be
+the greatest common factor of the two
+numbers you are doing the linear
+combination of remember that for this
+next puzzle let's say we have an
+infinite amount of rulers half of them
+measure 7 centimeters and the other half
+measure 5 centimeters yes I know it's a
+small length but just go with it there
+are no markings on them and we cannot
+estimate anything like what 1/2 or 1/4
+of the length is we only know that they
+measure 7 and five centimeters
+respectively the question is can we
+perfectly measure a distance of 2
+centimeters now this should be pretty
+easy you lay down the seven centimeter
+ruler then the five on top of that with
+their ends at the same point the
+distance from the beginning of the seven
+to the beginning of the five would
+measure two centimeters all we did was
+take the seven centimeter ruler subtract
+the 5 centimeter one and we get two
+the next question is could we measure 3
+centimeters perfectly after a little
+thought you should see we can lay down
+to 5 centimeter rulers and then a 7 on
+top of that with the ends lined up the
+distance from the beginning of the first
+5 to the beginning of the 7 would then
+be 3 centimeters again the formula B 2
+of the 5 centimeter rulers minus one of
+the sevens gives us 3 now the generic
+question is can we measure any integer
+lengths could we measure 71 centimeters
+or what if instead we had an
+eighty-seven centimeter ruler and a 39
+centimeter ruler what can we measure
+that well in our example we know we can
+achieve a measure of three centimeters
+by two 5s - a seven that means if you
+want to achieve 6 centimeters we can
+just multiply both sides by 2 if we
+distribute that 2 we see that 4 of the 5
+centimeter rulers - two of the seven
+centimeter ones gives us exactly 6
+centimeters and we can use this to get
+any multiple of three remember I said
+earlier that the smallest positive
+integer you can achieve is the greatest
+common factor of the two numbers which
+in our case are the two ruler links the
+greatest common factor of those is 1 so
+we can achieve a measure of one
+centimeter or any integer multiple of
+that which basically means any positive
+integer we want if we wanted to measure
+833 centimeters we could and that's what
+the solution to this is the smallest
+measure you can make is the greatest
+common factor of the ruler lengths then
+you can also make a measure of any
+positive integer multiple of that if our
+ruler lengths are 91 centimeters and 26
+centimeters the greatest common factor
+is 13 so we can measure 13 centimeters
+or 26 39 52 and any integer multiple 13
+but nothing in between
+yes this was a simple example of number
+theory but I thought it was a good
+easy-to-follow problem now if you want
+an intro about this application of
+cryptography the foundation for securing
+our information is large prime numbers
+it's actually very difficult even for
+computers to factor a really big number
+into two primes for example 13 is prime
+and so is 19 multiply those together and
+you get 247 if you handed that number to
+someone it would not be so easy for them
+to break it down into its two prime
+factors to be fair this one and take too
+long but do it with numbers with
+hundreds of digits and even a
+supercomputer can't do it in a
+reasonable amount of time the fastest
+algorithm we know of it's called the
+general number field sieve but when you
+get to several hundred digits this
+algorithm becomes unfeasible so like I
+talked about in the computer science
+video if we wanted to transmit the
+phrase hello we could turn that into a
+prime number like by turning each letter
+into whatever number place it is in the
+alphabet H is the eighth letter E is the
+fifth letter and so on then we just add
+a small ending to make it prime then you
+and your friend who you want to send
+this message to could exchange a secret
+key which is a really big prime number
+as well when you want to transmit hello
+you just multiply it by your secret key
+and send that to your friend
+if someone intercepts it they could not
+decipher it if they knew they were
+looking for two prime numbers that go
+into this big number even with a
+computer it would take a long time to
+figure out at least if the numbers are
+really big so they won't know what the
+message actually says but your friend
+would just divide by the secret key and
+recover the message but unfortunately
+there's a huge flaw with this if someone
+intercepts your message which is your
+secret key times your actual message
+then they intercept another message
+which would be your secret key times
+another actual message they could easily
+find your secret key because it would be
+the greatest common factor of the two
+numbers they intercept it and there are
+ways to determine this very efficiently
+now while researching this video and the
+last one I was going through lectures
+textbooks practice problems and more to
+figure out what would be ideal to
+include but 90% of what I came across
+had me saying this would be too
+difficult to accept
+this will take too long they need more
+background for this and so on so realize
+this video and the last one don't really
+do justice for these huge fields of
+mathematics and computer science I did
+talk more about number theory in the
+computer science video such as with the
+Euclid's algorithm and finding the
+greatest common factor of two big
+numbers so I'm not really going to go
+into much more detail but I thought
+these were just some fun examples
+they're really highlight how different
+math can be especially at a university
+level compared to what you may think and
+that's what I'm going to end this video
+if you enjoyed please like and subscribe
+don't forget to follow me on Facebook
+and Twitter and I'll see you all in the
+next video

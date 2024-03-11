@@ -1,0 +1,70 @@
+{
+  "introduction": "This video provides a step-by-step guide on how to use the Open AI API to build a vanilla JavaScript app that responds to user prompts. The app serves as a simple AI assistant. The video covers obtaining an API key, creating an HTML structure, writing JavaScript code, and integrating the Open AI API in a vanilla JavaScript project.",
+  "sections": [
+    {
+      "title": "Section 1: Setting up the Project",
+      "content": [
+        "Creating an account on Platform Open AI and obtaining an EPI key.",
+        "Creating a folder named 'ai JavaScript' in VS Code.",
+        "Linking to the table in CSS CDN and index.js in the body section.",
+        "Defining constants for Open AI API endpoint and the key."
+      ],
+      "topics": ["API Key", "VS Code", "CSS CDN", "index.js", "Open AI API"]
+    },
+    {
+      "title": "Section 2: Defining the User Interface",
+      "content": [
+        "Creating an input element to accept the user's prompt.",
+        "Adding a button to start generating the AI response.",
+        "Adding a button to stop the generation process.",
+        "Creating an empty section where the content retrieved from the API will be displayed."
+      ],
+      "topics": ["User Interface", "Input Element", "Buttons", "Empty Section"]
+    },
+    {
+      "title": "Section 3: Writing JavaScript Code",
+      "content": [
+        "Defining event listeners for click and key up events.",
+        "Creating a function to fetch the completion for the given prompt.",
+        "Converting the response into a JSON format.",
+        "Updating the UI with the response to display the completion."
+      ],
+      "topics": ["Event Listeners", "Fetching Completion", "JSON Format", "UI Update"]
+    },
+    {
+      "title": "Section 4: Testing and Debugging",
+      "content": [
+        "Testing the application in the browser.",
+        "Observing the generating text indicator and the generate button being disabled.",
+        "Enabling the generate button disabled is equal to false.",
+        "Testing with longer completions and comparing the results."
+      ],
+      "topics": ["Testing", "Generate Text Indicator", "Generate Button", "Longer Completions"]
+    },
+    {
+      "title": "Section 5: Improving the Application",
+      "content": [
+        "Adding more features to the application, such as streaming open AI completions.",
+        "Implementing the stop button functionality.",
+        "Optimizing the completion process for better performance.",
+        "Integrating the app with other platforms or services."
+      ],
+      "topics": ["Streaming Open AI Completions", "Stop Button", "Performance Optimization", "Integration"]
+    }
+  ],
+  "topics": ["API Key", "VS Code", "CSS CDN", "index.js", "Open AI API", "User Interface", "Event Listeners", "Fetching Completion", "JSON Format", "UI Update", "Testing", "Generate Text Indicator", "Generate Button", "Longer Completions", "Streaming Open AI Completions", "Stop Button", "Performance Optimization", "Integration"],
+  "generalTopics": [
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.61
+    },
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": 0.61
+    },
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.53
+    }
+  ]
+}

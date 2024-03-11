@@ -1,0 +1,70 @@
+{
+  "introduction": "This video explores five foundational software architecture patterns that shape the industry. The five patterns discussed are layered architecture, event-driven architecture, microkernel architecture, microservices architecture, and monolithic architecture.",
+  "sections": [
+    {
+      "title": "Section 1: Layered Architecture",
+      "content": [
+        "Separation of components into distinct layers for abstraction and encapsulation.",
+        "Model-View-Presenter (MVP) pattern for data and business logic separation.",
+        "Event-driven architecture for decoupled components and data write operations.",
+        "Publish-Subscribe (Pub/Sub) model for event communication between components."
+      ],
+      "topics": ["Layered Architecture", "MVP Pattern", "Event-Driven Architecture", "Pub/Sub Model"]
+    },
+    {
+      "title": "Section 2: Event-Driven Architecture",
+      "content": [
+        "Promotion of event production and consumption for loosely coupled components.",
+        "Command Query Responsibility Segregation (CQRS) for data write and read operations.",
+        "Event-driven architecture for highly decoupled systems.",
+        "Pub/Sub model for event communication between components."
+      ],
+      "topics": ["Event-Driven Architecture", "CQRS", "Pub/Sub Model"]
+    },
+    {
+      "title": "Section 3: Microkernel Architecture",
+      "content": [
+        "Separation of core system functionality into a small microkernel and extended functionality into addons or plugins.",
+        "Operating systems and application examples of microkernel architecture.",
+        "Emphasis on extensibility, ease of maintenance, and fault isolation.",
+        "Core system remains stable while offloading other system functions to external components."
+      ],
+      "topics": ["Microkernel Architecture", "Operating Systems", "Application Examples"]
+    },
+    {
+      "title": "Section 4: Microservices Architecture",
+      "content": [
+        "Decomposition of an application into a collection of small loosely coupled services.",
+        "Each service implements specific business capabilities and contains its own data model.",
+        "Communication between services via APIs for modularization of functionality.",
+        "Increased agility and ability to rapidly innovate for platforms like Netflix."
+      ],
+      "topics": ["Microservices Architecture", "Business Capabilities", "Data Model", "API Communication"]
+    },
+    {
+      "title": "Section 5: Monolithic Architecture",
+      "content": [
+        "Bundling all components of the application into a single codebase and run as a single unit.",
+        "Simplification of development and deployment for startups and smaller applications.",
+        "Rise of the modular monolith for clear modular boundaries within the codebase.",
+        "Easier maintenance and scalability while paving the way for potential future transitions to distributed architectures."
+      ],
+      "topics": ["Monolithic Architecture", "Modular Monolith", "Codebase", "Distributed Architectures"]
+    }
+  ],
+  "topics": ["Layered Architecture", "Event-Driven Architecture", "Microkernel Architecture", "Microservices Architecture", "Monolithic Architecture"],
+  "generalTopics": [
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": 0.60
+    },
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.50
+    },
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.40
+    }
+  ]
+}

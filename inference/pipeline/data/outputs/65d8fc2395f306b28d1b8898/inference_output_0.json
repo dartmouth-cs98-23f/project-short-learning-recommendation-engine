@@ -1,0 +1,40 @@
+{
+  "introduction": "This video provides an introduction to instruction set architecture (ISA) and its role in processor design. ISA is defined as the set of commands that a processor can execute to execute program instructions. The video also discusses the instruction format, which defines the layout of machine instructions in terms of operation code, operand, and addressing mode. The instruction format supported by the processor depends on its instruction set architecture.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Instruction Set Architecture",
+      "content": [
+        "Definition of instruction set architecture.",
+        "Explanation of how ISA works as an interface between hardware and software.",
+        "Example of Intel 8085 instruction set architecture.",
+        "Microarchitecture design and its implementation of ISA."
+      ],
+      "topics": ["Instruction Set Architecture", "Processor Design", "Microarchitecture"]
+    },
+    {
+      "title": "Section 2: Instruction Format",
+      "content": [
+        "Explanation of the instruction format in computer programs.",
+        "Translation of high-level program instructions into low-level machine instructions using compilers.",
+        "Definition of instruction format and its relationship with ISA.",
+        "Summary of the instruction format supported by different processors."
+      ],
+      "topics": ["Instruction Format", "Compiler Translation", "ISA and Instruction Format"]
+    }
+  ],
+  "topics": ["Instruction Set Architecture", "Processor Design", "Instruction Format", "Compiler Translation", "ISA and Instruction Format"],
+  "generalTopics": [
+    {
+      "name": "Computer Architecture",
+      "complexity": 0.61
+    },
+    {
+      "name": "Programming Languages and Software Development",
+      "complexity": 0.61
+    },
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.61
+    }
+  ]
+}

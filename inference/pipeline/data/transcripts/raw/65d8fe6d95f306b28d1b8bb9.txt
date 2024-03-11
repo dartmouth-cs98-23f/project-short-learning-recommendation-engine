@@ -1,0 +1,1269 @@
+[Music]
+[Music]
+hi everyone hi uh sorry for this little
+delay in our live stream uh but yeah you
+are here five minutes after and I'm to
+welcome you to another exciting edition
+of X bites brought to you uh by our
+general sponsor ex and as usual I am
+your host faai Community manag manager
+KS and today's live stream Promised to
+be extraordinary as usual and yeah you
+have the privilege to have uh with us
+today uh zamar Jamar welcome welcome to
+the stage uh he is a the developer
+relations manager at
+Latin Nvidia and we'll be share more
+insights about that during his
+presentations and um he's going to speak
+a little bit about how to accelerate
+your e applications using Nvidia SDK and
+before we dive into the technical
+Wonders that jire has prepared for us um
+I want to extend our thanks to him of
+course uh for taking up the The
+Challenge and contributing for the
+growth of our U xbes Community uh this
+live stream and just um a quick shout
+out to our X gek to our sponsor x geks
+uh just also to um
+thank X to be our our sponsor X for
+those that that don't know is a software
+House of major group that is K Group X6
+is specialized specialized in Clon
+native Technologies and um they try to
+maintain a profound commitment to
+community building and this ucation to
+the community uh is the is is also
+demonstrated here in this live stream in
+this monthly Dynamic but we also have
+for me groups uh we also have our blog
+spots our YouTube recordings among other
+things things and um and if you want to
+to follow us and to understand a little
+bit more our community-driven
+initiatives I will uh advise to uh just
+uh click here in our uh link tree to
+know a little bit more about us so that
+said and without further Ado because you
+are not here to listen to me but to
+Jamar um let's give the spotline and the
+stage to Jamar please Jamar the stage is
+yours I will quit myself and thank you
+again thank you so much Fabio for the
+invitation and also tavio uh it's a
+really honor to be here uh good evening
+for everyone in this case I'm I'm
+talking from Brazil uh it's still
+afternoon here uh the idea today is to
+show you what I used to call the dorsal
+spine of Nvidia the case for uh
+artificial intelligence uh we have more
+than 150 sdks more than 500 libraries
+almost all of them are for free and open
+source and sometimes it's hard to
+connect the dots and understand how the
+pieces uh match together and this is uh
+why I've built this presentation uh I
+plan to cover uh the most important
+areas uh we are working right now and
+our communities are working right now uh
+so let's start uh talking uh about how
+Nvidia
+Works usually everyone knows Nvidia
+because of our Hardware gpus the CPUs
+and the other stuff uh in Hardware we
+produce but uh the way we work over the
+past more than 15 years is that we
+really listen to the needs of our
+customers and based on the need of our
+customers we develop a full stock for
+them uh to to produce what they want I'm
+going to use Merlin as one example uh
+it's one SDK that is uh here on the list
+uh recommendation engines is something
+that was develop it and and use it over
+the past decades by the whole industry
+but every time anyone need to start a
+new uh a new recommendation uh project
+they need to put together a lot of Open
+Source software stack then build
+something in top of it then finally they
+have a basic engine and they can start
+working and when talking about Hardware
+acceleration when you combine all those
+pieces uh it's really really hard to
+optimize everything uh to to get the
+most of your Hardware so what we did we
+talked to the key customers that use
+those kind of uh engines and we listen
+to uh their needs and then we develop
+this SDK that is open source named
+Merlin this SDK is based on three big uh
+platforms actually this one is based on
+AI but we have three big software
+platforms one for HPC one for artificial
+intelligence the other one uh for
+Omniverse that I'll explain what it is
+uh on the end this is based on system
+software that is RTX Cuda and physics
+and they run on top of our Hardware
+depending on the kind of uh workload we
+are working on this case uh
+recommendation engine we need the one
+specific computer architecture or
+several architecture uh to host this
+kind of workflow because the hardware
+needs the communication needs the memory
+the disk uh the speeds the latency
+inside the computer are totally
+different from a graphics application to
+a AI training application to a computer
+vision or to recommendation system like
+this one so sometimes we need to change
+a lot of those components to be able to
+deliver the most valuable uh SDK or2 to
+our uh developers that our end users so
+this is how we've built more than 150
+sdks over the past uh 15 years uh and
+basically when when full stack of this
+is done we open everything so uh the
+hardware you buy from oems like Lenovo
+uh Dell HP super micro and others and
+all the software we give it away to the
+um to our uh software ecosystems so it
+could be startups it could be individual
+developers a software could be uh for
+free or they could be open source which
+is the case of the the most important
+ones okay this is how any viia growth to
+the size we are today we growth through
+our ecosystems developers are extremely
+important for us today in Nidia has more
+software Engineers than Hardware
+Engineers just to illustrate uh this so
+without this ecosystems of oems
+developers startups and software
+Partners uh we wouldn't be able to do
+that much of innovation over the past uh
+the kides I will start this talk talking
+about one uh of uh our fr works that is
+focused on uh data science specifically
+and it doesn't matter what you do with
+artificial intelligence at some point
+you need to process a huge volume a huge
+amount of data and this is why we
+develop Rapids Rapids is an open source
+project you can access more information
+here uh rapids. Ai and you can find a
+lot of resources to learn to explore and
+even to run Rapids on cloud providers
+with free tire accounts to access GP us
+there and we develop Rapids to address
+those three issues First Data science
+and data manipulation when the volum is
+huge it's time
+consuming It's associated with the costs
+not only Hardware costs but also people
+costs because sometimes you as a
+developer put a network to train or put
+a a machine learning model to train you
+need to wait like 10 hours 15 hours and
+then when you realize that I forgot this
+parameter I could do this adjustment to
+the data set and here we go again and
+wait another 15 hours and it is
+frustrating for everyone uh working on
+those projects from the the data
+scientists to the developers and to the
+customers and people that are there
+waiting to see the value of what they're
+investing so to address those things uh
+we develop uh Rapids and ifia has
+solution for anything uh related to data
+size to be accelerated on our hardware
+and Rapid is is focus here f focused
+here on analytics machine learning
+streaming and uh visualization we all
+that work with data science we learn a
+data science basically using p dat such
+as P data uh uh Library such as pandas
+psychic learn numai sci-fi and others
+they work very fine uh they are very
+easy to work with basically but they
+were developed to run on what I used to
+call generic Hardware which means they
+are meant to run on CPUs basically and
+everything is uh done and built for that
+kind of uh
+environment what we did is that we
+didn't reinvented the wheel we created a
+set of libraries that has semantic and
+synthatic compatibility in most of the
+cases with those existing um python
+libraries so we have for instance qdf
+and qao that can do almost the same of
+bundas qml qph and several others and
+the cool thing about it is everything is
+based on Apache arrow that is basically
+a way of arrange data in a columnar way
+that makes a lot of sense when we are
+talking about uh highly distributed and
+parallel uh algorithms which is
+basically what I do inside the the GPU
+this is really important because uh if I
+if I need GPU acceleration on a part of
+my data science o aai pipeline I used to
+pay I want big price every time I need
+to take the data from the Run memory and
+put it inside the Run memory uh of the
+GPU this is the latency that I have
+basically due to physical constraints on
+the servers and computers and sometimes
+if I use uh GPU just for one part of
+this pipeline I would take more time
+bringing thata or moving data back and
+uh uh back and and forth instead of
+processing so the ideal scenario when
+using acceleration like a GPU is that
+you run almost the biggest part of your
+algorithm or your pipeline uh without
+leaving the GPU ideally I just bring the
+data on the beginning of the processing
+I do the whole Pipeline on the GPU and I
+return it and this is uh what we do with
+Rapids integrated with aach arrow to
+start with Rapids you need just a
+computer with an Nvidia
+uh GPU can be something like a gForce 10
+something will be uh able to to run uh
+Rapids uh and then you will start with
+the code you already have uh on Pi data
+the first thing to do is to migrate this
+code to Rapids and then you'll be able
+to see uh a very significant speed up on
+your code and check that it's been
+really really uh distributed over uh all
+the Computer Resources we have on the
+GPU but the real magic happens when we
+associate Rapids with dusk that is
+another open-source um software and what
+desk does is basically he'll get the
+Rapids code and he'll distribute it
+automatically through multiple gpus on
+the single node or through multiple
+nodes with multiple gpus in a cluster so
+without knowing all the details about
+synchronization Distributing Computing
+and complex things like that you can
+start from a item code that we already
+have accelerated using Rapids on the GPU
+and then really accelerating it through
+clusters and massive parallelism using
+desk it's really really uh easy to do uh
+and everyone can you know scale uh their
+processing and to scale this kind of
+processing it's really important because
+uh typically we start data science uh
+workloads and projects with a certain
+amount of data and this amount of data
+uh typically will grow a lot over the uh
+the next years or months so assuring
+that I just need to add more nodes to
+increase my computing power without need
+to rewrite all my code it's really
+important to
+scalability also Rapids can integrate
+with other deep learning tools uh
+through a Apache um arrow that I
+explained so with that we can really
+optimize the data sharing inside the GPU
+memory and we are able to really do uh a
+very good uh speed up on our pipeline
+because most of all the pipeline are
+been running uh inside the GPU so with
+Rapids we leave a scenario where I spend
+a lot of time just waiting for the code
+to run and then discovering that I
+mythed thingss and so on uh to a a space
+where I'm really productive and building
+more I know cases of training that used
+to take like 15 hours uh reduce it to 15
+minutes uh using uh Rapids and there are
+several cases documented all over the
+Internet about it just to give you an
+idea who is using and adopt Rapids today
+basically 25% of the foron 100 companies
+are already using Rapids we have more
+than a 100 open source and Commercial
+software Integrations with Rapids and
+much much more than 350 contributors on
+geub those are some logos of companies
+that are using Rapids and we really have
+a big community
+around it one of the case that I really
+would like to highlight is the usage
+Walmart does with hits basically they
+used to process a lot of data and one of
+the things they achieved it's a 1.7
+percentage Point Improvement in forecast
+accuracy on what will sell on each one
+of the uh North American USA uh stores
+so with Rapids they were able to deliver
+100 faster fit engineering and 20 time
+faster model training within Rapids
+that's Con X boost so we are talking
+here about a huge amount of data and the
+result of this kind of processing has a
+big impact economically speaking on
+companies and uh organizations such as
+wmart after talking about data science I
+will start talking about deep learning
+and the first framework that I would
+like to present you uh on Nvidia it's a
+framework called a tow that is an acon
+for train adapt and optimize and this is
+exactly what to does so creating an AI
+application uh can be hard and complex
+and basically we start uh getting uh
+open source models from model Zool we
+have all over internet those models are
+okay but once I need to run this model
+on a GPU to get acceleration I need to
+do a lot of adjustment on the model and
+I need to do a lot of pre trining on
+this model to get it really optimized
+for the
+this could take a lot of time efforts
+and Investments to do so what I did in
+Nvidia is that we now offer for free
+more than a 100 combinations of models
+that could go from generic things such
+as image classification object detection
+segmentation they are all based on the
+key and most important architecture used
+today for neural networks and we
+optimized those models uh not only in
+the structure but also on everything
+else related to do the best performance
+possible on a GPU we give those models
+for free but we also trained some models
+to achieve specific tax tasks such as
+people detection gaze detection facial
+landmarks vehicle classifications uh
+automatic speak recognition and several
+others so when you start a project you
+don't start with a generic model you
+start with a model that is already
+optimized for the gpus then you use uh
+tto kit to train adapt and optimize this
+model basically you do the transfer
+learning and train the model based on
+your existing data set and the good
+thing of having this model inside tow is
+that your production model can be
+generated according to the GPU that we
+use uh for the inference so imagine that
+I have a model to recognize people on a
+people County solution that I would run
+uh on a shopping mall uh on my customer
+a I need to run the analytics uh on a
+embedded device that will be close to
+the camera because I don't have
+bandwidth to connect to the cloud so in
+this case the model needs to be really
+optimized to run on an embeded device
+such as Jackson but on the other
+customers they have their own data
+center inside uh the shopping mall so I
+can put a server there and then I will
+use a different GPU on the server so I
+can optimize for this GPU on my third
+client uh my Third customer they have a
+very good infrastructure on a cloud
+provider so I just stream the data the
+video and process everything uh at the
+cloud so I can also generate the best
+optimized model to this environment so
+using to you assur that you are starting
+from the best reference model uh train
+it and optimize it for GPU and some of
+those models were trained like 100,000
+hours on clusters of GPU just to
+illustrate the amount of effort we put
+on this so we start with a model really
+optimize it you do the transfer learning
+and then you can generate the model uh
+to be consumed by your application uh
+according to the hardware that you're
+going to use and as I said edge to Cloud
+those are the the key Frameworks that we
+have for inference dpstream uh Riva and
+Triton I will talk about some of those
+uh in a few
+minutes to has also uh characteristics
+uh of doing training optimization so it
+can runs on a multi node multi GPU node
+and multi GPU with multiple gpus it
+works uh it works with automatic mix at
+precision and on inference it can also
+uh do the printing which is removing uh
+nodes from the neural networks that are
+not being activated by this particular
+training and also quantization that is
+basically adjusting uh the weights of
+the network according to the hardware
+that we process it when you use those
+two things in combination we can achieve
+up to four time speed up for inference
+which means that we can uh really uh
+have very very well
+optimized uh applications one of uh
+characteristics of to that I really
+enjoy because I work a lot with computer
+vision uh is that to can do data
+augmentation on online so data
+augmentation on computer vision is
+basically a technique where I have a
+very limited data set I can't have more
+images on this data set so I do
+something that I Ed to joke as the
+miracle of multiplying images where we
+just uh apply some uh image algorithms
+to generate four or five image based on
+a single one this could be rotating
+adjusting brightness and several other
+uh manipulations that we do but when we
+do this on the traditional way I need to
+preprocess my data set and I need to
+have a lot of space because my data set
+will become really huge what we can do
+with to is that once the image is on the
+GPU memory it's very very easy to apply
+those image uh algorithms to do data
+augmentation and we can do this during
+training which mean I don't need to
+expand my existing data sets I just use
+this feature from to and online it to uh
+generate other images and here we have
+some numbers as you can see 100 images
+experiment with 20x augmentation we
+really achieve uh a lot of uh accuracy
+uh on both uh scenarios so if you work
+with computer vision please take a look
+on this feature for tow some examples
+and use cases of to uh it's like this
+one I will start from a ponet model that
+is a model trained on RGB cameras
+and but I need on my solution to
+identify people on infrared cameras so
+basically what I do I start from the
+optimized ponet model I will do transfer
+learning with my annotated uh images
+from thermal cameras and I will have a
+very good result and a working uh
+solution in a few
+minutes also I can do things much more
+complicated on this case I need to have
+a data set where I recognize helmet
+uh and and people and heads so I don't
+have a data set with all those things I
+would start from the same people net I
+mentioned before I'll use a labeled
+helmet data set and I'll generate a data
+set with annotations of people and face
+then I combine both things and I have my
+final uh neural network trained as you
+can see I can achieve over 80% of aange
+class Precision after 100 a books that
+is a really short training when we're
+talking about uh deep learning the
+newest versions of tow has some very
+interesting tools the first one uh is to
+help you to do segmentation masks uh
+just to illustrate when you need to
+segment images you need basically to
+paint the pixels that are part of a
+special class in this case uh I need to
+paint all the pixels that are part of uh
+bottles uh but with this Auto labeling
+tool basically what you can do is is
+that we can turn uh bounding boxes on
+images on segmentation masks uh the
+other thing we are also providing a
+vision Transformer models that are
+revolutionizing everything we do in
+computer vision uh basically uh Vision
+Transformer is the usage of the
+Transformers technology from natural
+language processing and llms to computer
+vision this is really interesting it's
+open source and you can apply it on
+different type of uh platforms Hardware
+we have tools for automl which uh will
+help you to identify the best uh
+hyperparameters for optimize your
+training uh it can be integrated with uh
+services using rest apis so you can
+build a whole solution around uh Tow and
+as I mentioned that when you use burning
+and quantization we can achieve up to 4X
+increase uh of performance during
+inference similar from to that we
+basically use for uh several different
+types of uh neuron networks we have Nemo
+that is a specifically for training llms
+large language models just to illustrate
+the complexity of this kind of
+processing in 2018 the stateof art model
+that we have had around 94 million
+parameters we are talking today in
+models with much more than 53 billion
+parameters gpt3 has 175 billion
+parameters so we're talking about huge
+models and the training of those models
+is really complex because we need to
+have data parallelism we need to use
+thousands of gpus this will be
+distributed on a cluster with a lot of
+computing power and Nemo is the
+framework uh developed exactly for those
+use cases we can do with Nemo the data
+coration distributed training and
+accelerated inference it has the key
+feat features to help you to build and
+to customize your llms large large
+language models uh projects and we also
+offer uh Nemo guard raos that is open
+source and guard raos it's a very
+important part basically on chatbots
+because they will be uh the the
+boundaries or they will limit the
+application to answer on a specific
+topics uh this means uh safety for the
+users and prevent hallucinations and
+executing third party calls uh and
+increase the security uh if someone ask
+some funny questions to chat GPT ever
+and you have say hey I can't answer this
+this because this and that uh it's the
+guard rail that are working I used to
+say that if I went to chat TPT without
+guard raos and say hey I have uh you
+know those those uh drugs in my home
+that I bought from drugstore nearby uh
+which ones I need to take to you know do
+something bad to myself he'll be able to
+answer this but AAR said hey we cannot
+answer and I believe you got the points
+so memo guard raos is also available
+open source as Nemo uh you can use it uh
+and also contribute uh to build our
+large language model uh
+projects uh hia it's one framework that
+we developed to do three things
+automatic speak recognition neuro uh
+machine translation and text to speeech
+those are three very complex tasks on AI
+because you need to do a lot of steps on
+the pipeline of processing we build Riva
+to do exactly that so it's much easier
+to to talk about Reva explaining the use
+cases in this case I have a customer
+talking to a contact center I have Reva
+listening to the customer converting
+this to text using NLP and several other
+Technologies to print real time
+recommendations on the contact center uh
+agent screen and allowing him and
+helping him to do the right
+recommendations to the customers here
+it's another scenario that we you know
+get used on the on the pandemics and
+also on several different uh tools that
+we have of videos online where we can do
+automatic transcription we can do
+automatic translation we can do
+summarization and everything else just
+Bas it on video this is where we uh
+really can be us it and when we have a a
+a full round applications is where the
+customers is interacting totally with
+computers he's not talking up with
+humans anymore and but he feels that
+he's being uh very well treated in this
+case uh it's a project from Nidia called
+it name it Tokyo that is a talking pusk
+where you go there uh on a on on uh a
+fast food restaurant and you start talk
+talking to this small robot he will give
+you suggestions he will recognize you
+and it will be a very uh natural way of
+speak just to have you an idea there's a
+lot of drive-throughs uh today all over
+the world that are changing uh uh humans
+on the on the other side of the
+microphone for Technologies like this
+and it's very adaptable and able to use
+on those kind of environments imagine
+that you have a lot of noise you have
+different audio qualities and r can
+handles uh all
+this uh he I use uh pretrained models
+the same way uh that we talking about to
+you can use tow to retrain those models
+and if you need to expand the model or
+do something more complex you can use
+Nemo uh then you can Implement all the
+three key tasks uh using Reva and
+Implement uh your end application uh
+using this uh technology uh just to
+explain how we evoluted uh or reg growth
+over the past years uh in 2018 we have
+like 45% error rates on automatic speak
+recognition uh two years ago it was uh
+less than 10 and it's still getting
+reduced and also uh we can have a lot of
+accuracy when we customize uh the models
+because if I'm working with a model that
+will uh be used to have conversations
+with uh uh Banks customers uh Financial
+action customers this vocabulary will be
+totally different of the vocabulary of a
+person asking for a hamburger on a fast
+food so with Riva we can adjust uh the
+whole model to be very specific to one
+kind of jargon or dialect or specific
+set of words this will increase a lot
+the accuracy so Riva is our SDK for
+doing
+this Triton is what I used to call the
+Swiss army knife of uh inference on AI
+today uh when we use an AI based
+application our application is talking
+to an inference server and if I write my
+application to one specific inference
+server let's say py torch tensorflow or
+any other and tomorrow my Ai and and
+data scientists discover that there is a
+new model based it on other framework
+other inference server that is
+performing best to my solution I will
+need to write the end user application
+again it doesn't mean if this end users
+application it's on a cell phone
+directly talking to an inference server
+or if this application uh it's let's say
+a Java application that is interfaced
+during the the the interface between all
+the AI pipelines and the end user
+applications that can be a lot so uh
+Tron is key in this kind of scenario
+because you write your application to
+talk to Tron and Tron can talk to all
+other uh uh major uh backends and
+Frameworks for inference so let's say
+Tor flow tensor RT open Vino P torch
+Onyx XG boots several others so
+basically your application is really to
+Tron and then today my data science
+scientists said hey this is the best
+model we have have it need to run on
+things orlow okay tomorrow or the six
+months they say no now we have a model
+on pytorch I just change the model on
+Tron configuration I don't need to write
+the application again uh Tron can
+communicate using HTTP grpc and C++ uh
+you can do inference Distributing on the
+different kind of Hardware you have uh
+it support from uh bare metal to
+virtualization Edge to cloud different
+types of queries uh that are typical
+from different types of applications
+real time badge streams and mixed models
+and it also totally uh develop it
+focusing on maximized Hardware
+utilization which means reducing the
+total cost uh of operations of your uh
+solution um it also has integration with
+kubernetes uh with its scalable
+microservices it's very easy we provide
+this uh uh although things uh for for
+triton uh is integrated with the key
+practices and also some tools of machine
+learn so basically with all the tools
+from cloud provider aure uh AWS Google
+and so on uh it support AO live model
+updates uh Dynamic model loading which
+is really interesting because I just
+load the models that I will use on a
+particular transaction and several other
+tools that will help you to optimize
+your operation and mlops guys will love
+it and also uh we have it's all open
+source and
+customizable uh you can change it uh to
+adjust your needs uh this is an idea of
+all the uh Frameworks formats and models
+it can has on on execution backends this
+list is growing more and more it's very
+very flexible and in a nutshell Triton
+is what put together everyone working
+with AI applications and also end user
+applications so for data science we can
+use any framework uh for people working
+with uh maintaining those uh models uh
+working on inference uh the models can
+be on any repository and it can be
+deployed on any platform so Tron is what
+really brings you flexibility to work
+with all those um all those kind of uh
+AI
+applications the next framework that I
+would like to talk uh is Isaac because
+Robotics are really growing today we are
+having robotics uh boosting every
+industry uh I know that in Europe we
+have cases of automatic delivery even on
+small stores in small small cities uh
+and also we have uh this kind of
+applications on different areas retail
+Logistics manufacturing and so on but to
+build AI in robotics at scale it's
+really hard because it's hard to develop
+here we are talking about developing the
+software the AI and the hardware in
+parallel it's hard to test and it's
+really really hard to deploy so this is
+why we created uh the ISAC robotics
+platform that is basically a platform
+made by a simulation component a key SDK
+training component and a deployment uh
+part so to start the development with
+Isaac I start with a simulator where I
+will import all the projects that I have
+for for my physical robot I will create
+a virtual word where this robot will
+operate I connect it with virtual
+sensors and actuators and I'm able to
+start programming and training all the
+AI inside this virtual
+words when I'm done with the training I
+use the Isaac SDK to develop all this I
+just need to move the code from the
+training with Isaac SDK to the physical
+robot so this whole cycle really really
+speed UPS the development and it's very
+useful in situations such as uh one case
+one very good case that we have with BMW
+that they need to train robots to do
+pilet uh movement on a very specific
+area of the factory they couldn't stop
+the factory just to train the robot on
+that area so they use it lighter and
+photogrametry they created a digital
+twin of that area they imported the
+project projects of the robot they going
+to use from the the the supplier they
+trained the robot inside this uh digital
+TN on several several several thousands
+of hours and when they are okay with the
+results they just validated on the
+reward and for the robot that was traded
+with photogrametry and real 3D images it
+doesn't matter uh if he is on the
+virtual play environment or if it's on
+the real world so Isaac is very very
+useful for
+that uh the other framework that I think
+it's very important for NVIDIA uh it's
+part of a bigger platform actually Nam
+it Metropolis Metropolis is a platform
+for us to build smart spaces and
+infrastructure uh when we see what is
+happening with AI today uh real useful
+AI Solutions computer vision solutions
+for the the the existing word the real
+world are not developed by one single
+neuron network but but for the
+concatenation of the results of
+processing of a lot of different kinds
+of networks on the same system it
+doesn't matter if it's smart cities
+factories public spaces retail anything
+uh you use you need a platform to really
+cross information for different kinds of
+uh neural networks this is one example
+app developed by one of Nvidia Partners
+using the Metropolis platform uh here we
+can see that they analyzing images
+coming from drones fixed cameras uh and
+several different types of cameras they
+are measuring un Counting Cars people uh
+bikes and several other kind of things
+moving in a city uh this two uh that
+they develop all allow the the operator
+to configure and to parameterize any
+kind of alerts uh he really uh wants to
+have and as you can see here we have
+hundreds of neuron networks working in
+parallel and working giving information
+to a single platform that is able to
+consolidate everything this is exactly
+what Metropolis is it's a platform a
+framework for smart sensors where you
+can use and this is being used actually
+on retail traffic management Logistics
+Healthcare manufacturing factories
+several other applications under the
+hood what I have are those pretrained
+models that I I mentioned to you the
+beginning of my talk uh we also have tto
+kit that now you already know what it is
+and deepstream what I'm going to explain
+to you by the way everything that I'm
+talking here is available through uh one
+website that is NG
+gc. nvidia.com on NGC we have Mo
+pre-trained models we have containers
+for all Nidia sdks and the coolest part
+we have containers for uh other SD Cas
+such as tensor flow P torch with
+everything optimized for the GPU so all
+you need to have uh a tensor flow
+running with everything optimized for an
+Nidia GPU is to run one of those
+containers if you are using a cloud
+provider some of the containers you're
+going to find inside uh the marketplaces
+and also you're going to find uh virtual
+machine images from Nvidia uh on those
+places that can be used to launch the
+containers and to to put the containers
+directly from uh
+NGC computer vision is much more than AI
+inference because to every
+frame sorry we need to capture and the
+code the
+data we need to preprocess the image and
+sometimes do the batching then we do
+inference tracking to not count the same
+object twice for instance send this
+metadata extracted to other systems
+finally made in a composition
+typically uh developers use a GPU
+acceleration just here and they do all
+the other parts using things like open
+CVV running on CPU and then we got on
+that situation where I have a lot of
+data back and forth from the computer
+run memory to the GPU memory and I'm not
+using an optimized pipeline this is
+exactly what we can do when we use
+dpstream dpstream can use the best
+acceleration it possible on each parts
+of this processing it supports uh ex run
+from Edge to cloud and it's very uh
+flexible and why this is so fast because
+we just get the data on the beginning of
+the pipeline and then we process
+everything almost with zero memory
+copies so the buffer is the same we just
+passed to the other part of the
+processing buffer to the same place on
+on the GP VI memory and this is the
+fastest way of processing this kind of
+Frameworks uh of workloads we have also
+uh the opportunity to get data right
+from the camera buffer using a a
+networking uh technology for NVIDIA
+called rer Max where I can put
+industrial camera I can extract the the
+the r stream from this camera directly
+to the GPU memory increasing even more
+uh the the performance of my solution uh
+we can use uh deepstream we can program
+deepstream using python using C++ but
+it's also a composer that is a tool
+where I can I will just drag and drop
+some blocks and build uh graphically my
+application uh on the end of this whole
+process I will generate a container and
+I can uh deploy it anywhere uh I will
+use the models that were P trained to to
+we can also import onx models to tow and
+optimize them to use this way and if I
+need to use any other model I can just
+use Tron with uh the right the proper
+inference server uh and dpstream can
+communicate uh with titon using a
+grpc uh the other cool thing is on I
+detected metadata from the video that
+I'm analyzing or the images I can send
+messages with this metadata to radies uh
+and qtt Kafka and several other uh Cloud
+providers uh I uh iot protocols okay so
+after I package this whole thing that I
+develop the whole solution I will have a
+container I can deploy anywhere for the
+people that work with computer vision
+and knows a little about it uh this is
+basically a set of plugins for G
+streamer so being a set of plugins it
+means that I can uh reuse a lot of of my
+code from Project to project sometimes
+just changing the type of networks if I
+need to count people on this application
+and cards on the other one basically
+what changes is the neuron Network I
+change the people detection to a car
+detection and the rest of my application
+the card of my application is already
+written and what we see in practice and
+I'm able to uh work with more than uh
+almost 700 startups in Latin America uh
+Direct and I'm seeing this in practice
+the the startups and the companies that
+adopt those Technologies speed up the
+development time up on 10 times because
+it's much more easy and productive to
+work uh with all those uh
+Frameworks Metropolis allows developers
+to develop things like uh smart spaces
+application where I have several
+different uh Technologies and uh neural
+networks and I can put all together on a
+single system to end my talk here I will
+talk about Omniverse that is New Era of
+collaboration and and uh and simulation
+uh virtual wordss are essential for the
+next area of innovation we truly believe
+that everything that we will exist on
+physical world we will exist on a
+virtual world first because it is the
+cheapest way to build the thing right
+for the first time uh we build and use
+Omniverse uh to our own application so
+we have AC uh that is uh the Avatar
+technology uh we use Omniverse for it we
+have uh digital twins of several cities
+where we use those digital twins to
+train uh anyia Drive Sim Technologies
+because inside the digital twin uh we
+can generate uh events that we can't in
+the real world so change the weather or
+cause collisions traffic and other
+conditions Isaac Sim uh that I mentioned
+before is already integrated with
+Omniverse so I can create digital twins
+of small stores up to huge places and
+also we are developing Earth 2 that is a
+hardware and software infrastructure
+that we're going to work with
+researchers uh and this is basically a
+digital twin of the planet Earth to
+study uh the climate changes impact and
+several other
+things uh Omniverse it's the tool for
+two basically scenarios the first one is
+3D creation and collaboration the second
+one is to create industrial uh digital
+Twins and to operate them when we're
+talking about uh 3D design it's really
+complicated because we are talking about
+of large teams with different skills
+which means different tools which means
+different kind of files to integrates to
+build a pipeline and we need more and
+more accuracy on uh on the results of 3D
+compositions so those workflows are
+rising uh in complexity uh we have a lot
+of challenges today people are working
+from different places uh in the earth uh
+sometimes we are talking about 3D data
+sets that can't be mov it from a place
+to the other because of their size and
+also uh it's really important have a
+single uh search of truth because most
+of this work is done uh linearly so this
+person here uh create an initial idea of
+a character uh and then this one uh make
+it more detailed this one put some
+polygonal and implement it this one put
+all the skeleto and the last one here
+start doing the animations imagine what
+happens if this guy get the wrong
+version of this one and they will just
+Discover it on the end when everything's
+built together so having a single sour
+of Truth is really important Omniverse
+can be uh has a what we call nucleus
+that is a central server where where
+everyone can work uh together using the
+key Technologies from Nvidia over the
+past decades and they can act and
+interacting real time so everyone can be
+on the same place virtual space uh each
+one doing its part of the work and
+everyone see what everyone else is doing
+and when we are talking about digital
+twins we can uh create the digital twin
+and we can operate this digital twin
+doing things like like uh robot training
+digital human training Factory planning
+operation simulations and this is all
+done basically on real world existing
+assets let's say uh the the cad uh files
+for the factory itself or for the robots
+that are operating there so basically we
+go from The Real World and we create
+everything on the on the virtual
+environment here we have an example of
+two two people working GA an Omniverse
+on this side I have a a person working
+uh creating an area that is this kitchen
+on a specific tool this is not Omniverse
+I think it's Revit and on the left side
+I have someone working with Omniverse
+create putting texture lighting and so
+on so as you can see uh every change one
+one uh professional does to his part
+it's automatically translated to the
+other one here we have someone working
+on the architecture of of this lightning
+stuff and uh someone else doing the
+lightning actually and illumination and
+all those things and we have rear here
+on the right side an image that let's
+say our art director can be seing and
+giving feedback on real time this is
+good this is bad change this change that
+change the lights change the structure
+almost in real time without Omniverse
+this is a back and forth uh linear
+process here we have three people
+working putting assets on a kitchen for
+one specific demo and here we have an
+arch director on a project director just
+giving feedback in real time so they can
+see uh the changes or other um people
+are doing those are the basic uh uh
+components that is part of Omniverse
+nucleus that is a central repository
+connect that allows to connect to
+several other applications kit that are
+a set of res reference applications
+basically in Python uh to allow you to
+interact and to use all these simulation
+Technologies and also RTX renders it's
+just possible because of the universal
+scene description that is a file format
+and a file framework that is the HTML
+for 3D virtual wordss it was created by
+pixer because pixer has a very complex
+uh bu data building and and asset
+building Pipeline and they say hey
+there's must be an easy way for us to
+integrate all these so uh Nvidia and
+Market working this with uh with Pixar
+uh there is now a whole uh open
+structure and open Association to
+evolute open USD uh today basically on
+Omniverse when you have an image like
+this uh this image is based on different
+assets that are like layers and each of
+those assets were created with a
+different to so without Omniverse
+without USD it will be really hard to
+integrate everything on a single
+experience Omniverse is not a tool it's
+a fabric uh with a huge amount of tools
+ecosystem this slide is outdated because
+it's really hard to keep it updated but
+it gives you a very good idea uh here
+are some of the software partners and
+dearly adopters of Omniverse uh
+Omniverse can be automated and extended
+using python so I used to explain amerse
+to developers as imagine a python
+Frameworks that can build metaverses and
+virtual words and V virtual things for
+you to explore uh there's a lot of Open
+Source involved with this you can just
+uh download Omniverse check one of the
+extensions and start working with them
+inside Omniverse we have physical uh
+simulation uh using all Nidia
+Technologies so we can replicate the
+real world rules physical rules to the
+virtual bo uh we also have a Handler and
+you can use external rinders too uh but
+it's very uh uh well developed it to
+bisa label so when when we have complex
+workflows we can distribute this to
+clusters uh realtime photo physical
+accurates and base it all on Open
+Standards this is a short video of the
+BMWs Factory of the future I invite you
+all to go to YouTube and check any video
+on home Universe digital twins you'll
+see a lot of uh very good examples of
+videos and and projects and sometimes
+it's hard to say what is real and what
+is virtual using this technology to
+finalize here I would like to leave you
+uh three key uh links uh to learn more
+about all the things developer.
+nvidia.com just go there register
+yourself forums that really works
+because the framework developers monitor
+those forums uh we have a lot of uh uh
+material to learn um and to know more
+about an evid including some training uh
+Inception program that is a program to
+engage startups all over the world we
+have more than 15,000 startups all over
+the world I'm responsible for almost 700
+here in Latin America and we are really
+helping startups to innovate with AI and
+Hardware GPU acceleration and also an
+evid on Dem month I would suggest to
+everyone on an that you change this to
+nerdflix uh but idea was not accepted
+yet but this is basically what it is so
+on each event that we have V that we
+talk about in the next slide uh we
+generate like 400 talks of content
+everything is uploaded to this portal so
+if you need to learn anything about
+Nvidia uh tools and software and use
+cases you just go to Nvidia on demand
+you can log in using your developer
+account and you are able to access to
+all the content we already generated uh
+March 20 uh 18 to to 21 we're going to
+have in in San Jose first time
+presential actually hybrid after five
+years we're going to have the GTC that
+is the biggest uh technology conference
+we have on Nvidia I really recommend you
+all to register now uh just scan this QR
+code you will be on a link where you can
+register for free for the online uh
+event but also if you want to attend in
+person with this Q code you can have
+25% discount uh on your
+tickets I would like to thank again uh
+to to otavio and Fabio that invited me
+to be here with you today thank you for
+all uh your attention to uh if you want
+to contact me on social media uh this is
+the easiest way uh you can find me
+everywhere from linkoln to Twitter uh
+using this thank you very much I hope
+this was useful for you
+thank you thank you Jamar yeah it was
+really uh amazing and thanks a lot for
+for that I think that the viewers really
+understood how to accelerate application
+using NV sdks I think it was an
+insightful presentation for
+all devop
+CL
+this just Just One Last Insight I know
+it was a lot of content but in a
+nutshell what I would like to say is uh
+10 years ago when we going to start to
+use GP acceleration and AI you really
+need to know a lot of parallelism uh
+process distribution it was hard okay so
+we create a lot of abstraction layers
+that today it's really use it's really
+easy for any developer to start uh
+working with these Technologies uh this
+is not rocket science anymore and I
+really recommend you guys to explore uh
+because there's a lot to be viewed yeah
+yeah yeah I really agree with you and I
+and I know that some of our Engineers
+are also here so I think that is amazing
+for them too and yeah and thank you
+again for for that it was a very lean
+and illustrative presentation that I
+liked that bright aspects that you want
+to highlight and to dive in so thank you
+for that thank you for your time and for
+your kindness to be with us today and
+while we are waiting to see if you have
+some questions uh from our viewers uh as
+I told you before in this live stream we
+have a final interactive segment where
+each speaker um must answer must answer
+question from the previous speaker and
+do a question for next one and the
+question that our previous speaker
+brought to you and you need to answer is
+it's not related with tech but would you
+rather give up social media or eat the
+same dinner for the rest of your life so
+I think that I know your answer but
+because I think
+that will get social media you know uh
+my my Twitter account is for
+2006 yeah okay so uh I was using Twitter
+when we receive SMS messages on feature
+phones so I started almost back there
+and uh know a lot of changes over the
+past I don't think it was so oh thank
+you otavio uh I don't think it's uh it's
+the the the same place it was in the
+past
+uh but I have a question for the next
+one uh how geni how gener generative AI
+change it the way you
+work oh amazing amazing and and I think
+it is a very good question because I
+already know who the next speaker will
+be so I think that fits like a glove in
+him so yeah question I will let me just
+point that and just
+to to ask the question to our next
+speaker and I think think there is no
+questions and I think it is maybe it's a
+good thing because your your
+presentation was as insightful as it can
+be it could be so that said uh and thank
+you thank you for for um your
+presentation thank you for being with us
+today and I hope that you also enjoyed
+it and for the our viewers and for our
+ex biters not a goodbye see you see you
+in March in the Third Edition of this
+Liv stream and and of course John Mario
+are invited to participate in our next
+live stream not as a speaker uh but as a
+viewer but maybe next time you can be
+speaker again so thank you so much thank
+you one one last thing guys if you if
+you need to send me any questions please
+send me on Twitter I will not talk that
+X because I hate this name and also on
+LinkedIn okay just send me your
+questions on LinkedIn I answer to
+everyone there thank you so much for the
+opportunity I really hope to see very
+very great AI apption come from you guys
+as far as I remember your social media
+name Omen bite Omen bite Omen
+beachen yeah yeah okay let me just uh on
+bit just to be here for everyone that
+wants
+to like this I
+think om om bit exactly in the comments
+exactly so if you want to contact uh jar
+please do so in their social media by
+Omen be so thank you again Jamar and see
+you next time bye bye thank you so much
+pleasure byee
+pleasure

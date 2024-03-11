@@ -1,0 +1,77 @@
+if you're newer to nosql databases and
+want to learn more about what they are
+this video is for you
+welcome back to our Channel I'm Megan
+from mongodb's developer relations team
+here at mongodb we talk a lot about
+nosql databases because that's what we
+are but what does that even mean nosql
+is technically an umbrella term for any
+alternative system to traditional SQL
+databases nosql databases use a data
+model that has a different structure
+than the rows and columns table
+structure used with rdbms now within
+nosql databases there are actually four
+types document databases key value
+stores column oriented databases and
+graph databases let's talk about each of
+these in a little more detail first up
+we've got document databases a document
+database like mongodb for example stores
+data in a Json or bson format you can
+access store and retrieve documents from
+your database in a form that is much
+closer to the data objects used in
+applications this means that less
+translation is required to use and
+access data in an application document
+databases are popular with developers
+because they offer the flexibility to
+rework their document structures as
+needed to better suit their applications
+in SQL databases however intervention by
+database administrators may be required
+to change the structure of a database
+next we have key value stores and this
+is the simplest type of nosql database
+every element is stored as a key value
+pair consisting of an attribute name or
+the key and a value this database is
+like an rdbms with two columns the
+attribute name such as state and the
+value such as Alaska third we have
+column oriented databases while an rdbms
+stores data in rows and reads it row by
+row column oriented databases are
+organized as a set of columns when you
+want to run analytics on a small number
+of columns in a database you can read
+those columns directly without consuming
+memory with unwanted data finally we
+have graph databases a graph database
+focuses on the relationship between data
+elements each element is contained as an
+node the connections between elements in
+a database are called links or
+relationships connections are first
+class elements of the database stored
+directly these databases are diverse in
+their data formats and applications
+furthermore systems store data in
+different ways these differ from rdbms
+in that they can be schema agnostic
+which allows unstructured and
+semi-structured data in a network to be
+stored and processed this was just the
+tip of the iceberg and we've got a whole
+lot more where that came from in the
+description below we're leaving a few
+more links to other videos and articles
+that you might find helpful if you're
+still here it's because you found this
+video valuable and we'd be very grateful
+if you could give it a thumbs up if you
+haven't already be sure to subscribe to
+our channel so you never miss our
+content and we'll see you next time

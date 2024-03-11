@@ -1,0 +1,601 @@
+hello and welcome to this session on sql
+server tutorial
+today we are going to talk about
+sql server what benefit it provides
+and some queries and some
+sql syntaxes which will help you
+understand how to use sql queries
+now let's see what's in it for us today
+we will discuss what is sql server
+the usage of sql server
+different sql server editions and the
+differences between them
+and then what are the advantages of sql
+server instances
+and after that i'll show you execution
+of some queries
+some insert statements on the sql server
+instance which i have installed
+now what is sql server in any
+application development today in any
+computer application which we develop
+database sql server plays a very
+important and pivotal role
+sql servers are used for persistence of
+information
+in your database which can be retrieved
+mined
+data mined or you can query it at a
+later point of time
+the benefit of having any sql server is
+that data
+is persisted in a structured
+efficient
+manner so that it can be retrieved later
+quickly and meaningfully
+so sql server is a relational database
+management system in which you can
+create tables two-dimensional tables
+and connect them using referential
+integrity like primary key foreign key
+and other kind of integrity constraints
+you can maintain in this relational
+database
+sql server is developed and marketed by
+microsoft so this is a microsoft product
+but it is compatible with all the
+technologies which you want which you
+might be using or you might want to use
+like node.js java etc where you want to
+connect your middleware
+application server with microsoft sql
+server
+now what is the usage of sql server
+apart from the
+definition which i just shared with you
+for maintaining and building databases
+persistent databases there are other
+usages also which i'll explain you
+now the first one is sql server analysis
+service which is used to analyze data
+now the sql server analysis service or
+ssas is a multi-dimensional analysis
+tool
+that features online analytical
+processing provide powerful data mining
+capabilities and deeper dimensions to
+business information within a relational
+database
+multi-dimensional analysis is an online
+analytical processing technique olap
+technique
+that produces the ability to analyze
+large quantities of data by storing data
+in access and cells instead of
+traditional
+relational two-dimensional view in rows
+and columns
+ssas places predictive analytic
+capabilities in the hands of information
+workers by creating an instant
+connection to backend data using
+familiar applications such as microsoft
+excel sharepoint etc for analysis visual
+representation and collaboration
+the next is
+sql server reporting services which is
+used to generate reports
+now ssrs is a framework of reporting
+mechanisms such as the report builder
+report designer report manager and
+report server that work together through
+a web interface to enable the
+development of concise interactive
+reporting solutions in print or web
+format
+report builder and report designer are
+two ssrs components for generating
+reports
+report builder is a simple solution for
+the information worker or business user
+to create quick reports without the need
+to understand the core structure of the
+data
+the report designer is a tool for
+developers because it adds complexity to
+custom reports development and you
+create data models in it
+using this tool requires an
+understanding of the business
+intelligence development studio shell in
+visual studio
+and the underlying structure of the data
+so you have to be aware of it thoroughly
+according to microsoft the report server
+is the core process engine in ssrs that
+manages the processing
+and delivery of reports using processors
+the report manager is an administrative
+tool that controls reporting services
+through a web interface
+now let's talk about another important
+component which is sql server
+integration services ssis which is being
+used to perform atl operations extract
+transform load
+now ssis is the data warehousing arm of
+the sql server
+equipped with superior extract transform
+and load capabilities etl
+it provides the vehicle for moving data
+from different data sources to another
+and changing the data if necessary the
+three components in the ssis platform
+for starting the data integration
+process
+are the import and export wizard ssis
+designer and ssis api programming
+the import and export wizard simply
+transfer data from source to destination
+but does not include data transformation
+capabilities it's the ssis designer is
+an integrated component of the business
+intelligence
+development studio used for the
+development and maintenance of
+integration service packages
+ssis api programming module allows you
+to code ssis packages using any number
+of programming languages so there are a
+lot of features which are available to
+you in order to
+manage your data create your data
+pipeline structure it
+build visualization reports
+perform etl operations etc so it's an
+entire solution enterprise solution
+now let's see what are the different
+kind of sql server editions microsoft
+provides five additions with various
+tools and services and pricing options
+as per the needs
+so enough two editions of sql server
+which are free of charge are sql server
+developer and sql server express
+now the developer sql server edition
+works and function exactly like an
+enterprise sql edition the only
+difference is the license is used for
+testing and development purpose only
+this addition is generally used by
+developers to build and test
+applications on top of the sql server
+but they can't take it to the production
+sql server express edition now is the
+free entry level database version and is
+ideal for learning and building desktop
+and small server data driven
+applications but not meant for any
+serious computation
+while also having incredibly limited
+features
+now the other additions are used for
+commercial purposes
+sql server web edition
+it is a low total cost of ownership
+option for web hosts and web value ad
+providers to provide scalability
+affordability and manageability
+capabilities for small to large scale
+web properties
+as the sql server enterprise edition
+delivers comprehensive high-end data
+center capabilities with blazing fast
+performance unlimited virtualization and
+end-to-end business intelligence
+enabling
+high service levels for mission critical
+workloads and end user access to data
+insights
+this version has all the features
+required for big data
+now sql server standard edition this
+delivers basic data management and
+business intelligent database for
+departments and small organizations to
+run their applications and support
+common development tools for on premise
+and cloud enabling effective data
+management with minimal i.t resources
+now let's look at some advantages of sql
+server instances
+its installation is of different
+versions on one machine you can maintain
+different installations the maintenance
+of production development and test
+environments can be done separately
+you can maintain a standby server
+so installation is streamlined it can be
+installed via setup wizard and the
+prerequisites
+updates are detected and downloaded by
+the installer automatically
+the complexity of the installing the
+software is minimized significantly
+because of automatic installation of
+updates
+other components such as analytical and
+database services can be installed
+separately afterwards
+automatic updation also reduces
+maintenance costs quite significantly
+sql server 2008 uses policy management
+to detect security policies that are not
+compliant so this feature allows only
+authorized personal access to the
+database security audits and events can
+be written automatically to log files
+ms sql server has built-in transparent
+data compression feature also along with
+encryption users don't need to modify
+programs in order to encrypt the data
+the ms sql server has access controlled
+coupled with efficient permission
+management tools
+further it offers an enhanced
+performance when it comes to data
+collection
+okay and
+coming to the cost reduction so it has
+lower cost of ownership sql server
+includes effective data management and
+data mining tools along with disk
+partitioning your server's optimum
+maintenance can be ensured by following
+effective data management practices
+these practices
+also help you ensure the availability
+and recoverability of data choose from
+over 300 in-demand skills and get access
+to 1 000 plus hours of video content for
+free visit scale up by simply learn
+click on the link in the description to
+know more
+now let's move on to
+creating
+a
+database in sql server
+so i have installed the default sql
+express on my machine
+and now i'm gonna
+create a database called sql tutorial
+so let's create a database called sql
+underscore
+tutorial
+okay
+now i will write certain queries on top
+of it
+first i'll create a table
+customers let's create a table customers
+which has columns customer id which is
+its primary key
+the name
+which has where care customer id is in
+age
+which is an integer gender male female
+will
+notified with one character address
+which is generally a large num string
+value so we'll keeping it back at 20
+item which is varchar 15 and price okay
+so let's
+create this table
+okay so now if you see this table has
+been created dbo dot customers now all
+the relevant columns which i created
+here has been present
+now
+i have
+prepared a script to insert
+some sample values
+so that
+we can
+query this so i have inserted around
+about 20
+values
+so let's just check
+whether my data is present i'll do a
+select star
+from my customer table and you can see
+now the 20 rows with the customer id
+customer name
+age gender
+address
+the item which the customer has
+purchased and the price at which he has
+purchased
+now
+let me show some variations of the
+queries which we can perform
+now select star means you have selected
+all the columns
+i only want to select some
+selective columns like customer name and
+gender
+so i can also do that you just need to
+give the name of the
+customer and the gender column
+next query
+i want to check
+what is the distinct values of the
+gender in my customer table
+so i will only get two values which is
+male and female so there is no other
+value apart from m and f
+in my customer table
+next i have a query where i want to find
+which all are the customers who have
+purchased an item who all are the
+customers who have purchased an item
+which is having price greater than 250
+rupees
+okay great so out of 20 only 12 other
+customers who have purchased a price
+item which is greater than 250 and you
+can see
+all the items which are listed over here
+are greater than 250.
+next
+okay i want the customers who are living
+in new york
+okay
+fine i just have to change the where
+clause where instead of the price i am
+now looking at the address which is in
+new york
+now it is also possible that you can
+apply
+another filter okay
+people living in new york but age is
+greater than 28
+perfect i only have two customers who
+are
+living in new york
+but
+having age greater than 28
+or
+i want
+the female customers who are purchasing
+items greater than 380 rupees okay only
+one out of 20
+okay elena
+now
+we saw examples of and condition
+there is also possibility that okay you
+want female customers or customers who
+are greater than age 30 so you will get
+both the records age greater than 30 or
+female customers both the records will
+come
+or
+customers who are in chicago or
+purchasing
+items greater than 420. so these are the
+examples of or conditions
+now let's take another example of not
+now i want that the customers who are
+not
+purchasing price less than 650 the
+reverse right greater than 650 so i'll
+get this answer
+or
+i want the customers who are not living
+in new york apart from new york
+any other address so all these customers
+are there okay
+so now these are the examples which i
+showed you are the examples where you
+can play around you can filter data
+applying the where clause
+now let's take another example of
+aggregated functions in sql
+now amongst the list of customers the
+data set of customers which i have i
+want to know what is the minimum age of
+my customer well minimum age is 18 years
+so one the minimum age amongst the all
+the customers is 18
+and the maximum is
+i can just change it to max
+is 61. so the age range of my customers
+who are purchasing are from 18 to 61.
+okay now another example hypothetical
+example
+i want the average age of my customers
+where customer id is greater than 105
+okay so if you see
+select star
+where customer id is greater than 105 i
+have 15 customers and amongst these
+my average age
+of my customers is 35.
+similarly instead of average i can take
+the sum total of the
+age
+above 105 which is 539 sum total okay
+now
+i'll show you an example of like
+i want the name i want the customers
+list where addresses
+which consist of e letter e in their
+address it anywhere in the string
+beginning in the middle because i have
+like
+is a keyword like percentage first e
+percentage means e can come in any part
+of the string
+okay
+and if i just change this example
+i remove the percentage from here it
+means
+that i want the customers whose
+addresses end with e so only pune will
+come into the picture okay
+so
+so this is the difference
+now coming select star from customers
+where age which between 20 and 30 so i
+want all the customers which have belong
+to age between age 20 and 30 inclusive
+so 20 and 30 both are inclusive so it
+means the customers which with age 20
+and all 30 will also come in this result
+set
+next example i want the count of total
+customers in my
+uh data set which is 20 i inserted 20 so
+i know now i have 20
+i want the count of male customers
+oh out of 20 19 are male okay great
+and if i
+group by now let's see an example of
+group by
+so i want
+the count of customers grouped by
+address so how many are living in boston
+how many in chicago detroit miami new
+york and pune so i have a customer wise
+total count total
+bases the address group by okay so it's
+a very important concept you can group
+by any column and then you can do a
+measure count account or sum an average
+you can do any aggregated calculation
+basis the other columns which are not in
+the group by
+unlike another example i want an average
+age
+per address so in boston the average age
+of my customer is 34 who are purchasing
+items chicago 35 pune 43. so like that
+you can do some analysis this is all
+data analytics
+now let's see another example
+i want to i want to filter data now
+after doing a group by it's not so
+please note this is different from where
+clause in where clause means filtering
+data before grouping
+having clauses used once you want to
+filter data after grouping
+so you are doing group by address count
+of customers and then only those cities
+should come where count is greater than
+two okay
+so the customers
+the only those addresses are listed
+where customers count is greater than
+two okay
+now this is an example of
+inner queries
+you want
+group by customer name and age
+only those customers having age greater
+than the average age of overall okay so
+my average age
+if i say my average age
+from customers is 36
+so overall all the customers which are
+more than 36 should come over here
+listed over here and that's what has
+happened okay
+now
+let's talk about order by it's like
+sorting
+you want to order by address so it has
+ordered by by default b c d m n p which
+is
+ascending
+and if you
+apply
+keyword descending
+so it will do the reverse way
+similarly i can order by age
+which is descending higher stage first
+lowest below
+or
+you can do order by multiple columns
+where
+order by address descending and then
+same address within the same address the
+customers should be ascending so
+addresses are descending but within the
+address the customer names are sorted in
+ascending fashion a first bcd like that
+now there is an inbuilt function in sql
+server reverse if you see this has
+reversed the name
+of the customers it's in reverse fashion
+okay
+the characters are reversed
+another example is
+where you are now this is not on the
+table this is just a sample query where
+you are replacing vegetable with fruit
+so orange is a fruit so you have
+replaced vegetable with the fruit it is
+just uh you don't need a table you can
+just also write such queries where you
+don't need a table
+okay
+then there is a function called ltrim
+which is which will remove all the
+blanks
+from the
+left hand side
+r trim which will remove the blanks from
+the right hand side
+okay let me read an r trim
+it will remove the
+blanks from the right hand side and then
+there is trim function which will remove
+from both the sides
+left and right
+now let's take an example of update
+command i want to update the name of my
+customer whose customer id is 103.
+first
+let's
+check what's the name
+the customer name right now is ripple i
+want to change it to
+smith
+and if i read query it is changed to
+smith okay so this is an example of
+update
+now if i want to delete let me check who
+is at 101 i want to delete customer101
+joseph i will delete it
+and now if i want to check okay there is
+no customer at one zero one
+okay now let's take one other example
+this is like another example of inbuilt
+function as sky it will give you the
+ascii code of the character
+ascii a
+sky 4 etc etc right
+so there is n number of
+possibilities there is n number of
+queries which you can write but
+this is just a glimpse and basic
+understanding of for you to get started
+with sql queries on sql server
+i hope you all had a great learning
+session and i hope to meet you in my
+next session thank you
+[Music]
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

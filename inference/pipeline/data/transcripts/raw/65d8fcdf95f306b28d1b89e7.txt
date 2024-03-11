@@ -1,0 +1,420 @@
+the central processing unit or cpu is
+like the engine in your car
+or the brain in your skull and is like a
+really fancy calculator
+used to run the applications on your
+computer when you write software in a
+language like javascript or python
+you're actually writing a set of
+instructions that will be executed as
+machine code by a cpu
+which itself is a carefully crafted
+piece of metal and silicon that contains
+billions of tiny transistors
+or on off switches that represent ones
+and zeros
+to perform mathematical calculations a
+cpu will combine multiple transistors
+together to form logic gates
+for example and will take two binary
+inputs and validate that both are true
+to produce a true output it only takes a
+few basic logic gates to solve highly
+complex computational problems
+modern chips contain billions of
+transistors and they can be flipped on
+and off billions of times per second
+the state of the cpu is synchronized by
+an oscillator known as the clock
+generator
+in general the more times the clock can
+pulse per second the faster the cpu can
+compute and is normally measured in
+gigahertz
+gamers will sometimes overclock their
+cpus to gain more performance
+at the cost of higher temperatures and a
+lower life expectancy now in order to
+run applications it interacts with the
+system memory or ram
+in a series of four steps known as the
+machine or instruction cycle
+step one is the fetch phase think of a
+software program as a set of
+instructions stored in the ram the cpu
+has registers to temporarily store the
+address and memory that it wants to
+interact with the program counter starts
+at 0
+and copies that address to the memory
+address register then the control unit
+sends out a signal to copy the data from
+that address
+to the instruction register at which
+point it needs to figure out how to use
+this instruction
+in the decode phase the control unit
+parses the actual bits in the
+instruction
+most importantly the opt code contains
+the instruction like add or subtract and
+the operand is the address in memory to
+perform that operation on
+the final execute stage takes the
+decoded information and passes it as
+electrical signals to the relevant parts
+of the cpu
+the arithmetic logic unit or alu can
+perform math on the data and then store
+the results in ram to change the state
+of the program the cycle is repeated
+billions of times per second
+and modern chips utilize multiple cpu
+cores to run multiple computations in
+parallel
+that's how a cpu works under the hood
+but there's a lot more you should know
+about processor architectures if you're
+a developer and that's why i've invited
+alex from the most underrated tech
+channel on youtube
+to break down some more advanced
+concepts like apple silicon and how to
+run performance benchmarking on your own
+machine
+hi everybody my name is alex and i'm
+here to take you beyond 100 seconds in
+your quest
+to learn about how processor
+architectures differ and also how those
+differences affect our productivity
+as developers i'll show you what the
+apple silicon
+chip and a refrigerator have in common
+and then i'll share some of my own
+experiences with using developer tools
+and build execution on the first
+generation apple silicon chip
+called the m1 ship as compared to the
+intel chip
+first and foremost i just want to say
+that my personal productivity as a
+developer depends less on processors
+inside my computer
+and more on how much coffee i had and
+whether i'm trying to work after a big
+meal
+but aside from human factors let's dig
+deeper into
+why the new apple silicon machines have
+been really kicking up a storm and
+changing the industry
+software development included and
+spoiler alert the m1 machines have been
+beating the intel machines in pretty
+much every build test i've thrown at it
+except a couple but it's not all roses
+so let's talk about some downsides later
+too
+so why is it so darn fast the first
+point i want to discuss
+is the physicality differences of the
+new apple silicon way
+versus the old intel and amd way this is
+what apple silicon and your refrigerator
+at home
+have in common all right imagine for a
+minute that you want to make a turkey
+with cheese sandwich
+you go over to the refrigerator and in
+one place
+you have the turkey breast the cheese
+the mayonnaise the mustard
+all those ingredients are right there in
+one place and you don't have to run
+around the house to gather them you
+don't have to drive to lots of stores to
+pick them up
+and this saves you lots of time and
+energy this kind of efficiency can be
+found in the new apple silicon
+chips because they aren't just a new
+processor
+apple silicon is a collection of many
+chips that are housed inside
+one silicon container and this type of
+system is known as a system on chip
+or sock and it's essentially an entire
+computer
+on one chip the main cpu the gpu
+the i o controller the ml engine they're
+all co-located
+so when the task is to make an
+electronic sandwich so to speak
+or in other words to do some work that
+involves all these different components
+a system on chip is going to be a lot
+more efficient
+in terms of energy usage using only a
+tiny bit of power
+and at the same time it's going to be
+faster than say a typical machine that
+has all the components
+separate intel based machines have a cpu
+that's a single
+chip and memory is located somewhere
+else on the motherboard
+the i o is somewhere else the individual
+components might be even more powerful
+than the ones available at the moment on
+the latest apple silicon based machines
+but that comes at a cost since these
+powerful components are like
+supermarkets that carry different
+sandwich ingredients
+as a result when you want a sandwich on
+an intel machine
+you'll have to drive all over town
+because one store will have the turkey
+another store will have the cheese yet
+another store will have the mayonnaise
+each store might be really good at their
+own process and have the best
+ingredients
+but each store also takes a lot of power
+to run losing out on the efficiency
+and since all you really want is just to
+make a simple sandwich
+you're wasting a ton of time and energy
+picking up the ingredients from
+all the different stores of course some
+might say the drawback
+with the system on chip design is that
+at least for now with the current
+selection of apple max you won't be able
+to upgrade or change
+any of the components you get what's on
+the menu and that's it
+but that's not news to most people that
+are familiar with the apple ecosystem
+once you accept that idea you might even
+see the benefits of having a more
+efficient design
+where all the components are on one chip
+and they outweigh the cons
+and still provide better performance
+than the alternative all right
+that's enough talk about food so how
+does this all affect
+real world development workflows so i've
+been doing a bunch of developer focused
+tests on the latest apple silicon
+machines over on my channel
+as well as comparing them to other
+machines like the intel max and pc
+machines too
+and in general the new design has been
+showing really great promise for my own
+workflows as a developer
+coffee and sandwiches excluded now there
+are lots of technology stacks that
+developers use of course
+and i'm trying builds in a few of them
+but now let me share some of the results
+i've seen with node and javascript tests
+and after that i'll also discuss the
+tech stacks that have the biggest gains
+on the new machines
+and also the stacks that have the
+biggest losses right now at the moment i
+started off trying out some existing
+javascript tests that are in the browser
+and then in node the browser test
+consisted of running speedometer
+which is a browser benchmark that
+measures the responsiveness of web
+applications
+it uses demo web apps to simulate their
+actions such as
+adding to-do items you visit the app in
+a browser of choice
+i tried chrome and safari for this and
+you execute the automated test that runs
+through a collection of applications
+built with some of the more popular
+ui frameworks like angular react amber
+even vanilla js and jquery and a whole
+bunch more
+and then this test reports the results
+as a single number when it's done
+this number represents the runs per
+minute and the higher the better when it
+was finished i found that it had
+significantly more
+iterations on the m1 safari had the best
+results even going off the scale
+and chrome did pretty well too i also
+ran some javascript benchmarks in a node
+environment
+and found a pretty cpu intensive
+algorithm called
+fancook redux that's implemented in
+javascript
+and created for benchmarks game a
+website that collects
+algorithms and tests in different
+languages and while my 16-inch
+macbook pro with the intel core i9
+processor
+did beat the macbook air with the m1
+chip it really didn't do so by a lot
+and when you consider the price
+differences between the machines
+and the fact that the m1 stayed cool
+throughout the test and
+that the battery hardly even took a hit
+on the m1
+you might be thinking whether the extra
+few seconds saved while running this
+benchmark
+on the intel i9 is really worth the
+money so running benchmarks is often
+very telling
+but it doesn't necessarily line up with
+real-world scenarios
+so that's why i also like to conduct my
+own tests whether using my own projects
+or other open source projects that are
+out there and that commenters
+sent to me and here's what i found i ran
+a build of the official
+nativescript plugins repository which is
+a project based on
+nx workspaces if you're not familiar
+with nx workspaces it allows you to
+scale
+large javascript and other tech stack
+projects
+and you can see the nx quickstart right
+here on this channel
+in my test the build that took about
+three minutes on each machine
+only differed in build time by tens of
+seconds with the m1 macbook air beating
+out
+the intel macbook pro two out of three
+times so
+let's talk about what dev stacks benefit
+the most from the new apple silicon
+chips
+at this time for javascript developers
+the benefits are already visible
+however if you're building mobile apps
+for ios for compiling c
+plus plus code then this is where you'll
+see a 40 to 50 percent improvement
+in build times i ran a few xcode builds
+and swift builds
+and i did some c plus plus algorithms
+and built opencv
+and webkit in all those tests the m1
+came out on top
+so what devstacks benefit the least so
+far in my own testing any builds that
+have to do with running
+natively built software and building
+using native tooling
+has absolutely destroyed intel and speed
+and battery performance
+native being compiled for the apple
+silicon architecture
+even when running some software via
+apple's rosetta
+that's the translation layer that allows
+you to run intel and amd based
+x64 and x86 programs on the new apple
+hardware
+even some of those software packages ran
+better than on intel
+and that's just amazing but there are
+workflows that aren't
+ready yet in my opinion if you are an
+android developer android studio
+and official android emulators work on
+apple silicon
+but they're currently using rosetta for
+translations
+and while rosetta is generally pretty
+good at running x86
+targeted code on arm chips it's not
+enough for the cpu hungry android
+workflows
+and i found the results to be not very
+usable at the moment
+the latest version of dot net which is
+version 5 right now
+isn't fully supported to run on arm
+simple console applications ran just
+fine for me
+but testing any web workflows like
+asp.net core
+doesn't work at all yet now it's
+expected that by the end of this year
+dot net six will come out
+it's in alpha right now and we'll have
+full support for arm
+until then if you need to develop.net
+apps i suggest using a pc
+with windows oh and if you think you can
+use a virtual windows machine
+i've tested this as well parallels is
+the only vendor that currently supports
+the m1
+chip to create a virtual windows
+environment but the issue is that the
+windows guest operating system for arm
+is still quite immature and needs a lot
+of work also
+visual studio 2019 the latest visual
+studio offering from microsoft
+is unfortunately not compatible with arm
+at all and my test is not
+stable even using the built-in windows
+translation
+of x64 software to run on
+arm hardware for game developers that
+use unity i'm pleased to say that it
+works surprisingly
+well on apple silicon via rosetta
+however it's not as performant as
+running natively on x86
+but by the time you watch this video
+unity might have a version natively
+compatible with m1
+which i know they're working hard to get
+out as soon as possible
+overall apple silicon has really put a
+boost into many workflows
+for developers and other professions and
+eventually even gaming
+and with the m1 tests we're seeing the
+improvements with
+just their entry level machines the
+upcoming second and third generation
+apple silicon machines will be even more
+performant and i can't wait to see that
+i think it's really gonna help us as
+developers move to the next level and i
+think it's just gonna lift up the entire
+industry
+to follow the updates on the new apple
+silicon chips as they relate to us
+developers as well as seeing me conduct
+these tests that i've been discussing
+here
+consider subscribing to my channel as
+well the link is down below
+i'm gonna wrap it up there thanks to
+fireship for hosting me to share this
+amazing new world
+that we're about to enter as developers

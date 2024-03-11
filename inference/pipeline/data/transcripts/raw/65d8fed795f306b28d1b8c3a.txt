@@ -1,0 +1,175 @@
+This paper presents a synthesis of COMPUTATIONAL
+RATIONALITY as a theory of human-computer
+interaction.
+Our point of departure is the observation
+that interactive behavior is highly adaptive.
+That is, the way we act and think emerges,
+SOMEHOW, as a function of our beliefs, goals,
+capabilities, and the design.
+Understanding this emergence is the primary
+goal of this theory.
+Computational rationality builds on advances
+in machine learning, where, among others,
+reinforcement learning has shown tremendous
+success in solving complex interactive tasks.
+In reinforcement learning, an agent tries
+to learn a sequence of actions that maximizes
+its rewards.
+This is very similar to HCI where users' goals
+are often distal and the world subject to
+uncertainty and partial observability.
+However, AI research is not aligned with HCI's
+goal of explaining HUMAN adaptation.
+During the recent years, there has been increasing
+interest in exploiting RL to model HCI tasks.
+Here you see an RL agent from last year's
+CHI.
+It moves its eyes and fingers to type a given
+sentence with a given UI design.
+The model demonstrates very human-like behavior
+in how it monitors.
+typing errors and reacts to them.
+The benefit of RL for HCI is that we can change
+the design and a new behavior emerges.
+Here, autocorrection was turned on and the
+agent learned to type in faster and a more
+relaxed way relying on the autocorrection.
+Remarkably, and in a stark contrast to the
+now-popular supervised learning paradigm,
+in RL, no human data is required for training
+agents.
+In the wake of increasing interest in the
+field of HCI, we have to ask what IS computational
+rationality for HCI?
+That is, what are its core theoretical commitments,
+modeling ideas, and what is the scope of tasks
+that we can model with it?
+Computational rationality originates from
+the theory of reinforcement learning, but
+in applications in HCI it takes ideas from
+classical cognitive architecture models like
+EPIC and GOMS.
+In particular, it assumes that the agent can
+only access its internal environment, or cognition.
+To model that environment, we can take ideas
+from cognitive architectures, among others.
+We then use RL solvers to approximate boundedly
+optimal policies, which generates predictions
+of human adaption.
+To sum up, the theory assumes that human-like
+adaptive behavior emerges if the the relevant
+internal and external bounds are correctly
+specified.
+Let's compare this more closely with the familiar
+cognitive architectures paradigm.
+First, while cognitive architecture models
+model cognition as an information processor,
+in computational rationality the key purpose
+of cognition is to pick actions that are beneficial
+for it.
+While in cognitive architecture models a researcher
+manually specifies a rule set, in computational
+rationality a policy is obtained via optimization,
+for example via reinforcement learning.
+Both approaches share the idea that behavior
+is limited by cognition.
+However, in cognitive architecture models
+a theory is expressed by a program, or a rule
+set, while in computational rationality we
+use decision-theoretic formalisms, for example
+so-called POMDP - or partially observable
+Markov decision process.
+The theory makes four key commitments.
+The first is that the user faces a decision
+problem that is stochastic and sequential;
+in other words, it must pick an action that
+maximizes its future rewards, however this
+is done under partial observability of the
+world that is stochastic.
+Second, it does not have access to the hard,
+external reality, but only to its own cognitive
+states.
+Third, these states are limited by the bounds
+of human cognition.
+Fourth, the agent's behavior, over time, approximates
+a policy optimized within those bounds.
+If you are familiar with RL from the machine
+learning side, the main difference is the
+internal environment.
+Illustrating this further, in standard RL,
+the agent's policy is constrained by the external
+environment.
+We use RL to find the policy that maximizes
+the agent's subjective payoff.
+By contrast, in computational rationality,
+we are also bounded by the agent's internal
+environment.
+The emergent behaviors can be very different
+between these two approaches.
+How are such models created?
+We start modeling by creating a simulated
+environment that contains the user agent in
+its environment, including the design; for
+example, the eyes and fingers of a typist
+operating on a simulated touchscreen interface.
+Inputs and outputs to that system are processed
+by the internal environment, for example our
+motor and perceptual systems, which are then
+made available as states for the agent.
+We further need to specify a reward function,
+for example "maximize speed while minimizing
+errors".
+After this, we ask a RL solver to learn a
+policy.
+After training we can simulate the learned
+policy and compute different dependent variables
+that we're interested in.
+For example, in the typing model, we can compute
+trajectories, heatmaps, and summary statistics.
+In that particular paper, the results were
+remarkably close to human data.
+In a stark contrast to AI research, the goal
+here is note to learn agents that are "superior"
+to humans but to predict their behavior, including
+their imperfections, like the errors they
+make.
+But how far are with this type of modeling?
+The paper reviews every paper published on
+the topic so far, 15 altogether.
+They can be divided into six interactive tasks
+ranging from typing to driving and decision-making.
+The paper also talks about an emerging opportunity
+to apply these models to explain human behavior.
+Thanks to the fact that they have fewer number
+of free parameters, they can be fit to realistic
+human data much better than cognitive architecture
+models.
+This is done via so-called likelihood free
+inference, where we try to find a combination
+of model parameters that produces as much
+as human-like data as possible.
+See the paper for examples.
+Another emerging opportunity concerns design
+and adaptive UIs.
+Here, we can use computational rationality
+to predict how users MIGHT adapt to changes
+caused by a design or an intervention.
+See the paper for examples.
+To summarize, HCI has a distinct interest
+toward computational rationality.
+While AI research studies it as a general
+theory of intelligence, and cognitive science
+as a theory of human intelligence, in HCI
+we are interested in its potential to inform
+the design of better UIs.
+However, to make the approach more broadly
+accessible and relevant, using Ben Shneiderman's
+term, we need to expand it from micro-HCI
+and macro-HCI.
+In order to touch topics like computed-mediated
+communication, interactive AI, and ubiquitous
+computing, several outstanding theoretical
+challenges remain, such as how to model human
+motivation, learning, situations, or social
+interactions.
+Thank you for your attention.

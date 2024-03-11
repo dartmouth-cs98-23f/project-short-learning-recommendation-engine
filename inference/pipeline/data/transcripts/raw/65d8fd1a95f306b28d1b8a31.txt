@@ -1,0 +1,241 @@
+Hi my name is Will and i'm going to give  
+you a step-by-step guide to the 
+data analysis process, let's go!
+in this video we're going to go through the five 
+key stages of the data analysis process we're  
+going to give you an overview and an introduction 
+to each of these stages as well as looking at some  
+of the tools you'll use to undertake these stages 
+so let's dive into step one defining the question  
+the first step in your data analysis process 
+or any data analysis process is to define your  
+objective in data analytics terms this is called 
+the problem statement defining your objective  
+means coming up with a hypothesis and figuring 
+out how exactly to test it you can start by asking  
+what business problem am i trying to solve now i 
+know this might sound straightforward but it can  
+actually be trickier than it seems for instance 
+your organization's senior management might pose a  
+question such as why are we losing customers it's 
+possible though that this doesn't get to the core  
+of the problem a data analyst job is to understand 
+the business and the business's goals as a data  
+analyst you need to understand this in enough 
+depth that they can frame the problem the right  
+way to give you a practical example let's say you 
+work for a fictional company for example we'll  
+call it top notch learning this fictional company 
+top notch creates custom training software for its  
+clients in this example top notch is excellent 
+at securing new clients but unfortunately top  
+notch has much lower repeat business as such as a 
+data analyst your question might not be why are we  
+losing customers but which factors are negatively 
+impacting the customer experience or even better  
+yet how can we boost customer retention whilst 
+minimizing costs now you've identified the problem  
+you need to find which data is going to help 
+you solve this issue this is where your business  
+acronym comes in again for instance perhaps 
+you've noticed that the sales pipeline for new  
+customers is very slick but the production team 
+is extremely inefficient knowing this you could  
+hypothesize the sales process actually wins a lot 
+of new clients but the customer experience well  
+it's kind of lacking could this be the reason that 
+customers aren't coming back what sources of data  
+will help you answer this question as a data 
+analyst considering all these things will help  
+you define the question and help you solve the 
+problem at hand there's also a number of tools  
+that can help you define your objective defining 
+your objective is mostly about soft skills so  
+business knowledge and lateral thinking but you'll 
+also need to consider business metrics and key  
+performance indicators and these are called KPIs 
+monthly reports can help you track problem points  
+in the business there are lots of tools out there 
+on the market that can analyze this business data  
+tools like Databox and DashaRoo there's also free 
+open source software like Grafana freeboard and  
+Dashbuilder these are fantastic for producing 
+simple dashboards both at the beginning and at  
+the end of the data analysis process so that was 
+step one defining the objective onto step two step  
+two collecting the data once you've established 
+your objective you'll need to create a strategy  
+for collecting and aggregating the appropriate 
+data a key part of this is determining which  
+data you need this might be quantitative data or 
+numeric data eg sales figures or monthly reports  
+or qualitative descriptive data such as customer 
+reviews all of this data fits into one of three  
+categories first party second party and third 
+party data let's explore each one briefly now  
+what is first party data first party data is data 
+that you or your company has directly collected  
+from customers it might for example come in the 
+form of transactional tracking data or information  
+from your customer relationship management 
+system your CRM system whatever it source  
+first party data is usually collected in a clear 
+and structured way other sources of first party  
+data might include customer satisfaction surveys 
+focus groups interviews or direct observation  
+let's talk about second party data to enrich your 
+analysis you might want to secure a secondary data  
+source second party data is simply the first 
+party data of other organizations this might  
+be available directly from the company or from 
+private marketplace the main benefit of second  
+party data is that it's usually structured 
+and although it's less relevant than first  
+party data it tends to be reliable examples of 
+second party data include website app or social  
+media activity like online purchase history or 
+shipping data so lastly what is third-party data  
+third-party data is data that has been collected 
+and aggregated from numerous sources from a third  
+party often but not always third-party data 
+contains a lot of unstructured data or big data  
+many organizations collect this big data to create 
+industry reports or to conduct market research the  
+research and advisory firm Gartner is a good real 
+world example of an organization that collects big  
+data and then sells it on to other companies open 
+data repositories and government portals are also  
+sources of third third-party data let's take 
+a moment to look at some of the tools that you  
+can use to collect data once you've devised this 
+data strategy ie you've identified what data you  
+need and how best to go about collecting it there 
+are many tools that you can use to help you one  
+thing you'll need regardless of industry or area 
+of expertise is a data management platform or DMP  
+a DMP is a piece of software which allows you to 
+identify and aggregate data from numerous sources  
+before they're manipulating them segmenting them 
+and so on there are many DMPs available some  
+well-known enterprise DMPs include salesforce DMP, 
+SAAS and the data integration platform Xplenty if  
+you want to play around you can also try some open 
+source platforms like Pymcore or Dswarm on to step  
+three cleaning the data once you've collected your 
+data the next step is to get it ready for analysis  
+this means cleaning or scrubbing it and this is 
+crucial to make sure that you're working with  
+high quality data key data cleaning tasks include 
+removing major errors duplicates or outliers all  
+of which are problems when you aggregate data 
+from numerous sources removing unwanted data  
+points so extracting irrelevant observations that 
+have no bearing on your intended analysis bringing  
+structure to your data or general housekeeping 
+so for example fixing typos or layout issues  
+which will help you map or manipulate your data 
+more easily and finally it helps filling in major  
+gaps as you're tidying up you might notice that 
+important data is missing once you've identified  
+these gaps you can go about filling them a good 
+data analyst will spend about 70 to 90 of their  
+time cleaning data this might sound excessive but 
+focusing on the wrong data or analyzing error in  
+this data will severely impact your results it 
+might even send you back to square one so whatever  
+you do don't rush this step let's have a look 
+at some of the tools that you can use to clean  
+your data cleaning data manually especially large 
+data sets can be incredibly daunting but luckily  
+there are many tools available to streamline this 
+process open source tools such as open refine are  
+excellent for basic data cleaning as well as high 
+level exploration however free tools offer limited  
+functionality for very large data sets now i know 
+this sounds like a data zoo but python libraries  
+such as pandas and some r packages are better 
+suited to heavy data scrubbing you will of course  
+need to be savvy with languages alternatively 
+enterprise tools are also available for example  
+data ladder which is one of the highest rated data 
+matching tools in the industry there are many more  
+why don't you see which data cleaning tools you 
+can find online share your free tools in the  
+comments below so that was step three cleaning 
+the data on to step four analyzing that data  
+finally once you've cleaned your data now comes 
+the fun bit analyzing it the type of data analysis  
+you conduct largely depends on what your goal is 
+but there are many techniques available univariate  
+or bivariate analysis time series analysis and 
+regression analysis are just a few you might  
+have heard of more important than the different 
+types though is how you apply them this depends  
+on what types of insights you're hoping to gain 
+broadly speaking all types of data analysis fit  
+into the four following categories descriptive 
+analysis which is analysis which identifies what  
+has already happened this is a common first step 
+that companies do before proceeding with deeper  
+explorations diagnostic analysis where the focus 
+is on understanding why something has happened  
+it is literally the diagnosis of a problem just 
+as a doctor uses the symptoms to diagnose the  
+patient's disease predictive analysis which is 
+where you identify future trends by the analysis  
+of historical data predictive analysis is commonly 
+used by businesses to forecast future growth and  
+lastly prescriptive analysis which allows 
+you to make recommendations for the future  
+this is the final step in the analytics part 
+of the process but it's also the most complex  
+this is because it incorporates aspects of all 
+the other analyses that we've described today  
+step 5 sharing your results you've finished 
+carrying out your analyses you have your insights  
+the final step of a data analysis process is to 
+share these insights with the wider world or at  
+least with your organization's stakeholders this 
+is actually more complex than just sharing the raw  
+results of your work it involves interpreting the 
+outcomes and presenting them in a manner which is  
+digestible to everybody that's in the room since 
+you'll also present your work to decision makers  
+it's very important that the insights that you 
+share are 100 clear and also unambiguous for  
+this reason data analysts usually use reports 
+dashboards and interactive visualizations to  
+support their findings how you interpret and 
+present results will often influence the direction  
+of the business depending on what you share 
+your organization might decide to restructure to  
+launch a new product or close an entire division 
+that's why it's very important to present all the  
+evidence that you gathered and not to cherry-pick 
+data ensuring that you cover everything in a clear  
+and concise way will prove that your conclusions 
+are scientifically sound and based on facts on the  
+flip side it's important to highlight any gaps 
+in the data or to flag any insights that might  
+be open to interpretation remember that honest 
+communication is an important part of the process  
+it will help the business but it will also help 
+you to excel at your job there's a ton of tools  
+for interpreting and sharing your findings these 
+tools are suited to different experience levels  
+but popular tools that require no coding skills 
+include Google Charts, Tableau, Datawrapper and  
+Infogram if you're familiar with python and 
+r there are also many data visualization  
+libraries and packages available for instance 
+check out the Python libraries Plotty, Seaborn  
+and Matplotlib whichever data visualization 
+tools you use make sure that you polish up your  
+presentation skills too visualization is great 
+but communication is key so hopefully now you  
+have a better idea of the data analysis process 
+CareerFoundry have an awesome data analytics short  
+course and you can sign up for free by the link in 
+the description thanks for joining us today i hope  
+this video has been helpful here's another video 
+i made about data analytics which is just for you

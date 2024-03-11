@@ -1,0 +1,70 @@
+{
+  "introduction": "This video discusses the most damaging hacks and bugs in history and explains seven software security concepts that every developer should know. It covers topics such as cross-site scripting, SQL injection, and DDoS attacks, along with the importance of user authentication and data integrity in ensuring high availability. The video also emphasizes the need for being ready to scale and using big cloud providers to protect against attacks.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Software Security Concepts",
+      "content": [
+        "Explanation of the importance of software security and the potential consequences of vulnerabilities.",
+        "Overview of the seven software security concepts covered in the video.",
+        "Discussion of the most damaging hacks and bugs in history.",
+        "Introduction to the enterprise security course from angular academy."
+      ],
+      "topics": ["Software Security Importance", "Seven Software Security Concepts", "Damaging Hacks and Bugs", "Enterprise Security Course"]
+    },
+    {
+      "title": "Section 2: Cross-Site Scripting (XSS) Exploits",
+      "content": [
+        "Explanation of XSS exploits and how they can be achieved through web applications.",
+        "Discussion of the most common ways to achieve XSS attacks.",
+        "Explanation of how to avoid XSS attacks.",
+        "Example of a company that experienced an XSS attack: Heartland Payment Systems."
+      ],
+      "topics": ["XSS Exploits", "Achieving XSS Attacks", "Avoiding XSS Attacks", "Heartland Payment Systems Example"]
+    },
+    {
+      "title": "Section 3: SQL Injection Attacks",
+      "content": [
+        "Explanation of SQL injection attacks and how they can compromise databases.",
+        "Discussion of the most common SQL injection techniques.",
+        "Explanation of how to prevent SQL injection attacks.",
+        "Example of a company that experienced a SQL injection attack: Equifax."
+      ],
+      "topics": ["SQL Injection Attacks", "Common SQL Injection Techniques", "Preventing SQL Injection Attacks", "Equifax Example"]
+    },
+    {
+      "title": "Section 4: DDoS Attacks and High Availability",
+      "content": [
+        "Explanation of DDoS attacks and their potential impact on services.",
+        "Discussion of the importance of high availability in web applications.",
+        "Explanation of how to protect against DDoS attacks.",
+        "Example of a company that experienced a DDoS attack: Github."
+      ],
+      "topics": ["DDoS Attacks", "High Availability Importance", "Protecting Against DDoS Attacks", "Github Example"]
+    },
+    {
+      "title": "Section 5: User Authentication and Data Integrity",
+      "content": [
+        "Explanation of user authentication and its role in securing data.",
+        "Discussion of the importance of data integrity in preventing unauthorized modifications.",
+        "Explanation of how to implement user authentication and data integrity in web applications.",
+        "Example of a company that emphasizes user authentication and data integrity: AWS."
+      ],
+      "topics": ["User Authentication", "Data Integrity Importance", "Implementing User Authentication and Data Integrity", "AWS Example"]
+    }
+  ],
+  "topics": ["Software Security Importance", "Seven Software Security Concepts", "Damaging Hacks and Bugs", "Enterprise Security Course", "XSS Exploits", "SQL Injection Attacks", "DDoS Attacks and High Availability", "User Authentication and Data Integrity"],
+  "generalTopics": [
+    {
+      "name": "Software Engineering and System Design",
+      "complexity": 0.61
+    },
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.53
+    },
+    {
+      "name": "Web Development and Internet Technologies",
+      "complexity": 0.59
+    }
+  ]
+}

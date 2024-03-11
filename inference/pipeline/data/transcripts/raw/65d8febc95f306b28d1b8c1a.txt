@@ -1,0 +1,382 @@
+OLIVIA: So I'm Olivia.
+I work at Fathom
+Information Design.
+We're over in Boston.
+And we do-- a lot of our
+work is in data visualization
+and information design.
+And we use processing
+for that, which is what
+we're going to be using today.
+So processing is both a
+community and development
+environment and a
+language to kind of make
+it as simple as
+possible to get up
+and running with something
+visual on the screen.
+So you can use it for making 3D.
+You can do what
+we're going to do,
+image processing,
+kind of looking
+at the pixel
+information of images.
+Or kind of pulling in data and
+creating things based on that.
+So do any of you guys
+have an idea of what
+you think of when you
+hear image processing
+or what that might be?
+Yeah.
+AUDIENCE: [INAUDIBLE]
+OLIVIA: Yes.
+Yes, so a lot of
+it is about kind
+of manipulating the
+information that you get when
+you kind of take a picture.
+Usually, it's to enhance
+it so whether that
+means you're making
+it more clear to be
+able to kind of
+analyze information
+in there or in enhancing
+it in an aesthetic way
+kind of like with
+Instagram or Snapchat.
+So kind of doing
+that through code
+is what we're going to do today.
+It uses a mix of math and
+computer science so a lot of it
+is these mathematical
+functions that
+manipulate the different pieces
+of the image information.
+And we're going to
+use computer science
+with processing to kind
+of mix it all together
+and create our filters.
+So there are a lot of
+different things you can do.
+It can be as simple as kind
+of enhancing the contrast.
+So in this case, this
+is a photo that's
+taken underwater on the left.
+And you can't
+really see anything
+so people have gone in and just
+enhanced the contrast, which
+usually means playing with the
+values, the light and the dark
+of the image to start to make
+out the different shapes.
+And then they can use it for
+analysis or to put in a book.
+Sometimes we take
+images-- you guys
+were building cameras
+earlier using visible light,
+x-rays are another
+way of taking images,
+but you're using x-rays
+instead of the visible light,
+the wavelengths.
+And then, again, kind
+of enhancing those
+images so that we can find
+different medical anomalies.
+You can also use x-rays to
+look at layers behind paint.
+So a lot of times you might
+hear a story about they found
+that a person was in this
+painting and then it got
+painted over.
+The way they know
+that is through taking
+these different
+images and enhancing
+the information in them.
+And one that I think is really
+cool is a lot of space images
+that you see are mixes of image
+data from different telescopes.
+So this is actually
+a combination
+from three different telescopes.
+I think the blue is
+x-ray information,
+the gold is information
+from Hubble,
+and then the red might be a
+different x-ray telescope.
+So kind of merging all of those
+together and coloring them
+in a certain way
+so that people can
+start to get scientific
+knowledge from the photos.
+And then there's also this
+kind of cyclical process
+of so now we have cameras that
+are really good at recognizing
+faces so that our pictures of
+our family can be way better.
+But the way we were
+able to do that
+is by looking at pictures
+of faces and kind
+of teaching the camera
+what to look for.
+So kind of using images
+to enhance later images.
+And what we're going
+to focus on today
+is manipulating the color
+information of our photos
+for purely aesthetic purposes.
+So Instagram uses a set of
+filters which really is just
+a set of mathematical functions
+that are applied to the image
+information.
+And then spit back out your
+image with its new colors.
+So in order for us to
+be able to do this,
+I'm going to talk a little bit
+about the different ways you
+might access the color
+information of your photo.
+And kind of how
+computers see color.
+You might have talked about this
+a little bit with the cameras
+earlier so it's
+a good refresher.
+But let's start with
+a grayscale image.
+So on the left is our
+image of the baboon.
+And when you have
+a grayscale image,
+everything is on
+a range of black
+to white that can be stored as
+a number, usually zero to 255.
+And then over here,
+it's just kind
+of plotting what
+those values are.
+So you start to get a sense
+of how image information can
+be seen as just sort of a set
+of numbers, a set of values.
+This is up close at like
+one square of your image,
+so again, every pixel
+in a gray scale image
+will have one value.
+So it can be from zero for
+black and 255 for white.
+And then a color
+image is usually just
+like three layers
+of that information.
+So if you're looking at
+an image in RGB mode,
+which is pretty standard for
+how digital cameras work,
+usually how computers
+are thinking about color
+information, it's three layers
+of those zero to 255 values.
+But in this case, it's
+like from black to pure red
+or black to pure green
+and black to pure blue.
+And then we kind of
+add those all together
+with the correct weights, you'll
+get your full color image.
+So this is one way to start
+pulling out the information
+and playing with it.
+So in processing, you'll
+see in the filters
+that sometimes people will go
+through and for every pixel,
+take out what is the
+red, what is the green,
+and what is the
+blue of that pixel.
+And then you can just
+say OK, add 10 to red
+and that will totally
+change your image.
+So this is just
+an example of what
+happens when you start playing
+with the different RGB values.
+And we'll see an example of a
+different kind of color scheme
+in a second.
+So if this is my
+original image over here,
+I've started bumping up the
+blue or taking down the red,
+so the whole image
+has this color shift.
+But it also starts to manipulate
+the lights and the dark
+because in RGB mode, the
+lightness and the darkness
+of an image is tied to
+the color of the image.
+So sometimes you might want
+to edit those separately.
+And that's where HSB mode
+is really helpful, so hue,
+saturation, and brightness.
+So you can also,
+through processing,
+take the color
+information of your image,
+but separate how bright
+it is, what color it is,
+and how intense that color is.
+So in this case, what we're
+looking at across here
+is where someone has-- if
+this is their original image,
+they've shifted the hue.
+So hue is the color you see.
+But they haven't
+changed the lightness
+or the intensity of the color.
+If we think of an apple
+as red and this is also--
+this is chalk, which
+is also technically red
+but it looks more
+like pink because it
+has a lower saturation.
+So this is like when you have
+a pure red versus something
+that's lower saturation.
+And then cherries are also red,
+but they have a darker value.
+So that's the brightness.
+So again, pure red versus
+something with a lot more black
+in it.
+So you can also think of this as
+like if you were mixing colors
+with paint, if it needs a lot
+of white to create that color,
+then it probably has
+a lower saturation.
+If you needed a lot of
+black to make that color,
+then it probably
+has a lower value.
+So here you can start
+to play with your image
+and say I want
+everything to be darker,
+but I want it to
+stay the same color.
+Or like with the
+butterfly, I want
+to like-- so like in this
+case, the one on the right,
+I changed just the color
+but I didn't change any
+of the saturation or the value.
+So you can see how
+these are equally bright
+and this one in
+the middle starts
+to get more gray because as
+I've manipulated the RGB values,
+I've also manipulated
+how light it is.
+So now we can start to
+make filters of our own.
+And the filters that we have
+kind of set up for you guys
+to play through are--
+these are some of them.
+So there is this one, which
+is kind of like posterization.
+So a lot of the time if you want
+to print something as a poster,
+you kind of have to get it as
+close as possible to like black
+and white as opposed
+to like having
+all the range of gray values.
+So kind of just messing
+around and seeing what
+happens when you
+start to take out
+those middle values of gray.
+And then, also
+manipulating the colors.
+This one is not so much playing
+with the color information,
+but if you have your
+image dimensions
+and you want to add
+something like a vignette
+to it, being able to say, here
+is where the center of my image
+is and then how, based on that,
+you can add a color on top.
+And so adding this ring on top.
+This one, it allows as you
+click around the image,
+it'll pick one color so this
+is using like hue saturation
+and brightness.
+So it'll pick the hue and then
+light up all the other pixels
+with that hue and get rid of
+the hue in all the other ones.
+So kind of seeing how many
+colors there are in an image
+or being able to highlight
+just the red pieces.
+And then the last one is-- so
+I don't know how many of you
+guys have ever played
+around with Photoshop,
+but they have this thing
+called blend modes, which
+is what a lot that people use to
+apply different colors on top.
+And so that just says
+if you put a color
+on top, what's
+the math that it's
+taking with that color on top
+and the image on the bottom.
+And how it adds them together.
+So this is trying to imitate
+the overlay mode, which
+just kind of taking
+part of one color
+and part of the other and then
+spitting back out a new color.
+So those are the different
+filters we have today.
+SPEAKER: Let's give Olivia
+a round of applause.
+[APPLAUSE]

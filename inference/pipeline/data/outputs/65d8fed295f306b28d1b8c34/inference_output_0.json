@@ -1,0 +1,70 @@
+{
+  "introduction": "This video provides an introduction to the theoretical computer science course for the Georgia Tech Masters and PhD programs. It covers the big questions in computing, such as the limits of computation, problems that no computer will ever solve, and problems that can't be solved quickly. The course focuses on understanding the power and limitations of algorithms and their practical applications in real-world scenarios. It takes an abstract view of computing, allowing participants to recognize when problems are intractable and when there is an efficient solution. This course improves thinking and decision-making skills, making individuals better prepared for engineering and business challenges.",
+  "sections": [
+    {
+      "title": "Section 1: Introduction to Computing",
+      "content": [
+        "Explanation of the concept of computing and its importance in modern society.",
+        "Discussion on the history and evolution of computing.",
+        "Introduction to the different types of computers and their architectures.",
+        "Explanation of the role of algorithms in computing."
+      ],
+      "topics": ["Computing Concept", "Computing Evolution", "Computer Architectures", "Algorithms"]
+    },
+    {
+      "title": "Section 2: Big Questions in Computing",
+      "content": [
+        "Examination of the limits of computation and the halting problem.",
+        "Discussion on the Church-Turing Thesis and its implications.",
+        "Exploration of undecidable problems and their significance.",
+        "Introduction to the concept of computational complexity."
+      ],
+      "topics": ["Computational Limits", "Church-Turing Thesis", "Undecidable Problems", "Computational Complexity"]
+    },
+    {
+      "title": "Section 3: Algorithms and Data Structures",
+      "content": [
+        "Introduction to algorithms and their classification.",
+        "Explanation of common data structures and their applications.",
+        "Discussion on algorithm design principles and techniques.",
+        "Practical examples of algorithm and data structure implementation."
+      ],
+      "topics": ["Algorithms", "Data Structures", "Algorithm Design Principles", "Implementation Examples"]
+    },
+    {
+      "title": "Section 4: Artificial Intelligence and Machine Learning",
+      "content": [
+        "Overview of artificial intelligence and its subfields.",
+        "Explanation of machine learning algorithms and their applications.",
+        "Discussion on deep learning and neural networks.",
+        "Practical examples of AI and ML implementation."
+      ],
+      "topics": ["Artificial Intelligence", "Machine Learning", "Deep Learning", "Neural Networks", "Implementation Examples"]
+    },
+    {
+      "title": "Section 5: Computing in Practice",
+      "content": [
+        "Examination of real-world computing applications.",
+        "Discussion on software engineering principles and practices.",
+        "Introduction to web development and internet technologies.",
+        "Practical examples of computing in various industries."
+      ],
+      "topics": ["Real-World Applications", "Software Engineering", "Web Development", "Internet Technologies", "Industry Examples"]
+    }
+  ],
+  "topics": ["Computing Concept", "Computational Limits", "Algorithms", "Data Structures", "Artificial Intelligence", "Machine Learning", "Deep Learning", "Neural Networks", "Software Engineering", "Web Development", "Internet Technologies"],
+  "generalTopics": [
+    {
+      "name": "Algorithms and Data Structures",
+      "complexity": 0.61
+    },
+    {
+      "name": "Artificial Intelligence and Machine Learning",
+      "complexity": 0.61
+    },
+    {
+      "name": "Computing in Practice",
+      "complexity": 0.61
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "introduction": "This video provides guidance on which programming languages to learn based on the job you want. It covers game development, mobile development, artificial intelligence and machine learning, devOps, and AR/VR development. The video highlights the importance of choosing the right language from the beginning to reach your goals faster.",
+  "sections": [
+    {
+      "title": "Section 1: Game Development",
+      "content": [
+        "Unreal Engine and Unity are the two popular game engines used in the industry.",
+        "C is the language of choice for Unreal Engine, while C# is used for Unity.",
+        "C also has its origin in C, which was developed by Microsoft as a competitor to Java.",
+        "The syntax of C is very similar to Java."
+      ],
+      "topics": ["Programming Languages for Game Development", "Unreal Engine", "Unity"]
+    },
+    {
+      "title": "Section 2: Mobile Development",
+      "content": [
+        "There are two ways of developing mobile apps: native development and crossplatform development.",
+        "Cotlin is the language of choice for Android development, while Swift is used for iOS development.",
+        "Cotlin is fully interoperable with Java, making it easy to use existing Java code bases.",
+        "Swift is the language of choice for iOS development."
+      ],
+      "topics": ["Programming Languages for Mobile Development", "Android Development", "iOS Development"]
+    },
+    {
+      "title": "Section 3: Artificial Intelligence and Machine Learning",
+      "content": [
+        "JavaScript with Node.js is a popular option for backend development.",
+        "Express is a popular JavaScript library for backend development.",
+        "Python with Django or Flask is another option for backend development.",
+        "Rust is a newer language that achieves safety and memory management through its own system."
+      ],
+      "topics": ["Programming Languages for AI/ML", "Backend Development", "Rust"]
+    },
+    {
+      "title": "Section 4: DevOps",
+      "content": [
+        "Python is a popular scripting language among devOps engineers.",
+        "Golang is another language that's gaining massive popularity in devOps.",
+        "Bash scripting is also essential for devOps.",
+        "Kubernetes is a popular container orchestration platform."
+      ],
+      "topics": ["Programming Languages for DevOps", "Container Orchestration", "Kubernetes"]
+    },
+    {
+      "title": "Section 5: AR/VR Development",
+      "content": [
+        "Swift UI is the language of choice for AR/VR development on Apple platforms.",
+        "The launch of Apple Vision Pro may change the landscape of AR/VR development.",
+        "Solidity is the most popular programming language among blockchain developers.",
+        "Ethereum is a popular blockchain platform for smart contracts."
+      ],
+      "topics": ["Programming Languages for AR/VR", "Apple Vision Pro", "Blockchain Development", "Ethereum"]
+    }
+  ],
+  "topics": ["Programming Languages", "Backend Development", "DevOps", "AR/VR Development", "Blockchain Development"],
+  "generalTopics": [
+    {
+      "name": "Programming Languages",
+      "complexity": 0.65
+    },
+    {
+      "name": "Backend Development",
+      "complexity": 0.60
+    },
+    {
+      "name": "DevOps",
+      "complexity": 0.65
+    }
+  ]
+}

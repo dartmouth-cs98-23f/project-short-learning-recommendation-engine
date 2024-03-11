@@ -1,0 +1,611 @@
+Machine learning. It's crazy.
+Like right now I'm running a machine
+learning model that will tell me how bad I
+suck at video games in real time. But
+honestly I don't think it's very accurate.
+Nevermind. It's pretty accurate. So
+machine learning, it's hot right now.
+It's the future Chad's, G P
+T, all the buzzword, you know,
+and it's how you ended up watching this
+video. Thank you YouTube algorithm.
+Love you. And I'm making this
+video because I wanna tell you,
+you can absolutely learn this
+technology. You don't need a degree,
+you don't need to be a math genius
+and you can learn this all for free.
+This video game thing,
+you're actually gonna set this up yourself
+by the end of this video using all
+the crazy machine learning data science
+tools in the Oracle Cloud or oci and it
+will be completely free thanks to
+our sponsor Oracle. And by the way,
+you'll find out that if you do wanna
+get started with machine learning,
+this right here is the best way to start.
+Just jump in and stink and do it using
+real tools that real data scientists and
+machine learning engineers actually use.
+I'm telling you about machine learning,
+but I'm not a machine learning engineer.
+Why should you listen to me? Santiago,
+he's a machine learning engineer. In fact,
+you know that dog spot from
+Boston Dynamics jumps around,
+sees things sometimes
+piece beer into a cup,
+Santiago's on the team
+that makes that happen.
+It's machine learning and specifically
+it's called computer vision. We.
+Build computer vision algorithms
+to help the robot see the.
+World. And also Nacho, he's
+a machine learning engineer.
+He's the guy who's gonna help you get
+set up with that machine learning video
+game thing later on.
+I created like three workshops and the
+idea is to get started on the most basic
+concepts that I found out that
+are, you know, most important in,
+in machine learning.
+And they're both gonna help me explain
+the wonders of machine learning and how
+you can get started down this kind of
+crazy and extremely lucrative career path.
+I mean talk about future
+proof dude. And by the way,
+I'm obsessed with machine learning
+now. I can't stop playing with it.
+So thanks a lot Oracle. But
+before we get into that,
+let's first define what the junk
+even is. Machine learning. Santiago,
+what is machine learning?
+Machine learning is
+Teaching a computer how to learn from
+data. Like if you're a software developer,
+you're used to uh,
+craft a set of rules in order
+to accomplish something, right?
+Let's say you want to play
+tic-tac toe, you will uh,
+create rules like if the computer
+plays here, I'm gonna play there.
+If the other player plays here, right?
+You will craft those rules. You will use,
+uh, loops and conditions and any
+programming, uh, tools that you have.
+Mm-hmm  machine learning
+is a little bit different and it turns
+this on its head. So machine learning
+starts with uh, a lot of samples,
+right? It's like hey,
+this is the temperature over a
+year for this particular region.
+Can you craft the rules
+automatically in order
+to predict what the temperature
+will be tomorrow? So.
+We're teaching a computer to do something
+without us explicitly telling it to do
+something. If you're like me,
+you're like, uh, what ,
+what does that mean exactly? What's
+the process? How does that work?
+Let me give you one quick
+example before we dive in.
+We'll start by defining our, what
+do we want to teach the computer?
+And I wanna teach how to
+identify a photo of me.
+Is this a photo of network chuck?
+Yes or no? But how do we do that?
+How do we teach it to recognize
+me data, the answer's data,
+we give it a ton of pictures
+of me, different pictures,
+me doing this and that.
+Then nah, you know,
+all kinds of stuff and we'll label it so
+it knows it's me and while we're at it,
+it also might help to see photos of not
+me so we can know what to not look for.
+So we'll get a bunch of those of
+not me with our data assembled.
+We can now train our computer.
+He's in training, he's a trainee.
+But hold up before we can teach him, we
+have to choose how he's going to learn.
+And that's called our
+machine learning algorithm.
+There are a lot out there
+doing some crazy math,
+but I think the one we want will
+be a convolutional neural network.
+Now do I know how that works? No.
+But do I know that it might be
+good for the situation? Yes.
+So now we spoon feed the data and the
+algorithm will start to learn to start
+recognizing the pattern of me.
+Every time it sees a beard or
+crazy eyes or a man bun, it'll say,
+oh you know what? I'm gonna weigh that
+feature higher. Or if it doesn't see one,
+it'll lower it and it will crunch
+through all this data learning me.
+And then for good measureable
+feed to pictures of not me,
+so it knows what to not
+look for. And now he's done,
+he finished the training data,
+he's no longer a trainee.
+Now we can test him with testing
+data to see how he performs.
+Now while this example is very simple,
+that's all a machine learning model is,
+which is what we just make.
+It's a file that's been trained to
+recognize certain types of patterns.
+Now it could happen that your machine
+learning model sucks and its accuracy is
+like 10%. That's where being a machine
+learning engineer comes into play.
+You have to learn what to do to
+make that model more accurate.
+You have to learn those skills and I'm
+gonna show you how to do it right now.
+Now according to Santiago,
+the first step in learning machine
+learning is just to start doing.
+It.
+I prefer the style of teaching and
+learning where you start writing the
+deep end and then you
+start unpacking things,
+breaking down pieces and say, okay,
+I need this in order to
+understand this particular piece.
+Let me go and watch a that
+video. Or I need this. Uh,
+I do not understand exactly
+how the chain rule works.
+Let me just pick up this video,
+go to YouTube or whatever.
+I'm gonna understand that
+and then I can move on.
+That's the way I would recommend
+people to approach this.
+So let's just start doing it, shall we?
+Let's build a machine learning algorithm
+that can tell you how bad you suck at
+video games. Check the link below.
+Let's get signed up for a free Oracle
+cloud account. Oci. And by the way,
+signing up for OCI right now means you
+get a $300 credit to do whatever you
+stink and want with within reason more
+than enough to play with this machine
+learning stuff. So once
+you have your account,
+we got three delicious labs to go through.
+I created like three
+workshops that are uh,
+you can do them on your own about
+uh, one hour and a half to two hours.
+And the idea is to get started on the
+most basic concepts that I found out.
+And they cover everything
+from data extraction,
+getting your data ready
+like we do with the photos,
+to actually building models with
+different tools. Psych kittle, learn,
+auto glue on even building a neural
+network who can say they built a neural
+network. You can after this
+thing you're doing coffee break.
+The first one I'm gonna start
+with is data extraction.
+The CUS is gonna teach you a ton about
+data science as we're walking through
+this. Once you got it loaded up,
+go ahead and click on start and
+then click on run on your tendency,
+which just means you're gonna be running
+on your own OCI stuff cuz you have free
+account.
+Now you probably guessed that the video
+game we're talking about is League of
+Legends. It's kind of a complex game.
+It's you playing with four other players
+to try and destroy the other player's
+base essentially. And there are a
+lot of factors that come into play.
+What character you choose, the
+potions and nerdy stuff you might buy,
+how much gold you collect, uh, all
+the stuff that happens in the match.
+All those are in things that are
+important features that might determine if
+you're going to win or lose.
+And it's in this lab we learn how to
+identify those features and feed it into a
+machine learning algorithm.
+It's kind of crazy.
+Now if you are following
+along with this lab,
+the first thing you wanna do is
+set up your infrastructure in oci.
+We'll be using a lot of stuff there.
+Data science cloud, shell compute,
+autonomous js o database. Offer free
+offer fun. No, it really is pretty cool.
+Oh,
+and one more thing you wanna do is you'll
+wanna sign up for League of Legends
+because you're gonna get an API key to
+pull all kinds of data from previous
+matches and live matches as
+you're playing. It's free,
+it's easy just you'll link below, you'll,
+you'll follow it along
+for the infrastructure.
+We're doing all of this deploy
+with Terraform and Ansible.
+Nacho gives you all the code,
+everything in this walkthrough.
+You don't have to worry about a
+thing, just click, click, click.
+You probably won't even know what's
+happening half the time and that's fine.
+You're just deploying infrastructure.
+Just follow directions.
+I'm gonna do mine right now.
+Now number two,
+the next thing you'll want to do to become
+a machine learning engineer and that
+is to learn why the junk data science.
+Like why do we do it? What is it?
+What's the process?
+The first thing you wanna do is hang out
+with nacho nacho's gonna hold your hand
+and show you what it's like to actually
+tackle a real world machine learning
+problem. And using the OCI hands-on labs,
+you'll get hands-on to
+actually do this yourself.
+And this is so cool because you get a
+chance to see how a machine learning
+engineer thinks how they
+approach a problem. Shoot,
+he's got five articles detailing it,
+every single thing he
+does and why he did it.
+So if you want to understand the big
+what and why of machine learning,
+this is like the best place to start.
+You're doing it and he's telling you why.
+And if you need a bit
+more, which I often do,
+there is some structure learning out
+there for how to understand the whole
+machine learning process.
+Santiago recommends brilliant. If.
+You are like from the
+very, very, very beginning,
+like you've never seen this, you,
+you don't even know where to start,
+I would recommend brilliant.
+They have a data science
+path that's fantastic.
+It'll help you to start
+thinking like a data scientist.
+Now this is for you if you're
+very brand new to data science,
+like you don't even know
+what I'm saying right now.
+This is a paid option but according
+to Santiago it's fantastic. Like.
+I won my eight years old
+to take it. Is is that uh,
+basic right?
+But it's a great star that's gonna
+just give you an idea what you need to
+face. So I would love that path.
+The point of this step is to get you
+to understand the whole point of data
+science and to start
+like a data scientist,
+which is important for machine learning,
+but also from step one going deep with
+our example on Oracle Cloud. Again,
+we're looking at the Game
+League of Legends and how
+we can predict the winner of
+a match and it's getting in the mindset
+of how to figure that out that makes
+this lab so crazy valuable.
+Cuz as I mentioned,
+league of Legends is kind of complex.
+So we'll need to look at the game and
+identify features that will affect the
+outcome of a match. So things like what
+champion you choose, what lane you pick,
+how much gold you earn, how many
+minions you kill, all kinds of things.
+So taking all that and figuring that
+stuff out and using machine learning tools
+to do it. Don't miss this. Try this out.
+And in the first workshop we're actually
+learning how to extract that data to
+get it from the Riot Games api,
+which I'm going to do right now.
+Which by the way, what we're doing in
+the data extraction process, the lab,
+according to Santiago and Nacho,
+this is like 70 to 80% of the
+machine learning engineer job.
+It's getting the data, the
+right data, preparing it,
+making it look nice and neat so that
+when you give it to your machine learning
+algorithm, it can learn a lot, learn well.
+So right here I'm pulling a bunch of data
+down from the API and I'm telling you,
+this lab is so cool because
+you're learning what it
+takes to predict this kind
+of thing. So right now we're
+collecting historical data,
+bunch of data on previous
+professional game matches.
+So we're pulling all the professional
+players and all the matches they've played
+in and just so much data about each of
+those things with a goal of then giving
+that data to an algorithm to crunch
+it and figure out who's going to win.
+Now while we're pulling in this data,
+I think it's important to point out
+the third thing you'll need to become a
+machine learning engineer.
+And that is a little bit of Python and
+actually a slightly more than a little,
+you'll want an intermediate
+level of Python expertise.
+If you don't know what Python is,
+it's a programming language used
+by most of it at this point.
+And when it comes to data science and
+machine learning, it's the darling.
+It's what people use. The how do machine
+learning engineers use Python? Well,
+in this example right now I'm actually
+pulling match information from the Array
+games api, but I'm doing that with
+Python code. Here's the code right here.
+This code is a function that's getting
+player information from the Riot Games
+api.
+Then we had to use more code to pretty
+at the data a bit to prepare it for our
+machine learning algorithm to where
+we end up with something like this.
+We didn't get the data like this, we
+had to shape it and form it with code.
+So I do wanna point out that you
+don't have to be a Python expert,
+you don't have to develop actual
+Python software. But scripting,
+doing intermediate things is
+something you want to learn.
+Now how do you learn it? Ton
+of free resources out there.
+Paid options are always good. They
+give you a structured process,
+it pro TV Code Academy.
+I also have a Python course freely
+available on YouTube and progress.
+But you'll learn a ton. And of course
+there are other Python videos on YouTube.
+Now at this point you do know a
+thing YouTube about machine learning,
+you've dabbled with it, you know some
+Python, so you're pretty dangerous.
+Now it's time for Kaggle. Step four,
+Santiago recommends a course on Kaggle.
+The intro to machine learning. This
+course right here, I believe it's free.
+You don't even have to log
+in, which is kind of crazy.
+And this will take you into that
+next step of machine learning,
+giving you a good base and doing this
+will actually help you in the OCI lab.
+If we look back at our League
+of Legends lab here in oci,
+I'm actually gonna access
+the data science section.
+And if you went through
+the data extraction lab,
+you already have a data science project
+and a League of Legends notebook session
+here at our OCI data science environment,
+we have a Jupiter notebook which will
+give us a a real taste of what being a
+machine learning engineer is
+actually kinda like. Because again,
+this is tools they actually use. Jupiter
+notebooks are amazing by the way,
+if you've never used them. And we
+got it built in right here into oci.
+Through this process,
+you're gonna get to see use and
+experience things like pandas, num pie,
+matt plot lib, all things you're gonna
+learn through your data science courses.
+But in real life and stuff you'll see
+what it looks like to split your data into
+test and training data
+sets. Now step five,
+you're not gonna like this one math,
+you can't escape it. It is part of this.
+The good news is that you don't have
+to learn a crazy amount according to
+Santiago. All you have to do is
+learn high school level math. You.
+Have like, let's say
+high school, uh, math.
+You can get into machine learning,
+amica stuff as you need it.
+I also asked Nacho,
+do you have to go back to college
+to learn all this math stuff?
+No, I mean I couldn't, um,
+disagree more ,
+you have a base, but uh,
+it's not a hundred percent required.
+You don't need a PhD or anything or you
+don't need to know deep math to know how
+to use something. Now.
+If you remember everything from high
+school and you took more advanced classes
+in high school than I did, you're
+probably fine. But if you're like me,
+you probably need to go back and brush
+up a bit. Statistics, probability,
+calculus, those kind of things.
+Thankfully there's a ton of stuff
+out there to learn math now.
+Like there's brilliance, which
+has a high school math thing,
+ whole course here. You can also
+go to Khan Academy. There's YouTube.
+Limitless opportunity to learn math.
+Do you absolutely need
+it for machine learning?
+You could probably get by a lot of the
+tools you'll use in machine learning.
+Abstract away the math. So
+you don't necessarily need it,
+but it's super helpful to
+understand what's happening,
+to understand the algorithms
+you're using and why use them.
+You'll see as you're going through this
+League of Legends lab that there's math
+involved. Now after you're
+brushed up on your math,
+now it's time to move on to the big stuff.
+Santiago, tell 'em about Andrew Inc.
+The machine learning
+specialization. By the way,
+the previous version of it was
+the most popular machine learning
+course in the world ever
+with millions of enrollments.
+He redid that last year. It's
+great. He starts from scratch,
+but he's not afraid of the math
+and you shouldn't be either. So.
+This is a machine learning
+specialization on Coursera.
+It's got three courses and it
+is going to make you awesome.
+I believe it is free unless you
+want a certification, a certificate.
+Now at this point, dude,
+you've learned a ton about machine
+learning and just like a good machine
+learning model, it's time to tweak
+your model, your head ,
+you gotta get better at this.
+That's what I'm trying to say.
+It's time to hone your
+skills. And for that,
+there's no better way than just
+getting more hands-on experience.
+Take all that you've learned and
+do it again and again and again.
+And one of the best ways is again,
+the OCI hands-on labs we
+have access to right now.
+One thing you'll find out and learning
+machine learning is that Nacho has a
+really solid example, but he invites
+you to tweak it to make it better.
+Because as you'll see, the model's
+pretty cool. Like it's, it's,
+it's pretty accurate, but it could be
+better. So you need to figure out, hey,
+how can I add more features?
+How can I make the data better?
+How can I get more data?
+Maybe I'll choose a different algorithm
+and keep practicing until you get better
+results. That's machine learning. And
+maybe League of Legends is not your thing.
+It certainly wasn't mine before
+this. Now I'm kind of addicted.
+Take another game. See if they have
+an api, pull the data, play with it.
+Go crazy. Another option for
+practice is Kaggle. Once again,
+they have competitions, data science
+competitions, which is kind of crazy.
+And what this looks like is they'll give
+you data sets and they'll say, Hey, uh,
+predict things better than all these
+other people. And if you can do that,
+if you can use your machine learning
+skills, there's prize money,
+a hundred thousand dollars 60,
+like what is this? But anyways,
+you'll come back here to start practicing
+your data science and machine learning
+skills. The cool thing about Kaggle
+is they already have the data there.
+The hard part most of the time with
+machine learning is gathering the data.
+They've got the data sets. And I
+would say at this point, you know,
+machine learning,
+you're at a point where you can
+start to build your own models,
+build your own portfolio, and
+start looking for jobs. Who knows,
+you might get hired on as a junior
+intern, whatever. So these eight steps,
+this path will teach you what you need
+to know to become a machine learning
+engineer. You don't need college,
+you don't need to be a math genius.
+You can do this.
+And even if you don't want to
+become a machine learning engineer,
+just going through these labs,
+which is free from oci, thank you,
+Oracle does just let you know
+what's out there. Like it or not,
+machine learning is the future. And who
+knows, you might have a knack for. Now,
+back to League of Legends, if you
+followed along, you collected your data,
+you trained your model,
+and set up the model to run locally
+on your computer like I am here.
+Which by the way, nacho again
+has all this as a walkthrough.
+He details in GitHub how to do it in
+oci. He walks you through every step,
+including the local machine
+situation. At this point,
+you can predict how quickly you're
+going to lose this game like I am.
+So please actually let me know if you
+set this up. I would love to know.

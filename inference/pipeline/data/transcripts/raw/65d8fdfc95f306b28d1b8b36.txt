@@ -1,0 +1,1092 @@
+so the environment that you see you know
+is a work from notebook so in this
+notebook you can type text you can have
+like you know your coding move from
+language you can have you know
+visualization literally we can have
+everything so it's an integrated
+environment uh so first thing is that
+like you know as you may know like you
+know well for Mathematica it has more
+than you know 6 000 building you know uh
+functionalities each of those
+functionalities there are for a specific
+core area I don't know calculus you know
+algebra like you know machine learning
+and then like you know very recently
+since last year like you know we have
+been working on like you know developing
+a collection of functions for doing any
+sort of quantum computation in a finer
+dimensional space
+so one more time like you know it's any
+Quantum computation in the final
+dimensional you know Hillary space and
+what we call it is basically is a
+packlet so packlet is basically like you
+know a collection of functionalities
+that are you know interconnected and
+after installing the packlet you can
+have access to all of those functions so
+first is the block you know you just
+need to evaluate like you know this code
+to get what we call as well from Quantum
+framework and as of now like you know
+these are the list of
+functionalities that we have supporting
+any Quantum computation the beauty of
+like you know having packlet is that
+like you know they're very similar to
+any other function that you have
+involved for Mathematica like you know
+you see here like you know if you click
+you know on that you would see like you
+know the documentation page so each of
+you know these functionalities they have
+their own documentation page and like
+any other documentation like you know
+the format is the same like you know
+basic examples it's called properties
+and like you know you can find you know
+other you know for example I don't know
+this is the list of you know functions
+that we have you see like you know basis
+objects you know uh manipulation of that
+entanglement circuit so that that that's
+the collection that we have so like you
+know after installing the packlet like
+you know it's like you have those you
+know 20 something like you know Quantum
+functionalities with the corresponding
+documentation
+um we did our best to have a
+documentation with no issue but they
+might be you know some some minor issues
+like you know if you spotted anything
+please let us know and we would correct
+that
+uh it's like you know the main purpose
+of this session is having an
+introduction to to Quantum Computing
+using our framework so I'm going to
+start with something very basic at the
+very fundamental level the way that we
+deal with many of any Quantum
+computation is like this
+within some process whatever that
+process like you know we are going to
+discuss about that very soon but you
+know within a process what we do is you
+know at the very end we prepare a
+Quantum estate
+and that Quantum estate is installed
+like you know in uh one or many uh
+physical systems
+uh in quantum theory the simplest
+system that we have is a system of you
+know Dimension two basically that's a
+system that like you know in the
+simplest case you can describe it by a
+vector of two with two amplitudes and
+those amplitudes they can get like you
+know complex numbers they can be pure
+they can be complex but what you see
+here like you know let's say that you
+know something happened and at the end
+like you know you prepare like you know
+this Quantum mistake okay uh Quantum
+estate like after evaluating that like
+you know Quantum is stating a framework
+like you know it's an object and this is
+basically the like you know the summary
+box you know for that object don't be
+scared of you know the summary box like
+you know if you want like you know you
+can look at the traditional form on Mac
+the short key is command shift T so you
+know that's basically the broadcast
+notation the traditional form
+okay so I'm using like you know uh the
+the short key or you can simply like you
+know uh wrap it around you know
+traditional form and you can see it like
+that short key was literally like an
+applying this function on that stick the
+beauty of like you know this object is
+that you know they contain lots of
+interesting information that it can help
+you to get like you know uh to have an
+idea like you know what you're doing but
+you know what is the picture uh What is
+this state it's a pure State format and
+trophies you know uh zero it's one
+physical system the number of Q This
+Dimension etc etc but anyhow like you
+know let's focus on the on the big
+picture so uh
+a physical process happen like you know
+we prepare a Quantum State and then the
+next step that we do is we do
+measurement remember like you know in
+quantum theory measurement is very
+different from any other transformation
+so like you know whatever transformation
+whatever process that is happening on
+Quantum system measurement is different
+so what I'm doing here and think about
+it like you know very similar to like
+other functionalities that we have in
+both of Mathematica a function
+it acts on another function and then and
+the results is an outcome so here like
+you know our Quantum measurement acts on
+basically this is the input for this
+function I'm saying that we're going to
+measure it in you know computational
+basis or some details like you know for
+example if you do not know like you know
+how to do that like just just look at
+the documentation so this is the
+documentation and like you know it
+contains all the information that you
+need regarding that function but anyhow
+let's again let you know let me just
+briefly review and then I'm going to go
+into the detail so
+a state is prepared and then at the end
+you do a measurement
+uh in our framework because like you
+know we have all other functionalities
+involved for mathematical you can
+calculate the corresponding
+probabilities remember quantum theory
+the best description at the end is
+giving you which what probability you
+can get the corresponding outcome and
+this is what we get out of log you know
+this spatial state
+okay so like you know that's basically
+the bar chart of like you know uh that
+measurement that's not what is happening
+in practice
+because these probabilities like you
+know well for Mathematica
+it calculates them exactly meaning
+because you know we have you know
+statistic probability functionality
+these are the exact numbers
+in reality like you know in experiment
+just let me show you like you know a
+special case that I have simulated an
+experiment you have to basically repeat
+the ex the measurement and you would get
+a collection of results okay so in this
+very special case you know what I'm
+doing here I'm simulating you know the
+measurement results and I'm saying that
+you know do it you know too many times
+okay and this is basically you know what
+I'm getting here and then like you know
+out of that you can you know calculate
+the corresponding frequencies so what
+I'm doing here is I'm just let me just
+show you this text of the cell right now
+okay count them the result is an
+association it says like you know for
+one you know you got 18 results for zero
+you got two results and then the next
+step I'm just telling you know normalize
+that based on like you know let me just
+use you know this syntax which means
+like you know check this you know
+outcome here I'm just saying I'm going
+to normalize by total you know because I
+want to get you know the probabilities
+it's just like you know how to get the
+probabilities this is basically you know
+the frequency that we get this is this
+is what happens in experiment of course
+like you know in reality there are noise
+and many other complexities but anyhow
+like you know that's what you would get
+and you can look you know compare them
+together you know easily but
+uh the the orange one is like you know
+the exact like you know that's exact
+calculation and the blue one is what you
+get out of the experiment uh
+please note that like you know because
+again you know in Wolfram language we
+can have you know symbolic calculation
+and again you know all of those
+statistics and uh uh probability
+functionalities the results that we
+calculate I know like you know I refer
+to them as a sort of log you know
+simulation but they are exact as well
+again on purpose I put it like you know
+as exact and uh this is a very unique
+feature about our framework but you know
+if you want to reproduce like another
+measurement results in other you know
+Quantum Frameworks the best they would
+do is they run it you know a couple of
+times I don't know 1024 times and they
+just tell you like you know what counts
+for each measurement
+uh this is the core idea of like you
+know any Quantum computing
+that that's it okay like you know it's
+prepare a very particular State and do a
+measurement and for the measurements you
+know at the experimental level we get
+like you know a collection of results
+and then based on that you know we want
+to do a very particular you know
+computation
+that that's it
+uh the biggest headache is usually like
+you know how to prepare a very
+particular state that is suitable for a
+very particular goal for a very
+particular like you know uh objective
+that we have and how to prepare that
+okay so that's the whole idea of like
+you know developing a Quantum algorithm
+for a very particular purpose okay but
+let me just comment a little bit more
+about like you know Quantum measurement
+because you know remember that you know
+in quantum theory you can do Quantum
+measurement in many possible ways for
+example the previous example that I
+showed you was let's say like you know
+pretending that this is a simulation of
+an actual like you know Quantum
+Processing Unit it was in computational
+basis zero and one you can change that
+basis you can do it for example in poly
+X and you would get you know the
+corresponding probabilities so these are
+the results in poly X and this is the
+result like you know in uh
+uh for like you know computational basis
+so that for that measurement you have
+lots of freedom okay so that's a big
+picture a Quantum estate you do a
+measurement and for a measurement like
+you know the best is like you know you
+can calculate some you know frequencies
+and then you have to ask okay what what
+I can learn out of those frequencies
+okay what kind of you know operation uh
+I can do with that
+uh so first what what Quantum estate
+given like you know any initial State
+like you know let's say that you know
+you you prepare your system in a
+particular State and then you want to
+transform that state in quantum theory
+this transformation can be done in many
+different ways okay for example like you
+know one possible way is doing it in a
+unitary way this is what we usually have
+as Quantum operator and quantum theory
+so what I'm doing here I'm just saying
+that you know okay prepare a very
+particular State and then apply like you
+know poly X poly X you know in two
+Dimension is you know it's still you
+know literally the same like you know
+not uh operator and of course I'm sure
+you guys know that like you know you go
+from zero to one
+so this is the transformation like you
+know I'm showing you the the simplest
+case but like you know then the next
+step for any Quantum algorithm is what
+is the collection of you know
+transformation for a very particular
+objective what what we can do like you
+know uh how we can compose a very
+particular you know transformation
+so let me focus on like you know the
+idea of like you know uh transformation
+like you know how I can change this
+state uh just like you know a common
+terminology that we have in quantum
+theory because again like you know the
+most popular you know Quantum systems or
+Quantum system in two Dimension but you
+know a spin half system uh for example
+let me show you like you know a case
+that I'm preparing like you know a
+random pure State and I'm just looking
+at the amplitudes okay so this is
+literally like you know uh uh for this
+basis you know this is the amplitude and
+that's the other one this is basically
+the same like for example in our
+framework the
+another term that we have for that is a
+state Vector but you see like you know
+behind the scene you know for us as
+state Vector is a sports array and if
+you want to see like another actual form
+just like you know look at the normal
+okay so that that's what you get uh of
+course you know when you're you know
+looking at this state you know Vector
+remember like you know the order like
+you know this amplitude corresponds to
+what you know uh element of your basis
+either you know if you don't know that
+for example look at the amplitude
+because you know it shows you like you
+know the keys here are basically like
+you know the element of the quantum
+basis that you're using but anyhow like
+you know so for the simplest Quantum
+system you know we can describe it by a
+vector a vector of two elements that can
+be like you know complex another way of
+you know representing that is by a
+vector in three dimension and this is
+what we usually call as a block vector
+uh each of these objects each of these
+objects that we have in our framework
+they have a long list of properties that
+you can find you know in our
+documentation page like you know oops I
+went to the documentation for
+let me just show you the documentation
+page here and if you click on the
+details like you know there is an
+explanation here like for example here
+in a block spherical coordinate you know
+coordinates of computed block Cartesian
+like you know so it gives you the
+Cartesian coordinates so this is
+basically Cartesian coordinate and this
+is you know the spherical coordinate of
+you know R Theta and Phi uh this is
+basically the three-dimensional you know
+visualization so you have a sphere and
+like you know this Vector represents the
+same state as what we have here
+this representation is very popular like
+you know those of you if you want to
+work like you know in in this field you
+need to know more about like you know uh
+blocker sphere because uh this is one of
+those knowledge like many times many
+want to describe anything we refer to
+the you know block vector and what
+happens to that okay
+let us focus on a very simple case okay
+so what I'm doing here is that plugin
+I'm preparing like you know important
+state in a zero State I guess you
+already noticed like you know I haven't
+mentioned that but look at here like you
+know the quantum estate is taking a
+string as an input so this is exactly
+the same as
+doing it
+as a vector when the first element is
+one
+so in the second element is Z1 so this
+is by definition that's how we Define
+log you know zero State and as you
+notice like you know all other
+functionalities that you have in in
+Wolfram language like you know you can
+apply it on the on the top of you know
+Quantum objects but anyhow let us
+continue like you know with our story so
+what I'm doing here I'm just doing you
+know a simple transformation I'm saying
+that like you know this function
+which is a rotation with a given you
+know a vector is acting on that initial
+State and that initial state is
+basically or zero State and then I'm
+looking at the Block plot of that state
+we can just you know wrap it by
+manipulator and you see here like you
+know it is clear like you know it's the
+rotation around the y-axis that that we
+have here by corresponding you know
+angle Theta
+okay so it's just a simple
+transformation
+now let me make a composition of like
+you know these operations in two steps
+I'm gonna say like you know first step
+I'm gonna apply rotation and you see
+here like you know the notation that I'm
+using here is a functional notation here
+I'm just using the prefix notation okay
+it's just like you know different
+syntaxes that we have involved form
+language but anyhow what I'm doing here
+I'm just saying that you know first
+applied rotation around y by the
+corresponding angle Theta on this
+initial State and on the result apply
+rotation around C
+and as you can see like you know for
+example you know this is the rotation at
+all y-axis and now a rotation around you
+know z-axis
+we can go from a final state
+different we can go from an initial
+state to a final state
+so the idea of like you know a
+composition like you know this is what
+we usually call as a composition like
+you know two transformation apply on a
+particular State this is basically the
+very fundamental idea of like you know a
+circuit
+so whenever we talk about the circuit a
+circuit is literally like you know a
+collection of like you know uh different
+operations and those operations like you
+know I'm on purpose I'm saying operation
+in the most generic term because they
+can be even non-unitary non-trace
+preserved they can be anything it can be
+a noise it can be you know stochastic it
+can be a Quantum Channel it can be
+literally anything but here you know I'm
+just considering the the a very simple
+case like exactly the previous situation
+that first rotation around y then
+rotation around the C now this is
+basically in language of uh circuits
+uh the the most common thing about the
+quantum circuit is you know the
+corresponding visualization which is
+what you see here each vertical wire
+each horizontal wire it represents the
+quantum State and each of these boxes is
+basically your transformation and here
+we should read from left to right okay
+so it means this guy here you know
+rotation around why it acts first and
+after that Z
+so remember like you know I'm writing it
+here like you know left to right and
+that that's the very first operation
+that is happening
+uh there are some like you know the way
+that you can
+build your circuit I'm gonna show you
+you know some complicated examples but
+anyhow like you know either you can
+literally the way that I'm doing it here
+include your objects but you see here
+like you know somebody would say ah look
+you know this is redundant I'm just
+repeating you know Quantum operator can
+I get rid of that oh yeah of course you
+know you can do that you know we also
+support like you know those uh shorthand
+notations so basically literally like
+you know whenever you have Quantum
+operator wrapped around that you know
+you can just
+remove that and that that maybe helps
+with writing the code or reading that so
+it's like you know basically rotation
+around y by corresponding you know angle
+rotation around Z by the corresponding
+and your line you can easily again like
+you know
+check that you know they are the same
+these two are the same thing uh one very
+important feature of like in a Wolfram
+language is that you can do symbolic
+computation as you can see here you know
+this circuit is a symbolic circuit I'm
+not assigning any value to parameter you
+know Theta and Phi okay there are
+literally like like a symbol and you can
+what you can do is you can say okay uh
+this circuit now I want it to act on an
+initial estate
+so the way that you can do it is just
+like you know active like you know that
+second I call it you know Crump and you
+know it can act on any Quantum mistake
+whatever is that Quantum State okay for
+example this this is a state
+representing in a one qubit so it can go
+even with the random queue or like you
+know whatever state you like
+many times we prepare all of our Q bits
+in the ground state meaning all of them
+are in the zero State because that's the
+most common way of like you know dealing
+with you know Quantum systems in Quantum
+Computing one shorthand notation is just
+don't give any input
+whenever you are not giving any input
+behind the scene what we do is we are
+going to set whatever Quantum system
+that you have all of them at the ground
+state zero okay so like you know
+basically this operation that you see
+here Quantum state zero and then like
+you know this circuit acting on that is
+the same as this operation but
+anyhowload you know this is a
+transformation like you know a
+transformation of the state and then you
+can look at like you know the amplitude
+and these all the amplitudes that that
+we got as you can see here these
+amplitudes are still you know in the
+symbolic form
+okay this is one important thing that
+you remember about you know both of
+language uh it has a very you know
+strong feature maybe the characteristic
+trait of like in a Wolfram language is
+that you can do symbolic calculation
+okay now so let's let's jump like let me
+give you more information about like you
+know okay this composition of operation
+which is basically the wrapper around
+them is our Quantum circuit operator
+you can do whatever you want let's try
+to read it like so here I'm just saying
+that you know poly X
+poly Y and then rotation around X by the
+angular Theta this is basically the
+collection of like you know Gates that
+we have like you know like that's how we
+would call them you know in Quantum
+Computing and all of them are acting on
+the same wire on the same Quantum system
+uh very interesting feature that we have
+in our framework is called order so you
+can say you can specify a various
+specific order you can say look uh I
+want you know this rotation to act on
+the second quantum system
+okay so that's how you would do it you
+would just you know uh specify a rule
+and this one would say okay this
+rotation goes to the second system and
+if you look at like you know again like
+you know what I'm doing here I'm just
+using the shortcut for traditional form
+but you know on Mac is command shift t
+and as you can see here like you know so
+X is on the first after that y on the
+first qubit and then look you know you
+have rotation on the second one remember
+like you know unless these commute like
+you know the order that you are writing
+them like you know it's very important
+so that's the rule of thumb like you
+know those of you who are new to this
+field remember like you know the order
+that you're writing all those operations
+are very important
+or another example like you know look at
+you know this example what I'm doing
+here I'm just saying that you know okay
+you know this time like you know I would
+like you know uh Hollywood to act on the
+third qubit so this time you're gonna
+have you know three wires for the first
+one we have like you know poly X second
+one rotation around X and the last one
+is what
+so that's how like you know we can you
+know uh build you know a composition of
+different you know Gates different you
+know transformation for uh our Quantum
+systems of course the examples that I
+have shown you so far like you know all
+these examples as you as you see like
+you know each of these Transformations
+they are acting on a single qubit you
+can have you know more complicated cases
+like you know for example like you know
+this is a fancy control gate which is
+acting simultaneously on four quantum
+systems at the same time basically you
+cannot decompose it into a you know a
+Chronicle product of like you know four
+different operations okay it's acting on
+that whole you know space at the same
+time okay so your Gates your
+transformation they can act on a single
+they can act on many of them two or more
+at the same time and again like you know
+look what I'm doing here I'm just going
+with the control and then I'm saying
+that you know the operation is X this is
+control one so I'm just saying that like
+you know number one and number two if
+they are one
+acted and then this is basically control
+zero so like you know these are like you
+know the uh
+uh Arguments for our control gate and
+again like you know if you don't know
+how to use like you know these
+functionalities just just look at our
+documentation uh it has many examples
+and each of these named you know
+operations like you know they are
+explained here in detail
+whenever you are looking into the
+documentation especially for circuit
+operator please remember that many of
+the things that you see here there are
+actually Quantum operators so if you go
+here
+let me show it one more time and under
+the details you didn't see any
+description of the control operation it
+means it is under the documentation for
+uh Quantum operator or something just go
+it's a long documentation so if we click
+on Quantum operator
+and here like you know you would see it
+like you know all these you know all of
+them are collection of you know control
+Gates that we have here so we can find
+like you know the detail here
+okay so that's that's the one that I was
+using
+and each of log you know these
+operations they have a full name or they
+have a short name like you know you can
+use either one
+uh
+now let me just give you like a very
+specific example regarding like you know
+what we usually call as a a Quantum
+algorithm for a very particular you know
+go
+I use you know a textbook example which
+is you know Grover Quantum search
+algorithm okay so the idea is like this
+let's say that like now we have this
+Boolean function which is a simple look
+you know the the like you know and and
+then not on the second one using like
+you know the other building
+functionalities in more for Mathematica
+you can easily find like you know what
+are the solutions of this Boolean
+function is it trivial case it is clear
+living room if q1 is true Q2 is false
+like you know you will get like you know
+that that's a solution you will get a
+true value for f okay now let's let's
+what is the a
+Quantum process
+for finding you know this solution
+okay so that Quantum process is going to
+be like this you would start by
+preparing your physical states in the
+ground state you would apply some
+Transformations and then you would do a
+measurement
+remember all of those Transformations at
+the end of the day they prepare a very
+particular Quantum state
+so any Quantum algorithm is like
+a very specific Quantum estate followed
+by the measurement remember like you
+know measurement that's the only way
+that we can extract information out of
+log in our Quantum system
+uh for this very particular case well
+you know I guess you already noticed
+when I was showing you the documentation
+for Quantum circuit operator we have a
+long list of you know uh name operators
+name circuits
+so these are like you know very common
+circuits that that we have for a very
+particular like you know algorithm and
+uh
+let me focus on again as I told you like
+that's a textbook example Global
+Research algorithm uh log uh maybe it's
+early if I just show it to you that like
+you know we have all the completions so
+when you just type it like you know it
+shows you you know completely stuff like
+you know name operators that name
+circuits that we have I don't like
+let's just look at the magic wand for
+preparing like you know Bella State and
+that that that's what we have here by
+they were like you know all these
+features like you know this gray box
+like you know that particular
+composition that you may not like it to
+see it on the top block you know all of
+them look you know you can easily uh
+customize them using uh our uh label
+functionalities and
+just find it for second diagram it's
+here you see like you know what I did
+was you know just I just search through
+the documentation and that's the diagram
+for you know Quantum framework and these
+are all the details all the options that
+we have for uh circuit visualization I
+know like you know many of our users are
+using you know Wolfram language for
+visualizations so like you know we have
+lots of options you can do a lot but but
+anyhow let's let's
+let's move on so the input the argument
+here is basically that Boolean function
+I'm just saying you know look you know
+I'm looking for Grover uh search
+algorithm uh this is the Boolean
+function and this is a circuit diagram
+that we have
+the first you know step like you know
+the one log analysis inside the gray
+boxer you know for Grover search
+algorithm which is usually called uh uh
+diffusion step for a second I I forgot
+about the terminology and the second
+piece that you see here is amplification
+so what's what's happening here like you
+know is uh practice each of them let's
+say that you know you are
+interested in uh
+just looking at the grover diffusion and
+uh
+oh
+yes so I'm you know this will be
+functional very soon let me just make it
+another note of that
+I'll fix it very soon
+but anyhow you know each of these pieces
+let me also check if we have uh
+oh
+see is it the same case for phase
+diffusion
+oh
+okay I have broken that so I'll I'll fix
+it in a sec uh each of these pieces
+basically login and can extract it you
+see like you know the name operates was
+never there but let's continue so what's
+happening here is that you know during
+the first step the the gray box we are
+saving the information about the
+solution in an ancillary qubit and then
+in the second step we amplify the
+basically the amplitude of that uh that
+very particular uh solution
+okay uh the global search algorithm well
+you know remember login it has two uh
+features this is the one which is based
+on you know uh Boolean Oracle uh there
+is another one which is basically Grover
+uh
+let me show it separately
+foreign
+qubit okay so there are whenever we you
+know when you are looking into the
+literature there are two Global search
+algorithms one of them is the angular
+qubit with the other one without that in
+one case we are saving the solution in
+unsolute qubit in the other case we are
+saving the solution in the overall
+amplitude logging obviously we are
+adding a negative uh phase in front of
+like you know our our superposition uh
+make sure like you know you understand
+the difference between the two but
+anyhow let me just focus on you know
+what's What's Happening Here so first
+you know I need to prepare my Quantum
+estate so and this is you know basically
+this step for preparation
+so what I'm doing here I'll make sure
+that like you know the answer qubit is
+prepared in state one that's what like
+you know I added and not set here and
+then like you know I had hadamard you
+know on all of them uh to have a sort of
+like you know you know uniform
+superposition and again you know let's
+read like you know the code here and
+this is again you know one of the other
+things that uh By Design you know we
+spend so much resources making sure that
+you know the code is also readable not
+applied on the third one and then we
+have hadamard a collection of other mod
+on three qubits uh there is like instead
+of like you know this design you can go
+like somebody would say like look you
+know I want to do it like this I want to
+say like you know how the amount it's
+acting on uh
+and one and two and three so that's
+that's the same thing
+okay uh
+again like you know this uh particular
+design like you know it's
+maybe easier than this one but anyhow
+like you know
+you can use you know either one uh the
+second one like you know it's good
+because sometimes you may want to act I
+don't know how the mod only on some
+specific you know qubits without and
+skipping some of them okay so that's all
+like you know giving it as an order
+maybe it's better than just giving it
+you know in this form but anyhow like
+you know that's our preparation and now
+look look what I'm doing here so here is
+basically like you know I'm I'm making a
+composition of some circuits remember
+this is one circuit this is another
+second and look how it is done I'm
+saying that like you know the notation
+that we have here is just for the right
+composition I'm just saying I don't know
+okay start with like you know the
+circuit that I call prepare and then
+Grover and then measure cubic number one
+and qubit number two
+and this is a circuit that I have
+constructed out of that
+so get along you know remember like you
+know that this is another way of like
+you know thinking about like the
+composition it's literally like you know
+whatever operation you have as far as
+like you know it isn't an operation
+remember operation means transforming
+the quantum estate you can have you know
+their Quant you can have their like you
+know the composition the first one is a
+Quantum circuit this is a Quantum
+circuit this is a general measurement
+operator but you can you know compose
+them together
+okay so this is our circuit and now I'm
+saying that you know okay this circuit
+is acting on you know uh a ground state
+of cubic number one through qubit number
+three
+you can save explicitly like as you can
+say that you know we have three Estates
+all of them are preparing Quantum state
+zero that's one way of like you know
+doing that or again like you know as far
+as you you are dealing with the register
+State this is sometimes what we call as
+a register statement by the way
+this is another way of you know doing
+exactly the same so you can say go with
+the register state of three qubits
+okay so this is the same as what we have
+here the same as what we have here many
+times like you know if you see me or you
+know other people that go from do coding
+you know in our framework you go we go
+with the short-term representation look
+anyhow do whatever way that you're more
+comfortable with
+and because we had like you know the
+measurements okay so the result you know
+is an object which is quantum
+measurement
+okay because again like you know we had
+you know measurement operator here
+you see here like you know that the the
+double you know horizontal line on the
+top that's basically a classical Warrior
+you know that that's the wire that
+you're saving you know classical
+information and by the way you know one
+more time all the labelings that you see
+here the label on the left the label on
+the right whatever you are like showing
+like you know the classical Warrior or
+not showing a classical Warrior you can
+customize them whatever you want you can
+eliminate it you can change the color
+you can make it brighter you can make it
+darker like you know you can you can do
+whatever you want but again let's see
+look you know I did you know all this
+operation and I did like my measurement
+now now the question is okay so what
+now let's let's look at the you know
+probability you know distribution so
+what I'm saying here is you know just
+return the probability plot of the
+results and remember because we were
+measuring two qubits HQ by two possible
+you know outcomes so the potential
+outcomes are four of course like you
+know I'm kind of cheating I'm using a
+simple example that you know that shows
+you directly the result even go over
+yourself algorithmic is usually more
+complicated than that but anyhow look at
+the outcome with the largest probability
+here is a very special case you know I
+mean productive one you'll get the case
+that q1 is in one Q two is in zero
+now let me remind you what was the
+solution
+the solution was the first one true the
+second one false
+one and zero and that's exactly the
+solution that we obtain
+okay so that's basically like you know a
+very simple you know Quantum algorithm
+for various specific you know
+objective and of course like you know
+there is a
+Hot Topic for any Quantum algorithm is
+like you know how much it is you know
+better than you know classical
+counterparts okay so that that's a
+completely different topic like you know
+to be honest with you you know I'm not
+an expert on that but like you know I
+understand it but
+uh I would leave it to special like you
+know mathematician or you know uh
+computer scientists with Quantum
+expertise like you know they can
+elaborate more on that there are lots of
+you know uh textbook on that
+uh let me just mention one other thing
+like you know you notice you know the
+way that I created My overall circuit
+was using this fancy notation and right
+composition etc etc okay so you may have
+a different mindset you may have you
+know look what I'm doing here at the end
+of the day it is also like you know a
+composition of bunch of circuits and the
+circuit number one is prepare the second
+number two is over and then I do
+measurements so
+why not giving them as a list inside the
+circuit operator yes that's you can do
+that you know and you would get this
+result
+the only difference is like you know in
+terms of you know visualization because
+like you know now you're feeding each
+one of them as a circuit we just wrap it
+around like you know that gray box and
+the label on the top like you know it's
+basically the composition of like you
+know whatever you do but again like you
+know if you don't want to see these
+boxes or if you don't want to see those
+labels you can easily eliminate them
+okay like you can customize all of them
+and of course like you know this you
+know the result
+is going to be exactly the same as a
+previous one right so
+there are different only in terms of
+like you know uh visualization
+uh that was basically a very you know
+simple introduction to you know Quantum
+computation using our framework so the
+way that I want you guys to like you
+know those of you who are new to this
+field is just think about like you know
+a targeted state
+and then a very particular way of you
+know preparing that state keep that in
+mind at the very end you are always
+dealing with the measurement results
+okay so it's a probabilistic like you
+know reasoning if if you want to think
+about it but that's how that's how we do
+it
+in quantum theory and by the way this is
+not the only Paradigm to do Quantum
+Computing the product that I'm
+explaining here is what we usually call
+as a gate based Paradigm and majority of
+like you know Quantum Processing Unit
+the actual Quantum hardness out there
+there now they are claiming that like
+you know if we can trust another quantum
+but anyhow uh it's a gate base
+uh there are some companies that are
+offering like you know a different
+approach like for example like you know
+like you know the d-wave you know for
+them is not a gate base like you know
+approach to do Quantum Computing uh in
+those cases like you know for a very
+particular objective you know you with
+design like you know hamiltonian and
+then like you know that hamiltonian that
+very particular hamiltonian would do the
+job for you so it's a very completely
+different approach compared to like you
+know what what we have here
+uh in terms of like you know
+experimental which one is better which
+one is like you know I I don't know that
+that's a question for the
+experimentalism and we should wait and
+see like you know the
+monitor the progress in in experimental
+advancement of like you know Quantum
+processing units
+so that was basically like you know
+what I had
+prepared for today so if
+uh
+there is anything that has not been uh
+one more time remember like you know you
+just need to install the packlet
+after like you know installing the
+packet if you do not you know quit your
+kernel like you know the functions will
+be there but if you quit your kernel
+like you know yeah you have to basically
+uh install the packet every time that
+you're creating your own character
+and of course everything behind the
+scene is done but yeah it's classical
+like you know we are doing a Quantum
+algorithm on a classical machine
+okay it's you can by the way like you
+know we have we have it in your
+documentation if you are interested you
+can send your queries from a world from
+notebook you can get send your queries
+to a Quantum Processing Unit uh you can
+use like you know either IBM you know uh
+Quantum processing units you can use
+anything that is available on AWS and
+like you know uh just wait like you know
+get your result and then like you know
+do whatever processing you want to do
+with that

@@ -1,0 +1,166 @@
+Architecture is the process and the product of 
+planning designing and constructing buildings  
+or other structures. A good design can make 
+a structure survive and be admired for years  
+or fail even to stand. It's the job of 
+the architect to join both art and science  
+to make sure all the pieces of a building 
+come together in a good solution.  
+Similar to architects as a software engineer 
+you will also need to mix art and science  
+to deliver solutions in a satisfactory way but 
+instead of bricks you will solve them with code
+Hi there I'm christian and you're watching the 
+A Dev' Story. Today I will be starting a new  
+series of videos covering software architecture 
+in a practical way. In this series of videos I  
+will be covering many concepts and fundamentals of 
+software architecture so hopefully by the end of  
+it you will be more prepared to tackle software 
+design challenges, have better discussions  
+and even be more prepared for a technical 
+interview. So without further ado let's start
+Software architecture has many definitions one 
+of the most famous one is from Ralph Johnson  
+where he says: "architecture is about 
+the important stuff, whatever that is"  
+but... what is important stuff? In the 
+software architecture we focus more on the  
+structure more than implementation details. 
+Software architecture is also about making  
+the expensive choices that are costly to change 
+after they are implemented. It's also about making  
+explicit the core decisions that will allow 
+the software to have high quality. Concepts  
+are better understood in practice, so let's 
+build an e-commerce site and see how that looks
+So, for example in our e-commerce site we need to 
+allow our users to do certain things like search  
+the inventory, check reviews, buy a product, 
+review past orders and maybe other features  
+as well. These are the functional requirements 
+of the application. Besides of what the system  
+should do we also need to focus on how should 
+the system behave. These are also called the  
+non-functional requirements. These are sometimes 
+defined as the "-ilities" that the system can have  
+like: functionality, reliability, usability, 
+efficiency, these kind of things. For example,  
+in our e-commerce site let's say that we wanted it 
+to be maintainable for several years and this is  
+a maintainability requirement; we also want to be 
+able to serve millions of users: in this case it's  
+scalability; we also want to make it available 
+24/7: which is a reliability to make sure that the  
+system is very stable. We also want to have good 
+response latency: which is efficiency; and we can  
+have many others. Finally, besides functional 
+and non-functional requirements you may also  
+have additional restrictions that will limit the 
+options that you will have for your architecture.  
+So, for example, we could have some legal 
+compliance, costs, time to market, standards, etc.  
+several restrictions that will limit the number 
+of options that we will have to design our system.  
+Let's say in our e-commerce site we need 
+to comply with the European Privacy Law:  
+GDPR. So, with that we need to take into 
+consideration architecture how to handle that.
+So after you get the context, you know all 
+the things that the system needs to do,  
+how it should behave and what restrictions are in 
+place that you need to take into consideration. So  
+after you have all of these things, you need 
+to prioritize them. S ome requirements and  
+restrictions will conflict between them. For 
+example, if you have a strict time to market,  
+maybe you need to drop some features. There 
+can also be other things like non-functional  
+requirements that need to be prioritized. So for 
+example, in our case of the e-commerce site, we  
+might not care too much about portability because 
+we will have a strong control of where it's going  
+to be deployed the application and after it's 
+deployed in there we don't plan to move it to  
+other platforms. So we could drop portability in 
+favor of scalability or maintainability. So after  
+you have prioritized the list and you have made 
+this trade-off you need to think about if it's  
+acceptable or not so after it's acceptable 
+then you start designing the architecture.  
+How do you start designing the system? So the 
+first thing is once you have it prioritized start  
+with one important thing at a time. If you try 
+to tackle everything at the beginning and trying  
+to think about all the possible scenarios in the 
+future, you might end up having an over-engineered  
+solution and this is not good because it is an 
+unnecessarily complex system. There is also an  
+acronym for that is YAGNI: You Ain't Going to Need 
+It. So if you are not sure about something or if  
+it's not prioritized then try not to tackle at 
+first. Try to postpone it to when you have better  
+context and can make a better decision about it. 
+Now that you have this you might start thinking  
+about what are the possible architectures that 
+might fit your system. For that, a good book  
+that I recommend and that is useful for me, is 
+this free ebook from O'Reilly that is: "Software  
+Architecture Patterns". It is a good book to get 
+a grasp of different architectural approaches  
+and you can see several architectural patterns 
+like: Layered, Event Driven, Microkernel,  
+Microservices  
+and Space based. This book shows pros and cons 
+of each of these patterns and might help you at  
+the beginning when you're designing the system 
+what to look for and what would be best for your  
+system based on your current requirements. So we 
+have decided what are some of the features that  
+we want to have our system implemented. We have 
+also mentioned that maintainability is one of the  
+non-functional requirements that is very important 
+for us, so with that we can start designing our  
+system and we can take for example a Layered 
+approach. We could have a Database or a Storage  
+Layer where we would sort data; then we will 
+have a Logic Layer where we will have the backend  
+servers that will be taking care of handling 
+any business logic that we want to handle;  
+and then the Visualization part or UI, where we'll 
+be allowing the users to interact with the system
+and this is how we get to the Layered Architecture
+So here we have defined the architecture 
+with the structure that the system will have.  
+The features can then be implemented following 
+this layered architecture. And if you want to  
+learn a little bit more about how to implement the 
+features in a scalable nice way then I recommend  
+you to check out my other video about design 
+patterns. It's very typical in web applications  
+to use a layered architecture but it's not the 
+only architectural pattern that we can use.  
+There is no silver bullet so make sure that in 
+your context you look to different approaches and  
+pick the architecture pattern that would better 
+fit your use case. It's also normal that the  
+architecture would evolve over time and sometimes 
+even in unintended ways that would make expensive  
+changes to the architecture. So you need to make 
+a balance about foreseeing the certain things  
+that you will need to cover versus the things 
+that you need to prioritize in the short term.  
+If you try to tackle everything then you can 
+end up having an overengineered solution.  
+One of the most expensive things can be scaling. 
+So, in our case, we already have the architecture:  
+How can we make it scale to serve 
+millions and millions of user requests?  
+For that check out my next video. And 
+that's it for today! Thank you very much  
+for watching and if you liked the video don't 
+forget to click the like button, subscribe,  
+share it. And if I missed something, or you want 
+me to explain something a little bit better don't  
+forget to mention it in the comments [section] 
+below thank you very much see you next time.

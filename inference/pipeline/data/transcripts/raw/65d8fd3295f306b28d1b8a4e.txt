@@ -1,0 +1,470 @@
+[Music]
+hello everyone welcome to another
+episode
+and today we have devon chatterjee a
+predictive analytics consultant at
+lasalle network
+and today we're speaking more about the
+topic of quantum computing and data
+science for it
+so welcome to the show devon i'm such a
+pleasure to have you today
+hi hi catherine and thanks for having me
+on the program yeah absolutely
+could you tell the audience just more
+about where you're coming from
+and your background and just what led
+you to your role today
+sure uh so i majored in physics and went
+to
+university of new mexico to study
+quantum information processing that was
+around 2000 2001
+i studied under people like murray
+gilman from there
+i went to university of chicago to study
+math and computer science
+then on to iit to work on my phd in
+analytics where
+my dissertation topic was hedge fund
+replication with deep neural networks
+and generative adversarial networks
+when i was in chicago i started working
+in systems engineering
+and because of my analytics background i
+started doing analytics
+within it and that was before data
+science was even mainstream
+so my last position was as a senior data
+scientist in a cyber security group
+now i'm consulting helping a company on
+their
+digital transformation journey to
+improve their
+quality and governance and expand their
+analytics capabilities
+in addition i've taught business
+analytics and data science
+at iit in northeastern illinois
+university and i'm currently a course
+developer and adjunct professor
+in business analytics at indiana tech
+yeah that's awesome so you're clearly
+doing a lot of different things
+in the data field right now yeah
+and so what do you think are some
+similarities and differences that you've
+seen in
+quantum computing and data science since
+i'm sure there's a lot of
+overlap between these two areas there's
+actually
+probably not um that's yeah people might
+think that but there's actually mostly
+differences between the two fields
+as far as similarities i would say both
+areas are you know expanding due to
+advances in technology but there's also
+like a prevalent lack of understanding
+of both topics
+mostly quantum computing since it's so
+much newer than data science
+but anyone experiencing the uses of you
+know machine learning and ai
+at mainly as like buzzwords for example
+can fully appreciate that comment now
+quantum computing
+is one part of a broader quantum
+technology umbrella similar to ai
+being you know like under machine
+learning but
+in quantum computing there's things like
+quantum key distribution
+post quantum cryptography quantum
+software quantum materials
+one idea was to utilize quantum
+mechanics
+in a computer to speed up the
+computation of complex
+problems like those in optimization and
+finance and biology
+and eventually machine learning and ai
+so there's currently some research in
+the area of quantum machine learning
+and ai now some of the differences are
+that data science you know obviously
+uses classical computers
+which uses bits you know zeros and ones
+to perform the operations
+quantum computers use quantum bits or q
+bits
+to process the data so due to their
+basis in quantum mechanics qubits can be
+in both
+a zero and a one state simultaneously
+due to a concept called superposition so
+these
+and other aspects of quantum mechanics
+will allow quantum computers to obtain
+what's called
+quantum supremacy over classical
+computers quantum supremacy
+is where a quantum computer can solve a
+problem much faster than a classical
+computer
+so the more complex the problem the
+better a quantum computer will actually
+be
+at solving it faster right google
+has actually claimed to achieve quantum
+supremacy in
+back in 2019 it was around october
+november of 2019.
+now before that the progression of
+quantum computing had been
+essentially linear but now it's like
+exponential
+so there's new participants entering
+that field every year
+whether it's startups r d or developing
+hardware
+some other differences between the two
+are
+in the knowledge required so data
+science mainly requires
+you know as you know like knowledge of
+statistics econometrics programming
+visualization tools
+but quantum computing requires knowledge
+of quantum mechanics and matrix theory
+to start with so at this point i would
+also probably say that knowledge of
+quantum hardware materials and
+architectures are also needed
+since there's a few contending
+approaches to quantum computing
+like ibm's gate-based solution and
+d-wave's annealing-based solution
+so really data science is a way to use
+statistics visualizations and machine
+learning and ai algorithms
+to create solutions to problems and get
+more answers from the
+ever-increasing amounts of data that
+exist whereas
+quantum computing is mainly a technology
+based on quantum mechanics
+that will help solve those problems
+significantly
+faster and push past the current
+computational limits
+when doing data science on those
+classical computers
+it sounds like from just your
+explanation here it sounds like they can
+come hand in hand with each other as
+well and they can really complement each
+other
+also um even despite you know their
+differences right
+yes absolutely they're you know quantum
+computing is
+mainly for you know speeding up those
+types of problems which
+machine learning and ai models and
+algorithms
+help solve right in a better way than
+some other things like think
+think deep neural networks right
+although you know deep neural networks
+is a black box but
+quantum computing i think is probably
+even more
+obscure and unknown as to how that works
+it's a little bit more difficult even
+but
+yes definitely uh quantum computing will
+be able to
+work hand-in-hand at that point in the
+future with
+you know machine learning and ai you
+know with data science yeah absolutely
+and
+for these two topics how are they kind
+of being used in the it world today
+everyone kind of knows that data science
+has a number of business use cases
+but it also has a number of use cases in
+it
+so when hearing about data science i
+think most people tend to think of
+business applications like marketing
+health care
+claims finance etc right but data
+science applications in iet and cyber
+security
+are comparatively newer application
+areas
+in cyber security the main use cases are
+things like anomaly detection
+behavioral analytics attack
+classification or prediction
+predicting distributed denial of service
+attacks and privileged user analytics
+right
+and one of the big issues or the
+probably the biggest issues i found
+was that data is not as easily
+structured
+as it is on the business side you know
+within cyber security and i t
+and since cyber security leadership
+tends to be you know people with
+you know backgrounds and security but
+not much
+background in big data and data science
+then they need to trust the data
+scientists and data engineers to be the
+data experts
+right just like on the business side now
+in it
+outside of cyber security there's use
+cases that
+that may not be typically implemented at
+most companies
+one example from my last position was
+using machine learning to create
+a probability risk score for change
+management so here we used historical
+features of changes
+incidents and configuration information
+from infrastructure
+to help determine a risk score for new
+changes
+and their risk of causing an outage so
+the model
+used logistic regression to create the
+risk score
+if that score was above a certain
+threshold the it
+change management team could put it on
+hold they could reschedule it
+require additional information and
+sign-offs things like that
+so this actually had a realized savings
+associated with it
+due to the cost avoidance of outages and
+i'm doing something similar to this for
+the company i'm currently consulting for
+as well
+now for quantum computing it's actually
+too
+new to have current applications in
+business or it
+but there is a lot of r d happening in
+this area right now
+for example well goldman sachs recently
+said that they
+expected to be utilizing quantum
+applications within the next three to
+five years
+anthem is currently developing practical
+quantum computing applications to
+enhance the
+consumer healthcare experience but
+personally my opinion is
+i think that quantum programs and
+applications
+will take a little bit longer like maybe
+in the seven to ten year time frame
+because it's that crawl walk run
+scenario where
+you know everyone tends to focus more on
+the walk and run phases right so
+but they're still definitely in that
+crawl phase so
+there's some some work that needs to be
+done still but
+however i want to point out a caveat to
+that is
+one area of quantum technology that will
+definitely be relevant within the next
+three to five years
+is quantum security so within that time
+quantum computing will pose a threat to
+the security built into every company's
+it systems
+state-sponsored quantum computing
+hacking labs already exist
+and if a company's existing encrypted
+data
+is compromised a threat actor can
+actually hold onto that data
+and unencrypt it when the quantum
+technology is available so
+last fall i created a quantum risk
+presentation for our company ciso or the
+chief information security officer
+at that time there was a survey that
+determined that about
+half of it leaders viewed quantum
+computing as a threat
+but 71 percent of them said that they
+thought it would be a threat within the
+next three years
+and this was last year so companies need
+to look at transitioning to what are
+called
+quantum safe solutions there's a number
+of vendors already offering these
+solutions but the first thing that
+companies will need to do is perform
+a quantum risk assessment then evaluate
+vendors
+and quantum safe products and then
+develop some internal knowledge on
+quantum technology also finally you know
+you have to keep track of the
+developments in quantum computing and
+quantum key distribution and quantum
+safe solutions
+so that's mainly how quantum computing
+i feel would be utilized then within it
+in the near future
+yeah definitely and i think that's such
+an interesting insight to kind of think
+about for the future as well with
+everything really growing in this
+technology field right now is there any
+interesting projects that you'd like to
+talk about that
+you were able to utilize content
+computing yeah well
+so far the only projects i've worked on
+have been part of you know workshops
+textbooks or other online sources i
+started getting back into quantum
+information processing a few years ago
+when i ran my first
+quantum program using quiz kit on ibm
+q which is ibm's quantum computer you
+know since then i've obtained
+some professional certifications in
+quantum technology
+attended a number of workshops worked on
+some programming projects on topics like
+quantum tomography super dense coding
+swapping quantum states and quantum
+teleportation so some interesting
+projects involving some programming but
+in addition i'm also connected to
+founder of a startup in chicago
+called chicago quantum so last year they
+used d-waves
+quantum computers which is a quantum
+annealing computer
+to do portfolio optimization and they
+published a paper on that last july
+since my dissertation is on hedge fund
+replication and i use a factor-based
+approach
+to creating the portfolios i'm
+particularly interested in their work
+so at some point i would like to
+replicate what they did and possibly
+apply it to my research topic as well
+but outside of those types of things
+there's
+really not it's not like in data science
+where you have
+you know a bunch of stuff on udemy or
+wherever and and you can you know find a
+bunch of projects you know on github or
+whatever so
+it's kind of limited as far as projects
+really into quantum computing
+yeah definitely and i know that you
+would also mention that quantum
+computing is
+kind of a relatively newer field that's
+um emerging right now
+and what have been some resources that
+you've taken a look at just to help you
+with your
+journey with learning more about this
+specific niche
+sure um well i mean you know we're
+talking about data science
+too but those are obvious there's lots
+of sources available for data science
+outside of the university courses like i
+mentioned udemy coursera udacity
+even facebook groups right and i've
+utilized all of those at some point so
+it really
+depends on for data science it really
+depends on you know where you are in
+your data science journey as to what
+resources you need
+for quantum computing there's not as
+much available so aside from university
+courses in things like quantum mechanics
+there and quantum information processing
+there's not
+a lot of institutions offering programs
+for example in quantum computing yet so
+it's kind of like where data science was
+about 10 years ago or 12 years ago
+something like that
+there's a number of seminars conferences
+and workshops out there
+you just have to look a little harder to
+find them but if someone's interested in
+learning
+more about quantum computing or quantum
+technology in general like i would
+suggest
+starting there and expanding your
+resources and connections
+from there and that that's essentially
+how i approached it
+yeah no i think that's great and i
+wanted to say thank you so much devon
+for joining us today on the show
+we the data standard are trying to build
+a community where everyone can just
+network and collaborate with each other
+so what is something that you're kind of
+looking for out of the community here
+a couple of things i think first i would
+certainly be interested in networking
+collaborating sharing ideas with anybody
+who's interested in these topics
+second i've worked on quantum technology
+risk evaluations and road maps
+in cyber security so if anyone is
+interested in
+learning more about that or doing that
+within our company you know feel free to
+contact me for that as well
+yeah perfect and uh where can everyone
+find you online just to connect with you
+well probably the best place would be
+linkedin you know for anyone interested
+you can reach out to me on linkedin and
+and i i
+you know monitor that you know regularly
+so perfect
+and uh to our audience for more
+information on the data standard you can
+find us at www.datastandard.io
+as well as on our linkedin and youtube
+channel thank you so much devon for
+joining us it was so great to have you
+on the show to talk more about
+quantum computing and data science
+together hey thanks for having me on the
+show
+[Music]
+[Music]
+you

@@ -1,0 +1,225 @@
+space and time complexity can define the
+effectiveness of an algorithm while we
+know there is more than one way to solve
+the problem in programming knowing how
+the algorithm works efficiently can add
+value to the way we do programming
+to find the program's effectiveness or
+algorithm knowing how to evaluate them
+using time complexity can make the
+program behave in required optimal
+conditions
+doing so makes us an efficient
+programmer
+on that note hey everyone i am abou
+khandelwal and i welcome you all to yet
+another exciting video from simply learn
+in this session we will be discussing
+time complexity analysis
+however before we begin the session make
+sure you have subscribed to our youtube
+channel and click down the bell icon
+below so you never miss an update from
+simplyland
+so now let's look at the agenda for the
+today's topic
+we shall begin our session by
+introducing time complexity
+then we will discuss the types of time
+complexity
+and then we will discuss all the steps
+to evaluate the time complexity
+then we will briefly look at the time
+complexity of various algorithm
+finally we will sum up what we have
+learnt from this session
+so without any further ado let's get
+started with the first topic of this
+session
+introduction to time complexity
+the time complexity of an algorithm is
+the amount of time it takes to run as a
+function of the length of that input
+the length of the input determines how
+many operation the algorithm will do
+it will provide the information about
+the variance increase or decrease in
+execution time as the number of
+operations in an algorithm increases or
+decreases
+next up types of time complexity
+we will start with the constant time
+complexity
+then we will discuss linear
+logarithmic
+quadratic
+time complexity
+now let's have a look at them
+in the detail
+first
+constant time complexity
+when an algorithm is not reliant on the
+input size n it is set to have constant
+time of order
+big of 1.
+the runtime will always be the same
+regardless of the input
+as you can see in the code every line
+has the runtime of 1. and they are all
+independent of any input size so the
+runtime is always constant
+next up linear time complexity
+when an algorithm's running time
+increases linearly with the length of in
+the input it is said to have linear time
+complexity
+when a function checks all the values in
+an input data set it is said to have the
+time complexity of order of big o of n
+as you can see in the code the loop
+depends on the size n
+so the time complexity rose up to n
+next up logarithmic time complexity
+when an algorithm lowers the input data
+in each step then it is said to have the
+logarithmic time complexity
+binary trees or binary search functions
+are some of the algorithms with
+logarithmic time
+complexity as you can see in this code
+by finding out the mid in every
+iteration the runtime will decrease
+every step
+making it approximately logarithmic
+runtime
+next up quadratic time complexity
+when the execution time of algorithm
+rises non-linearly up to n square with
+the length of the input it is said to
+have quadratic time complexity
+in general net nested loops falls into
+the quadratic time complexity order
+where one loop takes big o of n and if
+the function contains the loop inside
+the loop then it multiplies
+as you can see in this code because of
+the nested loops the time complexity
+rose to n square
+now that you have the firm grasp of time
+complexity and its type we will discuss
+essential steps to evaluate the time
+complexity
+to understand this we will take an
+example of fibonacci number
+this code prints the fibonacci numbers
+till n
+we will divide this code into three
+parts isolating all the loops that play
+a significant role in altering the time
+complexity
+let's look at the first part
+it consists of some independent
+statement which gave
+constraint time for each statement
+next
+let's move it on to our next part that
+is for loop
+since this loop runs n times this will
+give linear time complexity on n
+next up the third part
+which also has the constant time
+complexity
+now let's take a total of runtime
+which comes out to be n plus 5
+we will then discard the constant part
+to find the time complexity which does
+not affect the overall time complexity
+now we will have the final time
+complexity of bigger of n
+we have now discussed time complexity
+and how to evaluate it
+now let's have a look at the time
+complexity of various algorithm
+we will look at the time complexity of
+insertion sort merge sort quick sort
+bubble sort
+and some searching algorithms like
+linear search and binary search
+let's look at them in the detail
+first up insertion sort
+as you can see in this code we are using
+nested loops
+so in worst case its complexity comes
+out to be n square
+now in the best case scenario the
+complexity will be linear time
+complexity
+next up
+merge sort
+in this case whether it is the worst
+case or the best case it will always
+remain and login
+as every statement in this code will run
+the same amount so no matter what its
+time complexity will remain the same
+next up quick sort
+the time complexity of quick sort in the
+best case is n login
+and
+and in the worst case it is
+answer
+next up bubble sort
+as you can see in this code we are using
+nested loops
+so in the worst case its complexity
+comes out to be n square
+now in the best case scenario the time
+complexity will become the linear time
+complexity that is n
+and after that we will discuss some of
+the searching algorithms first up
+linear search
+in the best case scenario if the
+statement to be searched is at the first
+position then the time complexity will
+come out to be constant
+whereas in the worst case the time
+complexity will come out to be n
+finally binary
+search in the best case scenario if the
+element is to be searched is at the mid
+then the time complexity will come out
+to be the constant
+whereas in the first case scenario the
+time complexity will come out to be big
+of log n
+we have now discussed the time
+complexity and how to evaluate
+and the time complexity of various
+algorithm
+now let's sum up what we have learned
+from this session
+first up the execution time increases
+with the types of operations we make
+using the inputs
+next up the lesser the time complexity
+the faster is the execution
+finally if a code is of hundreds of
+lines
+then it takes a toll on the pc's
+processor
+so it is essential to check and reduce
+the time complexity as much as we can
+and this was all for today's session
+hope you guys found it informative and
+helpful if you liked this session then
+like share and subscribe
+if you have any question then you can
+drop them in the comment section below
+thanks for watching and stay tuned for
+more from simply learn
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

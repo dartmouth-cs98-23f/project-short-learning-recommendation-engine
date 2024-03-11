@@ -1,0 +1,245 @@
+Here, inside this refrigerator, at a temperature
+just a tick above absolute zero, isolated
+from the rest of the universe...
+...is a quantum computer.
+If you believe the hype, this nascent technology
+embodies the promise of the future, and has
+the potential to revolutionize our lives with
+its turbo-charged computation.
+But quantum computers aren’t the next generation
+of supercomputers—they’re something else
+entirely.
+And before we can even begin to talk about
+their potential applications, we need to understand
+the fundamental physics that drives the theory
+of quantum computing.
+We’ll need to dive into another dimension,
+smaller and more alien than anything we intuitively
+understand: the subatomic world of quantum
+mechanics.
+Feynman’s Idea
+In the 1980s, one of the most important physicists
+of the 20th century encountered a major roadblock.
+Richard Feynman was hungry for a window into
+the quantum universe.
+But quantum systems, by nature, are fragile,
+and the information they hold hides from us.
+Because Feynman couldn’t directly observe
+quantum events, he wanted to design a simulation.
+It quickly became clear that his computer
+wasn’t up to the task.
+As he added particles to the quantum systems
+he was modeling, the cost of computation began
+to rise exponentially.
+Feynman concluded that classical
+computers just can't scale up fast enough
+to keep pace with the growing complexity of
+quantum calculations.
+Then he had a breakthrough.
+What if he could design a tool made up of
+quantum elements itself?
+This instrument would operate according to
+the laws of quantum physics, making it the
+perfect way to probe the mysteries of the
+quantum realm.
+The idea of the quantum computer was born.
+And by dreaming it up, Feynman had started
+to build a bridge between quantum physics
+and computer science.
+To understand how quantum computing works,
+it’s essential to start by understanding
+what makes it quantum in the first place.
+This means that we need to talk about what’s
+at the heart of quantum physics: a concept
+called amplitudes.
+Here’s what the classical rules of probability
+tell us about getting tails if we toss a coin
+20 times.
+We add up the probabilities for all the possible
+outcomes resulting in tails.
+That’s just common sense.
+But common sense doesn’t govern the quantum
+universe.
+Before you measure a subatomic particle, you
+can think about it as a wave of probability
+that exists in a kind of black box—a quantum
+system with many different chances of being
+in many different places.
+Quantum mechanics, at its core, is a change
+to the rules of probability.
+(02:05) This is also where the power of quantum
+computing comes from—from these different
+rules of probability than the ones that we
+are used to.Amplitudes are closely related
+to probabilities.
+But they're not probabilities.
+A key difference is probability is always
+a number from zero to one.
+But amplitudes are complex numbers.
+And what this means is that they obey different
+rules.
+So, if I want to know the total amplitude
+for something to happen, I have to add up
+the amplitudes for all the different ways
+that it could have happened.
+But when I add up amplitudes, I see something
+new, which is that a particle might reach
+a certain place one way with a positive amplitude
+and another way with a negative amplitude.
+And if that happens, then those two amplitudes
+can cancel each other out so that the total
+amplitude would be zero, and that would mean
+that that thing would never happen at all.
+So the amplitudes are connected to the probability
+that you actually see something when you look
+there.
+This is sort of the central thing that quantum
+mechanics says about the world: that the way
+that you describe a physical system is by
+a list of amplitudes.
+And the way that a physical system changes
+over time is by a linear transformation of
+these amplitudes—by some change to these
+amplitudes.
+But how can quantum computers use amplitudes
+to store and manipulate information quantumly?
+This is a qubit.
+It’s the basic computational unit in quantum
+computing.
+Qubits are like bits in a classical computer,
+but with a crucial difference.
+A bit is binary—it stores information in
+strings of binary digits that can only be
+0 or 1.
+But qubits are made of subatomic particles,
+so they operate according to subatomic logic.
+Qubits can be 0, 1, or what we call a linear
+combination of 0 and 1.
+This fluid combination of amplitudes is at
+the core of quantum computing.
+Before you measure a qubit, it exists in a
+state called superposition.
+You can think about it as a quantum version
+of a probability distribution, where each
+qubit has some amplitude for being 0, and
+some amplitude for being 1.
+Superposition is the reason that quantum computers
+can store and manipulate vast amounts of data
+compared to classical computers.
+When two or more qubits are in this closed
+state of superposition, they relate to one
+another through the phenomenon of entanglement.
+This means that their final outcomes, when
+we measure them, are mathematically related.
+Quantum entanglement is the word we use for
+the characteristic correlations among parts
+of a quantum system, which are different from
+the correlations that we normally encounter
+in the classical world, in ordinary experience.
+You could think of it as like a book.
+When you look at the pages one at a time,
+you don't see any information—you just see
+random gibberish because the information isn't
+encoded in the individual pages, but in the
+correlations among them.
+And to read the book, you have to collectively
+observe many pages at once.
+But if you want to describe very highly entangled
+states using ordinary bits, it's extremely
+expensive.
+Imagine that you had a primitive 10-qubit
+computer.
+It could store 2^10 values in parallel.
+To describe this entangled configuration with
+a classical computer, you’d need 16 kilobytes,
+or 16 thousand bits.
+Expand to a system with 500 entangled qubits,
+and you now require more classical bits than
+there are atoms in the known universe.
+This is exactly what Feynman meant when he
+said that classical computers weren’t scalable
+for simulating quantum mechanics.
+For a quantum computer to be of any use, you
+need to measure information from the qubits
+to get an output.
+The problem is, when a quantum system is measured,
+it collapses into a classical state.
+If you look at a qubit, let's say to ask it
+whether it's zero or one, then you collapse
+its state, right?
+You force it to decide whether to be a zero
+or one.
+Anything carries away information about whether
+that qubit is zero or one—so for example,
+if that information gets recorded in some
+radiation that's escaping from the quantum
+computer, then the effect on the qubit will
+be exactly as if someone had measured it to
+see whether it was 0 or 1.
+When you look at the system, then the amplitudes
+become probabilities.
+To extract an answer from the quantum system
+that isn’t just a random outcome of probability,
+like the flip of a coin, we have to use interference.
+Interference can be seen in classical physics
+… when waves in a pool hit each other, and
+one wave is above the surface, and the other
+wave is below the surface, and they cancel
+each other.
+Interference is just what amplitudes do when
+you add them up.
+… If something can happen one way with an
+amplitude of a half and another way with an
+amplitude of minus a half, then the total
+amplitude for it to happen would be zero.
+This is what you do in the famous double slit
+experiment.
+You close one of the paths, and then you see
+that now the thing that previously never happened,
+can happen.
+This is a quantum algorithm.
+Scientists can harness interference by creating
+a deterministic sequence of qubit gates.
+These qubit gates cause the amplitudes to
+add up constructively.
+This means that they’re mathematically guaranteed
+to boost the probability of seeing one of
+the right answers.
+This is a quantum algorithm.
+Scientists can harness interference by creating
+a deterministic sequence of qubit gates.
+These qubit gates cause the amplitudes to
+add up constructively.
+This means that they’re mathematically guaranteed
+to boost the probability of seeing one of
+the right answers.
+You might ask, how could you possibly concentrate
+all this on the right answer when you yourself
+don't know in advance which answer is the
+right one?
+This is exactly why designing quantum algorithms
+is so difficult and why we have a whole field
+that's been studying it for decades.
+Since 1994, there have been a few major breakthroughs
+in quantum algorithms, with theoretical applications
+in fields such as cybersecurity and search
+optimization.
+But according to most experts in the field,
+quantum computers are most likely to be useful
+for what they were born to do—when a curious
+physicist wondered about the deep structure
+of our world.
+I find quantum computing exciting as a way
+to explore physics.
+Now, whether that's going to make anybody
+any money—whether there'll be practical
+applications in the near-term—that's still
+very much an open question.
+But at least for physicists, it's an exciting
+time.
+The truth is... that the most important application,
+I believe, of quantum computers is something
+that we don't know yet.
+I'm sure that once we have a quantum computer
+to play with, we'll find amazing applications
+that we can't yet foresee.

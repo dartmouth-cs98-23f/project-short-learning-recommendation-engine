@@ -1,0 +1,131 @@
+all right what's going on everybody
+graphs a graph is a non-linear
+aggregation of nodes and edges a node
+also known as a vertex may contain some
+piece of data and an edge is a
+connection between two nodes there are
+two types of graphs we're going to
+discuss undirected and directed an
+example of an undirected graph could be
+a social network like facebook each node
+could represent a user and if one user
+is friends with another user well we
+could establish a friendship and edge a
+connection between these two nodes if
+two nodes are connected they have what
+is known as adjacency in this example
+larry is friends with patrick and sandy
+so larry has adjacency to patrick and
+sandy patrick is friends with larry
+sandy spongebob and spongebob is friends
+with sandy patrick and squidward and
+squidward is adjacent to only one
+neighbor spongebob so a social network
+could be an example of an undirected
+graph the other type of graph is a
+directed graph a director graph contains
+edges that will link one node to another
+however these are one-way connections in
+this example node a would have adjacency
+to node b but not the other way around
+however it is valid to have one node
+pointing to another node and that node
+could point back to the previous node an
+example of a directed graph could be a
+street map let's say you're working on a
+travel app and each node is a possible
+destination these single edges could be
+one-way streets and these double edges
+could be two-way streets you can move
+back and forth between these two
+destinations
+there are two popular ways to represent
+a graph an adjacency matrix and an
+adjacency list with an adjacency matrix
+we could create a 2d array one row and
+one column for each node if we need to
+check to see if there's adjacency
+between two nodes we would first find
+the index of the node we're beginning at
+let's say a so we would go to node a and
+then find the index of the node we're
+trying to travel to so b so row a column
+b if there are no edges this would be
+zero if there is an edge this would be
+one so since there's one here within row
+a column b well there's adjacency from
+node a to node b but if we take a look
+at row a column c this is zero so
+there's no adjacency between a to c but
+if there was well we would replace the
+zero with one then now there are pros
+and cons with the matrix one of the
+benefits is that the runtime complexity
+to locate an edge is big o of one it's
+constant all we have to do is find two
+indices so we have to find the row and
+the column however the space complexity
+to store a matrix is big o of v squared
+v as in the number of vertices that we
+have but you could also think of that as
+n and for the number of nodes big o of n
+squared so since we have five nodes and
+five columns we would have a total of 25
+spaces so the benefits of a matrix is
+that it's very quick to look up an edge
+however a matrix uses a lot of room so
+it tends to suit graphs that have a lot
+of edges on the other hand we have an
+adjacency list an adjacency list is an
+array or
+list of linked lists each element is a
+separate linked list and each header
+within the linked list would contain the
+address of a node if there's adjacency
+between one node and another we would
+add the adjacent node to our linked list
+so to find adjacency between two nodes
+we would find the node that we're
+starting at let's see if b is adjacent
+to e so we would locate index b and
+travel this linked list until we find
+the node that we're looking for that
+means there is adjacency between nodes b
+and e even if there's a node that is not
+adjacent to any neighbors we would still
+want to add it to our adjacency list
+just in case we do update it here are
+the pros and cons of an adjacency list
+the time complexity to locate an element
+is big o of v v as in the number of
+vertices you can also think of this as n
+so this would be big o of n to locate an
+edge we would first access the node that
+we're beginning at by an index so let's
+begin at b and we are looking for
+adjacency between b and e
+since each element is a linked list we
+need to traverse this linked list
+linearly until we find the node that
+we're looking for
+so in that way it's linear however a
+benefit of a list over a matrix is that
+they use less space the space complexity
+of an adjacency list is big o of v plus
+e v for the number of vertices aka nodes
+and e for the number of edges so yeah
+everybody those are graphs a graph can
+be used to model a network each node is
+a piece of data within our network and
+an edge connects nodes so like i said
+it's a popular way to model networks
+which don't necessarily have any sort of
+order so yeah that's an intro to graphs
+and in the next two topics we'll create
+our own adjacency matrix and adjacency
+list hey if you enjoyed this video give
+it a thumbs up if you have any ideas of
+where else you could implement a graph
+let me know in the comment section and
+of course subscribe if you'd like to
+become a fellow bro

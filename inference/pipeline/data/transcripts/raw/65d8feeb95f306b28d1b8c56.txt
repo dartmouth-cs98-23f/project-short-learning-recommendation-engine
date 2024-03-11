@@ -1,0 +1,912 @@
+let's welcome to lecture 16 confidential
+games there yay
+computationally game theory is what
+we're doing today the news of the day is
+actually a little bit old dated but
+still relevant checkers
+this incredibly wonderfully large
+powerful game that I've played as a kid
+many who play checkers as a kid gives
+about solved solve do you like what does
+that mean I will tell you in this
+section what solve means what it means
+for Jonathan Schafer and University of
+Alberta is that he proved he weakly
+solved checkers
+which means he proved if two perfect
+opponents are playing to God who
+floating in the in the heavens and
+they're playing checkers it's only one
+God okay well I'll do I'm gonna talk
+outs whatever so if they're to duplicate
+himself and now that God prisons up and
+now there always be a draw meaning that
+these both omniscient entities who knew
+the entire game tree no one would be
+able to cause the other one to lose it
+would buddy draw every single time
+that's really cool and they proved it
+they don't necessarily have a path for
+every possible game that's the
+difference from what I do and we'll talk
+about that later bets he weakly solved
+it which means he proved it but didn't
+necessarily have the answer for every
+game I have the answer for every game
+and we'll show you some demos that do
+that so today we're talking about
+computational game theory and this is
+what the lecture topic is little history
+definitions so we're on the same page
+and then I'll show you some demos
+viewing system that I've built ok so a
+high up sky level view ten-mile up view
+of computer sciences there are these sub
+pieces of computer science and you saw
+human-computer interaction and next
+Monday you're gonna hear a lecture from
+one of our outstanding young graduate
+student instructors who's going to talk
+to you about the whole field of
+artificial intelligence one of the
+coolest fields of coming up Siri you
+talk to your phone that's AI and there's
+a thousand other things that are AI that
+generally self-driving cars that say are
+some of the coolest applications that
+are happening today our AI and she's
+gonna try to summarize the entire field
+a very big task but she's up to it so
+there's all these fields of of computer
+science and AI is one of them and
+computational game theory falls under
+the umbrella of artificial intelligence
+so similar to
+what you saw it we go to see in a week
+from now so you actually it's great
+the Bjorn talked about the Mechanical
+Turk and so this is the original
+Mechanical Turk so this was a a
+mechanical device in which there was a
+master level player who hid and when the
+like the magician who said nobody in
+here nobody in here he would like move
+and so it looked like it was an empty
+box when they showed the players and it
+turns out there's a person under there
+who had a magnet to see what the board
+is above and had a little arm an
+armature that could control the arm
+17:70 people they still pooping outdoors
+and they're getting a chess-playing
+robot like what are you kidding me like
+how many there's like centuries in the
+future right it's like a time machine in
+today's day uh how does that come here
+so it played a strong game of chess can
+you believe it this mechanical this
+mechanical robot toured Europe and blew
+people away that this thing could play
+like how did were they inventing
+nowadays right and turns out that they
+challenged Napoleon now Napoleon
+somebody I would guess if he got
+challenged and got embarrassed he might
+not take too kindly to being embarrassed
+so I'm pretty impressed they challenged
+a Polina and beat Napoleon but they
+played Benjamin Franklin two people
+defeated all of them unfortunately so
+the idea of this Mechanical Turk is and
+this is why this name continues today is
+it looks like it's a machine doing it
+but it's really humans and that's how
+they have the Amazon Mechanical Turk
+idea where you can as a human do jobs it
+looks like the machines doing it like
+transcribing a lecture you know the
+words of audio file but in fact the
+people are doing it the work that's
+where this came from see the purpose
+person's doing their work looks like the
+machine got that idea
+unfortunately it burned in a fire but
+they recover the chess board because the
+chess board had been stored separately
+so they saved that but it's kind of cool
+it's kind of a shame that they lost the
+original thing we're going the history
+of game theory this is Claude Shannon
+one of the founders of signal processing
+founders of information theory a famous
+person remember the name I often in my
+exams I often ask you who was Claude
+Shannon so make a little circle for
+yourself to remember who Claude Shannon
+was he's an important person in our
+field the double eat there are many
+fields in the EE side the electric
+inside of our department in which Claude
+Shannon is the old the father of that
+entire field right it's pretty powerful
+guy so impressive guy he wrote a paper
+in 1950 that was the seminal work for
+all computing AI chess-playing programs
+can can get go back to their origins of
+that work so he set the foundation of
+what you what you had to do to create a
+chess-playing program and all of the
+current AI programs that play chess well
+go back to his early work in this
+incredible guy in fact he has something
+called a Shannon number which is the
+number of chess positions and that's a
+really huge number so that's kind of
+cool and mathematicians and theoretical
+and try to get that to be a more refined
+number and that's a cool thing let me
+give you a cool historical sense this is
+like who remembers when this happened
+here's the thing Wow like three this is
+such a big deal for the for the field of
+AI let me just set the context up till
+1997 chess-playing programs had never
+beaten a human Grandmaster in a six-game
+match they had beaten them in a one-off
+little you know let's do a thing for
+charity and then oh the computer wins
+big deal but the computer here but the
+humans that always said you challenged
+us to a six-game match and there's no
+way a program which doesn't have the
+insight that we do will ever win because
+humans have intuition where they can
+limit their search space that ignore
+massive parts of the board because they
+know you know if there's a queen and the
+king and another queen over here in the
+corner that's where the action is so
+that's where the next moves will in
+their mind will go to 20 moves deep
+incredible 20 moves deep in their head
+they can see where the computers don't
+know that and the early computers didn't
+know that so they're searching
+everything they're going oh what if I
+hit the Queen against the wall bonk bonk
+bonk is that a good thing and then I
+don't know that you don't hit the Queen
+against the wall that's silly
+so okay 1996 so here's the here's the
+history NSYNC it's a really amazing
+thing and by there's a video for this I
+encourage you all to find this video
+it's on the YouTube there it says deep
+blue beats garry kasparov 1997 but I'm
+going to summarize it because I think I
+do better job today okay so here's the
+idea in 96 the first game is a six-game
+match and with every time you win you
+get a point if you tie it's half and
+half okay so it's at a total of
+a purse purse purse first person to
+after six games has the most points wins
+okay
+so the first game that deep blue wins is
+a classic in 96
+okay so 96 days IBM thinks well we think
+we have with all the parallel processing
+they've built a custom machine custom
+architecture custom hardware to play
+chess and do nothing but play chess and
+it was called deep blue and they
+challenged Garry Kasparov then the best
+pretty clearly known as the best player
+in the world to play chess so deep blue
+plays this incredible game Game one and
+wins it's like it still talked about wow
+that game the deep blue versus Kasparov
+incredible game like the insight that
+deep blue saw this really there wasn't
+much insight and there was a little bit
+of I'll explain how it works
+there's an opening book at this some
+grandmasters head gave given to it but
+most of its searched most was just
+brute-force search of different
+positions in chess
+okay deep blue loses game three and
+draws to to lose the six-game match four
+to two
+so what that means is they were right
+humans were right that you're never
+gonna beat a human in a six-game match
+but it came close four to two is really
+close so ACM who is the kind of umbrella
+organization for computing and IBM say
+how about hey Garry Kasparov how about a
+rematch next year and Kasparov says you
+know certainly in a grandiose way let's
+do it slaps the handshake BAM I'll see
+you at the same time next year
+IBM goes to work and goes crazy and what
+they do is they study every single one
+of Kasparov games he ever played
+Kasparov normally was gonna play faced
+an opponent will study all the other
+person other opponents games I've ever
+played but guess what deep blue had
+never played games it only played those
+six games so Casper I've had nothing to
+work from of the style he was going to
+encounter so they work and they add even
+more grandmasters adding all of their
+brilliance to the mix so now it's 1997
+again humans had never been beaten it
+was like the last you know computers are
+fastest and how many better than us at
+how many things calculation search tax
+query all the things but it hadn't like
+it's kind of like the shores are coming
+up and we put a big big fortress and
+sandbags as you can't touch chess
+there's
+the human about chess you can't touch it
+well they shouldn't have done that
+because in 97 IBM comes back with deeper
+blue not deep blue deeper like we're
+gonna search even deeper into the tree
+so deeper blue very clever name
+Kasparov wins Game one and here's the
+key game - he was winning and he could
+have won but he thinks they did
+something wrong so he resigns it but in
+fact the analysis of it was that it
+should have been a tie or at least he
+should have won it so he should have I
+think he should have been a tie okay not
+a win should've been a tie but he lost
+so now
+Kasparov wins one loses one now they're
+tied one-one right the tied one-one
+now they draw the next three games three
+four five so now it's all tied going
+into Game six who knows baseball
+metaphors it's like you know tie game
+bottom of the ninth bases loaded full
+count you know the whole drama right
+it's on one game all of humanity rests
+on one game do you understand how this
+is how this the pressure and like the
+fame and it was on ESPN it was a big
+deal
+Kasparov the pressure got to him I think
+he's the greatest player in the history
+that I know of move seven normally the
+game is to us how to move fifteen twenty
+thirty right move seven which is still
+in your opening book still the set of
+moves that you normally have
+pre-recorded in your head but IBM came
+out with a little twist and Kasparov
+messes up and move seven and by by a
+couple moves later he knows it's over so
+he loses in nineteen moves which is like
+a blowout and what was it as he lost he
+lost in the biggest way you could
+possibly lose to a computer like like
+that like Skynet had come online and now
+the computers had taken one more step
+toward taking away our humanity and they
+made a whole big drama of this how the
+how now chess which used to be a the
+bastion of only humans the computers
+owned that - what else don't they own
+right you'll get the feeling that what
+else don't computers own right a little
+bit
+it was the bit it was a defining moment
+in AI history when they beat Kasparov in
+that six-game match is an incredible
+drama behind that and they've never
+looked back they've gotten only stronger
+and stronger stronger compute
+hardware's faster and faster and faster
+so now on my laptop I have software
+that's as good as deeper blue was back
+then custom machine I'm not just my
+laptop anybody's laptop like the
+computer hardware is fast enough now
+that you can have that you're just
+normal system that you play at home is
+as good as this thing that beat Kasparov
+it's incredible what they've done ok
+it's about how much you we've advanced
+in our hardware since 97 and it's also
+incredible that it's no longer even a
+question
+you can't be human you paint you can't
+be computers anymore we're sorry okay
+they just don't lose you cannot a human
+cannot beat them that's the feeling or
+can they
+game theory is three different pieces on
+this campus if you say hey you game
+theory you're probably going to be in
+the right column economic game theory an
+economic game theory is the Department
+of Economics has people who have won
+Nobel prizes in game theory so that's
+usually what they mean that means like
+an auction or a prisoner's dilemma if
+you've heard of that basically
+simultaneous moves the goal is
+maximizing profit very economic right
+combinatorial game theory is a small
+subset of computational game theory
+which is board games like the kind you
+played it at home okay board games -
+player board games with no chance that's
+basically what we're thinking about here
+there's a small subset that are really
+cool and really powerful in which you
+win by getting the last move and that's
+a really special thing and that's it so
+there's a small little subset of that
+but for the most part most of the board
+games you solve we have to solve with
+computer horsepower which is why we call
+it computational game theory or solving
+board games with computer horsepower
+which is what I do that's the center guy
+okay so what board games do you mean
+well board games that have complete
+information that is both players have
+all the information needs to have for
+that game and there's no chance so
+there's no dice and no cards any game
+you have a dice and cards sorry it's out
+can't come into them can't can't can't
+play but everything else is in there
+so go chess checkers not backgammon
+because that's dice tic-tac-toe
+I'm hundred others five in a row connect
+four fellow reverse I Chinese checkers
+Chinese chess all those things are games
+that you'd have to use computer
+horsepower to solve okay and the game
+can it anyway
+doesn't have to end with getting a last
+move as convert or game theory is this
+is the only math you have to have that's
+the only part that's a little hard for
+this the rest was just kind of
+expositional and tell you how this stuff
+works so for every position in the game
+that is every snapshot of the board
+including whose turn it is on the board
+so I'll give you a photograph that says
+here's what the board looks like and
+here's whose turn it is it's white to
+play or it's red to play or it's blue to
+play there's one of four categories of
+positions it's really simple from the
+person whose turn it is from the point
+of view of the person's turn is remember
+the bottom of the board it says wipe to
+play so that means for the white player
+it is either winning which means there
+exists to move you're assuming always
+alternating play in this kind of simple
+game there exists to move a winning move
+the winning by the way is green there
+exists a winning move which yields a
+losing child for you okay this is
+recursively defined by the way you know
+you guys know recursion so you can
+understand this a losing move is one in
+which all the moves are losing therefore
+all the moves that you do yield a
+winning for the other person so there's
+nothing you can do you're kind of in a
+corner nothing you can have no way out
+at I move is one in which there does not
+exist a winning green guy but there does
+exist a tie and ties better than losing
+so you'll take the time move rather than
+take the losing move so you ignore these
+bad losing moves on the left of the tie
+and take the time ooh because that's the
+best thing you can do and the draw is
+one in which the game can go on forever
+like two kings just move it around
+forever and neither of them can force a
+move a win or you force the opponent to
+lose for that okay we care about
+remoteness also which is how long until
+the game is over like maton three they
+would say remoteness is three okay so
+that's something so I lead a research
+group and I'm really proud that we've
+had tons of students who have contribute
+to this codebase and we now have 70
+games and puzzles in our system and we
+strongly solve our art we strongly solve
+our games and strongly solve means we
+salt we know the value and we're all
+done we know the win lose tired draw
+value for every single position ever in
+that game it's not just in that
+particular path but it's for any game
+ever I know the answer unlike sweetly
+solving where they've proved it but they
+don't actually know for every position I
+know
+for
+position that's a big distinction you
+should make okay so let's go see what do
+you mean by strongly solved an so let's
+go see a video so the movie wargames the
+whopper computer runs amok and starts to
+try to decode the encrypted key to the
+missile launch codes if it gets all ten
+digits it launches the missile and they
+decide to teach the computer go back to
+view they decide to teach the computer
+if I can have the computer play
+tic-tac-toe and learn that tic-tac-toe
+it doesn't matter how you start you
+can't win maybe it will extrapolate that
+thermal global nuclear nuclear war is
+like that it's a tie game you can't win
+it all does matter who goes first okay
+doesn't matter when it's first strike or
+second strike you're gonna lose war same
+as you would never be able to win
+tic-tac-toe okay it hasn't learned is
+there I'm going to make it play itself
+yes number of players zero
+damnit
+eight assistant
+kindly called sack get me in launch
+status report late today
+give me the president yes sir
+make that ground faster all landlines
+out of the mountain they're dead I'm
+trying to break through all the
+satellites okay
+learning
+and so I leave that in there and pause
+that because what is he saying to play
+what is that what do you conclude now
+about chess either too big to solve
+which is the right answer or he might be
+implicitly saying that chess is not a
+tie game and if he's really smart if the
+computer is very smart
+it has solved it and it's going first
+which means it's giving itself the
+advantage and it's gonna win the game
+always so it depends whether you read
+into this through the script whether
+it's not-it's implying that it solved it
+or implying that it's hasn't solved it
+it's still fun to do because it's too
+big to solve it is to be to solve by the
+way so how does weakly solving a game
+different from strongly solving a game
+in the weekly version here's how it
+works the game space is too massive
+the reason Jonathan Schafer didn't
+strongly solve checkers not because I'm
+smarter than him but he didn't do it is
+because checkers is too big
+checkers is way too big too strongly
+solve to get to all the dots in there
+imagine is a big vessel and up and down
+and the y-axis is the number of pieces
+on the board you start 24 pieces on the
+board and you end with 0 or 1 but one
+actually in that one case and so what it
+does is it the way he and everybody else
+who does weak solving they do a
+bottom-up search you start with all the
+possible positions for one piece on the
+board
+we need like you just made a move and
+then you back up and say what if it's
+one at one versus one and what if it's
+two verses one and two versus two and
+you keep backing your way up okay so
+you're kind of filling the vessel
+completely you go through every possible
+combination of having those pieces
+so you're strongly solving the bottom of
+the search space the end games okay they
+do this in chess by the way they
+strongly solve the end games and you can
+now download a chess endgame database
+which has all the possible perfect play
+for now six pieces and fewer and I think
+even they have a seven piece endgame
+database available and then what he does
+is start from the top and kind of have a
+search thing which says well what if you
+did this so my I do this and then what
+if you do this I do this until you get
+down to the endgame and you say okay I
+know the answer is there I don't think
+searching below that so you basically
+saving time by doing that so you have
+these workers in parallel trying all
+these combinations in order to try to
+prove that the game is a tie or a win or
+lose and they were successfully able to
+do that with checkers so they didn't
+visit a whole vast number of positions
+in their search space which is really
+cool and they will look do that in such
+an elegant way to kind of sample the
+search space in the appropriate way to
+prove that it's a drop
+ok so let's actually do that right now
+for a game and this is always where the
+people who are really paid in to get
+this ok focus for a second this is a
+game I'm going to teaching you right now
+ready go the goal is to player game the
+sum the shared some starts at 0 this is
+a 0
+ducks are on the table and on your turn
+you can add one or you can add two ducks
+to the table the person at the end of
+their turn who after making their move
+looks at the table and there's perfect
+ten ducks in a row that person wins so
+the person that makes the total ten wins
+and all you can do is add one or two to
+the current running total ok so that's
+an example so anna starts with 0 says
+i'll add 2 to make it two ducks ok Bob
+says I'll add one to make it three ducks
+and it says oh I'll add two to make it
+five bob says two to make it seven so
+you say this is how much I'm adding to
+make it the sum and that's the photo if
+seven ducks in a row after Bob's move
+and it says oh I'm gonna win one to make
+it eight and back was ah two to make it
+10 and Bob wins cuz Bob made it 10 does
+that make sense okay so I want you to
+tell me is that is one the game was
+called by the one to ten because you can
+say one or two and the goal is to ten
+okay so is one to ten a first player win
+in which if you go first you can always
+win our first player lose in which if
+you played against a perfect player
+you'd always lose going first or is it a
+tie or is it a draw so yeah sure right
+what's your name says I said you win if
+you go first is it Daniel do you think
+ah lose go first now it isn't
+necessarily what you did but you're kind
+of stepping back to see like what would
+the perfect person do what would a
+perfect player do okay so who wants to
+argue whoo yes right in the back well
+that's interesting
+what's your name
+tad well done how did how did you come
+up with that it's true if you hit seven
+no matter what you do you can always
+guarantee when I say you hit it means
+you give the other person seven right
+right you know what I say you take seven
+it means that I make a move to get to
+seven but then it's their turn with
+seven in front of them that's what I
+mean so it's if you're looking at the
+board it's your turn in at seven then
+that means seven is bad I'm hearing
+right so seven is bad because you don't
+want to have seven to start from because
+if I have seven whatever I do if I say
+one you say two to make it ten if I said
+to do you say want to make it ten so
+seven is bad why seven bad because 10 is
+bad
+what's 10 if it's my turn in its tendon
+I win or lose I lost because the other
+person got to 10 the action is getting
+to 10 is the winning thing so if I'm
+sitting to 10 I got a big goose egg here
+so 10 is a losing position
+why is 7 also losing because it's the
+one it's you can always guarantee to get
+from 7 to 10 if you have 7 I can give
+you if I if I give you 7 I can arrow to
+give you guarantee to give you 10 and
+what's that
+there's 3 apart and you back up that
+means that 4 is losing
+therefore 1 is losing exactly right well
+done tad all right
+is that cool so it is the case that one
+is losing therefore 0 which is the game
+is winning and what's the winning move
+one go first and say one now your
+opponent has the losing goose egg of one
+and they're also going to have the four
+they're also gonna have this 7 then also
+you have the 10 which means you've got
+to 10 and you won isn't that cool
+good stuff right so you guys strongly
+solved
+one to ten isn't that cool so now you
+can all first on a you could always beat
+your friends that's kind of cool right
+hey let's play one to ten let me go
+first one right and you all what's the
+perfect strategy by the way can you
+summarize this strategy into a couple of
+words need to make a big table of if you
+have this and I do an instant if you
+have this I did it I mean is it the
+table based solution or what you might
+have like a way to kind of summarize
+that somehow how do you get yeah go back
+you make that's exemption aim Evan
+everyone exactly right you make the
+total between you and your opponent
+three which is to say you say the
+opposite of them you say one I say - you
+say - I say one that's three always so
+in one sentence go first say one and
+then say opposite you will always win
+that game isn't that cool
+so you strongly solved it and that's the
+solution and that solution was really
+beautiful because you could summarize it
+in one sentence
+how about chess chess maybe a win but
+you certainly are gonna be able to sell
+statisti to summarize a solution in one
+sentence right maybe add tie who knows
+maybe a draw so here's a game
+tic-tac-toe
+who's played tic-tac-toe before okay
+who's played misere tic-tac-toe before
+in which is their french word in game 3
+parlance what it means is whatever was
+the win or lose is the opposite now so
+if three in a row were a win which it is
+for tic-tac-toe three in a row is now
+I'll lose so three row is now bad three
+turnout is now poison you know what
+three in a row all the strategies you
+grew up practicing you got to like
+forget them because you want to not do
+that you will not want to get three in a
+row right so Wow what is three in a row
+now what is sorry what is Miz there
+tic-tac-toe win lose or tie
+who knows I don't know normal taquito is
+that normal tic-tac-toe is a time so
+what is misère turns out it's also a tie
+but how do you maintain that tie there's
+a matter where you go at the beginning
+by the way the game of tic-tac-toe is so
+cool because it doesn't actually matter
+where you go at the beginning you can
+keep that tie going any one of the
+squares kind of cool
+okay how about misère tic-tac-toe well
+let's think you never want to go where
+what Square has the most things through
+it two three in a row that you want to
+avoid the middle right so you never go
+the middle so it's got to be one of the
+edges of the corner well how about the
+quarter how many three two rows on this
+is the corner three right this way this
+way and this way
+how about the edge though just two right
+so the edges are the better thing to go
+through so having the edges and then
+maybe if you forced into the corner
+let's try it shall we
+cyber system here we go let's play
+together this is my system that has
+strongly solved it and we're gonna see
+if we can win come on class you guys
+give me a thing
+sugar corner or edge edge let's count
+them one two nine one two three four
+five six seven eight nine ready top room
+okay
+edge okay so I'm doing so well I'm
+pretty good okay
+I'm gonna stay with the edge let's stay
+at the edge right okay like this one
+right it's pretty good yeah okay yeah
+all right how about the other end she's
+giving the edges to me I love it that's
+what I want to go anyway I'm so happy
+I'm like rock I'm giving a little shimmy
+a little shimmy nananana name I'm doing
+my tic-tac show shimmy and then oh okay
+well let's see I don't wanna go to the
+middle okay and I don't want to block
+him so I'll go over here cuz that's
+obviously I'll leave this chance for him
+to get this is the only way for him to
+win for him to lose was the poison there
+so I'll go over here and totally rock it
+ready there and then
+and maybe that was a good place
+maybe I well maybe I'll have to go here
+cuz I can't go in the middle I'll try
+over here I'll go here that'll be there
+and then and you start to ask yourself
+where did I mess up if only so that said
+together class if only we had a system
+and or only we had a system that would
+be able to tell me perfectly what to do
+here well how about value
+there's my little stop light and you see
+that every that move is bad right that's
+a losing move let's undo to find our
+green mover I want to find our winning
+move so let's undo this where's my green
+and yeah okay let's undo again there's
+got to be a green back there right and
+then let's undo it come on one of those
+gotta be perfect let's undo again and
+yeah
+whoa this is what you call by the way
+this is the beginning of the first time
+you've seen a research result you
+predict a hypothesis that going the
+middle is bad you then solve it and your
+computer tells you what the surprising
+result just like the V that generates is
+really cool fractal thing that you were
+surprised I was surprised almost the
+point of calling home when I found this
+result I thought this is the coolest
+result I've ever seen in which my Hall
+intuition was totally broken
+in which the old one square I thought
+was the worst place ends up being the
+only place that you can keep your tie
+and let's see if we can figure out how
+to do it ready
+let's click there and notice there's
+only one place to keep my tie the chance
+that I choose that it's very low right
+it's one in seven there's only one place
+to move to keep my tie there's only one
+place to move to keep my tie and it's
+always where exactly the opposite of
+where the opponent went why is that
+because there's two cases of three in a
+row there's a three in a row through the
+middle and through your oh not through
+the middle right agree well they'll
+never be a three road through the middle
+because if I do that strategy of me in
+the middle my opponent and
+me that every path of the middle would
+be like opponent me me and they'll ever
+be me the middle three in a row okay you
+agree with that
+opponent me me and they'll never be won
+on the edge why cuz I'm always the
+opposite of my opponent so for me to get
+three in a row on the edge would have
+met my opponent just got three in row
+before me on the edge because I was
+copying them in a little mirrored way so
+I'll never lose by doing that and that's
+the only way to do it isn't that
+fascinating and wonderful there's like
+beauty is beauty in that search tree in
+that tree there's beauty which is that
+kind of always the opposite is the only
+way to keep that balance of a tie it's
+really very cool that's awesome I love
+that okay so so you say well that's cool
+damn but how do I what's this silly
+color thing in my hand you're gonna say
+well and those are you online make sure
+to download the PDF of this thing okay
+so on the outer rim is the value of the
+game itself which is a tie and then I
+show you the value of the move to that
+position remember the picture of Tic
+Tacs how I showed you with the yellow in
+the middle and red around that I have
+nine boxes here the nine big boxes on
+bezier tic-tac-toe show you the basic
+first move and then you say what if you
+were what if my opponent were to go in
+the top right let's just think that if
+my opponent goes in the top right my
+opponent's making a losing move by the
+definition going back to like slide four
+of game theory if my opponent makes a
+losing move I have a winning position I
+should be able to win and winning
+position and what is is one in which
+there exist so when he moved actually
+win what is that when he move I don't
+know let's zoom in on that box and see
+where the green is so that zoomed in
+picture is what would have happened what
+I would have seen in my screen if my
+opponent had moved in the top right I
+would have seen those eight boxes why
+are there eight because I can't go on
+top of my opponent's piece there's only
+eight free spots that's why there are
+eight squares there and you'll see from
+that picture that the only way to win if
+my opponent goes in the top right is to
+go in on the edges all foragers are
+equally valid for a win isn't that cool
+so that is the secret
+you now have the tic-tac-toe and
+brassiere ticked I tell answer key in
+your hands which means you can make the
+first couple of moves perfectly and it's
+up to you to kind of finish the game off
+but it'll East gets you down the right
+path isn't that great
+it might give to you guys so you follow
+it up and there's a cool picture and
+it's a recursive beautiful fractal
+picture and it's beautiful
+so to revisit I have a game theory group
+it's called games crafters and I
+encourage any of you who think this is
+cool stuff to come join me I have
+projects of all kinds that can even be
+relevant and fun and engaging for a cs10
+graduate so if you like this stuff come
+on talk to me next semester and let's
+populate games crafters with more stuff
+our group has solved Kinect for like
+what my group has solved kind of it's
+been done before but never been done and
+put online
+you now have can go to a website the
+website that's on the top of this slide
+and you go to that site with your
+smartphone and you will never again lose
+and connect for did he say never again
+yes never again if you go first and
+follow my advice of my program never
+again lose and connect for in conclusion
+game theory the borscht the game trees
+are exponential them the word
+exponential means it grows faster than
+linear cubic and quadratic however so is
+computer processing power increasing
+with parallelism and all that so what
+that means is every couple of years we
+gain another move that we can look into
+the game tree okay will never that said
+will never solve some games like go is a
+go search base is 3 to the 361 how many
+is that that many positions let's just
+keep looking that many positions folks
+never in anyone's lifetime in the
+history of the universe will you solve
+all the positions of go that said you
+might have a nice smart AI that will
+play it pretty well but you'll never
+strongly solve go ok so weak solving
+means you prove it
+strong solving is what I do which is you
+go everything ok

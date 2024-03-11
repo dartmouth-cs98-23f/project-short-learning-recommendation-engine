@@ -1,0 +1,70 @@
+{
+  "introduction": "In this video, Subhas Khot, a theoretical computer scientist, discusses the study of what computers can and cannot do, known as computational problems. He highlights the large class of problems called NP-complete problems, which are difficult to solve. Khot also talks about the unique games conjecture, which states that certain computational problems are hard to solve, and its implications on other problems. Khot shares his progress on proving the unique games conjecture and his belief that they have an approach to prove it.",
+  "sections": [
+    {
+      "title": "Section 1: Computational Problems and NP-Complete Problems",
+      "content": [
+        "Computational problems are problems that can be solved by computers.",
+        "NP-complete problems are a large class of problems that are difficult to solve.",
+        "Computer scientists have identified many NP-complete problems.",
+        "NP-complete problems are important because they have practical applications."
+      ],
+      "topics": ["Computational Problems", "NP-Complete Problems", "Practical Applications"]
+    },
+    {
+      "title": "Section 2: The Unique Games Conjecture",
+      "content": [
+        "The unique games conjecture is a computational problem about coloring nodes in a network.",
+        "The conjecture states that this problem is very hard to solve and has only approximate solutions.",
+        "The main consequence of the unique games conjecture is that many other problems are also hard to solve.",
+        "The conjecture has led to significant developments in computer science and mathematics."
+      ],
+      "topics": ["Unique Games Conjecture", "Hard Computational Problems", "Developments in Computer Science and Mathematics"]
+    },
+    {
+      "title": "Section 3: Factoring Integers and Online Security",
+      "content": [
+        "Factoring integers is a problem where you have to find the factors of a number.",
+        "Factoring large integers is hard to do quickly.",
+        "The security of online systems, like banking, depends on the belief that nobody knows how to factor integers quickly.",
+        "The unique games conjecture has implications on other hard computational problems."
+      ],
+      "topics": ["Factoring Integers", "Online Security", "Hard Computational Problems"]
+    },
+    {
+      "title": "Section 4: Election Stability and Voting Schemes",
+      "content": [
+        "Election results are often decided by majority vote.",
+        "The unique games conjecture ensures that voting schemes are stable under noise.",
+        "Even if there is miscounting or noise in recording votes, the winner of the election is unlikely to change significantly.",
+        "The unique games conjecture has practical applications in voting systems."
+      ],
+      "topics": ["Election Results", "Voting Schemes", "Practical Applications"]
+    },
+    {
+      "title": "Section 5: Progress on the Unique Games Conjecture",
+      "content": [
+        "Khot and his coauthors have been making progress on proving the unique games conjecture.",
+        "They have a promising approach that they are excited about.",
+        "Khot believes they have an approach to prove the conjecture.",
+        "The video discusses the potential implications of proving the unique games conjecture."
+      ],
+      "topics": ["Unique Games Conjecture", "Promising Approaches", "Implications of Proving the Conjecture"]
+    }
+  ],
+  "topics": ["Computational Problems", "NP-Complete Problems", "Unique Games Conjecture", "Factoring Integers", "Election Stability", "Voting Schemes", "Progress on the Unique Games Conjecture"],
+  "generalTopics": [
+    {
+      "name": "Theoretical Computer Science",
+      "complexity": 0.90
+    },
+    {
+      "name": "Computer Architecture",
+      "complexity": 0.80
+    },
+    {
+      "name": "Database Systems and Management",
+      "complexity": 0.70
+    }
+  ]
+}
