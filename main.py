@@ -12,10 +12,12 @@ from pinecone import Pinecone, ServerlessSpec
 
 from database import DbClient
 from search import AlgoliaSearchClient
+from ranking import VideoRanker
 
 app = FastAPI()
 db_client = DbClient()
 search_client = AlgoliaSearchClient(index_name="discite-search")
+ranker = VideoRanker()
 
 app.get("/")
 def read_root():
@@ -42,12 +44,15 @@ def get_recommendations(video_id: str):
 
 
 @app.get("/search")
-def search(query: str, user: Optional[str] = None):
+def search(query: str, user_id: Optional[str] = None):
     """
         Search for a query in the Algolia index.
     """
     
     results = search_client.search(query)
     
-    # if user provided, rerank based on user
+    #? if user provided, rerank based on user affinites
+    if user_id:
+        results = ranker.rank_videos(results, user_id)
+    
     return results
