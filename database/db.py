@@ -16,7 +16,7 @@ class DbClient:
         # load .env file
         load_dotenv()
 
-        print("PINECONE_API_KEY: ", os.getenv("PINECONE_API_KEY"))
+        # print("PINECONE_API_KEY: ", os.getenv("PINECONE_API_KEY"))
 
         # get PINECONE_API_KEY from .env file
         PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
@@ -54,18 +54,22 @@ class DbClient:
         
         return index
     
-    def add_video(self, video_id: str):
+    def add_video(self, video_id: str, embeddings=None, topics=None):
         """
             Add a video to the Pinecone index.
         """
         index = self.get_index("recommendations")
-        embeddings = self.get_embeddings(video_id)
+        embeddings = embeddings or self.get_embeddings(video_id)
+        topics = topics or []
         response = index.upsert(
             vectors = [{
                 "id": video_id,
-                "values": embeddings
+                "values": embeddings,
+                "metadata": {
+                    "topics": topics
+                }
             }],
-            namespace="video-transcripts"
+            namespace="video-transcripts",
         )
         
         if self.debug:
